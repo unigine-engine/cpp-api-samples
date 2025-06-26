@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>be2c62f998e0b1e45f3f5a305a38b35b07743f3a</guid>
+	<type>property</type>
+	<hash>e01db149</hash>
+	<runtimes>
+		<runtime id="be2c62f998e0b1e45f3f5a305a38b35b07743f3a" name="SavedPathTrajectory" link="0" type="4"/>
+	</runtimes>
+</asset>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Observer Controller">
+	<sdk_desc>Implementation of a free-flying camera similar to the one used in the UnigineEditor (with zooming, panning, focusing and speed control).</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample replicates the free camera used in the UnigineEditor. The camera offers the following key features:</para>
+				<ul>
+					<li><strong>Fly-Through Mode</strong> Freely move the camera in all directions using keyboard and mouse controls.</li>
+					<li><strong>Focus on Objects</strong> Center the camera on any selected object and adjust distance automatically.</li>
+					<li><strong>Zoom &amp; Pan</strong> Zoom in and out, and pan while preserving view direction.</li>
+					<li><strong>Speed Control Menu</strong> Switch between predefined movement speeds (<value>1-3</value>) or adjust custom speed values.</li>
+					<li><strong>Position Management</strong> Set or teleport the camera to specific world coordinates through the menu.</li>
+				</ul>
+		</brief>
+	</desc>
+	<controls>
+		<![CDATA[
+		<p> - <b>F3</b>: show/hide the camera control menu</p>
+		<p> - <b>RMB (hold)</b>: switch to Spectator mode</p>
+		<p> - <b>RMB + mouse</b>: look around</p>
+		<p> - <b>RMB + W/A/S/D, Q/E</b>: camera movement</p>
+		<p> - <b>Alt + RMB</b>: switch to zooming mode</p>
+		<p> - <b>Alt + MMB</b>: switch to panoramic movement mode</p>
+		<p> - <b>F</b>: focus on the object under the mouse cursor</p>
+		<p> - <b>1, 2, 3</b>: switch movement speed<br/><br/></p>
+		<p>You can customize the key bindings in the camera properties within the editor.</p>
+		]]>
+	</controls>
+	<tags>
+		<tag>Complex Solutions</tag>
+		<tag>Cameras</tag>
+	</tags>
+</sample>

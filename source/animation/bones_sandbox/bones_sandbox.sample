@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Bones Sandbox">
+	<desc>
+		<brief>This sample provides the interface that allows visualizing and experiencing how to configure all available settings for IK chains, LookAt chains, and bone rotation constraints.</brief>
+	</desc>
+	<tags>
+		<tag>Animation</tag>
+	</tags>
+</sample>

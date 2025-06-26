@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Node Animation">
+	<sdk_desc>Animating position, rotation, and scale of a node.</sdk_desc>
+	<desc>
+		<brief>This sample demonstrates animating nodes using <strong>node animation objects</strong>. It will be helpful for creating complex animation scenarios for stage objects in real time.</brief>
+		<para>Node animations can serve as a foundation for various effects, including element appearance/disappearance, rotations, resizing, and more.</para>
+	</desc>
+	<tags>
+		<tag>Animation</tag>
+	</tags>
+</sample>

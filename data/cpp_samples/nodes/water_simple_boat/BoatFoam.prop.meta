@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>0afef3ab8aa059d7b3e0f94cc2906d272f0fcf06</guid>
+	<type>property</type>
+	<hash>35a289de</hash>
+	<runtimes>
+		<runtime id="0afef3ab8aa059d7b3e0f94cc2906d272f0fcf06" name="BoatFoam" link="0" type="4"/>
+	</runtimes>
+</asset>

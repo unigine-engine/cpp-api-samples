@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="FlockController" manual="1" parent_name="node_base">
+	<parameter name="flock_size" type="int">0</parameter>
+	<parameter name="targets" type="array" array_type="node"/>
+	<parameter name="unit_node" type="file"/>
+	<parameter name="cohesion_coefficient" type="float">0</parameter>
+	<parameter name="cohesion_spot_radius" type="float">0</parameter>
+	<parameter name="alignment_coefficient" type="float">0</parameter>
+	<parameter name="separation_coefficient" type="float">0</parameter>
+	<parameter name="separation_desired_range" type="float">0</parameter>
+	<parameter name="target_coefficient" type="float">0</parameter>
+	<parameter name="max_speed" type="float">0</parameter>
+	<parameter name="rotation_speed" type="float">0</parameter>
+	<parameter name="max_force" type="float">0</parameter>
+	<parameter name="min_height" type="float">0</parameter>
+	<parameter name="max_height" type="float">0</parameter>
+	<parameter name="escape_force_height_padding" type="float">0</parameter>
+	<parameter name="spawn_zone_size" type="vec3">0.000000 0.000000 0.000000</parameter>
+</property>

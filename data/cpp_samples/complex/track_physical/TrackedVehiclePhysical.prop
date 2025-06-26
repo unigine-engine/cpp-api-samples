@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="TrackedVehiclePhysical" manual="1" parent_name="node_base">
+	<parameter name="input_manager_node" type="node">0</parameter>
+	<parameter name="acceleration" type="float">5</parameter>
+	<parameter name="deceleration" type="float">10</parameter>
+	<parameter name="max_speed" type="float">50</parameter>
+	<parameter name="max_back_speed" type="float">15</parameter>
+	<parameter name="turn_speed" type="float">45</parameter>
+	<parameter name="turn_smooth_factor" type="float">5</parameter>
+	<parameter name="angular_damping" type="float">2</parameter>
+	<parameter name="wheel_spring" type="float">0</parameter>
+	<parameter name="wheel_num_iterations" type="int">4</parameter>
+	<parameter name="wheels_left" type="array" array_type="node"/>
+	<parameter name="wheels_right" type="array" array_type="node"/>
+</property>

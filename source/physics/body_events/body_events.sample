@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sample title="Body Events">
+	<sdk_desc>Demonstrating the usage of <i>Frozen, Position</i>, and <i>ContactEnter</i> events of the Body class via the C++ API</sdk_desc>
+	<desc>
+		<brief>This sample demonstrates how to use the <ui><link to="body_class" offset="getEventFrozen_Event">Frozen</link></ui>, <ui><link to="body_class" offset="getEventPosition_Event">Position</link></ui>, and <ui><link to="body_class" offset="getEventContactEnter_Event">ContactEnter</link></ui> events of the <ui><link to="body_class">Body</link></ui> class via the C++ API.</brief> 
+		<para>These events allow detecting when a body comes to rest, moves, or collides with another body or surface.</para>
+		<para>The sample builds a pyramid of boxes by cloning a mesh and arranging it in several layers. Physics settings are adjusted to improve the stability of the stacked boxes and ensure accurate detection of movement or rest states.</para>
+		<para><ui><link to="body_class" offset="getEventFrozen_Event">Frozen</link></ui>, <ui><link to="body_class" offset="getEventPosition_Event">Position</link></ui>, and <ui><link to="body_class" offset="getEventContactEnter_Event">ContactEnter</link></ui> events of each body are connected with the corresponding handlers. All subscriptions are managed through an <ui><link to="eventconnections_class">EventConnections</link></ui> class instance, which keeps all connections in one place and ensures proper cleanup during shutdown. For example, the <ui>Frozen</ui> handler changes the material of the box when it stops moving. The <ui>Position</ui> handler changes the material whenever the position updates. The <ui>ContactEnter</ui> handler visualizes contact points during collisions.</para>
+		<para>This approach is useful for debugging physical behaviors, providing visual feedback in simulations, or triggering interactive logic based on changing body states.</para>
+	</desc>
+	<tags>
+		<tag>Physics</tag>
+		<tag>Systems</tag>
+		<tag>Logic</tag>
+	</tags>
+</sample>

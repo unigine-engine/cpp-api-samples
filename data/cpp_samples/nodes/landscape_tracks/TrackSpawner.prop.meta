@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>776449d95f6788222c6e0e258f5a1105687d29b4</guid>
+	<type>property</type>
+	<hash>391e542e</hash>
+	<runtimes>
+		<runtime id="776449d95f6788222c6e0e258f5a1105687d29b4" name="TrackSpawner" link="0" type="4"/>
+	</runtimes>
+</asset>

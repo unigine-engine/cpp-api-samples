@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>dfe7638098deba680ab637a30583a4c89591e6b4</guid>
+	<type>property</type>
+	<hash>42349569</hash>
+	<runtimes>
+		<runtime id="dfe7638098deba680ab637a30583a4c89591e6b4" name="SpringRegular" link="0" type="4"/>
+	</runtimes>
+</asset>

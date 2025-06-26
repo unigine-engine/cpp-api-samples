@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.20.0.0" guid="cb5a4ae3da0632e6bf7d2d0d3c026b08b2fb92c7" parent="a94ad43991cb18825d7d24e09210edd1bd76331e" base_material="b7c07dfd4ce80edac55fcbfdd0befa02ccd20b88">
+	<state name="ambient">0</state>
+	<state name="light_omni">1</state>
+	<state name="light_proj">1</state>
+	<state name="use_voxel_probe">1</state>
+	<state name="shadow">1</state>
+	<state name="world_shadow">1</state>
+	<state name="shadow_filter_mode">1</state>
+	<texture name="albedo">guid://78bf79dc8f31cb8b39a2ab6eb7bd7bf52b5edcd0</texture>
+	<parameter name="albedo_color" expression="0">0.905882418 0.933333397 0.941176534 0.862745166</parameter>
+	<parameter name="animation_size" expression="0">4 4</parameter>
+	<parameter name="animation_scale" expression="0">1</parameter>
+	<parameter name="refraction_scale" expression="1">-0.0248399992</parameter>
+	<parameter name="transparent_blur" expression="0">0</parameter>
+	<parameter name="environment_scale" expression="0">1</parameter>
+	<parameter name="diffuse_scale" expression="0">4</parameter>
+	<parameter name="translucent" expression="0">0.800000012</parameter>
+</material>

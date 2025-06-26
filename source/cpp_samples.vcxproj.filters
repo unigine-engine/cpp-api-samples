@@ -1,0 +1,2054 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Natvis Include="unigine_stl.natvis" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AppEditorLogic.cpp" />
+    <ClCompile Include="AppSystemLogic.cpp" />
+    <ClCompile Include="AppWorldLogic.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="menu_ui\MainMenu.cpp">
+      <Filter>menu_ui</Filter>
+    </ClCompile>
+    <ClCompile Include="menu_ui\WorldMenu.cpp">
+      <Filter>menu_ui</Filter>
+    </ClCompile>
+    <ClCompile Include="menu_ui\SampleDescriptionWindow.cpp">
+      <Filter>menu_ui</Filter>
+    </ClCompile>
+    <ClCompile Include="animation\animation_material\MaterialAnimationSample.cpp">
+      <Filter>animation\animation_material</Filter>
+    </ClCompile>
+    <ClCompile Include="animation\animation_node\NodeAnimationSample.cpp">
+      <Filter>animation\animation_node</Filter>
+    </ClCompile>
+    <ClCompile Include="animation\animation_property\PropertyAnimationSample.cpp">
+      <Filter>animation\animation_property</Filter>
+    </ClCompile>
+    <ClCompile Include="animation\animation_singleton\SingletonAnimationSample.cpp">
+      <Filter>animation\animation_singleton</Filter>
+    </ClCompile>
+    <ClCompile Include="animation\animation_widget\WidgetAnimationSample.cpp">
+      <Filter>animation\animation_widget</Filter>
+    </ClCompile>
+    <ClCompile Include="animation\curve_animation\CurveAnimationTransform.cpp">
+      <Filter>animation\curve_animation</Filter>
+    </ClCompile>
+    <ClCompile Include="animation\track_playback\Tracker.cpp">
+      <Filter>animation\track_playback</Filter>
+    </ClCompile>
+    <ClCompile Include="animation\track_playback\TrackPlayback.cpp">
+      <Filter>animation\track_playback</Filter>
+    </ClCompile>
+    <ClCompile Include="animation\playback_layers\PlaybackLayersSample.cpp">
+      <Filter>animation\playback_layers</Filter>
+    </ClCompile>
+    <ClCompile Include="animation\physics_based_animation\CatDemo.cpp">
+      <Filter>animation\physics_based_animation</Filter>
+    </ClCompile>
+    <ClCompile Include="animation\physics_based_animation\CatGame.cpp">
+      <Filter>animation\physics_based_animation</Filter>
+    </ClCompile>
+    <ClCompile Include="animation\physics_based_animation\CatSample.cpp">
+      <Filter>animation\physics_based_animation</Filter>
+    </ClCompile>
+    <ClCompile Include="animation\physics_based_animation\EaseInMotion.cpp">
+      <Filter>animation\physics_based_animation</Filter>
+    </ClCompile>
+    <ClCompile Include="animation\physics_based_animation\EaseOutBounceMotion.cpp">
+      <Filter>animation\physics_based_animation</Filter>
+    </ClCompile>
+    <ClCompile Include="animation\physics_based_animation\EaseOutMotion.cpp">
+      <Filter>animation\physics_based_animation</Filter>
+    </ClCompile>
+    <ClCompile Include="animation\physics_based_animation\Laser.cpp">
+      <Filter>animation\physics_based_animation</Filter>
+    </ClCompile>
+    <ClCompile Include="animation\physics_based_animation\LinearMotion.cpp">
+      <Filter>animation\physics_based_animation</Filter>
+    </ClCompile>
+    <ClCompile Include="animation\physics_based_animation\MotionMode.cpp">
+      <Filter>animation\physics_based_animation</Filter>
+    </ClCompile>
+    <ClCompile Include="animation\physics_based_animation\Persecutor.cpp">
+      <Filter>animation\physics_based_animation</Filter>
+    </ClCompile>
+    <ClCompile Include="animation\physics_based_animation\SpringEasy.cpp">
+      <Filter>animation\physics_based_animation</Filter>
+    </ClCompile>
+    <ClCompile Include="animation\physics_based_animation\SpringMotion.cpp">
+      <Filter>animation\physics_based_animation</Filter>
+    </ClCompile>
+    <ClCompile Include="animation\physics_based_animation\SpringRegular.cpp">
+      <Filter>animation\physics_based_animation</Filter>
+    </ClCompile>
+    <ClCompile Include="basics\euler_angles\EulerAnglesSample.cpp">
+      <Filter>basic\euler_angles</Filter>
+    </ClCompile>
+    <ClCompile Include="basics\triggers\MathTriggerComponent.cpp">
+      <Filter>basic\triggers</Filter>
+    </ClCompile>
+    <ClCompile Include="basics\triggers\TriggerSample.cpp">
+      <Filter>basic\triggers</Filter>
+    </ClCompile>
+    <ClCompile Include="basics\trigger_buttons\ButtonReactionSample.cpp">
+      <Filter>basic\trigger_buttons</Filter>
+    </ClCompile>
+    <ClCompile Include="basics\trigger_buttons\Interactable.cpp">
+      <Filter>basic\trigger_buttons</Filter>
+    </ClCompile>
+    <ClCompile Include="basics\trigger_buttons\InteractableButtonComponent.cpp">
+      <Filter>basic\trigger_buttons</Filter>
+    </ClCompile>
+    <ClCompile Include="basics\trigger_buttons\InteractableLeverComponent.cpp">
+      <Filter>basic\trigger_buttons</Filter>
+    </ClCompile>
+    <ClCompile Include="basics\trigger_buttons\InteractableValveComponent.cpp">
+      <Filter>basic\trigger_buttons</Filter>
+    </ClCompile>
+    <ClCompile Include="basics\trigger_buttons\InteractorComponent.cpp">
+      <Filter>basic\trigger_buttons</Filter>
+    </ClCompile>
+    <ClCompile Include="basics\trajectory\TrajectoryLogic.cpp">
+      <Filter>basic\trajectory</Filter>
+    </ClCompile>
+    <ClCompile Include="basics\trajectory\TrajectoryMovement.cpp">
+      <Filter>basic\trajectory</Filter>
+    </ClCompile>
+    <ClCompile Include="basics\simple_movement\SimpleMovement.cpp">
+      <Filter>basic\simple_movement</Filter>
+    </ClCompile>
+    <ClCompile Include="basics\simple_movement\SimpleMovementInfo.cpp">
+      <Filter>basic\simple_movement</Filter>
+    </ClCompile>
+    <ClCompile Include="basics\node_spawner_timer\NodeSpawnerTimer.cpp">
+      <Filter>basic\node_spawner_timer</Filter>
+    </ClCompile>
+    <ClCompile Include="basics\node_spawner_timer\NodeSpawnerTimerSample.cpp">
+      <Filter>basic\node_spawner_timer</Filter>
+    </ClCompile>
+    <ClCompile Include="basics\node_spawner_grid\NodeSpawnerGridSample.cpp">
+      <Filter>basic\node_spawner_grid</Filter>
+    </ClCompile>
+    <ClCompile Include="basics\node_spawner_grid\NodeSpawnerGrid.cpp">
+      <Filter>basic\node_spawner_grid</Filter>
+    </ClCompile>
+    <ClCompile Include="nodes\cluster\ClusterSample.cpp">
+      <Filter>nodes\cluster</Filter>
+    </ClCompile>
+    <ClCompile Include="nodes\clutter_to_cluster\ClutterConverter.cpp">
+      <Filter>nodes\clutter_to_cluster</Filter>
+    </ClCompile>
+    <ClCompile Include="nodes\clutter_to_cluster\ClutterSample.cpp">
+      <Filter>nodes\clutter_to_cluster</Filter>
+    </ClCompile>
+    <ClCompile Include="nodes\create_objects\ObjectsSample.cpp">
+      <Filter>nodes\create_objects</Filter>
+    </ClCompile>
+    <ClCompile Include="nodes\landscape_combined\CombinedSample.cpp">
+      <Filter>nodes\landscape_combined</Filter>
+    </ClCompile>
+    <ClCompile Include="nodes\landscape_combined\HeightSlicer.cpp">
+      <Filter>nodes\landscape_combined</Filter>
+    </ClCompile>
+    <ClCompile Include="nodes\landscape_create\CreateSample.cpp">
+      <Filter>nodes\landscape_create</Filter>
+    </ClCompile>
+    <ClCompile Include="nodes\landscape_details\DetailsSample.cpp">
+      <Filter>nodes\landscape_details</Filter>
+    </ClCompile>
+    <ClCompile Include="nodes\landscape_excavation\DiggingTool.cpp">
+      <Filter>nodes\landscape_excavation</Filter>
+    </ClCompile>
+    <ClCompile Include="nodes\landscape_excavation\ObjectDepth.cpp">
+      <Filter>nodes\landscape_excavation</Filter>
+    </ClCompile>
+    <ClCompile Include="nodes\landscape_fetch\CameraTerrainFetchSample.cpp">
+      <Filter>nodes\landscape_fetch</Filter>
+    </ClCompile>
+    <ClCompile Include="nodes\landscape_mask_paint\LandscapeMaskPainter.cpp">
+      <Filter>nodes\landscape_mask_paint</Filter>
+    </ClCompile>
+    <ClCompile Include="nodes\landscape_mask_paint\MaskPaintSample.cpp">
+      <Filter>nodes\landscape_mask_paint</Filter>
+    </ClCompile>
+    <ClCompile Include="nodes\landscape_mesh\TerrainMesh.cpp">
+      <Filter>nodes\landscape_mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="nodes\landscape_mesh\TerrainMeshSample.cpp">
+      <Filter>nodes\landscape_mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="nodes\landscape_paint\LandscapeAlbedoPainter.cpp">
+      <Filter>nodes\landscape_paint</Filter>
+    </ClCompile>
+    <ClCompile Include="nodes\landscape_paint\LandscapeHeightPainter.cpp">
+      <Filter>nodes\landscape_paint</Filter>
+    </ClCompile>
+    <ClCompile Include="nodes\landscape_paint\LandscapeHeightToAlbedo.cpp">
+      <Filter>nodes\landscape_paint</Filter>
+    </ClCompile>
+    <ClCompile Include="nodes\landscape_paint\PaintSample.cpp">
+      <Filter>nodes\landscape_paint</Filter>
+    </ClCompile>
+    <ClCompile Include="nodes\landscape_tracks\PathCircle.cpp">
+      <Filter>nodes\landscape_tracks</Filter>
+    </ClCompile>
+    <ClCompile Include="nodes\landscape_tracks\TrackSpawner.cpp">
+      <Filter>nodes\landscape_tracks</Filter>
+    </ClCompile>
+    <ClCompile Include="nodes\landscape_tracks\TracksSample.cpp">
+      <Filter>nodes\landscape_tracks</Filter>
+    </ClCompile>
+    <ClCompile Include="nodes\lights\LightsSample.cpp">
+      <Filter>nodes\light</Filter>
+    </ClCompile>
+    <ClCompile Include="nodes\world_spline_graph\WorldSplineGraphSample.cpp">
+      <Filter>nodes\world_spline_graph</Filter>
+    </ClCompile>
+    <ClCompile Include="nodes\state_save_restore\StateSample.cpp">
+      <Filter>nodes\state_save_restore</Filter>
+    </ClCompile>
+    <ClCompile Include="nodes\spline_graph\SplineGraphSample.cpp">
+      <Filter>nodes\spline_graph</Filter>
+    </ClCompile>
+    <ClCompile Include="nodes\players\PlayersSample.cpp">
+      <Filter>nodes\players</Filter>
+    </ClCompile>
+    <ClCompile Include="nodes\object_extern\ObjectExternSample.cpp">
+      <Filter>nodes\object_extern</Filter>
+    </ClCompile>
+    <ClCompile Include="nodes\node_extern\NodeExternSample.cpp">
+      <Filter>nodes\node_extern</Filter>
+    </ClCompile>
+    <ClCompile Include="nodes\water_buoyancy\BuoyComponent.cpp">
+      <Filter>nodes\water_buoyancy</Filter>
+    </ClCompile>
+    <ClCompile Include="nodes\water_buoyancy\BuoySample.cpp">
+      <Filter>nodes\water_buoyancy</Filter>
+    </ClCompile>
+    <ClCompile Include="nodes\water_custom_wave\CustomWaveSample.cpp">
+      <Filter>nodes\water_custom_wave</Filter>
+    </ClCompile>
+    <ClCompile Include="nodes\water_fetch_intersection\WaterFetchIntersection.cpp">
+      <Filter>nodes\water_fecth_intersection</Filter>
+    </ClCompile>
+    <ClCompile Include="nodes\water_simple_boat\BoatControl.cpp">
+      <Filter>nodes\water_simple_boat</Filter>
+    </ClCompile>
+    <ClCompile Include="nodes\water_simple_boat\BoatFoam.cpp">
+      <Filter>nodes\water_simple_boat</Filter>
+    </ClCompile>
+    <ClCompile Include="nodes\water_simple_boat\BoatSample.cpp">
+      <Filter>nodes\water_simple_boat</Filter>
+    </ClCompile>
+    <ClCompile Include="nodes\water_simple_boat\WakeWaveTrail.cpp">
+      <Filter>nodes\water_simple_boat</Filter>
+    </ClCompile>
+    <ClCompile Include="nodes\water_physical_buoyancy\BuoyancyPhysics.cpp">
+      <Filter>nodes\water_physical_buoyancy</Filter>
+    </ClCompile>
+    <ClCompile Include="nodes\water_physical_buoyancy\BuoyancyPhysicsSample.cpp">
+      <Filter>nodes\water_physical_buoyancy</Filter>
+    </ClCompile>
+    <ClCompile Include="nodes\water_physical_buoyancy\Movement.cpp">
+      <Filter>nodes\water_physical_buoyancy</Filter>
+    </ClCompile>
+    <ClCompile Include="nodes\water_physical_buoyancy\Waves.cpp">
+      <Filter>nodes\water_physical_buoyancy</Filter>
+    </ClCompile>
+    <ClCompile Include="complex\boids\Flock.cpp">
+      <Filter>complex\boids</Filter>
+    </ClCompile>
+    <ClCompile Include="complex\boids\FlockController.cpp">
+      <Filter>complex\boids</Filter>
+    </ClCompile>
+    <ClCompile Include="complex\boids\FlockSample.cpp">
+      <Filter>complex\boids</Filter>
+    </ClCompile>
+    <ClCompile Include="complex\boids\Unit.cpp">
+      <Filter>complex\boids</Filter>
+    </ClCompile>
+    <ClCompile Include="complex\crane_rope\CraneControl.cpp">
+      <Filter>complex\crane_rope</Filter>
+    </ClCompile>
+    <ClCompile Include="complex\crane_rope\CraneRopeSample.cpp">
+      <Filter>complex\crane_rope</Filter>
+    </ClCompile>
+    <ClCompile Include="complex\crane_rope\SlingRope.cpp">
+      <Filter>complex\crane_rope</Filter>
+    </ClCompile>
+    <ClCompile Include="complex\first_person_controller\FirstPersonController.cpp">
+      <Filter>complex\first_person_controller</Filter>
+    </ClCompile>
+    <ClCompile Include="complex\first_person_controller\FirstPersonControllerSample.cpp">
+      <Filter>complex\first_person_controller</Filter>
+    </ClCompile>
+    <ClCompile Include="complex\lidar\Lidar.cpp">
+      <Filter>complex\lidar</Filter>
+    </ClCompile>
+    <ClCompile Include="complex\track_non_physical\NonPhysicalTracks.cpp">
+      <Filter>complex\track_non_physical</Filter>
+    </ClCompile>
+    <ClCompile Include="complex\track_non_physical\TrackedVehicleNonPhysical.cpp">
+      <Filter>complex\track_non_physical</Filter>
+    </ClCompile>
+    <ClCompile Include="complex\track_non_physical\WheelAttachment.cpp">
+      <Filter>complex\track_non_physical</Filter>
+    </ClCompile>
+    <ClCompile Include="complex\track_physical\PhysicalTracks.cpp">
+      <Filter>complex\track_physical</Filter>
+    </ClCompile>
+    <ClCompile Include="complex\track_physical\TrackedVehiclePhysical.cpp">
+      <Filter>complex\track_physical</Filter>
+    </ClCompile>
+    <ClCompile Include="complex\top_down_controller\Selection.cpp">
+      <Filter>complex\top_down_controller</Filter>
+    </ClCompile>
+    <ClCompile Include="complex\top_down_controller\TopDownController.cpp">
+      <Filter>complex\top_down_controller</Filter>
+    </ClCompile>
+    <ClCompile Include="complex\top_down_controller\UnitSelectionCircle.cpp">
+      <Filter>complex\top_down_controller</Filter>
+    </ClCompile>
+    <ClCompile Include="complex\robot_arm\RobotArmConnection.cpp">
+      <Filter>complex\robot_arm</Filter>
+    </ClCompile>
+    <ClCompile Include="complex\robot_arm\RobotArmController.cpp">
+      <Filter>complex\robot_arm</Filter>
+    </ClCompile>
+    <ClCompile Include="input_controls\input_gamepad\Car.cpp">
+      <Filter>input_controls\input_gamepad</Filter>
+    </ClCompile>
+    <ClCompile Include="input_controls\input_gamepad\GamepadInput.cpp">
+      <Filter>input_controls\input_gamepad</Filter>
+    </ClCompile>
+    <ClCompile Include="input_controls\input_joystick\JoysticksInput.cpp">
+      <Filter>input_controls\input_joystick</Filter>
+    </ClCompile>
+    <ClCompile Include="input_controls\input_keyboard_mouse\KeyboardAndMouseInput.cpp">
+      <Filter>input_controls\input_keyboard_mouse</Filter>
+    </ClCompile>
+    <ClCompile Include="input_controls\input_touch\TouchInput.cpp">
+      <Filter>input_controls\input_touch</Filter>
+    </ClCompile>
+    <ClCompile Include="navigation\navigation_mesh\NavigationMeshLogic.cpp">
+      <Filter>navigation\navigation_mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="navigation\navigation_mesh_demo\NavigationMeshDemoLogic.cpp">
+      <Filter>navigation\navigation_mesh_demo</Filter>
+    </ClCompile>
+    <ClCompile Include="navigation\navigation_sectors\NavigationSectorsLogic.cpp">
+      <Filter>navigation\navigation_sectors</Filter>
+    </ClCompile>
+    <ClCompile Include="navigation\navigation_sectors_demo\NavigationSectorsDemoLogic.cpp">
+      <Filter>navigation\navigation_sectors_demo</Filter>
+    </ClCompile>
+    <ClCompile Include="physics\physics_movement\PhysicsMovement.cpp">
+      <Filter>physics\physics_movement</Filter>
+    </ClCompile>
+    <ClCompile Include="physics\physics_movement\PhysicsMovementSample.cpp">
+      <Filter>physics\physics_movement</Filter>
+    </ClCompile>
+    <ClCompile Include="render\camera_to_texture\CameraToTexture.cpp">
+      <Filter>render\camera_to_texture</Filter>
+    </ClCompile>
+    <ClCompile Include="render\compute_shader\ComputeShader.cpp">
+      <Filter>render\compute_shader</Filter>
+    </ClCompile>
+    <ClCompile Include="render\compute_shader_image\ComputeShaderImage.cpp">
+      <Filter>render\compute_shader_image</Filter>
+    </ClCompile>
+    <ClCompile Include="render\ffp_depth\FFPDepth.cpp">
+      <Filter>render\ffp_depth</Filter>
+    </ClCompile>
+    <ClCompile Include="render\gbuffer_read\GBufferRead.cpp">
+      <Filter>render\gbuffer_read</Filter>
+    </ClCompile>
+    <ClCompile Include="render\gbuffer_read\GBufferReadSample.cpp">
+      <Filter>render\gbuffer_read</Filter>
+    </ClCompile>
+    <ClCompile Include="render\gbuffer_write\GBufferWrite.cpp">
+      <Filter>render\gbuffer_write</Filter>
+    </ClCompile>
+    <ClCompile Include="render\gui_to_texture\GuiToTexture.cpp">
+      <Filter>render\gui_to_texture</Filter>
+    </ClCompile>
+    <ClCompile Include="render\gui_to_texture\WidgetClock.cpp">
+      <Filter>render\gui_to_texture</Filter>
+    </ClCompile>
+    <ClCompile Include="render\gui_to_texture\WidgetNoSignal.cpp">
+      <Filter>render\gui_to_texture</Filter>
+    </ClCompile>
+    <ClCompile Include="render\structured_buffer\StructuredBufferSample.cpp">
+      <Filter>render\structured_buffer</Filter>
+    </ClCompile>
+    <ClCompile Include="render\screenshot\Screenshot.cpp">
+      <Filter>render\screenshot</Filter>
+    </ClCompile>
+    <ClCompile Include="render\screenshot\ScreenshotSample.cpp">
+      <Filter>render\screenshot</Filter>
+    </ClCompile>
+    <ClCompile Include="render\node_to_texture\NodeToTexture.cpp">
+      <Filter>render\node_to_texture</Filter>
+    </ClCompile>
+    <ClCompile Include="render\render_target\RenderTargetSample.cpp">
+      <Filter>render\render_target</Filter>
+    </ClCompile>
+    <ClCompile Include="render\split_screen_texture\CarControl.cpp">
+      <Filter>render\split_screen_texture</Filter>
+    </ClCompile>
+    <ClCompile Include="render\split_screen_texture\SplitScreenTexture.cpp">
+      <Filter>render\split_screen_texture</Filter>
+    </ClCompile>
+    <ClCompile Include="render\textures\TexturesSample.cpp">
+      <Filter>render\textures</Filter>
+    </ClCompile>
+    <ClCompile Include="render\weapon_clipping\WeaponClipping.cpp">
+      <Filter>render\weapon_clipping</Filter>
+    </ClCompile>
+    <ClCompile Include="render\weapon_clipping\WeaponClippingSample.cpp">
+      <Filter>render\weapon_clipping</Filter>
+    </ClCompile>
+    <ClCompile Include="systems\async_queue\AsyncQueueSample.cpp">
+      <Filter>systems\async_queue</Filter>
+    </ClCompile>
+    <ClCompile Include="systems\callbacks\Callbacks.cpp">
+      <Filter>systems\callbacks</Filter>
+    </ClCompile>
+    <ClCompile Include="systems\console\ConsoleSample.cpp">
+      <Filter>systems\console</Filter>
+    </ClCompile>
+    <ClCompile Include="systems\cpu_shader\CPUShaderSample.cpp">
+      <Filter>systems\cpu_shader</Filter>
+    </ClCompile>
+    <ClCompile Include="systems\events\EventsSample.cpp">
+      <Filter>systems\events</Filter>
+    </ClCompile>
+    <ClCompile Include="systems\ffp\FFPSample.cpp">
+      <Filter>systems\ffp</Filter>
+    </ClCompile>
+    <ClCompile Include="systems\files\FilesSample.cpp">
+      <Filter>systems\files</Filter>
+    </ClCompile>
+    <ClCompile Include="systems\images\ImagesSample.cpp">
+      <Filter>systems\images</Filter>
+    </ClCompile>
+    <ClCompile Include="systems\json\JsonSample.cpp">
+      <Filter>systems\json</Filter>
+    </ClCompile>
+    <ClCompile Include="systems\materials_and_properties\MaterialsAndPropertiesSample.cpp">
+      <Filter>systems\materials_and_properties</Filter>
+    </ClCompile>
+    <ClCompile Include="systems\cad_like_view\CADLikeView.cpp">
+      <Filter>systems\cad_like_view</Filter>
+    </ClCompile>
+    <ClCompile Include="systems\cad_like_view\ViewportCube.cpp">
+      <Filter>systems\cad_like_view</Filter>
+    </ClCompile>
+    <ClCompile Include="systems\intersection_multiple_async_requests\MultipleAsyncRequestsSample.cpp">
+      <Filter>systems\intersection_multiple_async_requests</Filter>
+    </ClCompile>
+    <ClCompile Include="systems\intersection_simple_async_request\SimpleAsyncRequestSample.cpp">
+      <Filter>systems\intersection_simple_async_request</Filter>
+    </ClCompile>
+    <ClCompile Include="systems\usc_variable\ScriptVariables.cpp">
+      <Filter>systems\usc_variable</Filter>
+    </ClCompile>
+    <ClCompile Include="systems\usc_types\ScriptTypes.cpp">
+      <Filter>systems\usc_types</Filter>
+    </ClCompile>
+    <ClCompile Include="systems\usc_transfer\ScriptTransfer.cpp">
+      <Filter>systems\usc_transfer</Filter>
+    </ClCompile>
+    <ClCompile Include="systems\usc_structures\ScriptStructure.cpp">
+      <Filter>systems\usc_structures</Filter>
+    </ClCompile>
+    <ClCompile Include="systems\usc_stack\ScriptStack.cpp">
+      <Filter>systems\usc_stack</Filter>
+    </ClCompile>
+    <ClCompile Include="systems\usc_inheritance\ScriptInheritance.cpp">
+      <Filter>systems\usc_inheritance</Filter>
+    </ClCompile>
+    <ClCompile Include="systems\usc_functions\ScriptFunctions.cpp">
+      <Filter>systems\usc_functions</Filter>
+    </ClCompile>
+    <ClCompile Include="systems\usc_classes\ScriptClasses.cpp">
+      <Filter>systems\usc_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="systems\usc_callbacks\ScriptCallbacks.cpp">
+      <Filter>systems\usc_callbacks</Filter>
+    </ClCompile>
+    <ClCompile Include="systems\usc_arrays\ScriptArrays.cpp">
+      <Filter>systems\usc_arrays</Filter>
+    </ClCompile>
+    <ClCompile Include="systems\stream_base\StreamBaseSample.cpp">
+      <Filter>systems\stream_base</Filter>
+    </ClCompile>
+    <ClCompile Include="systems\thread\ThreadSample.cpp">
+      <Filter>systems\thread</Filter>
+    </ClCompile>
+    <ClCompile Include="systems\two_point_perspective\CameraShiftController.cpp">
+      <Filter>systems\two_point_perspective</Filter>
+    </ClCompile>
+    <ClCompile Include="systems\two_point_perspective\TwoPointPerspectiveSample.cpp">
+      <Filter>systems\two_point_perspective</Filter>
+    </ClCompile>
+    <ClCompile Include="systems\xml\XmlSample.cpp">
+      <Filter>systems\xml</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\AsyncTasks.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\InputManager.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\Math.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\PersecutorTarget.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\Rotator.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\SimpleInformationBox.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\SimplePathControl.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\UnigineScriptsInterpreter.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\navigation\Seeker.cpp">
+      <Filter>utils\navigation</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\navigation\Target.cpp">
+      <Filter>utils\navigation</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\network\HttpServer.cpp">
+      <Filter>utils\network</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\intersection\Intersections.cpp">
+      <Filter>utils\intersection</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\Spline.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="user_interface\widget_canvas\Canvas.cpp">
+      <Filter>user_interface\widget_canvas</Filter>
+    </ClCompile>
+    <ClCompile Include="user_interface\widget_dialogs\Dialogs.cpp">
+      <Filter>user_interface\widget_dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="user_interface\widget_extern\ExternWidget.cpp">
+      <Filter>user_interface\widget_extern</Filter>
+    </ClCompile>
+    <ClCompile Include="user_interface\widget_manipulators\Manipulators.cpp">
+      <Filter>user_interface\widget_manipulators</Filter>
+    </ClCompile>
+    <ClCompile Include="user_interface\widget_manipulators\ManipulatorsSample.cpp">
+      <Filter>user_interface\widget_manipulators</Filter>
+    </ClCompile>
+    <ClCompile Include="user_interface\object_frame\ObjectFrame.cpp">
+      <Filter>user_interface\object_frame</Filter>
+    </ClCompile>
+    <ClCompile Include="user_interface\object_frame\ObjectFrameSample.cpp">
+      <Filter>user_interface\object_frame</Filter>
+    </ClCompile>
+    <ClCompile Include="user_interface\target_marker\TargetMarker.cpp">
+      <Filter>user_interface\target_marker</Filter>
+    </ClCompile>
+    <ClCompile Include="user_interface\user_interface\UserInterface.cpp">
+      <Filter>user_interface\user_interface</Filter>
+    </ClCompile>
+    <ClCompile Include="user_interface\widgets\Button.cpp">
+      <Filter>user_interface\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="user_interface\widgets\CheckBox.cpp">
+      <Filter>user_interface\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="user_interface\widgets\ComboBox.cpp">
+      <Filter>user_interface\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="user_interface\widgets\EditLine.cpp">
+      <Filter>user_interface\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="user_interface\widgets\EditText.cpp">
+      <Filter>user_interface\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="user_interface\widgets\Icon.cpp">
+      <Filter>user_interface\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="user_interface\widgets\Label.cpp">
+      <Filter>user_interface\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="user_interface\widgets\ListBox.cpp">
+      <Filter>user_interface\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="user_interface\widgets\Menu.cpp">
+      <Filter>user_interface\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="user_interface\widgets\Scroll.cpp">
+      <Filter>user_interface\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="user_interface\widgets\Slider.cpp">
+      <Filter>user_interface\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="user_interface\widgets\SpinBox.cpp">
+      <Filter>user_interface\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="user_interface\widgets\Sprite.cpp">
+      <Filter>user_interface\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="user_interface\widgets\TreeBox.cpp">
+      <Filter>user_interface\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="user_interface\widget_window\Window.cpp">
+      <Filter>user_interface\widget_window</Filter>
+    </ClCompile>
+    <ClCompile Include="animation\bones_constraints\AnimationBonesConstraintsSample.cpp">
+      <Filter>animation\bones_constraints</Filter>
+    </ClCompile>
+    <ClCompile Include="animation\bones_ik\AnimationBonesIKSample.cpp">
+      <Filter>animation\bones_ik</Filter>
+    </ClCompile>
+    <ClCompile Include="animation\bones_look_at\AnimationBonesLookAtSample.cpp">
+      <Filter>animation\bones_look_at</Filter>
+    </ClCompile>
+    <ClCompile Include="animation\bones_masks\AnimationBonesMasksSample.cpp">
+      <Filter>animation\bones_masks</Filter>
+    </ClCompile>
+    <ClCompile Include="animation\bones_retargeting\AnimationBonesRetargetingSample.cpp">
+      <Filter>animation\bones_retargeting</Filter>
+    </ClCompile>
+    <ClCompile Include="animation\bones_root_motion\AnimationBonesRootMotion.cpp">
+      <Filter>animation\bones_root_motion</Filter>
+    </ClCompile>
+    <ClCompile Include="animation\bones_sandbox\AnimationBonesSandboxSample.cpp">
+      <Filter>animation\bones_sandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="animation\bones_sandbox\BonesSandbox.cpp">
+      <Filter>animation\bones_sandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="animation\bones_simple_foot_placement\AnimationBonesSimpleFootPlacementSample.cpp">
+      <Filter>animation\bones_simple_foot_placement</Filter>
+    </ClCompile>
+    <ClCompile Include="animation\bones_state_machine\AnimationBonesStateMachineSample.cpp">
+      <Filter>animation\bones_state_machine</Filter>
+    </ClCompile>
+    <ClCompile Include="animation\bones_state_machine\StateMachine.cpp">
+      <Filter>animation\bones_state_machine</Filter>
+    </ClCompile>
+    <ClCompile Include="physics\body_events\BodyCallbacks.cpp">
+      <Filter>physics\body_events</Filter>
+    </ClCompile>
+    <ClCompile Include="physics\joint_events\JointCallbacks.cpp">
+      <Filter>physics\joint_events</Filter>
+    </ClCompile>
+    <ClCompile Include="complex\player_persecutor\PlayerPersecutorComponent.cpp">
+      <Filter>complex\player_persecutor</Filter>
+    </ClCompile>
+    <ClCompile Include="complex\player_persecutor\PlayerPersecutorSample.cpp">
+      <Filter>complex\player_persecutor</Filter>
+    </ClCompile>
+    <ClCompile Include="complex\fire_hose\ExtinguishingPuddles.cpp">
+      <Filter>complex\fire_hose</Filter>
+    </ClCompile>
+    <ClCompile Include="complex\fire_hose\FireHoseSample.cpp">
+      <Filter>complex\fire_hose</Filter>
+    </ClCompile>
+    <ClCompile Include="complex\fire_hose\Flame.cpp">
+      <Filter>complex\fire_hose</Filter>
+    </ClCompile>
+    <ClCompile Include="nodes\dynamic_field_height\DynamicTextureFieldHeight.cpp">
+      <Filter>nodes\dynamic_field_height</Filter>
+    </ClCompile>
+    <ClCompile Include="nodes\dynamic_field_height\DynamicTextureFieldHeightSample.cpp">
+      <Filter>nodes\dynamic_field_height</Filter>
+    </ClCompile>
+    <ClCompile Include="systems\external_package\ExternalPackageSample.cpp" />
+    <ClCompile Include="basics\ifps_usage\IFpsMovementController.cpp">
+      <Filter>basic\ifps_usage</Filter>
+    </ClCompile>
+    <ClCompile Include="basics\ifps_usage\IFpsMovementSample.cpp">
+      <Filter>basic\ifps_usage</Filter>
+    </ClCompile>
+    <ClCompile Include="complex\day_night_switch\DayNightSwitcher.cpp">
+      <Filter>complex\day_night_switch</Filter>
+    </ClCompile>
+    <ClCompile Include="complex\day_night_switch\DayNightSwitchSample.cpp">
+      <Filter>complex\day_night_switch</Filter>
+    </ClCompile>
+    <ClCompile Include="complex\day_night_switch\SunController.cpp">
+      <Filter>complex\day_night_switch</Filter>
+    </ClCompile>
+    <ClCompile Include="systems\visualizer\VisualizerSample.cpp">
+      <Filter>systems\visualizer</Filter>
+    </ClCompile>
+    <ClCompile Include="systems\visualizer\VisualizerUsage.cpp">
+      <Filter>systems\visualizer</Filter>
+    </ClCompile>
+    <ClCompile Include="complex\spectator_controller\SpectatorController.cpp">
+      <Filter>complex\spectator_controller</Filter>
+    </ClCompile>
+    <ClCompile Include="complex\spectator_controller\SpectatorControllerSample.cpp">
+      <Filter>complex\spectator_controller</Filter>
+    </ClCompile>
+    <ClCompile Include="complex\observer_controller\ObserverController.cpp">
+      <Filter>complex\observer_controller</Filter>
+    </ClCompile>
+    <ClCompile Include="user_interface\widgets\RadioButtons.cpp">
+      <Filter>user_interface\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="basics\bound_intersection\BoundIntersection.cpp">
+      <Filter>basic\bound_intersection</Filter>
+    </ClCompile>
+    <ClCompile Include="basics\ray_intersection\RayIntersection.cpp">
+      <Filter>basic\ray_intersection</Filter>
+    </ClCompile>
+    <ClCompile Include="systems\mount_points\MountPointsSample.cpp">
+      <Filter>systems\mount_points</Filter>
+    </ClCompile>
+    <ClCompile Include="systems\events_advanced\EventsAdvancedSample.cpp">
+      <Filter>systems\events_advanced</Filter>
+    </ClCompile>
+    <ClCompile Include="systems\events_advanced\EventsAdvancedUnit.cpp">
+      <Filter>systems\events_advanced</Filter>
+    </ClCompile>
+    <ClCompile Include="render\screenshot_advanced\ScreenshotAdvancedSample.cpp">
+      <Filter>render\screenshot_advanced</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\BodyFractureUnit.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\Crosshair.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\ScreenshotMaker.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\Spawner.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="physics\body_fracture_explosion\BodyFractureExplosion.cpp">
+      <Filter>physics\body_fracture_explosion</Filter>
+    </ClCompile>
+    <ClCompile Include="physics\body_fracture_explosion\BodyFractureExplosionSample.cpp">
+      <Filter>physics\body_fracture_explosion</Filter>
+    </ClCompile>
+    <ClCompile Include="physics\body_fracture_shooting_gallery\BodyFractureShootingGalleryGun.cpp">
+      <Filter>physics\body_fracture_shooting_gallery</Filter>
+    </ClCompile>
+    <ClCompile Include="physics\body_fracture_shooting_gallery\BodyFractureShootingGallerySample.cpp">
+      <Filter>physics\body_fracture_shooting_gallery</Filter>
+    </ClCompile>
+    <ClCompile Include="systems\microprofiler\MicroprofilerSample.cpp">
+      <Filter>systems\microprofiler</Filter>
+    </ClCompile>
+    <ClCompile Include="systems\microprofiler\MicroprofilerSleepyNode.cpp">
+      <Filter>systems\microprofiler</Filter>
+    </ClCompile>
+    <ClCompile Include="network\http_image_request\HttpImageRequestSample.cpp">
+      <Filter>network\http_image_request</Filter>
+    </ClCompile>
+    <ClCompile Include="network\http_image_response\HttpImageResponseSample.cpp">
+      <Filter>network\http_image_response</Filter>
+    </ClCompile>
+    <ClCompile Include="network\http_simple_request\SimpleHttpRequestSample.cpp">
+      <Filter>network\http_simple_request</Filter>
+    </ClCompile>
+    <ClCompile Include="network\http_simple_response\SimpleHttpResponseSample.cpp">
+      <Filter>network\http_simple_response</Filter>
+    </ClCompile>
+    <ClCompile Include="network\tcp_sockets\TCPSocketsSample.cpp">
+      <Filter>network\tcp_sockets</Filter>
+    </ClCompile>
+    <ClCompile Include="network\udp_sockets\UDPSocketsSample.cpp">
+      <Filter>network\udp_sockets</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\DefaultPlayer.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="plugins\fmod_studio\FMODStudioSample.cpp">
+      <Filter>plugins\fmod_studio</Filter>
+    </ClCompile>
+    <ClCompile Include="plugins\fmod_core\FMODCoreSample.cpp">
+      <Filter>plugins\fmod_core</Filter>
+    </ClCompile>
+    <ClCompile Include="basics\camera_zoom\TargetGui.cpp">
+      <Filter>basic\camera_zoom</Filter>
+    </ClCompile>
+    <ClCompile Include="basics\camera_zoom\ZoomController.cpp">
+      <Filter>basic\camera_zoom</Filter>
+    </ClCompile>
+    <ClCompile Include="basics\camera_zoom\ZoomSample.cpp">
+      <Filter>basic\camera_zoom</Filter>
+    </ClCompile>
+    <ClCompile Include="systems\external_package\ExternalPackageSample.cpp">
+      <Filter>systems\external_package</Filter>
+    </ClCompile>
+    <ClCompile Include="physics\update_physics\UpdatePhysicsUsageController.cpp">
+      <Filter>physics\udpate_physics</Filter>
+    </ClCompile>
+    <ClCompile Include="physics\update_physics\UpdatePhysicsUsageSample.cpp">
+      <Filter>physics\udpate_physics</Filter>
+    </ClCompile>
+    <ClCompile Include="complex\lidar\LidarSample.cpp">
+      <Filter>complex\lidar</Filter>
+    </ClCompile>
+    <ClCompile Include="complex\lidar\Las.cpp">
+      <Filter>complex\lidar</Filter>
+    </ClCompile>
+    <ClCompile Include="menu_ui\DescriptionWindowCreator.cpp">
+      <Filter>menu_ui</Filter>
+    </ClCompile>
+    <ClCompile Include="systems\async_queue_tasks\AsyncQueueTasksSample.cpp">
+      <Filter>systems\async_queue_tasks</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AppEditorLogic.h" />
+    <ClInclude Include="AppSystemLogic.h" />
+    <ClInclude Include="AppWorldLogic.h" />
+    <ClInclude Include="menu_ui\MainMenu.h">
+      <Filter>menu_ui</Filter>
+    </ClInclude>
+    <ClInclude Include="menu_ui\WorldMenu.h">
+      <Filter>menu_ui</Filter>
+    </ClInclude>
+    <ClInclude Include="menu_ui\SampleDescriptionWindow.h">
+      <Filter>menu_ui</Filter>
+    </ClInclude>
+    <ClInclude Include="animation\curve_animation\CurveAnimationTransform.h">
+      <Filter>animation\curve_animation</Filter>
+    </ClInclude>
+    <ClInclude Include="animation\track_playback\Tracker.h">
+      <Filter>animation\track_playback</Filter>
+    </ClInclude>
+    <ClInclude Include="animation\track_playback\TrackPlayback.h">
+      <Filter>animation\track_playback</Filter>
+    </ClInclude>
+    <ClInclude Include="animation\physics_based_animation\CatDemo.h">
+      <Filter>animation\physics_based_animation</Filter>
+    </ClInclude>
+    <ClInclude Include="animation\physics_based_animation\CatGame.h">
+      <Filter>animation\physics_based_animation</Filter>
+    </ClInclude>
+    <ClInclude Include="animation\physics_based_animation\CatSample.h">
+      <Filter>animation\physics_based_animation</Filter>
+    </ClInclude>
+    <ClInclude Include="animation\physics_based_animation\EaseInMotion.h">
+      <Filter>animation\physics_based_animation</Filter>
+    </ClInclude>
+    <ClInclude Include="animation\physics_based_animation\EaseOutBounceMotion.h">
+      <Filter>animation\physics_based_animation</Filter>
+    </ClInclude>
+    <ClInclude Include="animation\physics_based_animation\EaseOutMotion.h">
+      <Filter>animation\physics_based_animation</Filter>
+    </ClInclude>
+    <ClInclude Include="animation\physics_based_animation\Laser.h">
+      <Filter>animation\physics_based_animation</Filter>
+    </ClInclude>
+    <ClInclude Include="animation\physics_based_animation\LinearMotion.h">
+      <Filter>animation\physics_based_animation</Filter>
+    </ClInclude>
+    <ClInclude Include="animation\physics_based_animation\MotionMode.h">
+      <Filter>animation\physics_based_animation</Filter>
+    </ClInclude>
+    <ClInclude Include="animation\physics_based_animation\Persecutor.h">
+      <Filter>animation\physics_based_animation</Filter>
+    </ClInclude>
+    <ClInclude Include="animation\physics_based_animation\SpringEasy.h">
+      <Filter>animation\physics_based_animation</Filter>
+    </ClInclude>
+    <ClInclude Include="animation\physics_based_animation\SpringMotion.h">
+      <Filter>animation\physics_based_animation</Filter>
+    </ClInclude>
+    <ClInclude Include="animation\physics_based_animation\SpringRegular.h">
+      <Filter>animation\physics_based_animation</Filter>
+    </ClInclude>
+    <ClInclude Include="basics\euler_angles\EulerAnglesSample.h">
+      <Filter>basic\euler_angles</Filter>
+    </ClInclude>
+    <ClInclude Include="basics\triggers\MathTriggerComponent.h">
+      <Filter>basic\triggers</Filter>
+    </ClInclude>
+    <ClInclude Include="basics\triggers\TriggerSample.h">
+      <Filter>basic\triggers</Filter>
+    </ClInclude>
+    <ClInclude Include="basics\trigger_buttons\ButtonReactionSample.h">
+      <Filter>basic\trigger_buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="basics\trigger_buttons\Interactable.h">
+      <Filter>basic\trigger_buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="basics\trigger_buttons\InteractableButtonComponent.h">
+      <Filter>basic\trigger_buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="basics\trigger_buttons\InteractableLeverComponent.h">
+      <Filter>basic\trigger_buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="basics\trigger_buttons\InteractableValveComponent.h">
+      <Filter>basic\trigger_buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="basics\trigger_buttons\InteractorComponent.h">
+      <Filter>basic\trigger_buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="basics\trajectory\TrajectoryLogic.h">
+      <Filter>basic\trajectory</Filter>
+    </ClInclude>
+    <ClInclude Include="basics\trajectory\TrajectoryMovement.h">
+      <Filter>basic\trajectory</Filter>
+    </ClInclude>
+    <ClInclude Include="basics\simple_movement\SimpleMovement.h">
+      <Filter>basic\simple_movement</Filter>
+    </ClInclude>
+    <ClInclude Include="basics\simple_movement\SimpleMovementInfo.h">
+      <Filter>basic\simple_movement</Filter>
+    </ClInclude>
+    <ClInclude Include="basics\node_spawner_timer\NodeSpawnerTimer.h">
+      <Filter>basic\node_spawner_timer</Filter>
+    </ClInclude>
+    <ClInclude Include="basics\node_spawner_timer\NodeSpawnerTimerSample.h">
+      <Filter>basic\node_spawner_timer</Filter>
+    </ClInclude>
+    <ClInclude Include="basics\node_spawner_grid\NodeSpawnerGridSample.h">
+      <Filter>basic\node_spawner_grid</Filter>
+    </ClInclude>
+    <ClInclude Include="basics\node_spawner_grid\NodeSpawnerGrid.h">
+      <Filter>basic\node_spawner_grid</Filter>
+    </ClInclude>
+    <ClInclude Include="nodes\cluster\ClusterSample.h">
+      <Filter>nodes\cluster</Filter>
+    </ClInclude>
+    <ClInclude Include="nodes\clutter_to_cluster\ClutterConverter.h">
+      <Filter>nodes\clutter_to_cluster</Filter>
+    </ClInclude>
+    <ClInclude Include="nodes\clutter_to_cluster\ClutterSample.h">
+      <Filter>nodes\clutter_to_cluster</Filter>
+    </ClInclude>
+    <ClInclude Include="nodes\landscape_combined\CombinedSample.h">
+      <Filter>nodes\landscape_combined</Filter>
+    </ClInclude>
+    <ClInclude Include="nodes\landscape_combined\HeightSlicer.h">
+      <Filter>nodes\landscape_combined</Filter>
+    </ClInclude>
+    <ClInclude Include="nodes\landscape_create\CreateSample.h">
+      <Filter>nodes\landscape_create</Filter>
+    </ClInclude>
+    <ClInclude Include="nodes\landscape_details\DetailsSample.h">
+      <Filter>nodes\landscape_details</Filter>
+    </ClInclude>
+    <ClInclude Include="nodes\landscape_excavation\DiggingTool.h">
+      <Filter>nodes\landscape_excavation</Filter>
+    </ClInclude>
+    <ClInclude Include="nodes\landscape_excavation\ObjectDepth.h">
+      <Filter>nodes\landscape_excavation</Filter>
+    </ClInclude>
+    <ClInclude Include="nodes\landscape_fetch\CameraTerrainFetchSample.h">
+      <Filter>nodes\landscape_fetch</Filter>
+    </ClInclude>
+    <ClInclude Include="nodes\landscape_mask_paint\LandscapeMaskPainter.h">
+      <Filter>nodes\landscape_mask_paint</Filter>
+    </ClInclude>
+    <ClInclude Include="nodes\landscape_mask_paint\MaskPaintSample.h">
+      <Filter>nodes\landscape_mask_paint</Filter>
+    </ClInclude>
+    <ClInclude Include="nodes\landscape_mesh\TerrainMesh.h">
+      <Filter>nodes\landscape_mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="nodes\landscape_mesh\TerrainMeshSample.h">
+      <Filter>nodes\landscape_mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="nodes\landscape_paint\LandscapeAlbedoPainter.h">
+      <Filter>nodes\landscape_paint</Filter>
+    </ClInclude>
+    <ClInclude Include="nodes\landscape_paint\LandscapeHeightPainter.h">
+      <Filter>nodes\landscape_paint</Filter>
+    </ClInclude>
+    <ClInclude Include="nodes\landscape_paint\LandscapeHeightToAlbedo.h">
+      <Filter>nodes\landscape_paint</Filter>
+    </ClInclude>
+    <ClInclude Include="nodes\landscape_paint\PaintSample.h">
+      <Filter>nodes\landscape_paint</Filter>
+    </ClInclude>
+    <ClInclude Include="nodes\landscape_tracks\PathCircle.h">
+      <Filter>nodes\landscape_tracks</Filter>
+    </ClInclude>
+    <ClInclude Include="nodes\landscape_tracks\TrackSpawner.h">
+      <Filter>nodes\landscape_tracks</Filter>
+    </ClInclude>
+    <ClInclude Include="nodes\landscape_tracks\TracksSample.h">
+      <Filter>nodes\landscape_tracks</Filter>
+    </ClInclude>
+    <ClInclude Include="nodes\water_buoyancy\BuoyComponent.h">
+      <Filter>nodes\water_buoyancy</Filter>
+    </ClInclude>
+    <ClInclude Include="nodes\water_buoyancy\BuoySample.h">
+      <Filter>nodes\water_buoyancy</Filter>
+    </ClInclude>
+    <ClInclude Include="nodes\water_custom_wave\CustomWaveSample.h">
+      <Filter>nodes\water_custom_wave</Filter>
+    </ClInclude>
+    <ClInclude Include="nodes\water_fetch_intersection\WaterFetchIntersection.h">
+      <Filter>nodes\water_fecth_intersection</Filter>
+    </ClInclude>
+    <ClInclude Include="nodes\water_simple_boat\BoatControl.h">
+      <Filter>nodes\water_simple_boat</Filter>
+    </ClInclude>
+    <ClInclude Include="nodes\water_simple_boat\BoatFoam.h">
+      <Filter>nodes\water_simple_boat</Filter>
+    </ClInclude>
+    <ClInclude Include="nodes\water_simple_boat\BoatSample.h">
+      <Filter>nodes\water_simple_boat</Filter>
+    </ClInclude>
+    <ClInclude Include="nodes\water_simple_boat\WakeWaveTrail.h">
+      <Filter>nodes\water_simple_boat</Filter>
+    </ClInclude>
+    <ClInclude Include="nodes\water_physical_buoyancy\BuoyancyPhysics.h">
+      <Filter>nodes\water_physical_buoyancy</Filter>
+    </ClInclude>
+    <ClInclude Include="nodes\water_physical_buoyancy\BuoyancyPhysicsSample.h">
+      <Filter>nodes\water_physical_buoyancy</Filter>
+    </ClInclude>
+    <ClInclude Include="nodes\water_physical_buoyancy\Movement.h">
+      <Filter>nodes\water_physical_buoyancy</Filter>
+    </ClInclude>
+    <ClInclude Include="nodes\water_physical_buoyancy\Waves.h">
+      <Filter>nodes\water_physical_buoyancy</Filter>
+    </ClInclude>
+    <ClInclude Include="complex\boids\Flock.h">
+      <Filter>complex\boids</Filter>
+    </ClInclude>
+    <ClInclude Include="complex\boids\FlockController.h">
+      <Filter>complex\boids</Filter>
+    </ClInclude>
+    <ClInclude Include="complex\boids\FlockSample.h">
+      <Filter>complex\boids</Filter>
+    </ClInclude>
+    <ClInclude Include="complex\boids\Unit.h">
+      <Filter>complex\boids</Filter>
+    </ClInclude>
+    <ClInclude Include="complex\crane_rope\CraneControl.h">
+      <Filter>complex\crane_rope</Filter>
+    </ClInclude>
+    <ClInclude Include="complex\crane_rope\CraneRopeSample.h">
+      <Filter>complex\crane_rope</Filter>
+    </ClInclude>
+    <ClInclude Include="complex\crane_rope\SlingRope.h">
+      <Filter>complex\crane_rope</Filter>
+    </ClInclude>
+    <ClInclude Include="complex\first_person_controller\FirstPersonController.h">
+      <Filter>complex\first_person_controller</Filter>
+    </ClInclude>
+    <ClInclude Include="complex\first_person_controller\FirstPersonControllerSample.h">
+      <Filter>complex\first_person_controller</Filter>
+    </ClInclude>
+    <ClInclude Include="complex\lidar\Lidar.h">
+      <Filter>complex\lidar</Filter>
+    </ClInclude>
+    <ClInclude Include="complex\track_non_physical\NonPhysicalTracks.h">
+      <Filter>complex\track_non_physical</Filter>
+    </ClInclude>
+    <ClInclude Include="complex\track_non_physical\TrackedVehicleNonPhysical.h">
+      <Filter>complex\track_non_physical</Filter>
+    </ClInclude>
+    <ClInclude Include="complex\track_non_physical\WheelAttachment.h">
+      <Filter>complex\track_non_physical</Filter>
+    </ClInclude>
+    <ClInclude Include="complex\track_physical\PhysicalTracks.h">
+      <Filter>complex\track_physical</Filter>
+    </ClInclude>
+    <ClInclude Include="complex\track_physical\TrackedVehiclePhysical.h">
+      <Filter>complex\track_physical</Filter>
+    </ClInclude>
+    <ClInclude Include="complex\top_down_controller\Selection.h">
+      <Filter>complex\top_down_controller</Filter>
+    </ClInclude>
+    <ClInclude Include="complex\top_down_controller\TopDownController.h">
+      <Filter>complex\top_down_controller</Filter>
+    </ClInclude>
+    <ClInclude Include="complex\top_down_controller\UnitSelectionCircle.h">
+      <Filter>complex\top_down_controller</Filter>
+    </ClInclude>
+    <ClInclude Include="complex\robot_arm\RobotArmConnection.h">
+      <Filter>complex\robot_arm</Filter>
+    </ClInclude>
+    <ClInclude Include="complex\robot_arm\RobotArmController.h">
+      <Filter>complex\robot_arm</Filter>
+    </ClInclude>
+    <ClInclude Include="input_controls\input_gamepad\Car.h">
+      <Filter>input_controls\input_gamepad</Filter>
+    </ClInclude>
+    <ClInclude Include="input_controls\input_gamepad\GamepadInput.h">
+      <Filter>input_controls\input_gamepad</Filter>
+    </ClInclude>
+    <ClInclude Include="input_controls\input_joystick\JoysticksInput.h">
+      <Filter>input_controls\input_joystick</Filter>
+    </ClInclude>
+    <ClInclude Include="input_controls\input_keyboard_mouse\KeyboardAndMouseInput.h">
+      <Filter>input_controls\input_keyboard_mouse</Filter>
+    </ClInclude>
+    <ClInclude Include="input_controls\input_touch\TouchInput.h">
+      <Filter>input_controls\input_touch</Filter>
+    </ClInclude>
+    <ClInclude Include="physics\physics_movement\PhysicsMovement.h">
+      <Filter>physics\physics_movement</Filter>
+    </ClInclude>
+    <ClInclude Include="physics\physics_movement\PhysicsMovementSample.h">
+      <Filter>physics\physics_movement</Filter>
+    </ClInclude>
+    <ClInclude Include="render\camera_to_texture\CameraToTexture.h">
+      <Filter>render\camera_to_texture</Filter>
+    </ClInclude>
+    <ClInclude Include="render\compute_shader\ComputeShader.h">
+      <Filter>render\compute_shader</Filter>
+    </ClInclude>
+    <ClInclude Include="render\compute_shader_image\ComputeShaderImage.h">
+      <Filter>render\compute_shader_image</Filter>
+    </ClInclude>
+    <ClInclude Include="render\ffp_depth\FFPDepth.h">
+      <Filter>render\ffp_depth</Filter>
+    </ClInclude>
+    <ClInclude Include="render\gbuffer_read\GBufferRead.h">
+      <Filter>render\gbuffer_read</Filter>
+    </ClInclude>
+    <ClInclude Include="render\gbuffer_read\GBufferReadSample.h">
+      <Filter>render\gbuffer_read</Filter>
+    </ClInclude>
+    <ClInclude Include="render\gbuffer_write\GBufferWrite.h">
+      <Filter>render\gbuffer_write</Filter>
+    </ClInclude>
+    <ClInclude Include="render\gui_to_texture\GuiToTexture.h">
+      <Filter>render\gui_to_texture</Filter>
+    </ClInclude>
+    <ClInclude Include="render\gui_to_texture\WidgetClock.h">
+      <Filter>render\gui_to_texture</Filter>
+    </ClInclude>
+    <ClInclude Include="render\gui_to_texture\WidgetNoSignal.h">
+      <Filter>render\gui_to_texture</Filter>
+    </ClInclude>
+    <ClInclude Include="render\structured_buffer\StructuredBufferSample.h">
+      <Filter>render\structured_buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="render\screenshot\Screenshot.h">
+      <Filter>render\screenshot</Filter>
+    </ClInclude>
+    <ClInclude Include="render\screenshot\ScreenshotSample.h">
+      <Filter>render\screenshot</Filter>
+    </ClInclude>
+    <ClInclude Include="render\node_to_texture\NodeToTexture.h">
+      <Filter>render\node_to_texture</Filter>
+    </ClInclude>
+    <ClInclude Include="render\render_target\RenderTargetSample.h">
+      <Filter>render\render_target</Filter>
+    </ClInclude>
+    <ClInclude Include="render\split_screen_texture\CarControl.h">
+      <Filter>render\split_screen_texture</Filter>
+    </ClInclude>
+    <ClInclude Include="render\split_screen_texture\SplitScreenTexture.h">
+      <Filter>render\split_screen_texture</Filter>
+    </ClInclude>
+    <ClInclude Include="render\textures\TexturesSample.h">
+      <Filter>render\textures</Filter>
+    </ClInclude>
+    <ClInclude Include="render\weapon_clipping\WeaponClipping.h">
+      <Filter>render\weapon_clipping</Filter>
+    </ClInclude>
+    <ClInclude Include="render\weapon_clipping\WeaponClippingSample.h">
+      <Filter>render\weapon_clipping</Filter>
+    </ClInclude>
+    <ClInclude Include="systems\async_queue\AsyncQueueSample.h">
+      <Filter>systems\async_queue</Filter>
+    </ClInclude>
+    <ClInclude Include="systems\callbacks\Callbacks.h">
+      <Filter>systems\callbacks</Filter>
+    </ClInclude>
+    <ClInclude Include="systems\console\ConsoleSample.h">
+      <Filter>systems\console</Filter>
+    </ClInclude>
+    <ClInclude Include="systems\cpu_shader\CPUShaderSample.h">
+      <Filter>systems\cpu_shader</Filter>
+    </ClInclude>
+    <ClInclude Include="systems\events\EventsSample.h">
+      <Filter>systems\events</Filter>
+    </ClInclude>
+    <ClInclude Include="systems\ffp\FFPSample.h">
+      <Filter>systems\ffp</Filter>
+    </ClInclude>
+    <ClInclude Include="systems\files\FilesSample.h">
+      <Filter>systems\files</Filter>
+    </ClInclude>
+    <ClInclude Include="systems\images\ImagesSample.h">
+      <Filter>systems\images</Filter>
+    </ClInclude>
+    <ClInclude Include="systems\json\JsonSample.h">
+      <Filter>systems\json</Filter>
+    </ClInclude>
+    <ClInclude Include="systems\materials_and_properties\MaterialsAndPropertiesSample.h">
+      <Filter>systems\materials_and_properties</Filter>
+    </ClInclude>
+    <ClInclude Include="systems\cad_like_view\CADLikeView.h">
+      <Filter>systems\cad_like_view</Filter>
+    </ClInclude>
+    <ClInclude Include="systems\cad_like_view\ViewportCube.h">
+      <Filter>systems\cad_like_view</Filter>
+    </ClInclude>
+    <ClInclude Include="systems\intersection_multiple_async_requests\MultipleAsyncRequestsSample.h">
+      <Filter>systems\intersection_multiple_async_requests</Filter>
+    </ClInclude>
+    <ClInclude Include="systems\intersection_simple_async_request\SimpleAsyncRequestSample.h">
+      <Filter>systems\intersection_simple_async_request</Filter>
+    </ClInclude>
+    <ClInclude Include="systems\usc_variable\ScriptVariables.h">
+      <Filter>systems\usc_variable</Filter>
+    </ClInclude>
+    <ClInclude Include="systems\usc_types\ScriptTypes.h">
+      <Filter>systems\usc_types</Filter>
+    </ClInclude>
+    <ClInclude Include="systems\usc_transfer\ScriptTransfer.h">
+      <Filter>systems\usc_transfer</Filter>
+    </ClInclude>
+    <ClInclude Include="systems\usc_structures\ScriptStructure.h">
+      <Filter>systems\usc_structures</Filter>
+    </ClInclude>
+    <ClInclude Include="systems\usc_stack\ScriptStack.h">
+      <Filter>systems\usc_stack</Filter>
+    </ClInclude>
+    <ClInclude Include="systems\usc_inheritance\ScriptInheritance.h">
+      <Filter>systems\usc_inheritance</Filter>
+    </ClInclude>
+    <ClInclude Include="systems\usc_functions\ScriptFunctions.h">
+      <Filter>systems\usc_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="systems\usc_classes\ScriptClasses.h">
+      <Filter>systems\usc_classes</Filter>
+    </ClInclude>
+    <ClInclude Include="systems\usc_callbacks\ScriptCallbacks.h">
+      <Filter>systems\usc_callbacks</Filter>
+    </ClInclude>
+    <ClInclude Include="systems\usc_arrays\ScriptArrays.h">
+      <Filter>systems\usc_arrays</Filter>
+    </ClInclude>
+    <ClInclude Include="systems\stream_base\StreamBaseSample.h">
+      <Filter>systems\stream_base</Filter>
+    </ClInclude>
+    <ClInclude Include="systems\thread\ThreadSample.h">
+      <Filter>systems\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="systems\two_point_perspective\CameraShiftController.h">
+      <Filter>systems\two_point_perspective</Filter>
+    </ClInclude>
+    <ClInclude Include="systems\two_point_perspective\TwoPointPerspectiveSample.h">
+      <Filter>systems\two_point_perspective</Filter>
+    </ClInclude>
+    <ClInclude Include="systems\xml\XmlSample.h">
+      <Filter>systems\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\AsyncTasks.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\InputManager.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\Math.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\PersecutorTarget.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\SimpleInformationBox.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\SimplePathControl.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\UnigineScriptsInterpreter.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\Utils.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\navigation\Seeker.h">
+      <Filter>utils\navigation</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\navigation\Target.h">
+      <Filter>utils\navigation</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\network\httplib.h">
+      <Filter>utils\network</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\network\HttpServer.h">
+      <Filter>utils\network</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\intersection\Intersections.h">
+      <Filter>utils\intersection</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\Spline.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="user_interface\widget_canvas\Canvas.h">
+      <Filter>user_interface\widget_canvas</Filter>
+    </ClInclude>
+    <ClInclude Include="user_interface\widget_dialogs\Dialogs.h">
+      <Filter>user_interface\widget_dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="user_interface\widget_extern\ExternWidget.h">
+      <Filter>user_interface\widget_extern</Filter>
+    </ClInclude>
+    <ClInclude Include="user_interface\widget_manipulators\Manipulators.h">
+      <Filter>user_interface\widget_manipulators</Filter>
+    </ClInclude>
+    <ClInclude Include="user_interface\widget_manipulators\ManipulatorsSample.h">
+      <Filter>user_interface\widget_manipulators</Filter>
+    </ClInclude>
+    <ClInclude Include="user_interface\object_frame\ObjectFrame.h">
+      <Filter>user_interface\object_frame</Filter>
+    </ClInclude>
+    <ClInclude Include="user_interface\object_frame\ObjectFrameSample.h">
+      <Filter>user_interface\object_frame</Filter>
+    </ClInclude>
+    <ClInclude Include="user_interface\target_marker\TargetMarker.h">
+      <Filter>user_interface\target_marker</Filter>
+    </ClInclude>
+    <ClInclude Include="user_interface\user_interface\UserInterface.h">
+      <Filter>user_interface\user_interface</Filter>
+    </ClInclude>
+    <ClInclude Include="user_interface\widgets\Button.h">
+      <Filter>user_interface\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="user_interface\widgets\CheckBox.h">
+      <Filter>user_interface\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="user_interface\widgets\ComboBox.h">
+      <Filter>user_interface\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="user_interface\widgets\EditLine.h">
+      <Filter>user_interface\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="user_interface\widgets\EditText.h">
+      <Filter>user_interface\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="user_interface\widgets\Icon.h">
+      <Filter>user_interface\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="user_interface\widgets\Label.h">
+      <Filter>user_interface\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="user_interface\widgets\ListBox.h">
+      <Filter>user_interface\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="user_interface\widgets\Menu.h">
+      <Filter>user_interface\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="user_interface\widgets\Scroll.h">
+      <Filter>user_interface\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="user_interface\widgets\Slider.h">
+      <Filter>user_interface\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="user_interface\widgets\SpinBox.h">
+      <Filter>user_interface\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="user_interface\widgets\Sprite.h">
+      <Filter>user_interface\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="user_interface\widgets\TreeBox.h">
+      <Filter>user_interface\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="user_interface\widget_window\Window.h">
+      <Filter>user_interface\widget_window</Filter>
+    </ClInclude>
+    <ClInclude Include="animation\bones_constraints\AnimationBonesConstraintsSample.h">
+      <Filter>animation\bones_constraints</Filter>
+    </ClInclude>
+    <ClInclude Include="animation\bones_ik\AnimationBonesIKSample.h">
+      <Filter>animation\bones_ik</Filter>
+    </ClInclude>
+    <ClInclude Include="animation\bones_look_at\AnimationBonesLookAtSample.h">
+      <Filter>animation\bones_look_at</Filter>
+    </ClInclude>
+    <ClInclude Include="animation\bones_masks\AnimationBonesMasksSample.h">
+      <Filter>animation\bones_masks</Filter>
+    </ClInclude>
+    <ClInclude Include="animation\bones_retargeting\AnimationBonesRetargetingSample.h">
+      <Filter>animation\bones_retargeting</Filter>
+    </ClInclude>
+    <ClInclude Include="animation\bones_root_motion\AnimationBonesRootMotion.h">
+      <Filter>animation\bones_root_motion</Filter>
+    </ClInclude>
+    <ClInclude Include="animation\bones_sandbox\AnimationBonesSandboxSample.h">
+      <Filter>animation\bones_sandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="animation\bones_sandbox\BonesSandbox.h">
+      <Filter>animation\bones_sandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="animation\bones_simple_foot_placement\AnimationBonesSimpleFootPlacementSample.h">
+      <Filter>animation\bones_simple_foot_placement</Filter>
+    </ClInclude>
+    <ClInclude Include="animation\bones_state_machine\AnimationBonesStateMachineSample.h">
+      <Filter>animation\bones_state_machine</Filter>
+    </ClInclude>
+    <ClInclude Include="animation\bones_state_machine\StateMachine.h">
+      <Filter>animation\bones_state_machine</Filter>
+    </ClInclude>
+    <ClInclude Include="physics\body_events\BodyCallbacks.h">
+      <Filter>physics\body_events</Filter>
+    </ClInclude>
+    <ClInclude Include="physics\joint_events\JointCallbacks.h">
+      <Filter>physics\joint_events</Filter>
+    </ClInclude>
+    <ClInclude Include="complex\player_persecutor\PlayerPersecutorComponent.h">
+      <Filter>complex\player_persecutor</Filter>
+    </ClInclude>
+    <ClInclude Include="complex\player_persecutor\PlayerPersecutorSample.h">
+      <Filter>complex\player_persecutor</Filter>
+    </ClInclude>
+    <ClInclude Include="complex\fire_hose\ExtinguishingPuddles.h">
+      <Filter>complex\fire_hose</Filter>
+    </ClInclude>
+    <ClInclude Include="complex\fire_hose\FireHoseSample.h">
+      <Filter>complex\fire_hose</Filter>
+    </ClInclude>
+    <ClInclude Include="complex\fire_hose\Flame.h">
+      <Filter>complex\fire_hose</Filter>
+    </ClInclude>
+    <ClInclude Include="nodes\dynamic_field_height\DynamicTextureFieldHeight.h">
+      <Filter>nodes\dynamic_field_height</Filter>
+    </ClInclude>
+    <ClInclude Include="nodes\dynamic_field_height\DynamicTextureFieldHeightSample.h">
+      <Filter>nodes\dynamic_field_height</Filter>
+    </ClInclude>
+    <ClInclude Include="basics\ifps_usage\IFpsMovementController.h">
+      <Filter>basic\ifps_usage</Filter>
+    </ClInclude>
+    <ClInclude Include="basics\ifps_usage\IFpsMovementSample.h">
+      <Filter>basic\ifps_usage</Filter>
+    </ClInclude>
+    <ClInclude Include="complex\day_night_switch\DayNightSwitcher.h">
+      <Filter>complex\day_night_switch</Filter>
+    </ClInclude>
+    <ClInclude Include="complex\day_night_switch\DayNightSwitchSample.h">
+      <Filter>complex\day_night_switch</Filter>
+    </ClInclude>
+    <ClInclude Include="complex\day_night_switch\SunController.h">
+      <Filter>complex\day_night_switch</Filter>
+    </ClInclude>
+    <ClInclude Include="systems\visualizer\VisualizerSample.h">
+      <Filter>systems\visualizer</Filter>
+    </ClInclude>
+    <ClInclude Include="systems\visualizer\VisualizerUsage.h">
+      <Filter>systems\visualizer</Filter>
+    </ClInclude>
+    <ClInclude Include="complex\spectator_controller\SpectatorController.h">
+      <Filter>complex\spectator_controller</Filter>
+    </ClInclude>
+    <ClInclude Include="complex\spectator_controller\SpectatorControllerSample.h">
+      <Filter>complex\spectator_controller</Filter>
+    </ClInclude>
+    <ClInclude Include="complex\observer_controller\ObserverController.h">
+      <Filter>complex\observer_controller</Filter>
+    </ClInclude>
+    <ClInclude Include="user_interface\widgets\RadioButtons.h">
+      <Filter>user_interface\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="basics\bound_intersection\BoundIntersection.h">
+      <Filter>basic\bound_intersection</Filter>
+    </ClInclude>
+    <ClInclude Include="basics\ray_intersection\RayIntersection.h">
+      <Filter>basic\ray_intersection</Filter>
+    </ClInclude>
+    <ClInclude Include="systems\mount_points\MountPointsSample.h">
+      <Filter>systems\mount_points</Filter>
+    </ClInclude>
+    <ClInclude Include="systems\events_advanced\EventsAdvancedSample.h">
+      <Filter>systems\events_advanced</Filter>
+    </ClInclude>
+    <ClInclude Include="systems\events_advanced\EventsAdvancedUnit.h">
+      <Filter>systems\events_advanced</Filter>
+    </ClInclude>
+    <ClInclude Include="render\screenshot_advanced\ScreenshotAdvancedSample.h">
+      <Filter>render\screenshot_advanced</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\BodyFractureUnit.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\Crosshair.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\EventTask.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\MutableLambda.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\ScreenshotMaker.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\Spawner.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="physics\body_fracture_explosion\BodyFractureExplosion.h">
+      <Filter>physics\body_fracture_explosion</Filter>
+    </ClInclude>
+    <ClInclude Include="physics\body_fracture_explosion\BodyFractureExplosionSample.h">
+      <Filter>physics\body_fracture_explosion</Filter>
+    </ClInclude>
+    <ClInclude Include="physics\body_fracture_shooting_gallery\BodyFractureShootingGalleryGun.h">
+      <Filter>physics\body_fracture_shooting_gallery</Filter>
+    </ClInclude>
+    <ClInclude Include="physics\body_fracture_shooting_gallery\BodyFractureShootingGallerySample.h">
+      <Filter>physics\body_fracture_shooting_gallery</Filter>
+    </ClInclude>
+    <ClInclude Include="systems\microprofiler\MicroprofilerSample.h">
+      <Filter>systems\microprofiler</Filter>
+    </ClInclude>
+    <ClInclude Include="systems\microprofiler\MicroprofilerSleepyNode.h">
+      <Filter>systems\microprofiler</Filter>
+    </ClInclude>
+    <ClInclude Include="network\http_image_request\HttpImageRequestSample.h">
+      <Filter>network\http_image_request</Filter>
+    </ClInclude>
+    <ClInclude Include="network\http_image_response\HttpImageResponseSample.h">
+      <Filter>network\http_image_response</Filter>
+    </ClInclude>
+    <ClInclude Include="network\http_simple_request\SimpleHttpRequestSample.h">
+      <Filter>network\http_simple_request</Filter>
+    </ClInclude>
+    <ClInclude Include="network\http_simple_response\SimpleHttpResponseSample.h">
+      <Filter>network\http_simple_response</Filter>
+    </ClInclude>
+    <ClInclude Include="network\tcp_sockets\TCPSocketsSample.h">
+      <Filter>network\tcp_sockets</Filter>
+    </ClInclude>
+    <ClInclude Include="network\udp_sockets\UDPSocketsSample.h">
+      <Filter>network\udp_sockets</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\DefaultPlayer.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="plugins\fmod_studio\FMODStudioSample.h">
+      <Filter>plugins\fmod_studio</Filter>
+    </ClInclude>
+    <ClInclude Include="plugins\fmod_core\FMODCoreSample.h">
+      <Filter>plugins\fmod_core</Filter>
+    </ClInclude>
+    <ClInclude Include="basics\camera_zoom\TargetGui.h">
+      <Filter>basic\camera_zoom</Filter>
+    </ClInclude>
+    <ClInclude Include="basics\camera_zoom\ZoomSample.h">
+      <Filter>basic\camera_zoom</Filter>
+    </ClInclude>
+    <ClInclude Include="basics\camera_zoom\ZoomController.h">
+      <Filter>basic\camera_zoom</Filter>
+    </ClInclude>
+    <ClInclude Include="physics\update_physics\UpdatePhysicsUsageController.h">
+      <Filter>physics\udpate_physics</Filter>
+    </ClInclude>
+    <ClInclude Include="physics\update_physics\UpdatePhysicsUsageSample.h">
+      <Filter>physics\udpate_physics</Filter>
+    </ClInclude>
+    <ClInclude Include="complex\lidar\Las.h">
+      <Filter>complex\lidar</Filter>
+    </ClInclude>
+    <ClInclude Include="menu_ui\DescriptionWindowCreator.h">
+      <Filter>menu_ui</Filter>
+    </ClInclude>
+    <ClInclude Include="systems\async_queue_tasks\AsyncQueueTasksSample.h">
+      <Filter>systems\async_queue_tasks</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="menu_ui">
+      <UniqueIdentifier>{deaf0f92-59c3-4280-9a73-a19942f92d06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils">
+      <UniqueIdentifier>{3ef27d09-81d1-4b41-927a-7bba53bc599e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="navigation">
+      <UniqueIdentifier>{1a20f619-69a1-46c5-8ed7-b287fb6f2d12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nodes">
+      <UniqueIdentifier>{73b89288-e0b0-4cb7-aa9a-f663517c5664}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems">
+      <UniqueIdentifier>{3f686d71-72d5-424c-b1f2-27a6ccb264f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\files">
+      <UniqueIdentifier>{fcbc6345-dbd5-4451-a435-3f529bd4033e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\async_queue">
+      <UniqueIdentifier>{d8c5160c-03fd-4b3d-bcf7-59383fe7552c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\callbacks">
+      <UniqueIdentifier>{2bfd35d1-58c6-4961-8d7a-f88d12a68c29}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\console">
+      <UniqueIdentifier>{b674445a-4587-4de0-b067-1f4ed577c7ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\cpu_shader">
+      <UniqueIdentifier>{b58f7217-c7f2-4551-9f79-6a155b6ddabf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\events">
+      <UniqueIdentifier>{2726ee51-618b-4450-9dbe-73536fa39012}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\ffp">
+      <UniqueIdentifier>{0000376a-a6b4-4d19-80a9-67353cd9a517}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\images">
+      <UniqueIdentifier>{ba9a7f6c-0133-4e9b-bb18-e35fcd4819c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\json">
+      <UniqueIdentifier>{300898d2-99ac-421b-9efe-7b0decdfd5da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\materials_and_properties">
+      <UniqueIdentifier>{7ff982aa-d608-4d59-a58d-086e6aa65f71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\thread">
+      <UniqueIdentifier>{93e932d7-ef12-4260-879a-8e370d177df5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\xml">
+      <UniqueIdentifier>{2086c4dd-62c7-431a-95d2-200150435b13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="user_interface">
+      <UniqueIdentifier>{327996c9-545c-4739-9927-23bf5be9666b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="user_interface\object_frame">
+      <UniqueIdentifier>{541bdece-b903-49f0-bb7a-52590fc378b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="user_interface\target_marker">
+      <UniqueIdentifier>{740e071e-ce22-4079-a485-bdfd7e3bab32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="user_interface\user_interface">
+      <UniqueIdentifier>{318fbe65-260c-4853-946b-9dd62e60e3e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="user_interface\widgets">
+      <UniqueIdentifier>{f288eb85-4bf8-4c75-8e80-132adc2327b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="user_interface\widget_canvas">
+      <UniqueIdentifier>{ec296a8b-85a0-4062-97af-439361398f40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="user_interface\widget_dialogs">
+      <UniqueIdentifier>{e68c9926-175d-4a1d-b595-2c38452473f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="user_interface\widget_extern">
+      <UniqueIdentifier>{a6e457d6-9194-417f-834f-c3192666f980}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="user_interface\widget_manipulators">
+      <UniqueIdentifier>{5cddd8ca-a43a-4ff9-b60c-5c248cf9ca53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="user_interface\widget_window">
+      <UniqueIdentifier>{454e37b9-d21a-4e95-bc1a-f8353f9b32a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="animation">
+      <UniqueIdentifier>{69886448-38cc-4bfd-bd95-efb0bf35703f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="animation\animation_material">
+      <UniqueIdentifier>{7be3b5c2-27d5-4b87-87f0-14b319a89784}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="animation\animation_node">
+      <UniqueIdentifier>{4213498e-0fa8-4373-b829-863d7fa8857e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="animation\animation_property">
+      <UniqueIdentifier>{de43c8a0-4d02-4fff-8911-0bab7bd60290}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="animation\animation_singleton">
+      <UniqueIdentifier>{7a74be61-4d99-46f2-904d-889da9a4a6a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="animation\animation_widget">
+      <UniqueIdentifier>{b07b2f95-1186-4acd-a4d6-72a9cbe3290f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="animation\curve_animation">
+      <UniqueIdentifier>{850a1348-05aa-4c8e-95de-8af426f249cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="animation\physics_based_animation">
+      <UniqueIdentifier>{df798044-c7ab-4b47-80ab-ea3806ce5e09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="animation\playback_layers">
+      <UniqueIdentifier>{a7a79dc6-c631-4259-8b56-42c2b37b14f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="animation\track_playback">
+      <UniqueIdentifier>{9c64e7eb-67e0-4b89-9ad8-86c0f8e239bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="basic">
+      <UniqueIdentifier>{32f4bd07-4aab-49df-ad6e-2423777f486c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="basic\euler_angles">
+      <UniqueIdentifier>{39f71c69-f3b4-43aa-b244-a510d8bd495d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nodes\landscape_combined">
+      <UniqueIdentifier>{378cadbc-8730-4246-b3c3-b9f9b303e3f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nodes\landscape_create">
+      <UniqueIdentifier>{e499c2da-c69a-40d0-82f9-0af84ea08bc3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nodes\landscape_details">
+      <UniqueIdentifier>{52f0127c-46d4-4306-bed6-02f745254119}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nodes\landscape_excavation">
+      <UniqueIdentifier>{dfe2fb1d-6eb9-4bfc-9743-e01aa1a454de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nodes\landscape_mask_paint">
+      <UniqueIdentifier>{392a70ee-dd27-41b8-bee1-ca26156b6843}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nodes\landscape_mesh">
+      <UniqueIdentifier>{7469e26d-13fb-428b-a025-a37d9cf8d7c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nodes\landscape_paint">
+      <UniqueIdentifier>{cfea3fcc-7da9-46ed-95cd-d99e6cbf2e00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nodes\landscape_tracks">
+      <UniqueIdentifier>{040a5862-ba75-4e3c-b2eb-8b8704add534}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nodes\water_fecth_intersection">
+      <UniqueIdentifier>{19718cec-b103-4b51-b8cf-0d67530693c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nodes\water_simple_boat">
+      <UniqueIdentifier>{e99f8605-8598-402d-8235-e56c0efb75e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nodes\water_buoyancy">
+      <UniqueIdentifier>{9cb047f6-6188-457d-b740-7ddf79ba9ffd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nodes\water_custom_wave">
+      <UniqueIdentifier>{b6dadcc5-f37c-4d83-89c5-8eb61f0b3340}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nodes\cluster">
+      <UniqueIdentifier>{ebda546a-3e54-467d-a80e-89f5e9799ffb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nodes\clutter_to_cluster">
+      <UniqueIdentifier>{1bb0e518-a322-43b2-b6e6-a9388ac0303d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="basic\node_spawner_grid">
+      <UniqueIdentifier>{99d2b6db-26b5-44a3-aabf-8f50e640a257}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="basic\node_spawner_timer">
+      <UniqueIdentifier>{3b747e4a-c5a6-4166-b597-5ab7f6f43900}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="basic\simple_movement">
+      <UniqueIdentifier>{ab07de43-fc8f-4f02-9929-01e4e6251c02}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="basic\trajectory">
+      <UniqueIdentifier>{fe2c7687-e376-423c-8352-f58944834502}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="basic\trigger_buttons">
+      <UniqueIdentifier>{ea097bf1-8be6-4085-93cb-b8673e94dc90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="basic\triggers">
+      <UniqueIdentifier>{fe57674c-326a-4dbf-b1f4-6788babde8cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nodes\create_objects">
+      <UniqueIdentifier>{5db945a2-3cda-4992-8765-71f81fb33a0e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nodes\landscape_fetch">
+      <UniqueIdentifier>{f8789899-2055-4606-ae6a-6f48ddf9b54c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nodes\light">
+      <UniqueIdentifier>{c73d28de-3b25-4dd0-9a12-bef2e88f1076}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nodes\node_extern">
+      <UniqueIdentifier>{7d394574-d39b-4e94-8bd7-77652ed48ec6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nodes\object_extern">
+      <UniqueIdentifier>{a0a76b21-fc11-4467-bf4e-ca22fcf4df1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nodes\players">
+      <UniqueIdentifier>{26c9d7aa-105c-4b2f-b3c7-7252fb20264f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nodes\spline_graph">
+      <UniqueIdentifier>{2591afc8-e508-4845-b225-4d02af70b253}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nodes\state_save_restore">
+      <UniqueIdentifier>{368c99fb-0fc7-45fe-9c22-e33916c37c28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nodes\world_spline_graph">
+      <UniqueIdentifier>{02e35737-d20a-4457-bc08-ed3b98528368}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nodes\water_physical_buoyancy">
+      <UniqueIdentifier>{0759b620-2aa4-4d08-aa80-c6f4ffae4aed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="complex">
+      <UniqueIdentifier>{cfaff023-6f2d-4aea-80c9-383fb8970587}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="complex\boids">
+      <UniqueIdentifier>{8a67d2d7-ae14-4b6f-82f3-f08d73b724fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="complex\crane_rope">
+      <UniqueIdentifier>{adad55a1-c021-4e05-af6c-f1b8c09c8e5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="complex\first_person_controller">
+      <UniqueIdentifier>{2fa3d59c-04a7-476e-8b3a-ac01013468d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="complex\lidar">
+      <UniqueIdentifier>{725cb551-f826-434e-b24d-18ba83908746}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="complex\robot_arm">
+      <UniqueIdentifier>{96f02e11-551c-47c2-b4d2-a8725d5ee50a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="complex\top_down_controller">
+      <UniqueIdentifier>{39c21cfe-cc29-4a90-87ec-38c3639d512f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="complex\track_physical">
+      <UniqueIdentifier>{e8af31ef-e18e-46dc-ae52-96a92fbb7c4b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="complex\track_non_physical">
+      <UniqueIdentifier>{7098dac2-4833-4b04-b5ab-93480fb3b1c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="input_controls">
+      <UniqueIdentifier>{60543a31-2ea6-4e2a-a0ae-97e617ff2658}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="input_controls\input_gamepad">
+      <UniqueIdentifier>{17eaa390-1ee9-4b23-859b-21d630306aa5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="input_controls\input_joystick">
+      <UniqueIdentifier>{f4a30d28-0744-4ce8-8e2c-a8981cf4944b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="input_controls\input_keyboard_mouse">
+      <UniqueIdentifier>{2da26f6b-5bdd-4357-a87f-491678200b77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="input_controls\input_touch">
+      <UniqueIdentifier>{3544f0f7-8191-4551-bd36-e51757ea7a55}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="navigation\navigation_mesh">
+      <UniqueIdentifier>{1b90bfc3-4f4f-4edc-8479-d29ecb4096ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="navigation\navigation_mesh_demo">
+      <UniqueIdentifier>{2efac0c0-569a-4d29-aaf8-aabcb6a5f995}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="navigation\navigation_sectors">
+      <UniqueIdentifier>{f7419e34-7a22-43ac-956e-eb550094cfe7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="navigation\navigation_sectors_demo">
+      <UniqueIdentifier>{8f0a5582-ed9a-4378-915f-f0cc48491ee6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="physics">
+      <UniqueIdentifier>{2754d0a3-c2b1-412e-bb1b-1ae69e0c0e05}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="physics\physics_movement">
+      <UniqueIdentifier>{5c7121c9-f7b5-4cd8-8ab3-d95d38653d27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="render">
+      <UniqueIdentifier>{20a0a17e-9412-4097-afa0-03dcf441a093}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="render\camera_to_texture">
+      <UniqueIdentifier>{19f51013-e606-4f2c-8548-b6f39617e32e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="render\compute_shader">
+      <UniqueIdentifier>{48747f28-2241-4095-a177-9a93d4114e34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="render\compute_shader_image">
+      <UniqueIdentifier>{a60844b0-bedd-4eac-8e35-91676d58af02}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="render\ffp_depth">
+      <UniqueIdentifier>{f4b7d577-6ef3-4d64-b673-8607b3c99dd7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="render\gbuffer_read">
+      <UniqueIdentifier>{ee4df8a8-8da8-40aa-acc8-24de91382717}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="render\gbuffer_write">
+      <UniqueIdentifier>{b1cc63c9-4df4-40b6-8867-9f02dd34769e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="render\gui_to_texture">
+      <UniqueIdentifier>{1d0adab8-a23b-49ae-a706-f2f6dda8f413}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="render\node_to_texture">
+      <UniqueIdentifier>{db5dc220-73cd-4aa2-82af-286b65ddfe2a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="render\render_target">
+      <UniqueIdentifier>{04a063fe-b2cf-4884-94f4-e735f512f544}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="render\screenshot">
+      <UniqueIdentifier>{f1aa866a-865b-437c-8057-c51d3bae09d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="render\split_screen_texture">
+      <UniqueIdentifier>{947b3ae9-c021-4781-87fd-094e9232b46d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="render\structured_buffer">
+      <UniqueIdentifier>{4e0a9050-271c-4387-a323-b91686c63951}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="render\textures">
+      <UniqueIdentifier>{fbb7ec90-b816-493f-90b1-d95b9fce75b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="render\weapon_clipping">
+      <UniqueIdentifier>{f85cb7c5-357f-4dc4-911b-f3b1f4cc5db0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\cad_like_view">
+      <UniqueIdentifier>{b2f3a541-9638-4d90-b742-b62d7503796c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\intersection_multiple_async_requests">
+      <UniqueIdentifier>{7b9a5261-d993-47ed-aa1f-26521311af2e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\intersection_simple_async_request">
+      <UniqueIdentifier>{323dffc1-7b5e-4ada-b9be-da3ad1fc818e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\stream_base">
+      <UniqueIdentifier>{685c40a5-aaf8-4b78-8240-a8ca429e9263}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\two_point_perspective">
+      <UniqueIdentifier>{af932671-f5aa-44c5-8179-8d8521e6d102}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\usc_arrays">
+      <UniqueIdentifier>{c8eb80fd-81fa-4181-ac04-abcb1af33806}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\usc_callbacks">
+      <UniqueIdentifier>{9fac2da5-621e-4816-99a2-67abe68e99e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\usc_classes">
+      <UniqueIdentifier>{45f4a1e8-55e1-43ac-b96a-a3effd8d1c35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\usc_functions">
+      <UniqueIdentifier>{8630b80e-e2f7-412b-95bd-00520087c455}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\usc_inheritance">
+      <UniqueIdentifier>{9c60d3b2-f8b5-4fb5-946d-caf66a50af4b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\usc_stack">
+      <UniqueIdentifier>{9298f2ad-e86d-49fb-9c8d-5b5f72b00669}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\usc_structures">
+      <UniqueIdentifier>{7a40f721-40a9-42fe-8e58-c426992abcfe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\usc_transfer">
+      <UniqueIdentifier>{cadeda44-7a28-4cd0-8783-582268c97c1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\usc_types">
+      <UniqueIdentifier>{97658b31-5b27-49b5-bdd2-31e8982e4b1b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\usc_variable">
+      <UniqueIdentifier>{52345e84-e1e6-442d-8b7b-148f2311861f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils\navigation">
+      <UniqueIdentifier>{627f5c25-e885-49b6-b328-55d240cdf46e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils\network">
+      <UniqueIdentifier>{f3104dc5-c5a8-40c0-bf8d-05d6b5643a7c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils\intersection">
+      <UniqueIdentifier>{56ba9aef-3cb1-44f5-802c-7d31335fe388}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="animation\bones_constraints">
+      <UniqueIdentifier>{d8917976-5739-424d-8fc4-cd033e242260}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="animation\bones_ik">
+      <UniqueIdentifier>{1a6a817b-6cb9-4599-8606-b58737a3545a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="animation\bones_look_at">
+      <UniqueIdentifier>{34f6fa07-30a1-4140-955d-9c8e051aadc2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="animation\bones_masks">
+      <UniqueIdentifier>{25a794c7-2c04-45d9-8ffe-d0cf4dfa2718}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="animation\bones_retargeting">
+      <UniqueIdentifier>{0451f894-0e73-4dbe-8383-a56021311ed2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="animation\bones_root_motion">
+      <UniqueIdentifier>{169342dc-4989-49f6-95fa-15f9ccad77b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="animation\bones_sandbox">
+      <UniqueIdentifier>{00d7b6d1-572d-4f15-9283-3f4a0ef8d12b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="animation\bones_simple_foot_placement">
+      <UniqueIdentifier>{b069e0bb-4f44-4222-9c1a-58cbc6591a11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="animation\bones_state_machine">
+      <UniqueIdentifier>{56b6fa5f-b436-493d-8daf-ca32a1a32935}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="physics\body_events">
+      <UniqueIdentifier>{70e50fce-1616-49b4-979c-02041714208b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="physics\joint_events">
+      <UniqueIdentifier>{8b567339-db2a-4620-ad26-83a369064771}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="complex\player_persecutor">
+      <UniqueIdentifier>{b9a6aa84-061e-4ad0-8f44-a63fb8ff362b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="complex\fire_hose">
+      <UniqueIdentifier>{9714f2b5-55b9-4b24-b341-8d78817686f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nodes\dynamic_field_height">
+      <UniqueIdentifier>{f12608f3-f02a-4910-9bbb-7afa8c31c451}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="basic\ray_intersection">
+      <UniqueIdentifier>{06faa312-3cce-4755-b135-60ea90021fa6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="basic\bound_intersection">
+      <UniqueIdentifier>{c943d431-f2be-4383-92c5-b2eb3d962259}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\mount_points">
+      <UniqueIdentifier>{b22ad844-fef5-42b2-9559-dce35a867390}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="basic\ifps_usage">
+      <UniqueIdentifier>{9006c9bc-5f7c-48d8-98d0-750723e1a93a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="complex\day_night_switch">
+      <UniqueIdentifier>{c891d5e0-721f-4222-a184-ca32218ca4f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="physics\udpate_physics">
+      <UniqueIdentifier>{ef86220d-3a64-4a06-a195-e9c7295627cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\visualizer">
+      <UniqueIdentifier>{1033d9ab-d494-4d2e-a16a-016eadeb3c47}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="complex\spectator_controller">
+      <UniqueIdentifier>{846d9f99-e0a4-4028-b253-2bc8f7112e02}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="complex\observer_controller">
+      <UniqueIdentifier>{b9b5d380-8215-46d6-aa65-812a514aac64}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\events_advanced">
+      <UniqueIdentifier>{6469d5fb-ec65-4d61-bffb-b18efeb30b42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="render\screenshot_advanced">
+      <UniqueIdentifier>{843d7b74-91cb-4376-9ec4-d25ff26b91f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="physics\body_fracture_explosion">
+      <UniqueIdentifier>{65867a1e-1936-45be-919b-cb35c16666d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="physics\body_fracture_shooting_gallery">
+      <UniqueIdentifier>{6c5cc881-9a43-45b8-8631-dc7455694397}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\microprofiler">
+      <UniqueIdentifier>{98103a87-81f6-47ec-a2d9-af8fbb5be60d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="network">
+      <UniqueIdentifier>{ddec7b4c-18db-4a10-8e77-7afed969fee8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="network\tcp_sockets">
+      <UniqueIdentifier>{2554c32b-b4f4-4ba8-85da-caeef709396d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="network\udp_sockets">
+      <UniqueIdentifier>{a3375fc4-f5d6-47ab-b007-49fcf4e28906}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="network\http_image_request">
+      <UniqueIdentifier>{8cf77501-78e3-4c8a-8ada-ba9026dbbfcc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="network\http_image_response">
+      <UniqueIdentifier>{bb163688-ae5c-4280-9902-6f9f1cec3df0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="network\http_simple_request">
+      <UniqueIdentifier>{7b4a028b-2bd2-438b-9e4c-989153f53a11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="network\http_simple_response">
+      <UniqueIdentifier>{016a2d30-a1e8-40e7-9fb2-b8f4f0aaba1e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="plugins">
+      <UniqueIdentifier>{08ca7b66-820b-45e1-aae2-04e52187ce10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="plugins\fmod_core">
+      <UniqueIdentifier>{e22e3985-19b5-4be8-b58e-b02f969df553}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="plugins\fmod_studio">
+      <UniqueIdentifier>{9703d74e-3067-4460-bad0-bbac2edfb327}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="basic\camera_zoom">
+      <UniqueIdentifier>{280fb1b2-d79d-485a-ba29-a219ec8247d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\external_package">
+      <UniqueIdentifier>{a5e14920-af1b-4529-8dd7-4e2fc6e509ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\async_queue_tasks">
+      <UniqueIdentifier>{a09fb9fa-fc86-4394-a622-570ef611a6a1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

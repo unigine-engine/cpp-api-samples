@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sample title="CPU Shader">
+	<sdk_desc>Multi-threaded update of multiple <i>ObjectMeshCluster</i> instances on the CPU side using the <i>CPUShader</i> class</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample demonstrates how to implement a custom CPU shader by inheriting from the <ui><link to="cpushader_class">CPUShader</link></ui> class to perform multi-threaded data processing outside the main rendering loop.</para>
+			<para>The system updates multiple <ui><link to="objectmeshcluster_class">ObjectMeshCluster</link></ui> instances asynchronously by using a helper <ui>AsyncCluster</ui> structure. Each cluster maintains two versions of itself: one for rendering and one for background updates. At the end of each frame, the two are swapped so the visible cluster always shows the latest result without stalling the frame.</para>
+		</brief>
+		<para>The parallel logic is encapsulated in a derived shader class <ui>UpdateClusterCPUShader</ui>, where the <ui>process()</ui> method is overridden to perform per-cluster updates. This method is automatically dispatched using <ui><link to="cpushader_class" offset="runAsync_int_void">CPUShader::runAsync()</link></ui>, allowing the workload to be spread across available CPU threads. Swap operations, visibility checks, and update decisions are handled independently for each cluster.</para>
+		<para>This approach is particularly effective for real-time procedural animation, large-scale mesh updates, or any CPU-side logic that benefits from multithreading while remaining synchronized with rendering.</para>
+	</desc>
+	<tags>
+		<tag>Systems</tag>
+		<tag>Shaders</tag>
+		<tag>Optimization</tag>
+	</tags>
+</sample>

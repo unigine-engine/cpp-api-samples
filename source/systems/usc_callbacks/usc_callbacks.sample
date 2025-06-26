@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="USC Callbacks">
+	<desc>
+		<brief>
+			<para>This sample demonstrates how to call <ui>UnigineScript</ui> functions from <ui>C++</ui> code via callbacks.</para>
+			<para>The mechanism is based on <ui><link to="variable_class">Variable</link></ui> Class instances and allows calling both custom and built-in script functions by name.</para>
+		</brief>
+		<para>The sample registers a <ui>C++</ui> wrapper function to expose script invocation capability to <ui>UnigineScript</ui> via the <ui><link to="interpreter_class">Interpreter</link></ui> class.</para>
+	</desc>
+	<tags>
+		<tag>UnigineScript</tag>
+	</tags>
+</sample>

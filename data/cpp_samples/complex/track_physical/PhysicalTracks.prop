@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="PhysicalTracks" manual="1" parent_name="node_base">
+	<parameter name="side" type="switch" items="left,right">0</parameter>
+	<parameter name="track_node" type="node">0</parameter>
+	<parameter name="spacing" type="float">1</parameter>
+</property>

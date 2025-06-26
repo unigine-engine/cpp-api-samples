@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="GuiToTexture" manual="1" parent_name="node_base">
+	<parameter name="surface_name" type="string"/>
+	<parameter name="texture_slot_names" type="array" array_type="string"/>
+	<parameter name="texture_resolution" type="ivec2">2048 2048</parameter>
+</property>

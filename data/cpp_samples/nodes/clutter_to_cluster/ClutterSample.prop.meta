@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>5988c13ef31d190e93ade67abadd1c6bac1889c9</guid>
+	<type>property</type>
+	<hash>6bbf8155</hash>
+	<runtimes>
+		<runtime id="5988c13ef31d190e93ade67abadd1c6bac1889c9" name="ClutterSample" link="0" type="4"/>
+	</runtimes>
+</asset>

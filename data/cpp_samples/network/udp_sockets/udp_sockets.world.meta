@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>ea7f6235d2553a4cc9ceaa59cac39b48cf87d552</guid>
+	<type>world</type>
+	<hash>dc311093</hash>
+	<runtimes>
+		<runtime id="ea7f6235d2553a4cc9ceaa59cac39b48cf87d552" name="udp_sockets.world" link="0"/>
+	</runtimes>
+	<parameters>
+		<parameter type="string" name="physics_settings_path"/>
+		<parameter type="string" name="render_settings_path">guid://8bed8c3ce53501ff11c1b0ae5cc6d017d4ad5524</parameter>
+		<parameter type="string" name="script_name"/>
+		<parameter type="string" name="sound_settings_path"/>
+		<parameter type="string" name="viewports_settings"/>
+	</parameters>
+</asset>

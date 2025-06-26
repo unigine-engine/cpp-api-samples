@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>7f24fd8d247fa8ced2a55aad1a631248ddb42c30</guid>
+	<type>property</type>
+	<hash>b808f10d</hash>
+	<runtimes>
+		<runtime id="7f24fd8d247fa8ced2a55aad1a631248ddb42c30" name="BodyFractureExplosionSample" link="0" type="4"/>
+	</runtimes>
+</asset>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="VisualizerUsage" manual="1" parent_name="node_base" tooltip="This component displays information about the zoom sample and demonstrates how to use a simple zoom and how it affects player camera.">
+	<parameter name="node_boundBox_example" type="node">0</parameter>
+	<parameter name="node_boundSphere_example" type="node">0</parameter>
+	<parameter name="node_object_example" type="node">0</parameter>
+	<parameter name="node_object_solid_example" type="node">0</parameter>
+	<parameter name="node_surface_example" type="node">0</parameter>
+	<parameter name="node_surface_solid_example" type="node">0</parameter>
+	<parameter name="node_object_surface_boundBox_example" type="node">0</parameter>
+	<parameter name="node_object_surface_boundSphere_example" type="node">0</parameter>
+	<parameter name="postament_nodes" type="array" array_type="node"/>
+</property>

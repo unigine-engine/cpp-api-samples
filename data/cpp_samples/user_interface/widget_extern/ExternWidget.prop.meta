@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>48c797dd9af7388ea840b43560320d96532c28ee</guid>
+	<type>property</type>
+	<hash>82cc271b</hash>
+	<runtimes>
+		<runtime id="48c797dd9af7388ea840b43560320d96532c28ee" name="ExternWidget" link="0" type="4"/>
+	</runtimes>
+</asset>

@@ -1,0 +1,25 @@
+string source = "From [USC]: ";
+int init()
+{
+	log.message("\n\n=================Inheritance Sample=================\n\n");
+
+	// object class
+	MyObjectClass object = new MyObjectClass();
+	object.function();
+	log.message(source + "%s\n", object.getName());
+
+	// node class
+	MyNodeClass node = object;
+	node.function();
+	log.message(source + "%s\n", node.getName());
+
+	// base class
+	MyBaseClass base = node;
+	base.function();
+	log.message(source + "%s\n", base.getName());
+
+	// delete object
+	delete object;
+
+	return 1;
+}

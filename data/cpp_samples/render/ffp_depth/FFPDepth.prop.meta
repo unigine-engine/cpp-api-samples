@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>818ef3d738d52c4994193b069d7f41ba024667e4</guid>
+	<type>property</type>
+	<hash>74845c8a</hash>
+	<runtimes>
+		<runtime id="818ef3d738d52c4994193b069d7f41ba024667e4" name="FFPDepth" link="0" type="4"/>
+	</runtimes>
+</asset>

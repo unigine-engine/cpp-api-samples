@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Top-Down Controller">
+	<sdk_desc>Implementation of some elements of a top-down strategy such as selecting one or multiple units, panning the view, turning the camera and smoothly focusing it on the current selection.</sdk_desc>
+	<desc>
+		<brief>This sample represents an implementation of some elements of a top-down strategy such as selecting one or multiple units, panning the view, turning the camera and smoothly focusing it on the current selection. The implementation is based on the <ui>PlayerDummy</ui> node.</brief>
+	</desc>
+	<controls>
+		<![CDATA[
+		<p align=left><b>Left Mouse Button</b> to select objects (either clicking on them or drawing a rectangle).</p><br/>
+		<p align=left><b>Middle Mouse Button</b> to move the camera.</p><br/>
+		<p align=left><b>Mouse Wheel</b> to zoom in/out.</p><br/>
+		<p align=left><b>Q</b> and <b>E</b> to rotate the camera.</p><br/>
+		<p align=left>Hold <b>F</b> to follow the selected object.</p><br/>
+		]]>
+	</controls>
+	<tags>
+		<tag>Cameras</tag>
+		<tag>Games</tag>
+		<tag>Basic Recipes</tag>
+	</tags>
+</sample>

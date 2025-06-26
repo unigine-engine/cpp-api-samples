@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="TexturesSample" manual="1" parent_name="node_base">
+	<parameter name="meshes_param" type="array" title="Meshes" array_type="node"/>
+</property>

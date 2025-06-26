@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>216c22dc51c27158375bd9f46205ecdce8412067</guid>
+	<type>texture</type>
+	<hash>57436089</hash>
+	<runtimes>
+		<runtime id="8c5168c78912962826a57178bcc80031e2c9f7ec" name="ship_wakes_v9_less_blur_512_det.dds" link="0" type="6"/>
+		<runtime id="216c22dc51c27158375bd9f46205ecdce8412067" name="ship_wakes_v9_less_blur_512_det.texture" link="1" type="6"/>
+	</runtimes>
+	<parameters>
+		<parameter type="int" name="blur_radius">1</parameter>
+		<parameter type="string" name="height">Original</parameter>
+		<parameter type="string" name="image_format">RGBA8</parameter>
+		<parameter type="string" name="image_type">3d</parameter>
+		<parameter type="bool" name="invert_g">0</parameter>
+		<parameter type="bool" name="mipmap_sharp_only_lightness">1</parameter>
+		<parameter type="string" name="mipmap_type">box</parameter>
+		<parameter type="string" name="preset_name">custom</parameter>
+		<parameter type="float" name="sharpness_intensity">0.25</parameter>
+		<parameter type="float" name="sharpness_radius">1</parameter>
+		<parameter type="bool" name="srgb_correction">1</parameter>
+		<parameter type="bool" name="unchanged">0</parameter>
+		<parameter type="string" name="width">Original</parameter>
+	</parameters>
+</asset>

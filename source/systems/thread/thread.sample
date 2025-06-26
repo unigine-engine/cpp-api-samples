@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Thread">
+	<sdk_desc>Creating and running custom threads using the <i>Unigine::Thread</i> class.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample shows how to define and manage background threads in <strong nt="1">UNIGINE</strong> by inheriting from the <ui><link to="thread_class">Thread</link></ui> class and overriding the <ui><link to="thread_class" offset="process_void">process()</link></ui> method.</para>
+			<para>Two custom thread types are demonstrated:</para>
+			<ol>
+				<li><strong nt="1">InfiniteThread</strong> - continuously outputs messages while running.</li>
+				<li><strong nt="1">CountedThread</strong> - performs a finite number of iterations before completing.</li>
+			</ol>
+		</brief>
+		<para>Threads are started during component initialization and executed in parallel with the main engine loop. The infinite thread is explicitly stopped via <ui><link to="thread_class" offset="stop_int">stop()</link></ui> once the counted thread completes all iterations.</para>
+		<para>This sample illustrates basic principles of multithreading and can serve as a foundation for offloading computations or <ui>I/O</ui> operations from the main thread.</para>
+	</desc>
+	<tags>
+		<tag>Logic</tag>
+		<tag>Optimization</tag>
+		<tag>Multithreading</tag>
+	</tags>
+</sample>

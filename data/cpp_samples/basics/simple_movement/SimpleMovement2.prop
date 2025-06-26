@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="SimpleMovement2" manual="1" parent_name="node_base">
+	<parameter name="velocity" type="float" tooltip="Linear velocity in units">5</parameter>
+	<parameter name="angular_velocity" type="float" tooltip="Angular velocity in degrees">50</parameter>
+</property>

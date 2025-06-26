@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="File">
+	<sdk_desc>Demonstration of basic file I/O operations.</sdk_desc>
+	<desc>
+		<brief>This sample shows how you can create a text file and display its contents inside the widget via C++ API by using the <ui><link to="file_class">File</link></ui> class. To create a text file, type the text from keyboard inside the <ui>Writer</ui> widget and press <b>Write</b> to save. Click <strong nt="1">Read</strong> inside the <ui>Reader</ui> widget to display the recorded information. The saved information will be displayed in the same widgets when you start the sample next time.</brief>
+	</desc>
+	<tags>
+		<tag>Systems</tag>
+		<tag>File System</tag>
+	</tags>
+</sample>

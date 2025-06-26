@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Landscape Combined Modification">
+	<sdk_desc>This sample demonstrates a hybrid approach to terrain editing using both non-destructive and destructive Landscape Terrain modification techniques.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample demonstrates a hybrid approach to terrain editing using both <strong>non-destructive</strong> (using multiple <strong nt="1"><link to="landscape_layer_map">Landscape Layer Maps</link></strong>) and <strong>destructive</strong> (using <strong nt="1"><link to="landscape_class" offset="asyncTextureDraw_UGUID_ivec2_ivec2_int_void">Landscape::asyncTextureDraw()</link></strong> method) <strong nt="1"><link to="object_landscape_terrain">Landscape Terrain</link></strong> modification techniques.</para>
+			<para><strong>It works by:</strong></para>
+			<ul>
+				<li>Sampling height data from a <strong>Source</strong> Landscape Layer Map</li>
+				<li>
+					<para>Using <strong nt="1">Landscape::asyncTextureDraw()</strong> in combination with a custom material additive height blending to modify the <strong>Target</strong> Layer Map if the sampled height is above the provided threshold:</para>
+					<ul>
+						<li>The target terrain is flattened (clamped to the height threshold)</li>
+						<li>The target albedo (on the threshold height level) is painted orange.</li>
+					</ul>
+				</li>
+			</ul>
+			<para>This sample is ideal for tools that require selective terrain stamping, erosion masks, or custom terrain sculpting.</para>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Terrain</tag>
+		<tag>World Management</tag>
+	</tags>
+</sample>

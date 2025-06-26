@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="StreamBase">
+	<desc>
+		<brief>This sample demonstrates how to create a custom stream class by inheriting from <ui>StreamBase</ui> and use it for reading from and writing to files. The resulting stream is used to serialize and deserialize basic data types to and from a binary file.</brief>
+		<para>The sample provides a wrapper around standard <ui>C</ui> file <ui>I/O</ui> functions and integrates with the <strong nt="1">UNIGINE</strong> stream system by implementing the <ui>StreamBase</ui> interface. In the sample logic, a binary file is first created and filled with data via <ui><link to="stream_class" offset="writeString_cstr_int">Stream::writeString()</link></ui>, <ui><link to="stream_class" offset="writeInt_int_int">writeInt()</link></ui>, and <ui><link to="stream_class" offset="writeFloat_float_int">writeFloat()</link></ui>. Then the file is reopened in read mode and the same values are read back using the corresponding <ui>Stream 'read'</ui> methods, verifying the functionality of the custom stream.</para>
+		<para>This example serves as a reference for implementing custom stream sources (e.g., from memory, network, or virtual filesystems) and integrating them with the engine's serialization tools.</para>
+	</desc>
+	<tags>
+		<tag>Logic</tag>
+	</tags>
+</sample>

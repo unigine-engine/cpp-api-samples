@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="PersecutorSkinned" manual="1" parent_name="node_base">
+	<parameter name="persecutorRunAnim" type="file"/>
+	<parameter name="persecutorIdleAnim" type="file"/>
+	<parameter name="moveRate" type="float">10</parameter>
+	<parameter name="turnRate" type="float">15</parameter>
+	<parameter name="animationSpeed" type="float">15</parameter>
+</property>

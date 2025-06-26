@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>ca85b083d66d932a545a6cf747c7a5128a2f0115</guid>
+	<type>property</type>
+	<hash>d3ffb944</hash>
+	<runtimes>
+		<runtime id="ca85b083d66d932a545a6cf747c7a5128a2f0115" name="LightSample" link="0" type="4"/>
+	</runtimes>
+</asset>

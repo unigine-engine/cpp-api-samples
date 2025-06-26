@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Bones Root Motion">
+	<sdk_desc>This sample demonstrates the implementation of the root motion technique.</sdk_desc>
+	<desc>
+		<brief><para>This sample demonstrates the implementation of the root motion technique.</para>
+			<para>On the left there is a common looping animation. On the right, the offset of the root bone moves the object itself.</para>
+			<para> Root motion is particularly valuable for realistic character, vehicle, or object movements in games and simulations.</para>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Animation</tag>
+	</tags>
+</sample>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>9c82e831046143dcd6e50d8bbc09056ee8cc0df5</guid>
+	<type>world</type>
+	<hash>48370e5a</hash>
+	<runtimes>
+		<runtime id="9c82e831046143dcd6e50d8bbc09056ee8cc0df5" name="landscape_excavation.world" link="0"/>
+	</runtimes>
+	<parameters>
+		<parameter type="string" name="physics_settings_path"/>
+		<parameter type="string" name="render_settings_path">guid://8bed8c3ce53501ff11c1b0ae5cc6d017d4ad5524</parameter>
+		<parameter type="string" name="script_name"/>
+		<parameter type="string" name="sound_settings_path"/>
+		<parameter type="string" name="viewports_settings"/>
+	</parameters>
+</asset>

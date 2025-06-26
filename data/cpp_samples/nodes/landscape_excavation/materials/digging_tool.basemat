@@ -1,0 +1,100 @@
+BaseMaterial digging_tool <editable=false var_prefix=var texture_prefix=tex>
+{
+	Texture2D bind_height <internal=true pass=[]>
+	Texture2D bind_mask <internal=true pass=[]>
+
+	Texture depth <internal=true>
+	Float bb_height <internal=true>
+	Float bb_min_z <internal=true>
+
+	Texture2D object_depth <internal=true>
+
+	Pass object_depth
+	{
+		Fragment=
+		#{
+			#include <core/materials/shaders/render/common.h>
+
+			STRUCT_FRAG_BEGIN
+				INIT_COLOR(float4)
+			STRUCT_FRAG_END
+
+			MAIN_FRAG_BEGIN(FRAGMENT_IN)
+
+				float2 uv = IN_POSITION.xy * s_viewport.zw;
+				#ifdef OPENGL
+					uv.y = 1.0f - uv.y;
+				#endif
+
+				float depth = 1.0f - TEXTURE(tex_depth, uv).r;
+
+				if (depth >= 1.0f)
+					depth = INFINITY;
+				else
+					depth = depth * var_bb_height + var_bb_min_z;
+
+				OUT_COLOR = float4(depth, 0.0f, 0.0f, 0.0f);
+
+			MAIN_FRAG_END
+		#}
+	}
+
+	Pass draw_object
+	{
+		Fragment=
+		#{
+			#include <core/materials/shaders/render/common.h>
+
+			INIT_RW_TEXTURE_R32F(0, RW_TEX_HEIGHT)
+			INIT_RW_TEXTURE_RGBA8(1, RW_TEX_MASK)
+
+			MAIN_FRAG_BEGIN(FRAGMENT_IN)
+				int2 scr_coord = toInt2(IN_POSITION.xy);
+				float src_height = TEXTURE_RW_LOAD_R32F(RW_TEX_HEIGHT, scr_coord);
+				float2 uv = IN_UV;
+
+				if (uv.y > 1.0f)
+					uv.y = 1.0f;
+
+				float object_height = TEXTURE(tex_object_depth, uv).r;
+
+				if (object_height <= src_height)
+				{
+					TEXTURE_RW_STORE_R32F(RW_TEX_HEIGHT, scr_coord, object_height);
+
+					float4 mask_value = TEXTURE_RW_LOAD_RGBA8(RW_TEX_MASK, scr_coord);
+
+					if (mask_value.a < 1.0f)
+						mask_value.a = 1.0f;
+
+					TEXTURE_RW_STORE_RGBA8(RW_TEX_MASK, scr_coord, saturate(mask_value));
+				}
+
+
+			MAIN_FRAG_END
+		#}
+	}
+
+	Expression draw_object =
+	#{
+		RenderTarget render_target = engine.render.getTemporaryRenderTarget();
+
+		engine.render_state.saveState();
+		engine.render_state.clearStates();
+
+		render_target.bindUnorderedAccessTexture(0, getTexture("bind_height"));
+		render_target.bindUnorderedAccessTexture(1, getTexture("bind_mask"));
+
+		render_target.enable();
+
+		{
+			renderPass("draw_object");
+		}
+
+		render_target.disable();
+		render_target.unbindAll();
+
+		engine.render_state.restoreState();
+		engine.render.releaseTemporaryRenderTarget(render_target);
+	#}
+}

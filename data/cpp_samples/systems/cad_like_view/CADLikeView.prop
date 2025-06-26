@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="CADLikeView" manual="1" parent_name="node_base">
+	<parameter name="player_top" type="node" filter="Player">0</parameter>
+	<parameter name="player_perspective" type="node" filter="Player">0</parameter>
+	<parameter name="player_side" type="node" filter="Player">0</parameter>
+	<parameter name="player_front" type="node" filter="Player">0</parameter>
+	<parameter name="ortho_width" type="float">3</parameter>
+	<parameter name="ortho_height" type="float">3</parameter>
+	<parameter name="figure" type="node">0</parameter>
+</property>

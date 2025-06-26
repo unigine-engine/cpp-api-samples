@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>6602eb3304d0d32423ab02efca97a13bb5d42157</guid>
+	<type>property</type>
+	<hash>c4e6dac5</hash>
+	<runtimes>
+		<runtime id="6602eb3304d0d32423ab02efca97a13bb5d42157" name="CraneControl" link="0" type="4"/>
+	</runtimes>
+</asset>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Simple HTTP Request" img="yes">
+	<sdk_desc>Implementing asynchronous <i>HTTP GET</i> requests to external <i>REST API</i> and displaying the retrieved data in the user interface.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample demonstrates how to implement asynchronous <ui>HTTP GET</ui> requests to external <ui>REST API</ui> and display the retrieved data in the user interface.</para>
+			<para>For demonstration, the sample performs two consecutive requests to external weather <ui>API</ui> and displays the results in real time.</para>
+			<ol>
+				<li><strong nt="1">Geocoding</strong> - resolving a location by name using <ui>geocoding-api.open-meteo.com</ui>.</li>
+				<li><strong nt="1">Current weather conditions</strong> - retrieving live meteorological data for the selected location using <ui>api.open-meteo.com</ui>.</li>
+			</ol>
+			<para>The <strong nt="1"><a href="https://github.com/yhirose/cpp-httplib">github.com/yhirose/cpp-httplib</a></strong> library is used to perform <ui>HTTP</ui> requests asynchronously. Check the console to view more details from server.</para>
+			<para>The <ui>JSON</ui> response is processed using the <ui><link to="json_class">Json</link></ui> Class and displayed in the sample <ui>UI</ui>. Additional response details can be viewed in the console output.</para>
+		</brief>
+		<para>You can interactively test the workflow by entering a city name in the <ui>UI</ui>, viewing a list of possible matches, and selecting a specific location. This triggers a request for up-to-date weather data, which is then parsed and displayed in the <ui>UI</ui>.</para>
+		<para>Asynchronous processing ensures that network operations do not block or degrade the simulation performance.</para>
+		<para>This sample can serve as a foundation for integrating any external data providers.</para>
+	</desc>
+	<tags>
+		<tag>Network</tag>
+	</tags>
+</sample>

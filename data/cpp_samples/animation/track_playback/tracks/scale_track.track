@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<track version="2.20.0.0" min_time="0" max_time="4" unit_time="1">
+	<parameter type="node.scale" id="874663966" name="scale_track_ball">
+		<keys_x>
+			<key time="0" type="1">0.99999994</key>
+			<key time="1" type="1">1.5</key>
+			<key time="2" type="1">1</key>
+			<key time="3" type="1">1.5</key>
+			<key time="4" type="1">1</key>
+		</keys_x>
+		<keys_y>
+			<key time="0" type="1">0.99999994</key>
+			<key time="1" type="1">1.5</key>
+			<key time="2" type="1">1</key>
+			<key time="3" type="1">1.5</key>
+			<key time="4" type="1">1</key>
+		</keys_y>
+		<keys_z>
+			<key time="0" type="1">0.99999994</key>
+			<key time="1" type="1">1.5</key>
+			<key time="2" type="1">1</key>
+			<key time="3" type="1">1.5</key>
+			<key time="4" type="1">1</key>
+		</keys_z>
+	</parameter>
+</track>

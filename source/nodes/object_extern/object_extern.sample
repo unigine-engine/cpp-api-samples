@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Object Extern">
+	<sdk_desc>This sample adds custom objects created via API to the world by using <b>ObjectExtern</b>. It shows how to implement custom rendering, physics, and properties while maintaining full engine integration. Used to add specialized objects with unique geometry and behavior to your scenes.</sdk_desc>
+	<desc>
+		<brief>
+		<para>UNIGINE allows you to extend its out-of-the-box functionality in various ways, including adding your own objects with custom geometry and behavior (e.g., custom particle systems, meshes with custom culling, animated GPU-based crowd rendering solutions, etc.).</para>
+		<para>This sample demonstrates how to implement custom user objects based on the <strong nt="1"><link to="objectextern_class">ObjectExtern</link></strong> class, incorporating custom rendering, physics, and properties, while maintaining full engine integration. These objects can then be added to your scene via API.</para></brief>
+	</desc>
+	<tags>
+		<tag>Objects</tag>
+		<tag>Extension &amp; Customization</tag>
+	</tags>
+</sample>

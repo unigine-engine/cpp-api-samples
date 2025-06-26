@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Two-Point Perspective">
+	<desc>
+		<brief>This sample shows how to simulate a two-point perspective projection using a lens shift technique implemented via a secondary <ui>Dummy Player</ui>. When enabled, the sample dynamically adjusts the projection matrix of a dummy camera to visually align vertical lines while preserving the viewing direction.</brief>
+		<para>The effect is achieved by adjusting the projection matrix of a <ui><link to="playerdummy_class">PlayerDummy</link></ui> instance according to the pitch angle of the active camera. During the rendering phase, the <ui>Dummy Player</ui> temporarily replaces the main camera to apply the modified view.</para>
+		<para>This approach can be used for architectural visualization or stylized camera effects where a more orthographic-like vertical perspective is desired.</para>
+	</desc>
+	<tags>
+		<tag>Cameras</tag>
+		<tag>Render</tag>
+	</tags>
+</sample>

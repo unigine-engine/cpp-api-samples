@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>f2d96ee8272fcb789d2f44401474fed6d4433846</guid>
+	<type>property</type>
+	<hash>1b9d0d6a</hash>
+	<runtimes>
+		<runtime id="f2d96ee8272fcb789d2f44401474fed6d4433846" name="ThreadSample" link="0" type="4"/>
+	</runtimes>
+</asset>

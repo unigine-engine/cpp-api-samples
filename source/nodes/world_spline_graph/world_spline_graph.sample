@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sample title="WorldSplineGraph">
+	<sdk_desc>Generating spline-based geometry by creating a <i>WorldSplineGraph</i> from an <i>*.spl</i> file and applying <i>*.node</i> geometry in stretching mode for placing objects along splines</sdk_desc>
+	<desc>
+		<brief>This sample demonstrates how to integrate a spline-based geometry system into a world environment. A <ui><link to="worldsplinegraph_class">WorldSplineGraph</link></ui> class instance is created and populated with data from an external <file_name>*.spl</file_name> file, which defines the spatial structure of the graph. Geometry is then applied to each segment using a predefined <file_name>*.node</file_name> file, rendered in stretching mode to ensure it conforms seamlessly to the shape and length of each spline.</brief>
+		<para>This approach allows for the efficient construction of roads, pipelines, rails, and other continuous structures within the world.</para>
+	</desc>
+	<tags>
+		<tag>Objects</tag>
+	</tags>
+</sample>

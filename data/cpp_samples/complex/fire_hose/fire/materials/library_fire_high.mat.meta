@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>7b95452f0c0590a7b95612ec7f412aa2891b67bc</guid>
+	<type>material</type>
+	<hash>d96a1bba</hash>
+	<runtimes>
+		<runtime id="7b95452f0c0590a7b95612ec7f412aa2891b67bc" name="library_fire_high" link="0" type="5"/>
+	</runtimes>
+</asset>

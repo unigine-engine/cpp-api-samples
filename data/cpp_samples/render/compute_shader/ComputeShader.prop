@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="ComputeShader" manual="1" parent_name="node_base">
+	<parameter name="particles_solver_material" type="material"/>
+	<parameter name="uv_to_position_material" type="material"/>
+	<parameter name="gpu_particles_material" type="material"/>
+	<parameter name="meshes" type="array" array_type="file"/>
+</property>

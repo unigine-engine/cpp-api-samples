@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>8bb0b0cb3b14e231dc08364fd5940ef0ec2d6555</guid>
+	<type>property</type>
+	<hash>03a40e77</hash>
+	<runtimes>
+		<runtime id="8bb0b0cb3b14e231dc08364fd5940ef0ec2d6555" name="DynamicTextureFieldHeight" link="0" type="4"/>
+	</runtimes>
+</asset>

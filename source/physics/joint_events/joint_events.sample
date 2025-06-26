@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sample title="Joint Events">
+	<sdk_desc>Demonstrating the usage of the <i>Broken</i> event of the <i>Joint</i> class via the C++ API</sdk_desc>
+	<desc>
+		<brief>This sample demonstrates how to use the <ui><link to="joint_class" offset="getEventBroken_Event">Broken</link></ui> event of the <ui><link to="joint_class">Joint</link></ui> class via the C++ API. This event allows you to react when a joint is broken due to physical forces during the simulation.</brief>
+		<para>A simple bridge structure is created by cloning a mesh and connecting multiple sections using <ui><link to="physics_joints" offset="hinge">hinge</link></ui> joints. Some sections are dynamic (<ui><link to="bodyrigid_class">BodyRigid</link></ui>) and others are static (<ui><link to="bodydummy_class">BodyDummy</link></ui>) to anchor the ends. Additionally, a few weights are dropped onto the bridge to cause joint breakage. The scene is configured to showcase physical behavior of joints under load.</para>
+		<para>The <ui><link to="joint_class" offset="getEventBroken_Event">Broken</link></ui> event of each joint is connected to a handler using an <ui><link to="eventconnections_class">EventConnections</link></ui> class instance, which keeps all connections in one place and ensures automatic cleanup when the component is shut down. When a joint breaks, the event handler is triggered, changing the material color of the connected objects to visually indicate the break.</para>
+		<para>You can use this for detecting breakage in joint-based systems or adding visual feedback to destruction mechanics.</para>
+	</desc>
+	<tags>
+		<tag>Physics</tag>
+		<tag>Systems</tag>
+		<tag>Logic</tag>
+	</tags>
+</sample>

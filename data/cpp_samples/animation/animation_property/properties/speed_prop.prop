@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="speed_prop" guid="f206a801ca609f207867730a1079e4193287e044" parent="1c613bbca0afd78c1ef165fc8e419352c5903d9e">
+	<parameter name="speed" type="float">0</parameter>
+</property>

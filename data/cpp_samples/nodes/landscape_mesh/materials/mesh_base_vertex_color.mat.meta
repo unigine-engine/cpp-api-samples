@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>4fd6ef3a4a543551c4dcee7c8cc877abf1fe290e</guid>
+	<type>material</type>
+	<hash>ff93e845</hash>
+	<runtimes>
+		<runtime id="4fd6ef3a4a543551c4dcee7c8cc877abf1fe290e" name="mesh_base_vertex_color" link="0" type="5"/>
+	</runtimes>
+</asset>

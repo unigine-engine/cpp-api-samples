@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>aa5db7d82232ee34651eb5adea59b01c839eb843</guid>
+	<type>property</type>
+	<hash>7c0580ad</hash>
+	<runtimes>
+		<runtime id="aa5db7d82232ee34651eb5adea59b01c839eb843" name="Slider" link="0" type="4"/>
+	</runtimes>
+</asset>

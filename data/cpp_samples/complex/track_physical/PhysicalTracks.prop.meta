@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>e4818fdc7c32ab47a3263c6def3737a88f0eb8a0</guid>
+	<type>property</type>
+	<hash>bfc1478</hash>
+	<runtimes>
+		<runtime id="e4818fdc7c32ab47a3263c6def3737a88f0eb8a0" name="PhysicalTracks" link="0" type="4"/>
+	</runtimes>
+</asset>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>bff508e6db1e02ed74e8c87a4a43466a9b017ffc</guid>
+	<type>property</type>
+	<hash>06c6a9c6</hash>
+	<runtimes>
+		<runtime id="bff508e6db1e02ed74e8c87a4a43466a9b017ffc" name="EaseOutBounceMotion" link="0" type="4"/>
+	</runtimes>
+</asset>

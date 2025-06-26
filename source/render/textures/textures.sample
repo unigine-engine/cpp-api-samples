@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sample title="Textures">
+	<sdk_desc>Updating mesh albedo texture using procedurally generated image data</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample demonstrates how to create and update procedural textures on static meshes in real time using the C++ API.</para>
+			<para>Each mesh is assigned a custom-generated image, which is updated every frame using a time-based color pattern. The pixel data is written manually into an <ui><link to="image_class">Image</link></ui> class instance, and the result is applied to the albedo texture slot of the mesh's material using <ui><link to="material_class" offset="setTextureImage_int_Image_int">Material::setTextureImage()</link></ui>.</para>
+		</brief>
+		<para>This method allows generating dynamic patterns, noise, or other procedural visuals without using compute shaders or external image files.</para>
+	</desc>
+	<tags>
+		<tag>Render</tag>
+		<tag>Procedural</tag>
+	</tags>
+</sample>

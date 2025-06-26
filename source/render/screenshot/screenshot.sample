@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Screenshot">
+	<desc>
+		<brief>Simple demonstration of how to make a screenshot by grabbing the final image from the rendering sequence.</brief>
+	</desc>
+	<controls>
+		<![CDATA[
+		To make a screenshot, press <b>F</b> button; screenshot will be saved in <b>data/screenshot.dds</b>.
+		]]>
+	</controls>
+	<tags>
+		<tag>Render</tag>
+		<tag>Basic Recipes</tag>
+	</tags>
+</sample>

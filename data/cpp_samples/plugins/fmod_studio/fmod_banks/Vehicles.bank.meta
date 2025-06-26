@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>42bd0ad1fcad6414d9a393c1f8e4201f0c7f7839</guid>
+	<type>file</type>
+	<hash>29c0376e</hash>
+	<runtimes>
+		<runtime id="42bd0ad1fcad6414d9a393c1f8e4201f0c7f7839" name="Vehicles.bank" link="0"/>
+	</runtimes>
+</asset>

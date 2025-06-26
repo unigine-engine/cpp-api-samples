@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="LidarSample" manual="1" parent_name="node_base">
+	<parameter name="lidar_node" type="node">0</parameter>
+	<parameter name="sun" type="node">0</parameter>
+	<parameter name="rotation_speed" type="float">2</parameter>
+</property>

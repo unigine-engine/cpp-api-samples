@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>cb5a4ae3da0632e6bf7d2d0d3c026b08b2fb92c7</guid>
+	<type>material</type>
+	<hash>5a542138</hash>
+	<runtimes>
+		<runtime id="cb5a4ae3da0632e6bf7d2d0d3c026b08b2fb92c7" name="extinguishing_agents_water_foam_splashes_puffs" link="0" type="5"/>
+	</runtimes>
+</asset>

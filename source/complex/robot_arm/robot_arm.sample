@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Robot Arm" img="yes">
+	<sdk_desc>A physics-based robotic arm implementation with 6 degrees of freedom (5 movable joints + 1 fixed base)</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample demonstrates how to build a physics-based robotic arm with a kinematic chain composed of six links: one fixed and five movable. Each movable link is connected via a hinge joint (<ui><link to="physics_joints" offset="hinge">JointHinge</link></ui>) and driven by a motor that responds to keyboard inputs.</para>
+			<para>The arm's <strong>end effector</strong> is a <strong>magnetic gripper</strong> capable of <strong>grabbing, holding, and releasing</strong> dynamic objects in its environment. The gripper and each joint can be controlled independently via key bindings, which are configurable and demonstrated in the <ui>Controls</ui> section.</para>
+			<para>This setup provides a flexible starting point for creating custom robotic arms with any required number of degrees of freedom (DoF). You can replace manual input with a control system (e.g., inverse kinematics, AI, joystick, or ROS integration) to adapt the robot arm to your specific use case.</para>
+			<para><strong>Use Cases:</strong></para>
+			<ul>
+				<li><strong>Simulation &amp; prototyping</strong> of industrial robotic manipulators.</li>
+				<li><strong>Educational environments</strong> to teach principles of robotics, joint control, or physics-based animation.</li>
+				<li><strong>AI training</strong> for robotic arms using reinforcement learning or motion planning.</li>
+				<li><strong>Human-machine interfaces</strong>: test robotic interaction with dynamic environments.</li>
+				<li><strong>Virtual reality</strong> robotics simulations or operator training.</li>
+			</ul>
+		</brief>
+	</desc>
+	<controls>
+		<![CDATA[<p align=left>Keys <b>H</b> and <b>F</b> for Link 0</p>
+		<p align=left>Keys <b>T</b> and <b>G</b> for Link 1</p>
+		<p align=left>Keys <b>I</b> and <b>K</b> for Link 2</p>
+		<p align=left>Keys <b>J</b> and <b>L</b> for Link 3</p>
+		<p align=left>Keys <b>U</b> and <b>O</b> for Link 4</p>
+		<p align=left>Keys <b>R</b> and <b>Y</b> for Link 5</p><br/>
+		<p align=left>Key <b>C</b> for Grab Object</p>
+		<p align=left>Key <b>V</b> for Release Object</p>
+		]]>
+	</controls>
+	<tags>
+		<tag>Complex Solutions</tag>
+		<tag>Physics</tag>
+		<tag>Sim</tag>
+	</tags>
+</sample>

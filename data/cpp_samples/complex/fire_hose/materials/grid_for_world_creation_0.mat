@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.20.0.0" guid="b4b67fa3d3fddd1ab9fd0a253d71335ac811d217" parent="001dc611e2ca7385e50593ebc1c181e2e370240c" base_material="4dfec30f491f753f6e89094db6d3d695e89f9d6f">
+	<parameter name="material_mask" expression="0">-8388608</parameter>
+</material>

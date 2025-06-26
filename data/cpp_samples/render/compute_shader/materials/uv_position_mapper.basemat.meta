@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>22e7ac39084704e301cfe315a248369f39b10658</guid>
+	<type>material</type>
+	<hash>2a6429e6</hash>
+	<runtimes>
+		<runtime id="22e7ac39084704e301cfe315a248369f39b10658" name="uv_position_mapper" link="0" type="5"/>
+	</runtimes>
+</asset>

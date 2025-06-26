@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="AnimationBonesRetargetingSample" manual="1" parent_name="node_base">
+	<parameter name="mesh_skinned_node" type="node">0</parameter>
+	<parameter name="src_mesh_path" type="file"/>
+	<parameter name="anim_path" type="file"/>
+	<parameter name="on_ground_bone_name" type="string"/>
+	<parameter name="hips_bone_name" type="string"/>
+</property>

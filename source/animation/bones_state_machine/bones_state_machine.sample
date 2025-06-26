@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Bones State Machine">
+	<desc>
+		<brief>This sample demonstrates how to make an animated state machine based on ObjectMeshSkinned.</brief>
+		<para>A state machine is a design pattern that manages various object states—such as idle, walking, or sneaking—and handles transitions between them. The example illustrates how to configure state machines with dynamic controls for walking, turning when idle, and running.</para>
+		<para>Implementing state machines enables the creation of complex, flexible character behaviors.</para>
+	</desc>
+	<controls>
+		<![CDATA[
+		<p>Walk State Machine (left):</p>
+		<p>    Key <b>T</b> - set maximum speed.</p>
+		<p>    Key <b>G</b> - set minimum speed.</p>
+		<p>    Key <b>Y</b> - turn around.</p>
+		<p>    </p>
+		<p>Idle Turn State Machine (center):</p>
+		<p>    Key <b>V</b> - increase turn left.</p>
+		<p>    Key <b>C</b> - increase turn right.</p>
+		<p>    </p>
+		<p>Walk Run State Machine (right):</p>
+		<p>    Key <b>I</b> - increase y.</p>
+		<p>    Key <b>K</b> - decrease y.</p>
+		<p>    Key <b>L</b> - increase x.</p>
+		<p>    Key <b>J</b> - decrease x.</p>
+		]]>
+	</controls>
+	<tags>
+		<tag>Animation</tag>
+	</tags>
+</sample>

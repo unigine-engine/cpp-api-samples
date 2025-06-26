@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>eec67ad402bdfa347bc642f08525622444c411d3</guid>
+	<type>property</type>
+	<hash>770a55f4</hash>
+	<runtimes>
+		<runtime id="eec67ad402bdfa347bc642f08525622444c411d3" name="FlockController" link="0" type="4"/>
+	</runtimes>
+</asset>

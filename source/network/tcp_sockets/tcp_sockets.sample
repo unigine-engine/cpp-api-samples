@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="TCP Sockets">
+	<sdk_desc>Establishing and managing <i>TCP</i> socket connections between a server and multiple clients each represented by a UNIGINE-application. Clients can connect to the server, exchange text messages via the Console (<b>send_msg</b> command), and receive camera transform updates from the server.</sdk_desc>
+	<desc>
+		<brief>
+		<para>This sample demonstrates how to establish and manage <ui>TCP</ui> socket connections between a server and multiple clients each represented by a UNIGINE-application. Clients can connect to the server, exchange text messages via the Console (<strong>send_msg</strong> command), and receive camera transform updates from the server.</para>
+		<para><strong>You need to have two instances of this 'C++ Samples' app running for this sample to work.</strong></para>
+		<para>Each instance can operate in one of two modes: <ui>Server</ui> or <ui>Client</ui>. To select the mode click on the corresponding button below. There you can also specify the desired <em>host and port</em>.</para>
+		<para>The server uses a non-blocking socket to accept client connections and creates a dedicated background thread for each connection. The communication protocol is based on custom messages (e.g., text or camera transforms) packed and unpacked using <ui><link to="blob_class">Blob</link></ui> streams. On the client side, a socket is created and connected to the server. Incoming and outgoing messages are sent/received using two threadsafe queues. To send text messages to the peer use the sample-specific console command <file_name>send_msg</file_name> (e.g. <user_input>send_msg hello world</user_input>)</para>
+		<para>Incoming messages are parsed using message headers. Both client and server use message buffering, timeouts, and validation checks to maintain connection stability and prevent invalid data processing.</para>
+		<para>The sample provides options to configure the server address and port, switch between modes, and monitor active connections.</para>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Network</tag>
+		<tag>Basic Recipes</tag>
+	</tags>
+</sample>

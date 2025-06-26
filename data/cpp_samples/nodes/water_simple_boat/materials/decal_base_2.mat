@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.20.0.0" guid="ea2aec459702fe7f8c77f5eca897fab55827a335" base_material="fa8190d55333a12b84ebf7a323b1ffe5816b94a9">
+	<options blend_src="5" blend_dest="6"/>
+	<state name="water_decal">1</state>
+	<state name="detail">1</state>
+	<state name="detail_alpha_blendable">1</state>
+	<state name="detail_3d_texture">1</state>
+	<state name="detail_mapping">1</state>
+	<texture name="detail_albedo">guid://216c22dc51c27158375bd9f46205ecdce8412067</texture>
+	<parameter name="metalness_visible" expression="0">0</parameter>
+	<parameter name="detail_uv_transform" expression="0">0.0500000007 0.0500000007 0 0</parameter>
+	<parameter name="detail_3d_transform" expression="1">time / 15</parameter>
+</material>

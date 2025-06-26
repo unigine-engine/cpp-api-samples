@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>6385b86440f58a104dcb7627e325e7d92d940b7b</guid>
+	<type>world</type>
+	<hash>8a668479</hash>
+	<runtimes>
+		<runtime id="6385b86440f58a104dcb7627e325e7d92d940b7b" name="body_fracture_explosion.world" link="0"/>
+	</runtimes>
+	<parameters>
+		<parameter type="string" name="physics_settings_path"/>
+		<parameter type="string" name="render_settings_path"/>
+		<parameter type="string" name="script_name"/>
+		<parameter type="string" name="sound_settings_path"/>
+		<parameter type="string" name="viewports_settings"/>
+	</parameters>
+</asset>

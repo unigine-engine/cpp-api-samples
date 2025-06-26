@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Bones Simple Foot Placement">
+	<desc>
+		<brief>This sample demonstrates a naive option for placing feet on a surface using IK chains.</brief>
+		<para>Raycasting is applied to detect surface contact: in each frame, a ray is cast downward from the foot position to find intersections with the surface. The resulting contact point and surface normal are then used to adjust the foot bones' position and orientation, ensuring realistic foot placement.</para>
+	</desc>
+	<controls>
+		<![CDATA[
+		<p>Key <b>T</b> - Platform movement manipulator.</p>
+		<p>Key <b>R</b> - Platform rotation manipulator.</p>
+		]]>
+	</controls>
+	<tags>
+		<tag>Animation</tag>
+		<tag>Intersections</tag>
+	</tags>
+</sample>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="AnimationBonesLookAtSample" manual="1" parent_name="node_base">
+	<struct name="Bone">
+		<parameter name="name" type="string"/>
+		<parameter name="axis" type="vec3">0.000000 1.000000 0.000000</parameter>
+		<parameter name="up" type="vec3">0.000000 0.000000 1.000000</parameter>
+		<parameter name="weight" type="float">1</parameter>
+	</struct>
+	<parameter name="mesh_skinned_node" type="node">0</parameter>
+	<parameter name="bones" type="array" array_type="Bone"/>
+</property>

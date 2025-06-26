@@ -1,0 +1,13 @@
+string source = "From [USC]: ";
+int init()
+{
+	log.message("\n\n=================Stack Sample=================\n\n");
+
+	log.message(source + "%s", my_format("\nmy_format with %d\n", 1));
+
+	log.message(source + "%s", my_format("\nmy_format with %d and %f\n", 1, 2.0f));
+
+	log.message(source + "%s", my_format("\nmy_format with %d, %f and %s\n", 1, 2.0f, "Three"));
+
+	return 1;
+}

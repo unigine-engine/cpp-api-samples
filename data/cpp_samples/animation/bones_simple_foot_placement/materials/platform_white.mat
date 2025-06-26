@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.20.0.0" guid="809c2f6260e03cd7064f214867ccc8899bb0e75b" base_material="73ea27d94f646f6429ae73732285a236131fb41d">
+	<parameter name="metalness" expression="0">0</parameter>
+	<parameter name="roughness" expression="0">0.5</parameter>
+</material>

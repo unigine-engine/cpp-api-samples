@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="USC Types">
+	<desc>
+		<brief>This sample demonstrates how to enable type conversion between custom <ui>C++</ui> types and <ui>UnigineScript</ui> using the <link to="variable_class">Variable</link> class.</brief>
+		<para>A user-defined <ui>MyVector3</ui> class is introduced to represent a <ui>3D</ui> vector. To integrate this class with the <ui>UnigineScript</ui> environment, custom specializations of the <ui>TypeToVariable</ui> and <ui>VariableToType</ui> templates are implemented. These allow automatic conversion between <ui>MyVector3</ui> and <ui>vec3</ui> values inside the <ui>UnigineScript</ui> runtime.</para>
+	</desc>
+	<tags>
+		<tag>UnigineScript</tag>
+	</tags>
+</sample>

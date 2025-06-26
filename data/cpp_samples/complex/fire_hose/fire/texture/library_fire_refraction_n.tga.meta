@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>4fe53c6ec5622982aa30d50fc5ff25f32b25ca1d</guid>
+	<type>texture</type>
+	<hash>4bdbabaa</hash>
+	<runtimes>
+		<runtime id="4fe53c6ec5622982aa30d50fc5ff25f32b25ca1d" name="library_fire_refraction_n.tga" link="0" type="6"/>
+		<runtime id="9bc3423430dfebba0ebbf5846473ce5732f19cdf" name="library_fire_refraction_n.texture" link="1" type="6"/>
+	</runtimes>
+	<parameters>
+		<parameter type="int" name="blur_radius">1</parameter>
+		<parameter type="string" name="height">Original</parameter>
+		<parameter type="string" name="image_format">ATI2</parameter>
+		<parameter type="string" name="image_type">2d</parameter>
+		<parameter type="bool" name="invert_g">0</parameter>
+		<parameter type="bool" name="mipmap_sharp_only_lightness">1</parameter>
+		<parameter type="string" name="mipmap_type">box</parameter>
+		<parameter type="string" name="preset_name">custom</parameter>
+		<parameter type="float" name="sharpness_intensity">0.25</parameter>
+		<parameter type="float" name="sharpness_radius">1</parameter>
+		<parameter type="bool" name="srgb_correction">0</parameter>
+		<parameter type="bool" name="unchanged">0</parameter>
+		<parameter type="string" name="width">Original</parameter>
+	</parameters>
+</asset>

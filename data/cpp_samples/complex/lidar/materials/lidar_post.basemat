@@ -1,0 +1,74 @@
+BaseMaterial <var_prefix=var texture_prefix=tex>
+{
+	State quadratic_attenuation = 0
+
+	Slider intensity_modifier = 1.0 <min=0>
+	Slider base_response = 0.2 <min=0>
+
+	Slider roughness_weight = 0.8 <min=0 max=1.0>
+	Slider metalness_weight = 0.8 <min=0 max=1.0>
+	Slider base_weight = 0.5 <min=0 max=1.0>
+
+	Pass post
+	{
+		Fragment=
+		#{
+			#include <core/materials/shaders/render/common.h>
+
+			INIT_TEXTURE(0, TEX_DEPTH)
+			INIT_TEXTURE(1, TEX_NORMAL)
+			INIT_TEXTURE(2, TEX_SHADING)
+
+			STRUCT_FRAG_BEGIN
+				INIT_MRT(float2, 0)
+			STRUCT_FRAG_END
+
+			MAIN_FRAG_BEGIN(FRAGMENT_IN)
+
+				float2 uv = IN_POSITION.xy * s_viewport.zw;
+
+				float native_depth = TEXTURE_BIAS_ZERO(TEX_DEPTH, uv).r;
+				float depth = nativeDepthToLinearDepth(TEXTURE_OUT(TEX_DEPTH), uv);
+
+				float3 view_direction = screenUVToViewDirection(uv);
+
+				// see: data/core/materials/shaders/api/common.h
+				//
+				// float3 screenUVToViewDirection(float2 screen_uv)
+				// {
+				// 	return -normalize(lerp(mul4(s_camera_iprojection, float4(screen_uv, 0.0f, 1.0f)).xyz, float3(0.0f, 0.0f, 1.0f), toFloat(isOrtho(s_camera_projection))));
+				// }
+				//
+				// float3 nativeDepthToLinearDepth(float native_depth, float2 screen_uv)
+				// {
+				// 	float4 position = mul4(s_camera_iprojection, float4(screen_uv, native_depth, 1.0f));
+				// 	return length(position.xyz / position.w);
+				// }
+
+
+				// see https://developer.unigine.com/en/docs/latest/code/uusl/gbuffer
+				GBuffer gbuffer = GBufferDefault();
+				loadGBufferNormal(gbuffer, TEXTURE_OUT(TEX_NORMAL), uv); // normal, roughness
+				loadGBufferShading(gbuffer, TEXTURE_OUT(TEX_SHADING), uv); // metalness
+
+				float incidence_factor = max(0.0, dot(normalize(view_direction), gbuffer.normal));
+				float quadratic_attenuation_factor = 1.0;
+
+				#ifdef STATE_QUADRATIC_ATTENUATION
+					quadratic_attenuation_factor = pow(native_depth + 1.0, -2);
+				#endif
+
+				float roughness_response = 1.0 - gbuffer.roughness;
+				float metalness_response = gbuffer.metalness;
+
+				float intensity = roughness_response * var_roughness_weight + metalness_response * var_metalness_weight + var_base_response * var_base_weight;
+				intensity = intensity * var_intensity_modifier * quadratic_attenuation_factor;
+				intensity = clamp(intensity, 0, 1) * incidence_factor;
+
+				OUT_MRT(0).r = depth;
+				OUT_MRT(0).g = (depth < s_depth_range.y) * intensity;
+
+			MAIN_FRAG_END
+		#}
+	}
+}

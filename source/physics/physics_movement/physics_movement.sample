@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Physics Movement">
+	<sdk_desc>Simple logic of moving an object using physical methods (by force or by impulse).</sdk_desc>
+	<desc>
+		<brief>This sample demonstrates a simple logic of moving an object using physical methods (by force or by impulse). You can choose the desired method and control maximum speed, rotation speed, and accelerations using sliders.</brief>
+	</desc>
+	<controls>
+		<![CDATA[
+		<p align=left><b>WASD</b> to control the box.</p>
+		]]>
+	</controls>
+	<tags>
+		<tag>Physics</tag>
+	</tags>
+</sample>

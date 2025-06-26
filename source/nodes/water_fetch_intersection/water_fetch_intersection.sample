@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Fetch and Intersection Water Parameters">
+	<sdk_desc>This sample demonstrates how various parameters influence the accuracy of fetch and intersection operations on the Global Water object across different Beaufort levels.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample demonstrates how various parameters influence the accuracy of <strong>fetch</strong> (sampling water height and normal) and <strong>intersection</strong> (ray-water collision detection) operations on the <strong><link to="water_global">Global Water</link></strong> object across different <strong><link to="water_global" offset="creating_waves">Beaufort</link></strong> levels (the Beaufort slider).</para>
+			<para>You can interactively adjust the following parameters:</para>
+			<ul>
+				<li><strong>Steepness Quality</strong>: Controls wave detail resolution used in sampling.</li>
+				<li><strong>Amplitude Threshold</strong>: Filters out minor waves to improve performance at the cost of detail.</li>
+				<li><strong>Precision</strong>: Controls ray-water intersection accuracy. Lower values reduce jitter when intersecting at an angle.</li>
+				<li><strong>Intersection Angle</strong>: Adjusts the incoming ray direction for intersection tests, helping evaluate how steep angles affect detection stability.</li>
+			</ul>
+			<para>The UI also allows you to:</para>
+			<ul>
+				<li>Select between <strong>Fetch</strong> and <strong>Intersection</strong> modes</li>
+				<li>Show or hide <strong>normals</strong> at the sampled points</li>
+				<li>Adjust the <strong>number of samples</strong> and <strong>visual point size</strong></li>
+			</ul>
+			<notice>Intersection rays are visualized with blue arrows. If jitter occurs at non-zero intersection angles, try lowering the <strong nt="1">Precision</strong> value.</notice>
+			<para>This sample is useful for fine-tuning water interaction accuracy in physics, gameplay, and visual effects - especially when working with sloped or moving viewpoints (e.g., cameras, characters, or objects interacting with water).</para>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Water</tag>
+		<tag>Maritime</tag>
+		<tag>Intersections</tag>
+	</tags>
+</sample>

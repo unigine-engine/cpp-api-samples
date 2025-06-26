@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>59e400a4901168fbf6ef809b262aaed2d92cebd3</guid>
+	<type>property</type>
+	<hash>87d1f1c9</hash>
+	<runtimes>
+		<runtime id="59e400a4901168fbf6ef809b262aaed2d92cebd3" name="SimpleAsyncRequestSample" link="0" type="4"/>
+	</runtimes>
+</asset>

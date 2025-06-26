@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>deb7e7f9718f24aab105faea5cd37eae87028bad</guid>
+	<type>world</type>
+	<hash>15f94a37</hash>
+	<runtimes>
+		<runtime id="deb7e7f9718f24aab105faea5cd37eae87028bad" name="ray_intersection.world" link="0"/>
+	</runtimes>
+	<parameters>
+		<parameter type="string" name="physics_settings_path"/>
+		<parameter type="string" name="render_settings_path"/>
+		<parameter type="string" name="script_name"/>
+		<parameter type="string" name="sound_settings_path"/>
+		<parameter type="string" name="viewports_settings"/>
+	</parameters>
+</asset>

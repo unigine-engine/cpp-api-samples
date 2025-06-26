@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>ced0d95e390d3342d7df7235ae087ced38613216</guid>
+	<type>property</type>
+	<hash>5527f74d</hash>
+	<runtimes>
+		<runtime id="ced0d95e390d3342d7df7235ae087ced38613216" name="ScriptStack" link="0" type="4"/>
+	</runtimes>
+</asset>

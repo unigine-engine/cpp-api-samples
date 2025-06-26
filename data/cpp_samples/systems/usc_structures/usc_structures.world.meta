@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>b0fc2d22431fdefa4f3cb0a7ecea0f293f779a41</guid>
+	<type>world</type>
+	<hash>31a71eaa</hash>
+	<runtimes>
+		<runtime id="b0fc2d22431fdefa4f3cb0a7ecea0f293f779a41" name="usc_structures.world" link="0"/>
+	</runtimes>
+	<parameters>
+		<parameter type="string" name="physics_settings_path"/>
+		<parameter type="string" name="render_settings_path"/>
+		<parameter type="string" name="script_name">guid://7c5777fe7699ea5ea1267bf3c30a32c1b488746d</parameter>
+		<parameter type="string" name="sound_settings_path"/>
+		<parameter type="string" name="viewports_settings"/>
+	</parameters>
+</asset>

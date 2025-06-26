@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="UnitSelectionCircle" manual="1" parent_name="node_base">
+	<parameter name="selectionCircle" type="file" title="NodeRefence of selection circle"/>
+	<parameter name="offset" type="vec3" tooltip="Offset of selection circle from the center of the unit">0.000000 0.000000 0.010000</parameter>
+</property>

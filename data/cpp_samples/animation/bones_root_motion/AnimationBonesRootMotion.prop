@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="AnimationBonesRootMotion" manual="1" parent_name="node_base">
+	<parameter name="mesh_skinned_node" type="node">0</parameter>
+	<parameter name="mesh_skinned_root_motion_node" type="node">0</parameter>
+	<parameter name="animation_path" type="file"/>
+	<parameter name="root_bone_name" type="string"/>
+	<parameter name="axis_forward" type="switch" items="X,Y,Z,NX,NY,NZ">2</parameter>
+</property>

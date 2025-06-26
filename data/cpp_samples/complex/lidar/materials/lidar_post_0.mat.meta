@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>ee253d9cb37eaee0c9ffc41ec42a2cede05bae87</guid>
+	<type>material</type>
+	<hash>e0b478db</hash>
+	<runtimes>
+		<runtime id="ee253d9cb37eaee0c9ffc41ec42a2cede05bae87" name="lidar_post_0" link="0" type="5"/>
+	</runtimes>
+</asset>

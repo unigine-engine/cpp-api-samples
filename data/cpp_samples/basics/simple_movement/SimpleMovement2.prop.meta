@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>71bfa48d704b486396483b7856f618a303795963</guid>
+	<type>property</type>
+	<hash>f1a369b5</hash>
+	<runtimes>
+		<runtime id="71bfa48d704b486396483b7856f618a303795963" name="SimpleMovement2" link="0" type="4"/>
+	</runtimes>
+</asset>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.20.0.0" guid="ede5a04f76ae916203cb6159f83d5ae42a0768f3" base_material="fa8190d55333a12b84ebf7a323b1ffe5816b94a9">
+	<options transparent="2" blend_src="5" blend_dest="6"/>
+	<state name="normal_substitute">0</state>
+	<state name="detail">1</state>
+	<state name="detail_alpha_blendable">1</state>
+	<texture name="albedo">guid://69bda9cac1710ea188b9d78c466cad7b0e15c49e</texture>
+	<texture name="shading">guid://dafc186e2fb604f5aa93d1d048d97aef97cc6b82</texture>
+	<texture name="detail_albedo">guid://d34ee3659ae7bd80f13492dfc66642b291954269</texture>
+	<texture name="detail_normal">guid://2af74e679c49f89aec47ef31412c9edcd67aac8b</texture>
+	<texture name="detail_shading">guid://dafc186e2fb604f5aa93d1d048d97aef97cc6b82</texture>
+	<parameter name="material_mask" expression="0">8388608</parameter>
+	<parameter name="detail_uv_transform" expression="0">8 8 0 0</parameter>
+	<parameter name="detail_normal_visible" expression="0">1</parameter>
+	<parameter name="angle_fade_threshold" expression="1">-0.37026</parameter>
+	<parameter name="angle_fade_pow" expression="0">6</parameter>
+</material>

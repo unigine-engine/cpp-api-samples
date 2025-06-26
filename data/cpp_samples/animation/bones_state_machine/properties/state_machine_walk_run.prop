@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="state_machine_walk_run" guid="df09a10fc6de574e4b9b51932f6309c601420dfe" parent="bf9203a8f8aa1da988bb64e733023d8c9f01463b">
+	<parameter name="init_state_name">walk_run_tree</parameter>
+	<parameter name="use_root_motion">1</parameter>
+	<parameter name="use_foot_matching">0</parameter>
+	<parameter name="state_variables">
+		<value index="0">
+			<parameter name="name">x</parameter>
+		</value>
+		<value index="1">
+			<parameter name="name">y</parameter>
+		</value>
+	</parameter>
+	<parameter name="states">
+		<value index="0">
+			<parameter name="name">walk_run_tree</parameter>
+			<parameter name="state_type">2</parameter>
+			<parameter name="is_loop">1</parameter>
+			<parameter name="x_blend_variable">x</parameter>
+			<parameter name="y_blend_variable">y</parameter>
+			<parameter name="animations">
+				<value index="0">
+					<parameter name="path">guid://b86eb0808a1e48662a206ec9b44d18c5b7c99759</parameter>
+					<parameter name="anchor">1 1</parameter>
+				</value>
+				<value index="1">
+					<parameter name="path">guid://a4970b78da8a24c2c97fc021d47a57623010a2b1</parameter>
+					<parameter name="anchor">1 0.5</parameter>
+				</value>
+				<value index="2">
+					<parameter name="path">guid://e7427b4651c208cbe99d8cc758ac2044e4789f97</parameter>
+				</value>
+				<value index="3">
+					<parameter name="path">guid://ab006728a684fcc87e239391b1e4b511ad76e221</parameter>
+					<parameter name="anchor">0 0.5</parameter>
+				</value>
+				<value index="4">
+					<parameter name="path">guid://aaeb5a30f6f9e433a02a683909e15d958fca8cc9</parameter>
+					<parameter name="anchor">0 1</parameter>
+				</value>
+				<value index="5">
+					<parameter name="path">guid://c8f6fad0e951e3812916f959b59505fd2dd585e9</parameter>
+					<parameter name="anchor">-1 0.5</parameter>
+				</value>
+				<value index="6">
+					<parameter name="path">guid://373136d80cbb9711eb4c6b0196f457b93e868591</parameter>
+					<parameter name="anchor">-1 1</parameter>
+				</value>
+			</parameter>
+		</value>
+	</parameter>
+</property>

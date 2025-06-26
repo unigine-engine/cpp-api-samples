@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>520e9f771369731a47a93b5672c3ee5ed947cb3e</guid>
+	<type>property</type>
+	<hash>69e782d</hash>
+	<runtimes>
+		<runtime id="520e9f771369731a47a93b5672c3ee5ed947cb3e" name="EulerAnglesSample" link="0" type="4"/>
+	</runtimes>
+</asset>

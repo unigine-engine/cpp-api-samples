@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="CurveAnimationTransform" manual="1" parent_name="node_base">
+	<struct name="Curves">
+		<parameter name="x" type="curve2d"/>
+		<parameter name="y" type="curve2d"/>
+		<parameter name="z" type="curve2d"/>
+	</struct>
+	<parameter name="position" type="Curves"/>
+	<parameter name="rotation" type="Curves"/>
+	<parameter name="scale_prop" type="Curves"/>
+	<parameter name="speed" type="float">1</parameter>
+</property>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="CraneControl" manual="1" parent_name="node_base">
+	<parameter name="turn_max_speed" type="float">10</parameter>
+	<parameter name="turn_acceleration" type="float">2</parameter>
+	<parameter name="turn_deceleration" type="float">1</parameter>
+	<parameter name="rope" type="node">0</parameter>
+	<parameter name="rope_speed" type="float">2</parameter>
+</property>

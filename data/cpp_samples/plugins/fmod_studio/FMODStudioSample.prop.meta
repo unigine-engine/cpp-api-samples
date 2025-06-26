@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>8bdb39212ddaf570eb0ef1a1ae775114b629bbed</guid>
+	<type>property</type>
+	<hash>1f09347b</hash>
+	<runtimes>
+		<runtime id="8bdb39212ddaf570eb0ef1a1ae775114b629bbed" name="FMODStudioSample" link="0" type="4"/>
+	</runtimes>
+</asset>

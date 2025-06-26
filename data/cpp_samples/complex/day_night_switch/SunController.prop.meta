@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>65786bb28a1cacb8467a344eb6b3a1bd35dad2c3</guid>
+	<type>property</type>
+	<hash>77cb5be</hash>
+	<runtimes>
+		<runtime id="65786bb28a1cacb8467a344eb6b3a1bd35dad2c3" name="SunController" link="0" type="4"/>
+	</runtimes>
+</asset>

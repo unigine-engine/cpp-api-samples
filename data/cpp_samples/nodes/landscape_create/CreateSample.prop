@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="CreateSample" manual="1" parent_name="node_base">
+	<parameter name="resolution_param" type="ivec2" title="Resolution">0 0</parameter>
+	<parameter name="grid_size_param" type="ivec2" title="Grid Size">0 0</parameter>
+	<parameter name="albedo_images_param" type="array" title="Albedo Images" array_type="file"/>
+	<parameter name="height_images_param" type="array" title="Height Images" array_type="file"/>
+	<parameter name="grass_mask_images_param" type="array" title="Grass Mask Images" array_type="file"/>
+	<parameter name="stone_mask_images_param" type="array" title="Stone Mask Images" array_type="file"/>
+	<parameter name="terrain_size" type="vec2">1000.000000 1000.000000</parameter>
+	<parameter name="terrain_height_scale" type="float">150</parameter>
+</property>

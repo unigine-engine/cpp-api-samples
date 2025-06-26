@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>c90579442b3396ff1cce43a4aec7b6d99bdc1093</guid>
+	<type>property</type>
+	<hash>8a8b487d</hash>
+	<runtimes>
+		<runtime id="c90579442b3396ff1cce43a4aec7b6d99bdc1093" name="CameraShiftController" link="0" type="4"/>
+	</runtimes>
+</asset>

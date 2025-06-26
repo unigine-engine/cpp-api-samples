@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sample title="Compute Shader">
+	<sdk_desc>Creating a compute shader to process a million of particles</sdk_desc>
+	<desc>
+		<brief>This sample demonstrates a GPU-based particle system implemented with compute shaders. It initializes a dynamic particle renderer, updates particle positions and velocities each frame using a ping-pong texture mechanism, and uses UV-mapped static meshes to influence particle behavior.</brief>
+		<para>These mesh-to-particle transformations are well-suited for real-time visual effects, such as fluid or smoke simulations or interactive art installations.</para>
+	</desc>
+	<tags>
+		<tag>Render</tag>
+		<tag>Shaders</tag>
+	</tags>
+</sample>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>dca6ded74136a078f5ff3801725fcaa1e2341951</guid>
+	<type>property</type>
+	<hash>c72eb72a</hash>
+	<runtimes>
+		<runtime id="dca6ded74136a078f5ff3801725fcaa1e2341951" name="BodyFractureShootingGalleryGun" link="0" type="4"/>
+	</runtimes>
+</asset>

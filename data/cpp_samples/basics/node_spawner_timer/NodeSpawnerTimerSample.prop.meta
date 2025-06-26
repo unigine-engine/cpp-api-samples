@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>97e33de2d83da0b3124aab0456a40b9780eea42e</guid>
+	<type>property</type>
+	<hash>26ffd23e</hash>
+	<runtimes>
+		<runtime id="97e33de2d83da0b3124aab0456a40b9780eea42e" name="NodeSpawnerTimerSample" link="0" type="4"/>
+	</runtimes>
+</asset>

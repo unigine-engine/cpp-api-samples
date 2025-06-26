@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>cc287281fd1bf68ffae98a2c5dbc8ad440d9deef</guid>
+	<type>property</type>
+	<hash>ddec9979</hash>
+	<runtimes>
+		<runtime id="cc287281fd1bf68ffae98a2c5dbc8ad440d9deef" name="HttpImageToTexture" link="0" type="4"/>
+	</runtimes>
+</asset>

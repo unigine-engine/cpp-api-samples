@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>e8a979b6b6e9f5a7221cd2362ef5389fecb0b6c4</guid>
+	<type>property</type>
+	<hash>b8844885</hash>
+	<runtimes>
+		<runtime id="e8a979b6b6e9f5a7221cd2362ef5389fecb0b6c4" name="ScriptTypes" link="0" type="4"/>
+	</runtimes>
+</asset>

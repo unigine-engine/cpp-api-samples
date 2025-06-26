@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="RenderTargetSample" manual="1" parent_name="node_base">
+	<parameter name="draw_sprite_material" type="material"/>
+	<parameter name="sprites" type="array" array_type="file"/>
+	<parameter name="wall_param" type="node" title="Wall Node">0</parameter>
+</property>

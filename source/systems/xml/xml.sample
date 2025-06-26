@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="XML">
+	<desc>
+		<brief>This sample demonstrates how to create and manipulate an <ui>XML</ui> document using the <ui><link to="xml_class">Xml</link></ui> class.</brief>
+		<para>The sample creates a nested <ui>XML</ui> tree with multiple child nodes, each containing arguments and optionally a text value. The structure is built using the <ui><link to="xml_class" offset="addChild_cstr_cstr_Xml">Xml::addChild()</link></ui> method, and the arguments are parsed using <ui><link to="xml_class" offset="getArgName_int_cstr">Xml::getArgName()</link></ui> and <ui><link to="xml_class" offset="getArgValue_int_cstr">Xml::getArgValue()</link></ui>. After construction, the <ui>XML</ui> tree is traversed recursively to display the structure and all attributes in the console output.</para>
+		<para>This approach demonstrates the use of the <ui><link to="xml_class">Xml</link></ui> class for working with hierarchical data, which is useful for config files, level data, and other structured content in <ui>XML</ui> format.</para>
+	</desc>
+	<tags>
+		<tag>File Formats</tag>
+	</tags>
+</sample>

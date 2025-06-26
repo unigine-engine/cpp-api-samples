@@ -1,0 +1,2018 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodes version="2.20.0.0">
+	<node type="NodeDummy" id="1726394076" name="fire">
+		<properties>
+			<property parent="245eb6d90c4a047a331f5385890a13df1f3ba128" guid="7ee66c5cabf8be9a9cefc2c3d0640fa55b40b3e6">
+				<parameter name="emitter_node">1626873011</parameter>
+			</property>
+		</properties>
+		<transform>0.99992782 0 0 0.0 0 0.99992776 0 0.0 0 0 0.99992794 0.0 -0.0021972656 -0.00082397461 2.5629997e-06 1.0</transform>
+		<node type="ObjectParticles" id="1626873011" name="root_emitter">
+			<clear_on_enable>1</clear_on_enable>
+			<number_per_spawn>0</number_per_spawn>
+			<spawn_rate>0</spawn_rate>
+			<screen_min_size>9.99999997e-07</screen_min_size>
+			<rotation_modifier mode="0" value="0" value_min="0" value_max="0" curve_scale="1">
+				<curve_min>
+					<keys>
+						<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+						<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+					</keys>
+				</curve_min>
+				<curve_max>
+					<keys>
+						<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+						<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+					</keys>
+				</curve_max>
+			</rotation_modifier>
+			<angle_modifier mode="1" value="180" value_min="-180" value_max="180" curve_scale="1">
+				<curve_min>
+					<keys>
+						<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+						<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+					</keys>
+				</curve_min>
+				<curve_max>
+					<keys>
+						<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+						<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+					</keys>
+				</curve_max>
+			</angle_modifier>
+			<growth_modifier mode="0" value="0" value_min="0" value_max="0" curve_scale="1">
+				<curve_min>
+					<keys>
+						<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+						<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+					</keys>
+				</curve_min>
+				<curve_max>
+					<keys>
+						<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+						<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+					</keys>
+				</curve_max>
+			</growth_modifier>
+			<radius_modifier mode="0" value="0.300000012" value_min="0.300000012" value_max="0.300000012" curve_scale="1">
+				<curve_min>
+					<keys>
+						<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+						<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+					</keys>
+				</curve_min>
+				<curve_max>
+					<keys>
+						<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+						<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+					</keys>
+				</curve_max>
+			</radius_modifier>
+			<velocity_modifier mode="0" value="2" value_min="2" value_max="2" curve_scale="1">
+				<curve_min>
+					<keys>
+						<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+						<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+					</keys>
+				</curve_min>
+				<curve_max>
+					<keys>
+						<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+						<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+					</keys>
+				</curve_max>
+			</velocity_modifier>
+			<linear_damping_modifier mode="0" value="0" value_min="0" value_max="2" curve_scale="1">
+				<curve_min>
+					<keys>
+						<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+						<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+					</keys>
+				</curve_min>
+				<curve_max>
+					<keys>
+						<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+						<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+					</keys>
+				</curve_max>
+			</linear_damping_modifier>
+			<direction_modifier mode="1" value="1 1 1" value_min="-1 -1 -1" value_max="1 1 1" curve_scale="1">
+				<curve_x_min>
+					<keys>
+						<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+						<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+					</keys>
+				</curve_x_min>
+				<curve_y_min>
+					<keys>
+						<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+						<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+					</keys>
+				</curve_y_min>
+				<curve_z_min>
+					<keys>
+						<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+						<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+					</keys>
+				</curve_z_min>
+				<curve_x_max>
+					<keys>
+						<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+						<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+					</keys>
+				</curve_x_max>
+				<curve_y_max>
+					<keys>
+						<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+						<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+					</keys>
+				</curve_y_max>
+				<curve_z_max>
+					<keys>
+						<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+						<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+					</keys>
+				</curve_z_max>
+			</direction_modifier>
+			<position_modifier mode="0" value="0 0 0" value_min="0 0 0" value_max="0 0 0" curve_scale="1">
+				<curve_x_min>
+					<keys>
+						<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+						<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+					</keys>
+				</curve_x_min>
+				<curve_y_min>
+					<keys>
+						<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+						<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+					</keys>
+				</curve_y_min>
+				<curve_z_min>
+					<keys>
+						<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+						<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+					</keys>
+				</curve_z_min>
+				<curve_x_max>
+					<keys>
+						<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+						<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+					</keys>
+				</curve_x_max>
+				<curve_y_max>
+					<keys>
+						<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+						<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+					</keys>
+				</curve_y_max>
+				<curve_z_max>
+					<keys>
+						<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+						<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+					</keys>
+				</curve_z_max>
+			</position_modifier>
+			<gravity_modifier mode="0" value="0 0 0" value_min="0 0 0" value_max="0 0 0" curve_scale="1">
+				<curve_x_min>
+					<keys>
+						<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+						<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+					</keys>
+				</curve_x_min>
+				<curve_y_min>
+					<keys>
+						<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+						<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+					</keys>
+				</curve_y_min>
+				<curve_z_min>
+					<keys>
+						<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+						<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+					</keys>
+				</curve_z_min>
+				<curve_x_max>
+					<keys>
+						<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+						<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+					</keys>
+				</curve_x_max>
+				<curve_y_max>
+					<keys>
+						<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+						<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+					</keys>
+				</curve_y_max>
+				<curve_z_max>
+					<keys>
+						<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+						<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+					</keys>
+				</curve_z_max>
+			</gravity_modifier>
+			<length_stretch_modifier mode="0" value="0" value_min="0" value_max="0" curve_scale="1">
+				<curve_min>
+					<keys>
+						<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+						<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+					</keys>
+				</curve_min>
+				<curve_max>
+					<keys>
+						<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+						<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+					</keys>
+				</curve_max>
+			</length_stretch_modifier>
+			<length_flattening_modifier mode="0" value="0" value_min="0" value_max="0" curve_scale="1">
+				<curve_min>
+					<keys>
+						<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+						<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+					</keys>
+				</curve_min>
+				<curve_max>
+					<keys>
+						<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+						<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+					</keys>
+				</curve_max>
+			</length_flattening_modifier>
+			<emitter_enabled>1</emitter_enabled>
+			<emitter_sync>0</emitter_sync>
+			<texture_atlas_size>4 4</texture_atlas_size>
+			<life_mean>2</life_mean>
+			<life_spread>0</life_spread>
+			<fps_visible_camera>-1</fps_visible_camera>
+			<fps_visible_shadow>30</fps_visible_shadow>
+			<fps_invisible>15</fps_invisible>
+			<surface name="particles" material="b7c07dfd4ce80edac55fcbfdd0befa02ccd20b88"/>
+			<transform>10.000727 0 0 0.0 0 10.000727 0 0.0 0 0 10.000726 0.0 72.641167 -305.87811 -1.2040138e-05 1.0</transform>
+			<node type="ObjectParticles" id="1934457995" name="fire_low">
+				<particles_type>2</particles_type>
+				<depth_sort>1</depth_sort>
+				<variation_x>1</variation_x>
+				<clear_on_enable>1</clear_on_enable>
+				<number_per_spawn>1</number_per_spawn>
+				<spawn_rate>17</spawn_rate>
+				<physical_mass>2</physical_mass>
+				<screen_min_size>9.99999997e-07</screen_min_size>
+				<rotation_modifier mode="0" value="0" value_min="0" value_max="0" curve_scale="1">
+					<curve_min>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_min>
+					<curve_max>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_max>
+				</rotation_modifier>
+				<angle_modifier mode="1" value="180" value_min="-180" value_max="180" curve_scale="1">
+					<curve_min>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_min>
+					<curve_max>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_max>
+				</angle_modifier>
+				<growth_modifier mode="1" value="-0.300000012" value_min="-0.699999988" value_max="-0.300000012" curve_scale="1">
+					<curve_min>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_min>
+					<curve_max>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_max>
+				</growth_modifier>
+				<radius_modifier mode="1" value="2.5" value_min="1.5" value_max="2.5" curve_scale="1">
+					<curve_min>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_min>
+					<curve_max>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_max>
+				</radius_modifier>
+				<velocity_modifier mode="1" value="1.39999998" value_min="0.600000024" value_max="1.39999998" curve_scale="1">
+					<curve_min>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_min>
+					<curve_max>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_max>
+				</velocity_modifier>
+				<linear_damping_modifier mode="0" value="0" value_min="0" value_max="2" curve_scale="1">
+					<curve_min>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_min>
+					<curve_max>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_max>
+				</linear_damping_modifier>
+				<direction_modifier mode="1" value="1 1 6" value_min="-1 -1 6" value_max="1 1 6" curve_scale="1">
+					<curve_x_min>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_x_min>
+					<curve_y_min>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_y_min>
+					<curve_z_min>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_z_min>
+					<curve_x_max>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_x_max>
+					<curve_y_max>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_y_max>
+					<curve_z_max>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_z_max>
+				</direction_modifier>
+				<position_modifier mode="0" value="0 0 0" value_min="0 0 0" value_max="0 0 0" curve_scale="1">
+					<curve_x_min>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_x_min>
+					<curve_y_min>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_y_min>
+					<curve_z_min>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_z_min>
+					<curve_x_max>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_x_max>
+					<curve_y_max>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_y_max>
+					<curve_z_max>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_z_max>
+				</position_modifier>
+				<gravity_modifier mode="0" value="0 0 0" value_min="0 0 0" value_max="0 0 0" curve_scale="1">
+					<curve_x_min>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_x_min>
+					<curve_y_min>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_y_min>
+					<curve_z_min>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_z_min>
+					<curve_x_max>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_x_max>
+					<curve_y_max>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_y_max>
+					<curve_z_max>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_z_max>
+				</gravity_modifier>
+				<length_stretch_modifier mode="0" value="0" value_min="0" value_max="0" curve_scale="1">
+					<curve_min>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_min>
+					<curve_max>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_max>
+				</length_stretch_modifier>
+				<length_flattening_modifier mode="0" value="0" value_min="0" value_max="0" curve_scale="1">
+					<curve_min>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_min>
+					<curve_max>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_max>
+				</length_flattening_modifier>
+				<emitter_type>3</emitter_type>
+				<emitter_enabled>1</emitter_enabled>
+				<emitter_size>5 5 0.300000012</emitter_size>
+				<texture_atlas_size>4 4</texture_atlas_size>
+				<life_mean>1</life_mean>
+				<life_spread>0.300000012</life_spread>
+				<fps_visible_camera>-1</fps_visible_camera>
+				<fps_visible_shadow>30</fps_visible_shadow>
+				<fps_invisible>0</fps_invisible>
+				<surface name="particles" viewport_mask="0x3" max_visible_distance="300" max_fade_distance="150" material="7e0a25a0598d114c9c95a4d158af059cf1d60436"/>
+				<transform>0.099995717 0 0 0.0 0 0.099995703 0 0.0 0 0 0.099995695 0.0 -7.2635889 30.58559 0.50526309 1.0</transform>
+				<node type="ObjectParticles" id="546351214" name="fire_glow">
+					<particles_type>2</particles_type>
+					<clear_on_enable>1</clear_on_enable>
+					<number_per_spawn>1</number_per_spawn>
+					<spawn_rate>15</spawn_rate>
+					<physical_mass>2</physical_mass>
+					<screen_min_size>9.99999997e-07</screen_min_size>
+					<rotation_modifier mode="1" value="20" value_min="-20" value_max="20" curve_scale="1">
+						<curve_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_min>
+						<curve_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_max>
+					</rotation_modifier>
+					<angle_modifier mode="1" value="180" value_min="-180" value_max="180" curve_scale="1">
+						<curve_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_min>
+						<curve_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_max>
+					</angle_modifier>
+					<growth_modifier mode="1" value="7" value_min="1" value_max="7" curve_scale="1">
+						<curve_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_min>
+						<curve_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_max>
+					</growth_modifier>
+					<radius_modifier mode="1" value="0.0500000007" value_min="0.0500000007" value_max="0.100000001" curve_scale="1">
+						<curve_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_min>
+						<curve_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_max>
+					</radius_modifier>
+					<velocity_modifier mode="1" value="1" value_min="1" value_max="1" curve_scale="1">
+						<curve_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_min>
+						<curve_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_max>
+					</velocity_modifier>
+					<linear_damping_modifier mode="0" value="0" value_min="0" value_max="2" curve_scale="1">
+						<curve_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_min>
+						<curve_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_max>
+					</linear_damping_modifier>
+					<direction_modifier mode="1" value="1 1 1" value_min="-1 -1 -1" value_max="1 1 1" curve_scale="1">
+						<curve_x_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_x_min>
+						<curve_y_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_y_min>
+						<curve_z_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_z_min>
+						<curve_x_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_x_max>
+						<curve_y_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_y_max>
+						<curve_z_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_z_max>
+					</direction_modifier>
+					<position_modifier mode="0" value="0 0 0" value_min="0 0 0" value_max="0 0 0" curve_scale="1">
+						<curve_x_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_x_min>
+						<curve_y_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_y_min>
+						<curve_z_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_z_min>
+						<curve_x_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_x_max>
+						<curve_y_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_y_max>
+						<curve_z_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_z_max>
+					</position_modifier>
+					<gravity_modifier mode="0" value="0 0 0" value_min="0 0 0" value_max="0 0 0" curve_scale="1">
+						<curve_x_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_x_min>
+						<curve_y_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_y_min>
+						<curve_z_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_z_min>
+						<curve_x_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_x_max>
+						<curve_y_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_y_max>
+						<curve_z_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_z_max>
+					</gravity_modifier>
+					<length_stretch_modifier mode="0" value="0" value_min="0" value_max="0" curve_scale="1">
+						<curve_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_min>
+						<curve_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_max>
+					</length_stretch_modifier>
+					<length_flattening_modifier mode="0" value="0" value_min="0" value_max="0" curve_scale="1">
+						<curve_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_min>
+						<curve_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_max>
+					</length_flattening_modifier>
+					<emitter_type>3</emitter_type>
+					<emitter_enabled>1</emitter_enabled>
+					<emitter_size>5 5 1</emitter_size>
+					<texture_atlas_size>4 4</texture_atlas_size>
+					<life_mean>1.5</life_mean>
+					<life_spread>0.400000006</life_spread>
+					<fps_visible_camera>-1</fps_visible_camera>
+					<fps_visible_shadow>30</fps_visible_shadow>
+					<fps_invisible>0</fps_invisible>
+					<surface name="particles" viewport_mask="0x3" max_visible_distance="150" max_fade_distance="100" material="e268f3cbeccfcf2113183367f3650a1e6847cbc9"/>
+					<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
+				</node>
+				<node type="ObjectParticles" id="2040616181" name="fire_bottom">
+					<particles_type>1</particles_type>
+					<clear_on_enable>1</clear_on_enable>
+					<number_per_spawn>1</number_per_spawn>
+					<spawn_rate>7</spawn_rate>
+					<screen_min_size>9.99999997e-07</screen_min_size>
+					<rotation_modifier mode="1" value="10" value_min="-10" value_max="10" curve_scale="1">
+						<curve_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_min>
+						<curve_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_max>
+					</rotation_modifier>
+					<angle_modifier mode="1" value="180" value_min="-180" value_max="180" curve_scale="1">
+						<curve_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_min>
+						<curve_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_max>
+					</angle_modifier>
+					<growth_modifier mode="1" value="-0.5" value_min="-0.5" value_max="-0.5" curve_scale="1">
+						<curve_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_min>
+						<curve_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_max>
+					</growth_modifier>
+					<radius_modifier mode="1" value="2.20000005" value_min="2.20000005" value_max="2.20000005" curve_scale="1">
+						<curve_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_min>
+						<curve_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_max>
+					</radius_modifier>
+					<velocity_modifier mode="1" value="0" value_min="0" value_max="0" curve_scale="1">
+						<curve_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_min>
+						<curve_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_max>
+					</velocity_modifier>
+					<linear_damping_modifier mode="0" value="0" value_min="0" value_max="2" curve_scale="1">
+						<curve_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_min>
+						<curve_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_max>
+					</linear_damping_modifier>
+					<direction_modifier mode="1" value="1 1 6" value_min="-1 -1 6" value_max="1 1 6" curve_scale="1">
+						<curve_x_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_x_min>
+						<curve_y_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_y_min>
+						<curve_z_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_z_min>
+						<curve_x_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_x_max>
+						<curve_y_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_y_max>
+						<curve_z_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_z_max>
+					</direction_modifier>
+					<position_modifier mode="0" value="0 0 0" value_min="0 0 0" value_max="0 0 0" curve_scale="1">
+						<curve_x_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_x_min>
+						<curve_y_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_y_min>
+						<curve_z_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_z_min>
+						<curve_x_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_x_max>
+						<curve_y_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_y_max>
+						<curve_z_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_z_max>
+					</position_modifier>
+					<gravity_modifier mode="0" value="0 0 0" value_min="0 0 0" value_max="0 0 0" curve_scale="1">
+						<curve_x_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_x_min>
+						<curve_y_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_y_min>
+						<curve_z_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_z_min>
+						<curve_x_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_x_max>
+						<curve_y_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_y_max>
+						<curve_z_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_z_max>
+					</gravity_modifier>
+					<length_stretch_modifier mode="0" value="0" value_min="0" value_max="0" curve_scale="1">
+						<curve_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_min>
+						<curve_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_max>
+					</length_stretch_modifier>
+					<length_flattening_modifier mode="0" value="0" value_min="0" value_max="0" curve_scale="1">
+						<curve_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_min>
+						<curve_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_max>
+					</length_flattening_modifier>
+					<emitter_type>3</emitter_type>
+					<emitter_enabled>1</emitter_enabled>
+					<emitter_size>6 1 0.100000001</emitter_size>
+					<texture_atlas_size>4 4</texture_atlas_size>
+					<life_mean>1</life_mean>
+					<life_spread>0.200000003</life_spread>
+					<fps_visible_camera>-1</fps_visible_camera>
+					<fps_visible_shadow>30</fps_visible_shadow>
+					<fps_invisible>0</fps_invisible>
+					<surface name="particles" max_visible_distance="200" max_fade_distance="150" material="6aae25b3e20729216311c1e0e720323c13be5baa"/>
+					<transform>1.00002 0 0 0.0 0 1.00002 0 0.0 0 0 1.00002 0.0 0 0 0 1.0</transform>
+				</node>
+			</node>
+			<node type="ObjectParticles" id="636570351" name="fire_high">
+				<particles_type>2</particles_type>
+				<depth_sort>1</depth_sort>
+				<variation_x>1</variation_x>
+				<clear_on_enable>1</clear_on_enable>
+				<number_per_spawn>1</number_per_spawn>
+				<spawn_rate>6</spawn_rate>
+				<physical_mass>2</physical_mass>
+				<screen_min_size>9.99999997e-07</screen_min_size>
+				<rotation_modifier mode="0" value="0" value_min="0" value_max="0" curve_scale="1">
+					<curve_min>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_min>
+					<curve_max>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_max>
+				</rotation_modifier>
+				<angle_modifier mode="1" value="180" value_min="-180" value_max="180" curve_scale="1">
+					<curve_min>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_min>
+					<curve_max>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_max>
+				</angle_modifier>
+				<growth_modifier mode="1" value="-0.400000006" value_min="-0.600000024" value_max="-0.400000006" curve_scale="1">
+					<curve_min>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_min>
+					<curve_max>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_max>
+				</growth_modifier>
+				<radius_modifier mode="1" value="4" value_min="3" value_max="4" curve_scale="1">
+					<curve_min>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_min>
+					<curve_max>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_max>
+				</radius_modifier>
+				<velocity_modifier mode="1" value="4" value_min="2" value_max="4" curve_scale="1">
+					<curve_min>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_min>
+					<curve_max>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_max>
+				</velocity_modifier>
+				<linear_damping_modifier mode="0" value="0" value_min="0" value_max="2" curve_scale="1">
+					<curve_min>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_min>
+					<curve_max>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_max>
+				</linear_damping_modifier>
+				<direction_modifier mode="1" value="1 1 4" value_min="-1 -1 4" value_max="1 1 4" curve_scale="1">
+					<curve_x_min>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_x_min>
+					<curve_y_min>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_y_min>
+					<curve_z_min>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_z_min>
+					<curve_x_max>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_x_max>
+					<curve_y_max>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_y_max>
+					<curve_z_max>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_z_max>
+				</direction_modifier>
+				<position_modifier mode="0" value="0 0 0" value_min="0 0 0" value_max="0 0 0" curve_scale="1">
+					<curve_x_min>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_x_min>
+					<curve_y_min>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_y_min>
+					<curve_z_min>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_z_min>
+					<curve_x_max>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_x_max>
+					<curve_y_max>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_y_max>
+					<curve_z_max>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_z_max>
+				</position_modifier>
+				<gravity_modifier mode="0" value="0 0 3" value_min="0 0 3" value_max="0 0 3" curve_scale="3">
+					<curve_x_min>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_x_min>
+					<curve_y_min>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_y_min>
+					<curve_z_min>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_z_min>
+					<curve_x_max>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_x_max>
+					<curve_y_max>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_y_max>
+					<curve_z_max>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_z_max>
+				</gravity_modifier>
+				<length_stretch_modifier mode="0" value="0" value_min="0" value_max="0" curve_scale="1">
+					<curve_min>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_min>
+					<curve_max>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_max>
+				</length_stretch_modifier>
+				<length_flattening_modifier mode="0" value="0" value_min="0" value_max="0" curve_scale="1">
+					<curve_min>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_min>
+					<curve_max>
+						<keys>
+							<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+							<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+						</keys>
+					</curve_max>
+				</length_flattening_modifier>
+				<emitter_type>1</emitter_type>
+				<emitter_enabled>1</emitter_enabled>
+				<emitter_size>1 4 0.300000012</emitter_size>
+				<texture_atlas_size>4 4</texture_atlas_size>
+				<delay_mean>0.300000012</delay_mean>
+				<delay_spread>0</delay_spread>
+				<life_mean>2</life_mean>
+				<life_spread>0.600000024</life_spread>
+				<fps_visible_camera>-1</fps_visible_camera>
+				<fps_visible_shadow>30</fps_visible_shadow>
+				<fps_invisible>0</fps_invisible>
+				<surface name="particles" viewport_mask="0x3" max_visible_distance="500" max_fade_distance="150" material="7b95452f0c0590a7b95612ec7f412aa2891b67bc"/>
+				<transform>0.099990107 0 0 0.0 0 0.0999901 0 0.0 0 0 0.0999901 0.0 -7.2635889 30.58559 0.50526309 1.0</transform>
+				<node type="ObjectParticles" id="518126466" name="fire_glow">
+					<particles_type>2</particles_type>
+					<clear_on_enable>1</clear_on_enable>
+					<number_per_spawn>1</number_per_spawn>
+					<spawn_rate>8</spawn_rate>
+					<physical_mass>2</physical_mass>
+					<screen_min_size>9.99999997e-07</screen_min_size>
+					<rotation_modifier mode="1" value="20" value_min="-20" value_max="20" curve_scale="1">
+						<curve_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_min>
+						<curve_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_max>
+					</rotation_modifier>
+					<angle_modifier mode="1" value="1" value_min="-1" value_max="1" curve_scale="1">
+						<curve_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_min>
+						<curve_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_max>
+					</angle_modifier>
+					<growth_modifier mode="1" value="6" value_min="4" value_max="6" curve_scale="1">
+						<curve_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_min>
+						<curve_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_max>
+					</growth_modifier>
+					<radius_modifier mode="1" value="2" value_min="2" value_max="2" curve_scale="1">
+						<curve_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_min>
+						<curve_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_max>
+					</radius_modifier>
+					<velocity_modifier mode="1" value="3" value_min="3" value_max="3" curve_scale="1">
+						<curve_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_min>
+						<curve_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_max>
+					</velocity_modifier>
+					<linear_damping_modifier mode="0" value="0" value_min="0" value_max="2" curve_scale="1">
+						<curve_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_min>
+						<curve_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_max>
+					</linear_damping_modifier>
+					<direction_modifier mode="1" value="1 1 7" value_min="-1 -1 7" value_max="1 1 7" curve_scale="1">
+						<curve_x_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_x_min>
+						<curve_y_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_y_min>
+						<curve_z_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_z_min>
+						<curve_x_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_x_max>
+						<curve_y_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_y_max>
+						<curve_z_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_z_max>
+					</direction_modifier>
+					<position_modifier mode="0" value="0 0 0" value_min="0 0 0" value_max="0 0 0" curve_scale="1">
+						<curve_x_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_x_min>
+						<curve_y_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_y_min>
+						<curve_z_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_z_min>
+						<curve_x_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_x_max>
+						<curve_y_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_y_max>
+						<curve_z_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_z_max>
+					</position_modifier>
+					<gravity_modifier mode="0" value="0 0 0" value_min="0 0 0" value_max="0 0 0" curve_scale="1">
+						<curve_x_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_x_min>
+						<curve_y_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_y_min>
+						<curve_z_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_z_min>
+						<curve_x_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_x_max>
+						<curve_y_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_y_max>
+						<curve_z_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_z_max>
+					</gravity_modifier>
+					<length_stretch_modifier mode="0" value="0" value_min="0" value_max="0" curve_scale="1">
+						<curve_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_min>
+						<curve_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_max>
+					</length_stretch_modifier>
+					<length_flattening_modifier mode="0" value="0" value_min="0" value_max="0" curve_scale="1">
+						<curve_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_min>
+						<curve_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_max>
+					</length_flattening_modifier>
+					<emitter_type>1</emitter_type>
+					<emitter_enabled>1</emitter_enabled>
+					<emitter_size>4 5 0.100000001</emitter_size>
+					<texture_atlas_size>4 4</texture_atlas_size>
+					<life_mean>1</life_mean>
+					<life_spread>0.200000003</life_spread>
+					<fps_visible_camera>-1</fps_visible_camera>
+					<fps_visible_shadow>30</fps_visible_shadow>
+					<fps_invisible>0</fps_invisible>
+					<surface name="particles" max_visible_distance="250" max_fade_distance="150" material="e268f3cbeccfcf2113183367f3650a1e6847cbc9"/>
+					<transform>1.00001 0 0 0.0 0 1.00001 0 0.0 0 0 1.00001 0.0 0 0 0 1.0</transform>
+				</node>
+				<node type="ObjectParticles" id="1741718777" name="fire_high_smoke">
+					<depth_sort>1</depth_sort>
+					<variation_x>1</variation_x>
+					<clear_on_enable>1</clear_on_enable>
+					<number_per_spawn>1</number_per_spawn>
+					<spawn_rate>4</spawn_rate>
+					<physical_mass>4</physical_mass>
+					<screen_min_size>9.99999997e-07</screen_min_size>
+					<rotation_modifier mode="2" value="10" value_min="-10" value_max="10" curve_scale="10">
+						<curve_min>
+							<keys>
+								<key point="0 -0" left_tangent="0 0" right_tangent="-0 -0"/>
+								<key point="0.00833333377 -0" left_tangent="-0.00138888904 0" right_tangent="0.00138888904 -0"/>
+								<key point="0.0166666675 -0" left_tangent="-0.00138888881 0" right_tangent="0.00138888881 -0"/>
+								<key point="0.0250000004 -0" left_tangent="-0.00138888892 0" right_tangent="0.00138888892 -0"/>
+								<key point="0.0333333351 -0" left_tangent="-0.00138888927 0" right_tangent="0.00138888927 -0"/>
+								<key point="0.0416666679 -0" left_tangent="-0.00138888881 0" right_tangent="0.00138888881 -0"/>
+								<key point="0.0500000007 -0" left_tangent="-0.00138888881 0" right_tangent="0.00138888881 -0"/>
+								<key point="0.0583333336 -0" left_tangent="-0.00138888881 0" right_tangent="0.00138888881 -0"/>
+								<key point="0.0666666701 -0" left_tangent="-0.0013888895 0" right_tangent="0.0013888895 -0"/>
+								<key point="0.0749999955 -0" left_tangent="-0.00138888764 0" right_tangent="0.00138888764 -0"/>
+								<key point="0.0832500011 -0" left_tangent="-0.00137500092 0" right_tangent="0.00137500092 -0"/>
+								<key point="0.0833333358 0" left_tangent="-1.38891246e-05 -0" right_tangent="1.38891246e-05 0"/>
+							</keys>
+						</curve_min>
+						<curve_max>
+							<keys>
+								<key point="0 1" left_tangent="0 0" right_tangent="-0 -0"/>
+								<key point="0.00833333377 0.951229453" left_tangent="-0.00138888904 0.00812842511" right_tangent="0.00138888904 -0.00812842511"/>
+								<key point="0.0166666675 0.90483743" left_tangent="-0.00138888881 0.00773200439" right_tangent="0.00138888881 -0.00773200439"/>
+								<key point="0.0250000004 0.860707998" left_tangent="-0.00138888892 0.00735490536" right_tangent="0.00138888892 -0.00735490536"/>
+								<key point="0.0333333351 0.818730772" left_tangent="-0.00138888927 0.00699620461" right_tangent="0.00138888927 -0.00699620461"/>
+								<key point="0.0416666679 0.778800786" left_tangent="-0.00138888881 0.00665499829" right_tangent="0.00138888881 -0.00665499829"/>
+								<key point="0.0500000007 0.740818202" left_tangent="-0.00138888881 0.00633043051" right_tangent="0.00138888881 -0.00633043051"/>
+								<key point="0.0583333336 0.704688072" left_tangent="-0.00138888881 0.00602168869" right_tangent="0.00138888881 -0.00602168869"/>
+								<key point="0.0666666701 0.670320034" left_tangent="-0.0013888895 0.00572800636" right_tangent="0.0013888895 -0.00572800636"/>
+								<key point="0.0749999955 0.637628138" left_tangent="-0.00138888764 0.00544864964" right_tangent="0.00138888764 -0.00544864964"/>
+								<key point="0.0832500011 0.606833994" left_tangent="-0.00137500092 0.0051323548" right_tangent="0.00137500092 -0.0051323548"/>
+								<key point="0.0833333358 0" left_tangent="-1.38891246e-05 0.101139002" right_tangent="1.38891246e-05 -0.101139002"/>
+							</keys>
+						</curve_max>
+					</rotation_modifier>
+					<angle_modifier mode="1" value="10" value_min="-10" value_max="10" curve_scale="1">
+						<curve_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_min>
+						<curve_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_max>
+					</angle_modifier>
+					<growth_modifier mode="2" value="1.69705629" value_min="0.282842696" value_max="1.69705629" curve_scale="1.20000005">
+						<curve_min>
+							<keys>
+								<key point="0 -0" left_tangent="0 0" right_tangent="-0 -0"/>
+								<key point="0.00833333377 -0" left_tangent="-0.00138888904 0" right_tangent="0.00138888904 -0"/>
+								<key point="0.0166666675 -0" left_tangent="-0.00138888881 0" right_tangent="0.00138888881 -0"/>
+								<key point="0.0250000004 -0" left_tangent="-0.00138888892 0" right_tangent="0.00138888892 -0"/>
+								<key point="0.0333333351 -0" left_tangent="-0.00138888927 0" right_tangent="0.00138888927 -0"/>
+								<key point="0.0416666679 -0" left_tangent="-0.00138888881 0" right_tangent="0.00138888881 -0"/>
+								<key point="0.0500000007 -0" left_tangent="-0.00138888881 0" right_tangent="0.00138888881 -0"/>
+								<key point="0.0583333336 -0" left_tangent="-0.00138888881 0" right_tangent="0.00138888881 -0"/>
+								<key point="0.0666666701 -0" left_tangent="-0.0013888895 0" right_tangent="0.0013888895 -0"/>
+								<key point="0.0749999955 -0" left_tangent="-0.00138888764 0" right_tangent="0.00138888764 -0"/>
+								<key point="0.0832500011 -0" left_tangent="-0.00137500092 0" right_tangent="0.00137500092 -0"/>
+								<key point="0.0833333358 0" left_tangent="-1.38891246e-05 -0" right_tangent="1.38891246e-05 0"/>
+							</keys>
+						</curve_min>
+						<curve_max>
+							<keys>
+								<key point="0 1" left_tangent="0 0" right_tangent="-0 -0"/>
+								<key point="0.00833333377 0.985111952" left_tangent="-0.00138888904 0.00248134136" right_tangent="0.00138888904 -0.00248134136"/>
+								<key point="0.0166666675 0.970445514" left_tangent="-0.00138888881 0.00244440627" right_tangent="0.00138888881 -0.00244440627"/>
+								<key point="0.0250000004 0.955997467" left_tangent="-0.00138888892 0.00240800786" right_tangent="0.00138888892 -0.00240800786"/>
+								<key point="0.0333333351 0.941764534" left_tangent="-0.00138888927 0.00237215566" right_tangent="0.00138888927 -0.00237215566"/>
+								<key point="0.0416666679 0.927743495" left_tangent="-0.00138888881 0.00233684015" right_tangent="0.00138888881 -0.00233684015"/>
+								<key point="0.0500000007 0.913931191" left_tangent="-0.00138888881 0.00230205059" right_tangent="0.00138888881 -0.00230205059"/>
+								<key point="0.0583333336 0.900324523" left_tangent="-0.00138888881 0.00226777792" right_tangent="0.00138888881 -0.00226777792"/>
+								<key point="0.0666666701 0.886920452" left_tangent="-0.0013888895 0.00223401212" right_tangent="0.0013888895 -0.00223401212"/>
+								<key point="0.0749999955 0.873715878" left_tangent="-0.00138888764 0.00220076251" right_tangent="0.00138888764 -0.00220076251"/>
+								<key point="0.0832500011 0.860837102" left_tangent="-0.00137500092 0.00214646757" right_tangent="0.00137500092 -0.00214646757"/>
+								<key point="0.0833333358 0" left_tangent="-1.38891246e-05 0.14347285" right_tangent="1.38891246e-05 -0.14347285"/>
+							</keys>
+						</curve_max>
+					</growth_modifier>
+					<radius_modifier mode="1" value="5.65685415" value_min="2.82842708" value_max="5.65685415" curve_scale="1">
+						<curve_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_min>
+						<curve_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_max>
+					</radius_modifier>
+					<velocity_modifier mode="1" value="10" value_min="6" value_max="10" curve_scale="1">
+						<curve_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_min>
+						<curve_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_max>
+					</velocity_modifier>
+					<linear_damping_modifier mode="0" value="0.699999988" value_min="0.699999988" value_max="0.699999988" curve_scale="0.699999988">
+						<curve_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_min>
+						<curve_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_max>
+					</linear_damping_modifier>
+					<direction_modifier mode="1" value="1 1 3" value_min="-1 -1 3" value_max="1 1 3" curve_scale="1">
+						<curve_x_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_x_min>
+						<curve_y_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_y_min>
+						<curve_z_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_z_min>
+						<curve_x_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_x_max>
+						<curve_y_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_y_max>
+						<curve_z_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_z_max>
+					</direction_modifier>
+					<position_modifier mode="0" value="0 0 0" value_min="0 0 0" value_max="0 0 0" curve_scale="1">
+						<curve_x_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_x_min>
+						<curve_y_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_y_min>
+						<curve_z_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_z_min>
+						<curve_x_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_x_max>
+						<curve_y_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_y_max>
+						<curve_z_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_z_max>
+					</position_modifier>
+					<gravity_modifier mode="0" value="0 0 2" value_min="0 0 2" value_max="0 0 2" curve_scale="2">
+						<curve_x_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_x_min>
+						<curve_y_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_y_min>
+						<curve_z_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_z_min>
+						<curve_x_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_x_max>
+						<curve_y_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_y_max>
+						<curve_z_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_z_max>
+					</gravity_modifier>
+					<length_stretch_modifier mode="0" value="0" value_min="0" value_max="0" curve_scale="1">
+						<curve_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_min>
+						<curve_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_max>
+					</length_stretch_modifier>
+					<length_flattening_modifier mode="0" value="0" value_min="0" value_max="0" curve_scale="1">
+						<curve_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_min>
+						<curve_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_max>
+					</length_flattening_modifier>
+					<emitter_type>1</emitter_type>
+					<emitter_enabled>1</emitter_enabled>
+					<emitter_size>2 3 3</emitter_size>
+					<texture_atlas_size>4 4</texture_atlas_size>
+					<life_mean>8</life_mean>
+					<life_spread>4</life_spread>
+					<fps_visible_camera>-1</fps_visible_camera>
+					<fps_visible_shadow>30</fps_visible_shadow>
+					<fps_invisible>0</fps_invisible>
+					<surface name="particles" viewport_mask="0x3" max_visible_distance="500" max_fade_distance="150" material="3585f103935ddf4edf0d21e599ba956e457b5246"/>
+					<transform>1.00001 0 0 0.0 0 1.00001 0 0.0 0 0 1.00001 0.0 0 0 0 1.0</transform>
+				</node>
+				<node type="ObjectParticles" id="324135428" name="fire_refraction">
+					<depth_sort>1</depth_sort>
+					<variation_x>1</variation_x>
+					<variation_y>1</variation_y>
+					<clear_on_enable>1</clear_on_enable>
+					<number_per_spawn>1</number_per_spawn>
+					<spawn_rate>8</spawn_rate>
+					<physical_mass>2</physical_mass>
+					<screen_min_size>9.99999997e-07</screen_min_size>
+					<rotation_modifier mode="1" value="60" value_min="-60" value_max="60" curve_scale="1">
+						<curve_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_min>
+						<curve_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_max>
+					</rotation_modifier>
+					<angle_modifier mode="1" value="180" value_min="-180" value_max="180" curve_scale="1">
+						<curve_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_min>
+						<curve_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_max>
+					</angle_modifier>
+					<growth_modifier mode="0" value="0" value_min="0" value_max="0" curve_scale="1">
+						<curve_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_min>
+						<curve_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_max>
+					</growth_modifier>
+					<radius_modifier mode="1" value="5.93969679" value_min="3.95979786" value_max="5.93969679" curve_scale="1">
+						<curve_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_min>
+						<curve_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_max>
+					</radius_modifier>
+					<velocity_modifier mode="1" value="6" value_min="4" value_max="6" curve_scale="1">
+						<curve_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_min>
+						<curve_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_max>
+					</velocity_modifier>
+					<linear_damping_modifier mode="0" value="0" value_min="0" value_max="2" curve_scale="1">
+						<curve_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_min>
+						<curve_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_max>
+					</linear_damping_modifier>
+					<direction_modifier mode="1" value="1 1 3" value_min="-1 -1 3" value_max="1 1 3" curve_scale="1">
+						<curve_x_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_x_min>
+						<curve_y_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_y_min>
+						<curve_z_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_z_min>
+						<curve_x_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_x_max>
+						<curve_y_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_y_max>
+						<curve_z_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_z_max>
+					</direction_modifier>
+					<position_modifier mode="0" value="0 0 0" value_min="0 0 0" value_max="0 0 0" curve_scale="1">
+						<curve_x_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_x_min>
+						<curve_y_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_y_min>
+						<curve_z_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_z_min>
+						<curve_x_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_x_max>
+						<curve_y_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_y_max>
+						<curve_z_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_z_max>
+					</position_modifier>
+					<gravity_modifier mode="0" value="0 0 1" value_min="0 0 1" value_max="0 0 1" curve_scale="1">
+						<curve_x_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_x_min>
+						<curve_y_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_y_min>
+						<curve_z_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_z_min>
+						<curve_x_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_x_max>
+						<curve_y_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_y_max>
+						<curve_z_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_z_max>
+					</gravity_modifier>
+					<length_stretch_modifier mode="0" value="0" value_min="0" value_max="0" curve_scale="1">
+						<curve_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_min>
+						<curve_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_max>
+					</length_stretch_modifier>
+					<length_flattening_modifier mode="0" value="0" value_min="0" value_max="0" curve_scale="1">
+						<curve_min>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 0.5" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_min>
+						<curve_max>
+							<keys>
+								<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+								<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+							</keys>
+						</curve_max>
+					</length_flattening_modifier>
+					<emitter_type>3</emitter_type>
+					<emitter_enabled>1</emitter_enabled>
+					<emitter_size>7 4 0</emitter_size>
+					<texture_atlas_size>4 4</texture_atlas_size>
+					<delay_mean>0.300000012</delay_mean>
+					<delay_spread>0</delay_spread>
+					<life_mean>1.79999995</life_mean>
+					<life_spread>0.699999988</life_spread>
+					<fps_visible_camera>-1</fps_visible_camera>
+					<fps_visible_shadow>30</fps_visible_shadow>
+					<fps_invisible>0</fps_invisible>
+					<surface name="particles" max_visible_distance="50" max_fade_distance="100" material="2cc4b9cb05a409f43dfe690ee35e8b926007a7c8"/>
+					<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
+				</node>
+			</node>
+		</node>
+	</node>
+</nodes>

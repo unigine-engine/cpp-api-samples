@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Physical Buoyancy">
+	<sdk_desc>This sample demonstrates how to implement physically accurate buoyancy for dynamic objects floating on Global Water.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample demonstrates how to implement <strong>physically accurate buoyancy</strong> for dynamic objects floating on <strong nt="1"><link to="water_global">Global Water</link></strong>. A physical body is divided into a grid of virtual volume elements, each sampled independently for water height. Based on how much of each cell is submerged, the system:</para>
+			<ul>
+				<li>Calculates and applies distributed <strong>buoyant forces</strong></li>
+				<li>Adds appropriate <strong>torque</strong> to simulate rotation</li>
+				<li>Applies <strong>linear and angular damping</strong> depending on submerged volume.</li>
+			</ul>
+			<para>You can also define a <strong>custom center of mass</strong>, and optionally enable <strong>debug visualization</strong> of submerged sections, force directions, and sampling points via API. Use the <strong><link to="water_global">Global Water</link></strong> object across different <strong><link to="water_global" offset="creating_waves">Beaufort</link></strong> slider parameter to adjust wave intensity.</para>
+			<para>This approach is useful for games and simulators involving boats, ships, debris, or physics-based water interactions.</para>
+		</brief>
+	</desc>
+	<controls> 
+		<![CDATA[<p align=left><b>WASD</b> to control the boat.</p>
+		<p align=left><b>Mouse movements</b> to rotate the camera.</p>
+		]]>
+	</controls>
+	<tags>
+		<tag>Water</tag>
+		<tag>Maritime</tag>
+		<tag>Physics</tag>
+	</tags>
+</sample>

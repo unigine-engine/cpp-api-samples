@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>0f72ac9f64b389ea9e67f0986e2cd06aa18a84a6</guid>
+	<type>property</type>
+	<hash>d8fc2e49</hash>
+	<runtimes>
+		<runtime id="0f72ac9f64b389ea9e67f0986e2cd06aa18a84a6" name="WheelAttachment" link="0" type="4"/>
+	</runtimes>
+</asset>

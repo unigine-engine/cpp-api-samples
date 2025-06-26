@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="BoundIntersection" manual="1" parent_name="node_base">
+	<struct name="SphereStruct">
+		<parameter name="position" type="vec3">0.000000 0.000000 0.000000</parameter>
+		<parameter name="radius" type="float">1</parameter>
+		<parameter name="intersection_material" type="material"/>
+	</struct>
+	<struct name="FrustumStruct">
+		<parameter name="eye_position" type="vec3">0.000000 0.000000 0.000000</parameter>
+		<parameter name="target_position" type="vec3">0.000000 1.000000 0.000000</parameter>
+		<parameter name="up_direction" type="vec3">0.000000 0.000000 1.000000</parameter>
+		<parameter name="forward_axis" type="int">5</parameter>
+		<parameter name="view_fov" type="float">60</parameter>
+		<parameter name="view_width" type="int">16</parameter>
+		<parameter name="view_height" type="int">9</parameter>
+		<parameter name="view_distance_min" type="float">0.1</parameter>
+		<parameter name="view_distance_max" type="float">10</parameter>
+		<parameter name="intersection_material" type="material"/>
+	</struct>
+	<struct name="BoxStruct">
+		<parameter name="minimum" type="vec3">0.000000 0.000000 0.000000</parameter>
+		<parameter name="maximum" type="vec3">0.000000 0.000000 0.000000</parameter>
+		<parameter name="intersection_material" type="material"/>
+	</struct>
+	<parameter name="bound_sphere" type="SphereStruct" title="Bound Sphere"/>
+	<parameter name="bound_frustum" type="FrustumStruct" title="Bound Frustum"/>
+	<parameter name="bound_box" type="BoxStruct" title="Bound Box"/>
+</property>

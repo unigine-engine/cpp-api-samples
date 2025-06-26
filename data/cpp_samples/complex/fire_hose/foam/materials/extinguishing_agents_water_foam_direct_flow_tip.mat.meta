@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>ae6c4267b6725c9a1c2d0331e9c6a2dc27e4e08b</guid>
+	<type>material</type>
+	<hash>fd7f9341</hash>
+	<runtimes>
+		<runtime id="ae6c4267b6725c9a1c2d0331e9c6a2dc27e4e08b" name="extinguishing_agents_water_foam_direct_flow_tip" link="0" type="5"/>
+	</runtimes>
+</asset>

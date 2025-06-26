@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sample title="Weapon Clipping">
+	<sdk_desc>Rendering the weapon from a second camera into a texture to avoid clipping issues</sdk_desc>
+	<desc>
+		<brief>
+			<para>In first-person games, weapon models can clip through walls or geometry when the camera gets too close. This sample solves the problem by rendering the weapon separately into a texture and compositing it over the main scene.</para>
+			<para>Two cameras with identical transforms are used to ensure alignment. Their <link to="principles_bit_masking" offset="viewport">Viewport masks</link> are set via UNIGINE Editor in the following way: one renders the environment without the weapon, and the other renders only the weapon. The weapon view is drawn into a texture using <ui><link to="viewport_class" offset="renderTexture2D_Camera_Texture_void">Viewport::renderTexture2D()</link></ui>, and then overlaid onto the screen with <ui><link to="render_class" offset="renderScreenMaterial_cstr_void">Render::renderScreenMaterial()</link></ui>. The system handles window resizing, render-state isolation, and allows optional settings like skipping shadows in the weapon rendering pass.</para>
+		</brief>
+		<para>This approach keeps the weapon always visible, even when the camera is close to walls, without interfering with the main rendering pipeline.</para>
+	</desc>
+	<tags>
+		<tag>Render</tag>
+		<tag>Cameras</tag>
+		<tag>Games</tag>
+		<tag>Basic Recipes</tag>
+	</tags>
+</sample>

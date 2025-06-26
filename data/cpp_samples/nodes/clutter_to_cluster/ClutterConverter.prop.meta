@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>a058882796ca0866a64aff81ca51b7771eeafa21</guid>
+	<type>property</type>
+	<hash>7438f177</hash>
+	<runtimes>
+		<runtime id="a058882796ca0866a64aff81ca51b7771eeafa21" name="ClutterConverter" link="0" type="4"/>
+	</runtimes>
+</asset>

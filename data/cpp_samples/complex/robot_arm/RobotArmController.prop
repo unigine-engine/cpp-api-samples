@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="RobotArmController" manual="1" parent_name="node_base">
+	<struct name="ArmJoint">
+		<parameter name="arm_node" type="node">0</parameter>
+		<parameter name="speed" type="float">100</parameter>
+	</struct>
+	<parameter name="arm_joint_0" type="ArmJoint"/>
+	<parameter name="arm_joint_1" type="ArmJoint"/>
+	<parameter name="arm_joint_2" type="ArmJoint"/>
+	<parameter name="arm_joint_3" type="ArmJoint"/>
+	<parameter name="arm_joint_4" type="ArmJoint"/>
+	<parameter name="arm_joint_5" type="ArmJoint"/>
+</property>

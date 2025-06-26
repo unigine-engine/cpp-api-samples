@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>b2d6ccd3e78e6c164be1347df1fd6bb80430bbb7</guid>
+	<type>texture</type>
+	<hash>8e186c87</hash>
+	<runtimes>
+		<runtime id="b2d6ccd3e78e6c164be1347df1fd6bb80430bbb7" name="smoke_mist_v2_d.tga" link="0" type="6"/>
+		<runtime id="329265aa0ff9d901c9ae5e6c2c74c6db70fb4e7e" name="smoke_mist_v2_d.texture" link="1" type="6"/>
+	</runtimes>
+	<parameters>
+		<parameter type="int" name="blur_radius">1</parameter>
+		<parameter type="string" name="height">Original</parameter>
+		<parameter type="string" name="image_format">DXT5</parameter>
+		<parameter type="string" name="image_type">2d</parameter>
+		<parameter type="bool" name="invert_g">0</parameter>
+		<parameter type="bool" name="mipmap_sharp_only_lightness">1</parameter>
+		<parameter type="string" name="mipmap_type">box</parameter>
+		<parameter type="string" name="preset_name">custom</parameter>
+		<parameter type="float" name="sharpness_intensity">0.25</parameter>
+		<parameter type="float" name="sharpness_radius">1</parameter>
+		<parameter type="bool" name="srgb_correction">1</parameter>
+		<parameter type="bool" name="unchanged">0</parameter>
+		<parameter type="string" name="width">Original</parameter>
+	</parameters>
+</asset>

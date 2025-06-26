@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="USC Variables">
+	<desc>
+		<brief>This sample demonstrates how to work with different variable types in <ui>UnigineScript</ui> using the <ui><link to="variable_class">Variable</link></ui> class from <ui>C++</ui> code.</brief>
+		<para>Various types (<ui>int, long, float, double</ui>), and vector types (<ui>vec3, vec4, dvec3</ui>, etc.), are wrapped in <ui>Variable</ui> objects and passed into a <ui>UnigineScript</ui> callback function.</para>
+	</desc>
+	<tags>
+		<tag>UnigineScript</tag>
+	</tags>
+</sample>

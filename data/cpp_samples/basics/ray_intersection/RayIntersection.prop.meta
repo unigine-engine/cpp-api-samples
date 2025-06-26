@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>5be35718fda48ff4054461c472abd4178f4126df</guid>
+	<type>property</type>
+	<hash>2ba659a3</hash>
+	<runtimes>
+		<runtime id="5be35718fda48ff4054461c472abd4178f4126df" name="RayIntersection" link="0" type="4"/>
+	</runtimes>
+</asset>

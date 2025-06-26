@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodes version="2.20.0.0">
+	<node type="ObjectMeshStatic" id="2000599738" name="material_ball">
+		<mesh_name>guid://268b2c7dfd6f03b8b38573b7d32fbdaa81075101</mesh_name>
+		<surface name="material_ball_mat" physics_friction="1" physics_restitution="1" material="2811a7f9b592b10430cd8893f1a474d6713c263d"/>
+		<body type="BodyRigid" id="1646092249" frozen="0">
+			<shape type="ShapeSphere" id="897320394" transform="1 0 0 0 0 1 0 0 0 0 1 0 -9.53674316e-07 -0.0121631622 0.576647818 1">
+				<radius>0.465011597</radius>
+			</shape>
+			<shape type="ShapeCylinder" id="1858321057" transform="1 0 0 0 0 1 0 0 0 0 1 0 -9.53674316e-07 -0.0121631622 0.0658150986 1">
+				<radius>0.434196472</radius>
+				<height>0.139274597</height>
+			</shape>
+		</body>
+		<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
+	</node>
+</nodes>

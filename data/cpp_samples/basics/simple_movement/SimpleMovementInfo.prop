@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="SimpleMovementInfo" manual="1" parent_name="node_base" tooltip="This component displays information about the sample and demonstrates how to use a simple move and rotate of a node.">
+	<parameter name="simple_movement_node" type="node">0</parameter>
+	<parameter name="simple_movement2_node" type="node">0</parameter>
+	<parameter name="simple_movement3_node" type="node">0</parameter>
+</property>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Bound Intersection">
+	<sdk_desc>Finding intersections between certain volumes (frustum, sphere, and box) and the bounding boxes of nodes.</sdk_desc>
+	<desc>
+		<brief>This example demonstrates how to detect <link to="example_intersections" offset="worldintersections_nodes">intersections</link> between a frustum, sphere, or box and the bounding boxes of nodes. For clarity, the boundaries of the nodes are displayed in the scene, allowing for a quick visual assessment of when the nodes intersect the specified volumes.</brief>
+		<para>The <ui>init()</ui> function creates three types of bounding volumes: a frustum, a sphere, and a box. The <ui>update()</ui> function performs the intersection checks. It uses the <ui><link to="world_class" offset="getIntersection_WorldBoundBox_VECObject_int">World::getIntersection()</link></ui> function to get a list of nodes that intersect the given boundaries and changes their color using the <ui>change_color()</ui> function.</para>
+		<para>This approach can be used to implement systems for determining which objects fall within a bounding volume and triggering events, such as starting dialogues, spawning enemies, activating effects, or any other reaction.</para>
+	</desc>
+	<tags>
+		<tag>Basic Recipes</tag>
+		<tag>Intersections</tag>
+	</tags>
+</sample>

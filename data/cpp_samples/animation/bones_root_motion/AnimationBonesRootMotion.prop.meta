@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>1fcbd29231c3298667315992aeadd9c138e4281c</guid>
+	<type>property</type>
+	<hash>634640a4</hash>
+	<runtimes>
+		<runtime id="1fcbd29231c3298667315992aeadd9c138e4281c" name="AnimationBonesRootMotion" link="0" type="4"/>
+	</runtimes>
+</asset>

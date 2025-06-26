@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="AnimationBonesStateMachineSample" manual="1" parent_name="node_base">
+	<parameter name="axis_forward" type="switch" items="X,Y,Z,NX,NY,NZ">2</parameter>
+	<parameter name="mesh_skinned_node_machine_walk" type="node">0</parameter>
+	<parameter name="state_machine_walk_prop_path" type="file"/>
+	<parameter name="mesh_skinned_node_machine_idle_turn" type="node">0</parameter>
+	<parameter name="state_machine_idle_turn_prop_path" type="file"/>
+	<parameter name="mesh_skinned_node_machine_walk_run" type="node">0</parameter>
+	<parameter name="state_machine_walk_run_prop_path" type="file"/>
+</property>

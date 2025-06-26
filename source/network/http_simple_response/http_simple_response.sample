@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Simple HTTP Response">
+	<sdk_desc>Implementing a simple asynchronous <i>HTTP</i> server that returns current world coordinates of the player in response to external <i>REST API</i> requests.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This example shows how to implement a simple asynchronous <ui>HTTP</ui> server that returns current world coordinates of the player in response to external <ui>REST API</ui> requests.</para>
+			<para>For demonstration, open the <ui>URL</ui> displayed on the plate in the scene.</para>
+		</brief>
+		<para>The sample uses a lightweight embedded <ui>HTTP</ui> server to handle incoming <ui>GET</ui> requests to the <strong nt="1">/player_pos</strong> endpoint. When accessed, the server responds with the current world-space position of the active player as plain text.</para>
+		<para>The server runs directly inside the simulation and starts automatically with the sample. The <ui>URL</ui> is dynamically generated based on the current <ui>IP</ui> and port settings.</para>
+		<para>This sample can serve as a foundation for live telemetry, debugging, integration with third-party monitoring systems, or any use case where external tools need access to runtime data from the simulation environment.</para>
+	</desc>
+	<tags>
+		<tag>Network</tag>
+	</tags>
+</sample>

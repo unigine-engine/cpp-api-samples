@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="NavigationMeshDemoLogic" manual="1" parent_name="node_base">
+	<parameter name="route_radius" type="float">0.15</parameter>
+	<parameter name="navigation" type="node">0</parameter>
+	<parameter name="seekers" type="node">0</parameter>
+</property>

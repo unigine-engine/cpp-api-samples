@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sample title="FFP">
+	<sdk_desc>Using FFP functionality to draw simple 2D shapes over the rendered image without any additional shaders</sdk_desc>
+	<desc>
+		<brief>This sample demonstrates how to render a simple 2D shape using the <ui><link to="ffp_class">Fixed Function Pipeline (Ffp)</link></ui> in UNIGINE via the C++ API. A colorful figure composed of 16 vertices is drawn directly on screen using orthographic projection.</brief>
+		<para>The rendering logic is called every frame by hooking into the engine's render loop. Ffp mode is enabled for drawing and then disabled, keeping this rendering isolated from the rest of the frame.</para>
+		<para>This approach is useful for quick visualization overlays, editor tools, or debugging tasks where shader-based rendering isn't required.</para>
+	</desc>
+	<tags>
+		<tag>Systems</tag>
+		<tag>Rendering</tag>
+	</tags>
+</sample>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>d3f51502b371d0790e17bf841dd64513deb10756</guid>
+	<type>track</type>
+	<hash>e79c148b</hash>
+	<runtimes>
+		<runtime id="d3f51502b371d0790e17bf841dd64513deb10756" name="position_track.track" link="0"/>
+	</runtimes>
+</asset>

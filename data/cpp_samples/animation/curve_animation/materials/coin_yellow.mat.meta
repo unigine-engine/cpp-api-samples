@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>5634ba2dcdaf55a8e7df3ce7e798151aa71a61b1</guid>
+	<type>material</type>
+	<hash>870462c2</hash>
+	<runtimes>
+		<runtime id="5634ba2dcdaf55a8e7df3ce7e798151aa71a61b1" name="coin_yellow" link="0" type="5"/>
+	</runtimes>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+</asset>

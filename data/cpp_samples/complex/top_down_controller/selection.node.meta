@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>9d41c0fe4478f445c2a3d8e0950a36bf386ad512</guid>
+	<type>node</type>
+	<hash>352448c</hash>
+	<runtimes>
+		<runtime id="9d41c0fe4478f445c2a3d8e0950a36bf386ad512" name="selection.node" link="0" type="3"/>
+	</runtimes>
+</asset>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="BodyFracture Explosion">
+	<sdk_desc>Simulating a radial explosion that triggers BodyFracture object to crack and applies forces to its pieces.</sdk_desc>
+	<desc>
+		<brief>
+		<para>This sample demonstrates how to simulate an explosion that fractures physical objects within its radius using the <ui><link to="bodyfracture_class">BodyFracture</link></ui> class. Each object affected by the explosion is dynamically fractured into separate physical fragments depending on its proximity to the center of the explosion and the decreasing explosion strength over distance.</para>
+		<para>The force applied to the fragments pushes them outward from the explosion center, creating a realistic dispersal effect. A built-in debug visualization clearly displays the explosion radius and the direction of the applied forces, making it easier to understand and adjust the fracture behavior and explosion dynamics. The explosion can be manually triggered via a simple interface button.</para>
+		</brief>
+		<para>This example is ideal for scenarios that require realistic destruction, dynamic fracture effects, or visual representations of physical object damage.</para>
+	</desc>
+	<tags>
+		<tag>Physics</tag>
+		<tag>Systems</tag>
+		<tag>Logic</tag>
+	</tags>
+</sample>

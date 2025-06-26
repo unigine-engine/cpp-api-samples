@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>d416d0ace9bec4bbdd299ad63c4f771f31f617f9</guid>
+	<type>property</type>
+	<hash>952ea80c</hash>
+	<runtimes>
+		<runtime id="d416d0ace9bec4bbdd299ad63c4f771f31f617f9" name="TerrainMeshSample" link="0" type="4"/>
+	</runtimes>
+</asset>

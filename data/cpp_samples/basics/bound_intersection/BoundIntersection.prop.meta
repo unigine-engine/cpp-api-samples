@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>0f10ee33aff1798aa8afa115fc9b4bae4e156ac8</guid>
+	<type>property</type>
+	<hash>d99968f7</hash>
+	<runtimes>
+		<runtime id="0f10ee33aff1798aa8afa115fc9b4bae4e156ac8" name="BoundIntersection" link="0" type="4"/>
+	</runtimes>
+</asset>

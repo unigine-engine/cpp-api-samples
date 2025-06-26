@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>c951f376b5d350d9609f9bc0ec4f0ecaba449666</guid>
+	<type>property</type>
+	<hash>3bbfdf49</hash>
+	<runtimes>
+		<runtime id="c951f376b5d350d9609f9bc0ec4f0ecaba449666" name="FireHoseSample" link="0" type="4"/>
+	</runtimes>
+</asset>

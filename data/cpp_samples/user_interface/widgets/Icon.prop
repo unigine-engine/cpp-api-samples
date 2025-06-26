@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="Icon" manual="1" parent_name="node_base">
+	<parameter name="position" type="vec2">500.000000 450.000000</parameter>
+	<parameter name="size" type="vec2">32.000000 32.000000</parameter>
+	<parameter name="icon_image" type="file"/>
+</property>

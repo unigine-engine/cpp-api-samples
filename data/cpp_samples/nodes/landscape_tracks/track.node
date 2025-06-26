@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodes version="2.20.0.0">
+	<node type="NodeDummy" id="1501356506" name="track">
+		<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
+		<node type="LandscapeLayerMap" id="401925070" name="LandscapeLayerMap">
+			<order>1</order>
+			<size>1 1</size>
+			<height_scale>0.25</height_scale>
+			<is_collision>1</is_collision>
+			<is_intersection>1</is_intersection>
+			<is_culling>1</is_culling>
+			<file_path>guid://df64e833760e0ff66487c6dddc251a98cbc1dd17</file_path>
+			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 -0.5 -0.5 0 1.0</transform>
+		</node>
+	</node>
+</nodes>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="ObserverController" manual="1" parent_name="node_base">
+	<parameter name="focus_key" type="string" title="Focusing Key" tooltip="Key to focus the camera on the object, zooming in for a closer view." group="Input">F</parameter>
+	<parameter name="toggle_camera_menu" type="string" title="Toggle Camera Menu" tooltip="Key to toggle the visibility of the camera menu." group="Input">F3</parameter>
+	<parameter name="alt_camera_mode" type="string" title="Camera Control Modifier" tooltip="Modifier key for switching between different camera control modes." group="Input">ANY_ALT</parameter>
+	<parameter name="acceleration_key" type="string" title="Acceleration Key" tooltip="Key to activate acceleration mode, typically used for faster movement." group="Input">ANY_SHIFT</parameter>
+	<parameter name="spectator_mode" type="string" title="Spectator Mode Mouse Button" tooltip="Mouse button to toggle spectator mode." group="Input">RIGHT</parameter>
+	<parameter name="rail_mode" type="string" title="Rail Mode Mouse Button" tooltip="Mouse button to activate rail mode." group="Input">RIGHT</parameter>
+	<parameter name="panning_mode" type="string" title="Panning Mode Mouse Button" tooltip="Mouse button to initiate panning mode." group="Input">MIDDLE</parameter>
+	<parameter name="panning_rail_scale" type="float" title="Panning Mode Mouse Button" tooltip="Mouse button to initiate panning mode." group="Input">0.01</parameter>
+	<parameter name="first_gear_key" type="string" title="First Gear Key" tooltip="Key to activate the first gear (low speed)." group="Velocity">DIGIT_1</parameter>
+	<parameter name="first_gear_velocity" type="float" title="First Gear Speed" tooltip="Velocity for the first gear." group="Velocity">5</parameter>
+	<parameter name="second_gear_key" type="string" title="Second Gear Key" tooltip="Key to activate the second gear (medium speed)." group="Velocity">DIGIT_2</parameter>
+	<parameter name="second_gear_velocity" type="float" title="Second Gear Speed" tooltip="Velocity for the second gear." group="Velocity">50</parameter>
+	<parameter name="third_gear_key" type="string" title="Third Gear Key" tooltip="Key to activate the third gear (high speed)." group="Velocity">DIGIT_3</parameter>
+	<parameter name="third_gear_velocity" type="float" title="Third Gear Speed" tooltip="Velocity for the third gear." group="Velocity">500</parameter>
+	<parameter name="accelearation_multiplier" type="float" title="Acceleration Multiplier" tooltip="Multiplier for acceleration when the assigned key is held." group="Velocity">2</parameter>
+</property>

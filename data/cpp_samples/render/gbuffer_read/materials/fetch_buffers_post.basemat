@@ -1,0 +1,65 @@
+BaseMaterial <var_prefix=var texture_prefix=tex node=none hidden=1>
+{
+	Pass post
+	{
+		Fragment=
+		#{
+			#include <core/materials/shaders/render/common.h>
+
+			INIT_TEXTURE(0, TEX_DEPTH)
+			INIT_TEXTURE(1, TEX_ALBEDO)
+			INIT_TEXTURE(2, TEX_NORMAL)
+			INIT_TEXTURE(3, TEX_SHADING)
+
+			#define OUT_LDEPTH		0
+			#define OUT_ALBEDO		1
+			#define OUT_NORMAL		2
+			#define OUT_METALNESS	3
+			#define OUT_ROUGHNESS	4
+
+			STRUCT_FRAG_BEGIN
+				INIT_MRT(float4, 0)
+				INIT_MRT(float4, 1)
+				INIT_MRT(float4, 2)
+				INIT_MRT(float4, 3)
+				INIT_MRT(float4, 4)
+			STRUCT_FRAG_END
+
+			MAIN_FRAG_BEGIN(FRAGMENT_IN)
+
+				float2 uv = IN_POSITION.xy * s_viewport.zw;
+
+				float native_depth = TEXTURE_BIAS_ZERO(TEX_DEPTH, uv).r;
+				float linear_depth = nativeDepthToLinearDepth(TEXTURE_OUT(TEX_DEPTH), uv);
+
+				float clear = sign(abs(native_depth));
+
+				GBuffer gbuffer = GBufferDefault();
+				loadGBufferAlbedo(gbuffer, TEXTURE_OUT(TEX_ALBEDO), uv);
+				loadGBufferNormal(gbuffer, TEXTURE_OUT(TEX_NORMAL), uv);
+				loadGBufferShading(gbuffer, TEXTURE_OUT(TEX_SHADING), uv);
+
+				OUT_MRT(OUT_LDEPTH).rgb = toFloat3(linear_depth);
+				OUT_MRT(OUT_LDEPTH).a = 1.0f;
+				OUT_MRT(OUT_LDEPTH) *= clear;
+
+				OUT_MRT(OUT_ALBEDO).rgb = gbuffer.albedo;
+				OUT_MRT(OUT_ALBEDO).a = 1.0f;
+				OUT_MRT(OUT_ALBEDO) *= clear;
+
+				OUT_MRT(OUT_NORMAL).rgb = gbuffer.normal * 0.5f + 0.5f;
+				OUT_MRT(OUT_NORMAL).a = 1.0f;
+				OUT_MRT(OUT_NORMAL) *= clear;
+
+				OUT_MRT(OUT_METALNESS).rgb = toFloat3(gbuffer.metalness);
+				OUT_MRT(OUT_METALNESS).a = 1.0f;
+				OUT_MRT(OUT_METALNESS) *= clear;
+
+				OUT_MRT(OUT_ROUGHNESS).rgb = toFloat3(gbuffer.roughness);
+				OUT_MRT(OUT_ROUGHNESS).a = 1.0f;
+				OUT_MRT(OUT_ROUGHNESS) *= clear;
+
+			MAIN_FRAG_END
+		#}
+	}
+}

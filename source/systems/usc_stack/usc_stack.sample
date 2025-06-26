@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="USC Stack">
+	<desc>
+		<brief>This sample demonstrates how to use a stack implemented via <ui>C++</ui> in <ui>UnigineScript</ui>.</brief>
+		<para>The sample defines a simple formatter function on the <ui>C++</ui> side. This function takes a format string and substitutes tokens with values popped from a runtime stack. Values are passed from the script and pushed onto the stack prior to the call.</para>
+	</desc>
+	<tags>
+		<tag>UnigineScript</tag>
+	</tags>
+</sample>

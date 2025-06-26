@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>e268f3cbeccfcf2113183367f3650a1e6847cbc9</guid>
+	<type>material</type>
+	<hash>8228f9dd</hash>
+	<runtimes>
+		<runtime id="e268f3cbeccfcf2113183367f3650a1e6847cbc9" name="library_fire_glow" link="0" type="5"/>
+	</runtimes>
+</asset>

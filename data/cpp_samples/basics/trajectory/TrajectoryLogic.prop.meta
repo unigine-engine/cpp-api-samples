@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>299bebbce5d5ebabbd9fdb1e2ecc1f755e5bb94e</guid>
+	<type>property</type>
+	<hash>cf56fe45</hash>
+	<runtimes>
+		<runtime id="299bebbce5d5ebabbd9fdb1e2ecc1f755e5bb94e" name="TrajectoryLogic" link="0" type="4"/>
+	</runtimes>
+</asset>

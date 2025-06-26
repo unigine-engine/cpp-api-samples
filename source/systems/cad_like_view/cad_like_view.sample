@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sample title="Cad-Like View">
+	<sdk_desc>CAD-Like View implementation with multiple synced viewports for top, side, front, and perspective views</sdk_desc>
+	<desc>
+		<brief>This sample demonstrates how to build a CAD-style layout by combining four synchronized views of the same scene: top, side, front, and perspective. Each view uses its own camera with a separate projection matrix - orthographic for technical views and perspective for the main one. Each view is rendered off-screen and displayed through a <ui><link to="widgetspriteviewport_class">WidgetSpriteViewport</link></ui>.</brief>
+		<para>The views are arranged in a 2x2 grid using GUI widgets. When the window is resized, texture resolutions are automatically updated to match the new layout and keep the viewports sharp.</para>
+		<para>Viewcubes are centered on the main object to maintain consistency across all views. They help indicate camera orientation and are updated based on the window size and viewport positions.</para>
+		<para>This setup is ideal for tools that require accurate inspection of a scene from multiple directions, such as modeling, level design, or CAD-style applications.</para>
+	</desc>
+	<controls>
+		<![CDATA[
+Controls in the perspective view are as usual:<br/>
+<b>WASD</b> to move the camera and the mouse to rotate it.<br/>
+<i>Top, Side</i>, and <i>Front</i> views are controlled by dragging the mouse.
+		]]>
+	</controls>
+	<tags>
+		<tag>Systems</tag>
+		<tag>Cameras</tag>
+		<tag>Interface (GUI)</tag>
+		<tag>Windows &amp; Viewports</tag>
+		<tag>Widgets</tag>
+	</tags>
+</sample>

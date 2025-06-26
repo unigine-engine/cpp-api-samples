@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Images">
+	<sdk_desc>Procedurally generate <i>3D</i> image data and use it as a density texture for a volume-based material in real time.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample shows how to procedurally generate <ui>3D</ui> image data and use it as a density texture for a volume-based material in real time.</para>
+			<para>The result is visualized using a volume box that updates dynamically every frame based on custom field simulation.</para>
+		</brief>
+		<para>The sample initializes a <ui>3D</ui> image with a predefined resolution and fills it with voxel data derived from a set of moving fields. Each field represents an abstract spherical influence zone that contributes to the voxel density based on distance. Field dynamics are updated every frame to simulate motion.</para>
+		<para>The raw image data is accessed directly via a pixel pointer and modified per frame, with density values mapped to <ui>RGBA</ui> channels. The resulting image is then uploaded to a material as a <ui>3D</ui> texture used in a volumetric shading model.</para>
+		<para>The sample demonstrates how to work with the <ui><link to="image_class">Image</link></ui> class and update <ui>GPU</ui> resources efficiently at runtime. This approach can be used for generating volumetric effects such as clouds, fog, or procedurally driven visual phenomena.</para>
+	</desc>
+	<tags>
+		<tag>Render</tag>
+		<tag>Procedural</tag>
+	</tags>
+</sample>

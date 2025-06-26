@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Day-Night Switching">
+	<sdk_desc>Implementation of an automated day-night system with light and material switching.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample showcases a dynamic day-night cycle driven by the rotation of a <strong nt="1"><link to="light_world">World Light</link></strong> source (sun), animated according to a simulated global time. The sun's position is updated continuously or in response to manual time input. The time progression speed can be adjusted using the <ui>Timescale</ui> slider.</para>
+			<para>The sun's orientation influences both the overall scene lighting and object-specific responses, enabling or disabling nodes and adjusting the emission states of designated materials depending on whether it's currently day or night. Additional props, such as <strong nt="1"><link to="light_proj">Projected Light</link></strong> node and door closed/open signage, are toggled to reflect the time of day. Red and blue helper vectors visualize the zenith direction and the sun's current orientation, respectively.</para>
+			<para><strong>Two control modes are available:</strong></para>
+				<ul>
+					<li><strong nt="1">Zenith Angle</strong>: Uses the angle between the sun's direction and the zenith (up vector). If the angle is below a threshold, it is considered daytime.</li>
+					<li><strong nt="1">Time-Based</strong>: Defines day/night using configurable <ui>Morning</ui> and <ui>Evening hour boundaries</ui> sliders.</li>
+				</ul>
+			<para><strong>Use Cases:</strong></para>
+			<para>Ideal for <strong>games, simulations</strong>, or <strong>architectural walkthroughs</strong> that need consistent lighting transitions and dynamic environmental response.</para>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Complex Solutions</tag>
+		<tag>Environment</tag>
+		<tag>Lighting</tag>
+		<tag>Sim</tag>
+	</tags>
+</sample>

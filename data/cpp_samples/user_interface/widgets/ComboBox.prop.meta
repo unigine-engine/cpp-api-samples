@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>ed82f49271afff5ebdf7b7cf931df7003ab33c47</guid>
+	<type>property</type>
+	<hash>dc0418ef</hash>
+	<runtimes>
+		<runtime id="ed82f49271afff5ebdf7b7cf931df7003ab33c47" name="ComboBox" link="0" type="4"/>
+	</runtimes>
+</asset>

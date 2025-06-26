@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="TrackSpawner" manual="1" parent_name="node_base">
+	<parameter name="track_node" type="file">Track node</parameter>
+	<parameter name="min_distance_between_tracks_param" type="float" title="Min distance between tracks">1</parameter>
+	<parameter name="max_number_of_tracks_param" type="int" title="Max number of tracks">100</parameter>
+</property>

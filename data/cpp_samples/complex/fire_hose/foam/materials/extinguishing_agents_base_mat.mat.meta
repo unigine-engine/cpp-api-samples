@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>a94ad43991cb18825d7d24e09210edd1bd76331e</guid>
+	<type>material</type>
+	<hash>a8e63b72</hash>
+	<runtimes>
+		<runtime id="a94ad43991cb18825d7d24e09210edd1bd76331e" name="extinguishing_agents_base_mat" link="0" type="5"/>
+	</runtimes>
+</asset>

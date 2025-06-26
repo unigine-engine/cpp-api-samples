@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Bones LookAt">
+	<sdk_desc>Using LookAt chains to aim at a target.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample demonstrates the use of LookAt chains for aiming at a target.</para>
+			<para>The chain contains the spine and head bones. By setting different weights for each bone you can adjust the targeting effect. The constraint is represented by a pole vector that defines a plane for the upward direction of each bone.</para>
+		</brief>
+		<para>LookAt chains enable interactive control over the position and orientation of a character's eyes, head, shoulders, and other body parts. This is useful for animating the game environment in various situations.</para>
+	</desc>
+	<tags>
+		<tag>Animation</tag>
+	</tags>
+</sample>

@@ -1,0 +1,73 @@
+int init()
+{
+	log.message("\n\n=================Arrays Sample=================\n\n");
+
+	/////////////////////////////////
+	string source = "From [USC]: ";
+
+	log.message(source + "access to vector\n\n");
+
+	int vector[] = (0, 1);
+
+	for (int i = 0; i < 2; i++)
+	{
+		log.message(source + "vector %d: %s\n", i, typeinfo(my_array_vector_get(vector, i)));
+		my_array_vector_set(vector, i, string(i));
+		log.message(source + "vector %d: %s\n", i, typeinfo(my_array_vector_get(vector, i)));
+	}
+
+	/////////////////////////////////
+
+	log.message(source + "access to map\n\n");
+
+	int map[] = (0 : 0, 1 : 1);
+
+	for (int i = 0; i < 2; i++)
+	{
+		log.message(source + "map %d: %s\n", i, typeinfo(my_array_map_get(map, i)));
+		my_array_map_set(map, i, string(i));
+		log.message(source + "map %d: %s\n", i, typeinfo(my_array_map_get(map, i)));
+	}
+
+	/////////////////////////////////
+
+	log.message(source + "vector generation\n\n");
+
+	my_array_vector_generate(vector);
+
+	foreachkey(int i; vector)
+	{
+		log.message(source + "vector %d: %s\n", i, typeinfo(vector[i]));
+	}
+
+	/////////////////////////////////
+
+	log.message(source + "map generation\n\n");
+
+	my_array_map_generate(map);
+
+	foreachkey(int i; map)
+	{
+		log.message(source + "map %d: %s\n", i, typeinfo(map[i]));
+	}
+
+	/////////////////////////////////
+
+	log.message(source + "vector enumeration\n\n");
+
+	my_array_vector_enumerate(vector);
+
+	/////////////////////////////////
+
+	log.message(source + "map forward enumeration\n\n");
+
+	my_array_map_enumerate_forward(map);
+
+	/////////////////////////////////
+
+	log.message(source + "map backward enumeration\n\n");
+
+	my_array_map_enumerate_backward(map);
+
+	return 1;
+}

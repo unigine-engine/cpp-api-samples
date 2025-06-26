@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="RayIntersection" manual="1" parent_name="node_base">
+	<parameter name="laser_ray" type="node">0</parameter>
+	<parameter name="laser_hit" type="node">0</parameter>
+	<parameter name="laser_distance" type="float">25</parameter>
+	<parameter name="intersection_mask" type="mask" flags="intersection">1</parameter>
+</property>

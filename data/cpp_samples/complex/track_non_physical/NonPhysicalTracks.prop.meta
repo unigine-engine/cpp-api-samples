@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>2d35f20ca5564890f6f0246f6b151851815df9bd</guid>
+	<type>property</type>
+	<hash>38d7c7c9</hash>
+	<runtimes>
+		<runtime id="2d35f20ca5564890f6f0246f6b151851815df9bd" name="NonPhysicalTracks" link="0" type="4"/>
+	</runtimes>
+</asset>

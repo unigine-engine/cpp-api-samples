@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Node Spawner Grid">
+	<sdk_desc>Spawning nodes across a grid.</sdk_desc>
+	<desc>
+		<brief>This sample shows how to create nodes and place them across a grid. Spawning from the center is also available.</brief>
+	</desc>
+	<tags>
+		<tag>Nodes</tag>
+		<tag>Basics</tag>
+		<tag>Basic Recipes</tag>
+	</tags>
+</sample>

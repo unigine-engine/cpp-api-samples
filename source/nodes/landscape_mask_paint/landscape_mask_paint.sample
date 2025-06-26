@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Landscape Paint Clutter">
+	<sdk_desc>This sample demonstrates real-time painting of Landscape Layer Map mask data using a customizable brush system.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample demonstrates real-time painting of <strong nt="1"><link to="landscape_layer_map">Landscape Layer Map</link></strong> mask data using a customizable brush system.</para>
+			<strong><para>Key Features:</para></strong>
+			<ul>
+				<li>Terrain modification using <ui><link to="landscape_class" offset="asyncTextureDraw_UGUID_ivec2_ivec2_int_void">Landscape::asyncTextureDraw()</link></ui></li>
+				<li><para>Brush parameters:</para>
+					<ul>
+						<li>Texture, mask</li>
+						<li>Size, angle, spacing, opacity</li>
+					</ul>
+				</li>
+				<li>Visual brush preview via <ui><link to="decal_ortho">DecalOrtho</link></ui></li>
+				<li>Powered by a custom base material (<strong nt="1">landscape_mask_brush.basemat</strong>) for applying edits.</li>
+			</ul>
+			<para>Ideal for runtime editing tools, vegetation control, or any system requiring dynamic terrain mask authoring.</para>
+		</brief>
+	</desc>
+	<controls>
+		<![CDATA[
+		<b>WASD</b> - move camera<br/>
+		<b>RMB</b> - rotate camera<br/>
+		<b>Shift + Mouse Wheel</b> - change brush angle<br/>
+		<b>Ctrl + Mouse Wheel</b> - change brush size
+		]]>
+	</controls>
+	<tags>
+		<tag>Terrain</tag>
+	</tags>
+</sample>

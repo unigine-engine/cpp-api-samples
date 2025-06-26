@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="ExtinguishingPuddles" manual="1" parent_name="node_base">
+	<parameter name="decal_ref" type="file"/>
+	<parameter name="spark_emitter_node" type="node">0</parameter>
+	<parameter name="spark_linear_damping" type="float">0.1</parameter>
+	<parameter name="life_time" type="float">5000</parameter>
+	<parameter name="vertical_speed" type="float">1</parameter>
+	<parameter name="min_spawn_angle" type="float">0</parameter>
+	<parameter name="max_spawn_angle" type="float">180</parameter>
+	<parameter name="min_spawn_scale" type="float">1</parameter>
+	<parameter name="max_spawn_scale" type="float">1</parameter>
+	<parameter name="grow_speed" type="float">0.1</parameter>
+	<parameter name="grow_damping" type="float">1</parameter>
+	<parameter name="ground_speed" type="float">0</parameter>
+	<parameter name="ground_speed_spread" type="float">0</parameter>
+	<parameter name="ground_damping" type="float">1</parameter>
+	<parameter name="ground_damping_spread" type="float">1</parameter>
+	<parameter name="max_count" type="int">15</parameter>
+	<parameter name="dead_time" type="float">5</parameter>
+</property>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>fbdc8babb5cf990ab832b9a8e3518b3e8957f161</guid>
+	<type>property</type>
+	<hash>a8caa0eb</hash>
+	<runtimes>
+		<runtime id="fbdc8babb5cf990ab832b9a8e3518b3e8957f161" name="PhysicsImpulseMovement" link="0" type="4"/>
+	</runtimes>
+</asset>

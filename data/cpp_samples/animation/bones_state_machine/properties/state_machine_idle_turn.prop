@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="state_machine_idle_turn" guid="c7831096093dad82d0e1add5e09aac39039e5598" parent="bf9203a8f8aa1da988bb64e733023d8c9f01463b">
+	<parameter name="init_state_name">idle</parameter>
+	<parameter name="state_variables">
+		<value index="0">
+			<parameter name="name">turn</parameter>
+		</value>
+	</parameter>
+	<parameter name="states">
+		<value index="0">
+			<parameter name="name">idle</parameter>
+			<parameter name="is_loop">1</parameter>
+			<parameter name="foot_matching_end">0</parameter>
+			<parameter name="animations">
+				<value index="0">
+					<parameter name="path">guid://ced9d7b04198aaed331f012b079f758918543970</parameter>
+				</value>
+			</parameter>
+			<parameter name="transitions">
+				<value index="0">
+					<parameter name="next_state">turn_tree</parameter>
+					<parameter name="condition">turn out -0.1;0.1</parameter>
+				</value>
+			</parameter>
+		</value>
+		<value index="1">
+			<parameter name="name">turn_tree</parameter>
+			<parameter name="state_type">1</parameter>
+			<parameter name="is_loop">1</parameter>
+			<parameter name="foot_matching_end">0</parameter>
+			<parameter name="x_blend_variable">turn</parameter>
+			<parameter name="animations">
+				<value index="0">
+					<parameter name="path">guid://c557f7e02bd9d6ca055be5a9d4bc902b3d4f6639</parameter>
+					<parameter name="anchor">-1 0</parameter>
+				</value>
+				<value index="1">
+					<parameter name="path">guid://37df89903eb61c24c81be71902cda07ffe0f23a9</parameter>
+					<parameter name="anchor">-0.5 0</parameter>
+				</value>
+				<value index="2">
+					<parameter name="path">guid://e7427b4651c208cbe99d8cc758ac2044e4789f97</parameter>
+				</value>
+				<value index="3">
+					<parameter name="path">guid://995532382511a7a6d38925e1d794909ff33df871</parameter>
+					<parameter name="anchor">0.5 0</parameter>
+				</value>
+				<value index="4">
+					<parameter name="path">guid://0a747a885213ba3a1b0146714e33e7aa59968d01</parameter>
+					<parameter name="anchor">1 0</parameter>
+				</value>
+			</parameter>
+			<parameter name="transitions">
+				<value index="0">
+					<parameter name="next_state">idle</parameter>
+					<parameter name="condition">turn in -0.1;0.1</parameter>
+				</value>
+			</parameter>
+		</value>
+	</parameter>
+</property>

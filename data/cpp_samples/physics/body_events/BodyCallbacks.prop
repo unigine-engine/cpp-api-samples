@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="BodyCallbacks" manual="1" parent_name="node_base">
+	<parameter name="space" type="float">1.2</parameter>
+	<parameter name="tower_level" type="int">10</parameter>
+	<parameter name="frozen_materal" type="material"/>
+	<parameter name="position_materal" type="material"/>
+	<parameter name="mesh_file" type="file"/>
+</property>

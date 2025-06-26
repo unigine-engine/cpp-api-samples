@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>2090ff1064aa88079b04587740373ad1e3e768f7</guid>
+	<type>property</type>
+	<hash>6f36571f</hash>
+	<runtimes>
+		<runtime id="2090ff1064aa88079b04587740373ad1e3e768f7" name="ComputeShaderImage" link="0" type="4"/>
+	</runtimes>
+</asset>

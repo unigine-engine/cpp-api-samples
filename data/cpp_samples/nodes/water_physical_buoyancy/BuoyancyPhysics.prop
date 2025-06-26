@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="BuoyancyPhysics" manual="1" parent_name="node_base">
+	<parameter name="center_of_mass_node" type="node">0</parameter>
+	<parameter name="volume_grid_size" type="ivec2">0 0</parameter>
+	<parameter name="buoyancy" type="float">0</parameter>
+	<parameter name="water_linear_damping" type="float">0</parameter>
+	<parameter name="water_angular_damping" type="float">0</parameter>
+	<parameter name="debug" type="toggle">0</parameter>
+</property>

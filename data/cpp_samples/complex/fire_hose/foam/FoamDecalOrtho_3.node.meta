@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>e680b568f06799a7ba394adad4749c71c3b8eb1c</guid>
+	<type>node</type>
+	<hash>f8b2122a</hash>
+	<runtimes>
+		<runtime id="e680b568f06799a7ba394adad4749c71c3b8eb1c" name="FoamDecalOrtho_3.node" link="0" type="3"/>
+	</runtimes>
+</asset>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>4023d04f1af7016228191159f44f4ae48c9098f3</guid>
+	<type>material</type>
+	<hash>61f9f823</hash>
+	<runtimes>
+		<runtime id="4023d04f1af7016228191159f44f4ae48c9098f3" name="cat_mat" link="0" type="5"/>
+	</runtimes>
+</asset>

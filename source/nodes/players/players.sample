@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Players">
+	<sdk_desc>Creation and configuration of the four <i>Players</i> available (<i>PlayerDummy, PlayerPersecutor, PlayerSpectator, PlayerActor</i>).</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample demonstrates how to create and configure the four available <strong><link to="objects_players">Players</link></strong>:</para>
+			<ul>
+				<li><strong nt="1"><link to="player_dummy">PlayerDummy</link></strong> - a manually controlled camera that has no physical properties and cannot collide with objects.</li>
+				<li><strong nt="1"><link to="player_persecutor">PlayerPersecutor</link></strong> - a third-person chase camera that follows a target with adjustable distance.</li>
+				<li><strong nt="1"><link to="player_spectator">PlayerSpectator</link></strong> - a free-fly camera without a physical body.</li>
+				<li><strong nt="1"><link to="player_actor">PlayerActor</link></strong> - a player with a rigid physical body, which is approximated with a capsule and has physical properties. Can only walk on the ground.</li>
+			</ul>
+			<para>Each player is instantiated with appropriate settings (collision, movement parameters, camera settings), and a GUI panel lets you <strong>switch between them at runtime</strong>. You can also modify camera parameters like <strong>FOV, near/far clipping planes,</strong> etc.</para>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Cameras</tag>
+	</tags>
+</sample>

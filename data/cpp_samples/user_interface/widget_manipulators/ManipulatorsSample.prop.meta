@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>88c18a59c4bb0e57439bf0d3cf1d6b352ba1341a</guid>
+	<type>property</type>
+	<hash>a28fbdae</hash>
+	<runtimes>
+		<runtime id="88c18a59c4bb0e57439bf0d3cf1d6b352ba1341a" name="ManipulatorsSample" link="0" type="4"/>
+	</runtimes>
+</asset>

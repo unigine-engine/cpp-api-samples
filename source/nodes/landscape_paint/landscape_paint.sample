@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Landscape Paint">
+	<sdk_desc>This sample demonstrates real-time terrain modification through direct manipulation of Landscape Layer Maps.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample demonstrates several techniques for destructive runtime modification of the <strong nt="1"><link to="object_landscape_terrain">Landscape Terrain</link></strong> by altering the underlying textures of a <strong nt="1"><link to="landscape_layer_map">Landscape Layer Map</link></strong> using <strong nt="1"><link to="landscape_class" offset="asyncTextureDraw_UGUID_ivec2_ivec2_int_void">Landscape::asyncTextureDraw()</link></strong> in combination with custom base materials.</para>
+			<para>It features three distinct painting modes:</para>
+			<ul>
+				<li><strong>Albedo Painter:</strong> Allows painting of the terrain's albedo texture using a customizable brush (texture, mask, size, angle, opacity, and color).</li>
+				<li><strong>Height Painter:</strong> Enables height modification using height values and scaling options, along with support for alpha or additive blending modes.</li>
+				<li><strong>Height To Albedo:</strong> Converts terrain height data into albedo colorization based on a user-selected gradient and specified height range.</li>
+			</ul>
+			<para>You can dynamically change brush parameters through a UI panel (textures, masks, gradient, size, spacing, angle, opacity, and color) and visualize the brush as an orthographic decal projected onto the terrain.</para>
+			<para><strong>Use Cases</strong></para>
+			<ul>
+				<li>Runtime terrain painting tools for level editors and world-building interfaces</li>
+				<li>Terrain sculpting systems in games or simulations</li>
+				<li>Custom height-based texturing workflows for stylized or procedurally modified terrains</li>
+				<li>Visualization of terrain blending behavior with UI interactivity.</li>
+			</ul>
+			</brief>
+	</desc>
+	<controls>
+		<![CDATA[
+		<b>WASD</b> - move camera<br/>
+		<b>RMB</b> - rotate camera<br/>
+		<b>Shift + Mouse Wheel</b> - change brush angle<br/>
+		<b>Ctrl + Mouse Wheel </b>- change brush size
+		]]>
+	</controls>
+	<tags>
+		<tag>Terrain</tag>
+		<tag>Objects</tag>
+		<tag>Materials</tag>
+	</tags>
+</sample>

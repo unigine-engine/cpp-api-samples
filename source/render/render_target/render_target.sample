@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sample title="RenderTarget">
+	<sdk_desc>Rendering paint splashes to a texture using the <i>RenderTarget</i> class</sdk_desc>
+	<desc>
+		<brief>This sample demonstrates how to draw directly into a texture using the <ui><link to="rendertarget_class">RenderTarget</link></ui> class. The system initializes multiple textures, including a background layer and a dynamic result texture, which then is assigned to the object's material. The <ui><link to="rendertarget_class">RenderTarget</link></ui> is used to redirect rendering output from the main framebuffer to a texture, allowing full control over how sprites are composited. Each draw operation includes a UV-based transform to place and scale the sprite, and uses a custom material with direct access to the involved textures. After each draw, the result is blended with the background and mipmaps are generated for correct appearance at various distances.</brief>
+		<para>Render states are saved and restored around each operation to isolate the off-screen rendering flow from the rest of the pipeline.</para>
+		<para>This technique is suitable for creating effects like decal placement, user-driven painting, hit markers, or procedural texture overlays in real time.</para>
+	</desc>
+	<controls>
+		<![CDATA[
+Click to spawn a sprite
+		]]>
+	</controls>
+	<tags>
+		<tag>Render</tag>
+		<tag>Materials</tag>
+	</tags>
+</sample>

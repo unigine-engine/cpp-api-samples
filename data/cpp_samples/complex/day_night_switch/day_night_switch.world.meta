@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>14533ee7b4686f2ebf6952af29fe1966ecad7de6</guid>
+	<type>world</type>
+	<hash>18896c18</hash>
+	<runtimes>
+		<runtime id="14533ee7b4686f2ebf6952af29fe1966ecad7de6" name="day_night_switch.world" link="0"/>
+	</runtimes>
+	<parameters>
+		<parameter type="string" name="physics_settings_path"/>
+		<parameter type="string" name="render_settings_path"/>
+		<parameter type="string" name="script_name"/>
+		<parameter type="string" name="sound_settings_path"/>
+		<parameter type="string" name="viewports_settings"/>
+	</parameters>
+</asset>

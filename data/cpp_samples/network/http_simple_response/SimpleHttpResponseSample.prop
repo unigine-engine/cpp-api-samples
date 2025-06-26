@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="SimpleHttpResponseSample" manual="1" parent_name="node_base">
+	<parameter name="host_ip" type="string">127.0.0.1</parameter>
+	<parameter name="port" type="int">8080</parameter>
+	<parameter name="pedestal_text" type="node">0</parameter>
+</property>

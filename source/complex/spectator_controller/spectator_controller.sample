@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Spectator Controller">
+	<sdk_desc>Implementation of a customizable first-person spectator camera with configurable movement and physical collision detection.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample implements a first-person <strong><link to="player_spectator">Spectator camera</link></strong> controller with configurable movement and physical collision detection using the <strong><link to="physics_shapes" offset="sphere">Sphere collision shape</link></strong>, assigned to respond to collisions with geometry (e.g. with terrain) in the world.</para>
+			<para>Movement parameters such as speed, sprint acceleration, turning rate, and mouse sensitivity can be adjusted in real-time using the sliders in the <ui>Parameters</ui> section.</para>
+			<para><strong>Use Cases:</strong></para>
+				<ul>
+					<li>Building custom camera tools with physical awareness for scene editing or testing purposes.</li>
+					<li>First-person 3D scenes navigation and exploring while preserving configurable interaction with the geometry.</li>
+				</ul>
+		</brief>
+	</desc>
+	<controls>
+		<![CDATA[
+		<p><b>W/A/S/D, Q/E</b>: control camera movement</p>
+		<p><b>Shift</b>: accelerate</p>
+		<p><b>Mouse movement or Arrow keys</b>: look around</p>
+		]]>
+	</controls>
+	<tags>
+		<tag>Complex Solutions</tag>
+		<tag>Cameras</tag>
+		<tag>Physics</tag>
+	</tags>
+</sample>

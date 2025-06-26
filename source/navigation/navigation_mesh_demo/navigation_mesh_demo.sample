@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Navigation Mesh Demo">
+	<desc>
+		<brief>This sample demonstrates several material balls collecting coins on a plane with obstacles, navigating around by means of a <i>Navigation Mesh</i>.</brief>
+	</desc>
+	<controls>
+		<![CDATA[
+		<p>You can move the obstacles in the scene with the <b>widget manipulator</b> (right-click on the object you want to move for the manipulator to appear).</p>
+		]]>
+	</controls>
+	<tags>
+		<tag>Navigation &amp; Patfinding</tag>
+	</tags>
+</sample>

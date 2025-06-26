@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>b15f5e9670d05b3be008539e32dc5a0ee472f208</guid>
+	<type>material</type>
+	<hash>ed7f49cd</hash>
+	<runtimes>
+		<runtime id="b15f5e9670d05b3be008539e32dc5a0ee472f208" name="robot_arm_platform" link="0" type="5"/>
+	</runtimes>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+</asset>

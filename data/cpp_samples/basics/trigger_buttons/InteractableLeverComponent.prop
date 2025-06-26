@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="InteractableLeverComponent" manual="1" parent_name="node_base">
+	<parameter name="rotation_axis" type="vec3">1.000000 0.000000 0.000000</parameter>
+	<parameter name="rotation_angle_range" type="float">90</parameter>
+	<parameter name="transformation_node" type="node">0</parameter>
+	<parameter name="is_movable" type="toggle">1</parameter>
+</property>

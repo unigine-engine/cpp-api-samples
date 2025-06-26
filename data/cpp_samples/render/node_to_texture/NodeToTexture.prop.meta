@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>eac6afc820fa4d3c399a56bd8e7415c119736d64</guid>
+	<type>property</type>
+	<hash>dec7e277</hash>
+	<runtimes>
+		<runtime id="eac6afc820fa4d3c399a56bd8e7415c119736d64" name="NodeToTexture" link="0" type="4"/>
+	</runtimes>
+</asset>

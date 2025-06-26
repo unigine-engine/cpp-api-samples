@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="CurveAnimationMaterialParamFloat" manual="1" parent_name="node_base">
+	<struct name="Curves">
+		<parameter name="curve" type="curve2d"/>
+		<parameter name="name" type="string"/>
+		<parameter name="surface" type="int">0</parameter>
+	</struct>
+	<parameter name="parameters" type="array" array_type="Curves"/>
+	<parameter name="speed" type="float">1</parameter>
+</property>

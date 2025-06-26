@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>f219c8f1af0a348afcad4a62b952fab85f5ac123</guid>
+	<type>property</type>
+	<hash>7a01a33a</hash>
+	<runtimes>
+		<runtime id="f219c8f1af0a348afcad4a62b952fab85f5ac123" name="EaseOutMotion" link="0" type="4"/>
+	</runtimes>
+</asset>

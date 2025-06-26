@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui version="1.0">
+
+<window name="window" export="1" space="4" sizeable="1" width="512">
+	<text>UserInterface</text>
+	
+	<menubar align="left">
+		<menu>
+			<text>File</text>
+			<menubox name="menubox_0" texture="nodes_icons.png" width="128" space="4">
+				<text texture="0" separator="1">Reload</text>
+				<text texture="1" enabled="0">Disabled</text>
+				<text texture="2">Quit</text>
+			</menubox>
+		</menu>
+		<menu>
+			<text>Help</text>
+			<menubox name="menubox_1" width="128" space="4">
+				<text>About</text>
+			</menubox>
+		</menu>
+	</menubar>
+	
+	<tabbox align="expand" space="4">
+		
+		<tab>
+			<text>Widgets</text>
+			<gridbox columns="2" space="8">
+				<label name="label_0" align="expand">
+					<text>Label</text>
+				</label>
+				<icon name="icon_0" texture="player.png" toggleable="1"/>
+				<button name="button_0" align="expand">
+					<text>Button</text>
+				</button>
+				<checkbox name="checkbox_0" align="expand">
+					<text>Checkbox</text>
+				</checkbox>
+				<combobox name="combobox_0" texture="nodes_icons.png" align="expand">
+					<text texture="0">One</text>
+					<text texture="1">Two</text>
+					<text texture="2">Three</text>
+					<text texture="3">Four</text>
+					<text texture="4">Five</text>
+				</combobox>
+				<editline name="editline_0" align="expand">
+					<text>EditLine</text>
+				</editline>
+				<hbox align="expand">
+					<editline name="editline_1" align="expand">
+						<text>SpinBox</text>
+					</editline>
+					<spinbox align="overlap">
+						<attach>editline_1</attach>
+					</spinbox>
+				</hbox>
+				<editline name="editline_2" align="expand">
+					<text>HSlider</text>
+				</editline>
+				<hslider align="expand">
+					<attach>editline_2</attach>
+				</hslider>
+			</gridbox>
+		</tab>
+		
+		<tab>
+			<text>ListBox</text>
+			<groupbox align="expand">
+				<text>Single-Selection</text>
+				<listbox name="listbox_0" align="expand" width="128" texture="nodes_icons.png">
+					<text texture="0">One</text>
+					<text texture="1">Two</text>
+					<text texture="2">Three</text>
+					<text texture="3">Four</text>
+					<text texture="4">Five</text>
+					<text texture="5">Six</text>
+				</listbox>
+			</groupbox>
+			<groupbox align="expand">
+				<text>Multiple-Selection</text>
+				<listbox name="listbox_1" align="expand" width="128" multi_selection="1" texture="nodes_icons.png">
+					<text texture="0">One</text>
+					<text texture="1">Two</text>
+					<text texture="2">Three</text>
+					<text texture="3">Four</text>
+					<text texture="4">Five</text>
+					<text texture="5">Six</text>
+				</listbox>
+			</groupbox>
+		</tab>
+		
+		<tab>
+			<text>TreeBox</text>
+			<groupbox align="expand">
+				<text>Single-Selection</text>
+				<treebox name="treebox_0" align="expand" width="128" editable="1" texture="nodes_icons.png">
+					<text texture="0">One</text>
+					<text texture="1">Two</text>
+					<text texture="2">Three</text>
+					<text texture="3">Four</text>
+					<text texture="4">Five</text>
+					<text texture="5">Six</text>
+				</treebox>
+			</groupbox>
+			<groupbox align="expand">
+				<text>Multiple-Selection</text>
+				<treebox name="treebox_1" align="expand" width="128" editable="1" multi_selection="1" texture="nodes_icons.png">
+					<text texture="0">One</text>
+					<text texture="1">Two</text>
+					<text texture="2">Three</text>
+					<text texture="3">Four</text>
+					<text texture="4">Five</text>
+					<text texture="5">Six</text>
+				</treebox>
+			</groupbox>
+		</tab>
+		
+		<tab>
+			<text>EditText</text>
+			<scrollbox align="expand" width="128" height="128">
+				<edittext name="edittext" align="expand" height="512">
+					<text size="32">UserInterface</text>
+				</edittext>
+			</scrollbox>
+		</tab>
+		
+	</tabbox>
+	
+</window>
+
+</ui>

@@ -1,0 +1,70 @@
+BaseMaterial <var_prefix=var texture_prefix=tex node=none hidden=1>
+{
+	Pass post
+	{
+		Vertex=
+		#{
+			// Copyright (C), UNIGINE. All rights reserved.
+			#include <core/materials/shaders/render/common.h>
+
+			CBUFFER(parameters)
+				UNIFORM float4x4 ss_transform;
+			END
+
+			STRUCT(VERTEX_IN)
+				INIT_ATTRIBUTE(float4, 0, POSITION)
+				INIT_ATTRIBUTE(float2, 1, TEXCOORD0)
+			END
+
+			STRUCT(VERTEX_OUT)
+				INIT_POSITION
+				INIT_DATA(float2, 0, BACKGROUND_UV)
+				INIT_DATA(float2, 1, SPRITE_UV)
+			END
+
+			MAIN_BEGIN(VERTEX_OUT, VERTEX_IN)
+
+				OUT_POSITION = mul4(s_projection, IN_ATTRIBUTE(0));
+				OUT_POSITION = mul4(ss_transform, OUT_POSITION);
+				OUT_POSITION.z = 0.0f;
+
+				BACKGROUND_UV = OUT_POSITION.xy * 0.5f + toFloat2(0.5f);
+				BACKGROUND_UV.y = 1.0f - BACKGROUND_UV.y;
+				SPRITE_UV = IN_ATTRIBUTE(1);
+
+			MAIN_END
+		#}
+
+		Fragment=
+		#{
+			#include <core/materials/shaders/render/common.h>
+
+			STRUCT(FRAGMENT_IN)
+				INIT_POSITION
+				INIT_DATA(float2, 0, BACKGROUND_UV)
+				INIT_DATA(float2, 1, SPRITE_UV)
+			END
+
+			CBUFFER(parameters)
+				UNIFORM float4 ss_color;
+			END
+
+			INIT_TEXTURE(0, TEX_BACKGROUND)
+			INIT_TEXTURE(1, TEX_SPRITE)
+
+			STRUCT_FRAG_BEGIN
+				INIT_COLOR(float4)
+			STRUCT_FRAG_END
+
+			MAIN_FRAG_BEGIN(FRAGMENT_IN)
+
+				float4 background_color = TEXTURE_BIAS_ZERO(TEX_BACKGROUND, BACKGROUND_UV);
+				float4 sprite_color = TEXTURE_BIAS_ZERO(TEX_SPRITE, SPRITE_UV) * ss_color;
+
+				OUT_COLOR.rgb = lerp(background_color.rgb, sprite_color.rgb, sprite_color.a);
+				OUT_COLOR.a = 1.0f;
+
+			MAIN_FRAG_END
+		#}
+	}
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>6c5c2863fa72d16c3fbb0cd3d027fbd8837969cb</guid>
+	<type>file</type>
+	<hash>acb10505</hash>
+	<runtimes>
+		<runtime id="6c5c2863fa72d16c3fbb0cd3d027fbd8837969cb" name="Dialogue_EN.bank" link="0"/>
+	</runtimes>
+</asset>

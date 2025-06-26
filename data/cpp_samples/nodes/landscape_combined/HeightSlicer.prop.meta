@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>bcf00e37f4fd88f3e1a7b4ddfe105d0cf8881c80</guid>
+	<type>property</type>
+	<hash>1b3d9c88</hash>
+	<runtimes>
+		<runtime id="bcf00e37f4fd88f3e1a7b4ddfe105d0cf8881c80" name="HeightSlicer" link="0" type="4"/>
+	</runtimes>
+</asset>

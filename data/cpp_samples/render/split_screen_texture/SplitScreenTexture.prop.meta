@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>95dcdef07c259f607e9dfcfbf76396ecc27366cc</guid>
+	<type>property</type>
+	<hash>225c6321</hash>
+	<runtimes>
+		<runtime id="95dcdef07c259f607e9dfcfbf76396ecc27366cc" name="SplitScreenTexture" link="0" type="4"/>
+	</runtimes>
+</asset>

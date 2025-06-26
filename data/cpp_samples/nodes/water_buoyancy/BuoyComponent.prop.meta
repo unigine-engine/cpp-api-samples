@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>dcfafc718b239f4125370a447882bb4c91c4dcf9</guid>
+	<type>property</type>
+	<hash>79a87f3f</hash>
+	<runtimes>
+		<runtime id="dcfafc718b239f4125370a447882bb4c91c4dcf9" name="BuoyComponent" link="0" type="4"/>
+	</runtimes>
+</asset>

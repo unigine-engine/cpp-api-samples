@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="BoatControl" manual="1" parent_name="node_base">
+	<parameter name="max_speed" type="float">10</parameter>
+	<parameter name="max_rotation" type="float">10</parameter>
+	<parameter name="acceleration_factor" type="float">0.5</parameter>
+	<parameter name="min_speed_for_rot" type="float">-1</parameter>
+	<parameter name="invert_rear_dir" type="toggle">0</parameter>
+</property>

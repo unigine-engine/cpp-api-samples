@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.20.0.0" guid="68f0d983feff40f81ba0ff54c94136c2c3fec928" base_material="b7c07dfd4ce80edac55fcbfdd0befa02ccd20b88">
+	<options blend_src="5" blend_dest="6"/>
+	<state name="albedo_color_type">1</state>
+	<state name="transparent_opacity_depth">1</state>
+	<state name="transparent_velocity">1</state>
+	<state name="transparent_material_mask">1</state>
+	<texture name="albedo">guid://eb641da1bfc4adb9304a26b511d4b4c55516c927</texture>
+	<texture name="albedo_color">
+		<curve2d>
+			<keys>
+				<key point="0 1.00000286" left_tangent="0 0" right_tangent="0 0"/>
+				<key point="0.0500000007 1.00000286" left_tangent="0 0" right_tangent="0 0"/>
+				<key point="0.5 0.300000012" left_tangent="0 0" right_tangent="0 0"/>
+				<key point="0.699999988 0" left_tangent="0 0" right_tangent="0 0"/>
+			</keys>
+		</curve2d>
+		<curve2d>
+			<keys>
+				<key point="0 1.00000286" left_tangent="0 0" right_tangent="0 0"/>
+				<key point="0.0500000007 1.00000286" left_tangent="0 0" right_tangent="0 0"/>
+				<key point="0.5 0.300000012" left_tangent="0 0" right_tangent="0 0"/>
+				<key point="0.699999988 0" left_tangent="0 0" right_tangent="0 0"/>
+			</keys>
+		</curve2d>
+		<curve2d>
+			<keys>
+				<key point="0 1.00000286" left_tangent="0 0" right_tangent="0 0"/>
+				<key point="0.0500000007 1.00000286" left_tangent="0 0" right_tangent="0 0"/>
+				<key point="0.5 0.300000012" left_tangent="0 0" right_tangent="0 0"/>
+				<key point="0.699999988 0" left_tangent="0 0" right_tangent="0 0"/>
+			</keys>
+		</curve2d>
+		<curve2d>
+			<keys>
+				<key point="0.0022123151 8.94069672e-07" left_tangent="0 0" right_tangent="0 0"/>
+				<key point="0.0500000007 1.00000381" left_tangent="0 0" right_tangent="0 0"/>
+				<key point="0.5 0.300000012" left_tangent="0 0" right_tangent="0 0"/>
+				<key point="0.699999988 0" left_tangent="0 0" right_tangent="0 0"/>
+			</keys>
+		</curve2d>
+	</texture>
+	<parameter name="animation_size" expression="0">1 1</parameter>
+	<parameter name="animation_scale" expression="0">0.5</parameter>
+	<parameter name="soft_interaction_scale" expression="0">1</parameter>
+</material>

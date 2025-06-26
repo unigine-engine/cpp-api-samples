@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Landscape Creation">
+	<sdk_desc>This sample demonstrates how to dynamically generate a Landscape Layer Map using tiled albedo, height, and mask textures.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample demonstrates how to dynamically generate a <strong nt="1"><link to="landscape_layer_map">Landscape Layer Map</link></strong> using tiled <strong>albedo, height,</strong> and <strong>mask</strong> textures. The process uses the <strong nt="1"><link to="landscapemapfilecreator_class">LandscapeMapFileCreator</link></strong> and <strong nt="1"><link to="landscapemapfilesettings_class">LandscapeMapFileSettings</link></strong> APIs to build a fully functional <strong nt="1">.lmap</strong> file and configure it for use with the <strong nt="1"><link to="object_landscape_terrain">Landscape Terrain</link></strong> object.</para>
+			<para><strong>Key features:</strong></para>
+			<ul>
+				<li>Supports tile-based input with user-defined grid size and resolution</li>
+				<li>
+					<para>Loads and validates image tiles for:</para>
+					<ul>
+						<li><strong>Albedo</strong></li>
+						<li><strong>Height</strong></li>
+						<li><strong>Grass mask</strong></li>
+						<li><strong>Stone mask</strong></li>
+					</ul>
+				</li>
+				<li>Applies blend settings for each layer using <ui><strong><link to="landscapemapfilesettings_class">LandscapeMapFileSettings</link></strong></ui></li>
+				<li>Automatically creates and attaches the landscape objects to the world.</li>
+			</ul>
+			<para>This workflow is ideal for runtime terrain generation, procedural terrain tools, or editor extensions that need to assemble terrain data from image sources.</para>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Terrain</tag>
+		<tag>Procedural</tag>
+	</tags>
+</sample>

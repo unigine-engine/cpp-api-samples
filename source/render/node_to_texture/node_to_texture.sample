@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sample title="Node to Texture">
+	<sdk_desc>Rendering a node into a texture using <i>Viewport::renderNodeTexture2D()</i>, and setting this texture as material's albedo texture</sdk_desc>
+	<desc>
+		<brief>This sample demonstrates how to render a specific node and its children into a texture using <ui><link to="viewport_class" offset="renderNodeTexture2D_Camera_Node_Texture_int_int_int_void">Viewport::renderNodeTexture2D()</link></ui>. Instead of rendering the whole scene, a custom viewport captures only the target node as seen from a camera, and outputs the result into a 2D texture.</brief>
+		<para>The texture is then assigned as the material's albedo texture. To create clean output, the viewport is configured to skip transparent objects, velocity buffers, post-effects, and debugging visualizers. Lighting is inherited from the world, and the environment is overridden to a black cubemap to prevent background influence.</para>
+		<para>This sample can be useful for rendering character previews, dynamic item thumbnails, or isolated object views directly onto surfaces.</para>
+	</desc>
+	<tags>
+		<tag>Render</tag>
+		<tag>Materials</tag>
+	</tags>
+</sample>

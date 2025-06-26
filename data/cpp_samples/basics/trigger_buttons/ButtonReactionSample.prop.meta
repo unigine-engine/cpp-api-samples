@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>39eaaa39793c3fb1e151b2315c8a82c1299c8f2d</guid>
+	<type>property</type>
+	<hash>54c435a4</hash>
+	<runtimes>
+		<runtime id="39eaaa39793c3fb1e151b2315c8a82c1299c8f2d" name="ButtonReactionSample" link="0" type="4"/>
+	</runtimes>
+</asset>

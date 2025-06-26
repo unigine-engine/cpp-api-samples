@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Buoyancy">
+	<sdk_desc>This sample demonstrates real-time wave control and buoyancy simulation without engaging Physics.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample demonstrates realistic water interaction in UNIGINE, showcasing both the current state of <strong><link to="water_global">Global Water</link></strong> control via changing <strong><link to="water_global" offset="creating_waves">Beaufort</link></strong> levels and the use of fetching the water level at a certain point for a simplified simulation of buoyancy without engaging Physics.</para>
+			<para><strong>Core Features:</strong></para>
+			<para><strong>Global Water Control.</strong> Adjust ocean conditions in real-time using the <strong>Beaufort slider</strong> <value>(0-12)</value>. Higher values create stormier waves with enhanced foam and detail.</para>
+			<para><strong>Optimized Buoyancy System</strong>. Simulates floating objects without full physics collisions. Uses three anchor points for stable wave-following behavior. It then smoothly adjusts the object's position and rotation to match the waves, with calculations based on:</para>
+					<ul>
+						<li>Object mass (customizable)</li>
+						<li>Global buoyancy coefficient (adjustable via <strong>Buoyancy slider</strong>)</li>
+						<li>Water surface steepness and wave height.</li>
+					</ul>
+			<para><strong>Use Cases:</strong></para>
+				<ul>
+					<li>Marine simulations</li>
+					<li>Weather system prototyping</li>
+					<li>Performance-sensitive scenes with many floating objects</li>
+					<li>Games needing stylized water interactions.</li>
+				</ul>
+			</brief>
+	</desc>
+	<tags>
+		<tag>Water</tag>
+		<tag>Maritime</tag>
+		<tag>Optimization</tag>
+	</tags>
+</sample>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Landscape Details">
+	<sdk_desc>This sample demonstrates how to add and manage detail layers for a LandscapeTerrain object using the <ui>getDetailMask()</ui> and <ui>addDetail()</ui> methods.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample demonstrates how to add and manage detail layers for a <strong nt="1"><link to="object_landscape_terrain">LandscapeTerrain</link></strong> object using the <ui><link to="objectlandscapeterrain_class" offset="getDetailMask_int_TerrainDetailMask">getDetailMask()</link></ui> and <ui><link to="terraindetailmask_class" offset="addDetail_TerrainDetail">addDetail()</link></ui> methods.</para>
+			<para>It dynamically creates and configures three types of terrain details:</para>
+			<ul>
+				<li><strong>Grass</strong></li> 
+				<li><strong>Stone</strong></li>
+				<li><strong>Snow caps</strong> (simple white material applied based on elevation using height constraints - no texture).</li>
+			</ul>
+			<para><strong>Each detail is:</strong></para>
+			<ul>
+				<li>Mapped to a separate detail mask</li>
+				<li>Assigned a custom material</li>
+				<li>Ordered visually using <ui><link to="terraindetailmask_class" offset="swapRenderOrder_TerrainDetailMask_void">swapRenderOrder()</link></ui> to ensure natural blending (stone below grass, grass below snow).</li>
+			</ul>
+			<para>This setup is useful for biome-style terrain detailing, visual layering of materials, and real-time terrain customization.</para>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Terrain</tag>
+	</tags>
+</sample>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>245eb6d90c4a047a331f5385890a13df1f3ba128</guid>
+	<type>property</type>
+	<hash>fb7b0d3e</hash>
+	<runtimes>
+		<runtime id="245eb6d90c4a047a331f5385890a13df1f3ba128" name="Flame" link="0" type="4"/>
+	</runtimes>
+</asset>

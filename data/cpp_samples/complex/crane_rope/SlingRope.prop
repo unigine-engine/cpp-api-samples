@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="SlingRope" manual="1" parent_name="node_base">
+	<parameter name="radius" type="float" title="Radius" tooltip="Radius" group="Rope">0.05</parameter>
+	<parameter name="segment_length" type="float" title="Segment Length" tooltip="Max segment length" group="Rope">0.3</parameter>
+	<parameter name="mass" type="float" title="Mass" tooltip="Mass of rope without tension" group="Rope">10</parameter>
+	<parameter name="rigidity" type="float" title="Rigidity" tooltip="Rope rigidity" group="Rope">0.5</parameter>
+	<parameter name="linear_damping" type="float" title="Linear Damping" tooltip="Linear damping of rope" group="Rope">0.2</parameter>
+	<parameter name="linear_restitution" type="float" title="Linear Restitution" tooltip="Rope stiffness" group="Rope">1</parameter>
+	<parameter name="angular_restitution" type="float" title="Angular Restitution" tooltip="Rope stiffness" group="Rope">1</parameter>
+	<parameter name="iterations" type="int" title="Iterations" tooltip="Number of iterations" group="Rope">8</parameter>
+	<parameter name="min_tension_angle" type="float" title="Min Tension Angle" tooltip="Angle between segments to check tension" group="Rope">15</parameter>
+	<parameter name="min_tension_length" type="float" title="Min Tension Length" tooltip="Minimum rope length for which tension parameters are guaranteed to be applied" group="Rope">1.5</parameter>
+	<parameter name="tension_mass_multiplier" type="float" title="Tension Mass Multiplier" tooltip="Used to increase mass of rope relative to bag for stable behaviour in tension state" group="Rope">1.5</parameter>
+	<parameter name="rope_mat" type="material" title="Rope Material" tooltip="Material for visible rope mesh" group="Rope"/>
+	<parameter name="invisible_base_mat" type="material" title="Rope Base Material" tooltip="Invisible material for rope base" group="Rope"/>
+	<parameter name="joint_linear_softness" type="float" title="Linear Softness" tooltip="Joint softness" group="Joint">1</parameter>
+	<parameter name="joint_angular_softness" type="float" title="Angular Softness" tooltip="Joint softness" group="Joint">1</parameter>
+	<parameter name="joint_linear_restitution" type="float" title="Linear Restitution" tooltip="Joint stiffness" group="Joint">0.9</parameter>
+	<parameter name="joint_angular_restitution" type="float" title="Angular Restitution" tooltip="Joint stiffness" group="Joint">0.9</parameter>
+	<parameter name="bag_node" type="node" title="Bag Node" tooltip="Bag node" group="Bag">0</parameter>
+	<parameter name="bag_anchor_node" type="node" title="Bag Anchor" tooltip="Anchor node where rope will be attached to bag" group="Bag">0</parameter>
+</property>

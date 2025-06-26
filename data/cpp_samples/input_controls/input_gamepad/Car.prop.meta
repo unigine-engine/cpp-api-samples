@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>bc47a3dce0c7627010946f0a17b5ec88707f2b34</guid>
+	<type>property</type>
+	<hash>f3ae4723</hash>
+	<runtimes>
+		<runtime id="bc47a3dce0c7627010946f0a17b5ec88707f2b34" name="Car" link="0" type="4"/>
+	</runtimes>
+</asset>

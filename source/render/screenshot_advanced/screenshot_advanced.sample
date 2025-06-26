@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Screenshot Advanced">
+	<sdk_desc>Advanced screenshot capturing from multiple windows, cameras, and window groups, with or without GUI.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample showcases how to capture high-resolution screenshots from focused windows, individual cameras, the main player camera, or grouped windows in real time, with optional GUI overlays.</para>
+			<para>At runtime, several additional windows are created, each with its own dedicated camera for multi-view rendering. All windows are stackable. To create a group, arrange the windows by dragging them close to each other - a green alignment grid will appear to assist with layout. Once grouped, screenshots can be captured from the group view.</para>
+			<para>Captured images are saved with timestamped filenames to a user-defined directory. By default, this is the folder displayed in the <ui>Parameters</ui> section.</para>
+			<para><strong>Use Cases:</strong></para>
+				<ul>
+					<li>Capturing viewport content (GUI and non-GUI screenshots)</li>
+					<li>Testing multi-camera setups</li>
+				</ul>
+		</brief>
+	</desc>
+	<controls>
+		<![CDATA[
+		<p><b>T</b> - Screenshot from focused window (no GUI)</p>
+		<p><b>Y</b> - Screenshot from focused window (with GUI)</p>
+		<p><b>U</b> - Screenshot from focused window's camera</p>
+		<p><b>O</b> - Screenshot from main player camera</p>
+		<p><b>P</b> - Screenshot from window group (with GUI)</p>
+		]]>
+	</controls>
+	<tags>
+		<tag>Render</tag>
+		<tag>Displays &amp; Projections</tag>
+		<tag>Windows &amp; Viewports</tag>
+	</tags>
+</sample>

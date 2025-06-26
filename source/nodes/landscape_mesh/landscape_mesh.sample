@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Landscape Mesh">
+	<sdk_desc>This sample demonstrates how to generate a procedural mesh (ObjectMeshDynamic) that represents a selected region of the Landscape Terrain.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample demonstrates how to generate a procedural mesh (<strong nt="1"><link to="object_mesh_dynamic">ObjectMeshDynamic</link></strong>) that represents a selected region of the <strong nt="1"><link to="object_landscape_terrain">Landscape Terrain</link></strong>.</para>
+			<para><strong>Key Features:</strong></para>
+			<ul>
+				<li>Terrain data (height and albedo) is fetched at runtime using <strong nt="1"><link to="landscapefetch_class">LandscapeFetch</link></strong></li>
+				<li>Mesh resolution, position, scale, and rotation can be customized via UI</li>
+				<li>Optionally render a bounding box and wireframe overlay</li>
+				<li><para>Ideal for:</para>
+					<ul>
+						<li>Runtime terrain previews</li>
+						<li>Simplified <strong nt="1">LOD</strong> meshes or data extraction for analysis/simulation.</li>
+					</ul>
+				</li>
+			</ul>
+			<para>The generated mesh uses a basic material and includes color data sampled from the terrain's albedo layer. Use the <strong nt="1">Generate</strong> button to fetch terrain data and construct the mesh in real time.</para>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Terrain</tag>
+		<tag>Objects</tag>
+	</tags>
+</sample>

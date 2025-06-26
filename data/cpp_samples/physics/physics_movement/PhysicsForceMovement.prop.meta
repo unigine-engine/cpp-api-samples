@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>09940be0a45a9fe9a908529e07deb2e4976b4685</guid>
+	<type>property</type>
+	<hash>254c5ac9</hash>
+	<runtimes>
+		<runtime id="09940be0a45a9fe9a908529e07deb2e4976b4685" name="PhysicsForceMovement" link="0" type="4"/>
+	</runtimes>
+</asset>

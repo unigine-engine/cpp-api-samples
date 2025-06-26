@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>ee3c4f769f3f48462849bd43276eb4e23b3e3713</guid>
+	<type>property</type>
+	<hash>b218b005</hash>
+	<runtimes>
+		<runtime id="ee3c4f769f3f48462849bd43276eb4e23b3e3713" name="AnimationBonesIKSample" link="0" type="4"/>
+	</runtimes>
+</asset>

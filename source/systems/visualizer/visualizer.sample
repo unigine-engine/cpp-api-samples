@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Visualizer">
+	<sdk_desc>Demonstration of the full range of features provided by the <i>Visualizer</i> class for visual debugging.</sdk_desc>
+	<desc>
+		<brief>This sample demonstrates the full range of features provided by the <ui><link to="visualizer_class">Visualizer</link></ui> class for visual debugging.</brief>
+		<para>The sample illustrates how to use <ui>Visualizer</ui> for debugging node positions, physics vectors, bounding volumes, and custom geometry in both world space and screen space. Use controls to explore the area.</para>
+		<para><ui>VisualizerUsage.cpp</ui> renders a wide range of primitives including points, lines, boxes, frustums, spheres, capsules, and object bounds using <ui>Visualizer</ui> methods.</para>
+		<para><ui>2D</ui> visualizer features can be toggled on and off via the corresponding checkboxes.</para>
+		<para>Enable or disable depth testing, toggle specific primitives, and inspect how different rendering options behave in real time.</para>
+	</desc>
+	<controls>
+		<![CDATA[
+		<p><b>W,A,S,D</b> - Camera movement</p>
+		<p><b>LMB</b> - Camera rotation</p>
+		<p><b>Left Shift</b> - Camera acceleration</p>
+		]]>
+	</controls>
+	<tags>
+		<tag>Visualizer (Visual Debug)</tag>
+	</tags>
+</sample>

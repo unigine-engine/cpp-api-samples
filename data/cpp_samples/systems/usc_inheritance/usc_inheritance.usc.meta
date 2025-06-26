@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>6760809663c78cc2ffe5f8eb6af4eb8cbee01025</guid>
+	<type>script</type>
+	<hash>c95e6f97</hash>
+	<runtimes>
+		<runtime id="6760809663c78cc2ffe5f8eb6af4eb8cbee01025" name="usc_inheritance.usc" link="0"/>
+	</runtimes>
+</asset>

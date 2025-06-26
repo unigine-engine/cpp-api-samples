@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="FMOD Studio">
+	<sdk_desc>
+		<p><b>FMOD Studio</b> integration with real-time interactive audio effects, spatialization, and Doppler effect simulation.</p>
+		<p><br/><b>NOTICE: Additional libraries are required, run the sample for details.</b></p>
+	</sdk_desc>
+	<desc>
+		<brief>
+			<para>Before running this sample, follow the steps provided in the setup section or in the FMOD Integration Guide linked below.</para>
+			<para>This sample demonstrates how to control, simulate, and visualize real-time audio events using the <ui>FMOD Studio</ui> plugin.</para>
+			<para>The setup includes a stationary object (car) and a moving object representing a source of Doppler-shifted sound, which can be toggled and adjusted via the <ui>Doppler</ui> tab of the GUI Parameters section. Additional sound settings such as wind, rain, the car engine RPM sound, and overall environmental volume can also be fine-tuned in real time under the <ui>Ambience, Engine</ui>, and <ui>VCA</ui> tabs.</para>
+			<para><strong>Use Cases:</strong></para>
+			<ul>
+				<li>Prototyping audio-driven game mechanics (e.g., vehicle audio, spatial ambiences, Doppler effects)</li>
+				<li>Demonstrating dynamic audio parameters and movement-based effects like Doppler shifts.</li>
+			</ul>
+			<para><br/><br/><strong>Sample Requirements</strong><br/></para>
+			<para>1. Download and install <strong>FMOD Engine (version 2.02.04)</strong> for your OS available on the official website (<strong><a href="https://www.fmod.com/download">https://www.fmod.com/download</a></strong>).<br/><br/></para>
+			<para>2. Go to the FMOD installation folder and copy the following files to the <file_name>bin</file_name> folder of your project:<br/></para>
+			<para><br/><strong>for Windows:</strong></para>
+				<ul nt="1">
+					<li><file_name>fmod.dll, fmodL.dll</file_name> from <file_name>/api/core/lib/x64/</file_name></li>
+					<li><file_name>fsbank.dll, libfsbvorbis64.dll, opus.dll</file_name> from <file_name>/api/fbank/lib/x64/</file_name>.</li>
+					<li><file_name>fmodstudio.dll, fmodstudioL.dll</file_name> from <file_name>/api/studio/lib/x64/</file_name></li>
+				</ul>
+			<para><br/><strong>for Linux</strong></para>
+				<ul>
+					<li><file_name>libfmod.so.13, libfmodL.so.13</file_name> from <file_name>/api/core/lib/x64/</file_name></li>
+					<li><file_name>libfsbank.so.13, libfsbankL.so.13, libfsbvorbis.so, libopus.so</file_name> from <file_name>/api/fbank/lib/x64/</file_name></li>
+					<li><file_name>libfmodstudio.so.13, libfmodstudioL.so.13</file_name> from <file_name>/api/studio/lib/x64/</file_name></li>
+				</ul>
+		</brief>
+	</desc>
+	<link_docs>https://developer.unigine.com/docs/code/plugins/fmod/index?rlang=cpp</link_docs>
+	<tags>
+		<tag>Sound</tag>
+		<tag>Plugins</tag>
+		<tag>Integration</tag>
+		<tag>Extension &amp; Customization</tag>
+	</tags>
+</sample>

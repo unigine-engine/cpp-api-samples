@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="PathCircle" manual="1" parent_name="node_base">
+	<parameter name="speed" type="float" title="Speed">1</parameter>
+	<parameter name="angular_speed" type="float" title="Angular Speed">45</parameter>
+</property>

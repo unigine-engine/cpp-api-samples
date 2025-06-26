@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>9a1c3d25f4255bfecde106bcc8447876c7553581</guid>
+	<type>world</type>
+	<hash>8aa43739</hash>
+	<runtimes>
+		<runtime id="9a1c3d25f4255bfecde106bcc8447876c7553581" name="events_advanced.world" link="0"/>
+	</runtimes>
+	<parameters>
+		<parameter type="string" name="physics_settings_path"/>
+		<parameter type="string" name="render_settings_path"/>
+		<parameter type="string" name="script_name"/>
+		<parameter type="string" name="sound_settings_path"/>
+		<parameter type="string" name="viewports_settings"/>
+	</parameters>
+</asset>

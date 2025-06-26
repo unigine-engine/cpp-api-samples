@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="Manipulators" manual="1" parent_name="node_base" tooltip="This component enables you to manipulate objects in the world using manipulators (WidgetManipulator).There should be only one property associated with this component used in the world.This property should be assigned to a dedicated node used to control the logic of this component.">
+	<parameter name="intersection_mask" type="mask" title="Intersection mask" tooltip="Mask to define which objects can be selected.">1</parameter>
+	<parameter name="transform_parent" type="toggle">1</parameter>
+</property>

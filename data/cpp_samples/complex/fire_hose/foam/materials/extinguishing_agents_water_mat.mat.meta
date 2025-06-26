@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>10df07f015588f2acb82be72ecd4f8332433eff6</guid>
+	<type>material</type>
+	<hash>0379035f</hash>
+	<runtimes>
+		<runtime id="10df07f015588f2acb82be72ecd4f8332433eff6" name="extinguishing_agents_water_mat" link="0" type="5"/>
+	</runtimes>
+</asset>

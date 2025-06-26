@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Euler Angles">
+	<sdk_desc>Showing how the order of angles affects rotation.</sdk_desc>
+	<desc>
+		<brief>This sample demonstrates how the order of angles affects the resulting rotation. You can also observe different ways of decomposing the current rotation by various angle sequences.</brief>
+		<para>This example helps to understand 3D rotations using Euler angles. It shows how different sequences can lead to different orientations in space.</para>
+	</desc>
+	<tags>
+		<tag>Basic Recipes</tag>
+	</tags>
+</sample>

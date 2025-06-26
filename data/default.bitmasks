@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<bit_mask_names>
+	<general>
+		<name index="3">ALIGN_TOP</name>
+		<name index="1">ALIGN_LEFT</name>
+		<name index="5">ALIGN_EXPAND</name>
+		<name index="0">ALIGN_CENTER</name>
+		<name index="7">ALIGN_BACKGROUND</name>
+		<name index="2">ALIGN_RIGHT</name>
+		<name index="4">ALIGN_BOTTOM</name>
+		<name index="8">ALIGN_FIXED</name>
+		<name index="6">ALIGN_OVERLAP</name>
+	</general>
+	<collision>
+		<name index="3">Tracks guard</name>
+		<name index="2">Tracks</name>
+	</collision>
+	<viewport>
+		<name index="7">Weapon</name>
+	</viewport>
+</bit_mask_names>

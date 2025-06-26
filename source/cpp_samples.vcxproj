@@ -1,0 +1,653 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A274CE60-993C-A1C3-E6AB-9171242318A2}</ProjectGuid>
+    <ProjectName>cpp_samples</ProjectName>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug-Double|x64">
+      <Configuration>Debug-Double</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release-Double|x64">
+      <Configuration>Release-Double</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug-Double|x64'" Label="Configuration">
+    <PlatformToolset>v140</PlatformToolset>
+    <ConfigurationType>Application</ConfigurationType>
+    <OutDir>$(ProjectDir)../bin/</OutDir>
+    <TargetName>$(ProjectName)_x64d</TargetName>
+    <LocalDebuggerEnvironment>PATH=$(ProjectDir)../bin/x64;$(ProjectDir)../bin/;%PATH%</LocalDebuggerEnvironment>
+    <LocalDebuggerCommandArguments>-data_path ../ -engine_config "../data/unigine.cfg"</LocalDebuggerCommandArguments>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <PlatformToolset>v140</PlatformToolset>
+    <ConfigurationType>Application</ConfigurationType>
+    <OutDir>$(SolutionDir)..\bin\</OutDir>
+    <TargetName>$(ProjectName)_x64d</TargetName>
+    <LocalDebuggerCommandArguments>-data_path ../ -engine_config "../data/unigine.cfg"</LocalDebuggerCommandArguments>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release-Double|x64'" Label="Configuration">
+    <PlatformToolset>v140</PlatformToolset>
+    <ConfigurationType>Application</ConfigurationType>
+    <OutDir>$(ProjectDir)../bin/</OutDir>
+    <TargetName>$(ProjectName)_x64</TargetName>
+    <LocalDebuggerEnvironment>PATH=$(ProjectDir)../bin/x64;$(ProjectDir)../bin/;%PATH%</LocalDebuggerEnvironment>
+    <LocalDebuggerCommandArguments>-data_path ../ -engine_config "../data/unigine.cfg"</LocalDebuggerCommandArguments>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <PlatformToolset>v140</PlatformToolset>
+    <ConfigurationType>Application</ConfigurationType>
+    <OutDir>$(SolutionDir)..\bin\</OutDir>
+    <TargetName>$(ProjectName)_x64</TargetName>
+    <LocalDebuggerCommandArguments>-data_path ../ -engine_config "../data/unigine.cfg"</LocalDebuggerCommandArguments>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug-Double|x64'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <PreprocessorDefinitions>DEBUG;UNIGINE_DOUBLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX64</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>../lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Unigine_double_x64d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <PreprocessorDefinitions>NOMINMAX;DEBUG;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX64</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Unigine_x64d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release-Double|x64'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Full</Optimization>
+      <AdditionalIncludeDirectories>..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <PreprocessorDefinitions>NDEBUG;UNIGINE_DOUBLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX64</TargetMachine>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>../lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Unigine_double_x64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Full</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <PreprocessorDefinitions>NDEBUG;NOMINMAX;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX64</TargetMachine>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Unigine_x64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="animation\animation_material\MaterialAnimationSample.cpp" />
+    <ClCompile Include="animation\animation_node\NodeAnimationSample.cpp" />
+    <ClCompile Include="animation\animation_property\PropertyAnimationSample.cpp" />
+    <ClCompile Include="animation\animation_singleton\SingletonAnimationSample.cpp" />
+    <ClCompile Include="animation\animation_widget\WidgetAnimationSample.cpp" />
+    <ClCompile Include="animation\bones_constraints\AnimationBonesConstraintsSample.cpp" />
+    <ClCompile Include="animation\bones_ik\AnimationBonesIKSample.cpp" />
+    <ClCompile Include="animation\bones_look_at\AnimationBonesLookAtSample.cpp" />
+    <ClCompile Include="animation\bones_masks\AnimationBonesMasksSample.cpp" />
+    <ClCompile Include="animation\bones_retargeting\AnimationBonesRetargetingSample.cpp" />
+    <ClCompile Include="animation\bones_root_motion\AnimationBonesRootMotion.cpp" />
+    <ClCompile Include="animation\bones_sandbox\AnimationBonesSandboxSample.cpp" />
+    <ClCompile Include="animation\bones_sandbox\BonesSandbox.cpp" />
+    <ClCompile Include="animation\bones_simple_foot_placement\AnimationBonesSimpleFootPlacementSample.cpp" />
+    <ClCompile Include="animation\bones_state_machine\AnimationBonesStateMachineSample.cpp" />
+    <ClCompile Include="animation\bones_state_machine\StateMachine.cpp" />
+    <ClCompile Include="animation\curve_animation\CurveAnimationTransform.cpp" />
+    <ClCompile Include="animation\physics_based_animation\CatDemo.cpp" />
+    <ClCompile Include="animation\physics_based_animation\CatGame.cpp" />
+    <ClCompile Include="animation\physics_based_animation\CatSample.cpp" />
+    <ClCompile Include="animation\physics_based_animation\EaseInMotion.cpp" />
+    <ClCompile Include="animation\physics_based_animation\EaseOutBounceMotion.cpp" />
+    <ClCompile Include="animation\physics_based_animation\EaseOutMotion.cpp" />
+    <ClCompile Include="animation\physics_based_animation\Laser.cpp" />
+    <ClCompile Include="animation\physics_based_animation\LinearMotion.cpp" />
+    <ClCompile Include="animation\physics_based_animation\MotionMode.cpp" />
+    <ClCompile Include="animation\physics_based_animation\Persecutor.cpp" />
+    <ClCompile Include="animation\physics_based_animation\SpringEasy.cpp" />
+    <ClCompile Include="animation\physics_based_animation\SpringMotion.cpp" />
+    <ClCompile Include="animation\physics_based_animation\SpringRegular.cpp" />
+    <ClCompile Include="animation\playback_layers\PlaybackLayersSample.cpp" />
+    <ClCompile Include="animation\track_playback\Tracker.cpp" />
+    <ClCompile Include="animation\track_playback\TrackPlayback.cpp" />
+    <ClCompile Include="basics\bound_intersection\BoundIntersection.cpp" />
+    <ClCompile Include="basics\camera_zoom\TargetGui.cpp" />
+    <ClCompile Include="basics\camera_zoom\ZoomController.cpp" />
+    <ClCompile Include="basics\camera_zoom\ZoomSample.cpp" />
+    <ClCompile Include="basics\euler_angles\EulerAnglesSample.cpp" />
+    <ClCompile Include="basics\ifps_usage\IFpsMovementController.cpp" />
+    <ClCompile Include="basics\ifps_usage\IFpsMovementSample.cpp" />
+    <ClCompile Include="basics\node_spawner_grid\NodeSpawnerGrid.cpp" />
+    <ClCompile Include="basics\node_spawner_grid\NodeSpawnerGridSample.cpp" />
+    <ClCompile Include="basics\node_spawner_timer\NodeSpawnerTimer.cpp" />
+    <ClCompile Include="basics\node_spawner_timer\NodeSpawnerTimerSample.cpp" />
+    <ClCompile Include="basics\ray_intersection\RayIntersection.cpp" />
+    <ClCompile Include="basics\simple_movement\SimpleMovement.cpp" />
+    <ClCompile Include="basics\simple_movement\SimpleMovementInfo.cpp" />
+    <ClCompile Include="basics\trajectory\TrajectoryLogic.cpp" />
+    <ClCompile Include="basics\trajectory\TrajectoryMovement.cpp" />
+    <ClCompile Include="basics\triggers\MathTriggerComponent.cpp" />
+    <ClCompile Include="basics\triggers\TriggerSample.cpp" />
+    <ClCompile Include="basics\trigger_buttons\ButtonReactionSample.cpp" />
+    <ClCompile Include="basics\trigger_buttons\Interactable.cpp" />
+    <ClCompile Include="basics\trigger_buttons\InteractableButtonComponent.cpp" />
+    <ClCompile Include="basics\trigger_buttons\InteractableLeverComponent.cpp" />
+    <ClCompile Include="basics\trigger_buttons\InteractableValveComponent.cpp" />
+    <ClCompile Include="basics\trigger_buttons\InteractorComponent.cpp" />
+    <ClCompile Include="complex\boids\Flock.cpp" />
+    <ClCompile Include="complex\boids\FlockController.cpp" />
+    <ClCompile Include="complex\boids\FlockSample.cpp" />
+    <ClCompile Include="complex\boids\Unit.cpp" />
+    <ClCompile Include="complex\crane_rope\CraneControl.cpp" />
+    <ClCompile Include="complex\crane_rope\CraneRopeSample.cpp" />
+    <ClCompile Include="complex\crane_rope\SlingRope.cpp" />
+    <ClCompile Include="complex\fire_hose\ExtinguishingPuddles.cpp" />
+    <ClCompile Include="complex\fire_hose\FireHoseSample.cpp" />
+    <ClCompile Include="complex\fire_hose\Flame.cpp" />
+    <ClCompile Include="complex\day_night_switch\DayNightSwitcher.cpp" />
+    <ClCompile Include="complex\day_night_switch\DayNightSwitchSample.cpp" />
+    <ClCompile Include="complex\day_night_switch\SunController.cpp" />
+    <ClCompile Include="complex\first_person_controller\FirstPersonController.cpp" />
+    <ClCompile Include="complex\first_person_controller\FirstPersonControllerSample.cpp" />
+    <ClCompile Include="complex\lidar\Las.cpp" />
+    <ClCompile Include="complex\lidar\Lidar.cpp" />
+    <ClCompile Include="complex\lidar\LidarSample.cpp" />
+    <ClCompile Include="complex\observer_controller\ObserverController.cpp" />
+    <ClCompile Include="complex\player_persecutor\PlayerPersecutorComponent.cpp" />
+    <ClCompile Include="complex\player_persecutor\PlayerPersecutorSample.cpp" />
+    <ClCompile Include="complex\robot_arm\RobotArmConnection.cpp" />
+    <ClCompile Include="complex\robot_arm\RobotArmController.cpp" />
+    <ClCompile Include="complex\spectator_controller\SpectatorController.cpp" />
+    <ClCompile Include="complex\spectator_controller\SpectatorControllerSample.cpp" />
+    <ClCompile Include="complex\top_down_controller\Selection.cpp" />
+    <ClCompile Include="complex\top_down_controller\TopDownController.cpp" />
+    <ClCompile Include="complex\top_down_controller\UnitSelectionCircle.cpp" />
+    <ClCompile Include="complex\track_non_physical\NonPhysicalTracks.cpp" />
+    <ClCompile Include="complex\track_non_physical\TrackedVehicleNonPhysical.cpp" />
+    <ClCompile Include="complex\track_non_physical\WheelAttachment.cpp" />
+    <ClCompile Include="complex\track_physical\PhysicalTracks.cpp" />
+    <ClCompile Include="complex\track_physical\TrackedVehiclePhysical.cpp" />
+    <ClCompile Include="input_controls\input_gamepad\Car.cpp" />
+    <ClCompile Include="input_controls\input_gamepad\GamepadInput.cpp" />
+    <ClCompile Include="input_controls\input_joystick\JoysticksInput.cpp" />
+    <ClCompile Include="input_controls\input_keyboard_mouse\KeyboardAndMouseInput.cpp" />
+    <ClCompile Include="input_controls\input_touch\TouchInput.cpp" />
+    <ClCompile Include="menu_ui\DescriptionWindowCreator.cpp" />
+    <ClCompile Include="navigation\navigation_mesh\NavigationMeshLogic.cpp" />
+    <ClCompile Include="navigation\navigation_mesh_demo\NavigationMeshDemoLogic.cpp" />
+    <ClCompile Include="navigation\navigation_sectors\NavigationSectorsLogic.cpp" />
+    <ClCompile Include="navigation\navigation_sectors_demo\NavigationSectorsDemoLogic.cpp" />
+    <ClCompile Include="network\http_image_request\HttpImageRequestSample.cpp" />
+    <ClCompile Include="network\http_image_response\HttpImageResponseSample.cpp" />
+    <ClCompile Include="network\http_simple_request\SimpleHttpRequestSample.cpp" />
+    <ClCompile Include="network\http_simple_response\SimpleHttpResponseSample.cpp" />
+    <ClCompile Include="network\tcp_sockets\TCPSocketsSample.cpp" />
+    <ClCompile Include="network\udp_sockets\UDPSocketsSample.cpp" />
+    <ClCompile Include="nodes\cluster\ClusterSample.cpp" />
+    <ClCompile Include="nodes\clutter_to_cluster\ClutterConverter.cpp" />
+    <ClCompile Include="nodes\clutter_to_cluster\ClutterSample.cpp" />
+    <ClCompile Include="nodes\create_objects\ObjectsSample.cpp" />
+    <ClCompile Include="nodes\dynamic_field_height\DynamicTextureFieldHeight.cpp" />
+    <ClCompile Include="nodes\dynamic_field_height\DynamicTextureFieldHeightSample.cpp" />
+    <ClCompile Include="nodes\landscape_combined\CombinedSample.cpp" />
+    <ClCompile Include="nodes\landscape_combined\HeightSlicer.cpp" />
+    <ClCompile Include="nodes\landscape_create\CreateSample.cpp" />
+    <ClCompile Include="nodes\landscape_details\DetailsSample.cpp" />
+    <ClCompile Include="nodes\landscape_excavation\DiggingTool.cpp" />
+    <ClCompile Include="nodes\landscape_excavation\ObjectDepth.cpp" />
+    <ClCompile Include="nodes\landscape_fetch\CameraTerrainFetchSample.cpp" />
+    <ClCompile Include="nodes\landscape_mask_paint\LandscapeMaskPainter.cpp" />
+    <ClCompile Include="nodes\landscape_mask_paint\MaskPaintSample.cpp" />
+    <ClCompile Include="nodes\landscape_mesh\TerrainMesh.cpp" />
+    <ClCompile Include="nodes\landscape_mesh\TerrainMeshSample.cpp" />
+    <ClCompile Include="nodes\landscape_paint\LandscapeAlbedoPainter.cpp" />
+    <ClCompile Include="nodes\landscape_paint\LandscapeHeightPainter.cpp" />
+    <ClCompile Include="nodes\landscape_paint\LandscapeHeightToAlbedo.cpp" />
+    <ClCompile Include="nodes\landscape_paint\PaintSample.cpp" />
+    <ClCompile Include="nodes\landscape_tracks\PathCircle.cpp" />
+    <ClCompile Include="nodes\landscape_tracks\TrackSpawner.cpp" />
+    <ClCompile Include="nodes\landscape_tracks\TracksSample.cpp" />
+    <ClCompile Include="nodes\lights\LightsSample.cpp" />
+    <ClCompile Include="nodes\node_extern\NodeExternSample.cpp" />
+    <ClCompile Include="nodes\object_extern\ObjectExternSample.cpp" />
+    <ClCompile Include="nodes\players\PlayersSample.cpp" />
+    <ClCompile Include="nodes\spline_graph\SplineGraphSample.cpp" />
+    <ClCompile Include="nodes\state_save_restore\StateSample.cpp" />
+    <ClCompile Include="nodes\water_buoyancy\BuoyComponent.cpp" />
+    <ClCompile Include="nodes\water_buoyancy\BuoySample.cpp" />
+    <ClCompile Include="nodes\water_custom_wave\CustomWaveSample.cpp" />
+    <ClCompile Include="nodes\water_fetch_intersection\WaterFetchIntersection.cpp" />
+    <ClCompile Include="nodes\water_physical_buoyancy\BuoyancyPhysics.cpp" />
+    <ClCompile Include="nodes\water_physical_buoyancy\BuoyancyPhysicsSample.cpp" />
+    <ClCompile Include="nodes\water_physical_buoyancy\Movement.cpp" />
+    <ClCompile Include="nodes\water_physical_buoyancy\Waves.cpp" />
+    <ClCompile Include="nodes\water_simple_boat\BoatControl.cpp" />
+    <ClCompile Include="nodes\water_simple_boat\BoatFoam.cpp" />
+    <ClCompile Include="nodes\water_simple_boat\BoatSample.cpp" />
+    <ClCompile Include="nodes\water_simple_boat\WakeWaveTrail.cpp" />
+    <ClCompile Include="nodes\world_spline_graph\WorldSplineGraphSample.cpp" />
+    <ClCompile Include="physics\body_events\BodyCallbacks.cpp" />
+    <ClCompile Include="physics\body_fracture_explosion\BodyFractureExplosion.cpp" />
+    <ClCompile Include="physics\body_fracture_explosion\BodyFractureExplosionSample.cpp" />
+    <ClCompile Include="physics\body_fracture_shooting_gallery\BodyFractureShootingGalleryGun.cpp" />
+    <ClCompile Include="physics\body_fracture_shooting_gallery\BodyFractureShootingGallerySample.cpp" />
+    <ClCompile Include="physics\joint_events\JointCallbacks.cpp" />
+    <ClCompile Include="physics\physics_movement\PhysicsMovement.cpp" />
+    <ClCompile Include="physics\physics_movement\PhysicsMovementSample.cpp" />
+    <ClCompile Include="physics\update_physics\UpdatePhysicsUsageController.cpp" />
+    <ClCompile Include="physics\update_physics\UpdatePhysicsUsageSample.cpp" />
+    <ClCompile Include="plugins\fmod_core\FMODCoreSample.cpp" />
+    <ClCompile Include="plugins\fmod_studio\FMODStudioSample.cpp" />
+    <ClCompile Include="render\camera_to_texture\CameraToTexture.cpp" />
+    <ClCompile Include="render\compute_shader\ComputeShader.cpp" />
+    <ClCompile Include="render\compute_shader_image\ComputeShaderImage.cpp" />
+    <ClCompile Include="render\ffp_depth\FFPDepth.cpp" />
+    <ClCompile Include="render\gbuffer_read\GBufferRead.cpp" />
+    <ClCompile Include="render\gbuffer_read\GBufferReadSample.cpp" />
+    <ClCompile Include="render\gbuffer_write\GBufferWrite.cpp" />
+    <ClCompile Include="render\gui_to_texture\GuiToTexture.cpp" />
+    <ClCompile Include="render\gui_to_texture\WidgetClock.cpp" />
+    <ClCompile Include="render\gui_to_texture\WidgetNoSignal.cpp" />
+    <ClCompile Include="render\node_to_texture\NodeToTexture.cpp" />
+    <ClCompile Include="render\render_target\RenderTargetSample.cpp" />
+    <ClCompile Include="render\screenshot\Screenshot.cpp" />
+    <ClCompile Include="render\screenshot\ScreenshotSample.cpp" />
+    <ClCompile Include="render\screenshot_advanced\ScreenshotAdvancedSample.cpp" />
+    <ClCompile Include="render\split_screen_texture\CarControl.cpp" />
+    <ClCompile Include="render\split_screen_texture\SplitScreenTexture.cpp" />
+    <ClCompile Include="render\structured_buffer\StructuredBufferSample.cpp" />
+    <ClCompile Include="render\textures\TexturesSample.cpp" />
+    <ClCompile Include="render\weapon_clipping\WeaponClipping.cpp" />
+    <ClCompile Include="render\weapon_clipping\WeaponClippingSample.cpp" />
+    <ClCompile Include="systems\async_queue\AsyncQueueSample.cpp" />
+    <ClCompile Include="systems\async_queue_tasks\AsyncQueueTasksSample.cpp" />
+    <ClCompile Include="systems\cad_like_view\CADLikeView.cpp" />
+    <ClCompile Include="systems\cad_like_view\ViewportCube.cpp" />
+    <ClCompile Include="systems\callbacks\Callbacks.cpp" />
+    <ClCompile Include="systems\console\ConsoleSample.cpp" />
+    <ClCompile Include="systems\cpu_shader\CPUShaderSample.cpp" />
+    <ClCompile Include="systems\events\EventsSample.cpp" />
+    <ClCompile Include="systems\events_advanced\EventsAdvancedSample.cpp" />
+    <ClCompile Include="systems\events_advanced\EventsAdvancedUnit.cpp" />
+    <ClCompile Include="systems\ffp\FFPSample.cpp" />
+    <ClCompile Include="systems\external_package\ExternalPackageSample.cpp" />
+    <ClCompile Include="systems\files\FilesSample.cpp" />
+    <ClCompile Include="systems\images\ImagesSample.cpp" />
+    <ClCompile Include="systems\intersection_multiple_async_requests\MultipleAsyncRequestsSample.cpp" />
+    <ClCompile Include="systems\intersection_simple_async_request\SimpleAsyncRequestSample.cpp" />
+    <ClCompile Include="systems\json\JsonSample.cpp" />
+    <ClCompile Include="systems\materials_and_properties\MaterialsAndPropertiesSample.cpp" />
+    <ClCompile Include="systems\microprofiler\MicroprofilerSample.cpp" />
+    <ClCompile Include="systems\microprofiler\MicroprofilerSleepyNode.cpp" />
+    <ClCompile Include="systems\mount_points\MountPointsSample.cpp" />
+    <ClCompile Include="systems\stream_base\StreamBaseSample.cpp" />
+    <ClCompile Include="systems\thread\ThreadSample.cpp" />
+    <ClCompile Include="systems\two_point_perspective\CameraShiftController.cpp" />
+    <ClCompile Include="systems\two_point_perspective\TwoPointPerspectiveSample.cpp" />
+    <ClCompile Include="systems\usc_arrays\ScriptArrays.cpp" />
+    <ClCompile Include="systems\usc_callbacks\ScriptCallbacks.cpp" />
+    <ClCompile Include="systems\usc_classes\ScriptClasses.cpp" />
+    <ClCompile Include="systems\usc_functions\ScriptFunctions.cpp" />
+    <ClCompile Include="systems\usc_inheritance\ScriptInheritance.cpp" />
+    <ClCompile Include="systems\usc_stack\ScriptStack.cpp" />
+    <ClCompile Include="systems\usc_structures\ScriptStructure.cpp" />
+    <ClCompile Include="systems\usc_transfer\ScriptTransfer.cpp" />
+    <ClCompile Include="systems\usc_types\ScriptTypes.cpp" />
+    <ClCompile Include="systems\usc_variable\ScriptVariables.cpp" />
+    <ClCompile Include="systems\visualizer\VisualizerSample.cpp" />
+    <ClCompile Include="systems\visualizer\VisualizerUsage.cpp" />
+    <ClCompile Include="systems\xml\XmlSample.cpp" />
+    <ClCompile Include="menu_ui\SampleDescriptionWindow.cpp" />
+    <ClCompile Include="AppEditorLogic.cpp" />
+    <ClCompile Include="AppSystemLogic.cpp" />
+    <ClCompile Include="AppWorldLogic.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="menu_ui\MainMenu.cpp" />
+    <ClCompile Include="menu_ui\WorldMenu.cpp" />
+    <ClCompile Include="user_interface\object_frame\ObjectFrame.cpp" />
+    <ClCompile Include="user_interface\object_frame\ObjectFrameSample.cpp" />
+    <ClCompile Include="user_interface\target_marker\TargetMarker.cpp" />
+    <ClCompile Include="user_interface\user_interface\UserInterface.cpp" />
+    <ClCompile Include="user_interface\widgets\Button.cpp" />
+    <ClCompile Include="user_interface\widgets\CheckBox.cpp" />
+    <ClCompile Include="user_interface\widgets\ComboBox.cpp" />
+    <ClCompile Include="user_interface\widgets\EditLine.cpp" />
+    <ClCompile Include="user_interface\widgets\EditText.cpp" />
+    <ClCompile Include="user_interface\widgets\Icon.cpp" />
+    <ClCompile Include="user_interface\widgets\Label.cpp" />
+    <ClCompile Include="user_interface\widgets\ListBox.cpp" />
+    <ClCompile Include="user_interface\widgets\Menu.cpp" />
+    <ClCompile Include="user_interface\widgets\Scroll.cpp" />
+    <ClCompile Include="user_interface\widgets\Slider.cpp" />
+    <ClCompile Include="user_interface\widgets\SpinBox.cpp" />
+    <ClCompile Include="user_interface\widgets\Sprite.cpp" />
+    <ClCompile Include="user_interface\widgets\TreeBox.cpp" />
+    <ClCompile Include="user_interface\widgets\RadioButtons.cpp" />
+    <ClCompile Include="user_interface\widget_canvas\Canvas.cpp" />
+    <ClCompile Include="user_interface\widget_dialogs\Dialogs.cpp" />
+    <ClCompile Include="user_interface\widget_extern\ExternWidget.cpp" />
+    <ClCompile Include="user_interface\widget_manipulators\Manipulators.cpp" />
+    <ClCompile Include="user_interface\widget_manipulators\ManipulatorsSample.cpp" />
+    <ClCompile Include="user_interface\widget_window\Window.cpp" />
+    <ClCompile Include="utils\AsyncTasks.cpp" />
+    <ClCompile Include="utils\BodyFractureUnit.cpp" />
+    <ClCompile Include="utils\Crosshair.cpp" />
+    <ClCompile Include="utils\DefaultPlayer.cpp" />
+    <ClCompile Include="utils\InputManager.cpp" />
+    <ClCompile Include="utils\intersection\Intersections.cpp" />
+    <ClCompile Include="utils\Math.cpp" />
+    <ClCompile Include="utils\navigation\Seeker.cpp" />
+    <ClCompile Include="utils\navigation\Target.cpp" />
+    <ClCompile Include="utils\network\HttpServer.cpp" />
+    <ClCompile Include="utils\PersecutorTarget.cpp" />
+    <ClCompile Include="utils\Rotator.cpp" />
+    <ClCompile Include="utils\ScreenshotMaker.cpp" />
+    <ClCompile Include="utils\SimpleInformationBox.cpp" />
+    <ClCompile Include="utils\SimplePathControl.cpp" />
+    <ClCompile Include="utils\Spawner.cpp" />
+    <ClCompile Include="utils\Spline.cpp" />
+    <ClCompile Include="utils\UnigineScriptsInterpreter.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="animation\bones_constraints\AnimationBonesConstraintsSample.h" />
+    <ClInclude Include="animation\bones_ik\AnimationBonesIKSample.h" />
+    <ClInclude Include="animation\bones_look_at\AnimationBonesLookAtSample.h" />
+    <ClInclude Include="animation\bones_masks\AnimationBonesMasksSample.h" />
+    <ClInclude Include="animation\bones_retargeting\AnimationBonesRetargetingSample.h" />
+    <ClInclude Include="animation\bones_root_motion\AnimationBonesRootMotion.h" />
+    <ClInclude Include="animation\bones_sandbox\AnimationBonesSandboxSample.h" />
+    <ClInclude Include="animation\bones_sandbox\BonesSandbox.h" />
+    <ClInclude Include="animation\bones_simple_foot_placement\AnimationBonesSimpleFootPlacementSample.h" />
+    <ClInclude Include="animation\bones_state_machine\AnimationBonesStateMachineSample.h" />
+    <ClInclude Include="animation\bones_state_machine\StateMachine.h" />
+    <ClInclude Include="animation\curve_animation\CurveAnimationTransform.h" />
+    <ClInclude Include="animation\physics_based_animation\CatDemo.h" />
+    <ClInclude Include="animation\physics_based_animation\CatGame.h" />
+    <ClInclude Include="animation\physics_based_animation\CatSample.h" />
+    <ClInclude Include="animation\physics_based_animation\EaseInMotion.h" />
+    <ClInclude Include="animation\physics_based_animation\EaseOutBounceMotion.h" />
+    <ClInclude Include="animation\physics_based_animation\EaseOutMotion.h" />
+    <ClInclude Include="animation\physics_based_animation\Laser.h" />
+    <ClInclude Include="animation\physics_based_animation\LinearMotion.h" />
+    <ClInclude Include="animation\physics_based_animation\MotionMode.h" />
+    <ClInclude Include="animation\physics_based_animation\Persecutor.h" />
+    <ClInclude Include="animation\physics_based_animation\SpringEasy.h" />
+    <ClInclude Include="animation\physics_based_animation\SpringMotion.h" />
+    <ClInclude Include="animation\physics_based_animation\SpringRegular.h" />
+    <ClInclude Include="animation\track_playback\Tracker.h" />
+    <ClInclude Include="animation\track_playback\TrackPlayback.h" />
+    <ClInclude Include="basics\bound_intersection\BoundIntersection.h" />
+    <ClInclude Include="basics\camera_zoom\TargetGui.h" />
+    <ClInclude Include="basics\camera_zoom\ZoomController.h" />
+    <ClInclude Include="basics\camera_zoom\ZoomSample.h" />
+    <ClInclude Include="basics\euler_angles\EulerAnglesSample.h" />
+    <ClInclude Include="basics\ifps_usage\IFpsMovementController.h" />
+    <ClInclude Include="basics\ifps_usage\IFpsMovementSample.h" />
+    <ClInclude Include="basics\node_spawner_grid\NodeSpawnerGrid.h" />
+    <ClInclude Include="basics\node_spawner_grid\NodeSpawnerGridSample.h" />
+    <ClInclude Include="basics\node_spawner_timer\NodeSpawnerTimer.h" />
+    <ClInclude Include="basics\node_spawner_timer\NodeSpawnerTimerSample.h" />
+    <ClInclude Include="basics\ray_intersection\RayIntersection.h" />
+    <ClInclude Include="basics\simple_movement\SimpleMovement.h" />
+    <ClInclude Include="basics\simple_movement\SimpleMovementInfo.h" />
+    <ClInclude Include="basics\trajectory\TrajectoryLogic.h" />
+    <ClInclude Include="basics\trajectory\TrajectoryMovement.h" />
+    <ClInclude Include="basics\triggers\MathTriggerComponent.h" />
+    <ClInclude Include="basics\triggers\TriggerSample.h" />
+    <ClInclude Include="basics\trigger_buttons\ButtonReactionSample.h" />
+    <ClInclude Include="basics\trigger_buttons\Interactable.h" />
+    <ClInclude Include="basics\trigger_buttons\InteractableButtonComponent.h" />
+    <ClInclude Include="basics\trigger_buttons\InteractableLeverComponent.h" />
+    <ClInclude Include="basics\trigger_buttons\InteractableValveComponent.h" />
+    <ClInclude Include="basics\trigger_buttons\InteractorComponent.h" />
+    <ClInclude Include="complex\boids\Flock.h" />
+    <ClInclude Include="complex\boids\FlockController.h" />
+    <ClInclude Include="complex\boids\FlockSample.h" />
+    <ClInclude Include="complex\boids\Unit.h" />
+    <ClInclude Include="complex\crane_rope\CraneControl.h" />
+    <ClInclude Include="complex\crane_rope\CraneRopeSample.h" />
+    <ClInclude Include="complex\crane_rope\SlingRope.h" />
+    <ClInclude Include="complex\fire_hose\ExtinguishingPuddles.h" />
+    <ClInclude Include="complex\fire_hose\FireHoseSample.h" />
+    <ClInclude Include="complex\fire_hose\Flame.h" />
+    <ClInclude Include="complex\day_night_switch\DayNightSwitcher.h" />
+    <ClInclude Include="complex\day_night_switch\DayNightSwitchSample.h" />
+    <ClInclude Include="complex\day_night_switch\SunController.h" />
+    <ClInclude Include="complex\first_person_controller\FirstPersonController.h" />
+    <ClInclude Include="complex\first_person_controller\FirstPersonControllerSample.h" />
+    <ClInclude Include="complex\lidar\Las.h" />
+    <ClInclude Include="complex\lidar\Lidar.h" />
+    <ClInclude Include="complex\observer_controller\ObserverController.h" />
+    <ClInclude Include="complex\player_persecutor\PlayerPersecutorComponent.h" />
+    <ClInclude Include="complex\player_persecutor\PlayerPersecutorSample.h" />
+    <ClInclude Include="complex\robot_arm\RobotArmConnection.h" />
+    <ClInclude Include="complex\robot_arm\RobotArmController.h" />
+    <ClInclude Include="complex\spectator_controller\SpectatorController.h" />
+    <ClInclude Include="complex\spectator_controller\SpectatorControllerSample.h" />
+    <ClInclude Include="complex\top_down_controller\Selection.h" />
+    <ClInclude Include="complex\top_down_controller\TopDownController.h" />
+    <ClInclude Include="complex\top_down_controller\UnitSelectionCircle.h" />
+    <ClInclude Include="complex\track_non_physical\NonPhysicalTracks.h" />
+    <ClInclude Include="complex\track_non_physical\TrackedVehicleNonPhysical.h" />
+    <ClInclude Include="complex\track_non_physical\WheelAttachment.h" />
+    <ClInclude Include="complex\track_physical\PhysicalTracks.h" />
+    <ClInclude Include="complex\track_physical\TrackedVehiclePhysical.h" />
+    <ClInclude Include="input_controls\input_gamepad\Car.h" />
+    <ClInclude Include="input_controls\input_gamepad\GamepadInput.h" />
+    <ClInclude Include="input_controls\input_joystick\JoysticksInput.h" />
+    <ClInclude Include="input_controls\input_keyboard_mouse\KeyboardAndMouseInput.h" />
+    <ClInclude Include="input_controls\input_touch\TouchInput.h" />
+    <ClInclude Include="menu_ui\DescriptionWindowCreator.h" />
+    <ClInclude Include="network\http_image_request\HttpImageRequestSample.h" />
+    <ClInclude Include="network\http_image_response\HttpImageResponseSample.h" />
+    <ClInclude Include="network\http_simple_request\SimpleHttpRequestSample.h" />
+    <ClInclude Include="network\http_simple_response\SimpleHttpResponseSample.h" />
+    <ClInclude Include="network\tcp_sockets\TCPSocketsSample.h" />
+    <ClInclude Include="network\udp_sockets\UDPSocketsSample.h" />
+    <ClInclude Include="nodes\cluster\ClusterSample.h" />
+    <ClInclude Include="nodes\clutter_to_cluster\ClutterConverter.h" />
+    <ClInclude Include="nodes\clutter_to_cluster\ClutterSample.h" />
+    <ClInclude Include="nodes\dynamic_field_height\DynamicTextureFieldHeight.h" />
+    <ClInclude Include="nodes\dynamic_field_height\DynamicTextureFieldHeightSample.h" />
+    <ClInclude Include="nodes\landscape_combined\CombinedSample.h" />
+    <ClInclude Include="nodes\landscape_combined\HeightSlicer.h" />
+    <ClInclude Include="nodes\landscape_create\CreateSample.h" />
+    <ClInclude Include="nodes\landscape_details\DetailsSample.h" />
+    <ClInclude Include="nodes\landscape_excavation\DiggingTool.h" />
+    <ClInclude Include="nodes\landscape_excavation\ObjectDepth.h" />
+    <ClInclude Include="nodes\landscape_fetch\CameraTerrainFetchSample.h" />
+    <ClInclude Include="nodes\landscape_mask_paint\LandscapeMaskPainter.h" />
+    <ClInclude Include="nodes\landscape_mask_paint\MaskPaintSample.h" />
+    <ClInclude Include="nodes\landscape_mesh\TerrainMesh.h" />
+    <ClInclude Include="nodes\landscape_mesh\TerrainMeshSample.h" />
+    <ClInclude Include="nodes\landscape_paint\LandscapeAlbedoPainter.h" />
+    <ClInclude Include="nodes\landscape_paint\LandscapeHeightPainter.h" />
+    <ClInclude Include="nodes\landscape_paint\LandscapeHeightToAlbedo.h" />
+    <ClInclude Include="nodes\landscape_paint\PaintSample.h" />
+    <ClInclude Include="nodes\landscape_tracks\PathCircle.h" />
+    <ClInclude Include="nodes\landscape_tracks\TrackSpawner.h" />
+    <ClInclude Include="nodes\landscape_tracks\TracksSample.h" />
+    <ClInclude Include="nodes\water_buoyancy\BuoyComponent.h" />
+    <ClInclude Include="nodes\water_buoyancy\BuoySample.h" />
+    <ClInclude Include="nodes\water_custom_wave\CustomWaveSample.h" />
+    <ClInclude Include="nodes\water_fetch_intersection\WaterFetchIntersection.h" />
+    <ClInclude Include="nodes\water_physical_buoyancy\BuoyancyPhysics.h" />
+    <ClInclude Include="nodes\water_physical_buoyancy\BuoyancyPhysicsSample.h" />
+    <ClInclude Include="nodes\water_physical_buoyancy\Movement.h" />
+    <ClInclude Include="nodes\water_physical_buoyancy\Waves.h" />
+    <ClInclude Include="nodes\water_simple_boat\BoatControl.h" />
+    <ClInclude Include="nodes\water_simple_boat\BoatFoam.h" />
+    <ClInclude Include="nodes\water_simple_boat\BoatSample.h" />
+    <ClInclude Include="nodes\water_simple_boat\WakeWaveTrail.h" />
+    <ClInclude Include="physics\body_events\BodyCallbacks.h" />
+    <ClInclude Include="physics\body_fracture_explosion\BodyFractureExplosion.h" />
+    <ClInclude Include="physics\body_fracture_explosion\BodyFractureExplosionSample.h" />
+    <ClInclude Include="physics\body_fracture_shooting_gallery\BodyFractureShootingGalleryGun.h" />
+    <ClInclude Include="physics\body_fracture_shooting_gallery\BodyFractureShootingGallerySample.h" />
+    <ClInclude Include="physics\joint_events\JointCallbacks.h" />
+    <ClInclude Include="physics\physics_movement\PhysicsMovement.h" />
+    <ClInclude Include="physics\physics_movement\PhysicsMovementSample.h" />
+    <ClInclude Include="physics\update_physics\UpdatePhysicsUsageController.h" />
+    <ClInclude Include="physics\update_physics\UpdatePhysicsUsageSample.h" />
+    <ClInclude Include="plugins\fmod_core\FMODCoreSample.h" />
+    <ClInclude Include="plugins\fmod_studio\FMODStudioSample.h" />
+    <ClInclude Include="render\camera_to_texture\CameraToTexture.h" />
+    <ClInclude Include="render\compute_shader\ComputeShader.h" />
+    <ClInclude Include="render\compute_shader_image\ComputeShaderImage.h" />
+    <ClInclude Include="render\ffp_depth\FFPDepth.h" />
+    <ClInclude Include="render\gbuffer_read\GBufferRead.h" />
+    <ClInclude Include="render\gbuffer_read\GBufferReadSample.h" />
+    <ClInclude Include="render\gbuffer_write\GBufferWrite.h" />
+    <ClInclude Include="render\gui_to_texture\GuiToTexture.h" />
+    <ClInclude Include="render\gui_to_texture\WidgetClock.h" />
+    <ClInclude Include="render\gui_to_texture\WidgetNoSignal.h" />
+    <ClInclude Include="render\node_to_texture\NodeToTexture.h" />
+    <ClInclude Include="render\render_target\RenderTargetSample.h" />
+    <ClInclude Include="render\screenshot\Screenshot.h" />
+    <ClInclude Include="render\screenshot\ScreenshotSample.h" />
+    <ClInclude Include="render\screenshot_advanced\ScreenshotAdvancedSample.h" />
+    <ClInclude Include="render\split_screen_texture\CarControl.h" />
+    <ClInclude Include="render\split_screen_texture\SplitScreenTexture.h" />
+    <ClInclude Include="render\structured_buffer\StructuredBufferSample.h" />
+    <ClInclude Include="render\textures\TexturesSample.h" />
+    <ClInclude Include="render\weapon_clipping\WeaponClipping.h" />
+    <ClInclude Include="render\weapon_clipping\WeaponClippingSample.h" />
+    <ClInclude Include="systems\async_queue\AsyncQueueSample.h" />
+    <ClInclude Include="systems\async_queue_tasks\AsyncQueueTasksSample.h" />
+    <ClInclude Include="systems\cad_like_view\CADLikeView.h" />
+    <ClInclude Include="systems\cad_like_view\ViewportCube.h" />
+    <ClInclude Include="systems\callbacks\Callbacks.h" />
+    <ClInclude Include="systems\console\ConsoleSample.h" />
+    <ClInclude Include="systems\cpu_shader\CPUShaderSample.h" />
+    <ClInclude Include="systems\events\EventsSample.h" />
+    <ClInclude Include="systems\events_advanced\EventsAdvancedSample.h" />
+    <ClInclude Include="systems\events_advanced\EventsAdvancedUnit.h" />
+    <ClInclude Include="systems\ffp\FFPSample.h" />
+    <ClInclude Include="systems\files\FilesSample.h" />
+    <ClInclude Include="systems\images\ImagesSample.h" />
+    <ClInclude Include="systems\intersection_multiple_async_requests\MultipleAsyncRequestsSample.h" />
+    <ClInclude Include="systems\intersection_simple_async_request\SimpleAsyncRequestSample.h" />
+    <ClInclude Include="systems\json\JsonSample.h" />
+    <ClInclude Include="systems\materials_and_properties\MaterialsAndPropertiesSample.h" />
+    <ClInclude Include="systems\microprofiler\MicroprofilerSample.h" />
+    <ClInclude Include="systems\microprofiler\MicroprofilerSleepyNode.h" />
+    <ClInclude Include="systems\mount_points\MountPointsSample.h" />
+    <ClInclude Include="systems\stream_base\StreamBaseSample.h" />
+    <ClInclude Include="systems\thread\ThreadSample.h" />
+    <ClInclude Include="systems\two_point_perspective\CameraShiftController.h" />
+    <ClInclude Include="systems\two_point_perspective\TwoPointPerspectiveSample.h" />
+    <ClInclude Include="systems\usc_arrays\ScriptArrays.h" />
+    <ClInclude Include="systems\usc_callbacks\ScriptCallbacks.h" />
+    <ClInclude Include="systems\usc_classes\ScriptClasses.h" />
+    <ClInclude Include="systems\usc_functions\ScriptFunctions.h" />
+    <ClInclude Include="systems\usc_inheritance\ScriptInheritance.h" />
+    <ClInclude Include="systems\usc_stack\ScriptStack.h" />
+    <ClInclude Include="systems\usc_structures\ScriptStructure.h" />
+    <ClInclude Include="systems\usc_transfer\ScriptTransfer.h" />
+    <ClInclude Include="systems\usc_types\ScriptTypes.h" />
+    <ClInclude Include="systems\usc_variable\ScriptVariables.h" />
+    <ClInclude Include="systems\visualizer\VisualizerSample.h" />
+    <ClInclude Include="systems\visualizer\VisualizerUsage.h" />
+    <ClInclude Include="systems\xml\XmlSample.h" />
+    <ClInclude Include="menu_ui\SampleDescriptionWindow.h" />
+    <ClInclude Include="AppEditorLogic.h" />
+    <ClInclude Include="AppSystemLogic.h" />
+    <ClInclude Include="AppWorldLogic.h" />
+    <ClInclude Include="menu_ui\MainMenu.h" />
+    <ClInclude Include="menu_ui\WorldMenu.h" />
+    <ClInclude Include="user_interface\object_frame\ObjectFrame.h" />
+    <ClInclude Include="user_interface\object_frame\ObjectFrameSample.h" />
+    <ClInclude Include="user_interface\target_marker\TargetMarker.h" />
+    <ClInclude Include="user_interface\user_interface\UserInterface.h" />
+    <ClInclude Include="user_interface\widgets\Button.h" />
+    <ClInclude Include="user_interface\widgets\CheckBox.h" />
+    <ClInclude Include="user_interface\widgets\ComboBox.h" />
+    <ClInclude Include="user_interface\widgets\EditLine.h" />
+    <ClInclude Include="user_interface\widgets\EditText.h" />
+    <ClInclude Include="user_interface\widgets\Icon.h" />
+    <ClInclude Include="user_interface\widgets\Label.h" />
+    <ClInclude Include="user_interface\widgets\ListBox.h" />
+    <ClInclude Include="user_interface\widgets\Menu.h" />
+    <ClInclude Include="user_interface\widgets\Scroll.h" />
+    <ClInclude Include="user_interface\widgets\Slider.h" />
+    <ClInclude Include="user_interface\widgets\SpinBox.h" />
+    <ClInclude Include="user_interface\widgets\Sprite.h" />
+    <ClInclude Include="user_interface\widgets\TreeBox.h" />
+    <ClInclude Include="user_interface\widgets\RadioButtons.h" />
+    <ClInclude Include="user_interface\widget_canvas\Canvas.h" />
+    <ClInclude Include="user_interface\widget_dialogs\Dialogs.h" />
+    <ClInclude Include="user_interface\widget_extern\ExternWidget.h" />
+    <ClInclude Include="user_interface\widget_manipulators\Manipulators.h" />
+    <ClInclude Include="user_interface\widget_manipulators\ManipulatorsSample.h" />
+    <ClInclude Include="user_interface\widget_window\Window.h" />
+    <ClInclude Include="utils\AsyncTasks.h" />
+    <ClInclude Include="utils\BodyFractureUnit.h" />
+    <ClInclude Include="utils\Crosshair.h" />
+    <ClInclude Include="utils\DefaultPlayer.h" />
+    <ClInclude Include="utils\EventTask.h" />
+    <ClInclude Include="utils\InputManager.h" />
+    <ClInclude Include="utils\intersection\Intersections.h" />
+    <ClInclude Include="utils\Math.h" />
+    <ClInclude Include="utils\MutableLambda.h" />
+    <ClInclude Include="utils\navigation\Seeker.h" />
+    <ClInclude Include="utils\navigation\Target.h" />
+    <ClInclude Include="utils\network\httplib.h" />
+    <ClInclude Include="utils\network\HttpServer.h" />
+    <ClInclude Include="utils\PersecutorTarget.h" />
+    <ClInclude Include="utils\ScreenshotMaker.h" />
+    <ClInclude Include="utils\SimpleInformationBox.h" />
+    <ClInclude Include="utils\SimplePathControl.h" />
+    <ClInclude Include="utils\Spawner.h" />
+    <ClInclude Include="utils\Spline.h" />
+    <ClInclude Include="utils\UnigineScriptsInterpreter.h" />
+    <ClInclude Include="utils\Utils.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Natvis Include="unigine_stl.natvis" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+</Project>

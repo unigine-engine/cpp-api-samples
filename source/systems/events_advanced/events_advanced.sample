@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sample title="Events Advanced">
+	<sdk_desc>Advanced ways of subscribing to events in UNIGINE: using extra arguments, discarding parameters, and storing connection handles for disconnection.</sdk_desc>
+	<desc>
+		<brief>This sample demonstrates advanced usage of the UNIGINE <strong><link to="programming_events">event system</link></strong>.</brief>
+		<para><ui>EventsAdvancedSample.cpp</ui> triggers custom rotation events when specific keys are pressed. Each event passes one or more arguments to connected listeners.</para>
+		<para><ui>EventsAdvancedUnit.cpp</ui> shows how to connect various types of handlers, including:</para>
+		<ul>
+			<li>Class methods with extra arguments</li>
+			<li>Free functions with discarded or additional arguments</li>
+			<li>Lambdas using <ui>connectUnsafe()</ui></li>
+			<li>Storing connections using <ui>EventConnection</ui> or <ui>EventConnectionId</ui> for later disconnection</li>
+		</ul>
+		<para>This sample helps understand flexible patterns for event handling in modular component systems.</para>
+	</desc>
+	<controls>
+		<![CDATA[
+		<p><b>T</b> — Rotate around X-axis</p>
+		<p><b>Y</b> — Rotate around Y-axis</p>
+		<p><b>U</b> — Rotate around Z-axis</p>
+		<p><b>I</b> — Rotate around all axes (XYZ)</p>
+		]]>
+	</controls>
+	<tags>
+		<tag>Systems</tag>
+		<tag>Logic</tag>
+	</tags>
+</sample>

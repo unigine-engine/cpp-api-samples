@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>90bcf508b2a0783d53d346988271d3fae397f93a</guid>
+	<type>material</type>
+	<hash>8272722a</hash>
+	<runtimes>
+		<runtime id="90bcf508b2a0783d53d346988271d3fae397f93a" name="compute_shader_image_example" link="0" type="5"/>
+	</runtimes>
+</asset>

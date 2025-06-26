@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>313ded88f0fedc1b84fe67a3d9321de3ebfc34ad</guid>
+	<type>property</type>
+	<hash>7a4a78cf</hash>
+	<runtimes>
+		<runtime id="313ded88f0fedc1b84fe67a3d9321de3ebfc34ad" name="EditLine" link="0" type="4"/>
+	</runtimes>
+</asset>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="UpdatePhysicsUsageController" manual="1" parent_name="node_base" tooltip="This component controlls node physics movement and uses update and update_physics for itdepending on parameter value">
+	<parameter name="use_update" type="toggle" title="Use update function">0</parameter>
+	<parameter name="linear_force" type="float" title="Linear force applied to body">5</parameter>
+</property>

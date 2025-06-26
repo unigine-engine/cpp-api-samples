@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Spline Graph">
+	<sdk_desc>This sample demonstrates how to create and visualize a spline graph (SplineGraph), and move an object along it using the C++ API.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample demonstrates how to create and visualize a spline graph (<ui><strong><link to="splinegraph_class">SplineGraph</link></strong></ui>), and move an object along it using the C++ API. A <strong nt="1">SplineGraph</strong> is created at <ui>Initialization</ui> by adding points and segments using its API (<ui>addPoint(), addSegment()</ui> methods), with control points placed randomly.</para>
+			<ul>
+				<li>A cube mesh is created and added to the scene.</li>
+				<li>During the <ui>Update</ui> stage, the cube moves along the spline by switching between its consecutive segments and evaluating a point on it using the <ui>calcSegment*</ui> methods.</li>
+			</ul>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Animation</tag>
+		<tag>Water</tag>
+	</tags>
+</sample>

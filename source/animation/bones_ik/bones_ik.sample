@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Bones IK">
+	<sdk_desc>Controlling bones with inverse kinematics.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample demonstrates how to control bones using inverse kinematics</para>
+			<para>The pole vector is used as a constraint that defines the plane of joint bending.</para>
+		</brief>
+		<para>The example is useful for creating animations where character bones are automatically positioned and oriented to achieve realistic movement.</para>
+	</desc>
+	<tags>
+		<tag>Animation</tag>
+	</tags>
+</sample>

@@ -1,0 +1,56 @@
+BaseMaterial <var_prefix=var texture_prefix=tex node=none hidden=1>
+{
+	Slider ifps=0.0
+
+	Pass post
+	{
+		Compute=
+		#{
+			#include <core/materials/shaders/render/common.h>
+
+			// Unordered access textures
+			INIT_RW_TEXTURE_RGBA8(0,RW_DYNAMIC_TEXTURE)
+
+			// Set 32x32 threads in one group
+			MAIN_COMPUTE_BEGIN(32,32,1)
+
+				// Our texture resolution is 1024x1024, for solve particles system we can dispatch 32x32 thread groups - 32x32 threads each
+				// i, j - current pixel position in texture
+				uint i = GROUP_ID.x * 32 + GROUP_THREAD_ID.x;
+				uint j = GROUP_ID.y * 32 + GROUP_THREAD_ID.y;
+
+				// Read value from dynamic texture
+				float4 value = TEXTURE_RW_LOAD_RGBA8(RW_DYNAMIC_TEXTURE,int2(i,j));
+
+				bool quad = (float(j % 32) / 32.0f) < 0.5f;
+
+				float speed = quad ? 1.0f : 0.5f;
+
+				// Change value
+				if(value.a >= 1) {
+					if(value.z >= 1.0f)
+						value.a = 0.0f; // change sequence
+					if(value.y >= 1.0f)
+						value.z += speed * var_ifps;
+					else if(value.x >= 1.0f)
+						value.y += speed * var_ifps;
+					else
+						value.x += speed * var_ifps;
+				} else {
+					if(value.z <= 0.0f)
+						value.a = 1.0f; // change sequence
+					if(value.y <= 0.0f)
+						value.z -= speed * var_ifps;
+					else if(value.x <= 0.0f)
+						value.y -= speed * var_ifps;
+					else
+						value.x -= speed * var_ifps;
+				}
+
+				// Store value to dynamic texture
+				TEXTURE_RW_STORE_RGBA8(RW_DYNAMIC_TEXTURE,int2(i,j),value);
+
+			MAIN_COMPUTE_END
+		#}
+	}
+}

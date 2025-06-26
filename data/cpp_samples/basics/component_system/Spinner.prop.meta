@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>04b125de01eb0a9ee1aba2c694c7e2c185b09439</guid>
+	<type>property</type>
+	<hash>3acecdab</hash>
+	<runtimes>
+		<runtime id="04b125de01eb0a9ee1aba2c694c7e2c185b09439" name="Spinner" link="0" type="4"/>
+	</runtimes>
+</asset>

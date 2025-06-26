@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="InteractableButtonComponent" manual="1" parent_name="node_base">
+	<parameter name="togglable" type="toggle">1</parameter>
+	<parameter name="default_state" type="toggle">0</parameter>
+	<parameter name="has_animation_time" type="toggle">1</parameter>
+	<parameter name="anim_duration" type="float">0.2</parameter>
+	<parameter name="position" type="vec3">0.000000 0.000000 0.000000</parameter>
+	<parameter name="rotation_axis" type="vec3">1.000000 0.000000 0.000000</parameter>
+	<parameter name="rotation_angle" type="float">0</parameter>
+	<parameter name="transformation_node" type="node">0</parameter>
+</property>

@@ -1,0 +1,44 @@
+BaseMaterial <editable=false var_prefix=var texture_prefix=tex>
+{
+	Texture2D brush_texture <internal=true>
+	Texture2D brush_mask <internal=true>
+	Float brush_angle <internal=true>
+	Float brush_opacity <internal=true>
+	Float4 brush_color <internal=true>
+
+	Pass landscape_mask_brush
+	{
+		Fragment=
+		#{
+			#include <core/materials/shaders/render/common.h>
+			
+			STRUCT_FRAG_BEGIN
+			STRUCT_FRAG_END
+
+			INIT_RW_TEXTURE_RGBA8(0, RW_TEX_MASK)
+			INIT_RW_TEXTURE_RGBA8(1, RW_TEX_OPACITY)
+
+			MAIN_FRAG_BEGIN(FRAGMENT_IN)
+			
+				float2 uv = float2(IN_UV.x, 1.0f - IN_UV.y);
+				float2 brush_uv = rotateUV(uv, var_brush_angle);
+				if(checkUV(brush_uv))
+					discard;
+
+				float4 brush_mask = TEXTURE(tex_brush_texture, brush_uv) * var_brush_color;
+				float brush_alpha = TEXTURE(tex_brush_mask, brush_uv).w * var_brush_opacity;
+
+				int2 mask_coord = toInt2(IN_POSITION.xy);
+				float4 mask = TEXTURE_RW_LOAD_RGBA8(RW_TEX_MASK, mask_coord);
+				float4 alpha = TEXTURE_RW_LOAD_RGBA8(RW_TEX_OPACITY, mask_coord);
+
+				float4 new_mask = (brush_mask * brush_alpha + mask * (1.0f - brush_alpha));
+				float4 new_alpha = float4(brush_alpha, brush_alpha, brush_alpha, brush_alpha) + alpha * (1.0f - brush_alpha);
+
+				TEXTURE_RW_STORE_RGBA8(RW_TEX_MASK, mask_coord, new_mask);
+				TEXTURE_RW_STORE_RGBA8(RW_TEX_OPACITY, mask_coord, new_alpha);
+
+			MAIN_FRAG_END
+		#}
+	}
+}

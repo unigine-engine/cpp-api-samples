@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>2a7266d3233dd894f7d805199ea1dcde16b2c6e6</guid>
+	<type>property</type>
+	<hash>8d1b44ad</hash>
+	<runtimes>
+		<runtime id="2a7266d3233dd894f7d805199ea1dcde16b2c6e6" name="CustomWaveSample" link="0" type="4"/>
+	</runtimes>
+</asset>

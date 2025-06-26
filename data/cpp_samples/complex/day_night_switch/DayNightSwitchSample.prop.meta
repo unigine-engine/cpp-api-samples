@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>d92e2723840fc1abd4234184bf44803742a8fb44</guid>
+	<type>property</type>
+	<hash>994ebeae</hash>
+	<runtimes>
+		<runtime id="d92e2723840fc1abd4234184bf44803742a8fb44" name="DayNightSwitchSample" link="0" type="4"/>
+	</runtimes>
+</asset>

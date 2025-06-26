@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sample title="WidgetExtern">
+	<sdk_desc>Defining a custom widget via the C++ API using <i>WidgetExternBase</i>, with full control over layout, rendering, and interaction</sdk_desc>
+	<desc>
+		<brief>This sample demonstrates how to create a custom GUI widget by inheriting from <ui><link to="widgetexternbase_class">WidgetExternBase</link></ui> via the C++ API. The custom class overrides key methods like <ui><link to="widgetexternbase_class" offset="render_void">render()</link></ui>, <ui><link to="widgetexternbase_class" offset="arrange_void">arrange()</link></ui>, and <ui><link to="widgetexternbase_class" offset="checkCallbacks_int_int_void">checkCallbacks()</link></ui> to implement unique visual and interactive behavior.</brief>
+		<para>The widget is registered with a unique class ID using <ui><link to="widgetexternbase_class" offset="addClassID_int_void">WidgetExternBase::addClassID()</link></ui>, and can then be instantiated using <ui><link to="widgetextern_class" offset="WidgetExtern_int">WidgetExtern::create()</link></ui>.</para>
+		<para>This setup allows full control over widget rendering and logic directly in C++.</para>
+	</desc>
+	<tags>
+		<tag>Widgets</tag>
+		<tag>Interface (GUI)</tag>
+		<tag>Extension &amp; Customization</tag>
+	</tags>
+</sample>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>a8b0f43dcb5701da8d0d3a1cad1be8be16989c0a</guid>
+	<type>property</type>
+	<hash>90d393</hash>
+	<runtimes>
+		<runtime id="a8b0f43dcb5701da8d0d3a1cad1be8be16989c0a" name="TracksSample" link="0" type="4"/>
+	</runtimes>
+</asset>

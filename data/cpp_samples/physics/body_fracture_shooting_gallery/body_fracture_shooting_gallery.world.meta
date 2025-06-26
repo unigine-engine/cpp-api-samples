@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>5e43ac6cad445854aa1850cd06766da97c7d7380</guid>
+	<type>world</type>
+	<hash>0bd73c6e</hash>
+	<runtimes>
+		<runtime id="5e43ac6cad445854aa1850cd06766da97c7d7380" name="body_fracture_shooting_gallery.world" link="0"/>
+	</runtimes>
+	<parameters>
+		<parameter type="string" name="physics_settings_path"/>
+		<parameter type="string" name="render_settings_path"/>
+		<parameter type="string" name="script_name"/>
+		<parameter type="string" name="sound_settings_path"/>
+		<parameter type="string" name="viewports_settings"/>
+	</parameters>
+</asset>

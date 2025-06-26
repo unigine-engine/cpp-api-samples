@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sample title="Crane Rope">
+	<sdk_desc>A simple and elegant way of creating a winch or hoist using a combination of dynamically added JointBall and geometry</sdk_desc>
+	<desc>
+		<brief>Rope physics can be extremely difficult. The sample features a simple and elegant way of creating a winch or hoist using a combination of dynamically added <ui><link to="jointball_class">JointBall</link></ui> and geometry.</brief>
+		<para>You can rotate the crane, adjust the rope length, change the mass of the attached load, and detach the load to observe the resulting motion. Enabling the <ui><link to="visualizer_class">Visualizer</link></ui> via checkbox in the sample's UI allows you to see how the position of the joint ball changes in response to these parameter adjustments. The rope also includes an optional tension compensation feature, which helps maintain rope stability and realism under varying loads.</para>
+		<para>This type of winch is suitable for simulation of helicopter operations or heavy duty equipment towing. The rope is implemented as a C++ Component that you can use in your project.</para>
+	</desc>
+	<controls>
+		<![CDATA[
+<b>J</b> and <b>L</b> - Rotate crane<br/>
+<b>I</b> and <b>K</b> - Change rope's length<br/>
+<b>O</b> - Attach bag<br/>
+<b>U</b> - Detach bag
+		]]>
+	</controls>
+	<tags>
+		<tag>Complex Solutions</tag>
+		<tag>Physics</tag>
+		<tag>Rope &amp; Cloth</tag>
+		<tag>Basic Recipes</tag>
+		<tag>Sim</tag>
+	</tags>
+</sample>

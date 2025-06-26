@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="GBufferReadSample" manual="1" parent_name="node_base">
+	<parameter name="node_to_render" type="node">0</parameter>
+	<parameter name="roughness_node_param" type="node" title="Roughness Display">0</parameter>
+	<parameter name="metallness_node_param" type="node" title="Metalness Display">0</parameter>
+	<parameter name="albedo_node_param" type="node" title="Albedo Display">0</parameter>
+	<parameter name="normal_node_param" type="node" title="Normal Display">0</parameter>
+	<parameter name="depth_node_param" type="node" title="Depth Display">0</parameter>
+</property>

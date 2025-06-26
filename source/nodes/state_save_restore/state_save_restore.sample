@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="State Save Restore">
+	<sdk_desc>This sample demonstrates how to save and restore the state of an arbitrary Node, which can be used to implement things like Scene serialization, Undo/Redo systems, or Game saves.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample demonstrates how to save and restore the state of an arbitrary Node using the <ui>saveState()</ui> and <ui>restoreState()</ui> methods. In this sample we:</para>
+			<ul>
+				<li>At <ui>Initialization</ui> create a <ui><strong><link to="blob_class">Blob</link></strong></ui> container for state storage and save the initial state of the referenced node.</li>
+				<li>Enable visualizer (a semi-transparent box) at saved position for visualization.</li>
+				<li>Save and restore the Node's state at any time by clicking the sample UI panel's <ui>Save</ui> and <ui>Restore</ui> buttons.</li>
+			</ul>
+			<para><strong>Use Cases</strong>:</para>
+			<ul>
+				<li>Game saves</li>
+				<li>Undo/Redo systems</li>
+				<li>Scene serialization</li>
+			</ul>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Objects</tag>
+		<tag>Logic</tag>
+		<tag>Basic Recipes</tag>
+	</tags>
+</sample>

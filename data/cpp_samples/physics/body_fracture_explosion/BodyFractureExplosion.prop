@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="BodyFractureExplosion" manual="1" parent_name="node_base">
+	<parameter name="debug" type="toggle">1</parameter>
+	<parameter name="max_radius" type="float">10</parameter>
+	<parameter name="speed" type="float">100</parameter>
+	<parameter name="power" type="float">100</parameter>
+</property>

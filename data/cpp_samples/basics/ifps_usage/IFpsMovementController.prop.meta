@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>85bcba1cca83b3aec8ad510e5dde73b9632fb396</guid>
+	<type>property</type>
+	<hash>4f816822</hash>
+	<runtimes>
+		<runtime id="85bcba1cca83b3aec8ad510e5dde73b9632fb396" name="IFpsMovementController" link="0" type="4"/>
+	</runtimes>
+</asset>

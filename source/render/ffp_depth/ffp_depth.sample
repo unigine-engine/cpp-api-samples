@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="FFP Depth Visualizer">
+	<desc>
+		<brief>
+			<para>This sample demonstrates how to render custom visual elements (lines) using the <ui>FFP</ui> with depth testing enabled.</para>
+			<para>The elements are drawn during the visualizer stage and properly sorted with respect to scene geometry using the depth buffer.</para>
+		</brief>
+		<para>The sample sets up a render callback via <ui><link to="render_class" offset="getEventEndVisualizer_Event">Render::getEventEndVisualizer()</link></ui>, which is used to draw a simple line segment in camera space. Drawing is performed using <ui>FFP</ui>, with blending and depth-testing configured manually via <ui><link to="render_state_class">RenderState</link></ui> class.</para>
+		<para>The scene features a red line intersecting the object. The projection matrix is modified to account for reverse depth and range remapping, ensuring correct visual sorting. The line vertices are transformed into camera space using the current modelview matrix, and rendered in screen space.</para>
+		<para>This sample can be used for fast rendering of various additional or debug elements (such as semi-transparent objects, frames, <ui>3D</ui> grids and coordinate systems, path traces, motion trails, line-of-sight visualization etc.) while ensuring consistency with the scene content.</para>
+	</desc>
+	<tags>
+		<tag>Render</tag>
+	</tags>
+</sample>

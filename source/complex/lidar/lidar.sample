@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="LiDAR" img="yes">
+	<sdk_desc>A realistic LiDAR sensor simulation, used in self-driving cars, robotics, robot vacuum cleaners and drones to map their surroundings.</sdk_desc>
+	<desc>
+		<brief>
+		<para>This sample demonstrates a realistic <strong nt="1">LiDAR</strong> sensor simulation, used in self-driving cars, robotics, robot vacuum cleaners, and drones to map their surroundings. It works by combining four (or optionally more) virtual depth cameras to create a full <value>360</value>-degree scan. The <strong nt="1">LiDAR</strong> emits rays and measures distances by rendering a depth map of the environment. In addition, a response intensity for each ray is calculated using normal, roughness and metalness from the G-buffer. You can tweak its settings (scan range, FOV, resolution, etc.) via API.</para>
+			<para><strong>Key Features:</strong></para>
+				<ul>
+					<li>Emulated LiDAR using <value>4 or more</value> rendered views</li>
+					<li>Configurable <strong>min/max range, FOV, beam resolution</strong> (number of stacks and slices)</li>
+					<li>Asynchronous data transfer using <ui><link to="render_class" offset="asyncTransferTextureToImage_TextureToImageTransfered_TextureToImageTransfered_Texture_void">asyncTransferTextureToImage</link></ui></li>
+					<li>Dynamic beam caching, image post-processing, and world-space point rendering</li>
+					<li>Optional visual debugging: depth maps, scan points, and frustums</li>
+					<li>Auto-refreshing system with internal transform and scan updates.</li>
+				</ul>
+			<para><strong>Use Cases:</strong></para>
+				<ul>
+					<li>Autonomous vehicle simulation (robot vacuums, drones, cars)</li>
+					<li>Autopilot and AI training using virtual LiDAR input</li>
+					<li>Robot navigation and localization (SLAM, path planning).</li>
+				</ul>
+			</brief>
+	</desc>
+	<tags>
+		<tag>Complex Solutions</tag>
+		<tag>Intersections</tag>
+		<tag>Sensors</tag>
+		<tag>Sim</tag>
+	</tags>
+</sample>

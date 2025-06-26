@@ -1,0 +1,65 @@
+BaseMaterial <var_prefix=var texture_prefix=tex node=none hidden=1>
+{
+	Pass post
+	{
+		Fragment=
+		#{
+			#include <core/materials/shaders/render/common.h>
+
+			// these lines corresponds to
+			// these lines in GBufferWrite.cpp:
+			//	RenderState::setTexture(RenderState::BIND_FRAGMENT, 0, albedo);
+			//	RenderState::setTexture(RenderState::BIND_FRAGMENT, 1, normal);
+			//	RenderState::setTexture(RenderState::BIND_FRAGMENT, 2, shading);
+			INIT_TEXTURE(0, TEX_ALBEDO)
+			INIT_TEXTURE(1, TEX_NORMAL)
+			INIT_TEXTURE(2, TEX_SHADING)
+
+
+			// these lines corresponds to
+			// these lines in GBufferWrite.cpp
+			// shader->setParameterFloat("ss_influence", influence);
+			// shader->setParameterFloat("ss_plastic", plastic);
+			// shader->setParameterFloat4("ss_color", color);
+			CBUFFER(parameters)
+				UNIFORM float ss_influence;
+				UNIFORM float ss_plastic;
+				UNIFORM float4 ss_color;
+			END
+
+			#define OUT_ALBEDO		0
+			#define OUT_NORMAL		1
+			#define OUT_SHADING		2
+
+			// these lines correspond to
+			// these lines in GBufferWrite.cpp
+			// render_target->bindColorTexture(0, albedo_temp);
+			// render_target->bindColorTexture(1, normal_temp);
+			// render_target->bindColorTexture(2, shading_temp);
+			STRUCT_FRAG_BEGIN
+				INIT_MRT(float4, OUT_ALBEDO)
+				INIT_MRT(float4, OUT_NORMAL)
+				INIT_MRT(float4, OUT_SHADING)
+			STRUCT_FRAG_END
+
+			MAIN_FRAG_BEGIN(FRAGMENT_IN)
+
+				float2 uv = IN_POSITION.xy * s_viewport.zw;
+
+				float4 albedo = TEXTURE_BIAS_ZERO(TEX_ALBEDO, uv);
+				float4 normal = TEXTURE_BIAS_ZERO(TEX_NORMAL, uv);
+				float4 shading = TEXTURE_BIAS_ZERO(TEX_SHADING, uv);
+
+				OUT_MRT(OUT_ALBEDO) = albedo;
+				OUT_MRT(OUT_ALBEDO).rgb = lerp(albedo.rgb, ss_color.rgb, ss_influence);
+
+				OUT_MRT(OUT_NORMAL) = normal;
+				OUT_MRT(OUT_NORMAL).a = lerp(normal.a, ss_plastic, ss_influence); // roughness
+
+				OUT_MRT(OUT_SHADING) = shading;
+				OUT_MRT(OUT_SHADING).r = lerp(shading.r, 1.0f - ss_plastic, ss_influence); // metalness
+
+			MAIN_FRAG_END
+		#}
+	}
+}

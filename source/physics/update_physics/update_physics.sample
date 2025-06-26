@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Update Physics">
+	<sdk_desc>Demonstration of the difference between implementation of physics-driven movement within the <i>update()</i> and <i>updatePhysics()</i> methods.</sdk_desc>
+	<desc>
+		<brief>This sample demonstrates the difference between <ui><link to="execution_sequence_code_update" offset="code_update">update()</link></ui> and <ui><link to="execution_sequence_code_update" offset="code_updatePhysics">updatePhysics()</link></ui> methods.</brief>
+		<para>The sample features two physics-enabled cubes that move back and forth along the X-axis. The movement logic is implemented via in the <ui>UpdatePhysicsUsageController.cpp</ui> file. Use the <strong nt="1">Max FPS</strong> slider to change the target frame rate.</para>
+		<para>The green cube uses <ui><link to="execution_sequence_code_update" offset="code_updatePhysics">updatePhysics()</link></ui>, which is called at a fixed physics frame rate, and should be considered a correct example for physics-related logic.</para>
+		<para>The red cube uses <ui><link to="execution_sequence_code_update" offset="code_update">update()</link></ui>, which runs every render frame. This approach may cause unstable results when interacting with physics and should generally be avoided when implementing physics-driven movement.</para>
+		<para>Use <ui>updatePhysics()</ui> to implement continuous or physics-dependent operations (e.g., force application, collision response), as it runs at a fixed time step, unlike <ui>update()</ui> which depends on the rendering frame rate.</para>
+	</desc>
+	<tags>
+		<tag>Physics</tag>
+		<tag>Logic</tag>
+	</tags>
+</sample>

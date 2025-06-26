@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="HttpImageToTexture" manual="1" parent_name="node_base">
+	<parameter name="host" type="string">eu.httpbin.org</parameter>
+	<parameter name="args" type="string">/image/</parameter>
+	<parameter name="surface" type="int">0</parameter>
+	<parameter name="texture" type="string">albedo</parameter>
+</property>

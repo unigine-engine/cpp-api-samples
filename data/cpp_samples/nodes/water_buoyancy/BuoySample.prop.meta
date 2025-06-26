@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>2c8ebb3a542464c3bff4782e9e3a4f3e8e83b214</guid>
+	<type>property</type>
+	<hash>d94098d1</hash>
+	<runtimes>
+		<runtime id="2c8ebb3a542464c3bff4782e9e3a4f3e8e83b214" name="BuoySample" link="0" type="4"/>
+	</runtimes>
+</asset>

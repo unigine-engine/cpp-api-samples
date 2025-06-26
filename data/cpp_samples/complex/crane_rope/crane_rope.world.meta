@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>53bf44fa7fc5651033fea709bd0a1a40095c3b7b</guid>
+	<type>world</type>
+	<hash>6c5fbf8</hash>
+	<runtimes>
+		<runtime id="53bf44fa7fc5651033fea709bd0a1a40095c3b7b" name="crane_rope.world" link="0"/>
+	</runtimes>
+	<parameters>
+		<parameter type="string" name="physics_settings_path"/>
+		<parameter type="string" name="render_settings_path"/>
+		<parameter type="string" name="script_name"/>
+		<parameter type="string" name="sound_settings_path"/>
+		<parameter type="string" name="viewports_settings"/>
+	</parameters>
+</asset>

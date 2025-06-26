@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="DayNightSwitcher" manual="1" parent_name="node_base" tooltip="This component displays information about the day and night switching.">
+	<parameter name="sun_node" type="node" title="Sun node" tooltip="Sun node">0</parameter>
+	<parameter name="selected_control_type" type="switch" items="Zenith,Time">0</parameter>
+	<parameter name="sun_zenit_threshold" type="float" selected_control_type="0">85</parameter>
+	<parameter name="time_morning" type="ivec2" selected_control_type="1">7 30</parameter>
+	<parameter name="time_evening" type="ivec2" selected_control_type="1">19 30</parameter>
+	<parameter name="emission_material_parameter_name" type="string">emission_scale</parameter>
+	<parameter name="materials_day_enabled" type="array" array_type="material"/>
+	<parameter name="materials_night_enabled" type="array" array_type="material"/>
+	<parameter name="nodes_day_enabled" type="array" array_type="node"/>
+	<parameter name="nodes_night_enabled" type="array" array_type="node"/>
+</property>

@@ -1,0 +1,45 @@
+
+string source = "From [USC]: ";
+int init()
+{
+	log.message("\n\n=================Functions Sample=================\n\n");
+
+	log.message("Functions:\n\n");
+
+	// my_sum(1) with default second argument
+	log.message(source + "result is: %s\n\n", typeinfo(my_sum(1)));
+
+	// my_sum(1,2)
+	log.message(source + "result is: %s\n\n", typeinfo(my_sum(1, 2)));
+
+	// my_sum("begin","end")
+	log.message(source + "result is: %s\n\n", typeinfo(my_sum("begin", "end")));
+
+	// my_sum(1,"end")
+	log.message(source + "result is: %s\n\n", typeinfo(my_sum(1, "end")));
+
+	// my_mul(16,64)
+	log.message(source + "result is: %s\n\n", typeinfo(my_mul(16, 64)));
+
+	// my_dot(vec3(1.0f,2.0f,3.0f),vec3(4.0f,5.0f,6.0f))
+	log.message(source + "result is: %s\n\n", typeinfo(my_dot(vec3(1.0f, 2.0f, 3.0f), vec3(4.0f, 5.0f, 6.0f))));
+
+	/////////////////////////////////
+
+	log.message("Member functions:\n\n");
+
+	// default argument
+	my_application.init();
+
+	// manual argument
+	my_application.init(100);
+
+	// update application
+	for (int i = 0; i < 4; i++)
+		log.message(source + "%d: %d\n", i, my_application.update());
+
+	// shutdown
+	my_application.shutdown();
+
+	return 1;
+}

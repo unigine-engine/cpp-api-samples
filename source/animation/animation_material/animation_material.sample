@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Material Animation">
+	<sdk_desc>Animating emission scale and color parameters of a material.</sdk_desc>
+	<desc>
+		<brief>This sample demonstrates animating materials using <strong>material animation objects</strong>. It is useful for implementing dynamic changes in properties of materials in real time.</brief>
+		<para>This is especially useful for scenes where object properties need to change based on user actions or world events, such as weather or time of day changes.</para>
+	</desc>
+	<tags>
+		<tag>Animation</tag>
+		<tag>Materials</tag>
+	</tags>
+</sample>

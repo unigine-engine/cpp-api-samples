@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.20.0.0" guid="e268f3cbeccfcf2113183367f3650a1e6847cbc9" parent="cb3efb53459273a5337bfc1eaff041a5fd342807" base_material="b7c07dfd4ce80edac55fcbfdd0befa02ccd20b88">
+	<options blend_src="2" blend_dest="2"/>
+	<state name="albedo_color_type">1</state>
+	<state name="animation">1</state>
+	<state name="ambient">0</state>
+	<state name="light_world">0</state>
+	<state name="emission">1</state>
+	<texture name="albedo">guid://245b9a17b8b8713aac56d65a89f6843ab6fc3a7a</texture>
+	<texture name="albedo_color">
+		<curve2d>
+			<keys>
+				<key point="0 1" left_tangent="0 0" right_tangent="0 0"/>
+				<key point="0.0500000007 1" left_tangent="0 0" right_tangent="0 0"/>
+				<key point="0.699999988 1" left_tangent="0 0" right_tangent="0 0"/>
+				<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+			</keys>
+		</curve2d>
+		<curve2d>
+			<keys>
+				<key point="0 1" left_tangent="0 0" right_tangent="0 0"/>
+				<key point="0.0585714281 1" left_tangent="0 0" right_tangent="0 0"/>
+				<key point="0.708571434 1" left_tangent="0 0" right_tangent="0 0"/>
+				<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+			</keys>
+		</curve2d>
+		<curve2d>
+			<keys>
+				<key point="0 1" left_tangent="0 0" right_tangent="0 0"/>
+				<key point="0.0585714206 1" left_tangent="0 0" right_tangent="0 0"/>
+				<key point="0.708571434 1" left_tangent="0 0" right_tangent="0 0"/>
+				<key point="1 1" left_tangent="0 0" right_tangent="0 0"/>
+			</keys>
+		</curve2d>
+		<curve2d>
+			<keys>
+				<key point="-0.0165714324 -0.116000891" left_tangent="0 0" right_tangent="0.242000058 -0.0394262075"/>
+				<key point="1.0079999 -0.120000958" left_tangent="-0.453999698 0.541142404" right_tangent="0 0"/>
+			</keys>
+		</curve2d>
+	</texture>
+	<texture name="normal">guid://9bc3423430dfebba0ebbf5846473ce5732f19cdf</texture>
+	<texture name="emission">guid://245b9a17b8b8713aac56d65a89f6843ab6fc3a7a</texture>
+	<parameter name="albedo_color" expression="0">1 0.870588005 0.737254977 1</parameter>
+	<parameter name="refraction_scale" expression="0">0.235960007</parameter>
+	<parameter name="transparent_blur" expression="0">0</parameter>
+	<parameter name="emission_scale" expression="0">1.54700005</parameter>
+</material>

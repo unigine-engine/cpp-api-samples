@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Simple Boat">
+	<sdk_desc>Simulating dynamic wake foam behind a moving boat using a combination of <i>Orthographic Decals</i> and <i>Particle Systems</i>.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample demonstrates how to simulate dynamic wake foam behind a moving boat using a combination of <ui><strong><link to="decal_ortho">Orthographic Decals</link></strong></ui> and <ui><strong><link to="effect_particles">Particle Systems</link></strong></ui>. The foam effect responds to the boat's velocity in real time:</para>
+			<ul>
+				<li><strong>Decal size</strong> is adjusted based on the area covered by particles</li>
+				<li><strong>Particle lifetime, spawn rate, and velocity</strong> are scaled proportionally to the boat's speed.</li>
+			</ul>
+			<para>A <strong nt="1"><link to="water_global" offset="creating_waves">Beaufort</link></strong> slider allows control over sea state - from calm (<value>0</value>) to stormy (<value>8</value>) - to observe how foam reacts in different wave conditions. This setup is ideal for adding convincing surface wake and motion trails to ships or watercraft in real-time environments.</para>
+		</brief>
+	</desc>
+	<controls>
+		<![CDATA[
+		<p align=left><b>WASD</b> to control the boat.</p>
+		]]>
+	</controls>
+	<tags>
+		<tag>Water</tag>
+		<tag>Maritime</tag>
+		<tag>Basic Recipes</tag>
+		<tag>Decals</tag>
+		<tag>Effects</tag>
+	</tags>
+</sample>

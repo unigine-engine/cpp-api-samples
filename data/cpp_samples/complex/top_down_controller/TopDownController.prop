@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="TopDownController" manual="1" parent_name="node_base">
+	<parameter name="phiProp" type="float" title="Phi" tooltip="The angle by which the camera will be rotated around the Z axis at the beginning" group="Angles">180</parameter>
+	<parameter name="thetaProp" type="float" title="Theta" tooltip="The angle by which the camera will be rotated around the Y axis at the beginning" group="Angles" min="0.0f" max="89.9f">40</parameter>
+	<parameter name="thetaMinMax" type="vec2" tooltip="Lower and upper angle limits" group="Angles">10.000000 70.000000</parameter>
+	<parameter name="Distance" type="float" tooltip="Distance at which the camera will be at the beginning" group="Distance" min="0.1f" max="300.0f">25</parameter>
+	<parameter name="distanceMinMax" type="vec2" tooltip="Lower and upper distance limits" group="Distance">5.000000 45.000000</parameter>
+	<parameter name="zoomSpeed" type="float" tooltip="The speed at which transformations will occur" group="Speed" min="0.5f" max="10.0f">5</parameter>
+</property>

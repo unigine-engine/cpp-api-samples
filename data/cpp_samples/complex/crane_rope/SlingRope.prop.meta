@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>6572dedfb7c3329f5436cc821cd7839ac34bbb18</guid>
+	<type>property</type>
+	<hash>050b4cfb</hash>
+	<runtimes>
+		<runtime id="6572dedfb7c3329f5436cc821cd7839ac34bbb18" name="SlingRope" link="0" type="4"/>
+	</runtimes>
+</asset>

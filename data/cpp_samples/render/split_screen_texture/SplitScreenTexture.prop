@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="SplitScreenTexture" manual="1" parent_name="node_base">
+	<parameter name="camera_top" type="node" filter="Player">0</parameter>
+	<parameter name="camera_bottom" type="node" filter="Player">0</parameter>
+	<parameter name="display_player1" type="node" filter="ObjectMeshStatic">0</parameter>
+	<parameter name="display_player2" type="node" filter="ObjectMeshStatic">0</parameter>
+</property>

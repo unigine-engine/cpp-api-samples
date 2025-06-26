@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>246640865b3ead67c2588147a81bafb64810b404</guid>
+	<type>property</type>
+	<hash>d29da3ef</hash>
+	<runtimes>
+		<runtime id="246640865b3ead67c2588147a81bafb64810b404" name="NavigationMeshDemoLogic" link="0" type="4"/>
+	</runtimes>
+</asset>

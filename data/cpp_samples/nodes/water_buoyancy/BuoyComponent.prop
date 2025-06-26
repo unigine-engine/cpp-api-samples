@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="BuoyComponent" manual="1" parent_name="node_base" tooltip="This component allows to impart buoyancy without physical simulation.">
+	<parameter name="mass" type="float">1</parameter>
+	<parameter name="point_front_center" type="node">0</parameter>
+	<parameter name="point_back_left" type="node">0</parameter>
+	<parameter name="point_back_right" type="node">0</parameter>
+</property>

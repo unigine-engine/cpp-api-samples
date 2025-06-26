@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>7f1ca1d8e7773b574aa0a0caba6199a19752e68c</guid>
+	<type>material</type>
+	<hash>7eaad4b5</hash>
+	<runtimes>
+		<runtime id="7f1ca1d8e7773b574aa0a0caba6199a19752e68c" name="rope_transparent" link="0" type="5"/>
+	</runtimes>
+</asset>

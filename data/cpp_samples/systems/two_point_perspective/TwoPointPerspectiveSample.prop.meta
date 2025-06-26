@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>d32f8f567ea7480d04441590db3f8091c3d073c3</guid>
+	<type>property</type>
+	<hash>19836fc9</hash>
+	<runtimes>
+		<runtime id="d32f8f567ea7480d04441590db3f8091c3d073c3" name="TwoPointPerspectiveSample" link="0" type="4"/>
+	</runtimes>
+</asset>

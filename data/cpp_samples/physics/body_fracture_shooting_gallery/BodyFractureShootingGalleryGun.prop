@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="BodyFractureShootingGalleryGun" manual="1" parent_name="node_base">
+	<parameter name="projectile" type="file"/>
+	<parameter name="force" type="float">10</parameter>
+</property>

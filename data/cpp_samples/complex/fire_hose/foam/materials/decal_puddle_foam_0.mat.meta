@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>70f077b478eabf839c73df0620c3aaad87448c28</guid>
+	<type>material</type>
+	<hash>8d34f4cc</hash>
+	<runtimes>
+		<runtime id="70f077b478eabf839c73df0620c3aaad87448c28" name="decal_puddle_foam_0" link="0" type="5"/>
+	</runtimes>
+</asset>

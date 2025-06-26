@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sample title="Camera to Texture">
+	<sdk_desc>Capturing a camera's output in real time and projecting it onto a material's albedo texture using <i>Viewport::renderTexture2D()</i></sdk_desc>
+	<desc>
+		<brief>This sample shows how to capture the output of a camera in real time and project it onto a material's albedo texture using <ui><link to="viewport_class" offset="renderTexture2D_Camera_Texture_void">Viewport::renderTexture2D()</link></ui>.</brief>
+		<para>A renderable 2D texture is created and set as the albedo texture of the material assigned to the plane. Each frame, the active camera's view is rendered into this texture, updating the appearance of the object it's applied to. Texture sampling settings like linear filtering and anisotropy are configured to ensure visual quality. The UV transform is also adjusted to correct for platform-dependent flipping.</para>
+		<para>This method can be used for features such as security monitors, live camera feeds, dynamic mirrors, portals, or mini-maps in your worlds.</para>
+	</desc>
+	<tags>
+		<tag>Render</tag>
+		<tag>Materials</tag>
+	</tags>
+</sample>

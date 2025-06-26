@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>5518eb80f3fea0804423b3229081e61c0b335c4b</guid>
+	<type>world</type>
+	<hash>c64af44e</hash>
+	<runtimes>
+		<runtime id="5518eb80f3fea0804423b3229081e61c0b335c4b" name="water_fetch_intersection.world" link="0"/>
+	</runtimes>
+	<parameters>
+		<parameter type="string" name="physics_settings_path"/>
+		<parameter type="string" name="render_settings_path">guid://8bed8c3ce53501ff11c1b0ae5cc6d017d4ad5524</parameter>
+		<parameter type="string" name="script_name"/>
+		<parameter type="string" name="sound_settings_path"/>
+		<parameter type="string" name="viewports_settings"/>
+	</parameters>
+</asset>

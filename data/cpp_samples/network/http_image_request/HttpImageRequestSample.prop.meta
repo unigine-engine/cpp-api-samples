@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>ffc7d79e771c84b66f3dcd34f5a3f8adbe720515</guid>
+	<type>property</type>
+	<hash>9dd3fd29</hash>
+	<runtimes>
+		<runtime id="ffc7d79e771c84b66f3dcd34f5a3f8adbe720515" name="HttpImageRequestSample" link="0" type="4"/>
+	</runtimes>
+</asset>

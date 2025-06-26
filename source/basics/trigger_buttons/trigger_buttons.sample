@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Trigger Buttons">
+	<desc>
+		<brief>Demonstration of various types of interactable buttons and levers.</brief>
+	</desc>
+	<controls>
+		<![CDATA[
+		Use <b>WASD</b> buttons to move around the scene, point the the mouse cursor to the button or lever and press the <b>F</b> button to activate it.<br/>To manipulate Valve and Lever, press and hold the <b>F</b> button and drag the mouse.
+		]]>
+	</controls>
+	<tags>
+		<tag>Triggers</tag>
+		<tag>Logic</tag>
+		<tag>Basic Recipes</tag>
+	</tags>
+</sample>

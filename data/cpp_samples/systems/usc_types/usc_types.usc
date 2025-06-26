@@ -1,0 +1,22 @@
+string source = "From [USC]: ";
+int init()
+{
+	log.message("\n\n=================Types Sample=================\n\n");
+	
+	// my_add
+	log.message("my_add():\n");
+	log.message(source + "%s\n", typeinfo(vec3(1.0f, 2.0f, 3.0f) + vec3(0.1f, 0.2f, 0.3f)));
+	log.message(source + "%s\n", typeinfo(my_add(vec3(1.0f, 2.0f, 3.0f), vec3(0.1f, 0.2f, 0.3f))));
+
+	// my_sub
+	log.message("\nmy_sub():\n");
+	log.message(source + "%s\n", typeinfo(vec3(1.0f, 2.0f, 3.0f) - vec3(0.1f, 0.2f, 0.3f)));
+	log.message(source + "%s\n", typeinfo(my_sub(vec3(1.0f, 2.0f, 3.0f), vec3(0.1f, 0.2f, 0.3f))));
+
+	// my_dot
+	log.message("\nmy_dot():\n");
+	log.message(source + "%s\n", typeinfo(dot(vec3(1.0f, 2.0f, 3.0f), vec3(0.1f, 0.2f, 0.3f))));
+	log.message(source + "%s\n", typeinfo(my_vec_dot(vec3(1.0f, 2.0f, 3.0f), vec3(0.1f, 0.2f, 0.3f))));
+
+	return 1;
+}

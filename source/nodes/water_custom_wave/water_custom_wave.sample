@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Custom Waves">
+	<sdk_desc>This sample demonstrates how to control the wave spectrum of Global Water in Manual mode via API</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample demonstrates how to control the wave spectrum of <strong><link to="water_global">Global Water</link></strong> in <strong>Manual</strong> mode via API over wave parameters (octaves - a set of waves at a specific size/frequency level, count per octave, length, amplitude, phase, and steepness).</para>
+			<para>Because all wave parameters are managed on the CPU side, they can be dynamically generated, modified, or stored for reproducible results and external integration (for example, to process Weather Control packets from IOS).</para>
+			<notice>The maximum number of waves is <value>256</value>, but higher values significantly affect performance, so we recommend keeping the number below 100 and using the minimum possible number.</notice>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Water</tag>
+		<tag>Maritime</tag>
+	</tags>
+</sample>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="WorldSplineGraphSample" manual="1" parent_name="node_base">
+	<parameter name="spline_file" type="file"/>
+	<parameter name="segment_node" type="file"/>
+</property>

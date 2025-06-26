@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>8e9125aed0f656e5878367607d82ad09148ddb9e</guid>
+	<type>property</type>
+	<hash>ae20fc29</hash>
+	<runtimes>
+		<runtime id="8e9125aed0f656e5878367607d82ad09148ddb9e" name="BuoyancyPhysicsSample" link="0" type="4"/>
+	</runtimes>
+</asset>

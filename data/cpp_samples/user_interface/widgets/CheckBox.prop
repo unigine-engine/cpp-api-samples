@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="CheckBox" manual="1" parent_name="node_base">
+	<parameter name="position" type="vec2">450.000000 50.000000</parameter>
+	<parameter name="text" type="string">Check Me</parameter>
+	<parameter name="font_size" type="int">16</parameter>
+</property>

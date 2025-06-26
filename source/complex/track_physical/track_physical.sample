@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Physical Tracks">
+	<sdk_desc>Simulating vehicle tracks with physical track plates, wheels, and hinge joints (JointHinge).</sdk_desc>
+	<desc>
+		<brief>This sample demonstrates how to imitate the vehicle tracks using physical (i.e. having body and shape) track plates, wheels, and hinge joints (<strong>JointHinge</strong>). It illustrates how physical tracks behave on interacting with various obstacles and when rotating depending on the vehicle speed.</brief>
+	</desc>
+	<controls>
+		<![CDATA[
+		<p><b>WASD</b> to control the vehicle movement.</p>
+		<p><b>Mouse Wheel</b> to zoom in/out.</p>
+		]]>
+	</controls>
+	<tags>
+		<tag>Complex Solutions</tag>
+		<tag>Physics</tag>
+		<tag>Vehicle</tag>
+	</tags>
+</sample>

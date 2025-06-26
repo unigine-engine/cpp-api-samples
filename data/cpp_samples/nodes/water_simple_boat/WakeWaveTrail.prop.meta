@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>ce2691a3fd8a19d4e5e675c73f87c93298fbcf85</guid>
+	<type>property</type>
+	<hash>64ee9fbc</hash>
+	<runtimes>
+		<runtime id="ce2691a3fd8a19d4e5e675c73f87c93298fbcf85" name="WakeWaveTrail" link="0" type="4"/>
+	</runtimes>
+</asset>

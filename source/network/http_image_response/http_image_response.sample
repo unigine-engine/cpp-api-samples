@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Simple HTTP Image Response">
+	<sdk_desc>This sample demonstrates how to implement an asynchronous <i>HTTP</i> server that responds to <i>REST API</i> requests by sending image data. It captures the contents of the application window, converts the rendered frame to a <i>PNG</i> image in memory, and serves it via an embedded <i>HTTP</i> server.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample demonstrates how to implement an asynchronous <ui>HTTP</ui> server that responds to <ui>REST API</ui> requests by sending image data. It captures the contents of the application window, converts the rendered frame to a <ui>PNG</ui> image in memory, and serves it via an embedded <ui>HTTP</ui> server.</para>
+			<para>For demonstration, open the <ui>URL</ui> displayed on the plate under the <ui>Material Ball</ui> in the scene.</para>
+		</brief>
+		<para>When a client sends a <ui>GET</ui> request to the <strong nt="1">/unigine.png</strong> endpoint, the latest frame is captured, converted, and streamed back as a <ui>PNG</ui> file. The server runs asynchronously, and all resource access is properly synchronized to ensure thread safety.</para>
+		<para>This sample demonstrates how to expose visual data from a real-time application for use in debugging, remote monitoring, or integration with web-based interfaces.</para>
+	</desc>
+	<tags>
+		<tag>Network</tag>
+	</tags>
+</sample>

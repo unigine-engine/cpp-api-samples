@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="BodyFracture Falling Spheres">
+	<sdk_desc>Continuously falling objects fracturing upon collision implemented using the <i>BodyFracture</i> class.</sdk_desc>
+	<desc>
+		<brief>
+		<para>This sample demonstrates continuous fracturing of objects using <ui><link to="bodyfracture_class">BodyFracture</link></ui> class. Spheres are periodically spawned every 3 seconds and fall freely under gravity. Upon collision with the ground, each sphere fractures dynamically into multiple physical fragments.</para>
+		<para>The sample includes a debug visualization that displays mesh wireframes, providing clear insight into internal mesh structure and fracture patterns generated upon impact.</para>
+		</brief>
+		<para>This example can be used to explore and evaluate destruction mechanics, test mesh-based fracturing setups, and visually analyze breakage behavior in real-time scenarios.</para>
+	</desc>
+	<tags>
+		<tag>Physics</tag>
+		<tag>Systems</tag>
+		<tag>Logic</tag>
+	</tags>
+</sample>

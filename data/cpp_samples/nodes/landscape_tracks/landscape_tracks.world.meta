@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>4f536da13612aa8c1301647b918d0f9e5b3fb265</guid>
+	<type>world</type>
+	<hash>2ea4329b</hash>
+	<runtimes>
+		<runtime id="4f536da13612aa8c1301647b918d0f9e5b3fb265" name="landscape_tracks.world" link="0"/>
+	</runtimes>
+	<parameters>
+		<parameter type="string" name="physics_settings_path"/>
+		<parameter type="string" name="render_settings_path">guid://8bed8c3ce53501ff11c1b0ae5cc6d017d4ad5524</parameter>
+		<parameter type="string" name="script_name"/>
+		<parameter type="string" name="sound_settings_path"/>
+		<parameter type="string" name="viewports_settings"/>
+	</parameters>
+</asset>

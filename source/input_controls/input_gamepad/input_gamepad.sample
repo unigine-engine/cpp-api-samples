@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Gamepad Input">
+	<desc>
+		<brief>This sample demostrates the simple usage of Gamepad input.</brief>
+	</desc>
+	<tags>
+		<tag>Input &amp; Controls</tag>
+	</tags>
+</sample>

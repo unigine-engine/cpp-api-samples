@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>1a5de6dabf1bd9f23befb440a82fbf3f9d3556bc</guid>
+	<type>property</type>
+	<hash>f577541f</hash>
+	<runtimes>
+		<runtime id="1a5de6dabf1bd9f23befb440a82fbf3f9d3556bc" name="WidgetClock" link="0" type="4"/>
+	</runtimes>
+</asset>

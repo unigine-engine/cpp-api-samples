@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>8164c56873d8505160830ad0112df7f243a86eda</guid>
+	<type>property</type>
+	<hash>0d2e5d61</hash>
+	<runtimes>
+		<runtime id="8164c56873d8505160830ad0112df7f243a86eda" name="LinearMotion" link="0" type="4"/>
+	</runtimes>
+</asset>

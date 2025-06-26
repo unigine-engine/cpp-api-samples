@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="WorldIntersectionTrigger" manual="1" parent_name="node_base">
+	<parameter name="bound_sphere_size" type="float">5</parameter>
+	<parameter name="bound_box_size" type="float">5</parameter>
+	<parameter name="is_sphere" type="toggle">0</parameter>
+	<parameter name="debug" type="toggle">0</parameter>
+</property>

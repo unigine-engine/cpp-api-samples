@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Playback Layers">
+	<sdk_desc>Showing how to use multiple <b>layers</b> in animation playbacks.</sdk_desc>
+	<desc>
+		<brief>This sample demonstrates the use of animation layers to create and play object animations. The code shows how you can combine different animation tracks and play them simultaneously or sequentially.</brief>
+	</desc>
+	<tags>
+		<tag>Animation</tag>
+	</tags>
+</sample>

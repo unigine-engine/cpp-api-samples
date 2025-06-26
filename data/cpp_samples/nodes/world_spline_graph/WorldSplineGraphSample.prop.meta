@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>f9a00947a5a060a407cc3512cf8f569ac3fa4e71</guid>
+	<type>property</type>
+	<hash>b9f094ec</hash>
+	<runtimes>
+		<runtime id="f9a00947a5a060a407cc3512cf8f569ac3fa4e71" name="WorldSplineGraphSample" link="0" type="4"/>
+	</runtimes>
+</asset>

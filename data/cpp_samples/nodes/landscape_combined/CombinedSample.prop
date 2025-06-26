@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="CombinedSample" manual="1" parent_name="node_base">
+	<parameter name="height_slicer_param" type="node" title="Height Slicer">0</parameter>
+	<parameter name="source_lmap_param" type="node" title="Source Lmap">0</parameter>
+	<parameter name="target_lmap_param" type="node" title="Target Lmap">0</parameter>
+</property>

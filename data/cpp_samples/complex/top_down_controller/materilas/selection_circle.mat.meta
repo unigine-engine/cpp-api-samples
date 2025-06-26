@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>5bc31c776a4dcf6ae460b7c150682e2c566ad39b</guid>
+	<type>material</type>
+	<hash>5e2e6bc4</hash>
+	<runtimes>
+		<runtime id="5bc31c776a4dcf6ae460b7c150682e2c566ad39b" name="selection_circle" link="0" type="5"/>
+	</runtimes>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+</asset>

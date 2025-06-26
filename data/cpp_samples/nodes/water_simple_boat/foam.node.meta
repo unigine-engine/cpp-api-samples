@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>28176974e5f78643a60a76c66f9fdf6d6c37b9e8</guid>
+	<type>node</type>
+	<hash>b010b89c</hash>
+	<runtimes>
+		<runtime id="28176974e5f78643a60a76c66f9fdf6d6c37b9e8" name="foam.node" link="0" type="3"/>
+	</runtimes>
+</asset>

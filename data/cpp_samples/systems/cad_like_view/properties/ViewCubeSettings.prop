@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="ViewCubeSettings" guid="ebdbc51c06dd1dcb985b58ae0765c835b78c3c10" parent="1c613bbca0afd78c1ef165fc8e419352c5903d9e">
+	<parameter name="VIEWCUBE_TEXTURE_TOUCH" type="file">guid://dad39215e96ebc709d13250f75a2cf224e8d0419</parameter>
+	<parameter name="VIEWCUBE_TEXTURE_UNTOUCH" type="file">guid://123d70a3a4599da6af0218cd6170e3c868743487</parameter>
+	<parameter name="VIEWCUBE_PROJECTION_ICON" type="file">guid://9d709bd65124213dff77f17894740677a285b16a</parameter>
+	<parameter name="VIEWCUBE_MESH" type="file">guid://7628d77d8d92b2b8540f56b715a244aab1a22c01</parameter>
+	<parameter name="VIEWCUBE_ARROWS_MESH" type="file">guid://a4acace6488d5f0d87c0f508f0a494c78f80cb7a</parameter>
+</property>

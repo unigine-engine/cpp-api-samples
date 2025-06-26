@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Target Marker">
+	<sdk_desc>Implementing a marker that always highlights the target when it is within the field of view, or displays an arrow pointing the direction to the target when it is out of sight (aligned with the screen borders).</sdk_desc>
+	<desc>
+		<brief>This sample demostrates how to implement a marker that always highlights the target when it is within the field of view, or displays an arrow pointing the direction to the target when it is out of sight (aligned with the screen borders).</brief>
+	</desc>
+	<tags>
+		<tag>Interface (GUI)</tag>
+		<tag>Games</tag>
+		<tag>Basic Recipes</tag>
+	</tags>
+</sample>

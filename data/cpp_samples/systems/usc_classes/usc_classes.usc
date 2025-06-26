@@ -1,0 +1,98 @@
+// Copyright (C), UNIGINE. All rights reserved.
+string source = "From [USC]: ";
+class MyUserObject
+{
+	vec3 size;
+	float mass;
+	
+
+	MyUserObject()
+	{
+		log.message(source + "MyUserObject::MyUserObject(): called\n");
+	}
+	MyUserObject(vec3 size, float mass)
+	{
+		this.size = size;
+		this.mass = mass;
+		log.message(source + "MyUserObject::MyUserObject((%g,%g,%g),%g): called\n", size.x, size.y, size.z, mass);
+	}
+	~MyUserObject()
+	{
+		log.message(source + "MyUserObject::~MyUserObject(): called\n");
+	}
+
+	void info()
+	{
+		log.message(source + "size is: (%g,%g,%g), mass is: %g\n", size.x, size.y, size.z, mass);
+	}
+};
+
+void extern_object_info(MyExternObject object)
+{
+	// object parameters
+	vec3 size = object.getSize();
+	float mass = object.getMass();
+
+	log.message(source + "size is: (%g,%g,%g), mass is: %g\n", size.x, size.y, size.z, mass);
+}
+
+int init()
+{
+	log.message("\n\n=================Classes Sample=================\n\n");
+
+	// make script constructed user object
+	MyUserObject user_object = new MyUserObject(vec3(1.0f, 2.0f, 3.0f), 10.0f);
+	user_object.info();
+
+	SetMyUserObject(user_object);
+	user_object = GetMyUserObject();
+	user_object.info();
+
+	/////////////////////////////////
+
+	log.message("\n");
+
+	// make script constructed extern object
+	MyExternObject extern_object = new MyExternObject();
+	extern_object_info(extern_object);
+
+	// set parameters
+	extern_object.setSize(vec3(10.0f, 20.0f, 30.0f));
+	extern_object_info(extern_object);
+
+	// delete object
+	delete extern_object;
+
+	/////////////////////////////////
+
+	log.message("\n");
+
+	// make script constructed extern object
+	extern_object = new MyExternObject(vec3(1.0f, 2.0f, 3.0f), 10.0f);
+	extern_object_info(extern_object);
+
+	// set parameters
+	MyExternObjectSetSize(extern_object, vec3(10.0f, 20.0f, 30.0f));
+	vec3 size = MyExternObjectGetSize(extern_object);
+	log.message(source + "size is: (%g,%g,%g)\n", size.x, size.y, size.z);
+
+	// delete object
+	delete extern_object;
+
+	/////////////////////////////////
+
+	log.message("\n");
+
+	// make extern constructed extern object
+	extern_object = MakeMyExternObject(vec3(4.0f, 5.0f, 6.0f), 10.0f);
+	extern_object_info(extern_object);
+
+	// set parameters
+	extern_object.setMass(100.0f);
+	extern_object_info(extern_object);
+
+	// delete object
+	DeleteMyExternObject(extern_object);
+
+	return 1;
+}

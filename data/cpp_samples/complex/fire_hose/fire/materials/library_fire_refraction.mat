@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.20.0.0" guid="2cc4b9cb05a409f43dfe690ee35e8b926007a7c8" parent="cb3efb53459273a5337bfc1eaff041a5fd342807" base_material="b7c07dfd4ce80edac55fcbfdd0befa02ccd20b88">
+	<options blend_src="2" blend_dest="2"/>
+	<state name="refraction">1</state>
+	<state name="ambient">0</state>
+	<texture name="normal">guid://9bc3423430dfebba0ebbf5846473ce5732f19cdf</texture>
+	<parameter name="refraction_scale" expression="0">0.131999999</parameter>
+	<parameter name="soft_interaction_scale" expression="0">1.10000002</parameter>
+	<parameter name="diffuse_scale" expression="0">0</parameter>
+</material>

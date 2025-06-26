@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Lights">
+	<sdk_desc>This sample demonstrates how to create light sources (<b>World Light, Projected Light, Omni Light</b>) and modify their parameters at runtime.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample demonstrates how to create light sources and modify their parameters at runtime:</para>
+			<ul>
+				<li><strong nt="1"><link to="light_world">World Light</link></strong> - an infinitely remote light source casting orthographically projected beams onto the scene.</li>
+				<li><strong nt="1"><link to="light_proj">Projected Light</link></strong> - a light source that casts light from a single point forming a focused beam aimed in a specific direction.</li>
+				<li><strong nt="1"><link to="light_omni">Omni Light</link></strong> - a point source emitting light in all directions (360 degrees) and realistically reproducing shadow cast.</li>
+			</ul>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Lighting</tag>
+	</tags>
+</sample>

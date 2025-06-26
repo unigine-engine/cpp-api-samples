@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Curve Animation">
+	<sdk_desc>Animating objects using <i>Curve2D</i>: moving platforms, rotating coins, and a heart changing its size.</sdk_desc>
+	<desc>
+		<brief>This sample demonstrates sample shows how to animate objects using <ui><link to="curve2d_class">Curve2D</link></ui>: moving platforms, rotating coins, and a heart changing its size.</brief>
+	</desc>
+	<tags>
+		<tag>Animation</tag>
+		<tag>Basic Recipes</tag>
+		<tag>Transformations</tag>
+	</tags>
+</sample>

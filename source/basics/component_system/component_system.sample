@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Component System">
+	<sdk_desc>Demonstration of UNIGINE's C++ component-based architecture using custom gameplay components with dynamic object creation and interaction.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample illustrates how to implement your application's logic via a set of building blocks - <strong>components</strong>, and assign these blocks to nodes. A logic component integrates a node, a property, and a C++ class containing logic implementation.</para>
+			<para>The sample includes a controllable pawn with basic movement, rotating boxes that periodically spawn projectiles, and a floating UI label displaying health, survival time, and active component count.</para>
+			<para>The sample demonstrates how to:</para>
+			<ul>
+				<li>Decompose application logic into modular, reusable components</li>
+				<li>Create and assign custom logic components at runtime</li>
+				<li>Implement interaction between independently managed components.</li>
+			</ul>
+			<para>More details about the Component System sample are available in the official documentation linked below.</para>
+		</brief>
+		<link_docs>https://developer.unigine.com/docs/code/usage/using_component_system/index?rlang=cpp</link_docs>
+	</desc>
+	<controls>
+		<![CDATA[<p align=left>Keys <b>UP / W</b> and <b>DOWN / S</b> to move forward/backward</p>
+		<p align=left>Keys <b>LEFT / A</b> and <b>RIGHT / D</b> for clockwise/counterclockwise rotation</p>
+		]]>
+	</controls>
+	<tags>
+		<tag>Basic Recipes</tag>
+		<tag>Component System</tag>
+	</tags>
+</sample>

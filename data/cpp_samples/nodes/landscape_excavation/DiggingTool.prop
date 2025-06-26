@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="DiggingTool" manual="1" parent_name="node_base">
+	<parameter name="lmap_node" type="node" title="Landscape Terrain Layer Map">0</parameter>
+	<parameter name="digging_object_node" type="node" title="Digging Object">0</parameter>
+</property>

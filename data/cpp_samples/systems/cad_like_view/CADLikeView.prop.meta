@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>c26f9260f23494b0af49ffbfcb3193e8ae110339</guid>
+	<type>property</type>
+	<hash>c4d83d9c</hash>
+	<runtimes>
+		<runtime id="c26f9260f23494b0af49ffbfcb3193e8ae110339" name="CADLikeView" link="0" type="4"/>
+	</runtimes>
+</asset>

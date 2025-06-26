@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>9049fb4f7a796e68adbad8847d38bc13380129a6</guid>
+	<type>material</type>
+	<hash>58c7e063</hash>
+	<runtimes>
+		<runtime id="9049fb4f7a796e68adbad8847d38bc13380129a6" name="landscape_albedo_brush" link="0" type="5"/>
+	</runtimes>
+</asset>

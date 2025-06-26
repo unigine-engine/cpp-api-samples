@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Widget Manipulators">
+	<desc>
+		<brief>This sample demonstrates the use of manipulators. You can lock axes for transformations, and apply transformation in local or world coordinates.</brief>
+	</desc>
+	<controls>
+		<![CDATA[
+		To enter the camera control mode, click the <b>left mouse button</b> inside the window, to 
+		exit this mode press <b>Esc</b>.<br/><br/>
+		To select an object, click it with the <b>right mouse button</b>, to move (<b>W</b>), 
+		rotate (<b>E</b>), or scale (<b>R</b>) the object, drag it along the axes while holding 
+		the <b>left mouse button</b> pressed.<br/><br/>
+		To deselect an object, press <b>U</b> or <b>Esc</b>.<br/>
+		To focus on an object, press <b>F</b>.
+		]]>
+	</controls>
+	<tags>
+		<tag>Interface (GUI)</tag>
+		<tag>Widgets</tag>
+	</tags>
+</sample>

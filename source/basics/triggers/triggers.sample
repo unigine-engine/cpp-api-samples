@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Triggers">
+	<sdk_desc>Implementation of various types of triggers.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample illustrates how to implement a simple trigger component in three different ways:</para>
+			<ul>
+				<li><strong nt="1">Intersection Trigger</strong> performs the bound check via <ui><link to="world_class" offset="">World::getIntersection()</link></ui>.</li>
+				<li><strong nt="1">Math Trigger</strong> performs the check if the object is inside the trigger sphere or cube using the object coordinates (the simplest and most performance-friendly way).</li>
+				<li><strong nt="1">World Trigger</strong> uses the WorldTrigger node.</li>
+			</ul>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Triggers</tag>
+		<tag>Logic</tag>
+	</tags>
+</sample>

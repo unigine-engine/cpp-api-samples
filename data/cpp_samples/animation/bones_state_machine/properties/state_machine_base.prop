@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="state_machine_base" manual="1">
+	<struct name="state_variable">
+		<parameter name="type" type="switch" items="float,flag">0</parameter>
+		<parameter name="name" type="string"/>
+		<parameter name="default_value" type="float">0</parameter>
+	</struct>
+	<struct name="transition">
+		<parameter name="next_state" type="string"/>
+		<parameter name="condition" type="string"/>
+		<parameter name="half_life" type="float">0.2</parameter>
+	</struct>
+	<struct name="anim">
+		<parameter name="path" type="file" filter="anim"/>
+		<parameter name="anchor" type="vec2" state_type="1,2">0,0</parameter>
+	</struct>
+	<struct name="state">
+		<group name="General Settings">
+			<parameter name="name" type="string"/>
+			<parameter name="state_type" type="switch" items="animation,blend_1d,blend_2d">0</parameter>
+			<parameter name="min_playback_time" type="float">0.0</parameter>
+			<parameter name="is_loop" type="toggle">0</parameter>
+			<parameter name="use_random_animation" type="toggle" state_type="0">0</parameter>
+		</group>
+		<group name="Foot Transition Settings">
+			<parameter name="foot_matching_begin" type="float">0.0</parameter>
+			<parameter name="foot_matching_end" type="float">1.0</parameter>
+			<parameter name="foot_matching_override" type="toggle">0</parameter>
+		</group>
+		<group name="Blend Tree Settings">
+			<parameter name="x_blend_variable" type="string" state_type="1,2"/>
+			<parameter name="y_blend_variable" type="string" state_type="2"/>
+		</group>
+		<parameter name="animations" type="array" array_type="anim" array_dim="1"/>
+		<parameter name="transitions" type="array" array_type="transition" array_dim="1"/>
+	</struct>
+	<parameter name="init_state_name" type="string"/>
+	<parameter name="animations_frame_rate" type="int">30</parameter>
+	<parameter name="playback_speed" type="float">1.0</parameter>
+	<group name="Features">
+		<parameter name="use_root_motion" type="toggle">1</parameter>
+		<parameter name="use_smooth_transitions" type="toggle">1</parameter>
+		<parameter name="use_foot_matching" type="toggle">1</parameter>
+	</group>
+	<group name="Bones">
+		<parameter name="root_bone_name" type="string">pelvis</parameter>
+		<parameter name="left_foot_bone_name" type="string">foot_l</parameter>
+		<parameter name="right_foot_bone_name" type="string">foot_r</parameter>
+	</group>
+	<parameter name="state_variables" type="array" array_type="state_variable" array_dim="1"/>
+	<parameter name="states" type="array" array_type="state" array_dim="1"/>
+</property>

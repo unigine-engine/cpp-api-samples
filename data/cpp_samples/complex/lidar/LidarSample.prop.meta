@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>3acbd3bbdcd0d1f89b6b838facee1ce6ba9a2380</guid>
+	<type>property</type>
+	<hash>aff2e2c5</hash>
+	<runtimes>
+		<runtime id="3acbd3bbdcd0d1f89b6b838facee1ce6ba9a2380" name="LidarSample" link="0" type="4"/>
+	</runtimes>
+</asset>

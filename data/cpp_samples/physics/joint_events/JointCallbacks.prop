@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="JointCallbacks" manual="1" parent_name="node_base">
+	<parameter name="bridge_sections" type="int">14</parameter>
+	<parameter name="broken_materal" type="material"/>
+	<parameter name="joint_materal" type="material"/>
+	<parameter name="mesh_file" type="file"/>
+</property>

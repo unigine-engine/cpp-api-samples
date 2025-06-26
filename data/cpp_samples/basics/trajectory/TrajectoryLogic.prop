@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="TrajectoryLogic" manual="1" parent_name="node_base" tooltip="This component displays information about the sample and demonstrates how to use a trajectory movement.">
+	<parameter name="airplane_1" type="node">0</parameter>
+	<parameter name="airplane_2" type="node">0</parameter>
+	<parameter name="airplane_3" type="node">0</parameter>
+</property>

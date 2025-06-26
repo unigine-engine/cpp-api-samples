@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="ButtonReactionSample" manual="1" parent_name="node_base">
+	<parameter name="position" type="vec3">0.000000 0.000000 0.000000</parameter>
+	<parameter name="rotation" type="vec3">0.000000 0.000000 0.000000</parameter>
+	<parameter name="interatable_node" type="node">0</parameter>
+</property>

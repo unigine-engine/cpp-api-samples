@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>318b2ebf5c8ccd3170225fc144ba393b9979e92d</guid>
+	<type>property</type>
+	<hash>25be4a81</hash>
+	<runtimes>
+		<runtime id="318b2ebf5c8ccd3170225fc144ba393b9979e92d" name="TrackedVehicleNonPhysical" link="0" type="4"/>
+	</runtimes>
+</asset>

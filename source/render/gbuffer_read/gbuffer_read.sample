@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sample title="G-Buffer Read">
+	<sdk_desc>Accessing <i>G-buffer</i> textures at different stages of the rendering process by configuring a custom <i>Viewport</i> and intercepting its output at the <i>G-buffer</i> rendering stage.</sdk_desc>
+	<desc>
+		<brief>This sample demonstrates how to access <ui>G-buffer</ui> textures at different stages of the rendering process by configuring a custom <ui><link to="viewport_class">Viewport</link></ui> and intercepting its output at the <link to="rendering_sequence" offset="gbuffer"><ui>G-buffer</ui> rendering stage.</link></brief>
+		<para>A temporary viewport is used to render a selected node with a simplified pipeline to stop rendering after the <ui>G-buffer</ui> is filled. When the rendering reaches this stage, a callback is triggered to fetch <ui>G-buffer</ui> textures such as depth, albedo, normals, metalness, and roughness. These textures are then copied to user-defined render targets and displayed on screen planes using custom materials.</para>
+		<para>This setup is useful for debugging, material analysis, or developing post-processing effects that require direct access to the intermediate data in the rendering pipeline.</para>
+	</desc>
+	<controls>
+		<![CDATA[
+			<p><b>C</b> - switch between the main render and a custom camera <b>G-Buffer</b>.</p>
+		]]>
+	</controls>
+	<tags>
+		<tag>Render</tag>
+		<tag>Shaders</tag>
+	</tags>
+</sample>

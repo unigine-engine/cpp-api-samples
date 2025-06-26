@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodes version="2.20.0.0">
+	<node type="NodeDummy" id="2012243200" name="airplane">
+		<transform>1.0000001 2.6469777e-22 -3.8213701e-15 0.0 6.9377079e-23 1.0000001 8.7422755e-08 0.0 3.8213705e-15 -8.7422791e-08 0.99999982 0.0 0 0 0 1.0</transform>
+		<node type="ObjectMeshStatic" id="2023435002" name="airplane_body">
+			<mesh_name>guid://25117738b84a513722effd2a5a978a81bde961ec</mesh_name>
+			<surface name="airplane_wheel_mat" intersection="1" physics_friction="1" physics_restitution="1" material="2c8ca754e172eaa362accfa66127a2cddc54e5c8"/>
+			<surface name="airplane_chrome_mat" intersection="1" physics_friction="1" physics_restitution="1" material="37f6240eabaa5c15d2d2fe70db767f0f008a6122"/>
+			<surface name="airplane_bottom_mat" intersection="1" physics_friction="1" physics_restitution="1" material="5afc2c18a326c097c4e1e50a9b2390e16eeff4cc"/>
+			<surface name="airplane_black_plastic_mat" intersection="1" physics_friction="1" physics_restitution="1" material="bb51e5f2d5d80ca969f3edf40b7540c3dc3bef46"/>
+			<surface name="airplane_body_mat" intersection="1" physics_friction="1" physics_restitution="1" material="abdf0c1c0451b8cb100937ae29141b35fd787310"/>
+			<surface name="airplane_color_mat" intersection="1" physics_friction="1" physics_restitution="1" material="8d278d16f0cde17d83f034b8ca9af0b7c41516aa"/>
+			<surface name="airplane_glass_mat" intersection="1" physics_friction="1" physics_restitution="1" material="0c482b60d9c1673f6f8b4b92c7dff5c99f5d8494"/>
+			<transform>0.30703506 0 0 0.0 0 0.30703491 0 0.0 0 0 0.30703527 0.0 0 0 0 1.0</transform>
+			<node type="ObjectMeshStatic" id="1638334851" name="fan">
+				<mesh_name>guid://6e58f45b25329dfeb8c22d456811bde021dcd7bf</mesh_name>
+				<surface name="airplane_color_mat" intersection="1" physics_friction="1" physics_restitution="1" material="8d278d16f0cde17d83f034b8ca9af0b7c41516aa"/>
+				<surface name="airplane_black_plastic_mat" intersection="1" physics_friction="1" physics_restitution="1" material="bb51e5f2d5d80ca969f3edf40b7540c3dc3bef46"/>
+				<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 -3.8200977e-07 4.3696823 -1.9100581e-07 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1649328107" name="aileron_0_l">
+				<mesh_name>guid://044302125a6b3a493e3aff14d003df63284dbd66</mesh_name>
+				<surface name="airplane_body_mat" intersection="1" physics_friction="1" physics_restitution="1" material="abdf0c1c0451b8cb100937ae29141b35fd787310"/>
+				<surface name="airplane_bottom_mat" intersection="1" physics_friction="1" physics_restitution="1" material="5afc2c18a326c097c4e1e50a9b2390e16eeff4cc"/>
+				<transform>0.98233104 -0.18715174 8.1806615e-09 0.0 0.18715174 0.98233104 7.7233864e-10 0.0 -8.1806624e-09 7.7233153e-10 1 0.0 -2.1789901 0.80874467 -0.3759031 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1490833328" name="aileron_1_l">
+				<mesh_name>guid://c0ce358d6b02d9880c882f47c01ea3fa36bce311</mesh_name>
+				<surface name="airplane_body_mat" intersection="1" physics_friction="1" physics_restitution="1" material="abdf0c1c0451b8cb100937ae29141b35fd787310"/>
+				<surface name="airplane_bottom_mat" intersection="1" physics_friction="1" physics_restitution="1" material="5afc2c18a326c097c4e1e50a9b2390e16eeff4cc"/>
+				<transform>0.98556691 -0.16928639 7.399743e-09 0.0 0.16928639 0.98556691 6.30898e-10 0.0 -7.399743e-09 6.3088379e-10 1 0.0 -4.4923348 1.0790291 -0.18283579 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1329467287" name="aileron_0_r">
+				<mesh_name>guid://7328413c7e542b6b6d74c9ce08e346d528ff6a30</mesh_name>
+				<surface name="airplane_body_mat" intersection="1" physics_friction="1" physics_restitution="1" material="abdf0c1c0451b8cb100937ae29141b35fd787310"/>
+				<surface name="airplane_bottom_mat" intersection="1" physics_friction="1" physics_restitution="1" material="5afc2c18a326c097c4e1e50a9b2390e16eeff4cc"/>
+				<transform>0.98249817 0.1862724 -8.1422247e-09 0.0 -0.1862724 0.98249817 7.6503426e-10 0.0 8.1422256e-09 7.6502715e-10 1 0.0 2.1775866 0.81027633 -0.39721802 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="39212243" name="aileron_1_r">
+				<mesh_name>guid://746677cfac9682e2c04ba4d93d25c864f6f5f873</mesh_name>
+				<surface name="airplane_body_mat" intersection="1" physics_friction="1" physics_restitution="1" material="abdf0c1c0451b8cb100937ae29141b35fd787310"/>
+				<surface name="airplane_bottom_mat" intersection="1" physics_friction="1" physics_restitution="1" material="5afc2c18a326c097c4e1e50a9b2390e16eeff4cc"/>
+				<transform>0.98866677 0.15012659 -6.5622423e-09 0.0 -0.15012659 0.98866677 4.953904e-10 0.0 6.5622414e-09 4.953904e-10 1 0.0 4.4899745 1.0749202 -0.17783581 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="151757568" name="keel">
+				<mesh_name>guid://0b2563366322811da0760fd8f8d5d15782323eca</mesh_name>
+				<surface name="airplane_color_mat" intersection="1" physics_friction="1" physics_restitution="1" material="8d278d16f0cde17d83f034b8ca9af0b7c41516aa"/>
+				<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 3.5260354e-07 -4.0333142 1.1547953 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1069425127" name="stabilizer_l">
+				<mesh_name>guid://ffba9fa12b3c348c8d19667b8791299e05d10465</mesh_name>
+				<surface name="airplane_body_mat" intersection="1" physics_friction="1" physics_restitution="1" material="abdf0c1c0451b8cb100937ae29141b35fd787310"/>
+				<surface name="airplane_bottom_mat" intersection="1" physics_friction="1" physics_restitution="1" material="5afc2c18a326c097c4e1e50a9b2390e16eeff4cc"/>
+				<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 3.2822558e-07 -3.7544627 0.51949829 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="169406663" name="stabilizer_r">
+				<mesh_name>guid://3da96a8044f85bdfaa6d77b23210f3694d8825b4</mesh_name>
+				<surface name="airplane_body_mat" intersection="1" physics_friction="1" physics_restitution="1" material="abdf0c1c0451b8cb100937ae29141b35fd787310"/>
+				<surface name="airplane_bottom_mat" intersection="1" physics_friction="1" physics_restitution="1" material="5afc2c18a326c097c4e1e50a9b2390e16eeff4cc"/>
+				<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 3.2822558e-07 -3.7544627 0.51949829 1.0</transform>
+			</node>
+		</node>
+	</node>
+</nodes>

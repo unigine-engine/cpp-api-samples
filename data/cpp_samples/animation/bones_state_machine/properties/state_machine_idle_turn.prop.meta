@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>c7831096093dad82d0e1add5e09aac39039e5598</guid>
+	<type>property</type>
+	<hash>ec4fd8d3</hash>
+	<runtimes>
+		<runtime id="c7831096093dad82d0e1add5e09aac39039e5598" name="state_machine_idle_turn" link="0" type="4"/>
+	</runtimes>
+</asset>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="UDP Sockets">
+	<sdk_desc>Using the sockets API to send and receive UDP messages in the network between two peers each represented by a UNIGINE-application.</sdk_desc>
+	<desc>
+		<brief><para>This sample shows how to use the sockets API to send and receive UDP messages between two peers in the network.</para>
+		<para><strong>You need to have two instances of this 'C++ Samples' app running for this sample to work.</strong></para>
+		<para>Each instance can operate in one of two modes: <ui>Sender</ui> or <ui>Receiver</ui>. To select the mode click on the corresponding button below. There you can also specify the <em>Receiver's hostname and port</em>.</para>
+		<para>In <ui>Sender</ui> mode the app packs the player's camera transform into a datagram and sends it to the Receiver on every engine update.</para>
+		<para>While in this mode you can also send text messages to the peer by using this sample-specific console command <file_name>send_msg</file_name> (e.g. <user_input>send_msg hello world</user_input>).</para>
+		<para>In <ui>Receiver</ui> mode the app receives and interprets incoming messages from the peer: the text messages are written to console, and the camera transforms are applied to the player.</para></brief>
+	</desc>
+	<tags>
+		<tag>Network</tag>
+		<tag>Basic Recipes</tag>
+	</tags>
+</sample>

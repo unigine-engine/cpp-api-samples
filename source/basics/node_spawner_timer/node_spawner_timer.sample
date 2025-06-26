@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Node Spawner Timer">
+	<desc>
+		<brief>A simple node spawner creates nodes at a set spawn frequency.</brief>
+		<para>The sample will be useful for generating game objects with a certain periodicity - for example, enemies, bonuses, effects or other elements of the game world.</para>
+	</desc>
+	<tags>
+		<tag>Basic Recipes</tag>
+	</tags>
+</sample>

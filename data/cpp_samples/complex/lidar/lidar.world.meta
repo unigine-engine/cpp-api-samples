@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>95cc57b2045152bfed38f7007f34276dc4fd538e</guid>
+	<type>world</type>
+	<hash>8bf887d1</hash>
+	<runtimes>
+		<runtime id="95cc57b2045152bfed38f7007f34276dc4fd538e" name="lidar.world" link="0"/>
+	</runtimes>
+	<parameters>
+		<parameter type="string" name="physics_settings_path"/>
+		<parameter type="string" name="render_settings_path"/>
+		<parameter type="string" name="script_name"/>
+		<parameter type="string" name="sound_settings_path"/>
+		<parameter type="string" name="viewports_settings"/>
+	</parameters>
+</asset>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="User Interface">
+	<sdk_desc>On-the-fly generation of a user interface from a <b>.ui</b> file and setting event handlers for widgets.</sdk_desc>
+	<desc>
+		<brief>This sample shows how to generate a User Interface from a description stored in a <strong nt="1">.ui</strong> file (<ui>XML</ui> format) via C++ API. The sample also demonstrates how to get a UI widget by name via <ui><link to="userinterface_class" offset="getWidgetByName_cstr_Widget">getWidgetByName()</link></ui> and subscribe to events to implement custom handling for user actions (particularly selecting <ui>File -> Reload</ui> from the main menu or entering text in the text field on the <strong nt="1">EditText</strong> tab).</brief>
+	</desc>
+	<controls>
+		<![CDATA[
+		Clicking an element allows you to interact with it.
+		]]>
+	</controls>
+	<tags>
+		<tag>Interface (GUI)</tag>
+		<tag>Widgets</tag>
+	</tags>
+</sample>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>ba4dcdcccb4daebb934254de6e4bb6a5d729f7c0</guid>
+	<type>path</type>
+	<hash>0bf82a1</hash>
+	<runtimes>
+		<runtime id="ba4dcdcccb4daebb934254de6e4bb6a5d729f7c0" name="test.path" link="0"/>
+	</runtimes>
+</asset>

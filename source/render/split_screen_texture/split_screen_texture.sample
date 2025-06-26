@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sample title="Split-Screen Texture">
+	<sdk_desc>Rendering views from two cameras into textures and implementing split-screen mode</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample demonstrates how to capture views from two different cameras into separate textures and implement a split-screen layout using the C++ API.</para>
+			<para>Each camera renders its output to a texture using <ui><link to="viewport_class" offset="renderTexture2D_Camera_Texture_void">Viewport::renderTexture2D()</link></ui>. These textures are displayed in a vertical split-screen layout using <ui><link to="widgetsprite_class">WidgetSprite</link></ui> elements, and at the same time are applied to surfaces by assigning them to the albedo slot of static mesh materials. The layout adjusts dynamically to screen size changes.</para>
+		</brief>
+		<para>This setup can be used for multiplayer screen sharing, camera comparisons, or in-game monitors rendered from multiple viewpoints.</para>
+	</desc>
+	<controls>
+		<![CDATA[
+Use <b>WASD</b> to move<br/>
+Use <b>arrows</b> to move
+		]]>
+	</controls>
+	<tags>
+		<tag>Render</tag>
+		<tag>Cameras</tag>
+		<tag>Widgets</tag>
+	</tags>
+</sample>

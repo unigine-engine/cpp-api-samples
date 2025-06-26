@@ -1,0 +1,83 @@
+BaseMaterial <var_prefix=var texture_prefix=tex node=ObjectDynamic hidden=1>
+{
+	Option transparent=2
+
+	Texture2D particles_positions
+	Texture2D particles_velocities
+	Texture2D particles_mapped_positions
+
+	Pass ambient
+	{
+		Vertex=
+		#{
+			// Include Unified Unigine Shader Language (UUSL) header
+			#include <core/materials/shaders/render/common.h>
+
+			STRUCT(VERTEX_IN)
+				INIT_ATTRIBUTE(float,0,POSITION)
+			END
+
+			STRUCT(VERTEX_OUT)
+				INIT_POSITION
+				INIT_OUT(float3,0)
+			END
+
+			#define PARTICLES_SIZE_X 1024
+			#define PARTICLES_SIZE_Y 1024
+
+			MAIN_BEGIN(VERTEX_OUT,VERTEX_IN)
+
+				float4 row_0 = s_transform[0];
+				float4 row_1 = s_transform[1];
+				float4 row_2 = s_transform[2];
+
+				// Get index of vertex
+				uint index = uint(IN_ATTRIBUTE(0));
+
+				// Convert index to particles map
+				uint2 particle_coord_index = uint2(index % PARTICLES_SIZE_X, index / PARTICLES_SIZE_Y);
+
+				// Get position and velocity particle
+				float3 particle_position = TEXTURE_FETCH(tex_particles_positions,particle_coord_index).xyz;
+				float3 particle_velocity = TEXTURE_FETCH(tex_particles_velocities,particle_coord_index).xyz;
+				float4 mapped_position = TEXTURE_FETCH(tex_particles_mapped_positions,particle_coord_index);
+
+				float4 in_vertex = float4(particle_position,1.0f);
+				float4 view_position = mul4(row_0,row_1,row_2,in_vertex);
+
+				OUT_POSITION = mul4(s_projection, view_position);
+
+				// Store particle velocity for dynamic color
+				float particle_speed = length(particle_velocity) * 0.5f;
+				float3 velocity_color = lerp(float3(1.0f,1.0f,1.0f),float3(1.0f,0.0f,0.0f),saturate(particle_speed));
+
+				OUT_DATA(0) = velocity_color;
+
+			MAIN_END
+
+			// end
+		#}
+
+		Fragment=
+		#{
+			// Include Unified Unigine Shader Language (UUSL) header
+			#include <core/materials/shaders/render/common.h>
+
+			STRUCT(FRAGMENT_IN)
+				INIT_POSITION
+				INIT_IN(float3, 0) // velocity
+			END
+
+			STRUCT_FRAG_BEGIN
+				INIT_COLOR(float4)
+			STRUCT_FRAG_END
+
+			MAIN_FRAG_BEGIN(FRAGMENT_IN)
+				float3 color = IN_DATA(0);
+
+				float lum = 0.4f;
+				OUT_COLOR = float4(color, lum);
+			MAIN_FRAG_END
+		#}
+	}
+}

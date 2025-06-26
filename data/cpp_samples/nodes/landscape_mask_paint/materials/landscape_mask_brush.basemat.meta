@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>d7e54865c323a32c96dec07b906a99856bc98729</guid>
+	<type>material</type>
+	<hash>9124400e</hash>
+	<runtimes>
+		<runtime id="d7e54865c323a32c96dec07b906a99856bc98729" name="landscape_mask_brush" link="0" type="5"/>
+	</runtimes>
+</asset>

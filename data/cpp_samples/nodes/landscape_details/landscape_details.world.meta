@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>af437c3f28845c92124bd2c9f5e5bd94c6168be3</guid>
+	<type>world</type>
+	<hash>2732a088</hash>
+	<runtimes>
+		<runtime id="af437c3f28845c92124bd2c9f5e5bd94c6168be3" name="landscape_details.world" link="0"/>
+	</runtimes>
+	<parameters>
+		<parameter type="string" name="physics_settings_path"/>
+		<parameter type="string" name="render_settings_path">guid://8bed8c3ce53501ff11c1b0ae5cc6d017d4ad5524</parameter>
+		<parameter type="string" name="script_name"/>
+		<parameter type="string" name="sound_settings_path"/>
+		<parameter type="string" name="viewports_settings"/>
+	</parameters>
+</asset>

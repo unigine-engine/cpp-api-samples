@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="JSON">
+	<sdk_desc>Generation of a structured <ui>JSON</ui> document containing objects, arrays, and various data types such as strings, numbers, booleans, and null values, followed by traversal and pretty-printed output.</sdk_desc>
+	<desc>
+		<brief>This sample shows how to generate a structured <ui>JSON</ui> document containing objects, arrays, and various data types such as strings, numbers, booleans, and null values. It also demonstrates how to traverse and print this structure recursively with indentation, imitating a pretty-printed output.</brief>
+		<para>The sample begins by constructing a custom <ui>JSON</ui> structure in memory using <ui><link to="json_class" offset="Json">Json::create()</link></ui> and its child manipulation methods. Nodes are added dynamically and include both named and unnamed children of various types. Once built, the structure is traversed recursively and printed to the console in a readable format using indentation and commas, based on node type and position. The code demonstrates how to distinguish between arrays, objects, and primitive values when printing.</para>
+		<para>This sample is useful for learning the basics of <ui>JSON</ui> manipulation, such as creating structured data, traversing an element tree, and formatting output. It can serve as a foundation for processing <ui>JSON</ui> data (e.g., responses to <ui>REST API</ui> requests), as well as for complex serialization or debugging tools.</para>
+	</desc>
+	<tags>
+		<tag>File Formats</tag>
+		<tag>Logic</tag>
+	</tags>
+</sample>

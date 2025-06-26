@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>d9f5b37a18d8c3d63c94c8caa5a04c3e55212bc2</guid>
+	<type>file</type>
+	<hash>9670a074</hash>
+	<runtimes>
+		<runtime id="d9f5b37a18d8c3d63c94c8caa5a04c3e55212bc2" name="SFX.bank" link="0"/>
+	</runtimes>
+</asset>

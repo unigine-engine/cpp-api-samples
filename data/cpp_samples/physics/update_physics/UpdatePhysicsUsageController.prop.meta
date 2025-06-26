@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>9ad1efc1cace060758df44256f1ae22d325998c7</guid>
+	<type>property</type>
+	<hash>936c19bd</hash>
+	<runtimes>
+		<runtime id="9ad1efc1cace060758df44256f1ae22d325998c7" name="UpdatePhysicsUsageController" link="0" type="4"/>
+	</runtimes>
+</asset>

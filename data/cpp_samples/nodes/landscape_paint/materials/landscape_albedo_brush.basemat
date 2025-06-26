@@ -1,0 +1,45 @@
+BaseMaterial <editable=false var_prefix=var texture_prefix=tex>
+{
+	Texture2D brush_texture <internal=true>
+	Texture2D brush_mask <internal=true>
+	Float brush_angle <internal=true>
+	Float brush_opacity <internal=true>
+	Float3 brush_color <internal=true>
+
+	Pass landscape_albedo_brush
+	{
+		Fragment=
+		#{
+			#include <core/materials/shaders/render/common.h>
+			
+			STRUCT_FRAG_BEGIN
+			STRUCT_FRAG_END
+
+			INIT_RW_TEXTURE_RGBA8(0, RW_TEX_ALBEDO)
+
+			MAIN_FRAG_BEGIN(FRAGMENT_IN)
+			
+				float2 uv = float2(IN_UV.x, 1.0f - IN_UV.y);
+				float2 brush_uv = rotateUV(uv, var_brush_angle);
+				if(checkUV(brush_uv))
+					discard;
+
+				float3 brush_albedo = TEXTURE(tex_brush_texture, brush_uv).xyz * var_brush_color;
+				float brush_alpha = TEXTURE(tex_brush_mask, brush_uv).w * var_brush_opacity;
+
+
+				int2 albedo_coord = toInt2(IN_POSITION.xy);
+				float4 albedo_tex_sample = TEXTURE_RW_LOAD_RGBA8(RW_TEX_ALBEDO, albedo_coord);
+				float3 albedo = albedo_tex_sample.xyz;
+				float alpha = albedo_tex_sample.w;
+
+				float3 new_albedo = (brush_albedo * brush_alpha + albedo * alpha * (1.0f - brush_alpha))
+					/ (brush_alpha + alpha * (1.0f - brush_alpha));
+				float new_alpha = brush_alpha + alpha * (1.0f - brush_alpha);
+
+				TEXTURE_RW_STORE_RGBA8(RW_TEX_ALBEDO, albedo_coord, float4(new_albedo, new_alpha));
+
+			MAIN_FRAG_END
+		#}
+	}
+}

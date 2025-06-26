@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.20.0.0" guid="4fd6ef3a4a543551c4dcee7c8cc877abf1fe290e" base_material="4dfec30f491f753f6e89094db6d3d695e89f9d6f">
+	<state name="vertex_color">1</state>
+	<state name="vertex_albedo">1</state>
+	<state name="transparent_opacity_depth">1</state>
+	<state name="transparent_velocity">1</state>
+	<state name="transparent_material_mask">1</state>
+</material>

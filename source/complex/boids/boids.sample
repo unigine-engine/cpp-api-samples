@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Boids">
+	<sdk_desc>Simulation and control of flocking behavior (Boids algorithm) for different types of entities.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample demonstrates the simulation and control of flocking behavior (Boids algorithm) for different types of entities, such as birds and fish. Two separate controllers manage the behavior of these groups using common flocking principles like cohesion, alignment, and separation.</para>
+			<para>You can adjust various parameters in real time to observe how they influence the behavior of each flock:</para>
+			<ul>
+				<li><strong nt="1">Cohesion</strong> - strength of attraction toward the center of the flock.</li>
+				<li><strong nt="1">Spot Radius</strong> - distance within which other units are considered for cohesion and alignment.</li>
+				<li><strong nt="1">Alignment</strong> - force that aligns a unit's direction with the average heading of its neighbors.</li>
+				<li><strong nt="1">Separation</strong> - repulsion force that prevents units from crowding too closely.</li>
+				<li><strong nt="1">Separation Desired Range</strong> - distance threshold for applying separation force.</li>
+				<li><strong nt="1">Target</strong> - amount of force directed towards target.</li>
+				<li><strong nt="1">Unit Max Speed</strong> - maximum unit speed.</li>
+				<li><strong nt="1">Unit Max Force</strong> - maximum steering force applied for movement corrections.</li>
+				<li><strong nt="1">Unit Max Turn Speed</strong> - how quickly a unit can rotate to adjust direction.</li>
+			</ul>
+			<para>Two independent flocks (e.g., fish and birds) demonstrate how multiple controllers can operate simultaneously with distinct settings. Optional debug visualization renders bounding boxes around each flock, helping observe bounds and transitions.</para>
+			<para><strong>Use Cases</strong></para>
+			<ul>
+				<li><strong>Games and simulations</strong> - realistic swarm behavior for birds, fish, insects, crowds, or drones.</li>
+				<li><strong>Training AI systems</strong> - testing multi-agent behavior and interaction dynamics.</li>
+				<li><strong>Environmental storytelling</strong> - adding life to ecosystems and natural environments.</li>
+				<li><strong>Cinematic scenes</strong> - choreographed group movements for visual impact.</li>
+				<li><strong>Education and research</strong> - exploring emergent behavior in decentralized systems.</li>
+			</ul>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Games</tag>
+		<tag>Basic Recipes</tag>
+	</tags>
+</sample>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.20.0.0" guid="5bc31c776a4dcf6ae460b7c150682e2c566ad39b" base_material="4dfec30f491f753f6e89094db6d3d695e89f9d6f">
+	<options transparent="1"/>
+	<state name="emission">1</state>
+	<texture name="diffuse">core/textures/common/checker_d.texture</texture>
+	<texture name="albedo">guid://5eeeedc37957b846582532ed81c1f7684503f3a7</texture>
+	<texture name="emission">guid://5eeeedc37957b846582532ed81c1f7684503f3a7</texture>
+	<parameter name="diffuse_color" expression="0">0.800000012 0.800000012 0.800000012 1</parameter>
+	<state name="transparent_opacity_depth">1</state>
+	<state name="transparent_velocity">1</state>
+	<state name="transparent_material_mask">1</state>
+</material>

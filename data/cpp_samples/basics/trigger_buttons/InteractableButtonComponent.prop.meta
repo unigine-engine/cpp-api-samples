@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>1b14b3b2615629d225b33ecb5c3e023a9e214c0d</guid>
+	<type>property</type>
+	<hash>6975b2c4</hash>
+	<runtimes>
+		<runtime id="1b14b3b2615629d225b33ecb5c3e023a9e214c0d" name="InteractableButtonComponent" link="0" type="4"/>
+	</runtimes>
+</asset>

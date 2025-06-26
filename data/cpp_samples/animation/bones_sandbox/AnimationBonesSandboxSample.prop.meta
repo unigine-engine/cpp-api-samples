@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>784c2634e100ad7f474e9820b321fa095c7ba75b</guid>
+	<type>property</type>
+	<hash>157783e2</hash>
+	<runtimes>
+		<runtime id="784c2634e100ad7f474e9820b321fa095c7ba75b" name="AnimationBonesSandboxSample" link="0" type="4"/>
+	</runtimes>
+</asset>

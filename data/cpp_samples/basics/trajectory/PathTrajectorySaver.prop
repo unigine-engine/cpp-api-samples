@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="PathTrajectorySaver" manual="1" parent_name="node_base">
+	<parameter name="path_file" type="file"/>
+	<parameter name="path_node" type="node">0</parameter>
+	<parameter name="quality" type="int">25</parameter>
+	<parameter name="autosave" type="toggle">1</parameter>
+</property>

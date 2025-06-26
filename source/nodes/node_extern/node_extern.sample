@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Node Extern">
+	<sdk_desc>This sample adds custom nodes that were created via API to the world by using <b>NodeExtern</b>. It shows how to implement bound box visualization and runtime node configuration while maintaining engine integration. Useful for adding specialized nodes with custom behavior and visualization.</sdk_desc>
+	<desc>
+		<brief>
+			<para>UNIGINE allows you to extend its out-of-the-box functionality in various ways, including adding custom nodes with personalized behavior, functions, and visualization (if needed).</para>
+			<para>This sample demonstrates how to implement a custom user node based on the <strong nt="1"><link to="nodeextern_class">NodeExtern</link></strong> class, featuring bounding box visualization and runtime configuration of node parameters (e.g., bounding box color). These nodes can then be added to your scene via API.</para>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Objects</tag>
+		<tag>Extension &amp; Customization</tag>
+	</tags>
+</sample>

@@ -1,0 +1,73 @@
+BaseMaterial <var_prefix=var texture_prefix=tex node=ObjectExtern hidden=1>
+{
+	Option transparent=2
+	
+	Pass ambient
+	{
+		Vertex=
+		#{
+			/* Copyright (C) 2005-2025, UNIGINE. All rights reserved.
+ *
+ * This file is a part of the UNIGINE 2 SDK.
+ *
+ * Your use and / or redistribution of this software in source and / or
+ * binary form, with or without modification, is subject to: (i) your
+ * ongoing acceptance of and compliance with the terms and conditions of
+ * the UNIGINE License Agreement; and (ii) your inclusion of this notice
+ * in any version of this software that you use or redistribute.
+ * A copy of the UNIGINE License Agreement is available by contacting
+ * UNIGINE. at http://unigine.com/
+ */
+
+			#include <core/materials/shaders/render/common.h>
+			
+			CBUFFER(parameters)
+				UNIFORM float4x4 ss_transform;
+			END
+			
+			STRUCT(VERTEX_IN)
+				INIT_ATTRIBUTE(float4, 0, POSITION)
+				INIT_ATTRIBUTE(float2, 1, TEXCOORD0)
+			END
+			
+			STRUCT(VERTEX_OUT)
+				INIT_POSITION
+			END
+			
+			MAIN_BEGIN(VERTEX_OUT, VERTEX_IN)
+				
+				float4 row_0 = s_transform[0];
+				float4 row_1 = s_transform[1];
+				float4 row_2 = s_transform[2];
+				
+				float4 position = float4(IN_ATTRIBUTE(0).xyz, 1.0f);
+				float4 vertex = mul4(row_0, row_1, row_2, position);
+				
+				OUT_POSITION = mul4(s_projection, vertex);
+			MAIN_END
+		#}
+	
+		Fragment=
+		#{
+			#include <core/materials/shaders/render/common.h>
+			
+			STRUCT(FRAGMENT_IN)
+				INIT_POSITION
+			END
+			
+			CBUFFER(parameters)
+				UNIFORM float4 extern_color;
+			END
+			
+			STRUCT_FRAG_BEGIN
+				INIT_COLOR(float4)
+			STRUCT_FRAG_END
+			
+			MAIN_FRAG_BEGIN(FRAGMENT_IN)
+				
+				OUT_COLOR = extern_color;
+				
+			MAIN_FRAG_END
+		#}
+	}
+}

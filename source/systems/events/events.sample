@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sample title="Events">
+	<sdk_desc>Demonstration of four different patterns of subscribing to UNIGINE's <i>Events</i> via the C++ API, highlighting how event handler lifetime and management can vary depending on the approach.</sdk_desc>
+	<desc>
+		<brief>This sample demonstrates four different patterns for subscribing UNIGINE's <ui><link to="programming_events">Events</link></ui> via the C++ API, highlighting how event handler lifetime and management can vary depending on the approach.</brief>
+		<para>Each method demonstrates a different strategy for connecting to the same event and managing event handler lifetimes:</para>
+		<ul>
+			<li><ui>EventConnectionExample</ui> stores a single event handler with manual control over its activation. This type of connection is useful when you need precise control — you can enable, disable, or fully disconnect the handler at any time.</li>
+			<li><ui>EventConnectionsExample</ui> acts as a container for multiple handlers. It handles cleanup automatically (via the destructor) and manually (by calling <ui><link to="eventconnections_class" offset="disconnectAll_void">EventConnections::disconnectAll()</link></ui>). This is useful when you have many event handlers with varying lifetimes that need to be grouped.</li>
+			<li><ui>InheritedEventConnectionExample</ui> inherits <ui><link to="eventconnections_class">EventConnections</link></ui> class, making connection management part of its internal logic. All connected handlers are automatically disconnected when the object is destroyed.</li>
+			<li><ui>CallbackIDConnection</ui> provides a low-level, manual way to manage handlers using a connection ID. It offers flexibility but requires careful memory and lifetime handling. This approach is considered unsafe and should only be used when you fully understand the implications.</li>
+		</ul>
+		<para>Each example connects to a shared <ui>EventHolder</ui>, and handlers are triggered with a sample value. This setup is useful when designing modular, reactive systems that rely on flexible and explicit event-driven logic.</para>
+	</desc>
+	<tags>
+		<tag>Systems</tag>
+		<tag>Logic</tag>
+	</tags>
+</sample>

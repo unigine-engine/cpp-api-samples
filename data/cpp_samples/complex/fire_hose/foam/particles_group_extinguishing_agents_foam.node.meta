@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>d692ebb4b062a38376627306b4d92ead82f44028</guid>
+	<type>node</type>
+	<hash>5405c598</hash>
+	<runtimes>
+		<runtime id="d692ebb4b062a38376627306b4d92ead82f44028" name="particles_group_extinguishing_agents_foam.node" link="0" type="3"/>
+	</runtimes>
+</asset>

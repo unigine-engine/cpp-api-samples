@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Trajectory">
+	<sdk_desc>Three types of movement along a predefined path: linear interpolation, spline interpolation, and a trajectory loaded from a <b>*.path</b> file.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample demonstrates three types of movement along a predefined path:</para>
+			<ul>
+				<li><strong>Red plane</strong>: linear interpolation.</li>
+				<li><strong>Blue plane</strong>: spline interpolation.</li>
+				<li><strong>Green plane</strong>: path from a file.</li>
+			</ul>
+			<para>The sample contains the <ui>PathTrajectorySaver</ui> component that illustrates how to create your own path file, which is opened via the <ui><link to="worldtransformpath_class">WorldTransformPath</link></ui> node. Each path can be toggled on and off, and you can switch between the cameras to have a first-person view from each plane.</para>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Nodes</tag>
+		<tag>Basics</tag>
+		<tag>Basic Recipes</tag>
+		<tag>Transformations</tag>
+	</tags>
+</sample>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Landscape Excavation">
+	<sdk_desc>This sample demonstrates destructive, real-time modification of a Landscape Layer Map using a 3D object (e.g., a tractor grader) as an excavation tool.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample demonstrates <strong>destructive, real-time modification</strong> of a <strong nt="1"><link to="landscape_layer_map">Landscape Layer Map</link></strong> using a 3D object (e.g., a tractor grader) as an excavation tool.</para>
+			<para><strong>Key features:</strong></para>
+			<ul>
+				<li>Samples base terrain height from a <strong>source layer</strong></li>
+				<li>Projects the grader's <strong>depth map</strong> onto the terrain using an <strong>orthographic camera</strong></li>
+				<li>Uses a custom material (<strong nt="1">digging_tool.basemat</strong>) to update height data and clear mask layers</li>
+				<li>Applies updates asynchronously using <ui><link to="landscape_class" offset="asyncTextureDraw_UGUID_ivec2_ivec2_int_void">Landscape::asyncTextureDraw()</link></ui></li>
+				<li>Supports full interactive movement and rotation of the grader with the <ui>Manipulator</ui> widget.</li>
+			</ul>
+			<para>This sample is ideal for developing terrain deformation mechanics in simulators, construction games, or any scenario requiring runtime landscape sculpting based on object interaction.</para>
+		</brief>
+	</desc>
+	<controls>
+		<![CDATA[
+		<b>WASD QE</b> - move camera<br/><br/>
+		<b>C</b> - reset terrain modifications<br/>
+		Grader Movement:<br/>
+		<b>T</b> - translate<br/>
+		<b>R</b> - rotate<br/>
+		<b>G</b> - toggle local / world basis<br/>
+		]]>
+	</controls>
+	<tags>
+		<tag>Terrain</tag>
+		<tag>Basic Recipes</tag>
+	</tags>
+</sample>

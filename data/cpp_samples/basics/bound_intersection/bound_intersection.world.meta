@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>466973134c2722fb010f0f3050d7cb80bc75c40e</guid>
+	<type>world</type>
+	<hash>c6ebfe7a</hash>
+	<runtimes>
+		<runtime id="466973134c2722fb010f0f3050d7cb80bc75c40e" name="bound_intersection.world" link="0"/>
+	</runtimes>
+	<parameters>
+		<parameter type="string" name="physics_settings_path"/>
+		<parameter type="string" name="render_settings_path"/>
+		<parameter type="string" name="script_name"/>
+		<parameter type="string" name="sound_settings_path"/>
+		<parameter type="string" name="viewports_settings"/>
+	</parameters>
+</asset>

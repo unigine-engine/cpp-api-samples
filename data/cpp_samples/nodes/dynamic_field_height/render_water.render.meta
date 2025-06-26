@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>6ae71261ef7340a71690548dd7524cf0a29dc375</guid>
+	<type>render_settings</type>
+	<hash>49be20b6</hash>
+	<runtimes>
+		<runtime id="6ae71261ef7340a71690548dd7524cf0a29dc375" name="render_water.render" link="0"/>
+	</runtimes>
+</asset>

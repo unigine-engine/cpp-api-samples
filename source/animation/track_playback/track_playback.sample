@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Track Playback">
+	<sdk_desc>Using a tracker to animate objects (position, rotation, and scale).</sdk_desc>
+	<desc>
+		<brief>Sample demonstrating how to use Tracker to animate objects (change their position, rotation, and scale) based on tracks created in the Tracker tool.</brief>
+		<para>Tracker comes in handy for creating complex animation scripts.</para>
+		
+	</desc>
+	<tags>
+		<tag>Animation</tag>
+	</tags>
+</sample>

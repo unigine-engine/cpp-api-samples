@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="USC Structures">
+	<desc>
+		<brief>This sample demonstrates how to expose <ui>C++</ui> structs to <ui>UnigineScript</ui> using the <ui><link to="interpreter_class">Interpreter</link></ui> class.</brief>
+		<para>It defines a simple <ui>C++</ui> structure <ui>MyVector</ui> with four float fields (<ui>x, y, z, w</ui>) and registers it. Each field is mapped via explicit getter and setter methods to allow full read/write access from the <ui>UnigineScript</ui> side.</para>
+	</desc>
+	<tags>
+		<tag>UnigineScript</tag>
+	</tags>
+</sample>

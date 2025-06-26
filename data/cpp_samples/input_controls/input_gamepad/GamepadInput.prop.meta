@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>bb0db267fb65db034dd9adb3829ac51c94078ba8</guid>
+	<type>property</type>
+	<hash>20382378</hash>
+	<runtimes>
+		<runtime id="bb0db267fb65db034dd9adb3829ac51c94078ba8" name="GamepadInput" link="0" type="4"/>
+	</runtimes>
+</asset>

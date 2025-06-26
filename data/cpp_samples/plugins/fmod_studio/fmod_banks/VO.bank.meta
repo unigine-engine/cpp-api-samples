@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>aaca393c69db170fd2a51f0cf26c9204665fc444</guid>
+	<type>file</type>
+	<hash>7904453</hash>
+	<runtimes>
+		<runtime id="aaca393c69db170fd2a51f0cf26c9204665fc444" name="VO.bank" link="0"/>
+	</runtimes>
+</asset>

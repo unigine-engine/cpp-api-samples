@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Bones Retargeting">
+	<sdk_desc>This sample demonstrates how the same animation can be used on skeletons with different proportions.</sdk_desc>
+	<desc>
+		<brief><para>This sample demonstrates how the same animation can be used on skeletons with different proportions.</para>
+			<para>The pair on the left represents the use of animation without retargeting. On the right, the animatiotion is retargeted from the adult to the child. The bone length ratio between skeletons is taken into account for adjustment of the position component.</para>
+			<para>Retargeting is useful when you need to use the same animation source for different characters or objects with varying proportions but similar skeletal structures. This approach significantly speeds up the process of preparing animations.</para>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Animation</tag>
+	</tags>
+</sample>

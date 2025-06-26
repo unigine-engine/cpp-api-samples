@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="StructuredBufferSample" manual="1" parent_name="node_base">
+	<parameter name="dxt_compute_material" type="material"/>
+	<parameter name="source_texture_param" type="file">Source Texture</parameter>
+</property>

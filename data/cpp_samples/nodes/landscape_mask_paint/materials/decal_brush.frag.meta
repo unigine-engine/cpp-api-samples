@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>038113f5738bf4975868ae491457599f0c67eacc</guid>
+	<type>file</type>
+	<hash>43b0a9c6</hash>
+	<runtimes>
+		<runtime id="038113f5738bf4975868ae491457599f0c67eacc" name="decal_brush.frag" link="0"/>
+	</runtimes>
+</asset>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Landscape Fetch">
+	<sdk_desc>This sample demonstrates how to retrieve detailed information from a LandscapeTerrain object on its surface using LandscapeFetch.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample demonstrates how to retrieve detailed information from a <strong nt="1"><link to="object_landscape_terrain">LandscapeTerrain object</link></strong> at any arbitrary point on its surface using <strong nt="1"><link to="landscapefetch_class">LandscapeFetch</link></strong>.</para>
+			<para><strong>Key Features:</strong></para>
+			<ul>
+				<li>Casts a ray from the camera through the mouse cursor</li>
+				<li>Performs asynchronous intersection tests with the terrain</li>
+				<li><para>Retrieves:</para>
+					<ul>
+						<li>Surface <strong>height</strong></li>
+						<li>Surface <strong>normal</strong></li>
+						<li><strong>Blend mask values</strong> for all configured layers</li>
+						<li>Surface albedo</li>
+					</ul>
+				</li>
+				<li><para>Visualizes results in the viewport with:</para>
+					<ul>
+						<li>A <strong>normal vector</strong></li>
+						<li>A floating <strong>text box</strong> showing the terrain fetch data.</li>
+					</ul>
+				</li>
+			</ul>
+			<para>This feature can be used for terrain debugging, editor extensions, dynamic content placement, and real-time visualization of terrain attributes.</para>
+			</brief>
+	</desc>
+	<tags>
+		<tag>Terrain</tag>
+		<tag>Objects</tag>
+		<tag>Intersections</tag>
+		<tag>Materials</tag>
+	</tags>
+</sample>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>c03284cea4cdecb25c067063460b134548513cb4</guid>
+	<type>property</type>
+	<hash>87ce1d67</hash>
+	<runtimes>
+		<runtime id="c03284cea4cdecb25c067063460b134548513cb4" name="AnimationBonesConstraintsSample" link="0" type="4"/>
+	</runtimes>
+</asset>

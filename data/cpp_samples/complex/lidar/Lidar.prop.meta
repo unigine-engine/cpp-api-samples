@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>c3077651691720e129f84924dd6d80247db4585a</guid>
+	<type>property</type>
+	<hash>06d88281</hash>
+	<runtimes>
+		<runtime id="c3077651691720e129f84924dd6d80247db4585a" name="Lidar" link="0" type="4"/>
+	</runtimes>
+</asset>

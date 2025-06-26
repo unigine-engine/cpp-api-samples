@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>3c356685c649cfcc313c313bc811e24756ec0d0a</guid>
+	<type>property</type>
+	<hash>a196e087</hash>
+	<runtimes>
+		<runtime id="3c356685c649cfcc313c313bc811e24756ec0d0a" name="FlockSample" link="0" type="4"/>
+	</runtimes>
+</asset>

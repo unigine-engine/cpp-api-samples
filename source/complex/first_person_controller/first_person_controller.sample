@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="First-Person Controller">
+	<sdk_desc>Implementing and customizing a first-person controller with a physical body.</sdk_desc>
+	<desc>
+		<brief>This sample demonstrates how to implement and customize the first-person controller with a physical body.</brief>
+	</desc>
+	<controls>
+			<![CDATA[
+		<p align=left><b>WASD</b> to move.</p><br/>
+		<p align=left><b>Space</b> to jump.</p><br/>
+		<p align=left><b>Shift</b> to run.</p><br/>
+		<p align=left><b>Ctrl</b> to crouch.</p>
+			]]>
+	</controls>
+	<tags>
+		<tag>Cameras</tag>
+		<tag>Games</tag>
+		<tag>Basic Recipes</tag>
+	</tags>
+</sample>

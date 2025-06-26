@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Touch Input">
+	<desc>
+		<brief>This sample demonstrates how to add multi-touch input from the <strong nt="1"><link to="input_class">touchscreen</link></strong>, visualizing finger positions with dynamic circles and displaying real-time coordinates to the project.</brief>
+	</desc>
+	<tags>
+		<tag>Input &amp; Controls</tag>
+	</tags>
+</sample>

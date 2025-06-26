@@ -1,0 +1,12 @@
+string source = "From [USC]: ";
+int my_typeinfo(int value)
+{
+	log.message(source + "my_typeinfo(): %s\n", typeinfo(value));
+	return value;
+}
+
+int init()
+{
+	log.message("\n\n=================Variable Sample=================\n\n");
+	return 1;
+}

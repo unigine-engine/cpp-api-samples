@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="SpringRegular" manual="1" parent_name="node_base">
+	<parameter name="targetNode" type="node">0</parameter>
+	<parameter name="persecutorNode" type="node">0</parameter>
+	<parameter name="physicsFPS" type="float">60</parameter>
+	<parameter name="mass" type="float">0.75</parameter>
+	<parameter name="defaultStiffness" type="float" title="Stiffness">3</parameter>
+	<parameter name="defaultDamping" type="float" title="Damping">0.75</parameter>
+</property>

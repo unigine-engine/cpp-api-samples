@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>9361b17968cc7b4f06dc5d5c0dc2f9c3ef77cb20</guid>
+	<type>property</type>
+	<hash>241ea4d2</hash>
+	<runtimes>
+		<runtime id="9361b17968cc7b4f06dc5d5c0dc2f9c3ef77cb20" name="PlayerPersecutorSample" link="0" type="4"/>
+	</runtimes>
+</asset>

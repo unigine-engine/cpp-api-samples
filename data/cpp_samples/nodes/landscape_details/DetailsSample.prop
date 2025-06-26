@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="DetailsSample" manual="1" parent_name="node_base">
+	<parameter name="terrain_param" type="node" title="Terrain">0</parameter>
+	<parameter name="grass_texture_param" type="file">Grass Texture</parameter>
+	<parameter name="stone_texture_param" type="file">Stone Texture</parameter>
+</property>

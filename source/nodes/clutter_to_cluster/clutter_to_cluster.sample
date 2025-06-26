@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Clutter-to-Cluster Converter">
+	<sdk_desc>Dynamic generation of a <i>Mesh Clutter</i> and its conversion into a performance-optimized <i>Mesh Cluster</i> at runtime.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample demonstrates how to dynamically generate a clutter (<strong nt="1"><link to="object_mesh_clutter">ObjectMeshClutter</link></strong>) and convert it into an optimized cluster (<strong nt="1"><link to="object_mesh_cluster">ObjectMeshCluster</link></strong>) in real time. The clutter is generated using a random seed, and the conversion process transfers all key parameters from the clutter: materials, surface properties, LOD, shadows, physics, and collision settings.</para>
+			<para>The resulting cluster inherits the clutter's transform and hierarchy, but lets you <strong>selectively edit and remove individual elements</strong> of the group. Very often when building your worlds it is necessary to scatter meshes across a certain area randomly and then reposition some of them manually (e.g. when creating forests).</para>
+			<para><strong>UI Features:</strong></para>
+			<ul>
+				<li><strong nt="1">Generate Clutter</strong> - Creates a randomized layout of clutter meshes.</li>
+				<li><strong nt="1">Convert to Cluster</strong> - Merges all clutter instances into a single <strong nt="1"><link to="object_mesh_cluster">ObjectMeshCluster</link></strong> with identical visual/physical behavior.</li>
+			</ul>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Optimization</tag>
+		<tag>Objects</tag>
+		<tag>World Management</tag>
+	</tags>
+</sample>

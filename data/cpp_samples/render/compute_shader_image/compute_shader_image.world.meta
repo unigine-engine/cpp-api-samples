@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>3de08559e5994059d9275489e9d48961b8682db3</guid>
+	<type>world</type>
+	<hash>fdaf9097</hash>
+	<runtimes>
+		<runtime id="3de08559e5994059d9275489e9d48961b8682db3" name="compute_shader_image.world" link="0"/>
+	</runtimes>
+	<parameters>
+		<parameter type="string" name="physics_settings_path"/>
+		<parameter type="string" name="render_settings_path"/>
+		<parameter type="string" name="script_name"/>
+		<parameter type="string" name="sound_settings_path"/>
+		<parameter type="string" name="viewports_settings"/>
+	</parameters>
+</asset>

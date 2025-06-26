@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="PaintSample" manual="1" parent_name="node_base">
+	<parameter name="albedo_painter_param" type="node" title="Albedo Painter">0</parameter>
+	<parameter name="height_painter_param" type="node" title="Height Painter">0</parameter>
+	<parameter name="height_to_albedo_param" type="node" title="Height To Albedo">0</parameter>
+	<parameter name="landscape_layer_map_param" type="node" title="Landscape Layer Map">0</parameter>
+	<parameter name="player_param" type="node" title="Player">0</parameter>
+	<parameter name="brush_textures_param" type="array" title="Brush Textures" array_type="file"/>
+	<parameter name="brush_masks_param" type="array" title="Brush Masks" array_type="file"/>
+	<parameter name="gradients_param" type="array" title="Gradients" array_type="file"/>
+</property>

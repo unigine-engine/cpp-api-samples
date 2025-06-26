@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="Lidar" manual="1" parent_name="node_base">
+	<parameter name="lidar_post_material" type="material"/>
+	<parameter name="yaw_rays" type="int">264</parameter>
+	<parameter name="pitch_rays" type="int">64</parameter>
+	<parameter name="yaw_angle_range" type="vec2">-180.000000 180.000000</parameter>
+	<parameter name="pitch_angle_range" type="vec2">-40.000000 30.000000</parameter>
+	<parameter name="distance_range" type="vec2">0.500000 128.000000</parameter>
+	<parameter name="resolution" type="ivec2">640 640</parameter>
+	<parameter name="num_views" type="int">4</parameter>
+	<parameter name="is_debug" type="toggle">1</parameter>
+	<parameter name="is_debug_render_textures" type="toggle">0</parameter>
+	<parameter name="is_debug_render_points" type="toggle">1</parameter>
+	<parameter name="is_debug_render_frustums" type="toggle">0</parameter>
+</property>

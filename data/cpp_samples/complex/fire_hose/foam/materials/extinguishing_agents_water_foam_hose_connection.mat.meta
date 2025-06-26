@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>04a9b20b79105fee46baa67573a90550f8f2186f</guid>
+	<type>material</type>
+	<hash>258eacf6</hash>
+	<runtimes>
+		<runtime id="04a9b20b79105fee46baa67573a90550f8f2186f" name="extinguishing_agents_water_foam_hose_connection" link="0" type="5"/>
+	</runtimes>
+</asset>

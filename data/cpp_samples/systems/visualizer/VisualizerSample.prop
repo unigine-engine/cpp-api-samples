@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="VisualizerSample" manual="1" parent_name="node_base" tooltip="This component displays information visualizer sample and enables it&apos;s 2D components">
+	<parameter name="visualizer_usage_node" type="node" title="Visualizer usage node">0</parameter>
+</property>

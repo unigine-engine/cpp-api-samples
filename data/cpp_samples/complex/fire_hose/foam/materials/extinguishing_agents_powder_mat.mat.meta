@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>11359a7a3cab5b55133412d11ad1455c3684a07c</guid>
+	<type>material</type>
+	<hash>0d92b1fe</hash>
+	<runtimes>
+		<runtime id="11359a7a3cab5b55133412d11ad1455c3684a07c" name="extinguishing_agents_powder_mat" link="0" type="5"/>
+	</runtimes>
+</asset>

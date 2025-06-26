@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>dc812752b758972aef424a8f84837913571199c0</guid>
+	<type>property</type>
+	<hash>edebe4da</hash>
+	<runtimes>
+		<runtime id="dc812752b758972aef424a8f84837913571199c0" name="Movement" link="0" type="4"/>
+	</runtimes>
+</asset>

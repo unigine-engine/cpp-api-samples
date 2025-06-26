@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Property Animation">
+	<sdk_desc>Animating a property parameter.</sdk_desc>
+	<desc>
+		<brief>This sample demonstrates animating property parameters using <strong>property parameter animation objects</strong>. Useful for implementing custom effects that depend on property parameters.</brief>
+	</desc>
+	<tags>
+		<tag>Animation</tag>
+		<tag>Properties</tag>
+	</tags>
+</sample>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>6aae25b3e20729216311c1e0e720323c13be5baa</guid>
+	<type>material</type>
+	<hash>7efade6b</hash>
+	<runtimes>
+		<runtime id="6aae25b3e20729216311c1e0e720323c13be5baa" name="library_fire_ground" link="0" type="5"/>
+	</runtimes>
+</asset>

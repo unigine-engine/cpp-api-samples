@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>71ddb7350c78d14064bb01e255bca74dc5586016</guid>
+	<type>material_graph</type>
+	<hash>e45da899</hash>
+	<runtimes>
+		<runtime id="71ddb7350c78d14064bb01e255bca74dc5586016" name="hansrobottt2_svgblinn1.mgraph" link="0"/>
+		<runtime id="87effd6f7499cec62e6c4de45c62a5b54fff7fb8" name="hansrobottt2_svgblinn1" link="1" type="5"/>
+	</runtimes>
+</asset>

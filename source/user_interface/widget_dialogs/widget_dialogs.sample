@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sample title="Dialog Widget">
+	<sdk_desc>Creating widget dialog windows and assigning handlers via the C++ API</sdk_desc>
+	<desc>
+		<brief>This sample demonstrates how to create and manage a GUI dialog system using UNIGINE's dialog widgets via the C++ API. A <ui><link to="widgetwindow_class">WidgetWindow</link></ui> instance contains several buttons, each opening a different type of dialog: <ui><link to="widgetdialogmessage_class">WidgetDialogMessage</link></ui>, <ui><link to="widgetdialogfile_class">WidgetDialogFile</link></ui>, <ui><link to="widgetdialogcolor_class">WidgetDialogColor</link></ui>, or <ui><link to="widgetdialogimage_class">WidgetDialogImage</link></ui>.</brief>
+		<para>Each button is connected to an event handler that creates and configures the corresponding dialog widget. Dialogs are shown centered on screen and support user interaction through <ui>OK</ui> and <ui>Cancel</ui> buttons. A shared handler manages these responses, logs actions to the console, and deletes the dialog afterward to clean up resources.</para>
+		<para>This approach can be used to build simple and interactive GUI tools, settings panels, or development utilities that require built-in dialog interactions.</para>
+	</desc>
+	<tags>
+		<tag>Widgets</tag>
+		<tag>Windows &amp; Viewports</tag>
+		<tag>Interface (GUI)</tag>
+	</tags>
+</sample>

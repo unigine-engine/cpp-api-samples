@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Simple HTTP Image Request">
+	<sdk_desc>This sample shows how to implement an asynchronous <i>HTTP</i> request to a <i>REST API</i> to download image files and apply them to scene objects at runtime.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample shows how to implement an asynchronous <ui>HTTP</ui> request to a <ui>REST API</ui> to download image files and apply them to scene objects at runtime.</para>
+			<para>Two requests are performed to retrieve sample image data:</para>
+			<ol>
+				<li><strong nt="1">eu.httpbin.org/image/png</strong> - to download a <ui>PNG</ui> image</li>
+				<li><strong nt="1">eu.httpbin.org/image/jpeg</strong> - to download a <ui>JPEG</ui> image</li>
+			</ol>
+			<para>Only <ui>PNG</ui> and <ui>JPEG</ui> formats are supported for runtime loading into <ui><link to="image_class">Image</link></ui> Class instance from raw data.</para>
+			<para>The <strong nt="1"><a href="https://github.com/yhirose/cpp-httplib">github.com/yhirose/cpp-httplib</a></strong> library is used to perform the <ui>HTTP</ui> requests.</para>
+		</brief>
+		<para>Once an image is retrieved, it is loaded from raw byte data using the <ui><link to="image_class" offset="load_cstr_int_int">Image::load()</link></ui> method. If successful, the image is assigned to the albedo texture slot of the target material using <ui><link to="material_class" offset="setTextureImage_int_Image_int">Material::setTextureImage()</link></ui>. The texture is applied at runtime to the specified surface of an object in the scene. If loading fails, the downloaded data is written to a file for further inspection.</para>
+		<para>This sample showcases a practical approach to fetching external media assets, validating them, and using them in your scenes or application logic.</para>
+	</desc>
+	<tags>
+		<tag>Network</tag>
+	</tags>
+</sample>

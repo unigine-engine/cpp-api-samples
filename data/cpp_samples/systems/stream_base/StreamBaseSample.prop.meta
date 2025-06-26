@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>9304f29dac1d70b67dd333609a66e302a7637133</guid>
+	<type>property</type>
+	<hash>382f8f13</hash>
+	<runtimes>
+		<runtime id="9304f29dac1d70b67dd333609a66e302a7637133" name="StreamBaseSample" link="0" type="4"/>
+	</runtimes>
+</asset>

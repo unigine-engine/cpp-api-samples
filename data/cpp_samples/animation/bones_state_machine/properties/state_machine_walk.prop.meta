@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>a3b529b5752cd7557ef9cee0dc8fca4f9087fbab</guid>
+	<type>property</type>
+	<hash>7822e8b2</hash>
+	<runtimes>
+		<runtime id="a3b529b5752cd7557ef9cee0dc8fca4f9087fbab" name="state_machine_walk" link="0" type="4"/>
+	</runtimes>
+</asset>

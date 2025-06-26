@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>3e8d9a2363e2776e8df82c6f0aeb7826275bba54</guid>
+	<type>material</type>
+	<hash>9c02a834</hash>
+	<runtimes>
+		<runtime id="3e8d9a2363e2776e8df82c6f0aeb7826275bba54" name="landscape_height_brush" link="0" type="5"/>
+	</runtimes>
+</asset>

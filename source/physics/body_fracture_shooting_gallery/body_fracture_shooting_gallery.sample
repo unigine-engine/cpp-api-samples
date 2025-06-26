@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sample title="BodyFracture Shooting Gallery">
+	<sdk_desc>Implementation of a basic physics-driven shooting gallery using <i>Fracture Body</i>.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample shows how to simulate projectile-based interactions in a simple shooting gallery setup using <strong nt="1"><link to="body_fracture">Fracture Body</link></strong>. When the left mouse button is clicked, a projectile is spawned in front of the camera and propelled forward. Target objects in the scene react to the impact physically and can be fractured using the <strong nt="1"><link to="body_fracture">Fracture Body</link></strong> system to simulate realistic destruction effects.</para>
+			<para><strong>Use Cases:</strong></para>
+				<ul>
+					<li>Prototyping physics-based shooting mechanics.</li>
+					<li>Demonstrating <strong nt="1"><link to="body_fracture">Fracture Body</link></strong> impulse interactions.</li>
+					<li>Testing fracture behaviors in destructible environment setups.</li>
+				</ul>
+		</brief>
+	</desc>
+	<controls>
+		<![CDATA[<p><b>LMB</b> - fire a projectile.</p>]]>
+	</controls>
+	<tags>
+		<tag>Basic Recipes</tag>
+		<tag>Physics</tag>
+	</tags>
+</sample>

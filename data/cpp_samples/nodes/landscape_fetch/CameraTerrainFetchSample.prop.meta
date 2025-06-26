@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>2e461752b3e36dec0f7185a2aaf3cf98f3eed253</guid>
+	<type>property</type>
+	<hash>de287584</hash>
+	<runtimes>
+		<runtime id="2e461752b3e36dec0f7185a2aaf3cf98f3eed253" name="CameraTerrainFetchSample" link="0" type="4"/>
+	</runtimes>
+</asset>

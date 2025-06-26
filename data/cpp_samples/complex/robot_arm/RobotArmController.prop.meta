@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>8415007eeec1a15f50509776ffe9ddcb28ac043b</guid>
+	<type>property</type>
+	<hash>37b2b407</hash>
+	<runtimes>
+		<runtime id="8415007eeec1a15f50509776ffe9ddcb28ac043b" name="RobotArmController" link="0" type="4"/>
+	</runtimes>
+</asset>

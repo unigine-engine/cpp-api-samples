@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="PlayerPersecutorComponent" manual="1" parent_name="node_base">
+	<parameter name="controlled" type="toggle" tooltip="Controlled player persecutor">1</parameter>
+	<parameter name="target_node" type="node" group="Target">0</parameter>
+	<parameter name="anchor" type="vec3" group="Target">0.000000 0.000000 0.000000</parameter>
+	<parameter name="fixed" type="toggle" tooltip="fixed angle between player persecutor and target" group="Behavior">0</parameter>
+	<parameter name="collision" type="toggle" tooltip="Collision detection for player persecutor" group="Behavior">1</parameter>
+	<parameter name="collision_mask" type="mask" tooltip="Collision Mask" group="Behavior" flags="collision">1</parameter>
+	<parameter name="min_distance" type="float" group="Behavior">0</parameter>
+	<parameter name="max_distance" type="float" group="Behavior">50</parameter>
+	<parameter name="min_theta_angle" type="float" group="Behavior">-89.9</parameter>
+	<parameter name="max_theta_angle" type="float" group="Behavior">89.9</parameter>
+</property>

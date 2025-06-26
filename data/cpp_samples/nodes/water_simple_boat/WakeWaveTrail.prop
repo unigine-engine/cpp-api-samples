@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="WakeWaveTrail" manual="1" parent_name="node_base">
+	<parameter name="clear_button" type="toggle" group="Editor">0</parameter>
+	<parameter name="save_mesh" type="toggle" group="Editor">0</parameter>
+	<parameter name="num_quad" type="int" group="Editor">0</parameter>
+	<parameter name="start_time" type="float" group="Editor">0</parameter>
+	<parameter name="end_time" type="float" group="Editor">0</parameter>
+	<parameter name="start_distance" type="float" group="Editor">0</parameter>
+	<parameter name="end_distance" type="float" group="Editor">0</parameter>
+	<parameter name="speed" type="float" group="Editor">0</parameter>
+	<parameter name="mesh_decal_node" type="node" group="Spawn" filter="DecalMesh">0</parameter>
+	<parameter name="width" type="float" title="Wheel width" tooltip="Width of wheel in units(meters)" group="Trail">0.25</parameter>
+	<parameter name="max_distance_hide" type="float" group="Trail">100</parameter>
+	<parameter name="num_quad_material_param_name" type="string" group="Material">num_quad</parameter>
+	<parameter name="start_time_material_param_name" type="string" group="Material">start_time</parameter>
+	<parameter name="end_time_material_param_name" type="string" group="Material">end_time</parameter>
+	<parameter name="start_distance_material_param_name" type="string" group="Material">start_distance</parameter>
+	<parameter name="end_distance_material_param_name" type="string" group="Material">end_distance</parameter>
+	<parameter name="max_distance_material_param_name" type="string" group="Material">max_distance</parameter>
+	<parameter name="width_material_param_name" type="string" group="Material">width</parameter>
+	<parameter name="speed_material_param_name" type="string" group="Material">speed</parameter>
+	<parameter name="distance_eps" type="float" group="Trail">1</parameter>
+	<parameter name="direction_eps" type="float" group="Trail">0.05</parameter>
+	<parameter name="bound_increase" type="float" group="Trail">10</parameter>
+	<parameter name="debug" type="toggle" group="Editor">0</parameter>
+	<parameter name="count_segments" type="int">2</parameter>
+</property>

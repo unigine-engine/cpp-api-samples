@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>3a4c1625a5d77481785c1d8e1b93aecc9444e7a2</guid>
+	<type>property</type>
+	<hash>1218da6</hash>
+	<runtimes>
+		<runtime id="3a4c1625a5d77481785c1d8e1b93aecc9444e7a2" name="WidgetNoSignal" link="0" type="4"/>
+	</runtimes>
+</asset>

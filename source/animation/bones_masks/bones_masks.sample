@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Bones Masks">
+	<sdk_desc>Using masks to assign selective logic to different bones.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample demonstrates how to use bone masks.</para>
+			<para>Masks enable complex animation combinations. For example, you can preserve the original body movements while limiting head or arm animations to rotation, or scaling specific bones.</para>
+		</brief>
+		<para>This method is excellent for multi-layered animations, allowing you to mix motions, add effects, or exclude certain parts of the model to achieve specific visual results or behaviors.</para>
+	</desc>
+	<tags>
+		<tag>Animation</tag>
+	</tags>
+</sample>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>c678453d8835434c764b8a84eeb516d41e81eb43</guid>
+	<type>world</type>
+	<hash>94f4a779</hash>
+	<runtimes>
+		<runtime id="c678453d8835434c764b8a84eeb516d41e81eb43" name="camera_zoom.world" link="0"/>
+	</runtimes>
+	<parameters>
+		<parameter type="string" name="physics_settings_path"/>
+		<parameter type="string" name="render_settings_path"/>
+		<parameter type="string" name="script_name"/>
+		<parameter type="string" name="sound_settings_path"/>
+		<parameter type="string" name="viewports_settings"/>
+	</parameters>
+</asset>

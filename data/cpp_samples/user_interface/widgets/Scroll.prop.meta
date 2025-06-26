@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>090a3c807816bef76a7b19c9a37c7de92b0eaa5e</guid>
+	<type>property</type>
+	<hash>0871c807</hash>
+	<runtimes>
+		<runtime id="090a3c807816bef76a7b19c9a37c7de92b0eaa5e" name="Scroll" link="0" type="4"/>
+	</runtimes>
+</asset>

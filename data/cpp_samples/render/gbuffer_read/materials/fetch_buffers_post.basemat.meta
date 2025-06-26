@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>d9523790e826a13183873dbf62ad81cdad4acf7a</guid>
+	<type>material</type>
+	<hash>9594156f</hash>
+	<runtimes>
+		<runtime id="d9523790e826a13183873dbf62ad81cdad4acf7a" name="fetch_buffers_post" link="0" type="5"/>
+	</runtimes>
+</asset>

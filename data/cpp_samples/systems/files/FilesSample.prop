@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="FilesSample" manual="1" parent_name="node_base">
+	<parameter name="filepath" type="string">cpp_samples/Systems/Files/generated_file</parameter>
+</property>

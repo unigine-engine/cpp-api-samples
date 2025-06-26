@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Mount Points">
+	<sdk_desc>This sample demonstrates how to create and use mount points in the file system for accessing external folders and package files (e.g., <b>*.zip</b>, <b>*.ung</b>).</sdk_desc>
+	<desc>
+		<brief>This sample demonstrates the functionality of <link to="principles_file_system" offset="mount_points">mount points</link> in the Engine file system.</brief>
+		<para><ui>MountPointsSample.cpp</ui> allows you to add or remove mount points for a folder and a package archive via API. If the mount point is active, an image stored inside will be loaded and displayed.</para>
+		<para>Mounted paths are shown in the <ui>UI</ui> window, where you can toggle between mounting or unmounting each resource. Images are accessed using virtual paths defined by the mount location.</para>
+		<para>The sample illustrates the concept of virtualized file access: if a resource is not available via a mount point, it will not be found or displayed by the Engine.</para>
+		<para>This approach is useful for working with external content (stored outside the <strong nt="1">data</strong> folder), modular data loading, or switching asset sets at runtime.</para>
+	</desc>
+	<tags>
+		<tag>Systems</tag>
+		<tag>File System</tag>
+	</tags>
+</sample>

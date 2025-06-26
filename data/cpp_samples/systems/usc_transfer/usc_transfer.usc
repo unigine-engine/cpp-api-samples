@@ -1,0 +1,35 @@
+// Copyright (C), UNIGINE. All rights reserved.
+string source = "From [USC]: ";
+void image_info(Image image)
+{
+	log.message(source + "image_info(): %s %d %d %s\n", image.getFormatName(), image.getWidth(), image.getHeight(), typeinfo(image));
+}
+
+int init()
+{
+	log.message("\n\n=================Transfer Sample=================\n\n");
+
+	log.message("Image info:\n\n");
+
+	// create image
+	Image image = new Image();
+	image.create2D(256, 256, IMAGE_FORMAT_R8);
+
+	// transfer image through C++ API
+	my_image_info_0(image);
+	my_image_info_1(image);
+	my_image_info_2(image);
+
+	/////////////////////////////////
+
+	log.message("\nImage create:\n\n");
+
+	// create image by C++ API
+	image_info(my_image_create_0());
+	image_info(my_image_create_1());
+	image_info(my_image_create_2());
+
+	/////////////////////////////////
+
+	return 1;
+}

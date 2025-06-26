@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Simple Movement">
+	<sdk_desc>Different ways to specify object transformations during movement and rotation.</sdk_desc>
+	<desc>
+		<brief>
+		<para>Different ways to specify object transformations during movement and rotation.</para>
+		<para>The sample illustrates that using either of the following methods will lead to the same result.</para>
+		<para>Red cube is controlled using <ui><link to="node_class" offset="translate_Vec3_void">translate()</link></ui> and <ui><link to="node_class" offset="rotate_quat_void">rotate()</link></ui>.</para>
+		<para>Green cube: <ui><link to="node_class" offset="setPosition_Vec3_void">setPosition()</link></ui> and <ui><link to="node_class" offset="setRotation_quat_int_void">setRotation()</link></ui>.</para>
+		<para>Blue cube: <ui><link to="node_class" offset="setTransform_Mat4_void">setTransform()</link></ui>.</para>
+		</brief>
+	</desc>
+	<controls>
+		<![CDATA[
+<b>WASD</b> - to move and rotate the boxes.<br/>
+		]]>
+	</controls>
+	<tags>
+		<tag>Basic Recipes</tag>
+		<tag>Transformations</tag>
+	</tags>
+</sample>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>69637f36be15c1483f48f49e14fb5672c5eaee11</guid>
+	<type>property</type>
+	<hash>0b505b58</hash>
+	<runtimes>
+		<runtime id="69637f36be15c1483f48f49e14fb5672c5eaee11" name="CurveAnimationMaterialParamFloat" link="0" type="4"/>
+	</runtimes>
+</asset>

@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sample title="Structured Buffer">
+	<sdk_desc>Creating a DXT compression by using structured buffers</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample demonstrates how to compress a texture into <strong nt="1">DXT1</strong> format using compute shaders and structured buffers.</para>
+			<para>At initialization, a compute material is loaded, and a source texture is prepared. A <ui>DXT1Block</ui> structure is used to hold the compressed data, with its size based on the texture's dimensions (in 4x4 blocks). A structured buffer is created on the GPU to store the output.</para>
+			<para>The compute shader runs in two stages: a warm-up to trigger shader compilation and the actual compression pass. The number of compute groups is calculated dynamically from the texture size and thread group size to achieve efficient parallel execution.</para>
+			<para>When compression is complete, the GPU buffer is transferred to CPU memory asynchronously. A new image with the compressed data is created in <strong nt="1">DXT1</strong> format and saved to a <file_name>*.dds</file_name> file.</para>
+		</brief>
+		<para>This method offloads all heavy processing to the GPU, minimizes CPU overhead, and takes advantage of structured memory access for optimal performance.</para>
+	</desc>
+	<tags>
+		<tag>Render</tag>
+		<tag>Shaders</tag>
+		<tag>Optimization</tag>
+	</tags>
+</sample>

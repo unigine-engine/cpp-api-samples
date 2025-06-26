@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>9236f81b64f1029a804e5584386a48178631bf0d</guid>
+	<type>property</type>
+	<hash>ec81626b</hash>
+	<runtimes>
+		<runtime id="9236f81b64f1029a804e5584386a48178631bf0d" name="CatGame" link="0" type="4"/>
+	</runtimes>
+</asset>

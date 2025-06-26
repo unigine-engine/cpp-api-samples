@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>00e4bc9ba4f666b8015f0d1bc8fc98b7968a3d59</guid>
+	<type>property</type>
+	<hash>4384a648</hash>
+	<runtimes>
+		<runtime id="00e4bc9ba4f666b8015f0d1bc8fc98b7968a3d59" name="CheckBox" link="0" type="4"/>
+	</runtimes>
+</asset>

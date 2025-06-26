@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.20.0.0" guid="2f8504210d0e4f0c51d3befb68caa81eb8a370e5" base_material="1879c38175a361597e59397b6a17b4412390e56b">
+	<state name="triplanar">1</state>
+	<state name="additional_mask">1</state>
+	<state name="additional_mask_blend_mode">1</state>
+	<parameter name="albedo" expression="0">0.694117665 0.345098048 0 1</parameter>
+</material>

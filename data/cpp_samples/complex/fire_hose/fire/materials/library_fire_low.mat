@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.20.0.0" guid="7e0a25a0598d114c9c95a4d158af059cf1d60436" parent="cb3efb53459273a5337bfc1eaff041a5fd342807" base_material="b7c07dfd4ce80edac55fcbfdd0befa02ccd20b88">
+	<options blend_src="2" blend_dest="2"/>
+	<state name="animation">1</state>
+	<state name="ambient">0</state>
+	<state name="light_world">0</state>
+	<state name="emission">1</state>
+	<texture name="albedo">guid://cf37424f1470740225616860a022e9b53f186451</texture>
+	<texture name="emission">guid://cf37424f1470740225616860a022e9b53f186451</texture>
+	<parameter name="albedo_color" expression="0">1 1 1 0.278430998</parameter>
+	<parameter name="animation_size" expression="0">1 32</parameter>
+	<parameter name="animation_scale" expression="0">1</parameter>
+	<parameter name="soft_interaction_scale" expression="0">1.5</parameter>
+	<parameter name="emission_scale" expression="0">2.352</parameter>
+	<parameter name="emission_color" expression="0">1 1 1 0.278430998</parameter>
+</material>

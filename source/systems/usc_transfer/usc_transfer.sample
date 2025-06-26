@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="USC Transfer">
+	<desc>
+		<brief>This sample demonstrates how to transfer complex data between <ui>UnigineScript</ui> and <ui>C++</ui> using the <link to="variable_class">Variable</link> class and the <ui>TypeToVariable</ui> utility.</brief>
+		<para>The example shows several ways to pass and return <link to="image_class">Image</link> objects between script and native code. It compares direct object passing, conversion via <ui><link to="variable_class">Variable</link></ui>, and using <ui>TypeToVariable</ui>.</para>
+	</desc>
+	<tags>
+		<tag>UnigineScript</tag>
+	</tags>
+</sample>

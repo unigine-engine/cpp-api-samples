@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.20.0.0" guid="69e7bf40fd88b3e007eb72ea138dca5ab18030f5" base_material="b7c07dfd4ce80edac55fcbfdd0befa02ccd20b88">
+	<options order="-1" blend_src="5" blend_dest="6"/>
+	<state name="albedo_color_type">1</state>
+	<state name="transparent_opacity_depth">1</state>
+	<state name="transparent_velocity">1</state>
+	<state name="transparent_material_mask">1</state>
+	<texture name="albedo">guid://ca1b988d9cfd66948047f3a791db6d3d906b33d3</texture>
+	<texture name="albedo_color">
+		<curve2d>
+			<keys>
+				<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+				<key point="0.00999999978 0.5" left_tangent="0 0" right_tangent="0 0"/>
+				<key point="0.100000001 0.5" left_tangent="0 0" right_tangent="0 0"/>
+				<key point="0.300000012 0" left_tangent="0 0" right_tangent="0 0"/>
+			</keys>
+		</curve2d>
+		<curve2d>
+			<keys>
+				<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+				<key point="0.00999999978 0.5" left_tangent="0 0" right_tangent="0 0"/>
+				<key point="0.100000001 0.5" left_tangent="0 0" right_tangent="0 0"/>
+				<key point="0.300000012 0" left_tangent="0 0" right_tangent="0 0"/>
+			</keys>
+		</curve2d>
+		<curve2d>
+			<keys>
+				<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+				<key point="0.00999999978 0.5" left_tangent="0 0" right_tangent="0 0"/>
+				<key point="0.100000001 0.5" left_tangent="0 0" right_tangent="0 0"/>
+				<key point="0.300000012 0" left_tangent="0 0" right_tangent="0 0"/>
+			</keys>
+		</curve2d>
+		<curve2d>
+			<keys>
+				<key point="0 0" left_tangent="0 0" right_tangent="0 0"/>
+				<key point="0.00999999978 0.5" left_tangent="0 0" right_tangent="0 0"/>
+				<key point="0.100000001 0.5" left_tangent="0 0" right_tangent="0 0"/>
+				<key point="0.300000012 0" left_tangent="0 0" right_tangent="0 0"/>
+			</keys>
+		</curve2d>
+	</texture>
+	<parameter name="albedo_color" expression="0">1 1 1 0.666666687</parameter>
+	<parameter name="animation_size" expression="0">1 1</parameter>
+	<parameter name="animation_scale" expression="0">0.553260028</parameter>
+	<parameter name="soft_interaction_scale" expression="0">1</parameter>
+	<parameter name="environment_scale" expression="0">0</parameter>
+</material>

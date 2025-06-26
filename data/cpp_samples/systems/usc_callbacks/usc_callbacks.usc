@@ -1,0 +1,29 @@
+int callback(int value)
+{
+	log.message("From [USC]: callback(%s): called\n", typeinfo(value));
+
+	return value;
+}
+
+void counter()
+{
+	for (int i = 0; i < 4; i++)
+	{
+		log.message("From [USC]: counter(): called\n");
+		yield i;
+	}
+
+	return -1;
+}
+
+int init()
+{
+	log.message("\n\n=================Callbacks Sample=================\n\n");
+
+	// run "callback" script function via API runWorldFunction() function
+	log.message("From [USC]: result is: %s\n\n", typeinfo(runWorldFunction("callback", 10)));
+	log.message("From [USC]: result is: %s\n\n", typeinfo(runWorldFunction("callback", vec3(1.0f, 2.0f, 3.0f))));
+	log.message("From [USC]: result is: %s\n\n", typeinfo(runWorldFunction("callback", "a string")));
+
+	return 1;
+}

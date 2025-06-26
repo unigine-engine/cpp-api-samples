@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="ZoomSample" manual="1" parent_name="node_base" tooltip="This component displays information about the zoom sample and demonstrates how to use a simple zoom and how it affects player camera.">
+	<parameter name="zoom_node" type="node" tooltip="Zoom controller node">0</parameter>
+	<parameter name="target_one_node" type="node" tooltip="Target one node">0</parameter>
+	<parameter name="target_two_node" type="node" tooltip="Target two node">0</parameter>
+	<parameter name="target_three_node" type="node" tooltip="Target three node">0</parameter>
+</property>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>cfd8fc18c71c7b25b31866c7a5e6910e3d1c026f</guid>
+	<type>world</type>
+	<hash>94fd475</hash>
+	<runtimes>
+		<runtime id="cfd8fc18c71c7b25b31866c7a5e6910e3d1c026f" name="gui_to_texture.world" link="0"/>
+	</runtimes>
+	<parameters>
+		<parameter type="string" name="physics_settings_path"/>
+		<parameter type="string" name="render_settings_path">guid://bcaeba54e5eff10e11fda17900b40b72d1e129d7</parameter>
+		<parameter type="string" name="script_name"/>
+		<parameter type="string" name="sound_settings_path"/>
+		<parameter type="string" name="viewports_settings"/>
+	</parameters>
+</asset>

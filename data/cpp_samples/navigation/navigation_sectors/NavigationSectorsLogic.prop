@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="NavigationSectorsLogic" manual="1" parent_name="node_base">
+	<parameter name="path_start" type="node">0</parameter>
+	<parameter name="path_end" type="node">0</parameter>
+	<parameter name="navigation" type="node">0</parameter>
+	<parameter name="route_radius" type="float">0.12</parameter>
+	<parameter name="route_color" type="color">1.000000 1.000000 1.000000 1.000000</parameter>
+</property>

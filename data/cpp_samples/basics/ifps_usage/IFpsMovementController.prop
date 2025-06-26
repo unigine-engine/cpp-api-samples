@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="IFpsMovementController" manual="1" parent_name="node_base" tooltip="This component controls node movement, optionally using Game::getIfps() for itdepending on the parameter value">
+	<parameter name="use_ifps" type="toggle" title="Use IFps">0</parameter>
+	<parameter name="movement_speed" type="float" title="Movement Speed">1</parameter>
+</property>

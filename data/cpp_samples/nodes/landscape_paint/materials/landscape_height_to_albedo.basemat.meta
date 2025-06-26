@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>d9e3881b45811c6121e076f821221fe065a52819</guid>
+	<type>material</type>
+	<hash>c25c953d</hash>
+	<runtimes>
+		<runtime id="d9e3881b45811c6121e076f821221fe065a52819" name="landscape_height_to_albedo" link="0" type="5"/>
+	</runtimes>
+</asset>

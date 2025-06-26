@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>3735aba3f7427149e3abee643f3c3c198d863cf0</guid>
+	<type>property</type>
+	<hash>e3063864</hash>
+	<runtimes>
+		<runtime id="3735aba3f7427149e3abee643f3c3c198d863cf0" name="Interactor" link="0" type="4"/>
+	</runtimes>
+</asset>

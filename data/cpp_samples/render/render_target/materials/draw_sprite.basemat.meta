@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>0fda0817875d47836afa1f21472285bb2f61a2ab</guid>
+	<type>material</type>
+	<hash>86524b5e</hash>
+	<runtimes>
+		<runtime id="0fda0817875d47836afa1f21472285bb2f61a2ab" name="draw_sprite" link="0" type="5"/>
+	</runtimes>
+</asset>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="state_machine_walk" guid="a3b529b5752cd7557ef9cee0dc8fca4f9087fbab" parent="bf9203a8f8aa1da988bb64e733023d8c9f01463b">
+	<parameter name="init_state_name">idle</parameter>
+	<parameter name="use_smooth_transitions">1</parameter>
+	<parameter name="use_foot_matching">1</parameter>
+	<parameter name="state_variables">
+		<value index="0">
+			<parameter name="name">speed</parameter>
+		</value>
+		<value index="1">
+			<parameter name="type">1</parameter>
+			<parameter name="name">turn</parameter>
+		</value>
+	</parameter>
+	<parameter name="states">
+		<value index="0">
+			<parameter name="name">idle</parameter>
+			<parameter name="is_loop">1</parameter>
+			<parameter name="foot_matching_begin">0</parameter>
+			<parameter name="animations">
+				<value index="0">
+					<parameter name="path">guid://ced9d7b04198aaed331f012b079f758918543970</parameter>
+				</value>
+			</parameter>
+			<parameter name="transitions">
+				<value index="0">
+					<parameter name="next_state">start_walking</parameter>
+					<parameter name="condition">speed &gt; 0.5</parameter>
+				</value>
+				<value index="1">
+					<parameter name="next_state">idle_turn</parameter>
+					<parameter name="condition">turn == 1.0</parameter>
+				</value>
+			</parameter>
+		</value>
+		<value index="1">
+			<parameter name="name">start_walking</parameter>
+			<parameter name="foot_matching_end">0.200000003</parameter>
+			<parameter name="foot_matching_override">1</parameter>
+			<parameter name="animations">
+				<value index="0">
+					<parameter name="path">guid://65ea23c815af741d0f99f0b1e0c551f65e3cc741</parameter>
+				</value>
+			</parameter>
+			<parameter name="transitions">
+				<value index="0">
+					<parameter name="next_state">walking</parameter>
+					<parameter name="condition">end</parameter>
+				</value>
+				<value index="1">
+					<parameter name="next_state">stop_walking</parameter>
+					<parameter name="condition">speed &lt; 0.5</parameter>
+				</value>
+				<value index="2">
+					<parameter name="next_state">walking_turn</parameter>
+					<parameter name="condition">turn == 1.0</parameter>
+				</value>
+			</parameter>
+		</value>
+		<value index="2">
+			<parameter name="name">walking</parameter>
+			<parameter name="is_loop">1</parameter>
+			<parameter name="animations">
+				<value index="0">
+					<parameter name="path">guid://ab006728a684fcc87e239391b1e4b511ad76e221</parameter>
+				</value>
+			</parameter>
+			<parameter name="transitions">
+				<value index="0">
+					<parameter name="next_state">stop_walking</parameter>
+					<parameter name="condition">speed &lt; 0.5</parameter>
+				</value>
+				<value index="1">
+					<parameter name="next_state">walking_turn</parameter>
+					<parameter name="condition">turn == 1.0</parameter>
+				</value>
+			</parameter>
+		</value>
+		<value index="3">
+			<parameter name="name">stop_walking</parameter>
+			<parameter name="foot_matching_end">0.25</parameter>
+			<parameter name="foot_matching_override">1</parameter>
+			<parameter name="animations">
+				<value index="0">
+					<parameter name="path">guid://c0d6eafa2450fd6e0769abdb0d77894bbaa8c40c</parameter>
+				</value>
+				<value index="1">
+					<parameter name="path">guid://842eb018fe7a599d6eeb25418bfdf4546e244fd1</parameter>
+				</value>
+			</parameter>
+			<parameter name="transitions">
+				<value index="0">
+					<parameter name="next_state">idle</parameter>
+					<parameter name="condition">end</parameter>
+				</value>
+				<value index="1">
+					<parameter name="next_state">start_walking</parameter>
+					<parameter name="condition">speed &gt; 0.5</parameter>
+				</value>
+			</parameter>
+		</value>
+		<value index="4">
+			<parameter name="name">idle_turn</parameter>
+			<parameter name="use_random_animation">1</parameter>
+			<parameter name="foot_matching_end">0</parameter>
+			<parameter name="animations">
+				<value index="0">
+					<parameter name="path">guid://c557f7e02bd9d6ca055be5a9d4bc902b3d4f6639</parameter>
+				</value>
+				<value index="1">
+					<parameter name="path">guid://0a747a885213ba3a1b0146714e33e7aa59968d01</parameter>
+				</value>
+			</parameter>
+			<parameter name="transitions">
+				<value index="0">
+					<parameter name="next_state">idle</parameter>
+					<parameter name="condition">end</parameter>
+				</value>
+			</parameter>
+		</value>
+		<value index="5">
+			<parameter name="name">walking_turn</parameter>
+			<parameter name="foot_matching_end">0.5</parameter>
+			<parameter name="foot_matching_override">1</parameter>
+			<parameter name="animations">
+				<value index="0">
+					<parameter name="path">guid://37d9b0689483ad8c722c5dd170f7ac76c4303c61</parameter>
+				</value>
+				<value index="1">
+					<parameter name="path">guid://d43f91c0461848763e37b109a0a2dbd89760a999</parameter>
+				</value>
+			</parameter>
+			<parameter name="transitions">
+				<value index="0">
+					<parameter name="next_state">walking</parameter>
+					<parameter name="condition">end</parameter>
+				</value>
+			</parameter>
+		</value>
+	</parameter>
+</property>

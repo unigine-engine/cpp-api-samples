@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Landscape Tracks">
+	<sdk_desc>Non-destructive runtime modification of the <i>Landscape Terrain</i> by dynamically spawning multiple <i>Landscape Layer Maps</i> beneath moving objects to create realistic track imprints on the terrain.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample demonstrates non-destructive runtime modification of the <strong nt="1"><link to="object_landscape_terrain">Landscape Terrain</link></strong> by dynamically spawning multiple <strong nt="1"><link to="landscape_layer_map">Landscape Layer Map</link></strong> beneath moving objects (such as vehicles or characters) to create realistic track imprints on the terrain.<br/> Each track is rendered using a dedicated <strong nt="1"><link to="landscape_layer_map">Landscape Layer Map</link></strong> that blends additively with the terrain’s height data and alpha blends with the albedo, producing visually convincing trails without altering the original terrain layers.</para>
+			<para><strong>Key Features</strong></para>
+			<ul>
+				<li>Automatic track spawning based on object movement</li>
+				<li>Track maps are spawned only when the object has moved a minimum distance (user-defined)</li>
+				<li>The number of active track maps is limited for performance (configurable limit)</li>
+				<li>Albedo and height blending are handled via standard non-destructive layering, ensuring easy track removal or replacement.</li>
+			</ul>
+			<para><strong>Customizable Parameters</strong></para>
+			<ul>
+				<li><strong>Min Distance Between Tracks</strong> - Controls how frequently new track maps are spawned based on movement</li>
+				<li><strong>Max Number of Track Maps</strong> - Caps the number of simultaneously active track layers to manage memory and performance.</li>
+			</ul>
+			<para><strong>Use Cases</strong></para>
+			<ul>
+				<li>Vehicle or character track systems for games and simulations</li>
+				<li>Temporary terrain effects (e.g., tire marks, footprints, sliding trails)</li>
+				<li>Runtime procedural content that doesn't permanently modify base terrain.</li>
+			</ul>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Terrain</tag>
+		<tag>Vehicle</tag>
+		<tag>Basic Recipes</tag>
+	</tags>
+</sample>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="USC Functions">
+	<desc>
+		<brief>This sample demonstrates how to export functions from <ui>C++</ui> side to <ui>UnigineScript</ui>. It includes examples of exporting regular functions, handling multiple data types, and registering class members for a singleton-like object.</brief>
+	</desc>
+	<tags>
+		<tag>UnigineScript</tag>
+	</tags>
+</sample>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>2a21b46d0e62831aa8261c5672ed43589151e16a</guid>
+	<type>property</type>
+	<hash>7da78677</hash>
+	<runtimes>
+		<runtime id="2a21b46d0e62831aa8261c5672ed43589151e16a" name="PlayersSample" link="0" type="4"/>
+	</runtimes>
+</asset>

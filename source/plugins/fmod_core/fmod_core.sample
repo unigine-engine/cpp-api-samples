@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="FMOD Core">
+	<sdk_desc>
+		<p><b>FMOD Core</b> integration for real-time playback of 2D and 3D sounds with timeline control and DSP effects.</p>
+		<p><br/><b>NOTICE: Additional libraries are required, run the sample for details.</b></p>
+	</sdk_desc>
+	<desc>
+		<brief>
+			<para>Before running this sample, follow the steps provided in the setup section or in the FMOD Integration Guide linked below.</para>
+			<para>This sample loads the <ui>FMOD</ui> plugin and initializes the <ui>Core</ui> system to demonstrate playback of both 2D and 3D sound instances, supporting up to <value>1024</value> simultaneous sound channels. You can switch between the 2D and 3D scenes to observe and interact with different sound behaviors.</para>
+			<para>Two sound modes are presented:</para>
+			<ul>
+				<li><strong>2D Music Playback</strong>: Standard audio playback with support for volume adjustment and a distortion DSP effect</li>
+				<li><strong>3D Music Playback</strong>: Sound is emitted from a red sphere in 3D space, demonstrating positional audio in the environment. Move the camera to experience changes in sound direction and attenuation in real time.</li>
+			</ul>
+			<para><strong>Use Cases:</strong></para>
+			<ul>
+				<li>Integrating FMOD Core into runtime environments for games or simulations</li>
+				<li>Prototyping spatial sound design and 3D audio placement.</li>
+			</ul>
+			<para><br/><br/><strong>Sample Requirements</strong><br/></para>
+			<para>1. Download and install <strong>FMOD Engine (version 2.02.04)</strong> for your OS available on the official website (<strong><a href="https://www.fmod.com/download">https://www.fmod.com/download</a></strong>).<br/></para>
+			<para>2. Go to the FMOD installation folder and copy the following files to the <file_name>bin</file_name> folder of your project:<br/></para>
+			<para><br/><strong>for Windows:</strong></para>
+				<ul nt="1">
+					<li><file_name>fmod.dll, fmodL.dll</file_name> from <file_name>/api/core/lib/x64/</file_name></li>
+					<li><file_name>fsbank.dll, libfsbvorbis64.dll, opus.dll</file_name> from <file_name>/api/fbank/lib/x64/</file_name>.</li>
+					<li><file_name>fmodstudio.dll, fmodstudioL.dll</file_name> from <file_name>/api/studio/lib/x64/</file_name></li>
+				</ul>
+			<para><br/><strong>for Linux</strong></para>
+				<ul>
+					<li><file_name>libfmod.so.13, libfmodL.so.13</file_name> from <file_name>/api/core/lib/x64/</file_name></li>
+					<li><file_name>libfsbank.so.13, libfsbankL.so.13, libfsbvorbis.so, libopus.so</file_name> from <file_name>/api/fbank/lib/x64/</file_name></li>
+					<li><file_name>libfmodstudio.so.13, libfmodstudioL.so.13</file_name> from <file_name>/api/studio/lib/x64/</file_name></li>
+				</ul>
+		</brief>
+	</desc>
+	<link_docs>https://developer.unigine.com/docs/code/plugins/fmod/index?rlang=cpp</link_docs>
+	<tags>
+		<tag>Sound</tag>
+		<tag>Plugins</tag>
+		<tag>Integration</tag>
+		<tag>Extension &amp; Customization</tag>
+	</tags>
+</sample>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>1c7c57a6dfba521334a5c5c35f37c5c973ef8eaf</guid>
+	<type>material</type>
+	<hash>3f0e3951</hash>
+	<runtimes>
+		<runtime id="1c7c57a6dfba521334a5c5c35f37c5c973ef8eaf" name="gpu_dxt_compute" link="0" type="5"/>
+	</runtimes>
+</asset>

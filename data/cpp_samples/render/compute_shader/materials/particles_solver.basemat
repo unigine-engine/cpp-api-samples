@@ -1,0 +1,71 @@
+BaseMaterial <var_prefix=var texture_prefix=tex node=none hidden=1>
+{
+	Slider ifps=0.0
+	Color attractor[0 0 0 0]
+
+	Pass post
+	{
+		Compute=
+		#{
+			#include <core/materials/shaders/render/common.h>
+
+			// initialize read textures
+			INIT_TEXTURE(0, R_TEX_POSITION)
+			INIT_TEXTURE(1, R_TEX_VELOCITY)
+			INIT_TEXTURE(2, R_TEX_MAPPED_POSITIONS)
+
+			// unordered access textures
+			INIT_W_TEXTURE(0, W_TEX_POSITION, rgba32f, float4)
+			INIT_W_TEXTURE(1, W_TEX_VELOCITY, rgba32f, float4)
+
+			float4 calculate_particles(float3 anchor, float3 position)
+			{
+				float3 direction = anchor - position;
+				float distance = length(direction);
+				direction /= distance;
+
+				return float4(direction, distance);
+			}
+
+			// set 32x32 threads in one group
+			MAIN_COMPUTE_BEGIN(32, 32, 1)
+				// Out texture resolution is 1024x1024, for solve particles system we can dispatch 32x32 thread groups 32x32 threads each
+				// i, j - current particle position in texture
+				uint i = GROUP_ID.x * 32 + GROUP_THREAD_ID.x;
+				uint j = GROUP_ID.y * 32 + GROUP_THREAD_ID.y;
+
+				// read current position and velocity textures
+				float3 position = TEXTURE_FETCH(R_TEX_POSITION, int2(i,j)).xyz;
+				float3 velocity = TEXTURE_FETCH(R_TEX_VELOCITY, int2(i,j)).xyz;
+
+				// read mapped positions
+				float4 mapped_position = TEXTURE_FETCH(R_TEX_MAPPED_POSITIONS, int2(i,j));
+
+				float3 direction = mapped_position.xyz - position;
+				float distance = length(direction);
+
+				// handled particles
+				if (mapped_position.w > 0.f)
+				{
+					velocity += (direction / distance) * var_ifps * 10.f;
+
+					velocity *= (1.f - var_ifps * 2);
+				} else // free particles
+				{
+					float4 anchor = calculate_particles(var_attractor.xyz, position);
+					velocity *= 1.f - saturate(anchor.w - 10.f) * var_ifps;
+
+					// add velocity for particle
+					velocity += anchor.xyz * 0.1f;
+				}
+
+				// calculate new position
+				position += velocity * var_ifps;
+
+				// store position and velocity to unordered access textures
+				TEXTURE_W_STORE(W_TEX_POSITION,int2(i, j), float4(position, 0.f));
+				TEXTURE_W_STORE(W_TEX_VELOCITY,int2(i, j), float4(velocity, 0.f));
+			MAIN_COMPUTE_END
+		#}
+	}
+}

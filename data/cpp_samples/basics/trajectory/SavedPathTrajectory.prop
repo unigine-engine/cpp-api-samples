@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="SavedPathTrajectory" manual="1" parent_name="node_base">
+	<parameter name="trajectory_file_path" type="file"/>
+	<parameter name="velocity" type="float">10</parameter>
+	<parameter name="debug" type="toggle">0</parameter>
+</property>

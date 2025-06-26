@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="BoatFoam" manual="1" parent_name="node_base">
+	<parameter name="decal_foam" type="node" title="Decal Foam" filter="DecalOrtho">0</parameter>
+	<parameter name="decal_padding" type="float">50</parameter>
+	<parameter name="max_ship_velocity_for_spawn_scale" type="float">10</parameter>
+	<parameter name="max_ship_velocity_for_life_scale" type="float">10</parameter>
+	<parameter name="max_ship_velocity_for_velocity_scale" type="float">10</parameter>
+</property>

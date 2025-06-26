@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Widgets">
+	<sdk_desc>Demonstration of various UI widgets in UNIGINE, such as sliders, scrolls, buttons, checkboxes, drop-down lists, etc.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample demonstrates the implementation of various UI widgets in UNIGINE. It showcases how to create, configure and manage interactive <strong nt="1"><link to="object_gui">GUI</link></strong> elements.</para>
+			<para>The sample includes multiple widget types with event handling capabilities, demonstrating how to create and position widgets, configure visual properties, handle user interactions, etc., such as <strong>sliders, scrolls, buttons, checkboxes, drop-down lists, etc</strong>.</para>
+		</brief>
+	</desc>
+	<controls>
+		<![CDATA[
+		Clicking on a control element allows you to interact with it.<br/>Clicking on the text input field allows you to type text from the keyboard.
+		]]>
+	</controls>
+	<tags>
+		<tag>Widgets</tag>
+		<tag>Interface (GUI)</tag>
+	</tags>
+</sample>

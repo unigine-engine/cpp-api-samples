@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Fire Hose">
+	<sdk_desc>Demonstating a basic firefighting simulation involving interactive fire suppression with a controllable hose.</sdk_desc>
+	<desc>
+		<brief>
+		<para>This sample demonstrates how to implement a fire hose system using <ui><link to="decal_ortho">decals</link></ui> and <ui><link to="effect_particles">particle</link></ui> collisions. Foam particles are emitted from a hose, interact with the environment, and leave visual marks on surfaces. When aimed at fire sources, the foam gradually extinguishes them over time.</para>
+		</brief>
+		<para>Foam decals accumulate and persist for a limited duration, fading and expanding gradually to simulate realistic dispersion. The emitter can either remain fixed in one direction or sweep smoothly back and forth, mimicking a real hose in motion.</para>
+		<para>This approach can be used to simulate fire suppression in interactive gameplay, emergency response training, or realistic firefighting visualizations.</para>
+	</desc>
+	<tags>
+		<tag>Decals</tag>
+		<tag>Effects</tag>
+		<tag>Complex Solutions</tag>
+		<tag>Sim</tag>
+	</tags>
+</sample>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="NodeToTexture" manual="1" parent_name="node_base">
+	<parameter name="player_camera" type="node" filter="Player">0</parameter>
+	<parameter name="node_to_render" type="node">0</parameter>
+	<parameter name="object_view" type="node" filter="Object">0</parameter>
+</property>

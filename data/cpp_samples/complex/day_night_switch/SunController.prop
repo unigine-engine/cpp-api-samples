@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="SunController" manual="1" parent_name="node_base" tooltip="This component controls sun based on it&apos;s own game time and various adjustable parameters">
+	<parameter name="is_continuous" type="toggle" tooltip="Is sun moving continuously">1</parameter>
+	<parameter name="timescale" type="float" tooltip="Scale of countinuous time rotation">20000</parameter>
+</property>

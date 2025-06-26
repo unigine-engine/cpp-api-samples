@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sample title="Callbacks">
+	<desc>
+		<brief>This sample demonstrates how to use the <ui><link to="callbackbase_class">CallbackBase</link></ui> class via the C++ API to wrap and call functions and class methods with various numbers of arguments.</brief>
+		<para>Callbacks are created using the <ui><link to="unigine_namespace_class" offset="MakeCallback_Retm">MakeCallback</link></ui> method for both standalone functions and member methods, including parameterized versions with up to four arguments. Once created, callbacks can be executed using <ui><link to="callbackbase_class" offset="run_void">CallbackBase::run()</link></ui> method, optionally passing different arguments at runtime. This allows storing and triggering functions dynamically through a unified interface.</para>
+		<para>Callback mechanism is useful in scenarios such as event-driven systems, user interface interactions, or asynchronous task management in applications requiring dynamic function invocation.</para>
+	</desc>
+	<tags>
+		<tag>Systems</tag>
+		<tag>Logic</tag>
+	</tags>
+</sample>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>662a4b7ddbf80cf5dce1e6717cb576ce83e22dc4</guid>
+	<type>property</type>
+	<hash>6d331381</hash>
+	<runtimes>
+		<runtime id="662a4b7ddbf80cf5dce1e6717cb576ce83e22dc4" name="InteractableLeverComponent" link="0" type="4"/>
+	</runtimes>
+</asset>

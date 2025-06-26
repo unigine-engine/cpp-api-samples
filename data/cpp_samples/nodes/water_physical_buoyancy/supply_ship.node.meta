@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>11c421648b767d73c7aa2436b3c64e1d017578d8</guid>
+	<type>node</type>
+	<hash>69804edd</hash>
+	<runtimes>
+		<runtime id="11c421648b767d73c7aa2436b3c64e1d017578d8" name="supply_ship.node" link="0" type="3"/>
+	</runtimes>
+</asset>

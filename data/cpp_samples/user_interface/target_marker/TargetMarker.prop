@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="TargetMarker" manual="1" parent_name="node_base">
+	<parameter name="arrowSprite" type="file"/>
+	<parameter name="pointSprite" type="file"/>
+	<parameter name="targetNode" type="node">0</parameter>
+	<parameter name="pointPivot" type="vec2">0.500000 0.500000</parameter>
+</property>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Keyboard And Mouse Input">
+	<sdk_desc>This sample demonstrates how to add monitoring of keyboard and mouse input, tracking key states, mouse movements, wheel events, and cursor positions across different coordinate systems. It displays real-time input data including key presses, mouse deltas, and text input.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample demonstrates how to add monitoring of keyboard and mouse input, tracking key states, mouse movements, wheel events, and cursor positions across different coordinate systems. It displays real-time input data including key presses, mouse deltas, and text input. The sample shows three mouse handling modes:</para>
+			<ul>
+				<li><strong nt="1">GRAB</strong> - locks and hides the cursor</li>
+				<li><strong nt="1">SOFT</strong> - locks the cursor to the window but keeps it visible</li>
+				<li><strong nt="1">USER</strong> - no cursor restrictions.</li>
+			</ul>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Input &amp; Controls</tag>
+	</tags>
+</sample>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>7c5777fe7699ea5ea1267bf3c30a32c1b488746d</guid>
+	<type>script</type>
+	<hash>0b008406</hash>
+	<runtimes>
+		<runtime id="7c5777fe7699ea5ea1267bf3c30a32c1b488746d" name="usc_structures.usc" link="0"/>
+	</runtimes>
+</asset>

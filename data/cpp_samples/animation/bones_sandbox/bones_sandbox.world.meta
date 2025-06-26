@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>0084ea9e2eb32dca853fe4da1f521285055d2a62</guid>
+	<type>world</type>
+	<hash>b0bd13b6</hash>
+	<runtimes>
+		<runtime id="0084ea9e2eb32dca853fe4da1f521285055d2a62" name="bones_sandbox.world" link="0"/>
+	</runtimes>
+	<parameters>
+		<parameter type="string" name="physics_settings_path"/>
+		<parameter type="string" name="render_settings_path">guid://e7c25e58d50469eb1759808b454697512aed4c0b</parameter>
+		<parameter type="string" name="script_name"/>
+		<parameter type="string" name="sound_settings_path"/>
+		<parameter type="string" name="viewports_settings"/>
+	</parameters>
+</asset>

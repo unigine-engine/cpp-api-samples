@@ -1,0 +1,65 @@
+BaseMaterial <var_prefix=var texture_prefix=tex node=ObjectMeshStatic hidden=1>
+{
+	Bind ObjectMeshStatic  = ObjectMeshDynamic
+	Bind ObjectMeshStatic  = ObjectMeshSkinned
+
+	Option transparent=2
+	Option two_sided=1
+
+	Pass ambient
+	{
+		Vertex=
+		#{
+			// Include Unified Unigine Shader Language (UUSL) header
+			#include <core/materials/shaders/render/common.h>
+
+			STRUCT(VERTEX_IN)
+				INIT_ATTRIBUTE(float4,0,POSITION)	// Vertex position
+				INIT_ATTRIBUTE(float4,1,TEXCOORD0)	// Vertex texcoord (uv)
+				INIT_ATTRIBUTE(float4,2,TEXCOORD1)	// Vertex basis tangent
+				INIT_ATTRIBUTE(float4,3,TEXCOORD2)	// Vertex color
+			END
+
+			STRUCT(VERTEX_OUT)
+				INIT_POSITION
+				INIT_OUT(float3,0)
+			END
+
+			MAIN_BEGIN(VERTEX_OUT,VERTEX_IN)
+
+				float4 position = IN_ATTRIBUTE(0);
+				float4 uv = IN_ATTRIBUTE(1);
+
+				OUT_POSITION = float4((uv.xy - 0.5f) * 2.0f,0.0f,1.0f);
+				OUT_DATA(0) = position.xyz;
+
+			MAIN_END
+
+			// end
+		#}
+
+		Fragment=
+		#{
+			// Include the UUSL language header
+			#include <core/materials/shaders/render/common.h>
+
+			STRUCT(FRAGMENT_IN)
+				INIT_POSITION
+				INIT_IN(float3,0)
+			END
+
+			STRUCT_FRAG_BEGIN
+				INIT_COLOR(float4)
+			STRUCT_FRAG_END
+
+			MAIN_FRAG_BEGIN(FRAGMENT_IN)
+
+				OUT_COLOR = float4(IN_DATA(0),1.0f);
+
+			MAIN_FRAG_END
+
+			// end
+
+		#}
+	}
+}

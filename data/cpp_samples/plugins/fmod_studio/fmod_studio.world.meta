@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>bad332aad92a7d0d443b13fadcf8694fa68df2f2</guid>
+	<type>world</type>
+	<hash>b9c3aa57</hash>
+	<runtimes>
+		<runtime id="bad332aad92a7d0d443b13fadcf8694fa68df2f2" name="fmod_studio.world" link="0"/>
+	</runtimes>
+	<parameters>
+		<parameter type="string" name="physics_settings_path"/>
+		<parameter type="string" name="render_settings_path"/>
+		<parameter type="string" name="script_name"/>
+		<parameter type="string" name="sound_settings_path"/>
+		<parameter type="string" name="viewports_settings"/>
+	</parameters>
+</asset>

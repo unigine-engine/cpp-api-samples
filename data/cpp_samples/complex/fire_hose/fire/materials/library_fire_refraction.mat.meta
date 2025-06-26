@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>2cc4b9cb05a409f43dfe690ee35e8b926007a7c8</guid>
+	<type>material</type>
+	<hash>f4baafef</hash>
+	<runtimes>
+		<runtime id="2cc4b9cb05a409f43dfe690ee35e8b926007a7c8" name="library_fire_refraction" link="0" type="5"/>
+	</runtimes>
+</asset>

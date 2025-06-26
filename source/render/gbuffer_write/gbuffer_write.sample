@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sample title="G-Buffer Write">
+	<sdk_desc>Modification <ui>G-buffer</ui> textures at different stages of the rendering process by injecting a custom material at the end of the <i>G-buffer</i> pass.</sdk_desc>
+	<desc>
+		<brief>This sample demonstrates how to modify <ui>G-buffer</ui> textures at different stages of the rendering process by injecting a custom material at the end of the <ui>G-buffer</ui> pass.</brief>
+		<para>An event handler is registered using <ui><link to="render_class" offset="getEventEndOpacityGBuffer_Event">getEventEndOpacityGBuffer()</link></ui>, which is triggered once all <ui>G-buffer</ui> textures (albedo, normal, etc.) are populated. In this callback, a custom post-material is applied to modify the contents of these textures using dynamic parameters such as influence, plasticity, and color. Temporary render targets are used to perform intermediate writes, and the modified textures are then swapped back into the pipeline.</para>
+		<para>This technique allows real-time manipulation of <ui>G-buffer</ui> data during the rendering process, enabling custom surface effects or advanced material pre-processing.</para>
+	</desc>
+	<tags>
+		<tag>Render</tag>
+		<tag>Shaders</tag>
+	</tags>
+</sample>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>cec478248fa4a281f1281fae7af9f30c07a057b2</guid>
+	<type>material_graph</type>
+	<hash>db38856d</hash>
+	<runtimes>
+		<runtime id="cec478248fa4a281f1281fae7af9f30c07a057b2" name="tank_board_mat.mgraph" link="0"/>
+		<runtime id="540aaccabfb65ca0b7125df58706ea96e0fce1e9" name="tank_board_mat" link="1" type="5"/>
+	</runtimes>
+</asset>

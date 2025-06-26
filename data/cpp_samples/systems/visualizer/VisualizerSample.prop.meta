@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>cfdf97241cc99a424c46f47238e2e4f67af5e82c</guid>
+	<type>property</type>
+	<hash>023e4079</hash>
+	<runtimes>
+		<runtime id="cfdf97241cc99a424c46f47238e2e4f67af5e82c" name="VisualizerSample" link="0" type="4"/>
+	</runtimes>
+</asset>

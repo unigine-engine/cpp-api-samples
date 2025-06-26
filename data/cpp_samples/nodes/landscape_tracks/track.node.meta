@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>4fbf4c9afcb5333143d112dcd30c908b133cac6e</guid>
+	<type>node</type>
+	<hash>b6fa76da</hash>
+	<runtimes>
+		<runtime id="4fbf4c9afcb5333143d112dcd30c908b133cac6e" name="track.node" link="0" type="3"/>
+	</runtimes>
+</asset>

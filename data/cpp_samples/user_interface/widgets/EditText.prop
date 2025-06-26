@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="EditText" manual="1" parent_name="node_base">
+	<parameter name="position" type="vec2">250.000000 150.000000</parameter>
+	<parameter name="size" type="vec2">150.000000 100.000000</parameter>
+	<parameter name="text" type="string">Enter text...</parameter>
+	<parameter name="font_size" type="int">16</parameter>
+</property>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="AnimationBonesConstraintsSample" manual="1" parent_name="node_base">
+	<struct name="Constraint">
+		<parameter name="name" type="string"/>
+		<parameter name="yaw_axis" type="vec3">0.000000 1.000000 0.000000</parameter>
+		<parameter name="pitch_axis" type="vec3">-1.000000 -0.000000 -0.000000</parameter>
+		<parameter name="roll_axis" type="vec3">0.000000 0.000000 1.000000</parameter>
+		<parameter name="yaw_min_angle" type="float">-180</parameter>
+		<parameter name="yaw_max_angle" type="float">180</parameter>
+		<parameter name="pitch_min_angle" type="float">-90</parameter>
+		<parameter name="pitch_max_angle" type="float">90</parameter>
+		<parameter name="roll_min_angle" type="float">-0</parameter>
+		<parameter name="roll_max_angle" type="float">0</parameter>
+	</struct>
+	<parameter name="mesh_skinned_node" type="node">0</parameter>
+	<parameter name="ik_chain_bones" type="array" array_type="string"/>
+	<parameter name="constraints" type="array" array_type="Constraint"/>
+</property>

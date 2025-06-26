@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="USC Inheritance">
+	<desc>
+		<brief>This sample demonstrates how to work with <ui>UnigineScript</ui> containers via <ui>C++ API</ui>. It showcases class composition, constructor registration, base-to-derived linkage, and virtual method exposure within a scripting context.</brief>
+		<para>Each class in the hierarchy is registered via the <ui><link to="interpreter_class">Interpreter</link></ui> class, allowing scripts to instantiate and interact with derived types, call inherited methods, and override behavior.</para>
+	</desc>
+	<tags>
+		<tag>UnigineScript</tag>
+	</tags>
+</sample>

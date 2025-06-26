@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sample title="WidgetWindow">
+	<sdk_desc>Creating a basic <i>WidgetWindow</i> using the C++ API and handling user interactions (edit line and button press events) through handler function connections.</sdk_desc>
+	<desc>
+		<brief>This sample demonstrates how to create a basic <ui><link to="widgetwindow_class">WidgetWindow</link></ui> using the C++ API and handle user interactions (edit line and button press events) through handler function connections.</brief>
+		<para>The window includes a <ui><link to="widgeteditline_class">WidgetEditLine</link></ui> and a <ui><link to="widgetbutton_class">WidgetButton</link></ui>. The <ui>WidgetEditLine</ui> listens for text changes via <ui><link to="widget_class" offset="getEventChanged_Event">Widget::getEventChanged()</link></ui> and logs the new input, while the WidgetButton uses <ui><link to="widget_class" offset="getEventClicked_Event">Widget::getEventClicked()</link></ui> to trigger an action when pressed. Font sizes are adjusted for better readability, and the layout is arranged automatically.</para>
+		<para>This approach is suitable for building interactive UI elements directly within UNIGINE's native GUI system.</para>
+	</desc>
+	<tags>
+		<tag>Widgets</tag>
+		<tag>Interface (GUI)</tag>
+		<tag>Windows &amp; Viewports</tag>
+	</tags>
+</sample>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="DayNightSwitchSample" manual="1" parent_name="node_base" tooltip="This component displays information about the day and night switching and allows sun rotation to demonstrate how it works.">
+	<parameter name="sun_node" type="node" title="Sun node" tooltip="Sun node">0</parameter>
+	<parameter name="switcher_node" type="node" title="Day night switcher node" tooltip="Day night switcher node">0</parameter>
+</property>

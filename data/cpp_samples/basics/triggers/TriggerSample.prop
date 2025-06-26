@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="TriggerSample" manual="1" parent_name="node_base">
+	<parameter name="target_to_check" type="node">0</parameter>
+	<parameter name="postament_world" type="node">0</parameter>
+	<parameter name="postament_math_sphere" type="node">0</parameter>
+	<parameter name="postament_math_box" type="node">0</parameter>
+	<parameter name="postament_intersection_box" type="node">0</parameter>
+	<parameter name="postament_intersection_sphere" type="node">0</parameter>
+	<parameter name="trigger_world_node" type="node">0</parameter>
+	<parameter name="trigger_math_box_node" type="node">0</parameter>
+	<parameter name="trigger_math_sphere_node" type="node">0</parameter>
+	<parameter name="trigger_intersection_node_box" type="node">0</parameter>
+	<parameter name="trigger_intersection_node_sphere" type="node">0</parameter>
+	<parameter name="postament_mat" type="material"/>
+	<parameter name="postament_mat_triggered" type="material"/>
+</property>

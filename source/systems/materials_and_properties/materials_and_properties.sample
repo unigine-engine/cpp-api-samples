@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Materials and Properties">
+	<sdk_desc>Working with <i>Property Manager</i> and <i>Material Manager</i> to access all materials and properties in the project via API.</sdk_desc>
+	<desc>
+		<brief>This sample demonstrates how to access all materials and properties in the project via API.</brief>
+		<para>The sample iterates through the list of registered in the <ui>Property Manager</ui> via <ui><link to="properties_class" offset="getProperty_int_Property">Properties::getProperty()</link></ui> and prints out the names and child counts for each. It also gets all available materials from the <ui>Materials Manager</ui> via <ui><link to="materials_class" offset="getMaterial_int_Material">Materials::getMaterial()</link></ui>, and lists them along with their file paths and number of children.</para>
+		<para>This can be used as a reference for accessing and working with project assets at runtime - whether for inspection, dynamic assignment, or content management logic.</para>
+	</desc>
+	<tags>
+		<tag>Materials</tag>
+		<tag>Properties</tag>
+	</tags>
+</sample>

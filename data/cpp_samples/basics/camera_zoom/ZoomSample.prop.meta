@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>8b77ee0f397ee3526d26b6c629a6fd3f4bcf9310</guid>
+	<type>property</type>
+	<hash>e0353044</hash>
+	<runtimes>
+		<runtime id="8b77ee0f397ee3526d26b6c629a6fd3f4bcf9310" name="ZoomSample" link="0" type="4"/>
+	</runtimes>
+</asset>

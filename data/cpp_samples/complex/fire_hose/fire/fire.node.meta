@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>7dee4b4a506ed52b3009a5c380f2940dfbec2496</guid>
+	<type>node</type>
+	<hash>35c4d21e</hash>
+	<runtimes>
+		<runtime id="7dee4b4a506ed52b3009a5c380f2940dfbec2496" name="fire.node" link="0" type="3"/>
+	</runtimes>
+</asset>

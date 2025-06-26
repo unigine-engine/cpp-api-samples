@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>b3e33f3e823764f0a7728ddd38353f5bde8028cd</guid>
+	<type>property</type>
+	<hash>e44801f7</hash>
+	<runtimes>
+		<runtime id="b3e33f3e823764f0a7728ddd38353f5bde8028cd" name="SpinBox" link="0" type="4"/>
+	</runtimes>
+</asset>

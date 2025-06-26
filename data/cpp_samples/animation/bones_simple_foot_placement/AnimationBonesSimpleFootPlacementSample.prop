@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="AnimationBonesSimpleFootPlacementSample" manual="1" parent_name="node_base">
+	<parameter name="mesh_skinned_node" type="node">0</parameter>
+	<parameter name="left_leg_bones" type="array" array_type="string"/>
+	<parameter name="right_leg_bones" type="array" array_type="string"/>
+	<parameter name="foot_height" type="float">0.1</parameter>
+	<parameter name="obstacle" type="node">0</parameter>
+</property>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodes version="2.20.0.0">
+	<node material="ede5a04f76ae916203cb6159f83d5ae42a0768f3" type="DecalOrtho" id="1790881111" name="FoamDecalOrtho_1">
+		<width>5</width>
+		<height>5</height>
+		<znear>0.00100000005</znear>
+		<radius>5</radius>
+		<intersection_mask>0x1</intersection_mask>
+		<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
+	</node>
+</nodes>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="EaseInMotion" manual="1" parent_name="node_base">
+	<parameter name="targetNode" type="node">0</parameter>
+	<parameter name="persecutorNode" type="node">0</parameter>
+	<parameter name="physicsFPS" type="float">60</parameter>
+	<parameter name="acceleration" type="float">3</parameter>
+</property>

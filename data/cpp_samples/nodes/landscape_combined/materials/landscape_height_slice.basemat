@@ -1,0 +1,36 @@
+BaseMaterial <editable=false var_prefix=var texture_prefix=tex>
+{
+	Texture2D source_height <internal=true>
+	Float slice_height <internal=true>
+
+	Pass landscape_height_slice
+	{
+		Fragment=
+		#{
+			#include <core/materials/shaders/render/common.h>
+			
+			STRUCT_FRAG_BEGIN
+				INIT_MRT(float4, 0)
+				INIT_MRT(float, 1)
+			STRUCT_FRAG_END
+			
+			MAIN_FRAG_BEGIN(FRAGMENT_IN)
+				
+				float in_height = TEXTURE(tex_source_height, IN_UV).r;
+				float out_height = 0.0f;
+				
+				float4 out_color = float4(1.0f, 1.0f, 1.0f, 0.0f);
+				
+				if(in_height >= var_slice_height)
+				{
+					out_height = var_slice_height - in_height;
+					out_color = float4(0.8f, 0.4f, 0.2f, 1.0f);
+				}
+				
+				OUT_MRT(0).rgba = out_color;
+				OUT_MRT(1).r = out_height;
+				
+			MAIN_FRAG_END
+		#}
+	}
+}

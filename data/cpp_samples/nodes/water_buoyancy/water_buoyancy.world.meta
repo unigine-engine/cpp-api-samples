@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>068e7de4a3182ff3d67f34b6f5ab249d7a0b5d58</guid>
+	<type>world</type>
+	<hash>a490896a</hash>
+	<runtimes>
+		<runtime id="068e7de4a3182ff3d67f34b6f5ab249d7a0b5d58" name="water_buoyancy.world" link="0"/>
+	</runtimes>
+	<parameters>
+		<parameter type="string" name="physics_settings_path"/>
+		<parameter type="string" name="render_settings_path">guid://8bed8c3ce53501ff11c1b0ae5cc6d017d4ad5524</parameter>
+		<parameter type="string" name="script_name"/>
+		<parameter type="string" name="sound_settings_path"/>
+		<parameter type="string" name="viewports_settings"/>
+	</parameters>
+</asset>

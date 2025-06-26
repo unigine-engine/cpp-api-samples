@@ -1,0 +1,30 @@
+BaseMaterial <editable=false var_prefix=var texture_prefix=tex>
+{
+	Texture2D height <internal=true wrap=clamp>
+	Texture2D gradient <internal=true wrap=clamp>
+	Float min_height <internal=true>
+	Float max_height <internal=true>
+
+	Pass landscape_height_to_albedo
+	{
+		Fragment=
+		#{
+			#include <core/materials/shaders/render/common.h>
+			
+			STRUCT_FRAG_BEGIN
+				INIT_COLOR(float4)
+			STRUCT_FRAG_END
+			
+			MAIN_FRAG_BEGIN(FRAGMENT_IN)
+				
+				float height = TEXTURE(tex_height, IN_UV).x;
+				float t = saturate((height - var_min_height) / (var_max_height - var_min_height));
+				
+				float3 color = TEXTURE(tex_gradient, float2(0.5f, 1.0f - t)).xyz;
+				
+				OUT_COLOR = float4(color, 1.0f);
+				
+			MAIN_FRAG_END
+		#}
+	}
+}

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Object Creation">
+	<sdk_desc>Basics of working with Objects: creation and modification via API.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample demonstrates the basics of working with <ui><strong><link to="objects_objects">Objects</link></strong></ui> - how to create and modify objects via API, highlighting the differences between various types of objects (<ui>ObjectMeshStatic, ObjectMeshDynamic, ObjectParticles</ui>). <strong>Objects</strong> are characterized by a set of surfaces, an optional physical body and type-specific properties.</para>
+				<para>In this sample, we create and configure three types of objects with interactive controls:</para>
+				<para><strong nt="1">1. <link to="object_mesh">Static Mesh Object</link> (Material Ball)</strong></para>
+				<ul>
+					<li>Load an existing <strong nt="1">.mesh</strong> file <ui>(material_ball.mesh)</ui>.</li>
+					<li>Assigns a material to the object.</li>
+					<li>Adds a <ui><link to="physics_bodies">Body</link></ui> with a <ui><link to="physics_shapes" offset="box">Box-shaped</link></ui> collision.</li>
+				</ul>
+				<para><strong nt="1">2. <link to="object_mesh_dynamic">Dynamic Mesh Object</link> (Tetrahedron)</strong></para>
+				<ul>
+					<li>Constructs a custom <ui>ObjectMeshDynamic</ui> manually.</li>
+					<li>Applies a glass-like material.</li>
+					<li>Adds a <ui><link to="physics_bodies">Body</link></ui> with a <ui><link to="physics_shapes" offset="sphere">Sphere-shaped</link></ui> collision.</li>
+				</ul>
+				<para><strong nt="1">3. <link to="effect_particles">Particle System</link></strong></para>
+				<ul>
+					<li>Creates a default <ui>ObjectParticles</ui> object.</li>
+					<li>Configures <ui><link to="effect_particles" offset="emitter_parameters">particle-specific parameters</link></ui>, such as spawn rate and lifetime, and enables a <ui><link to="principles_bit_masking" offset="collision_mask">collision mask</link></ui> for particle interaction.</li>
+				</ul>
+				<para>Runtime Modifications (via Sample Menu)</para>
+				<ul>
+					<li>Adjust the albedo color of the <strong nt="1">Static Mesh</strong> material.</li>
+					<li>Modify the mesh (tetrahedron base height) in the <strong nt="1">Dynamic Mesh</strong>.</li>
+					<li>Tune the spawn rate of the <strong nt="1">Particle System</strong>.</li>
+					<li>Toggle the visualization of surfaces and physical shapes of the objects.</li>
+				</ul>
+				<para>For more complex objects, such as <ui><link to="demo_cpp_samples_water_global">ObjectWaterGlobal</link></ui> and <ui><link to="demo_cpp_samples_landscape">ObjectLandscapeTerrain</link></ui>, see the corresponding samples.</para>
+			</brief>
+		</desc>
+	<tags>
+		<tag>Objects</tag>
+		<tag>Physics</tag>
+		<tag>Effects</tag>
+	</tags>
+</sample>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>f3fb93897802c6bd920b3e8b0e2c411193e9dd9d</guid>
+	<type>world</type>
+	<hash>06c2640e</hash>
+	<runtimes>
+		<runtime id="f3fb93897802c6bd920b3e8b0e2c411193e9dd9d" name="track_non_physical.world" link="0"/>
+	</runtimes>
+	<parameters>
+		<parameter type="string" name="physics_settings_path"/>
+		<parameter type="string" name="render_settings_path">guid://8bed8c3ce53501ff11c1b0ae5cc6d017d4ad5524</parameter>
+		<parameter type="string" name="script_name"/>
+		<parameter type="string" name="sound_settings_path"/>
+		<parameter type="string" name="viewports_settings"/>
+	</parameters>
+</asset>

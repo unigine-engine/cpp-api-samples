@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>98ce64a1e3b47b9b2d3db59ceefc723c29c25b94</guid>
+	<type>node</type>
+	<hash>85311171</hash>
+	<runtimes>
+		<runtime id="98ce64a1e3b47b9b2d3db59ceefc723c29c25b94" name="road.node" link="0" type="3"/>
+	</runtimes>
+</asset>

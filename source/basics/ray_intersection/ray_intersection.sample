@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Ray Intersection">
+	<sdk_desc>Using raycasting for selective (mask-based) detection of intersections.</sdk_desc>
+	<desc>
+		<brief>This example demonstrates how to find <link to="example_intersections" offset="worldintersections_object">intersections</link> with geometry using <strong>raycasting</strong> taking into account different <ui>Intersection</ui> bitmasks (using first 8 bits out of 32).</brief>
+		<para>Raycasting involves detecting intersections with scene objects along the path of a ray cast from point <strong>A</strong> to point <strong>B</strong>. This process is visualized in the sample via a laser ray representation (laser length depends on the ray length).</para>
+		<para>In the <ui>update()</ui> method, the <ui><link to="world_class" offset="getIntersection_Vec3_Vec3_int_Object">World::getIntersection()</link></ui> function checks for ray intersections with scene objects based on a specified intersection mask. If the ray hits an object with a matching mask (one bit at least), an intersection is detected. After that, the ray is updated and visual spark effects are rendered at the intersection point.</para>
+		<para>You can change the laser's intersection mask by toggling the corresponding checkboxes. If a wall's mask bit doesn't match the laser's mask, the laser will pass through.</para>
+		<para>Using raycasting makes it easy to implement various game mechanics, such as shooting or target detection during navigation.</para>
+	</desc>
+	<tags>
+		<tag>Basic Recipes</tag>
+		<tag>Intersections</tag>
+	</tags>
+</sample>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="SpectatorController" manual="1" parent_name="node_base">
+	<parameter name="is_controlled" type="toggle" title="Controlled" tooltip="Toggle spectator inputs" group="Input">0</parameter>
+	<parameter name="forward_key" type="string" title="Forward Key" tooltip="Move forward key" group="Input">W</parameter>
+	<parameter name="left_key" type="string" title="Left Key" tooltip="Move left key" group="Input">A</parameter>
+	<parameter name="backward_key" type="string" title="Backward Key" tooltip="Move backward key" group="Input">S</parameter>
+	<parameter name="right_key" type="string" title="Right Key" tooltip="Move right key" group="Input">D</parameter>
+	<parameter name="down_key" type="string" title="Down key" tooltip="Move down key" group="Input">Q</parameter>
+	<parameter name="up_key" type="string" title="Up key" tooltip="Move up key" group="Input">E</parameter>
+	<parameter name="turn_up_key" type="string" title="Turn up key" tooltip="Turn up" group="Input">UP</parameter>
+	<parameter name="turn_down_key" type="string" title="Turn down key" tooltip="Turn down" group="Input">DOWN</parameter>
+	<parameter name="turn_left_key" type="string" title="Turn left key" tooltip="Turn left" group="Input">LEFT</parameter>
+	<parameter name="turn_right_key" type="string" title="Turn right key" tooltip="Turn right" group="Input">RIGHT</parameter>
+	<parameter name="accelerate_key" type="string" title="Speed-up Key" tooltip="Speed-up mode activation key" group="Input">ANY_SHIFT</parameter>
+	<parameter name="mouse_sensitivity" type="float" title="Mouse Sensitivity" tooltip="Mouse sensitivity multiplier" group="Input">0.4</parameter>
+	<parameter name="min_velocity" type="float" title="Min Velocity" tooltip="Minimum movement velocity" group="Movement">2</parameter>
+	<parameter name="max_velocity" type="float" title="Max Velocity" tooltip="Maximum movement velocity" group="Movement">4</parameter>
+	<parameter name="acceleration" type="float" title="Acceleration" tooltip="Movement acceleration" group="Movement">4</parameter>
+	<parameter name="damping" type="float" title="Damping" tooltip="Movement damping" group="Movement">8</parameter>
+	<parameter name="is_collided" type="toggle" title="Collision" tooltip="Toggle spectator collision" group="Collision">0</parameter>
+	<parameter name="collision_mask" type="mask" title="Collision Mask" tooltip="A bit mask of collisions" group="Collision" flags="collision">1</parameter>
+	<parameter name="collision_radius" type="float" title="Collision radius" tooltip="The radius of the collision sphere" group="Collision">0.5</parameter>
+	<parameter name="turning" type="float" title="Turning speed" tooltip="Velocity of the spectator&apos;s turning action" group="Rotation">90</parameter>
+	<parameter name="min_theta_angle" type="float" title="Min theta angle" tooltip="Minimun pitch angle" group="Rotation">-89.9</parameter>
+	<parameter name="max_theta_angle" type="float" title="Max theta angle" tooltip="Maximum pitch angle" group="Rotation">89.9</parameter>
+</property>

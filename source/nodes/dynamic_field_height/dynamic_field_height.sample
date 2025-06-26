@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Dynamic Field Height">
+	<sdk_desc>Creation of a dynamic <i>Field Height</i> with dynamic sine function texture using the C++ API.</sdk_desc>
+	<desc>
+		<brief>
+			<para>The sample illustrates the effect of simulating waves on a water surface, which is created using the <strong nt="1"><link to="field_height">Field Height</link></strong> object.</para>
+			<para>The code generates a heightmap that is dynamically modulated over time by a sinusoidal function, resulting in an oscillating visual representation.</para>
+		</brief>
+		<para>This approach can be useful for creating ship wake waves, water disturbances around floating objects such as buoys, and more.</para>
+	</desc>
+	<tags>
+		<tag>Procedural</tag>
+		<tag>Fields</tag>
+		<tag>Water</tag>
+	</tags>
+</sample>

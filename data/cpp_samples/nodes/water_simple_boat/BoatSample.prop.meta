@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>df34df0ef05d7a7af58ae697e84489e2be528b00</guid>
+	<type>property</type>
+	<hash>66d531f1</hash>
+	<runtimes>
+		<runtime id="df34df0ef05d7a7af58ae697e84489e2be528b00" name="BoatSample" link="0" type="4"/>
+	</runtimes>
+</asset>

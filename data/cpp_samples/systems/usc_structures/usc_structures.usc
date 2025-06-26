@@ -1,0 +1,23 @@
+string source = "From [USC]: ";
+int init()
+{
+	log.message("\n\n=================Structure Sample=================\n\n");
+	/////////////////////////////////
+
+	// make extern struct
+	MyVector vector = new MyVector();
+
+	// set members
+	vector.setX(1.0f);
+	vector.setY(2.0f);
+	vector.setZ(4.0f);
+	vector.setW(8.0f);
+
+	// get members
+	log.message(source + "MyVector: (%g,%g,%g,%g)\n", vector.getX(), vector.getY(), vector.getZ(), vector.getW());
+
+	// delete extern struct
+	delete vector;
+
+	return 1;
+}

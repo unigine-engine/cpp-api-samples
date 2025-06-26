@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>01a518b2895a0641f1ee94ff1f812dc7c7277b10</guid>
+	<type>property</type>
+	<hash>7741fbee</hash>
+	<runtimes>
+		<runtime id="01a518b2895a0641f1ee94ff1f812dc7c7277b10" name="PlaybackLayersSample" link="0" type="4"/>
+	</runtimes>
+</asset>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>2ae5ca64591e64d3f784976622bc202c714dff89</guid>
+	<type>property</type>
+	<hash>032cda98</hash>
+	<runtimes>
+		<runtime id="2ae5ca64591e64d3f784976622bc202c714dff89" name="ComponentSystemSample" link="0" type="4"/>
+	</runtimes>
+</asset>

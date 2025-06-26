@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="RadioButtons" manual="1" parent_name="node_base">
+	<parameter name="widget_position" type="vec2">600.000000 450.000000</parameter>
+	<parameter name="font_size" type="int">16</parameter>
+	<parameter name="horizontal_layout_space" type="int">4</parameter>
+	<parameter name="vertical_layout_space" type="int">4</parameter>
+	<parameter name="first_rbutton_text" type="string">Check Me</parameter>
+	<parameter name="second_rbutton_text" type="string">Or Me</parameter>
+</property>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>8989d81928677329791a422e494024481e814938</guid>
+	<type>property</type>
+	<hash>eacbf23b</hash>
+	<runtimes>
+		<runtime id="8989d81928677329791a422e494024481e814938" name="JoysticksInput" link="0" type="4"/>
+	</runtimes>
+</asset>

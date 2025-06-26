@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.20.0.0" guid="04a9b20b79105fee46baa67573a90550f8f2186f" parent="11359a7a3cab5b55133412d11ad1455c3684a07c" base_material="b7c07dfd4ce80edac55fcbfdd0befa02ccd20b88">
+	<state name="ambient">0</state>
+	<state name="light_omni">1</state>
+	<state name="light_proj">1</state>
+	<state name="use_voxel_probe">1</state>
+	<texture name="albedo">guid://7e9ed857153199ca17f43ea1e283478c08475d7b</texture>
+	<parameter name="albedo_color" expression="0">0.941176534 0.941176534 0.941176534 1</parameter>
+	<parameter name="animation_size" expression="0">4 4</parameter>
+	<parameter name="animation_scale" expression="0">1</parameter>
+	<parameter name="transparent_blur" expression="0">0.141780004</parameter>
+	<parameter name="environment_scale" expression="0">1</parameter>
+	<parameter name="diffuse_scale" expression="0">4</parameter>
+	<parameter name="translucent" expression="0">0.800000012</parameter>
+</material>

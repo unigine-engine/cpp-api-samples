@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Widget Animation">
+	<desc>
+		<brief>This example shows how to animate widgets using <strong>runtime animation objects</strong>.</brief>
+		<para>It demonstrates how to control and animate interface elements programmatically. Using dynamic animations helps create more lively, appealing user interfaces and enables automation of their behavior.</para>
+	</desc>
+	<tags>
+		<tag>Animation</tag>
+		<tag>Interface (GUI)</tag>
+		<tag>Widgets</tag>
+	</tags>
+</sample>

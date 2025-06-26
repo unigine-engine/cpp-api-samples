@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="IFps Usage">
+	<sdk_desc>Using <i>Game::getIFps()</i> to implement movement logic independent of the frame rate.</sdk_desc>
+	<desc>
+		<brief>This sample demonstrates the importance of using <ui><link to="game_class" offset="getIFps_float">Game::getIFps()</link></ui> to implement movement logic independent of the frame rate.</brief>
+		<para>The sample features two cubes moving back and forth along the X-axis. Their movement is implemented in the <ui>IFpsMovementController.cpp</ui> file. Use the <ui>Max FPS</ui> slider to change the target frame rate.</para>
+		<para>The green cube uses <ui><link to="game_class" offset="getIFps_float">Game::getIFps()</link></ui> to scale its movement by the frame time delta. This ensures consistent speed across varying frame rates.</para>
+		<para>The red cube does not use <ui><link to="game_class" offset="getIFps_float">Game::getIFps()</link></ui> and simply applies constant translation per frame, which results in inconsistent behavior when frame rate changes</para>
+		<para>This sample demonstrates why using time-based logic is essential for consistent results at different frame rates.</para>
+	</desc>
+	<tags>
+		<tag>Logic</tag>
+	</tags>
+</sample>

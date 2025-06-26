@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>7eec4f452e474bed7342b69af6c8aff0f78733b3</guid>
+	<type>material</type>
+	<hash>670f24de</hash>
+	<runtimes>
+		<runtime id="7eec4f452e474bed7342b69af6c8aff0f78733b3" name="extinguishing_agents_water_wide_angle_mat" link="0" type="5"/>
+	</runtimes>
+</asset>

@@ -5,6 +5,8 @@
 #include <UnigineWorlds.h>
 #include <UnigineVisualizer.h>
 
+#include "../../menu_ui/SampleDescriptionWindow.h"
+
 class TriggerSample : public Unigine::ComponentBase
 {
 public:
@@ -22,6 +24,9 @@ public:
 	PROP_PARAM(Node, trigger_math_sphere_node);
 	PROP_PARAM(Node, trigger_intersection_node_box);
 	PROP_PARAM(Node, trigger_intersection_node_sphere);
+	PROP_PARAM(Node, trigger_node_node);
+	PROP_PARAM(Node, trigger_node_parent_node);
+	PROP_PARAM(Node, trigger_node_text);
 
 	PROP_PARAM(Material, postament_mat);
 	PROP_PARAM(Material, postament_mat_triggered);
@@ -41,4 +46,6 @@ private:
 	Unigine::EventConnections trigger_connections;
 
 	Unigine::Visualizer::MODE visualizer_mode;
+
+	SampleDescriptionWindow sample_description_window;
 };

@@ -807,6 +807,9 @@
     <ClCompile Include="systems\async_queue_tasks\AsyncQueueTasksSample.cpp">
       <Filter>systems\async_queue_tasks</Filter>
     </ClCompile>
+    <ClCompile Include="systems\async_queue_stress\AsyncQueueStressSample.cpp">
+      <Filter>systems\async_queue_stress</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AppEditorLogic.h" />
@@ -1559,6 +1562,9 @@
     <ClInclude Include="systems\async_queue_tasks\AsyncQueueTasksSample.h">
       <Filter>systems\async_queue_tasks</Filter>
     </ClInclude>
+    <ClInclude Include="systems\async_queue_stress\AsyncQueueStressSample.h">
+      <Filter>systems\async_queue_stress</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="menu_ui">
@@ -2049,6 +2055,9 @@
     </Filter>
     <Filter Include="systems\async_queue_tasks">
       <UniqueIdentifier>{a09fb9fa-fc86-4394-a622-570ef611a6a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="systems\async_queue_stress">
+      <UniqueIdentifier>{1db9ccc0-78aa-468f-93b9-001c2f892a2d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

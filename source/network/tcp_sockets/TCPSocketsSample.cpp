@@ -667,6 +667,15 @@ void TCPSocketsSample::SampleGui::init(TCPSocketsSample *sample)
 
 	group_box->addChild(vbox, Gui::ALIGN_TOP);
 	group_box->arrange();
+
+	for (int i = 0; i < Engine::get()->getNumArgs(); i++)
+	{
+		String str = Engine::get()->getArg(i);
+		if (str == "-server")
+			start_server_btn->setToggled(true);
+		else if (str == "-client")
+			start_client_btn->setToggled(true);
+	}
 }
 
 void TCPSocketsSample::SampleGui::update()

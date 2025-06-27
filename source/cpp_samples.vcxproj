@@ -304,6 +304,7 @@
     <ClCompile Include="render\weapon_clipping\WeaponClipping.cpp" />
     <ClCompile Include="render\weapon_clipping\WeaponClippingSample.cpp" />
     <ClCompile Include="systems\async_queue\AsyncQueueSample.cpp" />
+    <ClCompile Include="systems\async_queue_stress\AsyncQueueStressSample.cpp" />
     <ClCompile Include="systems\async_queue_tasks\AsyncQueueTasksSample.cpp" />
     <ClCompile Include="systems\cad_like_view\CADLikeView.cpp" />
     <ClCompile Include="systems\cad_like_view\ViewportCube.cpp" />
@@ -557,6 +558,7 @@
     <ClInclude Include="render\weapon_clipping\WeaponClipping.h" />
     <ClInclude Include="render\weapon_clipping\WeaponClippingSample.h" />
     <ClInclude Include="systems\async_queue\AsyncQueueSample.h" />
+    <ClInclude Include="systems\async_queue_stress\AsyncQueueStressSample.h" />
     <ClInclude Include="systems\async_queue_tasks\AsyncQueueTasksSample.h" />
     <ClInclude Include="systems\cad_like_view\CADLikeView.h" />
     <ClInclude Include="systems\cad_like_view\ViewportCube.h" />

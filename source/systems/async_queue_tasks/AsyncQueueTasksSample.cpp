@@ -35,6 +35,10 @@ void AsyncQueueTasksSample::init()
 	run_async_button->getEventClicked().connect(*this, [instance = this, async_thread_type_combobox]()
 		{
 			// run a task asynchronously in a specified thread
+			// also you can specify priority of your task
+			// ASYNC_PRIORITY_CRITICAL - hight
+			// ASYNC_PRIORITY_DEFAULT - medium
+			// ASYNC_PRIORITY_BACKGROUND - low
 			AsyncQueue::runAsync(AsyncQueue::ASYNC_THREAD(async_thread_type_combobox->getCurrentItem()), MakeCallback(instance, &AsyncQueueTasksSample::async_task));
 		});
 	parameters->addChild(run_async_button, Gui::ALIGN_EXPAND);
@@ -60,21 +64,30 @@ void AsyncQueueTasksSample::init()
 	spinbox_hbox->addChild(multithread_spinbox);
 	multithread_hbox->addChild(spinbox_hbox, Gui::ALIGN_RIGHT);
 
+	auto frame_checkbox = WidgetCheckBox::create("Wait for multithreaded task to complete in frame");
+	parameters->addChild(frame_checkbox, Gui::ALIGN_LEFT);
+
 	auto run_async_multithread_button = WidgetButton::create("Run Async Multithread");
-	run_async_multithread_button->getEventClicked().connect(*this, [instance = this, multithread_spinbox]()
+	run_async_multithread_button->getEventClicked().connect(*this, [instance = this, multithread_spinbox, frame_checkbox]()
 		{
 			// run a task in a multithread mode, current thread number and total amount of thread are passed to the callback
 			// does not block the thread from which it is called
-			AsyncQueue::runAsyncMultiThread(MakeCallback(instance, &AsyncQueueTasksSample::multithread_task), multithread_spinbox->getValue());
+			if(frame_checkbox->isChecked())
+				AsyncQueue::runFrameAsyncMultiThread(MakeCallback(instance, &AsyncQueueTasksSample::multithread_task), multithread_spinbox->getValue());
+			else
+				AsyncQueue::runAsyncMultiThread(MakeCallback(instance, &AsyncQueueTasksSample::multithread_task), multithread_spinbox->getValue());
 		});
 	parameters->addChild(run_async_multithread_button, Gui::ALIGN_EXPAND);
 
 	auto run_sync_multithread_button = WidgetButton::create("Run Sync Multithread");
-	run_sync_multithread_button->getEventClicked().connect(*this, [instance = this, multithread_spinbox]()
+	run_sync_multithread_button->getEventClicked().connect(*this, [instance = this, multithread_spinbox, frame_checkbox]()
 		{
 			// run a task in a multithread mode, current thread number and total amount of thread are passed to the callback
 			// blocks the thread from which it was called (the calling thread will be unblocked after the task is completed in all threads)
-			AsyncQueue::runSyncMultiThread(MakeCallback(instance, &AsyncQueueTasksSample::multithread_task), multithread_spinbox->getValue());
+			if(frame_checkbox->isChecked())
+				AsyncQueue::runFrameSyncMultiThread(MakeCallback(instance, &AsyncQueueTasksSample::multithread_task), multithread_spinbox->getValue());
+			else	
+				AsyncQueue::runSyncMultiThread(MakeCallback(instance, &AsyncQueueTasksSample::multithread_task), multithread_spinbox->getValue());
 		});
 	parameters->addChild(run_sync_multithread_button, Gui::ALIGN_EXPAND);
 }

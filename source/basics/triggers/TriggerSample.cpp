@@ -4,7 +4,7 @@
 
 #include <UnigineConsole.h>
 #include <UnigineVisualizer.h>
-
+#include <UnigineGame.h>
 
 using namespace Unigine;
 using namespace Math;
@@ -36,6 +36,7 @@ void TriggerSample::init()
 	math_trigger_box->addObject(target_to_check);
 	math_trigger_sphere->addObject(target_to_check);
 
+	NodeTriggerPtr node_trigger = checked_ptr_cast<NodeTrigger>(trigger_node_node.get());
 
 	// Setting callbacks
 
@@ -124,6 +125,36 @@ void TriggerSample::init()
 				postament->setMaterial(postament_mat, 0);
 			}
 		}));
+
+	node_trigger->getEventEnabled().connect(*this, [this](const NodeTriggerPtr &trigger)
+		{
+			auto object_text = checked_ptr_cast<ObjectText>(trigger_node_text.get());
+			if(trigger->isEnabled())
+				object_text->setTextColor(vec4_white);
+			else
+				object_text->setTextColor(vec4_red);
+		});
+
+	node_trigger->getEventPosition().connect(*this, [](const NodeTriggerPtr &trigger)
+		{
+			ObjectPtr parent = checked_ptr_cast<Object>(trigger->getParent());
+			MaterialPtr material = parent->getMaterialInherit(0);
+			vec4 color = material->getParameterFloat4("albedo_color");
+			color.z += Game::getIFps();
+			if (color.z > 1.0f)
+				color.z = 0.0f;
+			material->setParameterFloat4("albedo_color", color);
+		});
+
+	sample_description_window.createWindow();
+	WidgetGroupBoxPtr parameters = sample_description_window.getParameterGroupBox();
+	auto node_trigger_checkbox = WidgetCheckBox::create("Cube Active");
+	parameters->addChild(node_trigger_checkbox, Gui::ALIGN_LEFT);
+	node_trigger_checkbox->getEventChanged().connect(*this, [this, node_trigger_checkbox]()
+		{
+			trigger_node_parent_node.get()->setEnabled(node_trigger_checkbox->isChecked());
+		});
+	node_trigger_checkbox->setChecked(true);
 }
 
 void TriggerSample::update()
@@ -137,4 +168,6 @@ void TriggerSample::shutdown()
 	trigger_connections.disconnectAll();
 	Visualizer::setMode(visualizer_mode);
 	Visualizer::setEnabled(false);
+
+	sample_description_window.shutdown();
 }

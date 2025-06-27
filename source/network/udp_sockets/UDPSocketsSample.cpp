@@ -508,6 +508,15 @@ void UDPSocketsSample::SampleGui::init(UDPSocketsSample *sample)
 	recv_port_el->setFontVOffset(-2);
 	recv_port_el->setValidator(Gui::VALIDATOR_UINT);
 	hbox->addChild(recv_port_el);
+
+	for (int i = 0; i < Engine::get()->getNumArgs(); i++)
+	{
+		String str = Engine::get()->getArg(i);
+		if (str == "-server")
+			start_recver_btn->setToggled(true);
+		else if (str == "-client")
+			start_sender_btn->setToggled(true);
+	}
 }
 
 void UDPSocketsSample::SampleGui::shutdown()

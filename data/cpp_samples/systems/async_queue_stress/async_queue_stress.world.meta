@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>fea92648a8ca8e7d5631484c687fc1c07d705674</guid>
+	<type>world</type>
+	<hash>215e7877</hash>
+	<runtimes>
+		<runtime id="fea92648a8ca8e7d5631484c687fc1c07d705674" name="async_queue_stress.world" link="0"/>
+	</runtimes>
+	<parameters>
+		<parameter type="string" name="physics_settings_path"/>
+		<parameter type="string" name="render_settings_path"/>
+		<parameter type="string" name="script_name"/>
+		<parameter type="string" name="sound_settings_path"/>
+		<parameter type="string" name="viewports_settings"/>
+	</parameters>
+</asset>

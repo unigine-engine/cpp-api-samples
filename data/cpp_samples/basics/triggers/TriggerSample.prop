@@ -11,6 +11,9 @@
 	<parameter name="trigger_math_sphere_node" type="node">0</parameter>
 	<parameter name="trigger_intersection_node_box" type="node">0</parameter>
 	<parameter name="trigger_intersection_node_sphere" type="node">0</parameter>
+	<parameter name="trigger_node_node" type="node">0</parameter>
+	<parameter name="trigger_node_parent_node" type="node">0</parameter>
+	<parameter name="trigger_node_text" type="node">0</parameter>
 	<parameter name="postament_mat" type="material"/>
 	<parameter name="postament_mat_triggered" type="material"/>
 </property>

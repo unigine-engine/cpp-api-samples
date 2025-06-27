@@ -60,6 +60,12 @@ void ClusterSample::update()
 				// Vector<Mat4> transforms = Vector<Mat4>(translate(point), 1);
 				// cluster->appendMeshes(transforms);
 			}
+			// Calling updateSpatialTree() is required after modifying a Cluster,
+			// as such changes (e.g., position, size, or content) may affect its placement
+			// within the spatial partitioning hierarchy.
+			// This ensures accurate spatial indexing and enables efficient queries
+			// for rendering, culling, and collision detection.
+			cluster->updateSpatialTreeDelayed();
 		}
 		update_gui();
 	}

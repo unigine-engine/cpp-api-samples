@@ -366,8 +366,8 @@
 		<render_iso>100</render_iso>
 		<render_landscape_cache_cpu_prefetch_radius>0</render_landscape_cache_cpu_prefetch_radius>
 		<render_landscape_cache_cpu_size>10</render_landscape_cache_cpu_size>
-		<render_landscape_cache_gpu_life_time>6</render_landscape_cache_gpu_life_time>
-		<render_landscape_cache_gpu_size>4</render_landscape_cache_gpu_size>
+		<render_landscape_cache_gpu_life_time>4</render_landscape_cache_gpu_life_time>
+		<render_landscape_cache_gpu_size>6</render_landscape_cache_gpu_size>
 		<render_landscape_operations_per_frame>10</render_landscape_operations_per_frame>
 		<render_landscape_terrain_culling_by_depth>1</render_landscape_terrain_culling_by_depth>
 		<render_landscape_terrain_culling_depth_resolution>64</render_landscape_terrain_culling_depth_resolution>
@@ -382,31 +382,31 @@
 		<render_landscape_terrain_culling_patch_resolution_gpu>32</render_landscape_terrain_culling_patch_resolution_gpu>
 		<render_landscape_terrain_detail_compression>1</render_landscape_terrain_detail_compression>
 		<render_landscape_terrain_detail_resolution_additional_mask>4</render_landscape_terrain_detail_resolution_additional_mask>
-		<render_landscape_terrain_detail_resolution_albedo>4</render_landscape_terrain_detail_resolution_albedo>
-		<render_landscape_terrain_detail_resolution_height>4</render_landscape_terrain_detail_resolution_height>
+		<render_landscape_terrain_detail_resolution_albedo>5</render_landscape_terrain_detail_resolution_albedo>
+		<render_landscape_terrain_detail_resolution_height>5</render_landscape_terrain_detail_resolution_height>
 		<render_landscape_terrain_geometry_detail_max_height>0.5</render_landscape_terrain_geometry_detail_max_height>
 		<render_landscape_terrain_geometry_holes>1</render_landscape_terrain_geometry_holes>
-		<render_landscape_terrain_geometry_polygon_size>0.00999999978</render_landscape_terrain_geometry_polygon_size>
-		<render_landscape_terrain_geometry_preset>low</render_landscape_terrain_geometry_preset>
-		<render_landscape_terrain_geometry_progression>1.5</render_landscape_terrain_geometry_progression>
-		<render_landscape_terrain_geometry_subpixel_reduction>6</render_landscape_terrain_geometry_subpixel_reduction>
+		<render_landscape_terrain_geometry_polygon_size>0.00499999989</render_landscape_terrain_geometry_polygon_size>
+		<render_landscape_terrain_geometry_preset>custom</render_landscape_terrain_geometry_preset>
+		<render_landscape_terrain_geometry_progression>6</render_landscape_terrain_geometry_progression>
+		<render_landscape_terrain_geometry_subpixel_reduction>5</render_landscape_terrain_geometry_subpixel_reduction>
 		<render_landscape_terrain_mask_dithering>1</render_landscape_terrain_mask_dithering>
 		<render_landscape_terrain_streaming_per_lods>1</render_landscape_terrain_streaming_per_lods>
-		<render_landscape_terrain_streaming_preset>low</render_landscape_terrain_streaming_preset>
+		<render_landscape_terrain_streaming_preset>custom</render_landscape_terrain_streaming_preset>
 		<render_landscape_terrain_streaming_threads>1</render_landscape_terrain_streaming_threads>
-		<render_landscape_terrain_texel_size>0.00100000005</render_landscape_terrain_texel_size>
-		<render_landscape_terrain_visible_distance>30000</render_landscape_terrain_visible_distance>
+		<render_landscape_terrain_texel_size>0.00200000009</render_landscape_terrain_texel_size>
+		<render_landscape_terrain_visible_distance>10000</render_landscape_terrain_visible_distance>
 		<render_landscape_terrain_vt_detail_level_by_angle>0.949999988</render_landscape_terrain_vt_detail_level_by_angle>
 		<render_landscape_terrain_vt_filtering>1</render_landscape_terrain_vt_filtering>
 		<render_landscape_terrain_vt_hash_number_mistakes>2</render_landscape_terrain_vt_hash_number_mistakes>
-		<render_landscape_terrain_vt_hash_size>131072</render_landscape_terrain_vt_hash_size>
-		<render_landscape_terrain_vt_memory_size>0.400000006</render_landscape_terrain_vt_memory_size>
+		<render_landscape_terrain_vt_hash_size>1000000</render_landscape_terrain_vt_hash_size>
+		<render_landscape_terrain_vt_memory_size>0.5</render_landscape_terrain_vt_memory_size>
 		<render_landscape_terrain_vt_sampler_feedback_buffer_resolution>80 60</render_landscape_terrain_vt_sampler_feedback_buffer_resolution>
 		<render_landscape_terrain_vt_sampler_feedback_screen_resolution>1</render_landscape_terrain_vt_sampler_feedback_screen_resolution>
-		<render_landscape_terrain_vt_target_resolution>1344 756</render_landscape_terrain_vt_target_resolution>
-		<render_landscape_terrain_vt_tiles_load_per_frame>4</render_landscape_terrain_vt_tiles_load_per_frame>
+		<render_landscape_terrain_vt_target_resolution>1920 1080</render_landscape_terrain_vt_target_resolution>
+		<render_landscape_terrain_vt_tiles_load_per_frame>16</render_landscape_terrain_vt_tiles_load_per_frame>
 		<render_landscape_terrain_vt_tiles_reload_per_frame>4</render_landscape_terrain_vt_tiles_reload_per_frame>
-		<render_landscape_terrain_vt_tiles_update_per_frame>60</render_landscape_terrain_vt_tiles_update_per_frame>
+		<render_landscape_terrain_vt_tiles_update_per_frame>16</render_landscape_terrain_vt_tiles_update_per_frame>
 		<render_latency>1</render_latency>
 		<render_lens>0</render_lens>
 		<render_lens_color>1 1 1 1</render_lens_color>

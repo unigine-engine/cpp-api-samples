@@ -3,6 +3,7 @@
 #include <UnigineComponentSystem.h>
 #include <UnigineWidgets.h>
 #include <UnigineWorlds.h>
+#include <UniginePhysicals.h>
 #include <UnigineVisualizer.h>
 
 #include "../../menu_ui/SampleDescriptionWindow.h"
@@ -13,12 +14,20 @@ public:
 	COMPONENT_DEFINE(TriggerSample, ComponentBase);
 
 	PROP_PARAM(Node, target_to_check);
+	PROP_PARAM(Node, postament_physics_sphere);
+	PROP_PARAM(Node, postament_physics_capsule);
+	PROP_PARAM(Node, postament_physics_cylinder);
+	PROP_PARAM(Node, postament_physics_box);
 	PROP_PARAM(Node, postament_world);
 	PROP_PARAM(Node, postament_math_sphere);
 	PROP_PARAM(Node, postament_math_box);
 	PROP_PARAM(Node, postament_intersection_box);
 	PROP_PARAM(Node, postament_intersection_sphere);
 
+	PROP_PARAM(Node, trigger_physics_sphere_node);
+	PROP_PARAM(Node, trigger_physics_capsule_node);
+	PROP_PARAM(Node, trigger_physics_cylinder_node);
+	PROP_PARAM(Node, trigger_physics_box_node);
 	PROP_PARAM(Node, trigger_world_node);
 	PROP_PARAM(Node, trigger_math_box_node);
 	PROP_PARAM(Node, trigger_math_sphere_node);
@@ -43,7 +52,10 @@ private:
 private:
 	Unigine::WorldTriggerPtr world_trigger;
 
-	Unigine::EventConnections trigger_connections;
+	Unigine::PhysicalTriggerPtr physical_trigger_sphere;
+	Unigine::PhysicalTriggerPtr physical_trigger_capsule;
+	Unigine::PhysicalTriggerPtr physical_trigger_cylinder;
+	Unigine::PhysicalTriggerPtr physical_trigger_box;
 
 	Unigine::Visualizer::MODE visualizer_mode;
 

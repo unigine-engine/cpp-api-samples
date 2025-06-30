@@ -100,10 +100,12 @@ void DiggingTool::update_digging_object()
 	Vec3 new_position = lerp(position, target_transform.getTranslate(), position_lerp_rate * ifps);
 	quat new_rotation = slerp(transform.getRotate(), target_transform.getRotate(), rotation_lerp_rate * ifps);
 
-	if (digging_object_is_near_terrain)
 	{
-		// clamp the max delta the digging object can traverse in one frame
+		// clamp the max delta the digging object can move in one frame
 		// to avoid leaving odd patches of terrain unmodified
+
+		// ideally this should be done using proper brush logic (with interpolation, etc.)
+		// but that is beyond the scope of this sample
 
 		float max_delta = position_spacing;
 
@@ -120,40 +122,20 @@ void DiggingTool::update_digging_object()
 
 bool DiggingTool::should_update_terrain()
 {
-	bool digging_object_moved_far_enough = [this]
-	{
-		// to help performance we don't update terrain every frame, instead we do it only when
-		// it makes sense i.e. when the digging object has moved far enough (as defined by *_spacing variables)
-		// to mark a visible difference on the terrain
+	// to help performance we don't update terrain every frame, instead, it is done only when
+	// it makes sense i.e. when the digging object has moved far enough to mark a visible difference on the terrain
+	// (see defined by DiggingTool::*_spacing variables)
 
-		Vec3 position = digging_object->getWorldPosition();
-		vec3 rotation = decomposeRotationXYZ(mat3(digging_object->getWorldTransform()));
+	Vec3 position = digging_object->getWorldPosition();
+	vec3 rotation = decomposeRotationXYZ(mat3(digging_object->getWorldTransform()));
 
-		if (compare(position, prev_position, position_spacing) && compare(rotation, prev_rotation, rotation_spacing))
-			return false;
+	if (compare(position, prev_position, position_spacing) && compare(rotation, prev_rotation, rotation_spacing))
+		return false;
 
-		prev_position = position;
-		prev_rotation = rotation;
+	prev_position = position;
+	prev_rotation = rotation;
 
-		return true;
-	}();
-
-	digging_object_is_near_terrain = [this]
-	{
-		// don't update terrain if the digging object is nowhere near it
-
-		Vector<NodePtr> nodes;
-
-		if (!World::getIntersection(digging_object_wbb, nodes))
-			return false;
-
-		if (!nodes.contains(static_ptr_cast<Node>(layer_map)))
-			return false;
-
-		return true;
-	}();
-
-	return digging_object_moved_far_enough && digging_object_is_near_terrain;
+	return true;
 }
 
 void DiggingTool::enqueue_terrain_update()
@@ -220,8 +202,8 @@ void DiggingTool::enqueue_terrain_update()
 		per_operation_draw_data.append(id, draw_data);
 
 		int flags_file_data = {
-			Landscape::FLAGS_DATA_HEIGHT |
-			Landscape::FLAGS_FILE_DATA_MASK_4 |
+			Landscape::FLAGS_DATA_HEIGHT | // height
+			Landscape::FLAGS_FILE_DATA_MASK_4 | // mask 4 (just as an example)
 			0
 		};
 

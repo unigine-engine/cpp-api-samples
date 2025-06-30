@@ -43,6 +43,7 @@ def download_file_from_ftp(host, username, password, remote_file, local_path):
 
 def extract_archive(archive_path):
     """Extract zip archive and remove it"""
+    extract_to = os.path.abspath(os.path.dirname(__file__))
     try:
         # Extract archive
         with zipfile.ZipFile(archive_path, 'r') as zip_ref:

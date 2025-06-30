@@ -855,11 +855,19 @@
 			<properties>
 				<property parent="7616e4a6baf9c779a658fb75df183f0874b74446" guid="9fd66312728d274921620814c79554631c4eae66">
 					<parameter name="target_to_check">1628717892</parameter>
+					<parameter name="postament_physics_sphere">182344822</parameter>
+					<parameter name="postament_physics_capsule">344630837</parameter>
+					<parameter name="postament_physics_cylinder">342729939</parameter>
+					<parameter name="postament_physics_box">2095837441</parameter>
 					<parameter name="postament_world">950647747</parameter>
 					<parameter name="postament_math_sphere">271743264</parameter>
 					<parameter name="postament_math_box">1213379290</parameter>
 					<parameter name="postament_intersection_box">1183917575</parameter>
 					<parameter name="postament_intersection_sphere">590176664</parameter>
+					<parameter name="trigger_physics_sphere_node">758360860</parameter>
+					<parameter name="trigger_physics_capsule_node">1360709058</parameter>
+					<parameter name="trigger_physics_cylinder_node">993600440</parameter>
+					<parameter name="trigger_physics_box_node">651380350</parameter>
 					<parameter name="trigger_world_node">722834379</parameter>
 					<parameter name="trigger_math_box_node">1166531944</parameter>
 					<parameter name="trigger_math_sphere_node">1693631246</parameter>
@@ -879,7 +887,7 @@
 			<transform>0.99999994 0 0 0.0 0 0.99999994 0 0.0 0 0 0.99999994 0.0 0 0 5 1.0</transform>
 		</node>
 		<node type="NodeDummy" id="1374208478" name="Pedestal Node">
-			<transform>-0.99999976 -5.6425984e-07 0 0.0 5.6425989e-07 -0.99999988 0 0.0 0 0 0.99999982 0.0 -6 8.7422769e-08 0 1.0</transform>
+			<transform>-0.99999976 -5.6425984e-07 0 0.0 5.6425989e-07 -0.99999988 0 0.0 0 0 0.99999982 0.0 3 4 0 1.0</transform>
 			<node type="ObjectText" id="288178085" name="ObjectText">
 				<font_name>core/gui/font.ttf</font_name>
 				<text>Node Trigger</text>
@@ -888,7 +896,7 @@
 				<surface name="text" physics_friction="1" physics_restitution="1" material="196c349704185e581025cee22b1fe0d75cb85e73"/>
 				<transform>0.99999988 1.0086336e-07 -1.0165702e-07 0.0 -5.0056428e-08 0.91128826 0.41176903 0.0 1.3417126e-07 -0.41176885 0.91128808 0.0 -0.54415083 -1.2906556 0.18495588 1.0</transform>
 			</node>
-			<node type="ObjectMeshStatic" id="1513352384" name="world">
+			<node type="ObjectMeshStatic" id="1513352384" name="node">
 				<mesh_name>guid://0c6228d0f5fde5ef5847da82afd6d7f9dbb62104</mesh_name>
 				<surface name="plane" physics_friction="1" physics_restitution="1" material="891957d5df8447303e33b0cf41b867e2314245d9"/>
 				<transform>0.19999999 4.7683713e-08 0 0.0 -4.7683734e-08 0.20000003 0 0.0 0 0 1 0.0 0 0 0.29999998 1.0</transform>
@@ -1029,15 +1037,6 @@
 				<transform>-0.99999988 -3.2584131e-07 0 0.0 3.2584137e-07 -1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
 			</node>
 		</node>
-		<node type="NodeDummy" id="621622073" name="path">
-			<transform>0.99999988 0 0 0.0 0 0.99999988 0 0.0 0 0 0.99999994 0.0 0 0 0 1.0</transform>
-			<node type="NodeDummy" id="972631855" name="A">
-				<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 10.5 0 0.5 1.0</transform>
-			</node>
-			<node type="NodeDummy" id="1323791827" name="B">
-				<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 -4.5 0 0.5 1.0</transform>
-			</node>
-		</node>
 		<node type="NodeDummy" id="82374221" name="Intesection_Pedestal_Box">
 			<properties>
 				<property parent="5c8b1af25bc09ed421139eb5a11599f30c5206df" guid="d723e446c10b6eed6d5b036862918fa7445ec8da">
@@ -1117,7 +1116,7 @@
 				<transform>-0.99999988 -3.2584114e-07 0 0.0 3.2584126e-07 -1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
 			</node>
 		</node>
-		<node type="ObjectMeshStatic" id="1628717892" trigger_interaction_enabled="1" name="material_ball">
+		<node type="ObjectMeshStatic" id="1628717892" trigger_interaction_enabled="1" name="material_ball_1">
 			<mesh_name>guid://268b2c7dfd6f03b8b38573b7d32fbdaa81075101</mesh_name>
 			<surface name="material_ball_mat" intersection_mask="0x7" physics_friction="1" physics_restitution="1" material="2811a7f9b592b10430cd8893f1a474d6713c263d"/>
 			<properties>
@@ -1127,6 +1126,192 @@
 				</property>
 			</properties>
 			<transform>0.99999988 0 0 0.0 0 0.99999988 0 0.0 0 0 0.99999994 0.0 10.5 0 0.5 1.0</transform>
+		</node>
+		<node type="NodeDummy" id="621622073" name="path_1">
+			<transform>0.99999988 0 0 0.0 0 0.99999988 0 0.0 0 0 0.99999994 0.0 0 0 0 1.0</transform>
+			<node type="NodeDummy" id="972631855" name="A">
+				<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 10.5 0 0.5 1.0</transform>
+			</node>
+			<node type="NodeDummy" id="1323791827" name="B">
+				<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 -4.5 0 0.5 1.0</transform>
+			</node>
+		</node>
+		<node type="NodeDummy" id="1266909092" name="Pedestal Physics Sphere">
+			<transform>-0.99999964 -1.0410968e-06 0 0.0 1.0410968e-06 -0.99999964 0 0.0 0 0 0.9999997 0.0 -1.5 -4 0 1.0</transform>
+			<node type="ObjectText" id="1845216947" name="ObjectText">
+				<font_name>core/gui/font.ttf</font_name>
+				<text>Physical Trigger
+
+</text>
+				<font_size>55</font_size>
+				<text_wrap_width>0</text_wrap_width>
+				<surface name="text" physics_friction="1" physics_restitution="1" material="196c349704185e581025cee22b1fe0d75cb85e73"/>
+				<transform>0.99999988 -1.1828098e-07 -9.294795e-08 0.0 1.4606121e-07 0.9112882 0.41176897 0.0 3.5997942e-08 -0.41176894 0.91128814 0.0 -0.69117355 -1.2906554 0.18495587 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="182344822" name="physics_sphere">
+				<mesh_name>guid://0c6228d0f5fde5ef5847da82afd6d7f9dbb62104</mesh_name>
+				<surface name="plane" intersection="1" physics_friction="1" physics_restitution="1" material="891957d5df8447303e33b0cf41b867e2314245d9"/>
+				<transform>0.19999999 0 0 0.0 1.4210855e-14 0.20000003 0 0.0 0 0 1 0.0 0 0 0.29999998 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1779870045" name="pedestal_flat_right">
+				<mesh_name>guid://bad2a79004f4d5afe818874201041db9d48d2bc4</mesh_name>
+				<surface name="pedestal_black_matte" intersection="1" physics_friction="1" physics_restitution="1" material="891957d5df8447303e33b0cf41b867e2314245d9"/>
+				<surface name="pedestal_black_glossy" intersection="1" physics_friction="1" physics_restitution="1" material="7247ce6ccedf76db62863e7ed47453c58df4b260"/>
+				<surface name="showcase_tile_black_matte" enabled="0" intersection="1" physics_friction="1" physics_restitution="1" material="4dfec30f491f753f6e89094db6d3d695e89f9d6f"/>
+				<transform>-0.99999988 -3.2584114e-07 0 0.0 3.2584126e-07 -1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="824548120" name="pedestal_flat_left">
+				<mesh_name>guid://8d2e4453831c7d96829117fd0510f938980feb37</mesh_name>
+				<surface name="pedestal_black_matte" intersection="1" physics_friction="1" physics_restitution="1" material="891957d5df8447303e33b0cf41b867e2314245d9"/>
+				<surface name="pedestal_black_glossy" intersection="1" physics_friction="1" physics_restitution="1" material="7247ce6ccedf76db62863e7ed47453c58df4b260"/>
+				<surface name="showcase_tile_black_matte" enabled="0" intersection="1" physics_friction="1" physics_restitution="1" material="4dfec30f491f753f6e89094db6d3d695e89f9d6f"/>
+				<transform>-0.99999988 -3.2584114e-07 0 0.0 3.2584126e-07 -1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="PhysicalTrigger" id="758360860" name="PhysicalTrigger">
+				<type>0</type>
+				<size>1 1 1</size>
+				<exclusion_mask>0x0</exclusion_mask>
+				<transform>1.0000004 0 0 0.0 0 1.0000004 0 0.0 0 0 1.0000004 0.0 0 0 0.60000002 1.0</transform>
+			</node>
+		</node>
+		<node type="NodeDummy" id="1408748491" name="Pedestal Physics Capsule">
+			<transform>-0.99999964 -1.0410968e-06 0 0.0 1.0410968e-06 -0.99999964 0 0.0 0 0 0.9999997 0.0 1.5 -4 0 1.0</transform>
+			<node type="ObjectText" id="571092654" name="ObjectText">
+				<font_name>core/gui/font.ttf</font_name>
+				<text>Physical Trigger
+
+</text>
+				<font_size>55</font_size>
+				<text_wrap_width>0</text_wrap_width>
+				<surface name="text" physics_friction="1" physics_restitution="1" material="196c349704185e581025cee22b1fe0d75cb85e73"/>
+				<transform>0.99999988 -1.1828098e-07 -9.294795e-08 0.0 1.4606121e-07 0.9112882 0.41176897 0.0 3.5997942e-08 -0.41176894 0.91128814 0.0 -0.69117355 -1.2906554 0.18495587 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="344630837" name="physics_capsule">
+				<mesh_name>guid://0c6228d0f5fde5ef5847da82afd6d7f9dbb62104</mesh_name>
+				<surface name="plane" intersection="1" physics_friction="1" physics_restitution="1" material="891957d5df8447303e33b0cf41b867e2314245d9"/>
+				<transform>0.19999999 0 0 0.0 1.4210855e-14 0.20000003 0 0.0 0 0 1 0.0 0 0 0.29999998 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1088389648" name="pedestal_flat_right">
+				<mesh_name>guid://bad2a79004f4d5afe818874201041db9d48d2bc4</mesh_name>
+				<surface name="pedestal_black_matte" intersection="1" physics_friction="1" physics_restitution="1" material="891957d5df8447303e33b0cf41b867e2314245d9"/>
+				<surface name="pedestal_black_glossy" intersection="1" physics_friction="1" physics_restitution="1" material="7247ce6ccedf76db62863e7ed47453c58df4b260"/>
+				<surface name="showcase_tile_black_matte" enabled="0" intersection="1" physics_friction="1" physics_restitution="1" material="4dfec30f491f753f6e89094db6d3d695e89f9d6f"/>
+				<transform>-0.99999988 -3.2584114e-07 0 0.0 3.2584126e-07 -1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1227550255" name="pedestal_flat_left">
+				<mesh_name>guid://8d2e4453831c7d96829117fd0510f938980feb37</mesh_name>
+				<surface name="pedestal_black_matte" intersection="1" physics_friction="1" physics_restitution="1" material="891957d5df8447303e33b0cf41b867e2314245d9"/>
+				<surface name="pedestal_black_glossy" intersection="1" physics_friction="1" physics_restitution="1" material="7247ce6ccedf76db62863e7ed47453c58df4b260"/>
+				<surface name="showcase_tile_black_matte" enabled="0" intersection="1" physics_friction="1" physics_restitution="1" material="4dfec30f491f753f6e89094db6d3d695e89f9d6f"/>
+				<transform>-0.99999988 -3.2584114e-07 0 0.0 3.2584126e-07 -1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="PhysicalTrigger" id="1360709058" name="PhysicalTrigger">
+				<type>1</type>
+				<size>1 1 1</size>
+				<exclusion_mask>0x0</exclusion_mask>
+				<transform>1.0000004 2.3841858e-07 0 0.0 -2.3841858e-07 1.0000004 0 0.0 0 0 1.0000004 0.0 0 1.3113481e-07 1 1.0</transform>
+			</node>
+		</node>
+		<node type="NodeDummy" id="1434995257" name="Pedestal Physics Cylinder">
+			<transform>-0.99999964 -1.0410968e-06 0 0.0 1.0410968e-06 -0.99999964 0 0.0 0 0 0.9999997 0.0 4.5 -4 0 1.0</transform>
+			<node type="ObjectText" id="561933892" name="ObjectText">
+				<font_name>core/gui/font.ttf</font_name>
+				<text>Physical Trigger
+
+</text>
+				<font_size>55</font_size>
+				<text_wrap_width>0</text_wrap_width>
+				<surface name="text" physics_friction="1" physics_restitution="1" material="196c349704185e581025cee22b1fe0d75cb85e73"/>
+				<transform>0.99999988 -1.1828098e-07 -9.294795e-08 0.0 1.4606121e-07 0.9112882 0.41176897 0.0 3.5997942e-08 -0.41176894 0.91128814 0.0 -0.69117355 -1.2906554 0.18495587 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="342729939" name="physics_cylinder">
+				<mesh_name>guid://0c6228d0f5fde5ef5847da82afd6d7f9dbb62104</mesh_name>
+				<surface name="plane" intersection="1" physics_friction="1" physics_restitution="1" material="891957d5df8447303e33b0cf41b867e2314245d9"/>
+				<transform>0.19999999 0 0 0.0 1.4210855e-14 0.20000003 0 0.0 0 0 1 0.0 0 0 0.29999998 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="239559702" name="pedestal_flat_right">
+				<mesh_name>guid://bad2a79004f4d5afe818874201041db9d48d2bc4</mesh_name>
+				<surface name="pedestal_black_matte" intersection="1" physics_friction="1" physics_restitution="1" material="891957d5df8447303e33b0cf41b867e2314245d9"/>
+				<surface name="pedestal_black_glossy" intersection="1" physics_friction="1" physics_restitution="1" material="7247ce6ccedf76db62863e7ed47453c58df4b260"/>
+				<surface name="showcase_tile_black_matte" enabled="0" intersection="1" physics_friction="1" physics_restitution="1" material="4dfec30f491f753f6e89094db6d3d695e89f9d6f"/>
+				<transform>-0.99999988 -3.2584114e-07 0 0.0 3.2584126e-07 -1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="773180541" name="pedestal_flat_left">
+				<mesh_name>guid://8d2e4453831c7d96829117fd0510f938980feb37</mesh_name>
+				<surface name="pedestal_black_matte" intersection="1" physics_friction="1" physics_restitution="1" material="891957d5df8447303e33b0cf41b867e2314245d9"/>
+				<surface name="pedestal_black_glossy" intersection="1" physics_friction="1" physics_restitution="1" material="7247ce6ccedf76db62863e7ed47453c58df4b260"/>
+				<surface name="showcase_tile_black_matte" enabled="0" intersection="1" physics_friction="1" physics_restitution="1" material="4dfec30f491f753f6e89094db6d3d695e89f9d6f"/>
+				<transform>-0.99999988 -3.2584114e-07 0 0.0 3.2584126e-07 -1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="PhysicalTrigger" id="993600440" name="PhysicalTrigger">
+				<type>2</type>
+				<size>1 1 1</size>
+				<exclusion_mask>0x0</exclusion_mask>
+				<transform>1.0000004 2.3841858e-07 0 0.0 -2.3841858e-07 1.0000004 0 0.0 0 0 1.0000004 0.0 0 -8.3432496e-08 0.60000002 1.0</transform>
+			</node>
+		</node>
+		<node type="NodeDummy" id="2139689911" name="Pedestal Physics Box">
+			<transform>-0.99999964 -1.0410968e-06 0 0.0 1.0410968e-06 -0.99999964 0 0.0 0 0 0.9999997 0.0 7.5 -4 0 1.0</transform>
+			<node type="ObjectText" id="1092541866" name="ObjectText">
+				<font_name>core/gui/font.ttf</font_name>
+				<text>Physical Trigger
+
+</text>
+				<font_size>55</font_size>
+				<text_wrap_width>0</text_wrap_width>
+				<surface name="text" physics_friction="1" physics_restitution="1" material="196c349704185e581025cee22b1fe0d75cb85e73"/>
+				<transform>0.99999988 -1.1828098e-07 -9.294795e-08 0.0 1.4606121e-07 0.9112882 0.41176897 0.0 3.5997942e-08 -0.41176894 0.91128814 0.0 -0.69117355 -1.2906554 0.18495587 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="2095837441" name="physics_box">
+				<mesh_name>guid://0c6228d0f5fde5ef5847da82afd6d7f9dbb62104</mesh_name>
+				<surface name="plane" intersection="1" physics_friction="1" physics_restitution="1" material="891957d5df8447303e33b0cf41b867e2314245d9"/>
+				<transform>0.19999999 0 0 0.0 1.4210855e-14 0.20000003 0 0.0 0 0 1 0.0 0 0 0.29999998 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="529110636" name="pedestal_flat_right">
+				<mesh_name>guid://bad2a79004f4d5afe818874201041db9d48d2bc4</mesh_name>
+				<surface name="pedestal_black_matte" intersection="1" physics_friction="1" physics_restitution="1" material="891957d5df8447303e33b0cf41b867e2314245d9"/>
+				<surface name="pedestal_black_glossy" intersection="1" physics_friction="1" physics_restitution="1" material="7247ce6ccedf76db62863e7ed47453c58df4b260"/>
+				<surface name="showcase_tile_black_matte" enabled="0" intersection="1" physics_friction="1" physics_restitution="1" material="4dfec30f491f753f6e89094db6d3d695e89f9d6f"/>
+				<transform>-0.99999988 -3.2584114e-07 0 0.0 3.2584126e-07 -1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1491508955" name="pedestal_flat_left">
+				<mesh_name>guid://8d2e4453831c7d96829117fd0510f938980feb37</mesh_name>
+				<surface name="pedestal_black_matte" intersection="1" physics_friction="1" physics_restitution="1" material="891957d5df8447303e33b0cf41b867e2314245d9"/>
+				<surface name="pedestal_black_glossy" intersection="1" physics_friction="1" physics_restitution="1" material="7247ce6ccedf76db62863e7ed47453c58df4b260"/>
+				<surface name="showcase_tile_black_matte" enabled="0" intersection="1" physics_friction="1" physics_restitution="1" material="4dfec30f491f753f6e89094db6d3d695e89f9d6f"/>
+				<transform>-0.99999988 -3.2584114e-07 0 0.0 3.2584126e-07 -1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="PhysicalTrigger" id="651380350" name="PhysicalTrigger">
+				<type>3</type>
+				<size>2 2 2</size>
+				<exclusion_mask>0x0</exclusion_mask>
+				<transform>1.0000004 2.3841858e-07 0 0.0 -2.3841858e-07 1.0000004 0 0.0 0 0 1.0000004 0.0 0 1.7883758e-07 0.30000001 1.0</transform>
+			</node>
+		</node>
+		<node type="ObjectMeshStatic" id="327674632" trigger_interaction_enabled="1" name="material_ball_2">
+			<mesh_name>guid://268b2c7dfd6f03b8b38573b7d32fbdaa81075101</mesh_name>
+			<surface name="material_ball_mat" intersection_mask="0x7" physics_friction="1" physics_restitution="1" material="2811a7f9b592b10430cd8893f1a474d6713c263d"/>
+			<body type="BodyRigid" id="835800504" frozen="0" gravity="0">
+				<shape type="ShapeSphere" id="559346174" name="ShapeSphere" transform="1 0 0 0 0 1 0 0 0 0 1 0 -1.49011612e-08 -0.0121634454 0.499582142 1">
+					<radius>0.662626982</radius>
+				</shape>
+			</body>
+			<properties>
+				<property parent="a73bced41c2cc31cfdfc66c10f5da5ddbaa21e72" guid="0ab300e77ae077688be92d6e4ddb46c895ff03fb">
+					<parameter name="pathNode">1357499107</parameter>
+					<parameter name="velocity">3</parameter>
+				</property>
+			</properties>
+			<transform>0.99999988 0 0 0.0 0 0.99999988 0 0.0 0 0 0.99999994 0.0 10 -4 0.5 1.0</transform>
+		</node>
+		<node type="NodeDummy" id="1357499107" name="path_2">
+			<transform>0.99999988 0 0 0.0 0 0.99999988 0 0.0 0 0 0.99999994 0.0 0 0 0 1.0</transform>
+			<node type="NodeDummy" id="1330623206" name="A">
+				<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 10 -4 0.5 1.0</transform>
+			</node>
+			<node type="NodeDummy" id="2100866317" name="B">
+				<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 -4 -4 0.5 1.0</transform>
+			</node>
 		</node>
 		<node type="NodeDummy" id="1846477196" name="utils">
 			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>

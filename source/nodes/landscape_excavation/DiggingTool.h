@@ -46,7 +46,6 @@ private:
 	ObjectDepth object_depth;
 
 	Unigine::Math::WorldBoundBox digging_object_wbb;
-	bool digging_object_is_near_terrain = false;
 
 	float position_spacing = .025f;
 	float rotation_spacing = 1.f;

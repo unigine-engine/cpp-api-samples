@@ -29,6 +29,7 @@ def download_file_from_ftp(host, username, password, remote_file, local_path):
 
         # Download file in binary mode
         with open(local_filepath, 'wb') as file:
+            print(f"Downloading {filename} ...")
             ftp.retrbinary(f"RETR {filename}", file.write)
             print(f"File {filename} successfully downloaded to {local_filepath}")
 
@@ -46,6 +47,7 @@ def extract_archive(archive_path):
     extract_to = os.path.abspath(os.path.dirname(__file__))
     try:
         # Extract archive
+        print(f"Extracting {archive_path} to data...")
         with zipfile.ZipFile(archive_path, 'r') as zip_ref:
             zip_ref.extractall(extract_to)
             extracted = zip_ref.namelist()

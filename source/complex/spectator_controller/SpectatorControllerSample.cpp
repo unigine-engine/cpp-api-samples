@@ -14,8 +14,8 @@ void SpectatorControllerSample::init()
 	mouse_handle_at_init = Input::getMouseHandle();
 	Input::setMouseHandle(Input::MOUSE_HANDLE_GRAB);
 
-	is_controlled = spectator->is_controlled;
-	is_collided = spectator->is_collided;
+	is_controlled = spectator->is_controlled > 0;
+	is_collided = spectator->is_collided > 0;
 
 	current_mouse_sensetivity = spectator->mouse_sensitivity;
 	current_turning = spectator->turning;

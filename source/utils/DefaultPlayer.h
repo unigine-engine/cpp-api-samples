@@ -27,4 +27,5 @@ private:
 	
 	bool init_player_controlled = false;
 	bool init_mouse_enabled = false;
+	Unigine::Input::MOUSE_HANDLE init_mouse_handle;
 };

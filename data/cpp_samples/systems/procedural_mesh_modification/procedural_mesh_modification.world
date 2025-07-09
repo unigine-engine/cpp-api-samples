@@ -354,6 +354,7 @@
 		<render_indirect_specular_denoise_mask_enabled>1</render_indirect_specular_denoise_mask_enabled>
 		<render_indirect_specular_denoise_threshold>1</render_indirect_specular_denoise_threshold>
 		<render_indirect_specular_denoise_threshold_ao>1</render_indirect_specular_denoise_threshold_ao>
+		<render_indirect_specular_normalization>0</render_indirect_specular_normalization>
 		<render_indirect_specular_temporal_filtering_color_clamping_intensity>1</render_indirect_specular_temporal_filtering_color_clamping_intensity>
 		<render_indirect_specular_temporal_filtering_color_clamping_intensity_ao>1</render_indirect_specular_temporal_filtering_color_clamping_intensity_ao>
 		<render_indirect_specular_temporal_filtering_color_clamping_velocity_threshold>100</render_indirect_specular_temporal_filtering_color_clamping_velocity_threshold>
@@ -442,7 +443,7 @@
 		<render_local_tonemapper_target_middle_gray>0.600000024</render_local_tonemapper_target_middle_gray>
 		<render_local_tonemapper_tonemapping_intensity>0.400000006</render_local_tonemapper_tonemapping_intensity>
 		<render_materials_quality>2</render_materials_quality>
-		<render_max_fps>0</render_max_fps>
+		<render_max_fps>150</render_max_fps>
 		<render_metering_mask_enabled>0</render_metering_mask_enabled>
 		<render_motion_blur>0</render_motion_blur>
 		<render_motion_blur_camera_velocity>1</render_motion_blur_camera_velocity>
@@ -618,6 +619,8 @@
 		<render_stereo_planar_reflections_per_eye>0</render_stereo_planar_reflections_per_eye>
 		<render_streaming_animations_life_time>-1</render_streaming_animations_life_time>
 		<render_streaming_budget_loading>1</render_streaming_budget_loading>
+		<render_streaming_cache_ram>-1</render_streaming_cache_ram>
+		<render_streaming_cache_vram>-1</render_streaming_cache_vram>
 		<render_streaming_committed_memory_overcommit>1</render_streaming_committed_memory_overcommit>
 		<render_streaming_free_space_ram>1024</render_streaming_free_space_ram>
 		<render_streaming_free_space_vram>512</render_streaming_free_space_vram>
@@ -728,7 +731,6 @@
 		<composite_deferred_material_guid>guid://</composite_deferred_material_guid>
 		<debug_materials/>
 		<scriptable_materials/>
-		<render_indirect_specular_normalization>0</render_indirect_specular_normalization>
 	</render>
 	<physics>
 		<frozen_linear_velocity>0.0199999996</frozen_linear_velocity>
@@ -751,91 +753,16 @@
 			<surface name="grid_for_world_creation" intersection="1" collision="1" physics_friction="1" physics_restitution="1" material="001dc611e2ca7385e50593ebc1c181e2e370240c"/>
 			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
 		</node>
-		<node type="PlayerSpectator" id="620479819" name="main_player">
-			<collision>1</collision>
-			<collision_mask>0x1</collision_mask>
-			<collision_radius>0.5</collision_radius>
-			<min_velocity>2</min_velocity>
-			<max_velocity>4</max_velocity>
-			<min_theta_angle>-89.9000015</min_theta_angle>
-			<max_theta_angle>89.9000015</max_theta_angle>
-			<acceleration>4</acceleration>
-			<damping>8</damping>
-			<turning>90</turning>
-			<zfar>100000</zfar>
-			<oblique_frustum_plane>0 0 -1 0</oblique_frustum_plane>
-			<is_oblique_frustum>0</is_oblique_frustum>
-			<is_main>1</is_main>
-			<is_listener>1</is_listener>
-			<controlled>1</controlled>
-			<transform>1 -3.5762787e-07 0 0.0 0 0 1 0.0 -3.5762787e-07 -1 0 0.0 0 0 1.5 1.0</transform>
-		</node>
-		<node type="ObjectMeshClutter" id="1142254690" name="ObjectMeshClutter">
-			<mesh_name>guid://434fa8f6e4d28bdd676f1b9873e9ea172ed4008a</mesh_name>
-			<intersection>1</intersection>
-			<intersection_mask>-1</intersection_mask>
-			<visible_distance>80</visible_distance>
-			<fade_distance>80</fade_distance>
-			<seed>1372387049</seed>
-			<size_x>50</size_x>
-			<size_y>50</size_y>
-			<step>50</step>
-			<density>0.171419993</density>
-			<threshold>0</threshold>
-			<angle>0</angle>
-			<min_scale_mean>9.99999997e-07</min_scale_mean>
-			<min_scale_spread>0</min_scale_spread>
-			<max_scale_mean>1</max_scale_mean>
-			<max_scale_spread>0.5</max_scale_spread>
-			<offset_mean>0</offset_mean>
-			<offset_spread>10</offset_spread>
-			<rotation_mean>0 0 0</rotation_mean>
-			<rotation_spread>180 180 180</rotation_spread>
-			<terrain_mask>-1</terrain_mask>
-			<surface name="box" material="4dfec30f491f753f6e89094db6d3d695e89f9d6f"/>
-			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 10 1.0</transform>
-		</node>
-		<node type="ObjectMeshClutter" id="397622779" name="ObjectMeshClutter_1">
-			<mesh_name>guid://4f2a85c56bf7448936d1bcb4cd219cc277ef8908</mesh_name>
-			<intersection>1</intersection>
-			<intersection_mask>-1</intersection_mask>
-			<visible_distance>80</visible_distance>
-			<fade_distance>80</fade_distance>
-			<seed>720982836</seed>
-			<size_x>50</size_x>
-			<size_y>50</size_y>
-			<step>50</step>
-			<density>0.100000001</density>
-			<threshold>0</threshold>
-			<angle>0</angle>
-			<min_scale_mean>9.99999997e-07</min_scale_mean>
-			<min_scale_spread>0</min_scale_spread>
-			<max_scale_mean>1</max_scale_mean>
-			<max_scale_spread>0.5</max_scale_spread>
-			<offset_mean>0</offset_mean>
-			<offset_spread>10</offset_spread>
-			<rotation_mean>0 0 0</rotation_mean>
-			<rotation_spread>180 180 180</rotation_spread>
-			<terrain_mask>-1</terrain_mask>
-			<surface name="capsule" material="4dfec30f491f753f6e89094db6d3d695e89f9d6f"/>
-			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 -52.329094 0 10 1.0</transform>
-		</node>
-		<node type="NodeDummy" id="618731729" name="ScreenshotAdvancedSample">
-			<properties>
-				<property parent="63264f543f046d6c7298529b607064f5092b1aaf" guid="d6b19a7c961c263edc3e3108d70894ad6e51c933"/>
-			</properties>
-			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
-		</node>
-		<node type="LightWorld" id="699469886" name="sun">
+		<node type="LightWorld" id="824505625" name="sun">
 			<scattering>1</scattering>
 			<disable_angle>100</disable_angle>
 			<shadow_height>10</shadow_height>
 			<shadow_width>10</shadow_width>
 			<shadow_zfar>100</shadow_zfar>
 			<shadow_cascade_mode>0</shadow_cascade_mode>
-			<num_shadow_cascades>4</num_shadow_cascades>
+			<num_shadow_cascades>2</num_shadow_cascades>
 			<is_shadow_partial_update>0</is_shadow_partial_update>
-			<shadow_cascade_borders>0.0149999997 0.0500000007 0.200000003</shadow_cascade_borders>
+			<shadow_cascade_borders>0.0075000003 0.0500000007 0.200000003</shadow_cascade_borders>
 			<color_mode>1</color_mode>
 			<shadow_resolution>5</shadow_resolution>
 			<shadow_bias>1</shadow_bias>
@@ -843,8 +770,8 @@
 			<shadow_filter_mode>-1</shadow_filter_mode>
 			<shadow_filter>1</shadow_filter>
 			<shadow_penumbra_mode>-1</shadow_penumbra_mode>
-			<shadow_penumbra>0</shadow_penumbra>
-			<shadow_screen_space>0</shadow_screen_space>
+			<shadow_penumbra>0.150000006</shadow_penumbra>
+			<shadow_screen_space>1</shadow_screen_space>
 			<shadow_screen_space_num_rays>3</shadow_screen_space_num_rays>
 			<shadow_screen_space_num_steps>6</shadow_screen_space_num_steps>
 			<shadow_screen_space_noise_ray>0.150000006</shadow_screen_space_noise_ray>
@@ -861,8 +788,8 @@
 			<shadow_screen_space_softness>0</shadow_screen_space_softness>
 			<shadow_screen_space_translucent_depth_perspective_compensation>0.200000003</shadow_screen_space_translucent_depth_perspective_compensation>
 			<shadow_screen_space_translucent_depth>0.0299999993</shadow_screen_space_translucent_depth>
-			<baked_depth_texture replace="4e012900237706d7ead2ff4c1229fc71d10b23e7"/>
-			<lens_flare_enabled>0</lens_flare_enabled>
+			<baked_depth_texture replace="48a0e948be032f6c5bf5fde72b7e98c8341b3c21"/>
+			<lens_flare_enabled>1</lens_flare_enabled>
 			<lens_flare_texture>core/textures/lens_flares_default.texture</lens_flare_texture>
 			<lens_flare_intensity>1</lens_flare_intensity>
 			<lens_flare_occlusion_fade>1</lens_flare_occlusion_fade>
@@ -902,12 +829,41 @@
 				<billboard name="flare_29" offset="0.936999977" size="0.449999988" rotate="1" uv_lower_left="0.75 0.75" uv_upper_right="1 1" color="0.972549081 1 0.898039281 1" offset_scale="1" intensity="0.180000007"/>
 				<billboard name="flare_30" offset="1" size="1.03999996" rotate="1" uv_lower_left="0.75 0.75" uv_upper_right="1 1" color="0.972549081 1 0.898039281 1" offset_scale="1" intensity="0.150000006"/>
 			</lens_flare_billboards>
-			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 2 1.5 1.0</transform>
+			<transform>-0.43301237 0.43559623 -0.78914917 0.0 -0.75000048 -0.6597392 0.047366858 0.0 -0.49999967 0.61237252 0.6123724 0.0 0 0 0 1.0</transform>
 		</node>
-		<node type="NodeDummy" id="663160928" name="utils">
+		<node type="PlayerSpectator" id="620479819" name="main_player">
+			<collision>1</collision>
+			<collision_mask>0x1</collision_mask>
+			<collision_radius>0.5</collision_radius>
+			<min_velocity>2</min_velocity>
+			<max_velocity>4</max_velocity>
+			<min_theta_angle>-89.9000015</min_theta_angle>
+			<max_theta_angle>89.9000015</max_theta_angle>
+			<acceleration>4</acceleration>
+			<damping>8</damping>
+			<turning>90</turning>
+			<zfar>100000</zfar>
+			<oblique_frustum_plane>0 0 -1 0</oblique_frustum_plane>
+			<is_oblique_frustum>0</is_oblique_frustum>
+			<is_main>1</is_main>
+			<is_listener>1</is_listener>
+			<controlled>1</controlled>
+			<transform>0.99999988 4.7085082e-11 -3.4221747e-11 0.0 0 0.58792484 0.80891532 0.0 5.8207675e-11 -0.80891544 0.58792496 0.0 0.15050881 -23.90962 17.324631 1.0</transform>
+		</node>
+		<node type="NodeDummy" id="1969765751" name="logic">
+			<properties>
+				<property parent="ed3f6a971d326f8fe218a90a38e8d6d3f8e0c58b" guid="d51b7814fff8c44650897c6e47b26cb930f06dbf"/>
+			</properties>
 			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
-			<node type="NodeReference" id="1690470472" name="world_menu">
+		</node>
+		<node type="NodeDummy" id="142138471" name="utils">
+			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
+			<node type="NodeReference" id="1483878042" name="world_menu">
 				<reference>guid://314df660dceeb63f5d524e92712d1cc9c4d27f94</reference>
+				<transform>0.99999994 0 0 0.0 0 0.99999994 0 0.0 0 0 0.99999994 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="NodeReference" id="991970524" name="default_player">
+				<reference>guid://ba3a70ec6651ef14e657504464a2ebf336dc3c84</reference>
 				<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
 			</node>
 		</node>

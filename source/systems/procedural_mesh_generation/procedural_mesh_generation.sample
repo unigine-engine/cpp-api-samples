@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Procedural Mesh Generation">
+	<sdk_desc>Demonstrating runtime procedural mesh generation, along with visualization of how different procedural modes impact memory usage during creation and rendering.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample demonstrates how to generate static mesh geometry at runtime using different procedural mesh generation methods. A grid of <ui>ObjectMeshStatic</ui> objects is created, each receiving its geometry from a user-defined callback that builds a box-shaped mesh surface via the <ui><link to="mesh_class" offset="addBoxSurface_cstr_vec3_int">Mesh API</link></ui>.</para>
+			<para>You can experiment with various <link to="objectmeshstatic_class" offset="PROCEDURAL_MODE">procedural modes</link> (such as <ui>Dynamic, File</ui>, or <ui>Blob</ui>), as well as configure how geometry is stored and accessed by selecting different <link to="meshrender_class" offset="Flags">MeshRender usage flags</link> (DirectX 12 only). These flags determine whether vertex and/or index data is kept in RAM instead of VRAM, allowing the GPU to render directly from system memory.</para>
+			<ul>
+				<li><strong nt="1">Dynamic</strong> - fastest performance, stored in RAM and VRAM, not automatically unloaded from memory.</li>
+				<li><strong nt="1">Blob</strong> - moderate performance, stored in RAM and VRAM, automatically unloaded from memory.</li>
+				<li><strong nt="1">File</strong> - slowest performance, all data stored on disk, automatically unloaded from memory.</li>
+			</ul>
+			<para>The <strong nt="1">Field Size</strong> parameter defines how many mesh objects are generated along each axis, forming a square grid.</para>
+			<para>For each configuration, the sample shows total RAM and VRAM usage, along with the number of active mesh objects. This makes it easier evaluate the performance, memory layout, and behavior of each procedural mode in different runtime conditions.</para>
+		</brief>
+		<para>Use this sample to understand how procedural mesh generation works across different modes, observe how geometry is stored and managed between RAM, VRAM, and disk, profile memory usage for small versus large number of procedural objects, and explore how update strategies influence performance.</para>
+		<para>Refer to the <link to="objectmeshstatic_class" offset="procedural_workflow">Procedural Mesh Workflow</link> article for more details on memory behavior, update strategies, and best practices when working with procedural geometry.</para>
+	</desc>
+	<link_docs>https://developer.unigine.com/docs/api/library/objects/class.objectmeshstatic?rlang=cpp#procedural_workflow</link_docs>
+	<tags>
+		<tag>Systems</tag>
+		<tag>Objects</tag>
+		<tag>Procedural</tag>
+	</tags>
+</sample>

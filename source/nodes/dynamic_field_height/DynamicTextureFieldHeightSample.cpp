@@ -10,11 +10,6 @@ using namespace Math;
 
 void DynamicTextureFieldHeightSample::init()
 {
-	mouse_grab_state_at_init = Input::isMouseGrab();
-	mouse_handle_at_init = Input::getMouseHandle();
-	Input::setMouseGrab(false);
-	Input::setMouseHandle(Input::MOUSE_HANDLE_GRAB);
-
 	description_window.createWindow();
 
 	WidgetButtonPtr button_size_1024 = WidgetButton::create();
@@ -62,7 +57,7 @@ void DynamicTextureFieldHeightSample::init()
 		FieldHeightPtr field = checked_ptr_cast<FieldHeight>(field_height.get());
 		if (field)
 		{
-			field->setSize(vec3(value));
+			field->setSize(vec3(float(value)));
 		}
 		});
 
@@ -115,8 +110,5 @@ void DynamicTextureFieldHeightSample::init()
 
 void DynamicTextureFieldHeightSample::shutdown()
 {
-	Input::setMouseGrab(mouse_grab_state_at_init);
-	Input::setMouseHandle(mouse_handle_at_init);
-
 	description_window.shutdown();
 }

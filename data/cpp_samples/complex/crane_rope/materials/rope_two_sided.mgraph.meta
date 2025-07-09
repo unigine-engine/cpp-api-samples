@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>0290311a3ccd0e821d726961e288fdb092fc7a36</guid>
+	<type>material_graph</type>
+	<hash>3a0f3dc2</hash>
+	<runtimes>
+		<runtime id="0290311a3ccd0e821d726961e288fdb092fc7a36" name="rope_two_sided.mgraph" link="0"/>
+		<runtime id="d2abafdca5277f518d3b537b063fc89ba1b83ed8" name="rope_two_sided" link="1" type="5"/>
+	</runtimes>
+</asset>

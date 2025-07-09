@@ -995,4 +995,5 @@ implemented in the Tracker component.</text>
 		<world_async_load_node_references>0</world_async_load_node_references>
 		<world_moving_immovable_node_mode>1</world_moving_immovable_node_mode>
 	</console>
+	<script_name>guid://a19760572a0081ca3ee606a1ba7a6f8c61c4657b</script_name>
 </world>

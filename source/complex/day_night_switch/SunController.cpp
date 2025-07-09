@@ -21,7 +21,7 @@ void SunController::update()
 			current_time -= max_time_sec;//so we wont loose extra delta time 
 		}
 		refreshSunPosition();;
-		time_changed_event.run(static_cast<int>(current_time));//displaying only integer part
+		time_changed_event.run(current_time);//displaying only integer part
 	}
 }
 
@@ -49,5 +49,5 @@ void SunController::setTime(int t)
 	current_time = t;
 	refreshSunPosition();
 
-	time_changed_event.run(static_cast<int>(current_time));
+	time_changed_event.run(current_time);
 }

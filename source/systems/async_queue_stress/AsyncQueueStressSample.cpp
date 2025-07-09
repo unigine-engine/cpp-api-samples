@@ -51,7 +51,7 @@ void AsyncQueueStressSample::init()
 
 void AsyncQueueStressSample::update()
 {
-	num_nodes_loaded_label->setText("Num nodes loaded " + String::itoa(num_nodes_loaded));
+	num_nodes_loaded_label->setText("Num nodes loaded " + String::ltoa(num_nodes_loaded));
 	if (num_nodes_loaded > 2000)
 		num_nodes_loaded_label->setFontColor(vec4_red);
 }

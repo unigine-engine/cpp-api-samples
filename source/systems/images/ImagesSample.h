@@ -21,7 +21,7 @@ private:
 	float size{2.f};
 	float velocity{1.f};
 	float radius{0.5f};
-	unsigned int num_fields{16};
+	int num_fields{16};
 
 	Unigine::Vector<Unigine::Math::vec3> positions;
 	Unigine::Vector<Unigine::Math::vec3> velocities;

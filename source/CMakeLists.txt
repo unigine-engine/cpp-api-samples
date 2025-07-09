@@ -30,8 +30,6 @@ set(target "cpp_samples")
 find_package(Engine REQUIRED MODULE QUIET)
 
 add_executable(${target}
-    ${CMAKE_CURRENT_LIST_DIR}/AppEditorLogic.cpp
-    ${CMAKE_CURRENT_LIST_DIR}/AppEditorLogic.h
     ${CMAKE_CURRENT_LIST_DIR}/AppSystemLogic.cpp
     ${CMAKE_CURRENT_LIST_DIR}/AppSystemLogic.h
     ${CMAKE_CURRENT_LIST_DIR}/AppWorldLogic.cpp
@@ -86,6 +84,7 @@ if (UNIGINE_COMPILER_IS_MSVC)
 	/bigobj           # Increases the number of addressable sections in an .obj file.
 	/EHsc             # Specifies the kind of exception handling used by the compiler.
 	/MP${proc_count}  # Build with Multiple Processes.
+	/wd4244 /wd4267
 	)
     unset(proc_count)
     target_link_options(${target} INTERFACE "/FIXED:NO")

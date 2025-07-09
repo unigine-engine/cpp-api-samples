@@ -38,7 +38,7 @@ private:
 		// pixel location: view(image) id + offset
 		struct Location
 		{
-			constexpr static uint32_t invalid_view_idx = ~0;
+			constexpr static uint32_t invalid_view_idx = ~0u;
 
 			operator bool() const { return view_idx != invalid_view_idx; }
 			bool operator <(Location const& r) const { return (view_idx == r.view_idx) ? pixel_offset < r.pixel_offset : view_idx < r.view_idx; }

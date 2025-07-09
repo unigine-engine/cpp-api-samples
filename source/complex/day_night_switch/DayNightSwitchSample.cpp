@@ -60,7 +60,7 @@ void DayNightSwitchSample::init()
 	time_slider->setValue(noon_in_minutes);
 
 	//========== Threshold Slider=========//
-	WidgetSliderPtr threshold_slider = window.addFloatParameter("Zenith angle threshold", "Zenith angle threshold", switcher->getZenithThreshold(), 70.0f, 120.0f, [this](int v) {
+	WidgetSliderPtr threshold_slider = window.addFloatParameter("Zenith angle threshold", "Zenith angle threshold", switcher->getZenithThreshold(), 70.0f, 120.0f, [this](float v) {
 		switcher->setZenithThreshold(v);
 		});
 
@@ -81,7 +81,6 @@ void DayNightSwitchSample::init()
 	auto morning_time_label = WidgetLabel::create("00:00");
 	morning_time_label->setWidth(20);
 	grid->addChild(morning_time_label, Gui::ALIGN_LEFT);
-	int time = switcher->getControlMorningTime();
 
 	morning_slider->getEventChanged().connect(*this, [this, morning_slider, morning_time_label]() {
 		int time = morning_slider->getValue();
@@ -154,7 +153,7 @@ void DayNightSwitchSample::init()
 
 	sun->getEventOnTimeChanged().connect(*this, [this](float time) {// updating slider to current time coming from sun controller
 		MUTE_EVENT(sun->getEventOnTimeChanged());
-		time_slider->setValue(time / 60);
+		time_slider->setValue(time / 60.0f);
 		});
 }
 

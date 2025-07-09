@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Procedural Mesh Modification">
+	<sdk_desc>Demonstrating runtime procedural mesh modification, along with visualization of how different procedural modes impact streamiing and memory usage during creation and rendering.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample demonstrates how to dynamically generate, modify, and apply procedural geometry at runtime using different procedural mesh modification methods.</para>
+			<para>The dynamic surface mesh being built and animated over time using trigonometric functions. The geometry is rebuilt each frame depending on current configuration.</para>
+			<para>You can experiment with various <link to="objectmeshstatic_class" offset="PROCEDURAL_MODE">procedural modes</link> (such as <ui>Dynamic, File</ui>, or <ui>Blob</ui>), as well as configure how geometry is stored and accessed by selecting different <link to="meshrender_class" offset="Flags">MeshRender usage flags</link> (DirectX 12 only). These flags determine whether vertex and/or index data is kept in RAM instead of VRAM, allowing the GPU to render directly from system memory.</para>
+			<para>Additionally, you can choose whether mesh generation occurs on the <strong>Main</strong> thread or in the <strong>Background</strong>, giving you more control over performance and responsiveness during updates.</para>
+			<ul>
+				<li><strong nt="1">Dynamic</strong> - fastest performance, stored in RAM and VRAM, not automatically unloaded from memory.</li>
+				<li><strong nt="1">Blob</strong> - moderate performance, stored in RAM and VRAM, automatically unloaded from memory.</li>
+				<li><strong nt="1">File</strong> - slowest performance, all data stored on disk, automatically unloaded from memory.</li>
+			</ul>
+			<para>You can also toggle between different update modes (<ui>Async</ui> or <ui>Force</ui>), choose memory transfer strategies (<ui>Copy</ui> or <ui>Move</ui>), and optionally enable manual control of the <ui>MeshRender</ui>, where you update its content explicitly after modifying mesh data, instead of relying on automatic updates. Additionally, collision data can be generated explicitly after geometry modification, as it is not created automatically.</para>
+		</brief>
+		<para>Use this sample to understand how procedural mesh modification works across different configurations and explore how update strategies influence performance.</para>
+		<para>Refer to the <link to="objectmeshstatic_class" offset="procedural_workflow">Procedural Mesh Workflow</link> article for more details on memory behavior, update strategies, and best practices when working with procedural geometry.</para>
+	</desc>
+	<link_docs>https://developer.unigine.com/en/docs/api/library/objects/class.objectmeshstatic?rlang=cpp#procedural_workflow</link_docs>
+	<tags>
+		<tag>Systems</tag>
+		<tag>Objects</tag>
+		<tag>Procedural</tag>
+	</tags>
+</sample>

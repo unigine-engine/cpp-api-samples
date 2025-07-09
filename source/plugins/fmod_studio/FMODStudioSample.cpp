@@ -76,7 +76,6 @@ void FMODStudioSample::update()
 	if (!plugin_initialized)
 		return;
 
-	float t = Game::getTime();
 	float dt = Game::getIFps();
 
 	// Doppler simulation logic

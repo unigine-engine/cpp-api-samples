@@ -7,8 +7,8 @@ REGISTER_COMPONENT(ComputeShader)
 using namespace Unigine;
 using namespace Math;
 
-constexpr int PARTICLES_SIZE_X = 1024;
-constexpr int PARTICLES_SIZE_Y = 1024;
+int PARTICLES_SIZE_X = 1024;
+int PARTICLES_SIZE_Y = 1024;
 
 void ComputeShader::init()
 {
@@ -125,14 +125,10 @@ void ComputeShader::update()
 
 	// if incomplete group exist
 	if (PARTICLES_SIZE_X % 32 > 0)
-	{
 		group_threads_x++;
-	}
 
 	if (PARTICLES_SIZE_Y % 32 > 0)
-	{
 		group_threads_y++;
-	}
 
 	render_target->enable();
 	particles_solver_material->renderCompute(Render::PASS_POST, group_threads_x, group_threads_y);

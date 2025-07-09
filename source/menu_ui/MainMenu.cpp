@@ -71,7 +71,6 @@ void MainMenu::init()
 void MainMenu::update()
 {
 	EngineWindowViewportPtr window = WindowManager::getMainWindow();
-	int window_width = window->getClientSize().x;
 	int window_height = window->getClientSize().y;
 
 	tag_cloud->update(!search_editline_focused);
@@ -82,7 +81,13 @@ void MainMenu::update()
 	search_field->getWidget()->setHeight(side_panel_vbox->getHeight()
 		* ui_configuration->search_section->search_field_releative_size.get());
 
-	update_close_button();
+	if (close_button->isHidden() == window->isFullscreen())
+	{
+		close_button->setHidden(!window->isFullscreen());
+		close_button->setEnabled(!close_button->isHidden());
+	}
+	if (!close_button->isHidden())
+		update_close_button();
 }
 
 void MainMenu::shutdown()
@@ -237,6 +242,7 @@ void MainMenu::create_side_panel()
 	auto control_hbox = WidgetHBox::create(space_x, 0);
 	control_hbox->setPadding(-space_x, -space_x, 0, 0);
 	control_hbox->setWidth(ui_configuration->search_section->width - padding.x - padding.y);
+	control_hbox->setHeight(control_config->close_button_height.get());
 	side_panel_vbox->addChild(control_hbox, Gui::ALIGN_TOP);
 
 	// create expand button

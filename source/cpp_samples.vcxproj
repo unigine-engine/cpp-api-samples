@@ -64,6 +64,7 @@
       <AdditionalIncludeDirectories>..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <FloatingPointModel>Fast</FloatingPointModel>
       <PreprocessorDefinitions>DEBUG;UNIGINE_DOUBLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4244;4267</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <TargetMachine>MachineX64</TargetMachine>
@@ -81,6 +82,7 @@
       <FloatingPointModel>Fast</FloatingPointModel>
       <PreprocessorDefinitions>NOMINMAX;DEBUG;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DisableSpecificWarnings>4244;4267</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <TargetMachine>MachineX64</TargetMachine>
@@ -97,6 +99,7 @@
       <AdditionalIncludeDirectories>..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <FloatingPointModel>Fast</FloatingPointModel>
       <PreprocessorDefinitions>NDEBUG;UNIGINE_DOUBLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4244;4267</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <TargetMachine>MachineX64</TargetMachine>
@@ -112,6 +115,7 @@
       <AdditionalIncludeDirectories>$(SolutionDir)..\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <FloatingPointModel>Fast</FloatingPointModel>
       <PreprocessorDefinitions>NDEBUG;NOMINMAX;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4244;4267</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <TargetMachine>MachineX64</TargetMachine>
@@ -296,7 +300,6 @@
     <ClCompile Include="render\render_target\RenderTargetSample.cpp" />
     <ClCompile Include="render\screenshot\Screenshot.cpp" />
     <ClCompile Include="render\screenshot\ScreenshotSample.cpp" />
-    <ClCompile Include="render\screenshot_advanced\ScreenshotAdvancedSample.cpp" />
     <ClCompile Include="render\split_screen_texture\CarControl.cpp" />
     <ClCompile Include="render\split_screen_texture\SplitScreenTexture.cpp" />
     <ClCompile Include="render\structured_buffer\StructuredBufferSample.cpp" />
@@ -325,6 +328,9 @@
     <ClCompile Include="systems\microprofiler\MicroprofilerSample.cpp" />
     <ClCompile Include="systems\microprofiler\MicroprofilerSleepyNode.cpp" />
     <ClCompile Include="systems\mount_points\MountPointsSample.cpp" />
+    <ClCompile Include="systems\procedural_mesh_apply\ProceduralMeshApply.cpp" />
+    <ClCompile Include="systems\procedural_mesh_generation\ProceduralMeshGenerator.cpp" />
+    <ClCompile Include="systems\procedural_mesh_modification\ProceduralMeshModifier.cpp" />
     <ClCompile Include="systems\stream_base\StreamBaseSample.cpp" />
     <ClCompile Include="systems\thread\ThreadSample.cpp" />
     <ClCompile Include="systems\two_point_perspective\CameraShiftController.cpp" />
@@ -343,7 +349,6 @@
     <ClCompile Include="systems\visualizer\VisualizerUsage.cpp" />
     <ClCompile Include="systems\xml\XmlSample.cpp" />
     <ClCompile Include="menu_ui\SampleDescriptionWindow.cpp" />
-    <ClCompile Include="AppEditorLogic.cpp" />
     <ClCompile Include="AppSystemLogic.cpp" />
     <ClCompile Include="AppWorldLogic.cpp" />
     <ClCompile Include="main.cpp" />
@@ -386,7 +391,6 @@
     <ClCompile Include="utils\network\HttpServer.cpp" />
     <ClCompile Include="utils\PersecutorTarget.cpp" />
     <ClCompile Include="utils\Rotator.cpp" />
-    <ClCompile Include="utils\ScreenshotMaker.cpp" />
     <ClCompile Include="utils\SimpleInformationBox.cpp" />
     <ClCompile Include="utils\SimplePathControl.cpp" />
     <ClCompile Include="utils\Spawner.cpp" />
@@ -550,7 +554,6 @@
     <ClInclude Include="render\render_target\RenderTargetSample.h" />
     <ClInclude Include="render\screenshot\Screenshot.h" />
     <ClInclude Include="render\screenshot\ScreenshotSample.h" />
-    <ClInclude Include="render\screenshot_advanced\ScreenshotAdvancedSample.h" />
     <ClInclude Include="render\split_screen_texture\CarControl.h" />
     <ClInclude Include="render\split_screen_texture\SplitScreenTexture.h" />
     <ClInclude Include="render\structured_buffer\StructuredBufferSample.h" />
@@ -578,6 +581,9 @@
     <ClInclude Include="systems\microprofiler\MicroprofilerSample.h" />
     <ClInclude Include="systems\microprofiler\MicroprofilerSleepyNode.h" />
     <ClInclude Include="systems\mount_points\MountPointsSample.h" />
+    <ClInclude Include="systems\procedural_mesh_apply\ProceduralMeshApply.h" />
+    <ClInclude Include="systems\procedural_mesh_generation\ProceduralMeshGenerator.h" />
+    <ClInclude Include="systems\procedural_mesh_modification\ProceduralMeshModifier.h" />
     <ClInclude Include="systems\stream_base\StreamBaseSample.h" />
     <ClInclude Include="systems\thread\ThreadSample.h" />
     <ClInclude Include="systems\two_point_perspective\CameraShiftController.h" />
@@ -596,7 +602,6 @@
     <ClInclude Include="systems\visualizer\VisualizerUsage.h" />
     <ClInclude Include="systems\xml\XmlSample.h" />
     <ClInclude Include="menu_ui\SampleDescriptionWindow.h" />
-    <ClInclude Include="AppEditorLogic.h" />
     <ClInclude Include="AppSystemLogic.h" />
     <ClInclude Include="AppWorldLogic.h" />
     <ClInclude Include="menu_ui\MainMenu.h" />
@@ -640,7 +645,6 @@
     <ClInclude Include="utils\network\httplib.h" />
     <ClInclude Include="utils\network\HttpServer.h" />
     <ClInclude Include="utils\PersecutorTarget.h" />
-    <ClInclude Include="utils\ScreenshotMaker.h" />
     <ClInclude Include="utils\SimpleInformationBox.h" />
     <ClInclude Include="utils\SimplePathControl.h" />
     <ClInclude Include="utils\Spawner.h" />

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="AsyncQueue Stress">
+	<sdk_desc>Asynchronous node loading via <i>AsyncQueue</i> with main-thread spatial integration.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample demonstrates how to asynchronously load large number of nodes using the <ui>AsyncQueue</ui> class while ensuring correct activation on the main thread.</para>
+			<para>In UNIGINE, world nodes must be created only from the main thread. To comply with this restriction and avoid blocking the main thread, the sample performs the initial node loading in a background thread, and then schedules a follow-up task on the main thread to finalize activation by calling <ui><link to="node_class" offset="updateEnabled_void">updateEnabled()</link></ui> - a method that registers the node and its children in the world's spatial structure.</para>
+			<para>With the built-in Profiler enabled, you can observe how the engine handles increasing load smoothly and avoids frame spikes.</para>
+		</brief>
+		<para>Refer to the <ui><link to="asyncqueue_class">AsyncQueue</link></ui> class API for detailed information on available execution modes, thread types, and priorities.</para>
+	</desc>
+	<link_docs>https://developer.unigine.com/docs/api/library/filesystem/class.asyncqueue?rlang=cpp</link_docs>
+	<tags>
+		<tag>Systems</tag>
+		<tag>Optimization</tag>
+		<tag>Multithreading</tag>
+		<tag>World Management</tag>
+	</tags>
+</sample>

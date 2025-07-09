@@ -38,7 +38,7 @@ void ObserverController::init_focusing()
 
 	Vec3 start_point, end_point, obj_position;
 
-	double focus_radius;
+	Scalar focus_radius;
 
 	player_camera->getDirectionFromMainWindow(start_point, end_point, Input::getMousePosition().x, Input::getMousePosition().y);
 
@@ -136,7 +136,7 @@ void ObserverController::init_menu()
 	position_layout->addChild(edit_lines[1], Gui::ALIGN_LEFT);
 	edit_lines[1]->getEventFocusIn().connect(*this, [this]() { edit_text = true; });
 	edit_lines[1]->getEventKeyPressed().connect(*this, [this]() {
-		double value = String::isEmpty(edit_lines[1]->getText()) ? DEFAULT_POSITION_VALUE : String::atod(edit_lines[1]->getText());
+		Scalar value = String::isEmpty(edit_lines[1]->getText()) ? DEFAULT_POSITION_VALUE : String::atof(edit_lines[1]->getText());
 		Vec3 position = player_camera->getWorldPosition();
 		player_camera->setWorldPosition(Vec3(value, position.y, position.z));
 	});
@@ -155,7 +155,7 @@ void ObserverController::init_menu()
 	position_layout->addChild(edit_lines[2], Gui::ALIGN_LEFT);
 	edit_lines[2]->getEventFocusIn().connect(*this, [this]() { edit_text = true; });
 	edit_lines[2]->getEventKeyPressed().connect(*this, [this]() {
-		double value = String::isEmpty(edit_lines[2]->getText()) ? DEFAULT_POSITION_VALUE : String::atod(edit_lines[2]->getText());
+		Scalar value = String::isEmpty(edit_lines[2]->getText()) ? DEFAULT_POSITION_VALUE : String::atof(edit_lines[2]->getText());
 		Vec3 position = player_camera->getWorldPosition();
 		player_camera->setWorldPosition(Vec3(position.x, value, position.z));
 	});
@@ -174,7 +174,7 @@ void ObserverController::init_menu()
 	position_layout->addChild(edit_lines[3], Gui::ALIGN_LEFT);
 	edit_lines[3]->getEventFocusIn().connect(*this, [this]() { edit_text = true; });
 	edit_lines[3]->getEventKeyPressed().connect(*this, [this]() {
-		double value = String::isEmpty(edit_lines[3]->getText()) ? DEFAULT_POSITION_VALUE : String::atod(edit_lines[3]->getText());
+		Scalar value = String::isEmpty(edit_lines[3]->getText()) ? DEFAULT_POSITION_VALUE : String::atof(edit_lines[3]->getText());
 		Vec3 position = player_camera->getWorldPosition();
 		player_camera->setWorldPosition(Vec3(position.x, position.y, value));
 	});
@@ -271,7 +271,7 @@ void ObserverController::update_panning()
 
 	float current_acceleration = Input::isKeyPressed(_acceleration_key) ? get_velocity() : get_velocity_acceleration();
 
-	player_camera->translate(Vec3(-mouse_delta.x, mouse_delta.y, 0) * current_acceleration * ControlsApp::getMouseSensitivity() * panning_rail_scale);
+	player_camera->translate(Vec3(float( - mouse_delta.x), float(mouse_delta.y), 0.0f) * current_acceleration * ControlsApp::getMouseSensitivity() * panning_rail_scale);
 }
 
 void ObserverController::update_focusing()

@@ -50,7 +50,7 @@ void Lidar::init()
 
 	{
 		visualizer_enabled = Visualizer::isEnabled();
-		Visualizer::setEnabled(is_debug);
+		Visualizer::setEnabled(is_debug.get() > 0);
 
 		console_on_screen = Console::isOnscreen();
 		Console::setOnscreen(true);

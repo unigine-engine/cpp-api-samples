@@ -9,11 +9,6 @@ using namespace Math;
 
 void FireHoseSample::init()
 {
-	mouse_grab_state_at_init = Input::isMouseGrab();
-	mouse_handle_at_init = Input::getMouseHandle();
-	Input::setMouseGrab(false);
-	Input::setMouseHandle(Input::MOUSE_HANDLE_GRAB);
-
 	description_window.createWindow();
 
 	WidgetCheckBoxPtr rotate_check = WidgetCheckBox::create();
@@ -51,8 +46,5 @@ void FireHoseSample::update()
 
 void FireHoseSample::shutdown()
 {
-	Input::setMouseGrab(mouse_grab_state_at_init);
-	Input::setMouseHandle(mouse_handle_at_init);
-
 	description_window.shutdown();
 }

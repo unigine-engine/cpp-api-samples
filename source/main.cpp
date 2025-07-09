@@ -1,10 +1,10 @@
 #include <UnigineInit.h>
 #include <UnigineEngine.h>
 
-#include "AppEditorLogic.h"
 #include "AppSystemLogic.h"
 #include "AppWorldLogic.h"
 #include "utils/UnigineScriptsInterpreter.h"
+
 
 #ifdef _WIN32
 int wmain(int argc, wchar_t *argv[])
@@ -20,10 +20,9 @@ int main(int argc, char *argv[])
 	// UnigineLogic
 	AppSystemLogic system_logic;
 	AppWorldLogic world_logic;
-	AppEditorLogic editor_logic;
 
 	// enter main loop
-	engine->main(&system_logic, &world_logic, &editor_logic);
+	engine->main(&system_logic, &world_logic);
 
 	return 0;
 }

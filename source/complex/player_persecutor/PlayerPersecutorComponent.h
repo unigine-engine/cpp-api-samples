@@ -42,7 +42,7 @@ public:
 	UNIGINE_INLINE Unigine::NodePtr getTarget() const { return target_node; };
 
 	void setAnchor(const Unigine::Math::vec3& anchor);
-	UNIGINE_INLINE const Unigine::Math::vec3& getAnchor() const { return anchor; };
+	UNIGINE_INLINE Unigine::Math::vec3 getAnchor() const { return anchor; };
 
 	UNIGINE_INLINE void setMinDistance(float distance) { min_distance = Unigine::Math::max(distance, 0.0f); };
 	UNIGINE_INLINE float getMinDistance() const { return min_distance; };

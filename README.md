@@ -4,9 +4,12 @@ This repository contains [C++ UNIGINE samples](https://developer.unigine.com/en/
 
 ## Requirements
 
-- [**UNIGINE SDK Browser**](https://developer.unigine.com/en/docs/latest/start/installing_sdk?rlang=cpp)
+- [**UNIGINE SDK Browser**](https://developer.unigine.com/en/docs/latest/start/installing_sdk?rlang=cpp) (latest version)
 - **UNIGINE SDK Community** or **Engineering** edition (**Sim** upgrade supported)
+- **Python 3.10** or newer
 - **Visual Studio 2022** (recommended)
+
+Check the full list of system requirements at [developer.unigine.com.](https://developer.unigine.com/en/docs/latest/start/requirements?rlang=cpp)
 
 ## Running the Samples
 
@@ -40,7 +43,7 @@ This repository contains [C++ UNIGINE samples](https://developer.unigine.com/en/
    > - set(UNIGINE_DOUBLE False CACHE BOOL "Double coords")
    > + set(UNIGINE_DOUBLE True CACHE BOOL "Double coords")
    >```
-   > Make sure this setting matches the `.project` file you selected (i.e, `*-double.project` for double precision builds).
+   > Make sure this setting matches the `.project` file you selected (e.g., `*-double.project` for double precision builds).
 
 7. **Build** and **Run** the project.
 
@@ -48,5 +51,5 @@ This repository contains [C++ UNIGINE samples](https://developer.unigine.com/en/
 - Double-check all setup steps above to ensure nothing was skipped.
 - Check that `UNIGINE_DOUBLE` in `CMakeLists.txt` matches the current build type (double/float).
 - Use the correct `.project` file for your SDK edition/platform.
-- Ensure your SDK version is not older than the project's specified version.
+- Verify your SDK version is not older than the project's specified version.
 - If CMake issues occur in Visual Studio, right-click the project and select: **Delete Cache and Reconfigure** and then **Build** again.

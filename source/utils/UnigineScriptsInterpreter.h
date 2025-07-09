@@ -19,7 +19,7 @@ class InterpreterRegistrator
 {
 public:
 	static InterpreterRegistrator *get();
-	~InterpreterRegistrator() {};
+	~InterpreterRegistrator() {}
 
 	void initialize();
 	Unigine::Event<> &getEventInit() { return invoker; }
@@ -39,7 +39,7 @@ public:
 	USCInterpreter(std::function<void()> func)
 	{
 		InterpreterRegistrator::get()->getEventInit().connect(connection, func);
-	};
+	}
 	~USCInterpreter() { connection.disconnect(); }
 
 private:

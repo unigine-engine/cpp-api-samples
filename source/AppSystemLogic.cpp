@@ -21,6 +21,7 @@ int AppSystemLogic::init()
 	Unigine::World::loadWorld("cpp_samples/cpp_samples");
 
 	Unigine::ComponentSystem::get()->initialize();
+	Unigine::Input::setMouseHandle(Unigine::Input::MOUSE_HANDLE_USER);
 
 	return 1;
 }
@@ -33,11 +34,6 @@ int AppSystemLogic::update()
 	return 1;
 }
 
-int AppSystemLogic::render()
-{
-	// Write here code to be called before rendering each render frame.
-	return 1;
-}
 ////////////////////////////////////////////////////////////////////////////////
 // end of the main loop
 ////////////////////////////////////////////////////////////////////////////////
@@ -45,11 +41,5 @@ int AppSystemLogic::render()
 int AppSystemLogic::shutdown()
 {
 	// Write here code to be called on engine shutdown.
-	return 1;
-}
-
-int AppSystemLogic::destroy()
-{
-	// Write here code to be called when the video mode is changed or the application is restarted (i.e. video_restart is called). It is used to reinitialize the graphics context.
 	return 1;
 }

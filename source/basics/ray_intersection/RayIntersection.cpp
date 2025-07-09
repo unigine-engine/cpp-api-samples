@@ -158,7 +158,7 @@ void RayIntersection::init_gui()
 			for (int i = 0; i < 8; ++i)
 			{
 				static_ptr_cast<WidgetCheckBox>(grid->getChild(7 - i))
-					->setChecked(temp->getText()[i] - '0');
+					->setChecked(temp->getText()[i] - '0' > 0);
 			}
 		});
 
@@ -186,7 +186,7 @@ void RayIntersection::init_gui()
 				line->setText(new_text);
 			});
 
-		checkbox->setChecked(intersection_mask & wall_intersection_mask);
+		checkbox->setChecked((intersection_mask & wall_intersection_mask) > 0);
 
 		grid->addChild(checkbox, Gui::ALIGN_LEFT);
 	}

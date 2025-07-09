@@ -66,7 +66,7 @@ void JointCallbacks::init()
 			b1 = BodyDummy::create(object);
 		else
 			b1 = BodyRigid::create(object);
-		ShapeBoxPtr shape = ShapeBox::create(b1, vec3(1.f));
+		ShapeBoxPtr shape2 = ShapeBox::create(b1, vec3(1.f));
 		objects.append(object);
 
 		// create joint between two neighbour boxes

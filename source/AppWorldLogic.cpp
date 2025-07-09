@@ -32,37 +32,11 @@ int AppWorldLogic::update()
 	return 1;
 }
 
-int AppWorldLogic::render()
-{
-	return 1;
-}
-
-int AppWorldLogic::flush()
-{
-	return 1;
-}
 ////////////////////////////////////////////////////////////////////////////////
 // end of the main loop
 ////////////////////////////////////////////////////////////////////////////////
 
 int AppWorldLogic::shutdown()
 {
-	return 1;
-}
-
-int AppWorldLogic::destroy()
-{
-	return 1;
-}
-
-int AppWorldLogic::save(const Unigine::StreamPtr &stream)
-{
-	UNIGINE_UNUSED(stream);
-	return 1;
-}
-
-int AppWorldLogic::restore(const Unigine::StreamPtr &stream)
-{
-	UNIGINE_UNUSED(stream);
 	return 1;
 }

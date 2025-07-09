@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<asset version="2.20.0.0">
-	<guid>63264f543f046d6c7298529b607064f5092b1aaf</guid>
-	<type>property</type>
-	<hash>75b433f7</hash>
-	<runtimes>
-		<runtime id="63264f543f046d6c7298529b607064f5092b1aaf" name="ScreenshotAdvancedSample" link="0" type="4"/>
-	</runtimes>
-</asset>

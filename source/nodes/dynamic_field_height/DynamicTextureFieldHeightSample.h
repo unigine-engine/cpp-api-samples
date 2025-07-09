@@ -19,9 +19,6 @@ private:
 private:
 
 	SampleDescriptionWindow description_window;
-	Unigine::Input::MOUSE_HANDLE mouse_handle_at_init;
-	bool current_mouse_grab_state{ false };
-	bool mouse_grab_state_at_init{ false };
 
 	Unigine::WidgetLabelPtr size_map;
 };

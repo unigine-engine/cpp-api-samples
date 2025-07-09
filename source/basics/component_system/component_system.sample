@@ -13,8 +13,8 @@
 			</ul>
 			<para>More details about the Component System sample are available in the official documentation linked below.</para>
 		</brief>
-		<link_docs>https://developer.unigine.com/docs/code/usage/using_component_system/index?rlang=cpp</link_docs>
 	</desc>
+	<link_docs>https://developer.unigine.com/docs/code/usage/using_component_system/index?rlang=cpp</link_docs>
 	<controls>
 		<![CDATA[<p align=left>Keys <b>UP / W</b> and <b>DOWN / S</b> to move forward/backward</p>
 		<p align=left>Keys <b>LEFT / A</b> and <b>RIGHT / D</b> for clockwise/counterclockwise rotation</p>

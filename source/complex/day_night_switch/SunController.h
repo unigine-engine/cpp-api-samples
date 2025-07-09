@@ -16,15 +16,11 @@ public:
 	Unigine::Event<float>& getEventOnTimeChanged() { return time_changed_event; };
 
 	void setTime(int t);
-	/// <summary>
-	/// Returns time in minutes
-	/// </summary>
-	/// <returns></returns>
-	int getTime() { return current_time; };
-	bool isContinuous() { return is_continuous.get(); };
+	int getTime() { return int(current_time); } // Returns time in minutes
+	bool isContinuous() { return is_continuous.get() > 0; }
 	void setContinuousEnabled(bool value);
 	void setTimescale(float timescale);
-	float getTimescale() { return timescale; };
+	float getTimescale() { return timescale.get(); }
 	void refreshSunPosition();
 
 private:
@@ -36,7 +32,7 @@ private:
 
 
 	float current_time = 720 * 60;//in minutes
-	const int max_time_sec = 60 * 60 * 24;//60 seconds in 60 minutes in 24 hours
+	float max_time_sec = 60 * 60 * 24;//60 seconds in 60 minutes in 24 hours
 	void init();
 	void update();
 };

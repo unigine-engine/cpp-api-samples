@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>68903bd3ff1a1d1847d31678492e11d9dce7ce63</guid>
+	<type>property</type>
+	<hash>524f39ef</hash>
+	<runtimes>
+		<runtime id="68903bd3ff1a1d1847d31678492e11d9dce7ce63" name="ProceduralMeshGenerator" link="0" type="4"/>
+	</runtimes>
+</asset>

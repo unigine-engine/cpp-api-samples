@@ -89,10 +89,10 @@ private:
 
 			if (queue.size() >= max_size)
 			{
-				Message *message = queue.takeFirst();
+				Message *new_message = queue.takeFirst();
 
-				if (message)
-					delete message;
+				if (new_message)
+					delete new_message;
 			}
 		}
 
@@ -101,7 +101,7 @@ private:
 			Unigine::ScopedLock lock(mutex);
 			Message *message = nullptr;
 
-			if (queue.size() && (message = queue.takeFirst()))
+			if (queue.size() && (message = queue.takeFirst()) != nullptr)
 			{
 				Message *original = message;
 				message = original->copy();

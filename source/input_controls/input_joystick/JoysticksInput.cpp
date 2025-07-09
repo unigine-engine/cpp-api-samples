@@ -255,7 +255,7 @@ WidgetPtr JoysticksInput::create_ffb_effect_ui(const String &name, JoystickInfo 
 		on_change(initial_value);
 
 		slider->getEventChanged().connect(ffb_connections, [slider, label, min, max, on_change] {
-			const auto value = Utils::mapRange(slider->getValue(), 0, 1000, min, max);
+			const auto value = Utils::mapRange(float(slider->getValue()), 0.0f, 1000.0f, min, max);
 			label->setText(String::format("%.2f", value));
 			on_change(value);
 		});

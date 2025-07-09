@@ -30,9 +30,12 @@ ThreadSample::CountedThread::~CountedThread() {}
 
 void ThreadSample::CountedThread::process()
 {
-	for (int i = 0; i < iterations; ++i)
+	for (uint32_t i = 0; i < iterations; ++i)
 	{
-		Log::message("Hello from counted thread: %d\n", i);
+		Log::message("Hello from counted thread: %u\n", i);
+
+		if (!isRunning())
+			break;
 
 		sleep(1000);
 	}

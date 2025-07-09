@@ -321,9 +321,9 @@ private:
 
 			if (player)
 			{
-				fov_slider->setValue(player->getFov() * 100);
-				z_far_slider->setValue(player->getZFar() * 100);
-				z_near_slider->setValue(player->getZNear() * 100);
+				fov_slider->setValue(int(player->getFov()) * 100);
+				z_far_slider->setValue(int(player->getZFar()) * 100);
+				z_near_slider->setValue(int(player->getZNear()) * 100);
 			}
 		}
 

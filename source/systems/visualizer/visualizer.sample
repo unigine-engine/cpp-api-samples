@@ -11,7 +11,7 @@
 	<controls>
 		<![CDATA[
 		<p><b>W,A,S,D</b> - Camera movement</p>
-		<p><b>LMB</b> - Camera rotation</p>
+		<p><b>RMB</b> - Camera rotation</p>
 		<p><b>Left Shift</b> - Camera acceleration</p>
 		]]>
 	</controls>

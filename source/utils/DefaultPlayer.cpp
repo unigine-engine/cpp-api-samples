@@ -26,6 +26,9 @@ void DefaultPlayer::init()
 	auto button = Input::MOUSE_BUTTON(mouse_button.get());
 	if (button != Input::MOUSE_BUTTON_UNKNOWN)
 		spectator_mode_button = button;
+
+	init_mouse_handle = Input::getMouseHandle();
+	Input::setMouseHandle(Input::MOUSE_HANDLE::MOUSE_HANDLE_USER);
 }
 
 void DefaultPlayer::update()
@@ -51,4 +54,5 @@ void DefaultPlayer::shutdown()
 
 	ControlsApp::setMouseEnabled(init_mouse_enabled);
 	Input::setMouseCursorHide(false);
+	Input::setMouseHandle(init_mouse_handle);
 }

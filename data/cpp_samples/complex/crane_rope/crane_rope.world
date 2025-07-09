@@ -354,6 +354,7 @@
 		<render_indirect_specular_denoise_mask_enabled>1</render_indirect_specular_denoise_mask_enabled>
 		<render_indirect_specular_denoise_threshold>1</render_indirect_specular_denoise_threshold>
 		<render_indirect_specular_denoise_threshold_ao>1</render_indirect_specular_denoise_threshold_ao>
+		<render_indirect_specular_normalization>0</render_indirect_specular_normalization>
 		<render_indirect_specular_temporal_filtering_color_clamping_intensity>1</render_indirect_specular_temporal_filtering_color_clamping_intensity>
 		<render_indirect_specular_temporal_filtering_color_clamping_intensity_ao>1</render_indirect_specular_temporal_filtering_color_clamping_intensity_ao>
 		<render_indirect_specular_temporal_filtering_color_clamping_velocity_threshold>100</render_indirect_specular_temporal_filtering_color_clamping_velocity_threshold>
@@ -618,6 +619,8 @@
 		<render_stereo_planar_reflections_per_eye>0</render_stereo_planar_reflections_per_eye>
 		<render_streaming_animations_life_time>-1</render_streaming_animations_life_time>
 		<render_streaming_budget_loading>1</render_streaming_budget_loading>
+		<render_streaming_cache_ram>-1</render_streaming_cache_ram>
+		<render_streaming_cache_vram>-1</render_streaming_cache_vram>
 		<render_streaming_committed_memory_overcommit>1</render_streaming_committed_memory_overcommit>
 		<render_streaming_free_space_ram>1024</render_streaming_free_space_ram>
 		<render_streaming_free_space_vram>512</render_streaming_free_space_vram>
@@ -728,7 +731,6 @@
 		<composite_deferred_material_guid>guid://</composite_deferred_material_guid>
 		<debug_materials/>
 		<scriptable_materials/>
-		<render_indirect_specular_normalization>0</render_indirect_specular_normalization>
 	</render>
 	<physics>
 		<frozen_linear_velocity>0.0199999996</frozen_linear_velocity>
@@ -873,7 +875,7 @@
 							<parameter name="radius">0.100000001</parameter>
 							<parameter name="linear_restitution">1</parameter>
 							<parameter name="angular_restitution">0.100000001</parameter>
-							<parameter name="rope_mat">517c60d162f396c19e6a1a49a0ddb364b9519c4b</parameter>
+							<parameter name="rope_mat">d2abafdca5277f518d3b537b063fc89ba1b83ed8</parameter>
 							<parameter name="invisible_base_mat">7f1ca1d8e7773b574aa0a0caba6199a19752e68c</parameter>
 							<parameter name="joint_linear_softness">0</parameter>
 							<parameter name="joint_angular_softness">0</parameter>

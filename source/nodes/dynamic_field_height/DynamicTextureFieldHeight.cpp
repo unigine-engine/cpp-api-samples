@@ -57,9 +57,6 @@ void DynamicTextureFieldHeight::init()
 
 void DynamicTextureFieldHeight::update()
 {
-	unsigned char* ptr_pixels = image->getPixels();
-
-	double pi_tile = 2.0f * Math::Consts::PI;
 	float time = Game::getTime() * speed;
 
 	unsigned char* pixels_ = image->getPixels();

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Procedural Mesh Apply">
+	<sdk_desc>A minimal example that shows how to generate and apply a procedural mesh at runtime using the correct update sequence.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample demonstrates the correct order of operations for modifying and applying procedural mesh data at runtime. It serves as a minimal example showing how to build geometry, configure procedural mode, and apply changes to an <ui><link to="objectmeshcluster_class">ObjectMeshCluster</link></ui>. The same workflow and apply methods are also available for other objects that support procedural meshes, such as <ui><link to="objectmeshstatic_class">ObjectMeshStatic</link></ui>, <ui><link to="objectguimesh_class">ObjectGuiMesh</link></ui>, <ui><link to="decalmesh_class">DecalMesh</link></ui>, and <ui><link to="objectmeshclutter_class">ObjectMeshClutter</link></ui>.</para>
+			<para>Inside the component's code, you'll find a linear implementation of the procedural mesh pipeline, demonstrating how geometry is generated and applied in the correct order.</para>
+			<para>Use this sample to understand the basic flow of procedural mesh updates and try adjusting configurations to find what best suits your needs.</para>
+		</brief>
+		<para>Refer to the <link to="objectmeshstatic_class" offset="procedural_workflow">Procedural Mesh Workflow</link> article for more details on memory behavior, update strategies, and best practices when working with procedural geometry.</para>
+	</desc>
+	<link_docs>https://developer.unigine.com/docs/api/library/objects/class.objectmeshstatic?rlang=cpp#procedural_workflow</link_docs>
+	<tags>
+		<tag>Systems</tag>
+		<tag>Objects</tag>
+		<tag>Procedural</tag>
+	</tags>
+</sample>

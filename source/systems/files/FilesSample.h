@@ -9,7 +9,7 @@ class FilesSample : public Unigine::ComponentBase
 	COMPONENT_INIT(init)
 	COMPONENT_SHUTDOWN(shutdown)
 
-	PROP_PARAM(String, filepath, "cpp_samples/Systems/Files/generated_file")
+	PROP_PARAM(String, filepath, "cpp_samples/systems/files/generated_file")
 
 private:
 	void init();

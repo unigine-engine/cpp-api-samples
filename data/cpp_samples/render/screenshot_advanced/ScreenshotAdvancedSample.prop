@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<property version="2.20.0.0" name="ScreenshotAdvancedSample" manual="1" parent_name="node_base">
-	<parameter name="base_path" type="string">screenshots</parameter>
-	<parameter name="name_suffix_fmt" type="string">%d_%m_%y-%H_%M_%S</parameter>
-	<parameter name="format" type="switch" items="tga,png,jpg">0</parameter>
-</property>

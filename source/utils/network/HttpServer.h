@@ -6,7 +6,6 @@
 #include <memory>
 #include <atomic>
 
-#define CPPHTTPLIB_THREAD_POOL_COUNT 3
 #include "httplib.h"
 
 class HttpServer: public Unigine::Thread
@@ -30,11 +29,11 @@ private:
 	struct TaskHandler
 	{
 		TaskHandler(std::function<void(const httplib::Request&, httplib::Response&)> handler, const httplib::Request &req, httplib::Response &res)
-			: completed(false)
-			, canceled(false)
-			, handler(handler)
+			: handler(handler)
 			, request(req)
 			, response(res)
+			, completed(false)
+			, canceled(false)
 		{}
 
 		std::function<void(const httplib::Request&, httplib::Response&)> handler;

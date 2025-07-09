@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <asset version="2.20.0.0">
-	<guid>42a2182b984ca546b39568cf074f1c8a1419489a</guid>
+	<guid>f5de24db99428290ae233f81c7b95e0da53a1fd6</guid>
 	<type>world</type>
-	<hash>b500f5e8</hash>
+	<hash>12b059ae</hash>
 	<runtimes>
-		<runtime id="42a2182b984ca546b39568cf074f1c8a1419489a" name="screenshot_advanced.world" link="0"/>
+		<runtime id="f5de24db99428290ae233f81c7b95e0da53a1fd6" name="procedural_mesh_generation.world" link="0"/>
 	</runtimes>
 	<parameters>
 		<parameter type="string" name="physics_settings_path"/>

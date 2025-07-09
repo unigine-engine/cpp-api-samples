@@ -26,9 +26,9 @@ private:
 		lidar = getComponent<Lidar>(lidar_node);
 		window.createWindow(Gui::ALIGN_LEFT);
 
-		window.addBoolParameter("Debug Render Points", "", lidar->is_debug_render_points, [this](bool value) { lidar->is_debug_render_points = value; });
-		window.addBoolParameter("Debug Render Textures", "", lidar->is_debug_render_textures, [this](bool value) { lidar->is_debug_render_textures = value; });
-		window.addBoolParameter("Debug Render Frustums", "", lidar->is_debug_render_frustums, [this](bool value) { lidar->is_debug_render_frustums = value; });
+		window.addBoolParameter("Debug Render Points", "", lidar->is_debug_render_points > 0, [this](bool value) { lidar->is_debug_render_points = (int)value; });
+		window.addBoolParameter("Debug Render Textures", "", lidar->is_debug_render_textures > 0, [this](bool value) { lidar->is_debug_render_textures = (int)value; });
+		window.addBoolParameter("Debug Render Frustums", "", lidar->is_debug_render_frustums > 0, [this](bool value) { lidar->is_debug_render_frustums = (int)value; });
 		window.addBoolParameter("Lights Enabled", "", true, [this](bool value) { sun->setEnabled(value); });
 
 		auto group_box = window.getParameterGroupBox();

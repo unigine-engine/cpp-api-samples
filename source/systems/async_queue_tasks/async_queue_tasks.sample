@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="AsyncQueue Tasks">
+	<sdk_desc>Managing tasks via <i>AsyncQueue</i> class with dirrefent thread types, parallel execution and frame control.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample demonstates how to schedule and run different types of tasks using the <ui>AsyncQueue class</ui>. It shows how to execute operations in different thread types, control thread count, and choose whether tasks should complete within the current frame or run freely in the background.</para>
+			<ul>
+				<li><strong nt="1">Async</strong> - non-blocking execution in a single thread. Useful for offloading tasks without stalling the main thread.</li>
+				<li><strong nt="1">Async Multithread</strong> - parallel execution across multiple threads. Each thread receives its own portion of work. Does not block the caller.</li>
+				<li><strong nt="1">Frame-Async Multithread</strong> - same as <strong nt="1">Async Multithread</strong>, but ensures all threads complete their tasks within the current frame.</li>
+				<li><strong nt="1">Sync Multithread</strong> - multi-threaded execution that blocks the calling thread until all threads finish.</li>
+				<li><strong nt="1">Frame-Sync Multithread</strong> - same as <strong nt="1">Sync Multithread</strong>, but ensures all threads complete their tasks within the current frame.</li>
+			</ul>
+		</brief>
+		<para>Refer to the <ui><link to="asyncqueue_class">AsyncQueue</link></ui> class API for detailed information on available execution modes, thread types, and priorities.</para>
+	</desc>
+	<link_docs>https://developer.unigine.com/docs/api/library/filesystem/class.asyncqueue?rlang=cpp</link_docs>
+	<tags>
+		<tag>Systems</tag>
+		<tag>Optimization</tag>
+		<tag>Multithreading</tag>
+	</tags>
+</sample>

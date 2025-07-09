@@ -77,7 +77,7 @@ void ConsoleSample::move_node_callback(int argc, char **argv)
 
 	const auto parse_arg = [this, &argv](int index) -> float {
 		const char *a_value = argv[index];
-		return atof(a_value);
+		return Scalar(atof(a_value));
 	};
 
 	node_position.x = parse_arg(1);

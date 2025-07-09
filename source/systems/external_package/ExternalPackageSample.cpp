@@ -59,7 +59,7 @@ public:
 
 	virtual bool selectFile(const char *name, size_t &size) override
 	{
-		bool exists = findFile(name);
+		bool exists = findFile(name) > 0;
 
 		if (exists)
 			size = file->getSize();

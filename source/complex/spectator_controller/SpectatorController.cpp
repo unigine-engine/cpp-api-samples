@@ -79,9 +79,9 @@ void SpectatorController::updateControls()
 
 		direction = x;
 
-		impulse += x * (Input::isKeyPressed(_forward_key) - Input::isKeyPressed(_backward_key));
-		impulse += y * (Input::isKeyPressed(_left_key) - Input::isKeyPressed(_right_key));
-		impulse += z * (Input::isKeyPressed(_up_key) - Input::isKeyPressed(_down_key));
+		impulse += x * float(Input::isKeyPressed(_forward_key) - Input::isKeyPressed(_backward_key));
+		impulse += y * float(Input::isKeyPressed(_left_key) - Input::isKeyPressed(_right_key));
+		impulse += z * float(Input::isKeyPressed(_up_key) - Input::isKeyPressed(_down_key));
 
 		impulse.normalizeValid();
 

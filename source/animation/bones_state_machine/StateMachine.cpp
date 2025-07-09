@@ -406,8 +406,8 @@ void State::resetForFrame(const StateMachine &state_machine, ObjectMeshSkinnedPt
 			if (anim_index == -1)
 				anim_index = 0;
 
-			float f = (in_frame / (animations_data[anim_index].animation->num_frames - 1)) * (getNumFrames() - 1);
-			setFrame(f, state_machine, skinned);
+			float current_frame = (in_frame / (animations_data[anim_index].animation->num_frames - 1)) * (getNumFrames() - 1);
+			setFrame(current_frame, state_machine, skinned);
 
 			if (state_machine.isUseRootMotion())
 			{
@@ -1033,8 +1033,8 @@ void StateMachine::update(float ifps)
 		res = states.findFast(next_state);
 		if (res != nullptr)
 		{
-			State &next_state = res->data;
-			init_transition(state, next_state, transition_duration);
+			State &_next_state = res->data;
+			init_transition(state, _next_state, transition_duration);
 		}
 	}
 

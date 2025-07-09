@@ -9,19 +9,11 @@ class AppWorldLogic : public Unigine::WorldLogic
 {
 public:
 	AppWorldLogic();
-	virtual ~AppWorldLogic();
+	virtual ~AppWorldLogic() override;
 
-	virtual int init();
-
-	virtual int update();
-	virtual int render();
-	virtual int flush();
-
-	virtual int shutdown();
-	virtual int destroy();
-
-	virtual int save(const Unigine::StreamPtr &stream);
-	virtual int restore(const Unigine::StreamPtr &stream);
+	virtual int init() override;
+	virtual int update() override;
+	virtual int shutdown() override;
 };
 
 #endif // __APP_WORLD_LOGIC_H__

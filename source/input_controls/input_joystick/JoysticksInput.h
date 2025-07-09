@@ -54,7 +54,7 @@ private:
 		float magnitude{0.f};
 		float force{0.f};
 		unsigned long long duration{0};
-		float frequency{0.f};
+		int frequency{0};
 	};
 
 	struct JoystickInfo

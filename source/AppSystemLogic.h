@@ -7,15 +7,11 @@ class AppSystemLogic : public Unigine::SystemLogic
 {
 public:
 	AppSystemLogic();
-	virtual ~AppSystemLogic();
+	virtual ~AppSystemLogic() override;
 
-	virtual int init();
-
-	virtual int update();
-	virtual int render();
-
-	virtual int shutdown();
-	virtual int destroy();
+	virtual int init() override;
+	virtual int update() override;
+	virtual int shutdown() override;
 };
 
 #endif // __APP_SYSTEM_LOGIC_H__

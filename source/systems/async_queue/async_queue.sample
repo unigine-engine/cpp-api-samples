@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <sample title="AsyncQueue">
-	<sdk_desc>Loading meshes and textures in a separate thread using the AsyncQueue class</sdk_desc>
+	<sdk_desc>Loading meshes and textures in a separate thread using the <i>AsyncQueue</i> class</sdk_desc>
 	<desc>
 		<brief>
 			<para>This sample shows how to load resources like meshes and textures in the background using the <ui><link to="asyncqueue_class">AsyncQueue</link></ui> class. Files are loaded in a separate thread, so the main application stays responsive.</para>
@@ -8,6 +8,7 @@
 		</brief>
 		<para>This kind of async loading is useful for streaming large levels, loading assets on demand in VR, or preloading data in simulations without freezing the interface.</para>
 	</desc>
+	<link_docs>https://developer.unigine.com/docs/api/library/filesystem/class.asyncqueue?rlang=cpp</link_docs>
 	<tags>
 		<tag>Systems</tag>
 		<tag>Optimization</tag>

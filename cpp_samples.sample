@@ -1,0 +1,2674 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<meta>
+	<samples_pack name="cpp_samples">
+		<title>C++ Samples</title>
+		<version>2.20</version>
+		<os>cross</os>
+		<dependency>2.20</dependency>
+		<workflow>editor2</workflow>
+		<precision>double</precision>
+		<path>data</path>
+		<command>world_load cpp_samples</command>
+		<custom_app>cpp_samples</custom_app>
+		<bin_type>development</bin_type>
+		<api>cmakecpp</api>
+		<plugins>FMOD</plugins>
+		<description>
+			<![CDATA[
+				<p>A set of samples showcasing the use of engine features for various use cases via the C++ API.</p>
+			]]>
+		</description>
+		<features>
+			<![CDATA[
+				<p><strong>Intersections</strong> samples different cases of intersection detection. The following samples are available:</p>
+				<ul>
+					<li><strong>Simple Async Request</strong> sample - demonstrating detection of intersections with all objects in the world using a combination of <em>World::getIntersection()</em> and <em>Landscape::getIntersection()</em> methods. A single ray from the mouse cursor position is used. A normal at the point of intersection is rendered and latency value is displayed.</li>
+					<li><strong>Multiple Async Requests</strong> sample - demonstrating detection of intersections with all objects in the world using a combination of <em>World::getIntersection()</em> and <em>Landscape::getIntersection()</em> methods. 900 rays from a moving emitter-objects are used. You can check out latency values (number of frames per each result).</li>
+				</ul>
+				<p><strong>Landscape Terrain</strong> samples demonstrating various Landscape Terrain features and use cases. The following samples are available:</p>
+				<ul>
+					<li><strong>Combined Landscape Modification</strong> sample - demonstrating combination of nondestructive (using multiple Landscape Layer Maps) and destructive (using <b>Landscape::asyncTextureDraw</b>) Landscape Terrain modification techniques.</li>
+					<li><strong>Landscape Creation</strong> sample - demonstrating dynamic creation of a Landscape Layer Map with albedo, height, and two mask textures using <b>LandscapeMapFileCreator</b> and <b>LandscapeMapFileSettings</b>.</li>
+					<li><strong>Details</strong> sample - demonstrating how to add Details to a Landscape Terrain using <b>ObjectLandscapeTerrain::getDetailMask</b> and <b>ObjectLandscapeTerrain::addDetail</b> methods.</li>
+					<li><strong>Fetch</strong> sample - demonstrating how to get terrain information (height, albedo, masks) for an arbitrary point.</li>
+					<li><strong>Landscape Mesh</strong> sample - demonstrating generation of a mesh (<b>ObjectMeshDynamic</b>) representing a certain region of the Landscape Terrain based on fetched Landscape data (<b>LandscapeFetch</b>).</li>
+					<li><strong>Paint</strong> sample - demonstrating destructive run-time Landscape Terrain modification by changing the underlying textures of the Landscape Layer Map using <b>Landscape::asyncTextureDraw</b> with the help of the custom base materials.</li>
+					<li><strong>Tracks</strong> sample - demonstrates non-destructive runtime Landscape Terrain modification by spawning multiple Landscape Layer Maps under the objects to create tracks.</li>
+				</ul>
+				<p><strong>Tracker</strong> sample demostrating how to use <b>Tracker</b> to animate objects (change their position, rotation, and scale) via tracks created in the <b>Tracker</b> tool. Tracks in code are referred to via names and IDs. A C++ wrapper for <b>Tracker</b> functionality is provided in the <b>Tracker</b> component.</p>
+				<p><strong>Water Global</strong> samples demostrating how to control Global Water via API. The following samples are available:</p>
+				<ul>
+					<li><strong>Buoyancy</strong> sample - demonstrating the control over the current state of the Global Water via changing Beaufort levels (the Beaufort slider). It also demonstrates the use of fetching of the water level at a certain point for simplified simulation of buoyancy without engaging Phyiscs.</li>
+					<li><strong>CustomWave</strong> sample - demonstrating how to control the wave spectrum of Global Water in Manual mode via API by changing the number of octaves, number of waves per octave, and various other parameters for random waves generation, such as wave length, amplitude, phase offset, and steepness (can be used, for example, to process Weather Control packets from IOS in a simulator application).</li>
+					<li><strong>Boat</strong> sample - demonstrating how to simulate ship wake foam via <b>Orthographic Decals</b> and <b>Particle Systems</b>, that are spawned behind the boat and project foam onto the water surface. You can control sea state via the Beaufort slider (from 0 - calm to 8 - huge waves).</li>
+					<li><strong>Fetch Intersection</strong> sample - demonstrating the influence of the <b>Steepness Quality, Amplitude Threshold</b>, and <b>Precision</b> parameters on the accuracy of fetch and intersection requests for the <b>Global Water</b> object at various Beaufort levels.</li>
+				</ul>
+				]]>
+		</features>
+		<products>
+			<product>tier3_bin_windows</product>
+			<product>tier3_bin_channel</product>
+			<product>tier3_bin_channel_windows</product>
+			<product>tier3_bin_channel_linux</product>
+			<product>tier3_src_windows</product>
+			<product>tier3_bin_linux</product>
+			<product>tier3_src_linux</product>
+			<product>tier3_evaluation</product>
+			<product>tier2_bin_windows</product>
+			<product>tier2_src_windows</product>
+			<product>tier2_bin_linux</product>
+			<product>tier2_src_linux</product>
+			<product>tier2_evaluation</product>
+			<product>tier0_bin</product>
+			<product>tier0_bin_pro</product>
+		</products>
+		<images>
+			<card_image>cpp_samples_rect.png</card_image>
+			<thumb>cpp_samples_sm.png</thumb>
+			<image>cpp_samples_001.png</image>
+			<image>cpp_samples_002.png</image>
+			<image>cpp_samples_003.png</image>
+			<image>cpp_samples_004.png</image>
+			<image>cpp_samples_005.png</image>
+		</images>
+	<categories>
+		<category id="animation" name="Animation" img="data/cpp_samples/animation/animation.png"/>
+		<category id="basics" name="Basics" img="data/cpp_samples/basics/basics.png"/>
+		<category id="complex" name="Complex" img="data/cpp_samples/complex/complex.png"/>
+		<category id="input_controls" name="Input Controls" img="data/cpp_samples/input_controls/input_controls.png"/>
+		<category id="navigation" name="Navigation" img="data/cpp_samples/navigation/navigation.png"/>
+		<category id="network" name="Network" img="data/cpp_samples/network/network.png"/>
+		<category id="nodes" name="Nodes" img="data/cpp_samples/nodes/nodes.png"/>
+		<category id="physics" name="Physics" img="data/cpp_samples/physics/physics.png"/>
+		<category id="plugins" name="Plugins" img="data/cpp_samples/plugins/plugins.png"/>
+		<category id="render" name="Render" img="data/cpp_samples/render/render.png"/>
+		<category id="systems" name="Systems" img="data/cpp_samples/systems/systems.png"/>
+		<category id="user_interface" name="User Interface" img="data/cpp_samples/user_interface/user_interface.png"/>
+		</categories>
+<samples>
+<sample title="Material Animation" id="animation_material" category_id="animation">
+	<sdk_desc><![CDATA[Animating emission scale and color parameters of a material.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample demonstrates animating materials using <b>material animation objects</b>. It is useful for implementing dynamic changes in properties of materials in real time.]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Animation</tag>
+		<tag>Materials</tag>
+		</tags>
+</sample>
+<sample title="Node Animation" id="animation_node" category_id="animation">
+	<sdk_desc><![CDATA[Animating position, rotation, and scale of a node.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample demonstrates animating nodes using <b>node animation objects</b>. It will be helpful for creating complex animation scenarios for stage objects in real time.]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Animation</tag>
+		</tags>
+</sample>
+<sample title="Property Animation" id="animation_property" category_id="animation">
+	<sdk_desc><![CDATA[Animating a property parameter.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample demonstrates animating property parameters using <b>property parameter animation objects</b>. Useful for implementing custom effects that depend on property parameters.]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Animation</tag>
+		<tag>Properties</tag>
+		</tags>
+</sample>
+<sample title="Singleton Animation" id="animation_singleton" category_id="animation">
+	<sdk_desc>
+		<![CDATA[This sample demonstrates animating global engine parameters using <b>singleton animation modifiers</b>.]]>
+	</sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample demonstrates animating global engine parameters using <b>singleton animation modifiers</b>.]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Animation</tag>
+		<tag>Basic Recipes</tag>
+		</tags>
+</sample>
+<sample title="Widget Animation" id="animation_widget" category_id="animation">
+	<sdk_desc>
+		<![CDATA[This example shows how to animate widgets using <b>runtime animation objects</b>.]]>
+	</sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This example shows how to animate widgets using <b>runtime animation objects</b>.]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Animation</tag>
+		<tag>Interface (GUI)</tag>
+		<tag>Widgets</tag>
+		</tags>
+</sample>
+<sample title="Bones Constraints" id="bones_constraints" category_id="animation">
+	<sdk_desc><![CDATA[Applying bone rotation constraints.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample demonstrates the use of bone rotation constraints and illustrates how they affect the operation of inverse kinematics.]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Animation</tag>
+		</tags>
+</sample>
+<sample title="Bones IK" id="bones_ik" category_id="animation">
+	<sdk_desc><![CDATA[Controlling bones with inverse kinematics.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[			<p>This sample demonstrates how to control bones using inverse kinematics</p>
+			<p>The pole vector is used as a constraint that defines the plane of joint bending.</p>
+		]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Animation</tag>
+		</tags>
+</sample>
+<sample title="Bones LookAt" id="bones_look_at" category_id="animation">
+	<sdk_desc><![CDATA[Using LookAt chains to aim at a target.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[			<p>This sample demonstrates the use of LookAt chains for aiming at a target.</p>
+			<p>The chain contains the spine and head bones. By setting different weights for each bone you can adjust the targeting effect. The constraint is represented by a pole vector that defines a plane for the upward direction of each bone.</p>
+		]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Animation</tag>
+		</tags>
+</sample>
+<sample title="Bones Masks" id="bones_masks" category_id="animation">
+	<sdk_desc><![CDATA[Using masks to assign selective logic to different bones.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[			<p>This sample demonstrates how to use bone masks.</p>
+			<p>Masks enable complex animation combinations. For example, you can preserve the original body movements while limiting head or arm animations to rotation, or scaling specific bones.</p>
+		]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Animation</tag>
+		</tags>
+</sample>
+<sample title="Bones Retargeting" id="bones_retargeting" category_id="animation">
+	<sdk_desc><![CDATA[This sample demonstrates how the same animation can be used on skeletons with different proportions.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[<p>This sample demonstrates how the same animation can be used on skeletons with different proportions.</p>
+			<p>The pair on the left represents the use of animation without retargeting. On the right, the animatiotion is retargeted from the adult to the child. The bone length ratio between skeletons is taken into account for adjustment of the position component.</p>
+			<p>Retargeting is useful when you need to use the same animation source for different characters or objects with varying proportions but similar skeletal structures. This approach significantly speeds up the process of preparing animations.</p>
+		]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Animation</tag>
+		</tags>
+</sample>
+<sample title="Bones Root Motion" id="bones_root_motion" category_id="animation">
+	<sdk_desc><![CDATA[This sample demonstrates the implementation of the root motion technique.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[<p>This sample demonstrates the implementation of the root motion technique.</p>
+			<p>On the left there is a common looping animation. On the right, the offset of the root bone moves the object itself.</p>
+			<p> Root motion is particularly valuable for realistic character, vehicle, or object movements in games and simulations.</p>
+		]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Animation</tag>
+		</tags>
+</sample>
+<sample title="Bones Sandbox" id="bones_sandbox" category_id="animation">
+	<sdk_desc>
+		<![CDATA[This sample provides the interface that allows visualizing and experiencing how to configure all available settings for IK chains, LookAt chains, and bone rotation constraints.]]>
+	</sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample provides the interface that allows visualizing and experiencing how to configure all available settings for IK chains, LookAt chains, and bone rotation constraints.]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Animation</tag>
+		</tags>
+</sample>
+<sample title="Bones Simple Foot Placement" id="bones_simple_foot_placement" category_id="animation">
+	<sdk_desc>
+		<![CDATA[This sample demonstrates a naive option for placing feet on a surface using IK chains.]]>
+	</sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample demonstrates a naive option for placing feet on a surface using IK chains.]]>
+		</brief>
+	</desc>
+	<controls>
+		<![CDATA[
+		<p>Key <b>T</b> - Platform movement manipulator.</p>
+		<p>Key <b>R</b> - Platform rotation manipulator.</p>
+		]]>
+	</controls>
+	<tags>
+		<tag>Animation</tag>
+		<tag>Intersections</tag>
+		</tags>
+</sample>
+<sample title="Bones State Machine" id="bones_state_machine" category_id="animation">
+	<sdk_desc>
+		<![CDATA[This sample demonstrates how to make an animated state machine based on ObjectMeshSkinned.]]>
+	</sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample demonstrates how to make an animated state machine based on ObjectMeshSkinned.]]>
+		</brief>
+	</desc>
+	<controls>
+		<![CDATA[
+		<p>Walk State Machine (left):</p>
+		<p>    Key <b>T</b> - set maximum speed.</p>
+		<p>    Key <b>G</b> - set minimum speed.</p>
+		<p>    Key <b>Y</b> - turn around.</p>
+		<p>    </p>
+		<p>Idle Turn State Machine (center):</p>
+		<p>    Key <b>V</b> - increase turn left.</p>
+		<p>    Key <b>C</b> - increase turn right.</p>
+		<p>    </p>
+		<p>Walk Run State Machine (right):</p>
+		<p>    Key <b>I</b> - increase y.</p>
+		<p>    Key <b>K</b> - decrease y.</p>
+		<p>    Key <b>L</b> - increase x.</p>
+		<p>    Key <b>J</b> - decrease x.</p>
+		]]>
+	</controls>
+	<tags>
+		<tag>Animation</tag>
+		</tags>
+</sample>
+<sample title="Curve Animation" id="curve_animation" category_id="animation">
+	<sdk_desc><![CDATA[Animating objects using <i>Curve2D</i>: moving platforms, rotating coins, and a heart changing its size.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample demonstrates sample shows how to animate objects using <i>Curve2D</i>: moving platforms, rotating coins, and a heart changing its size.]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Animation</tag>
+		<tag>Basic Recipes</tag>
+		<tag>Transformations</tag>
+		</tags>
+</sample>
+<sample title="Physics-Based Animation" id="physics_based_animation" category_id="animation">
+	<sdk_desc><![CDATA[Physics-based animation of movements using various easing functions.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample shows implementation of physics-based animation for the cat's movements in a simple game where a cat chases a laser pointer (different easing functions are used).]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Animation</tag>
+		</tags>
+</sample>
+<sample title="Playback Layers" id="playback_layers" category_id="animation">
+	<sdk_desc><![CDATA[Showing how to use multiple <b>layers</b> in animation playbacks.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample demonstrates the use of animation layers to create and play object animations. The code shows how you can combine different animation tracks and play them simultaneously or sequentially.]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Animation</tag>
+		</tags>
+</sample>
+<sample title="Track Playback" id="track_playback" category_id="animation">
+	<sdk_desc><![CDATA[Using a tracker to animate objects (position, rotation, and scale).]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[Sample demonstrating how to use Tracker to animate objects (change their position, rotation, and scale) based on tracks created in the Tracker tool.]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Animation</tag>
+		</tags>
+</sample>
+<sample title="Bound Intersection" id="bound_intersection" category_id="basics">
+	<sdk_desc><![CDATA[Finding intersections between certain volumes (frustum, sphere, and box) and the bounding boxes of nodes.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This example demonstrates how to detect intersections between a frustum, sphere, or box and the bounding boxes of nodes. For clarity, the boundaries of the nodes are displayed in the scene, allowing for a quick visual assessment of when the nodes intersect the specified volumes.]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Basic Recipes</tag>
+		<tag>Intersections</tag>
+		</tags>
+</sample>
+<sample title="Camera Zoom" id="camera_zoom" category_id="basics">
+	<sdk_desc><![CDATA[Creating interactive camera system with adjustable zoom and focus on selectable scene targets.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[		<p>This sample demonstrates a zoom and camera focus system that allows the user to inspect predefined targets in the scene and adjust the zoom level. Three info boards are placed throughout the scene, each with an in-world GUI panel showing its distance from the player and its dimensions. These panels update automatically in real time based on the player's position.</p>
+		]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Cameras</tag>
+		<tag>Transformations</tag>
+		<tag>Basic Recipes</tag>
+		</tags>
+</sample>
+<sample title="Component System" id="component_system" category_id="basics">
+	<sdk_desc><![CDATA[Demonstration of UNIGINE's C++ component-based architecture using custom gameplay components with dynamic object creation and interaction.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[			<p>This sample illustrates how to implement your application's logic via a set of building blocks - <b>components</b>, and assign these blocks to nodes. A logic component integrates a node, a property, and a C++ class containing logic implementation.</p>
+			<p>The sample includes a controllable pawn with basic movement, rotating boxes that periodically spawn projectiles, and a floating UI label displaying health, survival time, and active component count.</p>
+			<p>The sample demonstrates how to:</p>
+							<p> - Decompose application logic into modular, reusable components</p>
+				<p> - Create and assign custom logic components at runtime</p>
+				<p> - Implement interaction between independently managed components.</p>
+						<p>More details about the Component System sample are available in the official documentation linked below.</p>
+		]]>
+		</brief>
+	</desc>
+	<link_docs>https://developer.unigine.com/docs/code/usage/using_component_system/index?rlang=cpp</link_docs>
+	<controls>
+		<![CDATA[<p align=left>Keys <b>UP / W</b> and <b>DOWN / S</b> to move forward/backward</p>
+		<p align=left>Keys <b>LEFT / A</b> and <b>RIGHT / D</b> for clockwise/counterclockwise rotation</p>
+		]]>
+	</controls>
+	<tags>
+		<tag>Basic Recipes</tag>
+		<tag>Component System</tag>
+		</tags>
+</sample>
+<sample title="Euler Angles" id="euler_angles" category_id="basics">
+	<sdk_desc><![CDATA[Showing how the order of angles affects rotation.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample demonstrates how the order of angles affects the resulting rotation. You can also observe different ways of decomposing the current rotation by various angle sequences.]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Basic Recipes</tag>
+		</tags>
+</sample>
+<sample title="IFps Usage" id="ifps_usage" category_id="basics">
+	<sdk_desc><![CDATA[Using <i>Game::getIFps()</i> to implement movement logic independent of the frame rate.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample demonstrates the importance of using <i>Game::getIFps()</i> to implement movement logic independent of the frame rate.]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Logic</tag>
+		</tags>
+</sample>
+<sample title="Node Spawner Grid" id="node_spawner_grid" category_id="basics">
+	<sdk_desc><![CDATA[Spawning nodes across a grid.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample shows how to create nodes and place them across a grid. Spawning from the center is also available.]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Nodes</tag>
+		<tag>Basics</tag>
+		<tag>Basic Recipes</tag>
+		</tags>
+</sample>
+<sample title="Node Spawner Timer" id="node_spawner_timer" category_id="basics">
+	<sdk_desc>
+		<![CDATA[A simple node spawner creates nodes at a set spawn frequency.]]>
+	</sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[A simple node spawner creates nodes at a set spawn frequency.]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Basic Recipes</tag>
+		</tags>
+</sample>
+<sample title="Ray Intersection" id="ray_intersection" category_id="basics">
+	<sdk_desc><![CDATA[Using raycasting for selective (mask-based) detection of intersections.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This example demonstrates how to find intersections with geometry using <b>raycasting</b> taking into account different <i>Intersection</i> bitmasks (using first 8 bits out of 32).]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Basic Recipes</tag>
+		<tag>Intersections</tag>
+		</tags>
+</sample>
+<sample title="Simple Movement" id="simple_movement" category_id="basics">
+	<sdk_desc><![CDATA[Different ways to specify object transformations during movement and rotation.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[		<p>Different ways to specify object transformations during movement and rotation.</p>
+		<p>The sample illustrates that using either of the following methods will lead to the same result.</p>
+		<p>Red cube is controlled using <i>translate()</i> and <i>rotate()</i>.</p>
+		<p>Green cube: <i>setPosition()</i> and <i>setRotation()</i>.</p>
+		<p>Blue cube: <i>setTransform()</i>.</p>
+		]]>
+		</brief>
+	</desc>
+	<controls>
+		<![CDATA[
+<b>WASD</b> - to move and rotate the boxes.<br/>
+		]]>
+	</controls>
+	<tags>
+		<tag>Basic Recipes</tag>
+		<tag>Transformations</tag>
+		</tags>
+</sample>
+<sample title="Trajectory" id="trajectory" category_id="basics">
+	<sdk_desc><![CDATA[Three types of movement along a predefined path: linear interpolation, spline interpolation, and a trajectory loaded from a <b>*.path</b> file.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[			<p>This sample demonstrates three types of movement along a predefined path:</p>
+							<p> - <b>Red plane</b>: linear interpolation.</p>
+				<p> - <b>Blue plane</b>: spline interpolation.</p>
+				<p> - <b>Green plane</b>: path from a file.</p>
+						<p>The sample contains the <i>PathTrajectorySaver</i> component that illustrates how to create your own path file, which is opened via the <i>WorldTransformPath</i> node. Each path can be toggled on and off, and you can switch between the cameras to have a first-person view from each plane.</p>
+		]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Nodes</tag>
+		<tag>Basics</tag>
+		<tag>Basic Recipes</tag>
+		<tag>Transformations</tag>
+		</tags>
+</sample>
+<sample title="Triggers" id="triggers" category_id="basics">
+	<sdk_desc><![CDATA[Implementation of various types of triggers.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[			<p>This sample illustrates how to implement a simple trigger component in five different ways:</p>
+							<p> - <b>Intersection Trigger</b> performs the bound check via <i>World::getIntersection()</i>.</p>
+				<p> - <b>Math Trigger</b> performs the check if the object is inside the trigger sphere or cube using the object coordinates (the simplest and most performance-friendly way).</p>
+				<p> - <b>World Trigger</b> uses the built-in <i>WorldTrigger</i> node, which automatically detects when nodes enter or leave a predefined volume.</p>
+				<p> - <b>Physical Trigger</b> uses the built-in <i>PhysicalTrigger</i> node, triggers events when a physical object gets inside or outside it. To be detected by the trigger, physical objects are required to have at the same time both a body and a shape.</p>
+				<p> - <b>Node Trigger</b> uses the built-in <i>NodeTrigger</i> node, which has no visual representation and triggers events when like being enabled or moved.</p>
+					]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Triggers</tag>
+		<tag>Logic</tag>
+		</tags>
+</sample>
+<sample title="Trigger Buttons" id="trigger_buttons" category_id="basics">
+	<sdk_desc>
+		<![CDATA[Demonstration of various types of interactable buttons and levers.]]>
+	</sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[Demonstration of various types of interactable buttons and levers.]]>
+		</brief>
+	</desc>
+	<controls>
+		<![CDATA[
+		Use <b>WASD</b> buttons to move around the scene, point the the mouse cursor to the button or lever and press the <b>F</b> button to activate it.<br/>To manipulate Valve and Lever, press and hold the <b>F</b> button and drag the mouse.
+		]]>
+	</controls>
+	<tags>
+		<tag>Triggers</tag>
+		<tag>Logic</tag>
+		<tag>Basic Recipes</tag>
+		</tags>
+</sample>
+<sample title="Boids" id="boids" category_id="complex">
+	<sdk_desc><![CDATA[Simulation and control of flocking behavior (Boids algorithm) for different types of entities.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[			<p>This sample demonstrates the simulation and control of flocking behavior (Boids algorithm) for different types of entities, such as birds and fish. Two separate controllers manage the behavior of these groups using common flocking principles like cohesion, alignment, and separation.</p>
+			<p>You can adjust various parameters in real time to observe how they influence the behavior of each flock:</p>
+							<p> - <b>Cohesion</b> - strength of attraction toward the center of the flock.</p>
+				<p> - <b>Spot Radius</b> - distance within which other units are considered for cohesion and alignment.</p>
+				<p> - <b>Alignment</b> - force that aligns a unit's direction with the average heading of its neighbors.</p>
+				<p> - <b>Separation</b> - repulsion force that prevents units from crowding too closely.</p>
+				<p> - <b>Separation Desired Range</b> - distance threshold for applying separation force.</p>
+				<p> - <b>Target</b> - amount of force directed towards target.</p>
+				<p> - <b>Unit Max Speed</b> - maximum unit speed.</p>
+				<p> - <b>Unit Max Force</b> - maximum steering force applied for movement corrections.</p>
+				<p> - <b>Unit Max Turn Speed</b> - how quickly a unit can rotate to adjust direction.</p>
+						<p>Two independent flocks (e.g., fish and birds) demonstrate how multiple controllers can operate simultaneously with distinct settings. Optional debug visualization renders bounding boxes around each flock, helping observe bounds and transitions.</p>
+			<p><b>Use Cases</b></p>
+							<p> - <b>Games and simulations</b> - realistic swarm behavior for birds, fish, insects, crowds, or drones.</p>
+				<p> - <b>Training AI systems</b> - testing multi-agent behavior and interaction dynamics.</p>
+				<p> - <b>Environmental storytelling</b> - adding life to ecosystems and natural environments.</p>
+				<p> - <b>Cinematic scenes</b> - choreographed group movements for visual impact.</p>
+				<p> - <b>Education and research</b> - exploring emergent behavior in decentralized systems.</p>
+					]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Games</tag>
+		<tag>Basic Recipes</tag>
+		</tags>
+</sample>
+<sample title="Crane Rope" id="crane_rope" category_id="complex">
+	<sdk_desc><![CDATA[A simple and elegant way of creating a winch or hoist using a combination of dynamically added JointBall and geometry]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[Rope physics can be extremely difficult. The sample features a simple and elegant way of creating a winch or hoist using a combination of dynamically added <i>JointBall</i> and geometry.]]>
+		</brief>
+	</desc>
+	<controls>
+		<![CDATA[
+<b>J</b> and <b>L</b> - Rotate crane<br/>
+<b>I</b> and <b>K</b> - Change rope's length<br/>
+<b>O</b> - Attach bag<br/>
+<b>U</b> - Detach bag
+		]]>
+	</controls>
+	<tags>
+		<tag>Complex Solutions</tag>
+		<tag>Physics</tag>
+		<tag>Rope &amp; Cloth</tag>
+		<tag>Basic Recipes</tag>
+		<tag>Sim</tag>
+		</tags>
+</sample>
+<sample title="Day-Night Switching" id="day_night_switch" category_id="complex">
+	<sdk_desc><![CDATA[Implementation of an automated day-night system with light and material switching.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[			<p>This sample showcases a dynamic day-night cycle driven by the rotation of a <b>World Light</b> source (sun), animated according to a simulated global time. The sun's position is updated continuously or in response to manual time input. The time progression speed can be adjusted using the <i>Timescale</i> slider.</p>
+			<p>The sun's orientation influences both the overall scene lighting and object-specific responses, enabling or disabling nodes and adjusting the emission states of designated materials depending on whether it's currently day or night. Additional props, such as <b>Projected Light</b> node and door closed/open signage, are toggled to reflect the time of day. Red and blue helper vectors visualize the zenith direction and the sun's current orientation, respectively.</p>
+			<p><b>Two control modes are available:</b></p>
+									<p> - <b>Zenith Angle</b>: Uses the angle between the sun's direction and the zenith (up vector). If the angle is below a threshold, it is considered daytime.</p>
+					<p> - <b>Time-Based</b>: Defines day/night using configurable <i>Morning</i> and <i>Evening hour boundaries</i> sliders.</p>
+							<p><b>Use Cases:</b></p>
+			<p>Ideal for <b>games, simulations</b>, or <b>architectural walkthroughs</b> that need consistent lighting transitions and dynamic environmental response.</p>
+		]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Complex Solutions</tag>
+		<tag>Environment</tag>
+		<tag>Lighting</tag>
+		<tag>Sim</tag>
+		</tags>
+</sample>
+<sample title="Fire Hose" id="fire_hose" category_id="complex">
+	<sdk_desc><![CDATA[Demonstating a basic firefighting simulation involving interactive fire suppression with a controllable hose.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[		<p>This sample demonstrates how to implement a fire hose system using <i>decals</i> and <i>particle</i> collisions. Foam particles are emitted from a hose, interact with the environment, and leave visual marks on surfaces. When aimed at fire sources, the foam gradually extinguishes them over time.</p>
+		]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Decals</tag>
+		<tag>Effects</tag>
+		<tag>Complex Solutions</tag>
+		<tag>Sim</tag>
+		</tags>
+</sample>
+<sample title="First-Person Controller" id="first_person_controller" category_id="complex">
+	<sdk_desc><![CDATA[Implementing and customizing a first-person controller with a physical body.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample demonstrates how to implement and customize the first-person controller with a physical body.]]>
+		</brief>
+	</desc>
+	<controls>
+			<![CDATA[
+		<p align=left><b>WASD</b> to move.</p><br/>
+		<p align=left><b>Space</b> to jump.</p><br/>
+		<p align=left><b>Shift</b> to run.</p><br/>
+		<p align=left><b>Ctrl</b> to crouch.</p>
+			]]>
+	</controls>
+	<tags>
+		<tag>Cameras</tag>
+		<tag>Games</tag>
+		<tag>Basic Recipes</tag>
+		</tags>
+</sample>
+<sample title="LiDAR" img="yes" id="lidar" category_id="complex">
+	<sdk_desc><![CDATA[A realistic LiDAR sensor simulation, used in self-driving cars, robotics, robot vacuum cleaners and drones to map their surroundings.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[		<p>This sample demonstrates a realistic <b>LiDAR</b> sensor simulation, used in self-driving cars, robotics, robot vacuum cleaners, and drones to map their surroundings. It works by combining four (or optionally more) virtual depth cameras to create a full <b>360</b>-degree scan. The <b>LiDAR</b> emits rays and measures distances by rendering a depth map of the environment. In addition, a response intensity for each ray is calculated using normal, roughness and metalness from the G-buffer. You can tweak its settings (scan range, FOV, resolution, etc.) via API.</p>
+			<p><b>Key Features:</b></p>
+									<p> - Emulated LiDAR using <b>4 or more</b> rendered views</p>
+					<p> - Configurable <b>min/max range, FOV, beam resolution</b> (number of stacks and slices)</p>
+					<p> - Asynchronous data transfer using <i>asyncTransferTextureToImage</i></p>
+					<p> - Dynamic beam caching, image post-processing, and world-space point rendering</p>
+					<p> - Optional visual debugging: depth maps, scan points, and frustums</p>
+					<p> - Auto-refreshing system with internal transform and scan updates.</p>
+							<p><b>Use Cases:</b></p>
+									<p> - Autonomous vehicle simulation (robot vacuums, drones, cars)</p>
+					<p> - Autopilot and AI training using virtual LiDAR input</p>
+					<p> - Robot navigation and localization (SLAM, path planning).</p>
+							]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Complex Solutions</tag>
+		<tag>Intersections</tag>
+		<tag>Sensors</tag>
+		<tag>Sim</tag>
+		</tags>
+</sample>
+<sample title="Observer Controller" id="observer_controller" category_id="complex">
+	<sdk_desc><![CDATA[Implementation of a free-flying camera similar to the one used in the UnigineEditor (with zooming, panning, focusing and speed control).]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[			<p>This sample replicates the free camera used in the UnigineEditor. The camera offers the following key features:</p>
+									<p> - <b>Fly-Through Mode</b> Freely move the camera in all directions using keyboard and mouse controls.</p>
+					<p> - <b>Focus on Objects</b> Center the camera on any selected object and adjust distance automatically.</p>
+					<p> - <b>Zoom &amp; Pan</b> Zoom in and out, and pan while preserving view direction.</p>
+					<p> - <b>Speed Control Menu</b> Switch between predefined movement speeds (<b>1-3</b>) or adjust custom speed values.</p>
+					<p> - <b>Position Management</b> Set or teleport the camera to specific world coordinates through the menu.</p>
+						]]>
+		</brief>
+	</desc>
+	<controls>
+		<![CDATA[
+		<p> - <b>F3</b>: show/hide the camera control menu</p>
+		<p> - <b>RMB (hold)</b>: switch to Spectator mode</p>
+		<p> - <b>RMB + mouse</b>: look around</p>
+		<p> - <b>RMB + W/A/S/D, Q/E</b>: camera movement</p>
+		<p> - <b>Alt + RMB</b>: switch to zooming mode</p>
+		<p> - <b>Alt + MMB</b>: switch to panoramic movement mode</p>
+		<p> - <b>F</b>: focus on the object under the mouse cursor</p>
+		<p> - <b>1, 2, 3</b>: switch movement speed<br/><br/></p>
+		<p>You can customize the key bindings in the camera properties within the editor.</p>
+		]]>
+	</controls>
+	<tags>
+		<tag>Complex Solutions</tag>
+		<tag>Cameras</tag>
+		</tags>
+</sample>
+<sample title="Player Persecutor" id="player_persecutor" category_id="complex">
+	<sdk_desc><![CDATA[Creating custom target-following camera using <i>PlayerDummy</i>, replicating <i>PlayerPersecutor</i> logic with adjustable offset, collision handling, and multiple follow modes.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[		This sample demonstrates a custom third-person camera built using a <i>PlayerDummy</i> node, replicating and extending the behavior of UNIGINE's built-in <i>PlayerPersecutor</i> object.		]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Cameras</tag>
+		<tag>Transformations</tag>
+		<tag>Objects</tag>
+		<tag>Complex Solutions</tag>
+		</tags>
+</sample>
+<sample title="Robot Arm" img="yes" id="robot_arm" category_id="complex">
+	<sdk_desc><![CDATA[A physics-based robotic arm implementation with 6 degrees of freedom (5 movable joints + 1 fixed base)]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[			<p>This sample demonstrates how to build a physics-based robotic arm with a kinematic chain composed of six links: one fixed and five movable. Each movable link is connected via a hinge joint (<i>JointHinge</i>) and driven by a motor that responds to keyboard inputs.</p>
+			<p>The arm's <b>end effector</b> is a <b>magnetic gripper</b> capable of <b>grabbing, holding, and releasing</b> dynamic objects in its environment. The gripper and each joint can be controlled independently via key bindings, which are configurable and demonstrated in the <i>Controls</i> section.</p>
+			<p>This setup provides a flexible starting point for creating custom robotic arms with any required number of degrees of freedom (DoF). You can replace manual input with a control system (e.g., inverse kinematics, AI, joystick, or ROS integration) to adapt the robot arm to your specific use case.</p>
+			<p><b>Use Cases:</b></p>
+							<p> - <b>Simulation &amp; prototyping</b> of industrial robotic manipulators.</p>
+				<p> - <b>Educational environments</b> to teach principles of robotics, joint control, or physics-based animation.</p>
+				<p> - <b>AI training</b> for robotic arms using reinforcement learning or motion planning.</p>
+				<p> - <b>Human-machine interfaces</b>: test robotic interaction with dynamic environments.</p>
+				<p> - <b>Virtual reality</b> robotics simulations or operator training.</p>
+					]]>
+		</brief>
+	</desc>
+	<controls>
+		<![CDATA[<p align=left>Keys <b>H</b> and <b>F</b> for Link 0</p>
+		<p align=left>Keys <b>T</b> and <b>G</b> for Link 1</p>
+		<p align=left>Keys <b>I</b> and <b>K</b> for Link 2</p>
+		<p align=left>Keys <b>J</b> and <b>L</b> for Link 3</p>
+		<p align=left>Keys <b>U</b> and <b>O</b> for Link 4</p>
+		<p align=left>Keys <b>R</b> and <b>Y</b> for Link 5</p><br/>
+		<p align=left>Key <b>C</b> for Grab Object</p>
+		<p align=left>Key <b>V</b> for Release Object</p>
+		]]>
+	</controls>
+	<tags>
+		<tag>Complex Solutions</tag>
+		<tag>Physics</tag>
+		<tag>Sim</tag>
+		</tags>
+</sample>
+<sample title="Spectator Controller" id="spectator_controller" category_id="complex">
+	<sdk_desc><![CDATA[Implementation of a customizable first-person spectator camera with configurable movement and physical collision detection.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[			<p>This sample implements a first-person <b>Spectator camera</b> controller with configurable movement and physical collision detection using the <b>Sphere collision shape</b>, assigned to respond to collisions with geometry (e.g. with terrain) in the world.</p>
+			<p>Movement parameters such as speed, sprint acceleration, turning rate, and mouse sensitivity can be adjusted in real-time using the sliders in the <i>Parameters</i> section.</p>
+			<p><b>Use Cases:</b></p>
+									<p> - Building custom camera tools with physical awareness for scene editing or testing purposes.</p>
+					<p> - First-person 3D scenes navigation and exploring while preserving configurable interaction with the geometry.</p>
+						]]>
+		</brief>
+	</desc>
+	<controls>
+		<![CDATA[
+		<p><b>W/A/S/D, Q/E</b>: control camera movement</p>
+		<p><b>Shift</b>: accelerate</p>
+		<p><b>Mouse movement or Arrow keys</b>: look around</p>
+		]]>
+	</controls>
+	<tags>
+		<tag>Complex Solutions</tag>
+		<tag>Cameras</tag>
+		<tag>Physics</tag>
+		</tags>
+</sample>
+<sample title="Top-Down Controller" id="top_down_controller" category_id="complex">
+	<sdk_desc><![CDATA[Implementation of some elements of a top-down strategy such as selecting one or multiple units, panning the view, turning the camera and smoothly focusing it on the current selection.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample represents an implementation of some elements of a top-down strategy such as selecting one or multiple units, panning the view, turning the camera and smoothly focusing it on the current selection. The implementation is based on the <i>PlayerDummy</i> node.]]>
+		</brief>
+	</desc>
+	<controls>
+		<![CDATA[
+		<p align=left><b>Left Mouse Button</b> to select objects (either clicking on them or drawing a rectangle).</p><br/>
+		<p align=left><b>Middle Mouse Button</b> to move the camera.</p><br/>
+		<p align=left><b>Mouse Wheel</b> to zoom in/out.</p><br/>
+		<p align=left><b>Q</b> and <b>E</b> to rotate the camera.</p><br/>
+		<p align=left>Hold <b>F</b> to follow the selected object.</p><br/>
+		]]>
+	</controls>
+	<tags>
+		<tag>Cameras</tag>
+		<tag>Games</tag>
+		<tag>Basic Recipes</tag>
+		</tags>
+</sample>
+<sample title="Non-Physical Tracks" id="track_non_physical" category_id="complex">
+	<sdk_desc><![CDATA[Simulating vehicle tracks with non-physical track plates, wheels, and joints (JointWheel).]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample demonstrates how to imitate the vehicle tracks using non-physical (i.e. without body assigned) track plates, wheels, and joints (<b>JointWheel</b>). It illustrates how non-physical tracks interact with various obstacles.]]>
+		</brief>
+	</desc>
+	<controls>
+		<![CDATA[
+		<p><b>WASD</b> to control the vehicle movement.</p>
+		<p><b>Mouse Wheel</b> to zoom in/out.</p>
+		]]>
+	</controls>
+	<tags>
+		<tag>Complex Solutions</tag>
+		<tag>Vehicle</tag>
+		</tags>
+</sample>
+<sample title="Physical Tracks" id="track_physical" category_id="complex">
+	<sdk_desc><![CDATA[Simulating vehicle tracks with physical track plates, wheels, and hinge joints (JointHinge).]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample demonstrates how to imitate the vehicle tracks using physical (i.e. having body and shape) track plates, wheels, and hinge joints (<b>JointHinge</b>). It illustrates how physical tracks behave on interacting with various obstacles and when rotating depending on the vehicle speed.]]>
+		</brief>
+	</desc>
+	<controls>
+		<![CDATA[
+		<p><b>WASD</b> to control the vehicle movement.</p>
+		<p><b>Mouse Wheel</b> to zoom in/out.</p>
+		]]>
+	</controls>
+	<tags>
+		<tag>Complex Solutions</tag>
+		<tag>Physics</tag>
+		<tag>Vehicle</tag>
+		</tags>
+</sample>
+<sample title="Gamepad Input" id="input_gamepad" category_id="input_controls">
+	<sdk_desc>
+		<![CDATA[This sample demostrates the simple usage of Gamepad input.]]>
+	</sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample demostrates the simple usage of Gamepad input.]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Input &amp; Controls</tag>
+		</tags>
+</sample>
+<sample title="Joystick Input" id="input_joystick" category_id="input_controls">
+	<sdk_desc><![CDATA[This sample demonstrates how to add advanced joystick input handling, supporting multiple controllers with real-time axis/button monitoring and force feedback effects.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample demonstrates how to add advanced <b>joystick</b> input handling, supporting multiple controllers with real-time axis/button monitoring and force feedback effects in UNIGINE. It features dynamic UI for testing 10+ force feedback types (springs, vibrations, waves) and automatically handles device connection/disconnection events. Ideal for racing/flight simulators or any project requiring precise controller input with haptic feedback.]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Input &amp; Controls</tag>
+		</tags>
+</sample>
+<sample title="Keyboard And Mouse Input" id="input_keyboard_mouse" category_id="input_controls">
+	<sdk_desc><![CDATA[This sample demonstrates how to add monitoring of keyboard and mouse input, tracking key states, mouse movements, wheel events, and cursor positions across different coordinate systems. It displays real-time input data including key presses, mouse deltas, and text input.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[			<p>This sample demonstrates how to add monitoring of keyboard and mouse input, tracking key states, mouse movements, wheel events, and cursor positions across different coordinate systems. It displays real-time input data including key presses, mouse deltas, and text input. The sample shows three mouse handling modes:</p>
+							<p> - <b>GRAB</b> - locks and hides the cursor</p>
+				<p> - <b>SOFT</b> - locks the cursor to the window but keeps it visible</p>
+				<p> - <b>USER</b> - no cursor restrictions.</p>
+					]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Input &amp; Controls</tag>
+		</tags>
+</sample>
+<sample title="Touch Input" id="input_touch" category_id="input_controls">
+	<sdk_desc>
+		<![CDATA[This sample demonstrates how to add multi-touch input from the <b>touchscreen</b>, visualizing finger positions with dynamic circles and displaying real-time coordinates to the project.]]>
+	</sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample demonstrates how to add multi-touch input from the <b>touchscreen</b>, visualizing finger positions with dynamic circles and displaying real-time coordinates to the project.]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Input &amp; Controls</tag>
+		</tags>
+</sample>
+<sample title="Navigation Mesh" id="navigation_mesh" category_id="navigation">
+	<sdk_desc>
+		<![CDATA[This sample demonstrates how to configure pathfinding between two points with obstacles using a <i>Navigation Mesh</i>.]]>
+	</sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample demonstrates how to configure pathfinding between two points with obstacles using a <i>Navigation Mesh</i>.]]>
+		</brief>
+	</desc>
+	<controls>
+		<![CDATA[
+		<p>You can move the path endpoints and obstacles in the scene with the <b>widget manipulator</b> (right-click on the object you want to move for the manipulator to appear).</p>
+		]]>
+	</controls>
+	<tags>
+		<tag>Navigation &amp; Patfinding</tag>
+		</tags>
+</sample>
+<sample title="Navigation Mesh Demo" id="navigation_mesh_demo" category_id="navigation">
+	<sdk_desc>
+		<![CDATA[This sample demonstrates several material balls collecting coins on a plane with obstacles, navigating around by means of a <i>Navigation Mesh</i>.]]>
+	</sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample demonstrates several material balls collecting coins on a plane with obstacles, navigating around by means of a <i>Navigation Mesh</i>.]]>
+		</brief>
+	</desc>
+	<controls>
+		<![CDATA[
+		<p>You can move the obstacles in the scene with the <b>widget manipulator</b> (right-click on the object you want to move for the manipulator to appear).</p>
+		]]>
+	</controls>
+	<tags>
+		<tag>Navigation &amp; Patfinding</tag>
+		</tags>
+</sample>
+<sample title="Navigation Sectors" id="navigation_sectors" category_id="navigation">
+	<sdk_desc>
+		<![CDATA[This sample demonstrates how to configure pathfinding between two points with obstacles using <i>Navigation Sectors</i>.]]>
+	</sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample demonstrates how to configure pathfinding between two points with obstacles using <i>Navigation Sectors</i>.]]>
+		</brief>
+	</desc>
+	<controls>
+		<![CDATA[
+		<p>You can move the path endpoints and the obstacles in the scene with the <b>widget manipulator</b> (right-click on the object you want to move for the manipulator to appear).</p>
+		]]>
+	</controls>
+	<tags>
+		<tag>Navigation &amp; Patfinding</tag>
+		</tags>
+</sample>
+<sample title="Navigation Sectors Demo" id="navigation_sectors_demo" category_id="navigation">
+	<sdk_desc>
+		<![CDATA[This sample demonstrates several material balls collecting coins in a cube with obstacles, navigating around by means of a <i>Navigation Sector</i>.]]>
+	</sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample demonstrates several material balls collecting coins in a cube with obstacles, navigating around by means of a <i>Navigation Sector</i>.]]>
+		</brief>
+	</desc>
+	<controls>
+		<![CDATA[
+		<p>You can move the obstacles in the scene with the <b>widget manipulator</b> (right-click on the object you want to move for the manipulator to appear).</p>
+		]]>
+	</controls>
+	<tags>
+		<tag>Navigation &amp; Patfinding</tag>
+		</tags>
+</sample>
+<sample title="Simple HTTP Image Request" id="http_image_request" category_id="network">
+	<sdk_desc><![CDATA[This sample shows how to implement an asynchronous <i>HTTP</i> request to a <i>REST API</i> to download image files and apply them to scene objects at runtime.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[			<p>This sample shows how to implement an asynchronous <i>HTTP</i> request to a <i>REST API</i> to download image files and apply them to scene objects at runtime.</p>
+			<p>Two requests are performed to retrieve sample image data:</p>
+							<p> - <b>eu.httpbin.org/image/png</b> - to download a <i>PNG</i> image</p>
+				<p> - <b>eu.httpbin.org/image/jpeg</b> - to download a <i>JPEG</i> image</p>
+						<p>Only <i>PNG</i> and <i>JPEG</i> formats are supported for runtime loading into <i>Image</i> Class instance from raw data.</p>
+			<p>The <b>github.com/yhirose/cpp-httplib</b> library is used to perform the <i>HTTP</i> requests.</p>
+		]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Network</tag>
+		</tags>
+</sample>
+<sample title="Simple HTTP Image Response" id="http_image_response" category_id="network">
+	<sdk_desc><![CDATA[This sample demonstrates how to implement an asynchronous <i>HTTP</i> server that responds to <i>REST API</i> requests by sending image data. It captures the contents of the application window, converts the rendered frame to a <i>PNG</i> image in memory, and serves it via an embedded <i>HTTP</i> server.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[			<p>This sample demonstrates how to implement an asynchronous <i>HTTP</i> server that responds to <i>REST API</i> requests by sending image data. It captures the contents of the application window, converts the rendered frame to a <i>PNG</i> image in memory, and serves it via an embedded <i>HTTP</i> server.</p>
+			<p>For demonstration, open the <i>URL</i> displayed on the plate under the <i>Material Ball</i> in the scene.</p>
+		]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Network</tag>
+		</tags>
+</sample>
+<sample title="Simple HTTP Request" img="yes" id="http_simple_request" category_id="network">
+	<sdk_desc><![CDATA[Implementing asynchronous <i>HTTP GET</i> requests to external <i>REST API</i> and displaying the retrieved data in the user interface.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[			<p>This sample demonstrates how to implement asynchronous <i>HTTP GET</i> requests to external <i>REST API</i> and display the retrieved data in the user interface.</p>
+			<p>For demonstration, the sample performs two consecutive requests to external weather <i>API</i> and displays the results in real time.</p>
+							<p> - <b>Geocoding</b> - resolving a location by name using <i>geocoding-api.open-meteo.com</i>.</p>
+				<p> - <b>Current weather conditions</b> - retrieving live meteorological data for the selected location using <i>api.open-meteo.com</i>.</p>
+						<p>The <b>github.com/yhirose/cpp-httplib</b> library is used to perform <i>HTTP</i> requests asynchronously. Check the console to view more details from server.</p>
+			<p>The <i>JSON</i> response is processed using the <i>Json</i> Class and displayed in the sample <i>UI</i>. Additional response details can be viewed in the console output.</p>
+		]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Network</tag>
+		</tags>
+</sample>
+<sample title="Simple HTTP Response" id="http_simple_response" category_id="network">
+	<sdk_desc><![CDATA[Implementing a simple asynchronous <i>HTTP</i> server that returns current world coordinates of the player in response to external <i>REST API</i> requests.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[			<p>This example shows how to implement a simple asynchronous <i>HTTP</i> server that returns current world coordinates of the player in response to external <i>REST API</i> requests.</p>
+			<p>For demonstration, open the <i>URL</i> displayed on the plate in the scene.</p>
+		]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Network</tag>
+		</tags>
+</sample>
+<sample title="TCP Sockets" id="tcp_sockets" category_id="network">
+	<sdk_desc><![CDATA[Establishing and managing <i>TCP</i> socket connections between a server and multiple clients each represented by a UNIGINE-application. Clients can connect to the server, exchange text messages via the Console (<b>send_msg</b> command), and receive camera transform updates from the server.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[		<p>This sample demonstrates how to establish and manage <i>TCP</i> socket connections between a server and multiple clients each represented by a UNIGINE-application. Clients can connect to the server, exchange text messages via the Console (<b>send_msg</b> command), and receive camera transform updates from the server.</p>
+		<p><b>You need to have two instances of this 'C++ Samples' app running for this sample to work.</b></p>
+		<p>Each instance can operate in one of two modes: <i>Server</i> or <i>Client</i>. To select the mode click on the corresponding button below. There you can also specify the desired <i>host and port</i>.</p>
+		<p>The server uses a non-blocking socket to accept client connections and creates a dedicated background thread for each connection. The communication protocol is based on custom messages (e.g., text or camera transforms) packed and unpacked using <i>Blob</i> streams. On the client side, a socket is created and connected to the server. Incoming and outgoing messages are sent/received using two threadsafe queues. To send text messages to the peer use the sample-specific console command <b>send_msg</b> (e.g. <b>send_msg hello world</b>)</p>
+		<p>Incoming messages are parsed using message headers. Both client and server use message buffering, timeouts, and validation checks to maintain connection stability and prevent invalid data processing.</p>
+		<p>The sample provides options to configure the server address and port, switch between modes, and monitor active connections.</p>
+		]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Network</tag>
+		<tag>Basic Recipes</tag>
+		</tags>
+</sample>
+<sample title="UDP Sockets" id="udp_sockets" category_id="network">
+	<sdk_desc><![CDATA[Using the sockets API to send and receive UDP messages in the network between two peers each represented by a UNIGINE-application.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[<p>This sample shows how to use the sockets API to send and receive UDP messages between two peers in the network.</p>
+		<p><b>You need to have two instances of this 'C++ Samples' app running for this sample to work.</b></p>
+		<p>Each instance can operate in one of two modes: <i>Sender</i> or <i>Receiver</i>. To select the mode click on the corresponding button below. There you can also specify the <i>Receiver's hostname and port</i>.</p>
+		<p>In <i>Sender</i> mode the app packs the player's camera transform into a datagram and sends it to the Receiver on every engine update.</p>
+		<p>While in this mode you can also send text messages to the peer by using this sample-specific console command <b>send_msg</b> (e.g. <b>send_msg hello world</b>).</p>
+		<p>In <i>Receiver</i> mode the app receives and interprets incoming messages from the peer: the text messages are written to console, and the camera transforms are applied to the player.</p>]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Network</tag>
+		<tag>Basic Recipes</tag>
+		</tags>
+</sample>
+<sample title="Cluster" id="cluster" category_id="nodes">
+	<sdk_desc><![CDATA[Dynamic manipulation of <i>ObjectMeshCluster</i> in UNIGINE, showcasing how to add/remove mesh instances at runtime through user interaction.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[			<p>This sample demonstrates dynamic manipulation of <b>ObjectMeshCluster</b> in UNIGINE, showcasing how to add/remove mesh instances at runtime through user interaction. A <b>Mesh Cluster</b> allows you to bake identical meshes (with the same material applied to their surfaces) into a single object, which provides less cluttered spatial tree, reduces the number of texture fetches and speeds up rendering.</p>
+			<p><b>Core Features:</b></p>
+							<p> - <b>Placement and Removal</b> - click on empty ground adds a new mesh at the clicked position, click on existing cluster geometry removes the selected mesh instance from the cluster</p>
+				<p> - <b>Raycasting and Intersection Testing</b> - casts a ray from the camera through the mouse position to detect whether the user clicked on a cluster mesh or terrain</p>
+						<p><b>Use Cases:</b></p>
+							<p> - Scattering objects like rocks, grass, or debris</p>
+				<p> - Dynamic level editing and environment design</p>
+				<p> - Performance-sensitive applications with many similar mesh instances.</p>
+					]]>
+		</brief>
+	</desc>
+	<controls>
+		<![CDATA[
+		<b>Clicking</b> on an existing mesh removes it from the cluster.<br/><b>Clicking</b> in an empty space adds a new mesh.
+		]]>
+	</controls>
+	<tags>
+		<tag>Optimization</tag>
+		<tag>Objects</tag>
+		<tag>World Management</tag>
+		</tags>
+</sample>
+<sample title="Clutter-to-Cluster Converter" id="clutter_to_cluster" category_id="nodes">
+	<sdk_desc><![CDATA[Dynamic generation of a <i>Mesh Clutter</i> and its conversion into a performance-optimized <i>Mesh Cluster</i> at runtime.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[			<p>This sample demonstrates how to dynamically generate a clutter (<b>ObjectMeshClutter</b>) and convert it into an optimized cluster (<b>ObjectMeshCluster</b>) in real time. The clutter is generated using a random seed, and the conversion process transfers all key parameters from the clutter: materials, surface properties, LOD, shadows, physics, and collision settings.</p>
+			<p>The resulting cluster inherits the clutter's transform and hierarchy, but lets you <b>selectively edit and remove individual elements</b> of the group. Very often when building your worlds it is necessary to scatter meshes across a certain area randomly and then reposition some of them manually (e.g. when creating forests).</p>
+			<p><b>UI Features:</b></p>
+							<p> - <b>Generate Clutter</b> - Creates a randomized layout of clutter meshes.</p>
+				<p> - <b>Convert to Cluster</b> - Merges all clutter instances into a single <b>ObjectMeshCluster</b> with identical visual/physical behavior.</p>
+					]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Optimization</tag>
+		<tag>Objects</tag>
+		<tag>World Management</tag>
+		</tags>
+</sample>
+<sample title="Object Creation" id="create_objects" category_id="nodes">
+	<sdk_desc><![CDATA[Basics of working with Objects: creation and modification via API.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[			<p>This sample demonstrates the basics of working with <i><b>Objects</b></i> - how to create and modify objects via API, highlighting the differences between various types of objects (<i>ObjectMeshStatic, ObjectMeshDynamic, ObjectParticles</i>). <b>Objects</b> are characterized by a set of surfaces, an optional physical body and type-specific properties.</p>
+				<p>In this sample, we create and configure three types of objects with interactive controls:</p>
+				<p><b>1. Static Mesh Object (Material Ball)</b></p>
+									<p> - Load an existing <b>.mesh</b> file <i>(material_ball.mesh)</i>.</p>
+					<p> - Assigns a material to the object.</p>
+					<p> - Adds a <i>Body</i> with a <i>Box-shaped</i> collision.</p>
+								<p><b>2. Dynamic Mesh Object (Tetrahedron)</b></p>
+									<p> - Constructs a custom <i>ObjectMeshDynamic</i> manually.</p>
+					<p> - Applies a glass-like material.</p>
+					<p> - Adds a <i>Body</i> with a <i>Sphere-shaped</i> collision.</p>
+								<p><b>3. Particle System</b></p>
+									<p> - Creates a default <i>ObjectParticles</i> object.</p>
+					<p> - Configures <i>particle-specific parameters</i>, such as spawn rate and lifetime, and enables a <i>collision mask</i> for particle interaction.</p>
+								<p>Runtime Modifications (via Sample Menu)</p>
+									<p> - Adjust the albedo color of the <b>Static Mesh</b> material.</p>
+					<p> - Modify the mesh (tetrahedron base height) in the <b>Dynamic Mesh</b>.</p>
+					<p> - Tune the spawn rate of the <b>Particle System</b>.</p>
+					<p> - Toggle the visualization of surfaces and physical shapes of the objects.</p>
+								<p>For more complex objects, such as <i>ObjectWaterGlobal</i> and <i>ObjectLandscapeTerrain</i>, see the corresponding samples.</p>
+			]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Objects</tag>
+		<tag>Physics</tag>
+		<tag>Effects</tag>
+		</tags>
+</sample>
+<sample title="Dynamic Field Height" id="dynamic_field_height" category_id="nodes">
+	<sdk_desc><![CDATA[Creation of a dynamic <i>Field Height</i> with dynamic sine function texture using the C++ API.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[			<p>The sample illustrates the effect of simulating waves on a water surface, which is created using the <b>Field Height</b> object.</p>
+			<p>The code generates a heightmap that is dynamically modulated over time by a sinusoidal function, resulting in an oscillating visual representation.</p>
+		]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Procedural</tag>
+		<tag>Fields</tag>
+		<tag>Water</tag>
+		</tags>
+</sample>
+<sample title="Landscape Combined Modification" id="landscape_combined" category_id="nodes">
+	<sdk_desc><![CDATA[This sample demonstrates a hybrid approach to terrain editing using both non-destructive and destructive Landscape Terrain modification techniques.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[			<p>This sample demonstrates a hybrid approach to terrain editing using both <b>non-destructive</b> (using multiple <b>Landscape Layer Maps</b>) and <b>destructive</b> (using <b>Landscape::asyncTextureDraw()</b> method) <b>Landscape Terrain</b> modification techniques.</p>
+			<p><b>It works by:</b></p>
+							<p> - Sampling height data from a <b>Source</b> Landscape Layer Map</p>
+				<p> - 					<p>Using <b>Landscape::asyncTextureDraw()</b> in combination with a custom material additive height blending to modify the <b>Target</b> Layer Map if the sampled height is above the provided threshold:</p>
+											<p> - The target terrain is flattened (clamped to the height threshold)</p>
+						<p> - The target albedo (on the threshold height level) is painted orange.</p>
+									</p>
+						<p>This sample is ideal for tools that require selective terrain stamping, erosion masks, or custom terrain sculpting.</p>
+		]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Terrain</tag>
+		<tag>World Management</tag>
+		</tags>
+</sample>
+<sample title="Landscape Creation" id="landscape_create" category_id="nodes">
+	<sdk_desc><![CDATA[This sample demonstrates how to dynamically generate a Landscape Layer Map using tiled albedo, height, and mask textures.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[			<p>This sample demonstrates how to dynamically generate a <b>Landscape Layer Map</b> using tiled <b>albedo, height,</b> and <b>mask</b> textures. The process uses the <b>LandscapeMapFileCreator</b> and <b>LandscapeMapFileSettings</b> APIs to build a fully functional <b>.lmap</b> file and configure it for use with the <b>Landscape Terrain</b> object.</p>
+			<p><b>Key features:</b></p>
+							<p> - Supports tile-based input with user-defined grid size and resolution</p>
+				<p> - 					<p>Loads and validates image tiles for:</p>
+											<p> - <b>Albedo</b></p>
+						<p> - <b>Height</b></p>
+						<p> - <b>Grass mask</b></p>
+						<p> - <b>Stone mask</b></p>
+									</p>
+				<p> - Applies blend settings for each layer using <i><b>LandscapeMapFileSettings</b></i></p>
+				<p> - Automatically creates and attaches the landscape objects to the world.</p>
+						<p>This workflow is ideal for runtime terrain generation, procedural terrain tools, or editor extensions that need to assemble terrain data from image sources.</p>
+		]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Terrain</tag>
+		<tag>Procedural</tag>
+		</tags>
+</sample>
+<sample title="Landscape Details" id="landscape_details" category_id="nodes">
+	<sdk_desc><![CDATA[This sample demonstrates how to add and manage detail layers for a LandscapeTerrain object using the <i>getDetailMask()</i> and <i>addDetail()</i> methods.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[			<p>This sample demonstrates how to add and manage detail layers for a <b>LandscapeTerrain</b> object using the <i>getDetailMask()</i> and <i>addDetail()</i> methods.</p>
+			<p>It dynamically creates and configures three types of terrain details:</p>
+							<p> - <b>Grass</b></p> 				<p> - <b>Stone</b></p>
+				<p> - <b>Snow caps</b> (simple white material applied based on elevation using height constraints - no texture).</p>
+						<p><b>Each detail is:</b></p>
+							<p> - Mapped to a separate detail mask</p>
+				<p> - Assigned a custom material</p>
+				<p> - Ordered visually using <i>swapRenderOrder()</i> to ensure natural blending (stone below grass, grass below snow).</p>
+						<p>This setup is useful for biome-style terrain detailing, visual layering of materials, and real-time terrain customization.</p>
+		]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Terrain</tag>
+		</tags>
+</sample>
+<sample title="Landscape Excavation" id="landscape_excavation" category_id="nodes">
+	<sdk_desc><![CDATA[This sample demonstrates destructive, real-time modification of a Landscape Layer Map using a 3D object (e.g., a tractor grader) as an excavation tool.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[			<p>This sample demonstrates <b>destructive, real-time modification</b> of a <b>Landscape Layer Map</b> using a 3D object (e.g., a tractor grader) as an excavation tool.</p>
+			<p><b>Key features:</b></p>
+							<p> - Samples base terrain height from a <b>source layer</b></p>
+				<p> - Projects the grader's <b>depth map</b> onto the terrain using an <b>orthographic camera</b></p>
+				<p> - Uses a custom material (<b>digging_tool.basemat</b>) to update height data and clear mask layers</p>
+				<p> - Applies updates asynchronously using <i>Landscape::asyncTextureDraw()</i></p>
+				<p> - Supports full interactive movement and rotation of the grader with the <i>Manipulator</i> widget.</p>
+						<p>This sample is ideal for developing terrain deformation mechanics in simulators, construction games, or any scenario requiring runtime landscape sculpting based on object interaction.</p>
+		]]>
+		</brief>
+	</desc>
+	<controls>
+		<![CDATA[
+		<b>WASD QE</b> - move camera<br/><br/>
+		<b>C</b> - reset terrain modifications<br/>
+		Grader Movement:<br/>
+		<b>T</b> - translate<br/>
+		<b>R</b> - rotate<br/>
+		<b>G</b> - toggle local / world basis<br/>
+		]]>
+	</controls>
+	<tags>
+		<tag>Terrain</tag>
+		<tag>Basic Recipes</tag>
+		</tags>
+</sample>
+<sample title="Landscape Fetch" id="landscape_fetch" category_id="nodes">
+	<sdk_desc><![CDATA[This sample demonstrates how to retrieve detailed information from a LandscapeTerrain object on its surface using LandscapeFetch.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[			<p>This sample demonstrates how to retrieve detailed information from a <b>LandscapeTerrain object</b> at any arbitrary point on its surface using <b>LandscapeFetch</b>.</p>
+			<p><b>Key Features:</b></p>
+							<p> - Casts a ray from the camera through the mouse cursor</p>
+				<p> - Performs asynchronous intersection tests with the terrain</p>
+				<p> - <p>Retrieves:</p>
+											<p> - Surface <b>height</b></p>
+						<p> - Surface <b>normal</b></p>
+						<p> - <b>Blend mask values</b> for all configured layers</p>
+						<p> - Surface albedo</p>
+									</p>
+				<p> - <p>Visualizes results in the viewport with:</p>
+											<p> - A <b>normal vector</b></p>
+						<p> - A floating <b>text box</b> showing the terrain fetch data.</p>
+									</p>
+						<p>This feature can be used for terrain debugging, editor extensions, dynamic content placement, and real-time visualization of terrain attributes.</p>
+			]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Terrain</tag>
+		<tag>Objects</tag>
+		<tag>Intersections</tag>
+		<tag>Materials</tag>
+		</tags>
+</sample>
+<sample title="Landscape Paint Clutter" id="landscape_mask_paint" category_id="nodes">
+	<sdk_desc><![CDATA[This sample demonstrates real-time painting of Landscape Layer Map mask data using a customizable brush system.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[			<p>This sample demonstrates real-time painting of <b>Landscape Layer Map</b> mask data using a customizable brush system.</p>
+			<b><p>Key Features:</p></b>
+							<p> - Terrain modification using <i>Landscape::asyncTextureDraw()</i></p>
+				<p> - <p>Brush parameters:</p>
+											<p> - Texture, mask</p>
+						<p> - Size, angle, spacing, opacity</p>
+									</p>
+				<p> - Visual brush preview via <i>DecalOrtho</i></p>
+				<p> - Powered by a custom base material (<b>landscape_mask_brush.basemat</b>) for applying edits.</p>
+						<p>Ideal for runtime editing tools, vegetation control, or any system requiring dynamic terrain mask authoring.</p>
+		]]>
+		</brief>
+	</desc>
+	<controls>
+		<![CDATA[
+		<b>WASD</b> - move camera<br/>
+		<b>RMB</b> - rotate camera<br/>
+		<b>Shift + Mouse Wheel</b> - change brush angle<br/>
+		<b>Ctrl + Mouse Wheel</b> - change brush size
+		]]>
+	</controls>
+	<tags>
+		<tag>Terrain</tag>
+		</tags>
+</sample>
+<sample title="Landscape Mesh" id="landscape_mesh" category_id="nodes">
+	<sdk_desc><![CDATA[This sample demonstrates how to generate a procedural mesh (ObjectMeshDynamic) that represents a selected region of the Landscape Terrain.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[			<p>This sample demonstrates how to generate a procedural mesh (<b>ObjectMeshDynamic</b>) that represents a selected region of the <b>Landscape Terrain</b>.</p>
+			<p><b>Key Features:</b></p>
+							<p> - Terrain data (height and albedo) is fetched at runtime using <b>LandscapeFetch</b></p>
+				<p> - Mesh resolution, position, scale, and rotation can be customized via UI</p>
+				<p> - Optionally render a bounding box and wireframe overlay</p>
+				<p> - <p>Ideal for:</p>
+											<p> - Runtime terrain previews</p>
+						<p> - Simplified <b>LOD</b> meshes or data extraction for analysis/simulation.</p>
+									</p>
+						<p>The generated mesh uses a basic material and includes color data sampled from the terrain's albedo layer. Use the <b>Generate</b> button to fetch terrain data and construct the mesh in real time.</p>
+		]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Terrain</tag>
+		<tag>Objects</tag>
+		</tags>
+</sample>
+<sample title="Landscape Paint" id="landscape_paint" category_id="nodes">
+	<sdk_desc><![CDATA[This sample demonstrates real-time terrain modification through direct manipulation of Landscape Layer Maps.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[			<p>This sample demonstrates several techniques for destructive runtime modification of the <b>Landscape Terrain</b> by altering the underlying textures of a <b>Landscape Layer Map</b> using <b>Landscape::asyncTextureDraw()</b> in combination with custom base materials.</p>
+			<p>It features three distinct painting modes:</p>
+							<p> - <b>Albedo Painter:</b> Allows painting of the terrain's albedo texture using a customizable brush (texture, mask, size, angle, opacity, and color).</p>
+				<p> - <b>Height Painter:</b> Enables height modification using height values and scaling options, along with support for alpha or additive blending modes.</p>
+				<p> - <b>Height To Albedo:</b> Converts terrain height data into albedo colorization based on a user-selected gradient and specified height range.</p>
+						<p>You can dynamically change brush parameters through a UI panel (textures, masks, gradient, size, spacing, angle, opacity, and color) and visualize the brush as an orthographic decal projected onto the terrain.</p>
+			<p><b>Use Cases</b></p>
+							<p> - Runtime terrain painting tools for level editors and world-building interfaces</p>
+				<p> - Terrain sculpting systems in games or simulations</p>
+				<p> - Custom height-based texturing workflows for stylized or procedurally modified terrains</p>
+				<p> - Visualization of terrain blending behavior with UI interactivity.</p>
+						]]>
+		</brief>
+	</desc>
+	<controls>
+		<![CDATA[
+		<b>WASD</b> - move camera<br/>
+		<b>RMB</b> - rotate camera<br/>
+		<b>Shift + Mouse Wheel</b> - change brush angle<br/>
+		<b>Ctrl + Mouse Wheel </b>- change brush size
+		]]>
+	</controls>
+	<tags>
+		<tag>Terrain</tag>
+		<tag>Objects</tag>
+		<tag>Materials</tag>
+		</tags>
+</sample>
+<sample title="Landscape Tracks" id="landscape_tracks" category_id="nodes">
+	<sdk_desc><![CDATA[Non-destructive runtime modification of the <i>Landscape Terrain</i> by dynamically spawning multiple <i>Landscape Layer Maps</i> beneath moving objects to create realistic track imprints on the terrain.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[			<p>This sample demonstrates non-destructive runtime modification of the <b>Landscape Terrain</b> by dynamically spawning multiple <b>Landscape Layer Map</b> beneath moving objects (such as vehicles or characters) to create realistic track imprints on the terrain.<br/> Each track is rendered using a dedicated <b>Landscape Layer Map</b> that blends additively with the terrain&#8217;s height data and alpha blends with the albedo, producing visually convincing trails without altering the original terrain layers.</p>
+			<p><b>Key Features</b></p>
+							<p> - Automatic track spawning based on object movement</p>
+				<p> - Track maps are spawned only when the object has moved a minimum distance (user-defined)</p>
+				<p> - The number of active track maps is limited for performance (configurable limit)</p>
+				<p> - Albedo and height blending are handled via standard non-destructive layering, ensuring easy track removal or replacement.</p>
+						<p><b>Customizable Parameters</b></p>
+							<p> - <b>Min Distance Between Tracks</b> - Controls how frequently new track maps are spawned based on movement</p>
+				<p> - <b>Max Number of Track Maps</b> - Caps the number of simultaneously active track layers to manage memory and performance.</p>
+						<p><b>Use Cases</b></p>
+							<p> - Vehicle or character track systems for games and simulations</p>
+				<p> - Temporary terrain effects (e.g., tire marks, footprints, sliding trails)</p>
+				<p> - Runtime procedural content that doesn't permanently modify base terrain.</p>
+					]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Terrain</tag>
+		<tag>Vehicle</tag>
+		<tag>Basic Recipes</tag>
+		</tags>
+</sample>
+<sample title="Lights" id="lights" category_id="nodes">
+	<sdk_desc><![CDATA[This sample demonstrates how to create light sources (<b>World Light, Projected Light, Omni Light</b>) and modify their parameters at runtime.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[			<p>This sample demonstrates how to create light sources and modify their parameters at runtime:</p>
+							<p> - <b>World Light</b> - an infinitely remote light source casting orthographically projected beams onto the scene.</p>
+				<p> - <b>Projected Light</b> - a light source that casts light from a single point forming a focused beam aimed in a specific direction.</p>
+				<p> - <b>Omni Light</b> - a point source emitting light in all directions (360 degrees) and realistically reproducing shadow cast.</p>
+					]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Lighting</tag>
+		</tags>
+</sample>
+<sample title="Node Extern" id="node_extern" category_id="nodes">
+	<sdk_desc><![CDATA[This sample adds custom nodes that were created via API to the world by using <b>NodeExtern</b>. It shows how to implement bound box visualization and runtime node configuration while maintaining engine integration. Useful for adding specialized nodes with custom behavior and visualization.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[			<p>UNIGINE allows you to extend its out-of-the-box functionality in various ways, including adding custom nodes with personalized behavior, functions, and visualization (if needed).</p>
+			<p>This sample demonstrates how to implement a custom user node based on the <b>NodeExtern</b> class, featuring bounding box visualization and runtime configuration of node parameters (e.g., bounding box color). These nodes can then be added to your scene via API.</p>
+		]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Objects</tag>
+		<tag>Extension &amp; Customization</tag>
+		</tags>
+</sample>
+<sample title="Object Extern" id="object_extern" category_id="nodes">
+	<sdk_desc><![CDATA[This sample adds custom objects created via API to the world by using <b>ObjectExtern</b>. It shows how to implement custom rendering, physics, and properties while maintaining full engine integration. Used to add specialized objects with unique geometry and behavior to your scenes.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[		<p>UNIGINE allows you to extend its out-of-the-box functionality in various ways, including adding your own objects with custom geometry and behavior (e.g., custom particle systems, meshes with custom culling, animated GPU-based crowd rendering solutions, etc.).</p>
+		<p>This sample demonstrates how to implement custom user objects based on the <b>ObjectExtern</b> class, incorporating custom rendering, physics, and properties, while maintaining full engine integration. These objects can then be added to your scene via API.</p>]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Objects</tag>
+		<tag>Extension &amp; Customization</tag>
+		</tags>
+</sample>
+<sample title="Players" id="players" category_id="nodes">
+	<sdk_desc><![CDATA[Creation and configuration of the four <i>Players</i> available (<i>PlayerDummy, PlayerPersecutor, PlayerSpectator, PlayerActor</i>).]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[			<p>This sample demonstrates how to create and configure the four available <b>Players</b>:</p>
+							<p> - <b>PlayerDummy</b> - a manually controlled camera that has no physical properties and cannot collide with objects.</p>
+				<p> - <b>PlayerPersecutor</b> - a third-person chase camera that follows a target with adjustable distance.</p>
+				<p> - <b>PlayerSpectator</b> - a free-fly camera without a physical body.</p>
+				<p> - <b>PlayerActor</b> - a player with a rigid physical body, which is approximated with a capsule and has physical properties. Can only walk on the ground.</p>
+						<p>Each player is instantiated with appropriate settings (collision, movement parameters, camera settings), and a GUI panel lets you <b>switch between them at runtime</b>. You can also modify camera parameters like <b>FOV, near/far clipping planes,</b> etc.</p>
+		]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Cameras</tag>
+		</tags>
+</sample>
+<sample title="Spline Graph" id="spline_graph" category_id="nodes">
+	<sdk_desc><![CDATA[This sample demonstrates how to create and visualize a spline graph (SplineGraph), and move an object along it using the C++ API.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[			<p>This sample demonstrates how to create and visualize a spline graph (<i><b>SplineGraph</b></i>), and move an object along it using the C++ API. A <b>SplineGraph</b> is created at <i>Initialization</i> by adding points and segments using its API (<i>addPoint(), addSegment()</i> methods), with control points placed randomly.</p>
+							<p> - A cube mesh is created and added to the scene.</p>
+				<p> - During the <i>Update</i> stage, the cube moves along the spline by switching between its consecutive segments and evaluating a point on it using the <i>calcSegment*</i> methods.</p>
+					]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Animation</tag>
+		<tag>Water</tag>
+		</tags>
+</sample>
+<sample title="State Save Restore" id="state_save_restore" category_id="nodes">
+	<sdk_desc><![CDATA[This sample demonstrates how to save and restore the state of an arbitrary Node, which can be used to implement things like Scene serialization, Undo/Redo systems, or Game saves.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[			<p>This sample demonstrates how to save and restore the state of an arbitrary Node using the <i>saveState()</i> and <i>restoreState()</i> methods. In this sample we:</p>
+							<p> - At <i>Initialization</i> create a <i><b>Blob</b></i> container for state storage and save the initial state of the referenced node.</p>
+				<p> - Enable visualizer (a semi-transparent box) at saved position for visualization.</p>
+				<p> - Save and restore the Node's state at any time by clicking the sample UI panel's <i>Save</i> and <i>Restore</i> buttons.</p>
+						<p><b>Use Cases</b>:</p>
+							<p> - Game saves</p>
+				<p> - Undo/Redo systems</p>
+				<p> - Scene serialization</p>
+					]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Objects</tag>
+		<tag>Logic</tag>
+		<tag>Basic Recipes</tag>
+		</tags>
+</sample>
+<sample title="Buoyancy" id="water_buoyancy" category_id="nodes">
+	<sdk_desc><![CDATA[This sample demonstrates real-time wave control and buoyancy simulation without engaging Physics.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[			<p>This sample demonstrates realistic water interaction in UNIGINE, showcasing both the current state of <b>Global Water</b> control via changing <b>Beaufort</b> levels and the use of fetching the water level at a certain point for a simplified simulation of buoyancy without engaging Physics.</p>
+			<p><b>Core Features:</b></p>
+			<p><b>Global Water Control.</b> Adjust ocean conditions in real-time using the <b>Beaufort slider</b> <b>(0-12)</b>. Higher values create stormier waves with enhanced foam and detail.</p>
+			<p><b>Optimized Buoyancy System</b>. Simulates floating objects without full physics collisions. Uses three anchor points for stable wave-following behavior. It then smoothly adjusts the object's position and rotation to match the waves, with calculations based on:</p>
+											<p> - Object mass (customizable)</p>
+						<p> - Global buoyancy coefficient (adjustable via <b>Buoyancy slider</b>)</p>
+						<p> - Water surface steepness and wave height.</p>
+								<p><b>Use Cases:</b></p>
+									<p> - Marine simulations</p>
+					<p> - Weather system prototyping</p>
+					<p> - Performance-sensitive scenes with many floating objects</p>
+					<p> - Games needing stylized water interactions.</p>
+							]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Water</tag>
+		<tag>Maritime</tag>
+		<tag>Optimization</tag>
+		</tags>
+</sample>
+<sample title="Custom Waves" id="water_custom_wave" category_id="nodes">
+	<sdk_desc><![CDATA[This sample demonstrates how to control the wave spectrum of Global Water in Manual mode via API]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[			<p>This sample demonstrates how to control the wave spectrum of <b>Global Water</b> in <b>Manual</b> mode via API over wave parameters (octaves - a set of waves at a specific size/frequency level, count per octave, length, amplitude, phase, and steepness).</p>
+			<p>Because all wave parameters are managed on the CPU side, they can be dynamically generated, modified, or stored for reproducible results and external integration (for example, to process Weather Control packets from IOS).</p>
+			<p>The maximum number of waves is <b>256</b>, but higher values significantly affect performance, so we recommend keeping the number below 100 and using the minimum possible number.</p>
+		]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Water</tag>
+		<tag>Maritime</tag>
+		</tags>
+</sample>
+<sample title="Fetch and Intersection Water Parameters" id="water_fetch_intersection" category_id="nodes">
+	<sdk_desc><![CDATA[This sample demonstrates how various parameters influence the accuracy of fetch and intersection operations on the Global Water object across different Beaufort levels.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[			<p>This sample demonstrates how various parameters influence the accuracy of <b>fetch</b> (sampling water height and normal) and <b>intersection</b> (ray-water collision detection) operations on the <b>Global Water</b> object across different <b>Beaufort</b> levels (the Beaufort slider).</p>
+			<p>You can interactively adjust the following parameters:</p>
+							<p> - <b>Steepness Quality</b>: Controls wave detail resolution used in sampling.</p>
+				<p> - <b>Amplitude Threshold</b>: Filters out minor waves to improve performance at the cost of detail.</p>
+				<p> - <b>Precision</b>: Controls ray-water intersection accuracy. Lower values reduce jitter when intersecting at an angle.</p>
+				<p> - <b>Intersection Angle</b>: Adjusts the incoming ray direction for intersection tests, helping evaluate how steep angles affect detection stability.</p>
+						<p>The UI also allows you to:</p>
+							<p> - Select between <b>Fetch</b> and <b>Intersection</b> modes</p>
+				<p> - Show or hide <b>normals</b> at the sampled points</p>
+				<p> - Adjust the <b>number of samples</b> and <b>visual point size</b></p>
+						<p>Intersection rays are visualized with blue arrows. If jitter occurs at non-zero intersection angles, try lowering the <b>Precision</b> value.</p>
+			<p>This sample is useful for fine-tuning water interaction accuracy in physics, gameplay, and visual effects - especially when working with sloped or moving viewpoints (e.g., cameras, characters, or objects interacting with water).</p>
+		]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Water</tag>
+		<tag>Maritime</tag>
+		<tag>Intersections</tag>
+		</tags>
+</sample>
+<sample title="Physical Buoyancy" id="water_physical_buoyancy" category_id="nodes">
+	<sdk_desc><![CDATA[This sample demonstrates how to implement physically accurate buoyancy for dynamic objects floating on Global Water.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[			<p>This sample demonstrates how to implement <b>physically accurate buoyancy</b> for dynamic objects floating on <b>Global Water</b>. A physical body is divided into a grid of virtual volume elements, each sampled independently for water height. Based on how much of each cell is submerged, the system:</p>
+							<p> - Calculates and applies distributed <b>buoyant forces</b></p>
+				<p> - Adds appropriate <b>torque</b> to simulate rotation</p>
+				<p> - Applies <b>linear and angular damping</b> depending on submerged volume.</p>
+						<p>You can also define a <b>custom center of mass</b>, and optionally enable <b>debug visualization</b> of submerged sections, force directions, and sampling points via API. Use the <b>Global Water</b> object across different <b>Beaufort</b> slider parameter to adjust wave intensity.</p>
+			<p>This approach is useful for games and simulators involving boats, ships, debris, or physics-based water interactions.</p>
+		]]>
+		</brief>
+	</desc>
+	<controls> 
+		<![CDATA[<p align=left><b>WASD</b> to control the boat.</p>
+		<p align=left><b>Mouse movements</b> to rotate the camera.</p>
+		]]>
+	</controls>
+	<tags>
+		<tag>Water</tag>
+		<tag>Maritime</tag>
+		<tag>Physics</tag>
+		</tags>
+</sample>
+<sample title="Simple Boat" id="water_simple_boat" category_id="nodes">
+	<sdk_desc><![CDATA[Simulating dynamic wake foam behind a moving boat using a combination of <i>Orthographic Decals</i> and <i>Particle Systems</i>.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[			<p>This sample demonstrates how to simulate dynamic wake foam behind a moving boat using a combination of <i><b>Orthographic Decals</b></i> and <i><b>Particle Systems</b></i>. The foam effect responds to the boat's velocity in real time:</p>
+							<p> - <b>Decal size</b> is adjusted based on the area covered by particles</p>
+				<p> - <b>Particle lifetime, spawn rate, and velocity</b> are scaled proportionally to the boat's speed.</p>
+						<p>A <b>Beaufort</b> slider allows control over sea state - from calm (<b>0</b>) to stormy (<b>8</b>) - to observe how foam reacts in different wave conditions. This setup is ideal for adding convincing surface wake and motion trails to ships or watercraft in real-time environments.</p>
+		]]>
+		</brief>
+	</desc>
+	<controls>
+		<![CDATA[
+		<p align=left><b>WASD</b> to control the boat.</p>
+		]]>
+	</controls>
+	<tags>
+		<tag>Water</tag>
+		<tag>Maritime</tag>
+		<tag>Basic Recipes</tag>
+		<tag>Decals</tag>
+		<tag>Effects</tag>
+		</tags>
+</sample>
+<sample title="WorldSplineGraph" id="world_spline_graph" category_id="nodes">
+	<sdk_desc><![CDATA[Generating spline-based geometry by creating a <i>WorldSplineGraph</i> from an <i>*.spl</i> file and applying <i>*.node</i> geometry in stretching mode for placing objects along splines]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample demonstrates how to integrate a spline-based geometry system into a world environment. A <i>WorldSplineGraph</i> class instance is created and populated with data from an external <b>*.spl</b> file, which defines the spatial structure of the graph. Geometry is then applied to each segment using a predefined <b>*.node</b> file, rendered in stretching mode to ensure it conforms seamlessly to the shape and length of each spline.]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Objects</tag>
+		</tags>
+</sample>
+<sample title="Body Events" id="body_events" category_id="physics">
+	<sdk_desc><![CDATA[Demonstrating the usage of <i>Frozen, Position</i>, and <i>ContactEnter</i> events of the Body class via the C++ API]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample demonstrates how to use the <i>Frozen</i>, <i>Position</i>, and <i>ContactEnter</i> events of the <i>Body</i> class via the C++ API.]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Physics</tag>
+		<tag>Systems</tag>
+		<tag>Logic</tag>
+		</tags>
+</sample>
+<sample title="BodyFracture Explosion" id="body_fracture_explosion" category_id="physics">
+	<sdk_desc><![CDATA[Simulating a radial explosion that triggers BodyFracture object to crack and applies forces to its pieces.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[		<p>This sample demonstrates how to simulate an explosion that fractures physical objects within its radius using the <i>BodyFracture</i> class. Each object affected by the explosion is dynamically fractured into separate physical fragments depending on its proximity to the center of the explosion and the decreasing explosion strength over distance.</p>
+		<p>The force applied to the fragments pushes them outward from the explosion center, creating a realistic dispersal effect. A built-in debug visualization clearly displays the explosion radius and the direction of the applied forces, making it easier to understand and adjust the fracture behavior and explosion dynamics. The explosion can be manually triggered via a simple interface button.</p>
+		]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Physics</tag>
+		<tag>Systems</tag>
+		<tag>Logic</tag>
+		</tags>
+</sample>
+<sample title="BodyFracture Falling Spheres" id="body_fracture_falling_spheres" category_id="physics">
+	<sdk_desc><![CDATA[Continuously falling objects fracturing upon collision implemented using the <i>BodyFracture</i> class.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[		<p>This sample demonstrates continuous fracturing of objects using <i>BodyFracture</i> class. Spheres are periodically spawned every 3 seconds and fall freely under gravity. Upon collision with the ground, each sphere fractures dynamically into multiple physical fragments.</p>
+		<p>The sample includes a debug visualization that displays mesh wireframes, providing clear insight into internal mesh structure and fracture patterns generated upon impact.</p>
+		]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Physics</tag>
+		<tag>Systems</tag>
+		<tag>Logic</tag>
+		</tags>
+</sample>
+<sample title="BodyFracture Shooting Gallery" id="body_fracture_shooting_gallery" category_id="physics">
+	<sdk_desc><![CDATA[Implementation of a basic physics-driven shooting gallery using <i>Fracture Body</i>.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[			<p>This sample shows how to simulate projectile-based interactions in a simple shooting gallery setup using <b>Fracture Body</b>. When the left mouse button is clicked, a projectile is spawned in front of the camera and propelled forward. Target objects in the scene react to the impact physically and can be fractured using the <b>Fracture Body</b> system to simulate realistic destruction effects.</p>
+			<p><b>Use Cases:</b></p>
+									<p> - Prototyping physics-based shooting mechanics.</p>
+					<p> - Demonstrating <b>Fracture Body</b> impulse interactions.</p>
+					<p> - Testing fracture behaviors in destructible environment setups.</p>
+						]]>
+		</brief>
+	</desc>
+	<controls>
+		<![CDATA[<p><b>LMB</b> - fire a projectile.</p>]]>
+	</controls>
+	<tags>
+		<tag>Basic Recipes</tag>
+		<tag>Physics</tag>
+		</tags>
+</sample>
+<sample title="Joint Events" id="joint_events" category_id="physics">
+	<sdk_desc><![CDATA[Demonstrating the usage of the <i>Broken</i> event of the <i>Joint</i> class via the C++ API]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample demonstrates how to use the <i>Broken</i> event of the <i>Joint</i> class via the C++ API. This event allows you to react when a joint is broken due to physical forces during the simulation.]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Physics</tag>
+		<tag>Systems</tag>
+		<tag>Logic</tag>
+		</tags>
+</sample>
+<sample title="Physics Movement" id="physics_movement" category_id="physics">
+	<sdk_desc><![CDATA[Simple logic of moving an object using physical methods (by force or by impulse).]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample demonstrates a simple logic of moving an object using physical methods (by force or by impulse). You can choose the desired method and control maximum speed, rotation speed, and accelerations using sliders.]]>
+		</brief>
+	</desc>
+	<controls>
+		<![CDATA[
+		<p align=left><b>WASD</b> to control the box.</p>
+		]]>
+	</controls>
+	<tags>
+		<tag>Physics</tag>
+		</tags>
+</sample>
+<sample title="Update Physics" id="update_physics" category_id="physics">
+	<sdk_desc><![CDATA[Demonstration of the difference between implementation of physics-driven movement within the <i>update()</i> and <i>updatePhysics()</i> methods.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample demonstrates the difference between <i>update()</i> and <i>updatePhysics()</i> methods.]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Physics</tag>
+		<tag>Logic</tag>
+		</tags>
+</sample>
+<sample title="FMOD Core" id="fmod_core" category_id="plugins">
+	<sdk_desc><![CDATA[
+		<p><b>FMOD Core</b> integration for real-time playback of 2D and 3D sounds with timeline control and DSP effects.</p>
+		<p><br/><b>NOTICE: Additional libraries are required, run the sample for details.</b></p>
+	]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[			<p>Before running this sample, follow the steps provided in the setup section or in the FMOD Integration Guide linked below.</p>
+			<p>This sample loads the <i>FMOD</i> plugin and initializes the <i>Core</i> system to demonstrate playback of both 2D and 3D sound instances, supporting up to <b>1024</b> simultaneous sound channels. You can switch between the 2D and 3D scenes to observe and interact with different sound behaviors.</p>
+			<p>Two sound modes are presented:</p>
+							<p> - <b>2D Music Playback</b>: Standard audio playback with support for volume adjustment and a distortion DSP effect</p>
+				<p> - <b>3D Music Playback</b>: Sound is emitted from a red sphere in 3D space, demonstrating positional audio in the environment. Move the camera to experience changes in sound direction and attenuation in real time.</p>
+						<p><b>Use Cases:</b></p>
+							<p> - Integrating FMOD Core into runtime environments for games or simulations</p>
+				<p> - Prototyping spatial sound design and 3D audio placement.</p>
+						<p><br/><br/><b>Sample Requirements</b><br/></p>
+			<p>1. Download and install <b>FMOD Engine (version 2.02.04)</b> for your OS available on the official website (<b>https://www.fmod.com/download</b>).<br/></p>
+			<p>2. Go to the FMOD installation folder and copy the following files to the <b>bin</b> folder of your project:<br/></p>
+			<p><br/><b>for Windows:</b></p>
+									<p> - <b>fmod.dll, fmodL.dll</b> from <b>/api/core/lib/x64/</b></p>
+					<p> - <b>fsbank.dll, libfsbvorbis64.dll, opus.dll</b> from <b>/api/fbank/lib/x64/</b>.</p>
+					<p> - <b>fmodstudio.dll, fmodstudioL.dll</b> from <b>/api/studio/lib/x64/</b></p>
+							<p><br/><b>for Linux</b></p>
+									<p> - <b>libfmod.so.13, libfmodL.so.13</b> from <b>/api/core/lib/x64/</b></p>
+					<p> - <b>libfsbank.so.13, libfsbankL.so.13, libfsbvorbis.so, libopus.so</b> from <b>/api/fbank/lib/x64/</b></p>
+					<p> - <b>libfmodstudio.so.13, libfmodstudioL.so.13</b> from <b>/api/studio/lib/x64/</b></p>
+						]]>
+		</brief>
+	</desc>
+	<link_docs>https://developer.unigine.com/docs/code/plugins/fmod/index?rlang=cpp</link_docs>
+	<tags>
+		<tag>Sound</tag>
+		<tag>Plugins</tag>
+		<tag>Integration</tag>
+		<tag>Extension &amp; Customization</tag>
+		</tags>
+</sample>
+<sample title="FMOD Studio" id="fmod_studio" category_id="plugins">
+	<sdk_desc><![CDATA[
+		<p><b>FMOD Studio</b> integration with real-time interactive audio effects, spatialization, and Doppler effect simulation.</p>
+		<p><br/><b>NOTICE: Additional libraries are required, run the sample for details.</b></p>
+	]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[			<p>Before running this sample, follow the steps provided in the setup section or in the FMOD Integration Guide linked below.</p>
+			<p>This sample demonstrates how to control, simulate, and visualize real-time audio events using the <i>FMOD Studio</i> plugin.</p>
+			<p>The setup includes a stationary object (car) and a moving object representing a source of Doppler-shifted sound, which can be toggled and adjusted via the <i>Doppler</i> tab of the GUI Parameters section. Additional sound settings such as wind, rain, the car engine RPM sound, and overall environmental volume can also be fine-tuned in real time under the <i>Ambience, Engine</i>, and <i>VCA</i> tabs.</p>
+			<p><b>Use Cases:</b></p>
+							<p> - Prototyping audio-driven game mechanics (e.g., vehicle audio, spatial ambiences, Doppler effects)</p>
+				<p> - Demonstrating dynamic audio parameters and movement-based effects like Doppler shifts.</p>
+						<p><br/><br/><b>Sample Requirements</b><br/></p>
+			<p>1. Download and install <b>FMOD Engine (version 2.02.04)</b> for your OS available on the official website (<b>https://www.fmod.com/download</b>).<br/><br/></p>
+			<p>2. Go to the FMOD installation folder and copy the following files to the <b>bin</b> folder of your project:<br/></p>
+			<p><br/><b>for Windows:</b></p>
+									<p> - <b>fmod.dll, fmodL.dll</b> from <b>/api/core/lib/x64/</b></p>
+					<p> - <b>fsbank.dll, libfsbvorbis64.dll, opus.dll</b> from <b>/api/fbank/lib/x64/</b>.</p>
+					<p> - <b>fmodstudio.dll, fmodstudioL.dll</b> from <b>/api/studio/lib/x64/</b></p>
+							<p><br/><b>for Linux</b></p>
+									<p> - <b>libfmod.so.13, libfmodL.so.13</b> from <b>/api/core/lib/x64/</b></p>
+					<p> - <b>libfsbank.so.13, libfsbankL.so.13, libfsbvorbis.so, libopus.so</b> from <b>/api/fbank/lib/x64/</b></p>
+					<p> - <b>libfmodstudio.so.13, libfmodstudioL.so.13</b> from <b>/api/studio/lib/x64/</b></p>
+						]]>
+		</brief>
+	</desc>
+	<link_docs>https://developer.unigine.com/docs/code/plugins/fmod/index?rlang=cpp</link_docs>
+	<tags>
+		<tag>Sound</tag>
+		<tag>Plugins</tag>
+		<tag>Integration</tag>
+		<tag>Extension &amp; Customization</tag>
+		</tags>
+</sample>
+<sample title="Camera to Texture" id="camera_to_texture" category_id="render">
+	<sdk_desc><![CDATA[Capturing a camera's output in real time and projecting it onto a material's albedo texture using <i>Viewport::renderTexture2D()</i>]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample shows how to capture the output of a camera in real time and project it onto a material's albedo texture using <i>Viewport::renderTexture2D()</i>.]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Render</tag>
+		<tag>Materials</tag>
+		</tags>
+</sample>
+<sample title="Compute Shader" id="compute_shader" category_id="render">
+	<sdk_desc><![CDATA[Creating a compute shader to process a million of particles]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample demonstrates a GPU-based particle system implemented with compute shaders. It initializes a dynamic particle renderer, updates particle positions and velocities each frame using a ping-pong texture mechanism, and uses UV-mapped static meshes to influence particle behavior.]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Render</tag>
+		<tag>Shaders</tag>
+		</tags>
+</sample>
+<sample title="Compute Shader Image" id="compute_shader_image" category_id="render">
+	<sdk_desc><![CDATA[Creating a compute shader that processes a read-write texture on GPU (without CPU)]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample demonstrates how to create a texture at runtime and update it entirely on the GPU using compute shaders with read-write (unordered) access. The 2D texture is dynamically created and assigned to a material's albedo slot.]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Render</tag>
+		<tag>Shaders</tag>
+		</tags>
+</sample>
+<sample title="FFP Depth Visualizer" id="ffp_depth" category_id="render">
+	<sdk_desc>
+		<![CDATA[			<p>This sample demonstrates how to render custom visual elements (lines) using the <i>FFP</i> with depth testing enabled.</p>
+			<p>The elements are drawn during the visualizer stage and properly sorted with respect to scene geometry using the depth buffer.</p>
+		]]>
+	</sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[			<p>This sample demonstrates how to render custom visual elements (lines) using the <i>FFP</i> with depth testing enabled.</p>
+			<p>The elements are drawn during the visualizer stage and properly sorted with respect to scene geometry using the depth buffer.</p>
+		]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Render</tag>
+		</tags>
+</sample>
+<sample title="G-Buffer Read" id="gbuffer_read" category_id="render">
+	<sdk_desc><![CDATA[Accessing <i>G-buffer</i> textures at different stages of the rendering process by configuring a custom <i>Viewport</i> and intercepting its output at the <i>G-buffer</i> rendering stage.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample demonstrates how to access <i>G-buffer</i> textures at different stages of the rendering process by configuring a custom <i>Viewport</i> and intercepting its output at the <i>G-buffer</i> rendering stage.]]>
+		</brief>
+	</desc>
+	<controls>
+		<![CDATA[
+			<p><b>C</b> - switch between the main render and a custom camera <b>G-Buffer</b>.</p>
+		]]>
+	</controls>
+	<tags>
+		<tag>Render</tag>
+		<tag>Shaders</tag>
+		</tags>
+</sample>
+<sample title="G-Buffer Write" id="gbuffer_write" category_id="render">
+	<sdk_desc><![CDATA[Modification <i>G-buffer</i> textures at different stages of the rendering process by injecting a custom material at the end of the <i>G-buffer</i> pass.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample demonstrates how to modify <i>G-buffer</i> textures at different stages of the rendering process by injecting a custom material at the end of the <i>G-buffer</i> pass.]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Render</tag>
+		<tag>Shaders</tag>
+		</tags>
+</sample>
+<sample title="Gui to Texture" id="gui_to_texture" category_id="render">
+	<sdk_desc><![CDATA[Rendering GUI elements into a texture using <i>Gui::render()</i> and applying the resulting texture to materials.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample demonstrates how to render GUI elements into a texture using <i>Gui::render()</i>. Instead of drawing directly to the screen, the GUI is redirected to a custom framebuffer, which isolates its rendering pipeline and allows the resulting texture to be applied to materials.]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Render</tag>
+		<tag>Materials</tag>
+		</tags>
+</sample>
+<sample title="Node to Texture" id="node_to_texture" category_id="render">
+	<sdk_desc><![CDATA[Rendering a node into a texture using <i>Viewport::renderNodeTexture2D()</i>, and setting this texture as material's albedo texture]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample demonstrates how to render a specific node and its children into a texture using <i>Viewport::renderNodeTexture2D()</i>. Instead of rendering the whole scene, a custom viewport captures only the target node as seen from a camera, and outputs the result into a 2D texture.]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Render</tag>
+		<tag>Materials</tag>
+		</tags>
+</sample>
+<sample title="RenderTarget" id="render_target" category_id="render">
+	<sdk_desc><![CDATA[Rendering paint splashes to a texture using the <i>RenderTarget</i> class]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample demonstrates how to draw directly into a texture using the <i>RenderTarget</i> class. The system initializes multiple textures, including a background layer and a dynamic result texture, which then is assigned to the object's material. The <i>RenderTarget</i> is used to redirect rendering output from the main framebuffer to a texture, allowing full control over how sprites are composited. Each draw operation includes a UV-based transform to place and scale the sprite, and uses a custom material with direct access to the involved textures. After each draw, the result is blended with the background and mipmaps are generated for correct appearance at various distances.]]>
+		</brief>
+	</desc>
+	<controls>
+		<![CDATA[
+Click to spawn a sprite
+		]]>
+	</controls>
+	<tags>
+		<tag>Render</tag>
+		<tag>Materials</tag>
+		</tags>
+</sample>
+<sample title="Screenshot" id="screenshot" category_id="render">
+	<sdk_desc>
+		<![CDATA[Simple demonstration of how to make a screenshot by grabbing the final image from the rendering sequence.]]>
+	</sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[Simple demonstration of how to make a screenshot by grabbing the final image from the rendering sequence.]]>
+		</brief>
+	</desc>
+	<controls>
+		<![CDATA[
+		To make a screenshot, press <b>F</b> button; screenshot will be saved in <b>data/screenshot.dds</b>.
+		]]>
+	</controls>
+	<tags>
+		<tag>Render</tag>
+		<tag>Basic Recipes</tag>
+		</tags>
+</sample>
+<sample title="Split-Screen Texture" id="split_screen_texture" category_id="render">
+	<sdk_desc><![CDATA[Rendering views from two cameras into textures and implementing split-screen mode]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[			<p>This sample demonstrates how to capture views from two different cameras into separate textures and implement a split-screen layout using the C++ API.</p>
+			<p>Each camera renders its output to a texture using <i>Viewport::renderTexture2D()</i>. These textures are displayed in a vertical split-screen layout using <i>WidgetSprite</i> elements, and at the same time are applied to surfaces by assigning them to the albedo slot of static mesh materials. The layout adjusts dynamically to screen size changes.</p>
+		]]>
+		</brief>
+	</desc>
+	<controls>
+		<![CDATA[
+Use <b>WASD</b> to move<br/>
+Use <b>arrows</b> to move
+		]]>
+	</controls>
+	<tags>
+		<tag>Render</tag>
+		<tag>Cameras</tag>
+		<tag>Widgets</tag>
+		</tags>
+</sample>
+<sample title="Structured Buffer" id="structured_buffer" category_id="render">
+	<sdk_desc><![CDATA[Creating a DXT compression by using structured buffers]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[			<p>This sample demonstrates how to compress a texture into <b>DXT1</b> format using compute shaders and structured buffers.</p>
+			<p>At initialization, a compute material is loaded, and a source texture is prepared. A <i>DXT1Block</i> structure is used to hold the compressed data, with its size based on the texture's dimensions (in 4x4 blocks). A structured buffer is created on the GPU to store the output.</p>
+			<p>The compute shader runs in two stages: a warm-up to trigger shader compilation and the actual compression pass. The number of compute groups is calculated dynamically from the texture size and thread group size to achieve efficient parallel execution.</p>
+			<p>When compression is complete, the GPU buffer is transferred to CPU memory asynchronously. A new image with the compressed data is created in <b>DXT1</b> format and saved to a <b>*.dds</b> file.</p>
+		]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Render</tag>
+		<tag>Shaders</tag>
+		<tag>Optimization</tag>
+		</tags>
+</sample>
+<sample title="Textures" id="textures" category_id="render">
+	<sdk_desc><![CDATA[Updating mesh albedo texture using procedurally generated image data]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[			<p>This sample demonstrates how to create and update procedural textures on static meshes in real time using the C++ API.</p>
+			<p>Each mesh is assigned a custom-generated image, which is updated every frame using a time-based color pattern. The pixel data is written manually into an <i>Image</i> class instance, and the result is applied to the albedo texture slot of the mesh's material using <i>Material::setTextureImage()</i>.</p>
+		]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Render</tag>
+		<tag>Procedural</tag>
+		</tags>
+</sample>
+<sample title="Weapon Clipping" id="weapon_clipping" category_id="render">
+	<sdk_desc><![CDATA[Rendering the weapon from a second camera into a texture to avoid clipping issues]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[			<p>In first-person games, weapon models can clip through walls or geometry when the camera gets too close. This sample solves the problem by rendering the weapon separately into a texture and compositing it over the main scene.</p>
+			<p>Two cameras with identical transforms are used to ensure alignment. Their Viewport masks are set via UNIGINE Editor in the following way: one renders the environment without the weapon, and the other renders only the weapon. The weapon view is drawn into a texture using <i>Viewport::renderTexture2D()</i>, and then overlaid onto the screen with <i>Render::renderScreenMaterial()</i>. The system handles window resizing, render-state isolation, and allows optional settings like skipping shadows in the weapon rendering pass.</p>
+		]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Render</tag>
+		<tag>Cameras</tag>
+		<tag>Games</tag>
+		<tag>Basic Recipes</tag>
+		</tags>
+</sample>
+<sample title="AsyncQueue" id="async_queue" category_id="systems">
+	<sdk_desc><![CDATA[Loading meshes and textures in a separate thread using the <i>AsyncQueue</i> class]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[			<p>This sample shows how to load resources like meshes and textures in the background using the <i>AsyncQueue</i> class. Files are loaded in a separate thread, so the main application stays responsive.</p>
+			<p>Meshes and textures are added to the loading queue, and the system listens for events to know when each resource is ready. When a mesh finishes loading, it's removed from the queue. For textures, an event handler is used to handle their completion. The sample also demonstrates how to group and manage resource requests, making it easier to control the loading process.</p>
+		]]>
+		</brief>
+	</desc>
+	<link_docs>https://developer.unigine.com/docs/api/library/filesystem/class.asyncqueue?rlang=cpp</link_docs>
+	<tags>
+		<tag>Systems</tag>
+		<tag>Optimization</tag>
+		<tag>File System</tag>
+		<tag>Multithreading</tag>
+		</tags>
+</sample>
+<sample title="AsyncQueue Stress" id="async_queue_stress" category_id="systems">
+	<sdk_desc><![CDATA[Asynchronous node loading via <i>AsyncQueue</i> with main-thread spatial integration.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[			<p>This sample demonstrates how to asynchronously load large number of nodes using the <i>AsyncQueue</i> class while ensuring correct activation on the main thread.</p>
+			<p>In UNIGINE, world nodes must be created only from the main thread. To comply with this restriction and avoid blocking the main thread, the sample performs the initial node loading in a background thread, and then schedules a follow-up task on the main thread to finalize activation by calling <i>updateEnabled()</i> - a method that registers the node and its children in the world's spatial structure.</p>
+			<p>With the built-in Profiler enabled, you can observe how the engine handles increasing load smoothly and avoids frame spikes.</p>
+		]]>
+		</brief>
+	</desc>
+	<link_docs>https://developer.unigine.com/docs/api/library/filesystem/class.asyncqueue?rlang=cpp</link_docs>
+	<tags>
+		<tag>Systems</tag>
+		<tag>Optimization</tag>
+		<tag>Multithreading</tag>
+		<tag>World Management</tag>
+		</tags>
+</sample>
+<sample title="AsyncQueue Tasks" id="async_queue_tasks" category_id="systems">
+	<sdk_desc><![CDATA[Managing tasks via <i>AsyncQueue</i> class with dirrefent thread types, parallel execution and frame control.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[			<p>This sample demonstates how to schedule and run different types of tasks using the <i>AsyncQueue class</i>. It shows how to execute operations in different thread types, control thread count, and choose whether tasks should complete within the current frame or run freely in the background.</p>
+							<p> - <b>Async</b> - non-blocking execution in a single thread. Useful for offloading tasks without stalling the main thread.</p>
+				<p> - <b>Async Multithread</b> - parallel execution across multiple threads. Each thread receives its own portion of work. Does not block the caller.</p>
+				<p> - <b>Frame-Async Multithread</b> - same as <b>Async Multithread</b>, but ensures all threads complete their tasks within the current frame.</p>
+				<p> - <b>Sync Multithread</b> - multi-threaded execution that blocks the calling thread until all threads finish.</p>
+				<p> - <b>Frame-Sync Multithread</b> - same as <b>Sync Multithread</b>, but ensures all threads complete their tasks within the current frame.</p>
+					]]>
+		</brief>
+	</desc>
+	<link_docs>https://developer.unigine.com/docs/api/library/filesystem/class.asyncqueue?rlang=cpp</link_docs>
+	<tags>
+		<tag>Systems</tag>
+		<tag>Optimization</tag>
+		<tag>Multithreading</tag>
+		</tags>
+</sample>
+<sample title="Cad-Like View" id="cad_like_view" category_id="systems">
+	<sdk_desc><![CDATA[CAD-Like View implementation with multiple synced viewports for top, side, front, and perspective views]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample demonstrates how to build a CAD-style layout by combining four synchronized views of the same scene: top, side, front, and perspective. Each view uses its own camera with a separate projection matrix - orthographic for technical views and perspective for the main one. Each view is rendered off-screen and displayed through a <i>WidgetSpriteViewport</i>.]]>
+		</brief>
+	</desc>
+	<controls>
+		<![CDATA[
+Controls in the perspective view are as usual:<br/>
+<b>WASD</b> to move the camera and the mouse to rotate it.<br/>
+<i>Top, Side</i>, and <i>Front</i> views are controlled by dragging the mouse.
+		]]>
+	</controls>
+	<tags>
+		<tag>Systems</tag>
+		<tag>Cameras</tag>
+		<tag>Interface (GUI)</tag>
+		<tag>Windows &amp; Viewports</tag>
+		<tag>Widgets</tag>
+		</tags>
+</sample>
+<sample title="Callbacks" id="callbacks" category_id="systems">
+	<sdk_desc>
+		<![CDATA[This sample demonstrates how to use the <i>CallbackBase</i> class via the C++ API to wrap and call functions and class methods with various numbers of arguments.]]>
+	</sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample demonstrates how to use the <i>CallbackBase</i> class via the C++ API to wrap and call functions and class methods with various numbers of arguments.]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Systems</tag>
+		<tag>Logic</tag>
+		</tags>
+</sample>
+<sample title="Console" id="console" category_id="systems">
+	<sdk_desc>
+		<![CDATA[This sample demonstrates how to interact with the engine's built-in console and add custom console commands and variables via API using the <i>Console</i> and <i>ConsoleVariable</i> classes.]]>
+	</sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample demonstrates how to interact with the engine's built-in console and add custom console commands and variables via API using the <i>Console</i> and <i>ConsoleVariable</i> classes.]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Systems</tag>
+		<tag>Logic</tag>
+		</tags>
+</sample>
+<sample title="CPU Shader" id="cpu_shader" category_id="systems">
+	<sdk_desc><![CDATA[Multi-threaded update of multiple <i>ObjectMeshCluster</i> instances on the CPU side using the <i>CPUShader</i> class]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[			<p>This sample demonstrates how to implement a custom CPU shader by inheriting from the <i>CPUShader</i> class to perform multi-threaded data processing outside the main rendering loop.</p>
+			<p>The system updates multiple <i>ObjectMeshCluster</i> instances asynchronously by using a helper <i>AsyncCluster</i> structure. Each cluster maintains two versions of itself: one for rendering and one for background updates. At the end of each frame, the two are swapped so the visible cluster always shows the latest result without stalling the frame.</p>
+		]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Systems</tag>
+		<tag>Shaders</tag>
+		<tag>Optimization</tag>
+		</tags>
+</sample>
+<sample title="Events" id="events" category_id="systems">
+	<sdk_desc><![CDATA[Demonstration of four different patterns of subscribing to UNIGINE's <i>Events</i> via the C++ API, highlighting how event handler lifetime and management can vary depending on the approach.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample demonstrates four different patterns for subscribing UNIGINE's <i>Events</i> via the C++ API, highlighting how event handler lifetime and management can vary depending on the approach.]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Systems</tag>
+		<tag>Logic</tag>
+		</tags>
+</sample>
+<sample title="Events Advanced" id="events_advanced" category_id="systems">
+	<sdk_desc><![CDATA[Advanced ways of subscribing to events in UNIGINE: using extra arguments, discarding parameters, and storing connection handles for disconnection.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample demonstrates advanced usage of the UNIGINE <b>event system</b>.]]>
+		</brief>
+	</desc>
+	<controls>
+		<![CDATA[
+		<p><b>T</b> — Rotate around X-axis</p>
+		<p><b>Y</b> — Rotate around Y-axis</p>
+		<p><b>U</b> — Rotate around Z-axis</p>
+		<p><b>I</b> — Rotate around all axes (XYZ)</p>
+		]]>
+	</controls>
+	<tags>
+		<tag>Systems</tag>
+		<tag>Logic</tag>
+		</tags>
+</sample>
+<sample title="External Package" id="external_package" category_id="systems">
+	<sdk_desc><![CDATA[Demonstration of working with external package files via the <i>Package</i> class.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[			<p>This sample demonstrates how to create a custom data package using code and use it to generate objects in the scene.</p>
+			<p>Package is a collection of files and data for UNIGINE projects stored a single file. The <i>Package</i> class is a data provider for the File System. You can use it to load all necessary resources. </p>
+			<p>The <i>ExternalPackage</i> class describes the generation of a mesh (in this case, a box) and its saving to a temporary file at a specified path. The class also implements an interface for searching, reading, and retrieving information about files within the package.</p>
+			<p>The <i>ExternalPackageSample</i> class adds the created external package, and its contents are used to create meshes with different positions and orientations. This approach allows for quick and convenient management of a large number of objects without adding them by hand.</p>
+		]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Systems</tag>
+		<tag>Logic</tag>
+		<tag>File System</tag>
+		</tags>
+</sample>
+<sample title="FFP" id="ffp" category_id="systems">
+	<sdk_desc><![CDATA[Using FFP functionality to draw simple 2D shapes over the rendered image without any additional shaders]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample demonstrates how to render a simple 2D shape using the <i>Fixed Function Pipeline (Ffp)</i> in UNIGINE via the C++ API. A colorful figure composed of 16 vertices is drawn directly on screen using orthographic projection.]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Systems</tag>
+		<tag>Rendering</tag>
+		</tags>
+</sample>
+<sample title="File" id="files" category_id="systems">
+	<sdk_desc><![CDATA[Demonstration of basic file I/O operations.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample shows how you can create a text file and display its contents inside the widget via C++ API by using the <i>File</i> class. To create a text file, type the text from keyboard inside the <i>Writer</i> widget and press <b>Write</b> to save. Click <b>Read</b> inside the <i>Reader</i> widget to display the recorded information. The saved information will be displayed in the same widgets when you start the sample next time.]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Systems</tag>
+		<tag>File System</tag>
+		</tags>
+</sample>
+<sample title="Images" id="images" category_id="systems">
+	<sdk_desc><![CDATA[Procedurally generate <i>3D</i> image data and use it as a density texture for a volume-based material in real time.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[			<p>This sample shows how to procedurally generate <i>3D</i> image data and use it as a density texture for a volume-based material in real time.</p>
+			<p>The result is visualized using a volume box that updates dynamically every frame based on custom field simulation.</p>
+		]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Render</tag>
+		<tag>Procedural</tag>
+		</tags>
+</sample>
+<sample title="Multiple Async Requests" id="intersection_multiple_async_requests" category_id="systems">
+	<sdk_desc>
+		<![CDATA[			<p>This sample demonstrates how to launch and manage a large number of asynchronous ray-based intersection queries simultaneously.</p>
+			<p>The results are visualized in real time and latency statistics are displayed for performance analysis.</p>
+		]]>
+	</sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[			<p>This sample demonstrates how to launch and manage a large number of asynchronous ray-based intersection queries simultaneously.</p>
+			<p>The results are visualized in real time and latency statistics are displayed for performance analysis.</p>
+		]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Intersections</tag>
+		</tags>
+</sample>
+<sample title="Simple Async Request" id="intersection_simple_async_request" category_id="systems">
+	<sdk_desc>
+		<![CDATA[This sample demonstrates how to perform a single asynchronous intersection query based on the user's mouse cursor position in the scene. The result includes the hit point and surface normal, which are visualized in the scene, along with latency information.]]>
+	</sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample demonstrates how to perform a single asynchronous intersection query based on the user's mouse cursor position in the scene. The result includes the hit point and surface normal, which are visualized in the scene, along with latency information.]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Intersections</tag>
+		</tags>
+</sample>
+<sample title="JSON" id="json" category_id="systems">
+	<sdk_desc><![CDATA[Generation of a structured <i>JSON</i> document containing objects, arrays, and various data types such as strings, numbers, booleans, and null values, followed by traversal and pretty-printed output.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample shows how to generate a structured <i>JSON</i> document containing objects, arrays, and various data types such as strings, numbers, booleans, and null values. It also demonstrates how to traverse and print this structure recursively with indentation, imitating a pretty-printed output.]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>File Formats</tag>
+		<tag>Logic</tag>
+		</tags>
+</sample>
+<sample title="Materials and Properties" id="materials_and_properties" category_id="systems">
+	<sdk_desc><![CDATA[Working with <i>Property Manager</i> and <i>Material Manager</i> to access all materials and properties in the project via API.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample demonstrates how to access all materials and properties in the project via API.]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Materials</tag>
+		<tag>Properties</tag>
+		</tags>
+</sample>
+<sample title="Microprofiler" id="microprofiler" category_id="systems">
+	<sdk_desc><![CDATA[Using <i>Microprofile</i>, an advanced CPU/GPU profiler, to track performance and estimate the time spent on different sections of code.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample demonstrates methods for tracking performance and estimating the time spent on different sections of code. For this purpose, it uses <b>Microprofile</b>, an advanced CPU/GPU profiler with per-frame inspection support.]]>
+		</brief>
+	</desc>
+	<exec>microprofile_enabled 1</exec>
+	<edit>microprofile_enabled 1</edit>
+	<tags>
+		<tag>Systems</tag>
+		<tag>Optimization</tag>
+		</tags>
+</sample>
+<sample title="Mount Points" id="mount_points" category_id="systems">
+	<sdk_desc><![CDATA[This sample demonstrates how to create and use mount points in the file system for accessing external folders and package files (e.g., <b>*.zip</b>, <b>*.ung</b>).]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample demonstrates the functionality of mount points in the Engine file system.]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Systems</tag>
+		<tag>File System</tag>
+		</tags>
+</sample>
+<sample title="Procedural Mesh Apply" id="procedural_mesh_apply" category_id="systems">
+	<sdk_desc><![CDATA[A minimal example that shows how to generate and apply a procedural mesh at runtime using the correct update sequence.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[			<p>This sample demonstrates the correct order of operations for modifying and applying procedural mesh data at runtime. It serves as a minimal example showing how to build geometry, configure procedural mode, and apply changes to an <i>ObjectMeshCluster</i>. The same workflow and apply methods are also available for other objects that support procedural meshes, such as <i>ObjectMeshStatic</i>, <i>ObjectGuiMesh</i>, <i>DecalMesh</i>, and <i>ObjectMeshClutter</i>.</p>
+			<p>Inside the component's code, you'll find a linear implementation of the procedural mesh pipeline, demonstrating how geometry is generated and applied in the correct order.</p>
+			<p>Use this sample to understand the basic flow of procedural mesh updates and try adjusting configurations to find what best suits your needs.</p>
+		]]>
+		</brief>
+	</desc>
+	<link_docs>https://developer.unigine.com/docs/api/library/objects/class.objectmeshstatic?rlang=cpp#procedural_workflow</link_docs>
+	<tags>
+		<tag>Systems</tag>
+		<tag>Objects</tag>
+		<tag>Procedural</tag>
+		</tags>
+</sample>
+<sample title="Procedural Mesh Generation" id="procedural_mesh_generation" category_id="systems">
+	<sdk_desc><![CDATA[Demonstrating runtime procedural mesh generation, along with visualization of how different procedural modes impact memory usage during creation and rendering.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[			<p>This sample demonstrates how to generate static mesh geometry at runtime using different procedural mesh generation methods. A grid of <i>ObjectMeshStatic</i> objects is created, each receiving its geometry from a user-defined callback that builds a box-shaped mesh surface via the <i>Mesh API</i>.</p>
+			<p>You can experiment with various procedural modes (such as <i>Dynamic, File</i>, or <i>Blob</i>), as well as configure how geometry is stored and accessed by selecting different MeshRender usage flags (DirectX 12 only). These flags determine whether vertex and/or index data is kept in RAM instead of VRAM, allowing the GPU to render directly from system memory.</p>
+							<p> - <b>Dynamic</b> - fastest performance, stored in RAM and VRAM, not automatically unloaded from memory.</p>
+				<p> - <b>Blob</b> - moderate performance, stored in RAM and VRAM, automatically unloaded from memory.</p>
+				<p> - <b>File</b> - slowest performance, all data stored on disk, automatically unloaded from memory.</p>
+						<p>The <b>Field Size</b> parameter defines how many mesh objects are generated along each axis, forming a square grid.</p>
+			<p>For each configuration, the sample shows total RAM and VRAM usage, along with the number of active mesh objects. This makes it easier evaluate the performance, memory layout, and behavior of each procedural mode in different runtime conditions.</p>
+		]]>
+		</brief>
+	</desc>
+	<link_docs>https://developer.unigine.com/docs/api/library/objects/class.objectmeshstatic?rlang=cpp#procedural_workflow</link_docs>
+	<tags>
+		<tag>Systems</tag>
+		<tag>Objects</tag>
+		<tag>Procedural</tag>
+		</tags>
+</sample>
+<sample title="Procedural Mesh Modification" id="procedural_mesh_modification" category_id="systems">
+	<sdk_desc><![CDATA[Demonstrating runtime procedural mesh modification, along with visualization of how different procedural modes impact streamiing and memory usage during creation and rendering.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[			<p>This sample demonstrates how to dynamically generate, modify, and apply procedural geometry at runtime using different procedural mesh modification methods.</p>
+			<p>The dynamic surface mesh being built and animated over time using trigonometric functions. The geometry is rebuilt each frame depending on current configuration.</p>
+			<p>You can experiment with various procedural modes (such as <i>Dynamic, File</i>, or <i>Blob</i>), as well as configure how geometry is stored and accessed by selecting different MeshRender usage flags (DirectX 12 only). These flags determine whether vertex and/or index data is kept in RAM instead of VRAM, allowing the GPU to render directly from system memory.</p>
+			<p>Additionally, you can choose whether mesh generation occurs on the <b>Main</b> thread or in the <b>Background</b>, giving you more control over performance and responsiveness during updates.</p>
+							<p> - <b>Dynamic</b> - fastest performance, stored in RAM and VRAM, not automatically unloaded from memory.</p>
+				<p> - <b>Blob</b> - moderate performance, stored in RAM and VRAM, automatically unloaded from memory.</p>
+				<p> - <b>File</b> - slowest performance, all data stored on disk, automatically unloaded from memory.</p>
+						<p>You can also toggle between different update modes (<i>Async</i> or <i>Force</i>), choose memory transfer strategies (<i>Copy</i> or <i>Move</i>), and optionally enable manual control of the <i>MeshRender</i>, where you update its content explicitly after modifying mesh data, instead of relying on automatic updates. Additionally, collision data can be generated explicitly after geometry modification, as it is not created automatically.</p>
+		]]>
+		</brief>
+	</desc>
+	<link_docs>https://developer.unigine.com/en/docs/api/library/objects/class.objectmeshstatic?rlang=cpp#procedural_workflow</link_docs>
+	<tags>
+		<tag>Systems</tag>
+		<tag>Objects</tag>
+		<tag>Procedural</tag>
+		</tags>
+</sample>
+<sample title="StreamBase" id="stream_base" category_id="systems">
+	<sdk_desc>
+		<![CDATA[This sample demonstrates how to create a custom stream class by inheriting from <i>StreamBase</i> and use it for reading from and writing to files. The resulting stream is used to serialize and deserialize basic data types to and from a binary file.]]>
+	</sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample demonstrates how to create a custom stream class by inheriting from <i>StreamBase</i> and use it for reading from and writing to files. The resulting stream is used to serialize and deserialize basic data types to and from a binary file.]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Logic</tag>
+		</tags>
+</sample>
+<sample title="Thread" id="thread" category_id="systems">
+	<sdk_desc><![CDATA[Creating and running custom threads using the <i>Unigine::Thread</i> class.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[			<p>This sample shows how to define and manage background threads in <b>UNIGINE</b> by inheriting from the <i>Thread</i> class and overriding the <i>process()</i> method.</p>
+			<p>Two custom thread types are demonstrated:</p>
+							<p> - <b>InfiniteThread</b> - continuously outputs messages while running.</p>
+				<p> - <b>CountedThread</b> - performs a finite number of iterations before completing.</p>
+					]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Logic</tag>
+		<tag>Optimization</tag>
+		<tag>Multithreading</tag>
+		</tags>
+</sample>
+<sample title="Two-Point Perspective" id="two_point_perspective" category_id="systems">
+	<sdk_desc>
+		<![CDATA[This sample shows how to simulate a two-point perspective projection using a lens shift technique implemented via a secondary <i>Dummy Player</i>. When enabled, the sample dynamically adjusts the projection matrix of a dummy camera to visually align vertical lines while preserving the viewing direction.]]>
+	</sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample shows how to simulate a two-point perspective projection using a lens shift technique implemented via a secondary <i>Dummy Player</i>. When enabled, the sample dynamically adjusts the projection matrix of a dummy camera to visually align vertical lines while preserving the viewing direction.]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Cameras</tag>
+		<tag>Render</tag>
+		</tags>
+</sample>
+<sample title="USC Arrays" id="usc_arrays" category_id="systems">
+	<sdk_desc>
+		<![CDATA[This sample showcases integration between <i>C++</i> and <i>UnigineScript</i> by registering external <i>C++</i> functions that manipulate <i>UnigineScript</i> array types.]]>
+	</sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample showcases integration between <i>C++</i> and <i>UnigineScript</i> by registering external <i>C++</i> functions that manipulate <i>UnigineScript</i> array types.]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>UnigineScript</tag>
+		</tags>
+</sample>
+<sample title="USC Callbacks" id="usc_callbacks" category_id="systems">
+	<sdk_desc>
+		<![CDATA[			<p>This sample demonstrates how to call <i>UnigineScript</i> functions from <i>C++</i> code via callbacks.</p>
+			<p>The mechanism is based on <i>Variable</i> Class instances and allows calling both custom and built-in script functions by name.</p>
+		]]>
+	</sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[			<p>This sample demonstrates how to call <i>UnigineScript</i> functions from <i>C++</i> code via callbacks.</p>
+			<p>The mechanism is based on <i>Variable</i> Class instances and allows calling both custom and built-in script functions by name.</p>
+		]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>UnigineScript</tag>
+		</tags>
+</sample>
+<sample title="USC Classes" id="usc_classes" category_id="systems">
+	<sdk_desc>
+		<![CDATA[This sample demonstrates how to export classes from <i>C++</i> side to <i>UnigineScript</i>.]]>
+	</sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample demonstrates how to export classes from <i>C++</i> side to <i>UnigineScript</i>.]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>UnigineScript</tag>
+		</tags>
+</sample>
+<sample title="USC Functions" id="usc_functions" category_id="systems">
+	<sdk_desc>
+		<![CDATA[This sample demonstrates how to export functions from <i>C++</i> side to <i>UnigineScript</i>. It includes examples of exporting regular functions, handling multiple data types, and registering class members for a singleton-like object.]]>
+	</sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample demonstrates how to export functions from <i>C++</i> side to <i>UnigineScript</i>. It includes examples of exporting regular functions, handling multiple data types, and registering class members for a singleton-like object.]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>UnigineScript</tag>
+		</tags>
+</sample>
+<sample title="USC Inheritance" id="usc_inheritance" category_id="systems">
+	<sdk_desc>
+		<![CDATA[This sample demonstrates how to work with <i>UnigineScript</i> containers via <i>C++ API</i>. It showcases class composition, constructor registration, base-to-derived linkage, and virtual method exposure within a scripting context.]]>
+	</sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample demonstrates how to work with <i>UnigineScript</i> containers via <i>C++ API</i>. It showcases class composition, constructor registration, base-to-derived linkage, and virtual method exposure within a scripting context.]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>UnigineScript</tag>
+		</tags>
+</sample>
+<sample title="USC Stack" id="usc_stack" category_id="systems">
+	<sdk_desc>
+		<![CDATA[This sample demonstrates how to use a stack implemented via <i>C++</i> in <i>UnigineScript</i>.]]>
+	</sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample demonstrates how to use a stack implemented via <i>C++</i> in <i>UnigineScript</i>.]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>UnigineScript</tag>
+		</tags>
+</sample>
+<sample title="USC Structures" id="usc_structures" category_id="systems">
+	<sdk_desc>
+		<![CDATA[This sample demonstrates how to expose <i>C++</i> structs to <i>UnigineScript</i> using the <i>Interpreter</i> class.]]>
+	</sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample demonstrates how to expose <i>C++</i> structs to <i>UnigineScript</i> using the <i>Interpreter</i> class.]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>UnigineScript</tag>
+		</tags>
+</sample>
+<sample title="USC Transfer" id="usc_transfer" category_id="systems">
+	<sdk_desc>
+		<![CDATA[This sample demonstrates how to transfer complex data between <i>UnigineScript</i> and <i>C++</i> using the Variable class and the <i>TypeToVariable</i> utility.]]>
+	</sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample demonstrates how to transfer complex data between <i>UnigineScript</i> and <i>C++</i> using the Variable class and the <i>TypeToVariable</i> utility.]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>UnigineScript</tag>
+		</tags>
+</sample>
+<sample title="USC Types" id="usc_types" category_id="systems">
+	<sdk_desc>
+		<![CDATA[This sample demonstrates how to enable type conversion between custom <i>C++</i> types and <i>UnigineScript</i> using the Variable class.]]>
+	</sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample demonstrates how to enable type conversion between custom <i>C++</i> types and <i>UnigineScript</i> using the Variable class.]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>UnigineScript</tag>
+		</tags>
+</sample>
+<sample title="USC Variables" id="usc_variable" category_id="systems">
+	<sdk_desc>
+		<![CDATA[This sample demonstrates how to work with different variable types in <i>UnigineScript</i> using the <i>Variable</i> class from <i>C++</i> code.]]>
+	</sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample demonstrates how to work with different variable types in <i>UnigineScript</i> using the <i>Variable</i> class from <i>C++</i> code.]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>UnigineScript</tag>
+		</tags>
+</sample>
+<sample title="Visualizer" id="visualizer" category_id="systems">
+	<sdk_desc><![CDATA[Demonstration of the full range of features provided by the <i>Visualizer</i> class for visual debugging.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample demonstrates the full range of features provided by the <i>Visualizer</i> class for visual debugging.]]>
+		</brief>
+	</desc>
+	<controls>
+		<![CDATA[
+		<p><b>W,A,S,D</b> - Camera movement</p>
+		<p><b>RMB</b> - Camera rotation</p>
+		<p><b>Left Shift</b> - Camera acceleration</p>
+		]]>
+	</controls>
+	<tags>
+		<tag>Visualizer (Visual Debug)</tag>
+		</tags>
+</sample>
+<sample title="XML" id="xml" category_id="systems">
+	<sdk_desc>
+		<![CDATA[This sample demonstrates how to create and manipulate an <i>XML</i> document using the <i>Xml</i> class.]]>
+	</sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample demonstrates how to create and manipulate an <i>XML</i> document using the <i>Xml</i> class.]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>File Formats</tag>
+		</tags>
+</sample>
+<sample title="Object Frame" id="object_frame" category_id="user_interface">
+	<sdk_desc><![CDATA[Using the <i>WidgetCanvas</i> class to render custom frames around objects in the viewport and save frame metadata as <i>JSON</i>.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[			<p>This sample shows how to dynamically create and display rectangular frames around objects in the scene using the <i>WidgetCanvas</i>. These frames include object labels and appear only if the object is visible and is located within a certain distance from the camera.</p>
+			<p>You can also take screenshots via the <i>Snap Screenshot</i> button. The captured image does not include the rendered frames, but all frame metadata (including object <i>ID</i>, name, transform, and screen coordinates of the frame) is saved to a separate <i>JSON</i> file.</p>
+		]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Interface (GUI)</tag>
+		<tag>Widgets</tag>
+		<tag>File Formats</tag>
+		</tags>
+</sample>
+<sample title="Target Marker" id="target_marker" category_id="user_interface">
+	<sdk_desc><![CDATA[Implementing a marker that always highlights the target when it is within the field of view, or displays an arrow pointing the direction to the target when it is out of sight (aligned with the screen borders).]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample demostrates how to implement a marker that always highlights the target when it is within the field of view, or displays an arrow pointing the direction to the target when it is out of sight (aligned with the screen borders).]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Interface (GUI)</tag>
+		<tag>Games</tag>
+		<tag>Basic Recipes</tag>
+		</tags>
+</sample>
+<sample title="User Interface" id="user_interface" category_id="user_interface">
+	<sdk_desc><![CDATA[On-the-fly generation of a user interface from a <b>.ui</b> file and setting event handlers for widgets.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample shows how to generate a User Interface from a description stored in a <b>.ui</b> file (<i>XML</i> format) via C++ API. The sample also demonstrates how to get a UI widget by name via <i>getWidgetByName()</i> and subscribe to events to implement custom handling for user actions (particularly selecting <i>File -&gt; Reload</i> from the main menu or entering text in the text field on the <b>EditText</b> tab).]]>
+		</brief>
+	</desc>
+	<controls>
+		<![CDATA[
+		Clicking an element allows you to interact with it.
+		]]>
+	</controls>
+	<tags>
+		<tag>Interface (GUI)</tag>
+		<tag>Widgets</tag>
+		</tags>
+</sample>
+<sample title="Widgets" id="widgets" category_id="user_interface">
+	<sdk_desc><![CDATA[Demonstration of various UI widgets in UNIGINE, such as sliders, scrolls, buttons, checkboxes, drop-down lists, etc.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[			<p>This sample demonstrates the implementation of various UI widgets in UNIGINE. It showcases how to create, configure and manage interactive <b>GUI</b> elements.</p>
+			<p>The sample includes multiple widget types with event handling capabilities, demonstrating how to create and position widgets, configure visual properties, handle user interactions, etc., such as <b>sliders, scrolls, buttons, checkboxes, drop-down lists, etc</b>.</p>
+		]]>
+		</brief>
+	</desc>
+	<controls>
+		<![CDATA[
+		Clicking on a control element allows you to interact with it.<br/>Clicking on the text input field allows you to type text from the keyboard.
+		]]>
+	</controls>
+	<tags>
+		<tag>Widgets</tag>
+		<tag>Interface (GUI)</tag>
+		</tags>
+</sample>
+<sample title="Canvas Widget" id="widget_canvas" category_id="user_interface">
+	<sdk_desc><![CDATA[Using the <i>WidgetCanvas</i> class to draw vector-based shapes and text. The canvas supports adding lines, polygons, and text by defining their geometry through vertex positions. Elements are layered by draw order and colored individually.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample demonstrates how to use the <i>WidgetCanvas</i> class to draw vector-based shapes and text. The canvas supports adding lines, polygons, and text by defining their geometry through vertex positions. Elements are layered by draw order and colored individually.]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Widgets</tag>
+		<tag>Interface (GUI)</tag>
+		</tags>
+</sample>
+<sample title="Dialog Widget" id="widget_dialogs" category_id="user_interface">
+	<sdk_desc><![CDATA[Creating widget dialog windows and assigning handlers via the C++ API]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample demonstrates how to create and manage a GUI dialog system using UNIGINE's dialog widgets via the C++ API. A <i>WidgetWindow</i> instance contains several buttons, each opening a different type of dialog: <i>WidgetDialogMessage</i>, <i>WidgetDialogFile</i>, <i>WidgetDialogColor</i>, or <i>WidgetDialogImage</i>.]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Widgets</tag>
+		<tag>Windows &amp; Viewports</tag>
+		<tag>Interface (GUI)</tag>
+		</tags>
+</sample>
+<sample title="WidgetExtern" id="widget_extern" category_id="user_interface">
+	<sdk_desc><![CDATA[Defining a custom widget via the C++ API using <i>WidgetExternBase</i>, with full control over layout, rendering, and interaction]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample demonstrates how to create a custom GUI widget by inheriting from <i>WidgetExternBase</i> via the C++ API. The custom class overrides key methods like <i>render()</i>, <i>arrange()</i>, and <i>checkCallbacks()</i> to implement unique visual and interactive behavior.]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Widgets</tag>
+		<tag>Interface (GUI)</tag>
+		<tag>Extension &amp; Customization</tag>
+		</tags>
+</sample>
+<sample title="Widget Manipulators" id="widget_manipulators" category_id="user_interface">
+	<sdk_desc>
+		<![CDATA[This sample demonstrates the use of manipulators. You can lock axes for transformations, and apply transformation in local or world coordinates.]]>
+	</sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample demonstrates the use of manipulators. You can lock axes for transformations, and apply transformation in local or world coordinates.]]>
+		</brief>
+	</desc>
+	<controls>
+		<![CDATA[
+		To enter the camera control mode, click the <b>left mouse button</b> inside the window, to 
+		exit this mode press <b>Esc</b>.<br/><br/>
+		To select an object, click it with the <b>right mouse button</b>, to move (<b>W</b>), 
+		rotate (<b>E</b>), or scale (<b>R</b>) the object, drag it along the axes while holding 
+		the <b>left mouse button</b> pressed.<br/><br/>
+		To deselect an object, press <b>U</b> or <b>Esc</b>.<br/>
+		To focus on an object, press <b>F</b>.
+		]]>
+	</controls>
+	<tags>
+		<tag>Interface (GUI)</tag>
+		<tag>Widgets</tag>
+		</tags>
+</sample>
+<sample title="WidgetWindow" id="widget_window" category_id="user_interface">
+	<sdk_desc><![CDATA[Creating a basic <i>WidgetWindow</i> using the C++ API and handling user interactions (edit line and button press events) through handler function connections.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample demonstrates how to create a basic <i>WidgetWindow</i> using the C++ API and handle user interactions (edit line and button press events) through handler function connections.]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Widgets</tag>
+		<tag>Interface (GUI)</tag>
+		<tag>Windows &amp; Viewports</tag>
+		</tags>
+</sample>
+</samples>
+</samples_pack>
+</meta>

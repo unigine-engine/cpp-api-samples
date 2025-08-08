@@ -71,7 +71,7 @@ if __name__ == "__main__":
     FTP_PASS = "VbHU9vk0uCxyPmTr"
     
     # File paths
-    SDK_VERSION = "2.20"
+    SDK_VERSION = "2.20.0.1"
     ZIP_FILE_NAME = f"cpp_samples_{SDK_VERSION}_showcase_content.zip"
     REMOTE_FILE_PATH = os.path.join("samples", f"release_{SDK_VERSION}", ZIP_FILE_NAME)
     LOCAL_DIR = os.path.abspath(os.path.dirname(__file__))

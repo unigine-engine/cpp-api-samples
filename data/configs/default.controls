@@ -2,7 +2,7 @@
 <controls version="2.20.0.0" autosave="1">
 	<remove_grab_key>ESC</remove_grab_key>
 	<controls_always_run>0</controls_always_run>
-	<controls_mouse_handle>1</controls_mouse_handle>
+	<controls_mouse_handle>2</controls_mouse_handle>
 	<controls_mouse_inverse>0</controls_mouse_inverse>
 	<controls_mouse_raw_input>1</controls_mouse_raw_input>
 	<controls_mouse_sensitivity>1</controls_mouse_sensitivity>

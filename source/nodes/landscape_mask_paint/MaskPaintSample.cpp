@@ -108,9 +108,9 @@ void MaskPaintSample::update()
 
 	if (Input::isMouseButtonPressed(Input::MOUSE_BUTTON::MOUSE_BUTTON_RIGHT))
 	{
-		ivec2 delta = Input::getMouseDeltaPosition();
-		player->setPhiAngle(player->getPhiAngle() + static_cast<float>(delta.x));
-		player->setThetaAngle(player->getThetaAngle() + static_cast<float>(delta.y));
+		vec2 delta = vec2(Input::getMouseDeltaPosition()) * 0.2f;
+		player->setPhiAngle(player->getPhiAngle() + delta.x);
+		player->setThetaAngle(player->getThetaAngle() + delta.y);
 	}
 
 	if (Input::isKeyPressed(Input::KEY_LEFT_SHIFT) || Input::isKeyPressed(Input::KEY_RIGHT_SHIFT))

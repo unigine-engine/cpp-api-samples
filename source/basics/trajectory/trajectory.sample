@@ -9,7 +9,7 @@
 				<li><strong>Blue plane</strong>: spline interpolation.</li>
 				<li><strong>Green plane</strong>: path from a file.</li>
 			</ul>
-			<para>The sample contains the <ui>PathTrajectorySaver</ui> component that illustrates how to create your own path file, which is opened via the <ui><link to="worldtransformpath_class">WorldTransformPath</link></ui> node. Each path can be toggled on and off, and you can switch between the cameras to have a first-person view from each plane.</para>
+			<para>The sample contains the <ui>PathTrajectorySaver</ui> component that illustrates how to create your own path file, which is opened via the <ui><link to="worldtransformpath_class">WorldTransformPath</link></ui> node. In the Parameters section, you can toggle path visualization on and off, adjust the planes' velocity, or switch between the cameras to have a first-person view from each plane.</para>
 		</brief>
 	</desc>
 	<tags>

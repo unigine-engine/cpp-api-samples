@@ -2,10 +2,9 @@
 <asset version="2.20.0.0">
 	<guid>bf8dd823befea9087e3312165d4625bdedcaf98d</guid>
 	<type>texture</type>
-	<hash>7dfd7ab9</hash>
+	<hash>965630dc</hash>
 	<runtimes>
-		<runtime id="bf8dd823befea9087e3312165d4625bdedcaf98d" name="systems.png" link="0" type="6"/>
-		<runtime id="9e09fa3d09e96328e04877a8e0c4b6ac8af7e8f7" name="systems.texture" link="1" type="6"/>
+		<runtime id="9e09fa3d09e96328e04877a8e0c4b6ac8af7e8f7" name="systems.png" link="0" type="6"/>
 	</runtimes>
 	<parameters>
 		<parameter type="int" name="blur_radius">1</parameter>
@@ -19,7 +18,7 @@
 		<parameter type="float" name="sharpness_intensity">0.25</parameter>
 		<parameter type="float" name="sharpness_radius">1</parameter>
 		<parameter type="bool" name="srgb_correction">1</parameter>
-		<parameter type="bool" name="unchanged">0</parameter>
+		<parameter type="bool" name="unchanged">1</parameter>
 		<parameter type="string" name="width">auto</parameter>
 	</parameters>
 </asset>

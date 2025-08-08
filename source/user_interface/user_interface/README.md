@@ -1,0 +1,3 @@
+# User Interface
+
+This sample shows how to generate a User Interface from a description stored in a **.ui** file (*XML* format) via C++ API. The sample also demonstrates how to get a UI widget by name via *getWidgetByName()* and subscribe to events to implement custom handling for user actions (particularly selecting *File -&gt; Reload* from the main menu or entering text in the text field on the **EditText** tab).

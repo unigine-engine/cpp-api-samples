@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <world version="2.20.0.0">
+	<render_settings_path>guid://8bed8c3ce53501ff11c1b0ae5cc6d017d4ad5524</render_settings_path>
 	<data>
 		<unigine_editor>
 			<body>
@@ -443,7 +444,7 @@
 		<render_local_tonemapper_target_middle_gray>0.600000024</render_local_tonemapper_target_middle_gray>
 		<render_local_tonemapper_tonemapping_intensity>0.400000006</render_local_tonemapper_tonemapping_intensity>
 		<render_materials_quality>2</render_materials_quality>
-		<render_max_fps>0</render_max_fps>
+		<render_max_fps>150</render_max_fps>
 		<render_metering_mask_enabled>0</render_metering_mask_enabled>
 		<render_motion_blur>0</render_motion_blur>
 		<render_motion_blur_camera_velocity>1</render_motion_blur_camera_velocity>

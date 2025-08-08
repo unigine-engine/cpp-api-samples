@@ -4,13 +4,13 @@
 #include <UnigineWidgets.h>
 #include <memory>
 
+#include "SamplesManager.h"
+
 class WidgetSearchField;
 class WidgetTagCloud;
-
-struct Sample;
-struct Category;
 class WidgetSampleList;
 class Tag;
+
 
 class MainMenu: public Unigine::ComponentBase
 {
@@ -323,8 +323,6 @@ private:
 	Unigine::Math::vec4 close_color;
 	bool close_button_pressed = false;
 
-	bool search_editline_focused = false;
-
 	// sample list
 	std::unique_ptr<WidgetSampleList> sample_list = nullptr;
 
@@ -389,7 +387,7 @@ public:
 
 	Unigine::WidgetPtr getWidget() const { return main_vbox; }
 
-	void update(bool enable_focus);
+	void update();
 	void setTagSelected(const Unigine::String &str, bool selected = true);
 
 	Unigine::Event<const Unigine::String &> &getEventTagClicked() { return event_tag_clicked; }
@@ -405,21 +403,21 @@ private:
 	Unigine::EventInvoker<const Unigine::String &> event_tag_clicked;
 };
 
-struct Sample
-{
-	Unigine::String title;
-	Unigine::String description;
-	Unigine::Vector<Unigine::String> tags;
-	Unigine::String world_name;
-};
+//struct Sample
+//{
+//	Unigine::String title;
+//	Unigine::String description;
+//	Unigine::Vector<Unigine::String> tags;
+//	Unigine::String world_name;
+//};
 
-struct Category
-{
-	Unigine::ImagePtr icon;
-	Unigine::String title;
+//struct Category
+//{
+//	Unigine::ImagePtr icon;
+//	Unigine::String title;
 
-	Unigine::Vector<Sample> samples;
-};
+//	Unigine::Vector<Sample> samples;
+//};
 
 class WidgetSampleListNode
 {
@@ -526,7 +524,7 @@ public:
 
 	void filter(const Unigine::Vector<Unigine::String> &search_words, const Unigine::Vector<Unigine::String> &search_tags);
 
-	void update(bool enable_focus);
+	void update();
 
 	void setCollapseAll(bool collapse = true);
 

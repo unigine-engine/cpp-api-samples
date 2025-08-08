@@ -22,14 +22,22 @@
 		<async_log_priority>0</async_log_priority>
 		<auto_dpi_scaling>1</auto_dpi_scaling>
 		<auto_quit>1</auto_quit>
-		<background_update>0</background_update>
+		<background_update>1</background_update>
 		<config>configs/default.config</config>
 		<console_font>core/gui/console.ttf</console_font>
 		<console_limit>16384</console_limit>
 		<console_size>16</console_size>
 		<controls_config>configs/default.controls</controls_config>
+		<d3d12_memory_pool_heap_default>64</d3d12_memory_pool_heap_default>
+		<d3d12_memory_pool_heap_gpu_upload>16</d3d12_memory_pool_heap_gpu_upload>
+		<d3d12_memory_pool_heap_readback>64</d3d12_memory_pool_heap_readback>
+		<d3d12_memory_pool_heap_upload>8</d3d12_memory_pool_heap_upload>
+		<d3d12_memory_pool_texture>128</d3d12_memory_pool_texture>
+		<d3d12_memory_pool_texture_staging>32</d3d12_memory_pool_texture_staging>
 		<d3d12_small_pool_enabled>1</d3d12_small_pool_enabled>
 		<decal_pool_chunk_size>16</decal_pool_chunk_size>
+		<dlss_application_id>0</dlss_application_id>
+		<dlss_project_id>33ff81e1-c170-5bb9-6995-d76d2664cd27</dlss_project_id>
 		<dpi_awareness>2</dpi_awareness>
 		<filesystem_cache>2</filesystem_cache>
 		<filesystem_mmap>1</filesystem_mmap>
@@ -47,6 +55,9 @@
 		<materials_preload>0</materials_preload>
 		<memory_dynamic_pool>256</memory_dynamic_pool>
 		<memory_statistics_enabled>1</memory_statistics_enabled>
+		<mesh_procedural_path>.unigine_mesh_procedural</mesh_procedural_path>
+		<mesh_procedural_read_only>0</mesh_procedural_read_only>
+		<my_console_variable_int>0</my_console_variable_int>
 		<particles_memory_preload>50</particles_memory_preload>
 		<process_priority>1</process_priority>
 		<profiler_font>core/gui/font.ttf</profiler_font>
@@ -57,17 +68,21 @@
 		<skinned_pool_chunk_size>64</skinned_pool_chunk_size>
 		<splash_screen>1</splash_screen>
 		<starting_world/>
-		<dlss_application_id>0</dlss_application_id>
-		<dlss_project_id>33ff81e1-c170-5bb9-6995-d76d2664cd27</dlss_project_id>
 		<swap_delay_warning>0</swap_delay_warning>
 		<swap_delay_warning_time>200</swap_delay_warning_time>
 		<user_config>configs/default.user</user_config>
 		<video_adapter>0</video_adapter>
 		<video_debug>0</video_debug>
+		<video_debug_crash_dump>0</video_debug_crash_dump>
 		<video_debug_shader>0</video_debug_shader>
 		<video_offscreen>0</video_offscreen>
+		<video_quadro_sync>0</video_quadro_sync>
 		<vr_debug_mode>0</vr_debug_mode>
 		<vr_foveated_rendering_enabled>1</vr_foveated_rendering_enabled>
+		<vr_hand_tracking_show_basis>0</vr_hand_tracking_show_basis>
+		<vr_hand_tracking_show_bone_sizes>0</vr_hand_tracking_show_bone_sizes>
+		<vr_hand_tracking_show_velocity>0</vr_hand_tracking_show_velocity>
+		<vr_hand_tracking_visualizer_enabled>0</vr_hand_tracking_visualizer_enabled>
 		<vr_head_tracking_position_enabled>1</vr_head_tracking_position_enabled>
 		<vr_head_tracking_rotation_enabled>1</vr_head_tracking_rotation_enabled>
 		<vr_mirror_mode>3</vr_mirror_mode>
@@ -98,8 +113,14 @@
 		<vr_motion_prediction>0</vr_motion_prediction>
 		<vr_motion_prediction_velocity_precision>32</vr_motion_prediction_velocity_precision>
 		<vr_motion_prediction_velocity_time_delta>0.0166666675</vr_motion_prediction_velocity_time_delta>
+		<vr_peripheral_rendering_border_width>0.200000003</vr_peripheral_rendering_border_width>
+		<vr_peripheral_rendering_debug_enabled>0</vr_peripheral_rendering_debug_enabled>
+		<vr_peripheral_rendering_focus_deadzone>0.150000006</vr_peripheral_rendering_focus_deadzone>
+		<vr_peripheral_rendering_focus_scale>0.5 0.200000003</vr_peripheral_rendering_focus_scale>
+		<vr_peripheral_rendering_fov_scale>0.300000012 0.300000012</vr_peripheral_rendering_fov_scale>
 		<vr_peripheral_rendering_mode_enabled>1</vr_peripheral_rendering_mode_enabled>
 		<vr_render_enabled>1</vr_render_enabled>
+		<vr_render_while_hmd_idle>1</vr_render_while_hmd_idle>
 		<vr_service_init_timeout>60</vr_service_init_timeout>
 		<vr_tracking_space>2</vr_tracking_space>
 		<vr_window_mode>1</vr_window_mode>

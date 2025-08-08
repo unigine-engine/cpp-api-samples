@@ -107,7 +107,7 @@ void PaintSample::update()
 
 	if (Input::isMouseButtonPressed(Input::MOUSE_BUTTON::MOUSE_BUTTON_RIGHT))
 	{
-		ivec2 delta = Input::getMouseDeltaPosition();
+		vec2 delta = vec2(Input::getMouseDeltaPosition()) * 0.2f;
 		player->setPhiAngle(player->getPhiAngle() + delta.x);
 		player->setThetaAngle(player->getThetaAngle() + delta.y);
 	}

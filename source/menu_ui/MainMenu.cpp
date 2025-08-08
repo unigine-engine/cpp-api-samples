@@ -14,9 +14,10 @@ BlobPtr MainMenu::saved_state = Blob::create();
 void MainMenu::init()
 {
 	// parse meta
-	Vector<Category> categories;
-	Vector<String> tags;
-	parse_meta_xml(ui_configuration->path_to_meta.get(), categories, tags);
+	SamplesManager::get()->parseMetaXml(ui_configuration->path_to_meta.get());
+
+	const Vector<Category> categories = SamplesManager::get()->getCategories();
+	const Vector<String> tags = SamplesManager::get()->getTags();
 
 	Tag::setTagConfig(ui_configuration->tag_style.get());
 
@@ -54,8 +55,7 @@ void MainMenu::init()
 		tag_cloud->setTagSelected(str, true);
 		sample_list->setTagSelected(str, true);
 	});
-	search_field->getEventEditlineFocused().connect(*this,
-		[this](bool focused) { search_editline_focused = focused; });
+
 	Tag::getEventClicked().connect(*this, [this](const String &str) {
 		search_field->changeTagState(str, ui_configuration->tag_style.get());
 	});
@@ -73,21 +73,15 @@ void MainMenu::update()
 	EngineWindowViewportPtr window = WindowManager::getMainWindow();
 	int window_height = window->getClientSize().y;
 
-	tag_cloud->update(!search_editline_focused);
-	sample_list->update(!search_editline_focused);
+	tag_cloud->update();
+	sample_list->update();
 	search_field->update();
 
 	side_panel_vbox->setHeight(window_height);
 	search_field->getWidget()->setHeight(side_panel_vbox->getHeight()
 		* ui_configuration->search_section->search_field_releative_size.get());
 
-	if (close_button->isHidden() == window->isFullscreen())
-	{
-		close_button->setHidden(!window->isFullscreen());
-		close_button->setEnabled(!close_button->isHidden());
-	}
-	if (!close_button->isHidden())
-		update_close_button();
+	update_close_button();
 }
 
 void MainMenu::shutdown()
@@ -439,8 +433,18 @@ void WidgetSearchField::update()
 		&& (Input::isKeyDown(Input::KEY_ESC) || Input::isKeyDown(Input::KEY_ENTER)))
 		editline->removeFocus();
 
-	if (!editline->isFocused() && MenuUtils::isHovered(tags_scrollbox))
-		tags_scrollbox->setFocus();
+	if (MenuUtils::isHovered(tags_scrollbox))
+	{
+		int wheel = Input::getMouseWheel();
+		if (wheel)
+		{
+			int value = tags_scrollbox->getVScrollValue();
+			int step = tags_scrollbox->getVScrollStepSize();
+			tags_scrollbox->setVScrollValue(value - wheel * step * 4);
+		}
+	}
+	else
+		tags_scrollbox->removeFocus();
 }
 
 void WidgetSearchField::save(const Unigine::BlobPtr &blob)
@@ -600,7 +604,7 @@ WidgetTagCloud::~WidgetTagCloud()
 	main_scrollbox.deleteLater();
 }
 
-void WidgetTagCloud::update(bool enable_focus)
+void WidgetTagCloud::update()
 {
 	if (Console::isActive())
 		return;
@@ -613,8 +617,18 @@ void WidgetTagCloud::update(bool enable_focus)
 		tag_widget.data->update(up, down);
 	}
 
-	if (enable_focus && MenuUtils::isHovered(main_scrollbox))
-		main_scrollbox->setFocus();
+	if (MenuUtils::isHovered(main_scrollbox))
+	{
+		int wheel = Input::getMouseWheel();
+		if (wheel)
+		{
+			int value = main_scrollbox->getVScrollValue();
+			int step = main_scrollbox->getVScrollStepSize();
+			main_scrollbox->setVScrollValue(value - wheel * step * 4);
+		}
+	}
+	else
+		main_scrollbox->removeFocus();
 }
 
 void WidgetTagCloud::setTagSelected(const Unigine::String &str, bool selected)
@@ -991,15 +1005,25 @@ void WidgetSampleList::setTagSelected(const Unigine::String &str, bool selected)
 		roots[i]->setTagSelected(str, selected);
 }
 
-void WidgetSampleList::update(bool enable_focus)
+void WidgetSampleList::update()
 {
 	for (int i = 0; i < roots.size(); ++i)
 		roots[i]->update();
 
 	bool hovered = MenuUtils::isHovered(main_scrollbox);
 
-	if (hovered && enable_focus)
-		main_scrollbox->setFocus();
+	if (hovered)
+	{
+		int wheel = Input::getMouseWheel();
+		if (wheel)
+		{
+			int value = main_scrollbox->getVScrollValue();
+			int step = main_scrollbox->getVScrollStepSize();
+			main_scrollbox->setVScrollValue(value - wheel * step * 4);
+		}
+	}
+	else
+		main_scrollbox->removeFocus();
 }
 
 void WidgetSampleList::setCollapseAll(bool collapse)

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.20.0.0" name="HttpParametersResponseSample" guid="6b5b531829409a5bfe2852e760156c58ce8f511b" parent="1c613bbca0afd78c1ef165fc8e419352c5903d9e">
+	<parameter name="host_ip" type="string">127.0.0.1</parameter>
+	<parameter name="port">8080</parameter>
+	<parameter name="pedestal_text" type="node">0</parameter>
+</property>

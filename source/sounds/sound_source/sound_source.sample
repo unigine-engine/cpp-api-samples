@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Sound Source">
+	<sdk_desc>Playing a sound source via code.</sdk_desc>
+	<desc>
+		<brief>This example demonstrates how to create a sound source (<ui><link to="soundsource_class">SoundSource</link></ui>) and configure its basic parameters: volume, pitch, looping mode, and playback type.</brief>
+		<para>UNIGINE allows you to work with sound sources just like with other nodes: they can be easily moved, rotated, or scaled. Additionally, they have specific characteristics detailed in the <link to="soundsource_class">related article</link>.</para>
+	</desc>
+	<tags>
+		<tag>Sound</tag>
+	</tags>
+</sample>

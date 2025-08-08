@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Mesh Digger">
+	<sdk_desc>Simulation of the ground digging process based on mesh geometry modification.</sdk_desc>
+	<desc>
+		<brief>
+		<para>This sample demonstrates a simulation of ground digging, modification of a terrain fragment represented by a mesh via API. The fragment of the ground surfaces is generated using the Marching Cubes algorithm. You can dig the ground at any point by moving the mouse cursor (the cutting sphere is visualized around the cursor) to it and clicking the left mouse button. You can also set the desired radius of the cutting sphere (<strong nt="1">Digging Radius</strong>) defining the volume of ground to be removed on a left-click. To add volume instead, hold the <ui>Ctrl</ui> key and left-click.</para>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Complex Solutions</tag>
+		<tag>Procedural</tag>
+		<tag>Sim</tag>
+	</tags>
+</sample>

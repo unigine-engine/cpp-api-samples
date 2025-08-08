@@ -2,9 +2,9 @@
 <meta>
 	<samples_pack name="cpp_samples">
 		<title>C++ Samples</title>
-		<version>2.20</version>
+		<version>2.20.0.1</version>
+		<dependency>2.20.0.1</dependency>
 		<os>cross</os>
-		<dependency>2.20</dependency>
 		<workflow>editor2</workflow>
 		<precision>double</precision>
 		<path>data</path>
@@ -63,13 +63,13 @@
 			<product>tier0_bin_pro</product>
 		</products>
 		<images>
-			<card_image>cpp_samples_rect.png</card_image>
-			<thumb>cpp_samples_sm.png</thumb>
-			<image>cpp_samples_001.png</image>
-			<image>cpp_samples_002.png</image>
-			<image>cpp_samples_003.png</image>
-			<image>cpp_samples_004.png</image>
-			<image>cpp_samples_005.png</image>
+			<card_image>.meta/images/cpp_samples_rect.png</card_image>
+			<thumb>.meta/images/cpp_samples_sm.png</thumb>
+			<image>.meta/images/cpp_samples_001.png</image>
+			<image>.meta/images/cpp_samples_002.png</image>
+			<image>.meta/images/cpp_samples_003.png</image>
+			<image>.meta/images/cpp_samples_004.png</image>
+			<image>.meta/images/cpp_samples_005.png</image>
 		</images>
 	<categories>
 		<category id="animation" name="Animation" img="data/cpp_samples/animation/animation.png"/>
@@ -82,9 +82,10 @@
 		<category id="physics" name="Physics" img="data/cpp_samples/physics/physics.png"/>
 		<category id="plugins" name="Plugins" img="data/cpp_samples/plugins/plugins.png"/>
 		<category id="render" name="Render" img="data/cpp_samples/render/render.png"/>
+		<category id="sounds" name="Sounds" img="data/cpp_samples/sounds/sounds.png"/>
 		<category id="systems" name="Systems" img="data/cpp_samples/systems/systems.png"/>
 		<category id="user_interface" name="User Interface" img="data/cpp_samples/user_interface/user_interface.png"/>
-		</categories>
+	</categories>
 <samples>
 <sample title="Material Animation" id="animation_material" category_id="animation">
 	<sdk_desc><![CDATA[Animating emission scale and color parameters of a material.]]></sdk_desc>
@@ -96,7 +97,7 @@
 	<tags>
 		<tag>Animation</tag>
 		<tag>Materials</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Node Animation" id="animation_node" category_id="animation">
 	<sdk_desc><![CDATA[Animating position, rotation, and scale of a node.]]></sdk_desc>
@@ -107,7 +108,7 @@
 	</desc>
 	<tags>
 		<tag>Animation</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Property Animation" id="animation_property" category_id="animation">
 	<sdk_desc><![CDATA[Animating a property parameter.]]></sdk_desc>
@@ -119,7 +120,7 @@
 	<tags>
 		<tag>Animation</tag>
 		<tag>Properties</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Singleton Animation" id="animation_singleton" category_id="animation">
 	<sdk_desc>
@@ -133,7 +134,7 @@
 	<tags>
 		<tag>Animation</tag>
 		<tag>Basic Recipes</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Widget Animation" id="animation_widget" category_id="animation">
 	<sdk_desc>
@@ -148,7 +149,7 @@
 		<tag>Animation</tag>
 		<tag>Interface (GUI)</tag>
 		<tag>Widgets</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Bones Constraints" id="bones_constraints" category_id="animation">
 	<sdk_desc><![CDATA[Applying bone rotation constraints.]]></sdk_desc>
@@ -159,7 +160,7 @@
 	</desc>
 	<tags>
 		<tag>Animation</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Bones IK" id="bones_ik" category_id="animation">
 	<sdk_desc><![CDATA[Controlling bones with inverse kinematics.]]></sdk_desc>
@@ -172,7 +173,7 @@
 	</desc>
 	<tags>
 		<tag>Animation</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Bones LookAt" id="bones_look_at" category_id="animation">
 	<sdk_desc><![CDATA[Using LookAt chains to aim at a target.]]></sdk_desc>
@@ -185,7 +186,7 @@
 	</desc>
 	<tags>
 		<tag>Animation</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Bones Masks" id="bones_masks" category_id="animation">
 	<sdk_desc><![CDATA[Using masks to assign selective logic to different bones.]]></sdk_desc>
@@ -198,7 +199,7 @@
 	</desc>
 	<tags>
 		<tag>Animation</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Bones Retargeting" id="bones_retargeting" category_id="animation">
 	<sdk_desc><![CDATA[This sample demonstrates how the same animation can be used on skeletons with different proportions.]]></sdk_desc>
@@ -212,7 +213,7 @@
 	</desc>
 	<tags>
 		<tag>Animation</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Bones Root Motion" id="bones_root_motion" category_id="animation">
 	<sdk_desc><![CDATA[This sample demonstrates the implementation of the root motion technique.]]></sdk_desc>
@@ -226,7 +227,7 @@
 	</desc>
 	<tags>
 		<tag>Animation</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Bones Sandbox" id="bones_sandbox" category_id="animation">
 	<sdk_desc>
@@ -239,7 +240,7 @@
 	</desc>
 	<tags>
 		<tag>Animation</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Bones Simple Foot Placement" id="bones_simple_foot_placement" category_id="animation">
 	<sdk_desc>
@@ -259,7 +260,7 @@
 	<tags>
 		<tag>Animation</tag>
 		<tag>Intersections</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Bones State Machine" id="bones_state_machine" category_id="animation">
 	<sdk_desc>
@@ -290,7 +291,7 @@
 	</controls>
 	<tags>
 		<tag>Animation</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Curve Animation" id="curve_animation" category_id="animation">
 	<sdk_desc><![CDATA[Animating objects using <i>Curve2D</i>: moving platforms, rotating coins, and a heart changing its size.]]></sdk_desc>
@@ -303,7 +304,7 @@
 		<tag>Animation</tag>
 		<tag>Basic Recipes</tag>
 		<tag>Transformations</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Physics-Based Animation" id="physics_based_animation" category_id="animation">
 	<sdk_desc><![CDATA[Physics-based animation of movements using various easing functions.]]></sdk_desc>
@@ -314,7 +315,7 @@
 	</desc>
 	<tags>
 		<tag>Animation</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Playback Layers" id="playback_layers" category_id="animation">
 	<sdk_desc><![CDATA[Showing how to use multiple <b>layers</b> in animation playbacks.]]></sdk_desc>
@@ -325,7 +326,7 @@
 	</desc>
 	<tags>
 		<tag>Animation</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Track Playback" id="track_playback" category_id="animation">
 	<sdk_desc><![CDATA[Using a tracker to animate objects (position, rotation, and scale).]]></sdk_desc>
@@ -336,7 +337,7 @@
 	</desc>
 	<tags>
 		<tag>Animation</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Bound Intersection" id="bound_intersection" category_id="basics">
 	<sdk_desc><![CDATA[Finding intersections between certain volumes (frustum, sphere, and box) and the bounding boxes of nodes.]]></sdk_desc>
@@ -348,7 +349,7 @@
 	<tags>
 		<tag>Basic Recipes</tag>
 		<tag>Intersections</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Camera Zoom" id="camera_zoom" category_id="basics">
 	<sdk_desc><![CDATA[Creating interactive camera system with adjustable zoom and focus on selectable scene targets.]]></sdk_desc>
@@ -362,7 +363,7 @@
 		<tag>Cameras</tag>
 		<tag>Transformations</tag>
 		<tag>Basic Recipes</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Component System" id="component_system" category_id="basics">
 	<sdk_desc><![CDATA[Demonstration of UNIGINE's C++ component-based architecture using custom gameplay components with dynamic object creation and interaction.]]></sdk_desc>
@@ -387,7 +388,7 @@
 	<tags>
 		<tag>Basic Recipes</tag>
 		<tag>Component System</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Euler Angles" id="euler_angles" category_id="basics">
 	<sdk_desc><![CDATA[Showing how the order of angles affects rotation.]]></sdk_desc>
@@ -398,7 +399,7 @@
 	</desc>
 	<tags>
 		<tag>Basic Recipes</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="IFps Usage" id="ifps_usage" category_id="basics">
 	<sdk_desc><![CDATA[Using <i>Game::getIFps()</i> to implement movement logic independent of the frame rate.]]></sdk_desc>
@@ -409,7 +410,7 @@
 	</desc>
 	<tags>
 		<tag>Logic</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Node Spawner Grid" id="node_spawner_grid" category_id="basics">
 	<sdk_desc><![CDATA[Spawning nodes across a grid.]]></sdk_desc>
@@ -422,7 +423,7 @@
 		<tag>Nodes</tag>
 		<tag>Basics</tag>
 		<tag>Basic Recipes</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Node Spawner Timer" id="node_spawner_timer" category_id="basics">
 	<sdk_desc>
@@ -435,7 +436,7 @@
 	</desc>
 	<tags>
 		<tag>Basic Recipes</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Ray Intersection" id="ray_intersection" category_id="basics">
 	<sdk_desc><![CDATA[Using raycasting for selective (mask-based) detection of intersections.]]></sdk_desc>
@@ -447,7 +448,7 @@
 	<tags>
 		<tag>Basic Recipes</tag>
 		<tag>Intersections</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Simple Movement" id="simple_movement" category_id="basics">
 	<sdk_desc><![CDATA[Different ways to specify object transformations during movement and rotation.]]></sdk_desc>
@@ -469,7 +470,7 @@
 	<tags>
 		<tag>Basic Recipes</tag>
 		<tag>Transformations</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Trajectory" id="trajectory" category_id="basics">
 	<sdk_desc><![CDATA[Three types of movement along a predefined path: linear interpolation, spline interpolation, and a trajectory loaded from a <b>*.path</b> file.]]></sdk_desc>
@@ -479,7 +480,7 @@
 							<p> - <b>Red plane</b>: linear interpolation.</p>
 				<p> - <b>Blue plane</b>: spline interpolation.</p>
 				<p> - <b>Green plane</b>: path from a file.</p>
-						<p>The sample contains the <i>PathTrajectorySaver</i> component that illustrates how to create your own path file, which is opened via the <i>WorldTransformPath</i> node. Each path can be toggled on and off, and you can switch between the cameras to have a first-person view from each plane.</p>
+						<p>The sample contains the <i>PathTrajectorySaver</i> component that illustrates how to create your own path file, which is opened via the <i>WorldTransformPath</i> node. In the Parameters section, you can toggle path visualization on and off, adjust the planes' velocity, or switch between the cameras to have a first-person view from each plane.</p>
 		]]>
 		</brief>
 	</desc>
@@ -488,7 +489,7 @@
 		<tag>Basics</tag>
 		<tag>Basic Recipes</tag>
 		<tag>Transformations</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Triggers" id="triggers" category_id="basics">
 	<sdk_desc><![CDATA[Implementation of various types of triggers.]]></sdk_desc>
@@ -506,7 +507,7 @@
 	<tags>
 		<tag>Triggers</tag>
 		<tag>Logic</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Trigger Buttons" id="trigger_buttons" category_id="basics">
 	<sdk_desc>
@@ -526,7 +527,7 @@
 		<tag>Triggers</tag>
 		<tag>Logic</tag>
 		<tag>Basic Recipes</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Boids" id="boids" category_id="complex">
 	<sdk_desc><![CDATA[Simulation and control of flocking behavior (Boids algorithm) for different types of entities.]]></sdk_desc>
@@ -556,7 +557,7 @@
 	<tags>
 		<tag>Games</tag>
 		<tag>Basic Recipes</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Crane Rope" id="crane_rope" category_id="complex">
 	<sdk_desc><![CDATA[A simple and elegant way of creating a winch or hoist using a combination of dynamically added JointBall and geometry]]></sdk_desc>
@@ -579,7 +580,7 @@
 		<tag>Rope &amp; Cloth</tag>
 		<tag>Basic Recipes</tag>
 		<tag>Sim</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Day-Night Switching" id="day_night_switch" category_id="complex">
 	<sdk_desc><![CDATA[Implementation of an automated day-night system with light and material switching.]]></sdk_desc>
@@ -600,7 +601,7 @@
 		<tag>Environment</tag>
 		<tag>Lighting</tag>
 		<tag>Sim</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Fire Hose" id="fire_hose" category_id="complex">
 	<sdk_desc><![CDATA[Demonstating a basic firefighting simulation involving interactive fire suppression with a controllable hose.]]></sdk_desc>
@@ -615,7 +616,7 @@
 		<tag>Effects</tag>
 		<tag>Complex Solutions</tag>
 		<tag>Sim</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="First-Person Controller" id="first_person_controller" category_id="complex">
 	<sdk_desc><![CDATA[Implementing and customizing a first-person controller with a physical body.]]></sdk_desc>
@@ -636,7 +637,7 @@
 		<tag>Cameras</tag>
 		<tag>Games</tag>
 		<tag>Basic Recipes</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="LiDAR" img="yes" id="lidar" category_id="complex">
 	<sdk_desc><![CDATA[A realistic LiDAR sensor simulation, used in self-driving cars, robotics, robot vacuum cleaners and drones to map their surroundings.]]></sdk_desc>
@@ -662,7 +663,21 @@
 		<tag>Intersections</tag>
 		<tag>Sensors</tag>
 		<tag>Sim</tag>
-		</tags>
+	</tags>
+</sample>
+<sample title="Mesh Digger" id="mesh_digger" category_id="complex">
+	<sdk_desc><![CDATA[Simulation of the ground digging process based on mesh geometry modification.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[		<p>This sample demonstrates a simulation of ground digging, modification of a terrain fragment represented by a mesh via API. The fragment of the ground surfaces is generated using the Marching Cubes algorithm. You can dig the ground at any point by moving the mouse cursor (the cutting sphere is visualized around the cursor) to it and clicking the left mouse button. You can also set the desired radius of the cutting sphere (<b>Digging Radius</b>) defining the volume of ground to be removed on a left-click. To add volume instead, hold the <i>Ctrl</i> key and left-click.</p>
+		]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Complex Solutions</tag>
+		<tag>Procedural</tag>
+		<tag>Sim</tag>
+	</tags>
 </sample>
 <sample title="Observer Controller" id="observer_controller" category_id="complex">
 	<sdk_desc><![CDATA[Implementation of a free-flying camera similar to the one used in the UnigineEditor (with zooming, panning, focusing and speed control).]]></sdk_desc>
@@ -693,7 +708,7 @@
 	<tags>
 		<tag>Complex Solutions</tag>
 		<tag>Cameras</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Player Persecutor" id="player_persecutor" category_id="complex">
 	<sdk_desc><![CDATA[Creating custom target-following camera using <i>PlayerDummy</i>, replicating <i>PlayerPersecutor</i> logic with adjustable offset, collision handling, and multiple follow modes.]]></sdk_desc>
@@ -707,7 +722,7 @@
 		<tag>Transformations</tag>
 		<tag>Objects</tag>
 		<tag>Complex Solutions</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Robot Arm" img="yes" id="robot_arm" category_id="complex">
 	<sdk_desc><![CDATA[A physics-based robotic arm implementation with 6 degrees of freedom (5 movable joints + 1 fixed base)]]></sdk_desc>
@@ -740,7 +755,7 @@
 		<tag>Complex Solutions</tag>
 		<tag>Physics</tag>
 		<tag>Sim</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Spectator Controller" id="spectator_controller" category_id="complex">
 	<sdk_desc><![CDATA[Implementation of a customizable first-person spectator camera with configurable movement and physical collision detection.]]></sdk_desc>
@@ -765,7 +780,7 @@
 		<tag>Complex Solutions</tag>
 		<tag>Cameras</tag>
 		<tag>Physics</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Top-Down Controller" id="top_down_controller" category_id="complex">
 	<sdk_desc><![CDATA[Implementation of some elements of a top-down strategy such as selecting one or multiple units, panning the view, turning the camera and smoothly focusing it on the current selection.]]></sdk_desc>
@@ -787,7 +802,7 @@
 		<tag>Cameras</tag>
 		<tag>Games</tag>
 		<tag>Basic Recipes</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Non-Physical Tracks" id="track_non_physical" category_id="complex">
 	<sdk_desc><![CDATA[Simulating vehicle tracks with non-physical track plates, wheels, and joints (JointWheel).]]></sdk_desc>
@@ -805,7 +820,7 @@
 	<tags>
 		<tag>Complex Solutions</tag>
 		<tag>Vehicle</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Physical Tracks" id="track_physical" category_id="complex">
 	<sdk_desc><![CDATA[Simulating vehicle tracks with physical track plates, wheels, and hinge joints (JointHinge).]]></sdk_desc>
@@ -824,7 +839,7 @@
 		<tag>Complex Solutions</tag>
 		<tag>Physics</tag>
 		<tag>Vehicle</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Gamepad Input" id="input_gamepad" category_id="input_controls">
 	<sdk_desc>
@@ -837,7 +852,7 @@
 	</desc>
 	<tags>
 		<tag>Input &amp; Controls</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Joystick Input" id="input_joystick" category_id="input_controls">
 	<sdk_desc><![CDATA[This sample demonstrates how to add advanced joystick input handling, supporting multiple controllers with real-time axis/button monitoring and force feedback effects.]]></sdk_desc>
@@ -848,7 +863,7 @@
 	</desc>
 	<tags>
 		<tag>Input &amp; Controls</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Keyboard And Mouse Input" id="input_keyboard_mouse" category_id="input_controls">
 	<sdk_desc><![CDATA[This sample demonstrates how to add monitoring of keyboard and mouse input, tracking key states, mouse movements, wheel events, and cursor positions across different coordinate systems. It displays real-time input data including key presses, mouse deltas, and text input.]]></sdk_desc>
@@ -863,7 +878,7 @@
 	</desc>
 	<tags>
 		<tag>Input &amp; Controls</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Touch Input" id="input_touch" category_id="input_controls">
 	<sdk_desc>
@@ -876,7 +891,7 @@
 	</desc>
 	<tags>
 		<tag>Input &amp; Controls</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Navigation Mesh" id="navigation_mesh" category_id="navigation">
 	<sdk_desc>
@@ -894,7 +909,7 @@
 	</controls>
 	<tags>
 		<tag>Navigation &amp; Patfinding</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Navigation Mesh Demo" id="navigation_mesh_demo" category_id="navigation">
 	<sdk_desc>
@@ -912,7 +927,7 @@
 	</controls>
 	<tags>
 		<tag>Navigation &amp; Patfinding</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Navigation Sectors" id="navigation_sectors" category_id="navigation">
 	<sdk_desc>
@@ -930,7 +945,7 @@
 	</controls>
 	<tags>
 		<tag>Navigation &amp; Patfinding</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Navigation Sectors Demo" id="navigation_sectors_demo" category_id="navigation">
 	<sdk_desc>
@@ -948,7 +963,7 @@
 	</controls>
 	<tags>
 		<tag>Navigation &amp; Patfinding</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Simple HTTP Image Request" id="http_image_request" category_id="network">
 	<sdk_desc><![CDATA[This sample shows how to implement an asynchronous <i>HTTP</i> request to a <i>REST API</i> to download image files and apply them to scene objects at runtime.]]></sdk_desc>
@@ -965,7 +980,7 @@
 	</desc>
 	<tags>
 		<tag>Network</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Simple HTTP Image Response" id="http_image_response" category_id="network">
 	<sdk_desc><![CDATA[This sample demonstrates how to implement an asynchronous <i>HTTP</i> server that responds to <i>REST API</i> requests by sending image data. It captures the contents of the application window, converts the rendered frame to a <i>PNG</i> image in memory, and serves it via an embedded <i>HTTP</i> server.]]></sdk_desc>
@@ -978,7 +993,7 @@
 	</desc>
 	<tags>
 		<tag>Network</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Simple HTTP Request" img="yes" id="http_simple_request" category_id="network">
 	<sdk_desc><![CDATA[Implementing asynchronous <i>HTTP GET</i> requests to external <i>REST API</i> and displaying the retrieved data in the user interface.]]></sdk_desc>
@@ -995,7 +1010,7 @@
 	</desc>
 	<tags>
 		<tag>Network</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Simple HTTP Response" id="http_simple_response" category_id="network">
 	<sdk_desc><![CDATA[Implementing a simple asynchronous <i>HTTP</i> server that returns current world coordinates of the player in response to external <i>REST API</i> requests.]]></sdk_desc>
@@ -1008,7 +1023,7 @@
 	</desc>
 	<tags>
 		<tag>Network</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="TCP Sockets" id="tcp_sockets" category_id="network">
 	<sdk_desc><![CDATA[Establishing and managing <i>TCP</i> socket connections between a server and multiple clients each represented by a UNIGINE-application. Clients can connect to the server, exchange text messages via the Console (<b>send_msg</b> command), and receive camera transform updates from the server.]]></sdk_desc>
@@ -1026,7 +1041,7 @@
 	<tags>
 		<tag>Network</tag>
 		<tag>Basic Recipes</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="UDP Sockets" id="udp_sockets" category_id="network">
 	<sdk_desc><![CDATA[Using the sockets API to send and receive UDP messages in the network between two peers each represented by a UNIGINE-application.]]></sdk_desc>
@@ -1043,7 +1058,7 @@
 	<tags>
 		<tag>Network</tag>
 		<tag>Basic Recipes</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Cluster" id="cluster" category_id="nodes">
 	<sdk_desc><![CDATA[Dynamic manipulation of <i>ObjectMeshCluster</i> in UNIGINE, showcasing how to add/remove mesh instances at runtime through user interaction.]]></sdk_desc>
@@ -1069,7 +1084,7 @@
 		<tag>Optimization</tag>
 		<tag>Objects</tag>
 		<tag>World Management</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Clutter-to-Cluster Converter" id="clutter_to_cluster" category_id="nodes">
 	<sdk_desc><![CDATA[Dynamic generation of a <i>Mesh Clutter</i> and its conversion into a performance-optimized <i>Mesh Cluster</i> at runtime.]]></sdk_desc>
@@ -1087,7 +1102,7 @@
 		<tag>Optimization</tag>
 		<tag>Objects</tag>
 		<tag>World Management</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Object Creation" id="create_objects" category_id="nodes">
 	<sdk_desc><![CDATA[Basics of working with Objects: creation and modification via API.]]></sdk_desc>
@@ -1119,7 +1134,7 @@
 		<tag>Objects</tag>
 		<tag>Physics</tag>
 		<tag>Effects</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Dynamic Field Height" id="dynamic_field_height" category_id="nodes">
 	<sdk_desc><![CDATA[Creation of a dynamic <i>Field Height</i> with dynamic sine function texture using the C++ API.]]></sdk_desc>
@@ -1134,7 +1149,7 @@
 		<tag>Procedural</tag>
 		<tag>Fields</tag>
 		<tag>Water</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Landscape Combined Modification" id="landscape_combined" category_id="nodes">
 	<sdk_desc><![CDATA[This sample demonstrates a hybrid approach to terrain editing using both non-destructive and destructive Landscape Terrain modification techniques.]]></sdk_desc>
@@ -1154,7 +1169,7 @@
 	<tags>
 		<tag>Terrain</tag>
 		<tag>World Management</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Landscape Creation" id="landscape_create" category_id="nodes">
 	<sdk_desc><![CDATA[This sample demonstrates how to dynamically generate a Landscape Layer Map using tiled albedo, height, and mask textures.]]></sdk_desc>
@@ -1178,7 +1193,7 @@
 	<tags>
 		<tag>Terrain</tag>
 		<tag>Procedural</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Landscape Details" id="landscape_details" category_id="nodes">
 	<sdk_desc><![CDATA[This sample demonstrates how to add and manage detail layers for a LandscapeTerrain object using the <i>getDetailMask()</i> and <i>addDetail()</i> methods.]]></sdk_desc>
@@ -1198,7 +1213,7 @@
 	</desc>
 	<tags>
 		<tag>Terrain</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Landscape Excavation" id="landscape_excavation" category_id="nodes">
 	<sdk_desc><![CDATA[This sample demonstrates destructive, real-time modification of a Landscape Layer Map using a 3D object (e.g., a tractor grader) as an excavation tool.]]></sdk_desc>
@@ -1228,7 +1243,7 @@
 	<tags>
 		<tag>Terrain</tag>
 		<tag>Basic Recipes</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Landscape Fetch" id="landscape_fetch" category_id="nodes">
 	<sdk_desc><![CDATA[This sample demonstrates how to retrieve detailed information from a LandscapeTerrain object on its surface using LandscapeFetch.]]></sdk_desc>
@@ -1257,7 +1272,7 @@
 		<tag>Objects</tag>
 		<tag>Intersections</tag>
 		<tag>Materials</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Landscape Paint Clutter" id="landscape_mask_paint" category_id="nodes">
 	<sdk_desc><![CDATA[This sample demonstrates real-time painting of Landscape Layer Map mask data using a customizable brush system.]]></sdk_desc>
@@ -1286,7 +1301,7 @@
 	</controls>
 	<tags>
 		<tag>Terrain</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Landscape Mesh" id="landscape_mesh" category_id="nodes">
 	<sdk_desc><![CDATA[This sample demonstrates how to generate a procedural mesh (ObjectMeshDynamic) that represents a selected region of the Landscape Terrain.]]></sdk_desc>
@@ -1308,7 +1323,7 @@
 	<tags>
 		<tag>Terrain</tag>
 		<tag>Objects</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Landscape Paint" id="landscape_paint" category_id="nodes">
 	<sdk_desc><![CDATA[This sample demonstrates real-time terrain modification through direct manipulation of Landscape Layer Maps.]]></sdk_desc>
@@ -1340,7 +1355,7 @@
 		<tag>Terrain</tag>
 		<tag>Objects</tag>
 		<tag>Materials</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Landscape Tracks" id="landscape_tracks" category_id="nodes">
 	<sdk_desc><![CDATA[Non-destructive runtime modification of the <i>Landscape Terrain</i> by dynamically spawning multiple <i>Landscape Layer Maps</i> beneath moving objects to create realistic track imprints on the terrain.]]></sdk_desc>
@@ -1366,7 +1381,7 @@
 		<tag>Terrain</tag>
 		<tag>Vehicle</tag>
 		<tag>Basic Recipes</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Lights" id="lights" category_id="nodes">
 	<sdk_desc><![CDATA[This sample demonstrates how to create light sources (<b>World Light, Projected Light, Omni Light</b>) and modify their parameters at runtime.]]></sdk_desc>
@@ -1381,7 +1396,7 @@
 	</desc>
 	<tags>
 		<tag>Lighting</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Node Extern" id="node_extern" category_id="nodes">
 	<sdk_desc><![CDATA[This sample adds custom nodes that were created via API to the world by using <b>NodeExtern</b>. It shows how to implement bound box visualization and runtime node configuration while maintaining engine integration. Useful for adding specialized nodes with custom behavior and visualization.]]></sdk_desc>
@@ -1395,7 +1410,7 @@
 	<tags>
 		<tag>Objects</tag>
 		<tag>Extension &amp; Customization</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Object Extern" id="object_extern" category_id="nodes">
 	<sdk_desc><![CDATA[This sample adds custom objects created via API to the world by using <b>ObjectExtern</b>. It shows how to implement custom rendering, physics, and properties while maintaining full engine integration. Used to add specialized objects with unique geometry and behavior to your scenes.]]></sdk_desc>
@@ -1408,7 +1423,7 @@
 	<tags>
 		<tag>Objects</tag>
 		<tag>Extension &amp; Customization</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Players" id="players" category_id="nodes">
 	<sdk_desc><![CDATA[Creation and configuration of the four <i>Players</i> available (<i>PlayerDummy, PlayerPersecutor, PlayerSpectator, PlayerActor</i>).]]></sdk_desc>
@@ -1425,7 +1440,7 @@
 	</desc>
 	<tags>
 		<tag>Cameras</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Spline Graph" id="spline_graph" category_id="nodes">
 	<sdk_desc><![CDATA[This sample demonstrates how to create and visualize a spline graph (SplineGraph), and move an object along it using the C++ API.]]></sdk_desc>
@@ -1440,7 +1455,7 @@
 	<tags>
 		<tag>Animation</tag>
 		<tag>Water</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="State Save Restore" id="state_save_restore" category_id="nodes">
 	<sdk_desc><![CDATA[This sample demonstrates how to save and restore the state of an arbitrary Node, which can be used to implement things like Scene serialization, Undo/Redo systems, or Game saves.]]></sdk_desc>
@@ -1461,7 +1476,7 @@
 		<tag>Objects</tag>
 		<tag>Logic</tag>
 		<tag>Basic Recipes</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Buoyancy" id="water_buoyancy" category_id="nodes">
 	<sdk_desc><![CDATA[This sample demonstrates real-time wave control and buoyancy simulation without engaging Physics.]]></sdk_desc>
@@ -1486,7 +1501,7 @@
 		<tag>Water</tag>
 		<tag>Maritime</tag>
 		<tag>Optimization</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Custom Waves" id="water_custom_wave" category_id="nodes">
 	<sdk_desc><![CDATA[This sample demonstrates how to control the wave spectrum of Global Water in Manual mode via API]]></sdk_desc>
@@ -1501,7 +1516,7 @@
 	<tags>
 		<tag>Water</tag>
 		<tag>Maritime</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Fetch and Intersection Water Parameters" id="water_fetch_intersection" category_id="nodes">
 	<sdk_desc><![CDATA[This sample demonstrates how various parameters influence the accuracy of fetch and intersection operations on the Global Water object across different Beaufort levels.]]></sdk_desc>
@@ -1526,7 +1541,7 @@
 		<tag>Water</tag>
 		<tag>Maritime</tag>
 		<tag>Intersections</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Physical Buoyancy" id="water_physical_buoyancy" category_id="nodes">
 	<sdk_desc><![CDATA[This sample demonstrates how to implement physically accurate buoyancy for dynamic objects floating on Global Water.]]></sdk_desc>
@@ -1550,7 +1565,7 @@
 		<tag>Water</tag>
 		<tag>Maritime</tag>
 		<tag>Physics</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Simple Boat" id="water_simple_boat" category_id="nodes">
 	<sdk_desc><![CDATA[Simulating dynamic wake foam behind a moving boat using a combination of <i>Orthographic Decals</i> and <i>Particle Systems</i>.]]></sdk_desc>
@@ -1574,7 +1589,7 @@
 		<tag>Basic Recipes</tag>
 		<tag>Decals</tag>
 		<tag>Effects</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="WorldSplineGraph" id="world_spline_graph" category_id="nodes">
 	<sdk_desc><![CDATA[Generating spline-based geometry by creating a <i>WorldSplineGraph</i> from an <i>*.spl</i> file and applying <i>*.node</i> geometry in stretching mode for placing objects along splines]]></sdk_desc>
@@ -1585,7 +1600,7 @@
 	</desc>
 	<tags>
 		<tag>Objects</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Body Events" id="body_events" category_id="physics">
 	<sdk_desc><![CDATA[Demonstrating the usage of <i>Frozen, Position</i>, and <i>ContactEnter</i> events of the Body class via the C++ API]]></sdk_desc>
@@ -1598,7 +1613,7 @@
 		<tag>Physics</tag>
 		<tag>Systems</tag>
 		<tag>Logic</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="BodyFracture Explosion" id="body_fracture_explosion" category_id="physics">
 	<sdk_desc><![CDATA[Simulating a radial explosion that triggers BodyFracture object to crack and applies forces to its pieces.]]></sdk_desc>
@@ -1613,7 +1628,7 @@
 		<tag>Physics</tag>
 		<tag>Systems</tag>
 		<tag>Logic</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="BodyFracture Falling Spheres" id="body_fracture_falling_spheres" category_id="physics">
 	<sdk_desc><![CDATA[Continuously falling objects fracturing upon collision implemented using the <i>BodyFracture</i> class.]]></sdk_desc>
@@ -1628,7 +1643,7 @@
 		<tag>Physics</tag>
 		<tag>Systems</tag>
 		<tag>Logic</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="BodyFracture Shooting Gallery" id="body_fracture_shooting_gallery" category_id="physics">
 	<sdk_desc><![CDATA[Implementation of a basic physics-driven shooting gallery using <i>Fracture Body</i>.]]></sdk_desc>
@@ -1648,7 +1663,7 @@
 	<tags>
 		<tag>Basic Recipes</tag>
 		<tag>Physics</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Joint Events" id="joint_events" category_id="physics">
 	<sdk_desc><![CDATA[Demonstrating the usage of the <i>Broken</i> event of the <i>Joint</i> class via the C++ API]]></sdk_desc>
@@ -1661,7 +1676,7 @@
 		<tag>Physics</tag>
 		<tag>Systems</tag>
 		<tag>Logic</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Physics Movement" id="physics_movement" category_id="physics">
 	<sdk_desc><![CDATA[Simple logic of moving an object using physical methods (by force or by impulse).]]></sdk_desc>
@@ -1677,7 +1692,7 @@
 	</controls>
 	<tags>
 		<tag>Physics</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Update Physics" id="update_physics" category_id="physics">
 	<sdk_desc><![CDATA[Demonstration of the difference between implementation of physics-driven movement within the <i>update()</i> and <i>updatePhysics()</i> methods.]]></sdk_desc>
@@ -1689,7 +1704,7 @@
 	<tags>
 		<tag>Physics</tag>
 		<tag>Logic</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="FMOD Core" id="fmod_core" category_id="plugins">
 	<sdk_desc><![CDATA[
@@ -1726,7 +1741,7 @@
 		<tag>Plugins</tag>
 		<tag>Integration</tag>
 		<tag>Extension &amp; Customization</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="FMOD Studio" id="fmod_studio" category_id="plugins">
 	<sdk_desc><![CDATA[
@@ -1761,7 +1776,7 @@
 		<tag>Plugins</tag>
 		<tag>Integration</tag>
 		<tag>Extension &amp; Customization</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Camera to Texture" id="camera_to_texture" category_id="render">
 	<sdk_desc><![CDATA[Capturing a camera's output in real time and projecting it onto a material's albedo texture using <i>Viewport::renderTexture2D()</i>]]></sdk_desc>
@@ -1773,7 +1788,7 @@
 	<tags>
 		<tag>Render</tag>
 		<tag>Materials</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Compute Shader" id="compute_shader" category_id="render">
 	<sdk_desc><![CDATA[Creating a compute shader to process a million of particles]]></sdk_desc>
@@ -1785,7 +1800,7 @@
 	<tags>
 		<tag>Render</tag>
 		<tag>Shaders</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Compute Shader Image" id="compute_shader_image" category_id="render">
 	<sdk_desc><![CDATA[Creating a compute shader that processes a read-write texture on GPU (without CPU)]]></sdk_desc>
@@ -1797,7 +1812,7 @@
 	<tags>
 		<tag>Render</tag>
 		<tag>Shaders</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="FFP Depth Visualizer" id="ffp_depth" category_id="render">
 	<sdk_desc>
@@ -1814,7 +1829,7 @@
 	</desc>
 	<tags>
 		<tag>Render</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="G-Buffer Read" id="gbuffer_read" category_id="render">
 	<sdk_desc><![CDATA[Accessing <i>G-buffer</i> textures at different stages of the rendering process by configuring a custom <i>Viewport</i> and intercepting its output at the <i>G-buffer</i> rendering stage.]]></sdk_desc>
@@ -1831,7 +1846,7 @@
 	<tags>
 		<tag>Render</tag>
 		<tag>Shaders</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="G-Buffer Write" id="gbuffer_write" category_id="render">
 	<sdk_desc><![CDATA[Modification <i>G-buffer</i> textures at different stages of the rendering process by injecting a custom material at the end of the <i>G-buffer</i> pass.]]></sdk_desc>
@@ -1843,7 +1858,7 @@
 	<tags>
 		<tag>Render</tag>
 		<tag>Shaders</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Gui to Texture" id="gui_to_texture" category_id="render">
 	<sdk_desc><![CDATA[Rendering GUI elements into a texture using <i>Gui::render()</i> and applying the resulting texture to materials.]]></sdk_desc>
@@ -1855,7 +1870,7 @@
 	<tags>
 		<tag>Render</tag>
 		<tag>Materials</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Node to Texture" id="node_to_texture" category_id="render">
 	<sdk_desc><![CDATA[Rendering a node into a texture using <i>Viewport::renderNodeTexture2D()</i>, and setting this texture as material's albedo texture]]></sdk_desc>
@@ -1867,7 +1882,7 @@
 	<tags>
 		<tag>Render</tag>
 		<tag>Materials</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="RenderTarget" id="render_target" category_id="render">
 	<sdk_desc><![CDATA[Rendering paint splashes to a texture using the <i>RenderTarget</i> class]]></sdk_desc>
@@ -1884,7 +1899,7 @@ Click to spawn a sprite
 	<tags>
 		<tag>Render</tag>
 		<tag>Materials</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Screenshot" id="screenshot" category_id="render">
 	<sdk_desc>
@@ -1903,7 +1918,7 @@ Click to spawn a sprite
 	<tags>
 		<tag>Render</tag>
 		<tag>Basic Recipes</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Split-Screen Texture" id="split_screen_texture" category_id="render">
 	<sdk_desc><![CDATA[Rendering views from two cameras into textures and implementing split-screen mode]]></sdk_desc>
@@ -1924,7 +1939,7 @@ Use <b>arrows</b> to move
 		<tag>Render</tag>
 		<tag>Cameras</tag>
 		<tag>Widgets</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Structured Buffer" id="structured_buffer" category_id="render">
 	<sdk_desc><![CDATA[Creating a DXT compression by using structured buffers]]></sdk_desc>
@@ -1941,7 +1956,7 @@ Use <b>arrows</b> to move
 		<tag>Render</tag>
 		<tag>Shaders</tag>
 		<tag>Optimization</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Textures" id="textures" category_id="render">
 	<sdk_desc><![CDATA[Updating mesh albedo texture using procedurally generated image data]]></sdk_desc>
@@ -1955,7 +1970,7 @@ Use <b>arrows</b> to move
 	<tags>
 		<tag>Render</tag>
 		<tag>Procedural</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Weapon Clipping" id="weapon_clipping" category_id="render">
 	<sdk_desc><![CDATA[Rendering the weapon from a second camera into a texture to avoid clipping issues]]></sdk_desc>
@@ -1971,7 +1986,40 @@ Use <b>arrows</b> to move
 		<tag>Cameras</tag>
 		<tag>Games</tag>
 		<tag>Basic Recipes</tag>
-		</tags>
+	</tags>
+</sample>
+<sample title="Sound Ambient" id="sound_ambient" category_id="sounds">
+	<sdk_desc><![CDATA[Playing ambient sounds via code.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This sample shows the implementation of a component that controls the playback of ambient sound (<i>AmbientSource</i>) and allows interactive adjustment of playback parameters using the keyboard.]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Sound</tag>
+	</tags>
+</sample>
+<sample title="Sound Reverb" id="sound_reverb" category_id="sounds">
+	<sdk_desc><![CDATA[Setting a reverberation zone and its parameters via code.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This example shows a component that creates a <i>Reverberation Zone (SoundReverb)</i> and updates reverb settings based on a given power value.]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Sound</tag>
+	</tags>
+</sample>
+<sample title="Sound Source" id="sound_source" category_id="sounds">
+	<sdk_desc><![CDATA[Playing a sound source via code.]]></sdk_desc>
+	<desc>
+		<brief>
+		<![CDATA[This example demonstrates how to create a sound source (<i>SoundSource</i>) and configure its basic parameters: volume, pitch, looping mode, and playback type.]]>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Sound</tag>
+	</tags>
 </sample>
 <sample title="AsyncQueue" id="async_queue" category_id="systems">
 	<sdk_desc><![CDATA[Loading meshes and textures in a separate thread using the <i>AsyncQueue</i> class]]></sdk_desc>
@@ -1988,7 +2036,7 @@ Use <b>arrows</b> to move
 		<tag>Optimization</tag>
 		<tag>File System</tag>
 		<tag>Multithreading</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="AsyncQueue Stress" id="async_queue_stress" category_id="systems">
 	<sdk_desc><![CDATA[Asynchronous node loading via <i>AsyncQueue</i> with main-thread spatial integration.]]></sdk_desc>
@@ -2006,7 +2054,7 @@ Use <b>arrows</b> to move
 		<tag>Optimization</tag>
 		<tag>Multithreading</tag>
 		<tag>World Management</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="AsyncQueue Tasks" id="async_queue_tasks" category_id="systems">
 	<sdk_desc><![CDATA[Managing tasks via <i>AsyncQueue</i> class with dirrefent thread types, parallel execution and frame control.]]></sdk_desc>
@@ -2026,7 +2074,7 @@ Use <b>arrows</b> to move
 		<tag>Systems</tag>
 		<tag>Optimization</tag>
 		<tag>Multithreading</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Cad-Like View" id="cad_like_view" category_id="systems">
 	<sdk_desc><![CDATA[CAD-Like View implementation with multiple synced viewports for top, side, front, and perspective views]]></sdk_desc>
@@ -2048,7 +2096,7 @@ Controls in the perspective view are as usual:<br/>
 		<tag>Interface (GUI)</tag>
 		<tag>Windows &amp; Viewports</tag>
 		<tag>Widgets</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Callbacks" id="callbacks" category_id="systems">
 	<sdk_desc>
@@ -2062,7 +2110,7 @@ Controls in the perspective view are as usual:<br/>
 	<tags>
 		<tag>Systems</tag>
 		<tag>Logic</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Console" id="console" category_id="systems">
 	<sdk_desc>
@@ -2076,7 +2124,7 @@ Controls in the perspective view are as usual:<br/>
 	<tags>
 		<tag>Systems</tag>
 		<tag>Logic</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="CPU Shader" id="cpu_shader" category_id="systems">
 	<sdk_desc><![CDATA[Multi-threaded update of multiple <i>ObjectMeshCluster</i> instances on the CPU side using the <i>CPUShader</i> class]]></sdk_desc>
@@ -2091,7 +2139,7 @@ Controls in the perspective view are as usual:<br/>
 		<tag>Systems</tag>
 		<tag>Shaders</tag>
 		<tag>Optimization</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Events" id="events" category_id="systems">
 	<sdk_desc><![CDATA[Demonstration of four different patterns of subscribing to UNIGINE's <i>Events</i> via the C++ API, highlighting how event handler lifetime and management can vary depending on the approach.]]></sdk_desc>
@@ -2103,7 +2151,7 @@ Controls in the perspective view are as usual:<br/>
 	<tags>
 		<tag>Systems</tag>
 		<tag>Logic</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Events Advanced" id="events_advanced" category_id="systems">
 	<sdk_desc><![CDATA[Advanced ways of subscribing to events in UNIGINE: using extra arguments, discarding parameters, and storing connection handles for disconnection.]]></sdk_desc>
@@ -2123,7 +2171,7 @@ Controls in the perspective view are as usual:<br/>
 	<tags>
 		<tag>Systems</tag>
 		<tag>Logic</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="External Package" id="external_package" category_id="systems">
 	<sdk_desc><![CDATA[Demonstration of working with external package files via the <i>Package</i> class.]]></sdk_desc>
@@ -2140,7 +2188,7 @@ Controls in the perspective view are as usual:<br/>
 		<tag>Systems</tag>
 		<tag>Logic</tag>
 		<tag>File System</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="FFP" id="ffp" category_id="systems">
 	<sdk_desc><![CDATA[Using FFP functionality to draw simple 2D shapes over the rendered image without any additional shaders]]></sdk_desc>
@@ -2152,7 +2200,7 @@ Controls in the perspective view are as usual:<br/>
 	<tags>
 		<tag>Systems</tag>
 		<tag>Rendering</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="File" id="files" category_id="systems">
 	<sdk_desc><![CDATA[Demonstration of basic file I/O operations.]]></sdk_desc>
@@ -2164,7 +2212,7 @@ Controls in the perspective view are as usual:<br/>
 	<tags>
 		<tag>Systems</tag>
 		<tag>File System</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Images" id="images" category_id="systems">
 	<sdk_desc><![CDATA[Procedurally generate <i>3D</i> image data and use it as a density texture for a volume-based material in real time.]]></sdk_desc>
@@ -2178,7 +2226,7 @@ Controls in the perspective view are as usual:<br/>
 	<tags>
 		<tag>Render</tag>
 		<tag>Procedural</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Multiple Async Requests" id="intersection_multiple_async_requests" category_id="systems">
 	<sdk_desc>
@@ -2195,7 +2243,7 @@ Controls in the perspective view are as usual:<br/>
 	</desc>
 	<tags>
 		<tag>Intersections</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Simple Async Request" id="intersection_simple_async_request" category_id="systems">
 	<sdk_desc>
@@ -2208,7 +2256,7 @@ Controls in the perspective view are as usual:<br/>
 	</desc>
 	<tags>
 		<tag>Intersections</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="JSON" id="json" category_id="systems">
 	<sdk_desc><![CDATA[Generation of a structured <i>JSON</i> document containing objects, arrays, and various data types such as strings, numbers, booleans, and null values, followed by traversal and pretty-printed output.]]></sdk_desc>
@@ -2220,7 +2268,7 @@ Controls in the perspective view are as usual:<br/>
 	<tags>
 		<tag>File Formats</tag>
 		<tag>Logic</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Materials and Properties" id="materials_and_properties" category_id="systems">
 	<sdk_desc><![CDATA[Working with <i>Property Manager</i> and <i>Material Manager</i> to access all materials and properties in the project via API.]]></sdk_desc>
@@ -2232,7 +2280,7 @@ Controls in the perspective view are as usual:<br/>
 	<tags>
 		<tag>Materials</tag>
 		<tag>Properties</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Microprofiler" id="microprofiler" category_id="systems">
 	<sdk_desc><![CDATA[Using <i>Microprofile</i>, an advanced CPU/GPU profiler, to track performance and estimate the time spent on different sections of code.]]></sdk_desc>
@@ -2246,7 +2294,7 @@ Controls in the perspective view are as usual:<br/>
 	<tags>
 		<tag>Systems</tag>
 		<tag>Optimization</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Mount Points" id="mount_points" category_id="systems">
 	<sdk_desc><![CDATA[This sample demonstrates how to create and use mount points in the file system for accessing external folders and package files (e.g., <b>*.zip</b>, <b>*.ung</b>).]]></sdk_desc>
@@ -2258,7 +2306,7 @@ Controls in the perspective view are as usual:<br/>
 	<tags>
 		<tag>Systems</tag>
 		<tag>File System</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Procedural Mesh Apply" id="procedural_mesh_apply" category_id="systems">
 	<sdk_desc><![CDATA[A minimal example that shows how to generate and apply a procedural mesh at runtime using the correct update sequence.]]></sdk_desc>
@@ -2275,7 +2323,7 @@ Controls in the perspective view are as usual:<br/>
 		<tag>Systems</tag>
 		<tag>Objects</tag>
 		<tag>Procedural</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Procedural Mesh Generation" id="procedural_mesh_generation" category_id="systems">
 	<sdk_desc><![CDATA[Demonstrating runtime procedural mesh generation, along with visualization of how different procedural modes impact memory usage during creation and rendering.]]></sdk_desc>
@@ -2296,7 +2344,7 @@ Controls in the perspective view are as usual:<br/>
 		<tag>Systems</tag>
 		<tag>Objects</tag>
 		<tag>Procedural</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Procedural Mesh Modification" id="procedural_mesh_modification" category_id="systems">
 	<sdk_desc><![CDATA[Demonstrating runtime procedural mesh modification, along with visualization of how different procedural modes impact streamiing and memory usage during creation and rendering.]]></sdk_desc>
@@ -2318,7 +2366,7 @@ Controls in the perspective view are as usual:<br/>
 		<tag>Systems</tag>
 		<tag>Objects</tag>
 		<tag>Procedural</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="StreamBase" id="stream_base" category_id="systems">
 	<sdk_desc>
@@ -2331,7 +2379,7 @@ Controls in the perspective view are as usual:<br/>
 	</desc>
 	<tags>
 		<tag>Logic</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Thread" id="thread" category_id="systems">
 	<sdk_desc><![CDATA[Creating and running custom threads using the <i>Unigine::Thread</i> class.]]></sdk_desc>
@@ -2348,7 +2396,7 @@ Controls in the perspective view are as usual:<br/>
 		<tag>Logic</tag>
 		<tag>Optimization</tag>
 		<tag>Multithreading</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Two-Point Perspective" id="two_point_perspective" category_id="systems">
 	<sdk_desc>
@@ -2362,7 +2410,7 @@ Controls in the perspective view are as usual:<br/>
 	<tags>
 		<tag>Cameras</tag>
 		<tag>Render</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="USC Arrays" id="usc_arrays" category_id="systems">
 	<sdk_desc>
@@ -2375,7 +2423,7 @@ Controls in the perspective view are as usual:<br/>
 	</desc>
 	<tags>
 		<tag>UnigineScript</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="USC Callbacks" id="usc_callbacks" category_id="systems">
 	<sdk_desc>
@@ -2392,7 +2440,7 @@ Controls in the perspective view are as usual:<br/>
 	</desc>
 	<tags>
 		<tag>UnigineScript</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="USC Classes" id="usc_classes" category_id="systems">
 	<sdk_desc>
@@ -2405,7 +2453,7 @@ Controls in the perspective view are as usual:<br/>
 	</desc>
 	<tags>
 		<tag>UnigineScript</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="USC Functions" id="usc_functions" category_id="systems">
 	<sdk_desc>
@@ -2418,7 +2466,7 @@ Controls in the perspective view are as usual:<br/>
 	</desc>
 	<tags>
 		<tag>UnigineScript</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="USC Inheritance" id="usc_inheritance" category_id="systems">
 	<sdk_desc>
@@ -2431,7 +2479,7 @@ Controls in the perspective view are as usual:<br/>
 	</desc>
 	<tags>
 		<tag>UnigineScript</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="USC Stack" id="usc_stack" category_id="systems">
 	<sdk_desc>
@@ -2444,7 +2492,7 @@ Controls in the perspective view are as usual:<br/>
 	</desc>
 	<tags>
 		<tag>UnigineScript</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="USC Structures" id="usc_structures" category_id="systems">
 	<sdk_desc>
@@ -2457,7 +2505,7 @@ Controls in the perspective view are as usual:<br/>
 	</desc>
 	<tags>
 		<tag>UnigineScript</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="USC Transfer" id="usc_transfer" category_id="systems">
 	<sdk_desc>
@@ -2470,7 +2518,7 @@ Controls in the perspective view are as usual:<br/>
 	</desc>
 	<tags>
 		<tag>UnigineScript</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="USC Types" id="usc_types" category_id="systems">
 	<sdk_desc>
@@ -2483,7 +2531,7 @@ Controls in the perspective view are as usual:<br/>
 	</desc>
 	<tags>
 		<tag>UnigineScript</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="USC Variables" id="usc_variable" category_id="systems">
 	<sdk_desc>
@@ -2496,7 +2544,7 @@ Controls in the perspective view are as usual:<br/>
 	</desc>
 	<tags>
 		<tag>UnigineScript</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Visualizer" id="visualizer" category_id="systems">
 	<sdk_desc><![CDATA[Demonstration of the full range of features provided by the <i>Visualizer</i> class for visual debugging.]]></sdk_desc>
@@ -2514,7 +2562,7 @@ Controls in the perspective view are as usual:<br/>
 	</controls>
 	<tags>
 		<tag>Visualizer (Visual Debug)</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="XML" id="xml" category_id="systems">
 	<sdk_desc>
@@ -2527,7 +2575,7 @@ Controls in the perspective view are as usual:<br/>
 	</desc>
 	<tags>
 		<tag>File Formats</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Object Frame" id="object_frame" category_id="user_interface">
 	<sdk_desc><![CDATA[Using the <i>WidgetCanvas</i> class to render custom frames around objects in the viewport and save frame metadata as <i>JSON</i>.]]></sdk_desc>
@@ -2542,7 +2590,7 @@ Controls in the perspective view are as usual:<br/>
 		<tag>Interface (GUI)</tag>
 		<tag>Widgets</tag>
 		<tag>File Formats</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Target Marker" id="target_marker" category_id="user_interface">
 	<sdk_desc><![CDATA[Implementing a marker that always highlights the target when it is within the field of view, or displays an arrow pointing the direction to the target when it is out of sight (aligned with the screen borders).]]></sdk_desc>
@@ -2555,7 +2603,7 @@ Controls in the perspective view are as usual:<br/>
 		<tag>Interface (GUI)</tag>
 		<tag>Games</tag>
 		<tag>Basic Recipes</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="User Interface" id="user_interface" category_id="user_interface">
 	<sdk_desc><![CDATA[On-the-fly generation of a user interface from a <b>.ui</b> file and setting event handlers for widgets.]]></sdk_desc>
@@ -2572,7 +2620,7 @@ Controls in the perspective view are as usual:<br/>
 	<tags>
 		<tag>Interface (GUI)</tag>
 		<tag>Widgets</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Widgets" id="widgets" category_id="user_interface">
 	<sdk_desc><![CDATA[Demonstration of various UI widgets in UNIGINE, such as sliders, scrolls, buttons, checkboxes, drop-down lists, etc.]]></sdk_desc>
@@ -2591,7 +2639,7 @@ Controls in the perspective view are as usual:<br/>
 	<tags>
 		<tag>Widgets</tag>
 		<tag>Interface (GUI)</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Canvas Widget" id="widget_canvas" category_id="user_interface">
 	<sdk_desc><![CDATA[Using the <i>WidgetCanvas</i> class to draw vector-based shapes and text. The canvas supports adding lines, polygons, and text by defining their geometry through vertex positions. Elements are layered by draw order and colored individually.]]></sdk_desc>
@@ -2603,7 +2651,7 @@ Controls in the perspective view are as usual:<br/>
 	<tags>
 		<tag>Widgets</tag>
 		<tag>Interface (GUI)</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Dialog Widget" id="widget_dialogs" category_id="user_interface">
 	<sdk_desc><![CDATA[Creating widget dialog windows and assigning handlers via the C++ API]]></sdk_desc>
@@ -2616,7 +2664,7 @@ Controls in the perspective view are as usual:<br/>
 		<tag>Widgets</tag>
 		<tag>Windows &amp; Viewports</tag>
 		<tag>Interface (GUI)</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="WidgetExtern" id="widget_extern" category_id="user_interface">
 	<sdk_desc><![CDATA[Defining a custom widget via the C++ API using <i>WidgetExternBase</i>, with full control over layout, rendering, and interaction]]></sdk_desc>
@@ -2629,7 +2677,7 @@ Controls in the perspective view are as usual:<br/>
 		<tag>Widgets</tag>
 		<tag>Interface (GUI)</tag>
 		<tag>Extension &amp; Customization</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="Widget Manipulators" id="widget_manipulators" category_id="user_interface">
 	<sdk_desc>
@@ -2654,7 +2702,7 @@ Controls in the perspective view are as usual:<br/>
 	<tags>
 		<tag>Interface (GUI)</tag>
 		<tag>Widgets</tag>
-		</tags>
+	</tags>
 </sample>
 <sample title="WidgetWindow" id="widget_window" category_id="user_interface">
 	<sdk_desc><![CDATA[Creating a basic <i>WidgetWindow</i> using the C++ API and handling user interactions (edit line and button press events) through handler function connections.]]></sdk_desc>
@@ -2667,7 +2715,7 @@ Controls in the perspective view are as usual:<br/>
 		<tag>Widgets</tag>
 		<tag>Interface (GUI)</tag>
 		<tag>Windows &amp; Viewports</tag>
-		</tags>
+	</tags>
 </sample>
 </samples>
 </samples_pack>

@@ -2,10 +2,9 @@
 <asset version="2.20.0.0">
 	<guid>1ab2392f2fdb94c2aecccd39c12b154449bc1fd3</guid>
 	<type>texture</type>
-	<hash>3f37f454</hash>
+	<hash>f725f7e</hash>
 	<runtimes>
-		<runtime id="1ab2392f2fdb94c2aecccd39c12b154449bc1fd3" name="nodes.png" link="0" type="6"/>
-		<runtime id="0b45a3167b18ff7d65b4bab8a4f9beb7bef98caa" name="nodes.texture" link="1" type="6"/>
+		<runtime id="0b45a3167b18ff7d65b4bab8a4f9beb7bef98caa" name="nodes.png" link="0" type="6"/>
 	</runtimes>
 	<parameters>
 		<parameter type="int" name="blur_radius">1</parameter>
@@ -19,7 +18,7 @@
 		<parameter type="float" name="sharpness_intensity">0.25</parameter>
 		<parameter type="float" name="sharpness_radius">1</parameter>
 		<parameter type="bool" name="srgb_correction">1</parameter>
-		<parameter type="bool" name="unchanged">0</parameter>
+		<parameter type="bool" name="unchanged">1</parameter>
 		<parameter type="string" name="width">auto</parameter>
 	</parameters>
 </asset>

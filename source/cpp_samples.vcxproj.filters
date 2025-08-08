@@ -812,6 +812,12 @@
     <ClCompile Include="systems\procedural_mesh_apply\ProceduralMeshApply.cpp">
       <Filter>systems\procedural_mesh_apply</Filter>
     </ClCompile>
+    <ClCompile Include="complex\mesh_digger\MeshDigger.cpp">
+      <Filter>complex\mesh_digger</Filter>
+    </ClCompile>
+    <ClCompile Include="menu_ui\SamplesManager.cpp">
+      <Filter>menu_ui</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AppSystemLogic.h" />
@@ -1569,6 +1575,15 @@
     <ClInclude Include="systems\procedural_mesh_apply\ProceduralMeshApply.h">
       <Filter>systems\procedural_mesh_apply</Filter>
     </ClInclude>
+    <ClInclude Include="complex\mesh_digger\MeshDigger.h">
+      <Filter>complex\mesh_digger</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\MarchingCubes.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="menu_ui\SamplesManager.h">
+      <Filter>menu_ui</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="menu_ui">
@@ -2068,6 +2083,9 @@
     </Filter>
     <Filter Include="systems\procedural_mesh_apply">
       <UniqueIdentifier>{8708aea1-f9bd-41bb-a053-716f1e1bfb91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="complex\mesh_digger">
+      <UniqueIdentifier>{02b5248d-0ff4-49d3-8311-05959e894788}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

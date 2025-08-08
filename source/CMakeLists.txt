@@ -96,7 +96,6 @@ elseif(UNIGINE_COMPILER_IS_GNU OR UNIGINE_COMPILER_IS_CLANG)
 	-m64
 	-march=athlon64
 	-msse4.2
-	-I/mnt/ssd/svn/gcc/include
 	# Optimizations.
 	-ffast-math
 	-fno-strict-aliasing

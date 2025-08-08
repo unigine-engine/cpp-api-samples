@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>70de0cd9c71887868dd937e96b5de83c2dcf09fc</guid>
+	<type>material_graph</type>
+	<hash>4feced5b</hash>
+	<runtimes>
+		<runtime id="70de0cd9c71887868dd937e96b5de83c2dcf09fc" name="ground_base.mgraph" link="0"/>
+		<runtime id="5feff4446e4aac5edd1c6a742d42b3510788dd2b" name="ground_base" link="1" type="5"/>
+	</runtimes>
+</asset>

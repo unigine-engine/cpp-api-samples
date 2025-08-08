@@ -1,53 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <property version="2.20.0.0" name="FirstPersonController" manual="1" parent_name="node_base">
-	<struct name="DebugCamera">
-		<parameter name="enabled" type="toggle" title="Enabled" tooltip="Debug camera enabled">0</parameter>
-		<parameter name="use_fixed_angles" type="toggle" title="Use Fixed Angles" tooltip="Use fixed angles">0</parameter>
-	</struct>
-	<struct name="DebugVisualizer">
-		<parameter name="enabled" type="toggle" title="Enabled" tooltip="Use visualizer">0</parameter>
-		<parameter name="triangles" type="toggle" title="Triangles" tooltip="Triangles">0</parameter>
-		<parameter name="shapes" type="toggle" title="Shapes" tooltip="Shapes">0</parameter>
-		<parameter name="player_shape" type="toggle" title="Player Shape" tooltip="Player shape">0</parameter>
-		<parameter name="player_direction" type="toggle" title="Player Direction" tooltip="Player direction">0</parameter>
-		<parameter name="camera" type="toggle" title="Camera" tooltip="Camera">0</parameter>
-		<parameter name="slope_basis" type="toggle" title="Slope Basis" tooltip="Slope basis">0</parameter>
-		<parameter name="applied_horizontal_velocity" type="toggle" title="Applied Horizontal Velocity" tooltip="Applied horizontal velocity">0</parameter>
-		<parameter name="applied_vertical_velocity" type="toggle" title="Applied Vertical Velocity" tooltip="Applied vertical velocity">0</parameter>
-		<parameter name="up_pass_contacts" type="toggle" title="Up Pass Contacts" tooltip="Up pass contacts">0</parameter>
-		<parameter name="side_pass_contacts" type="toggle" title="Side Pass Contacts" tooltip="Side pass contacts">0</parameter>
-		<parameter name="down_pass_contacts" type="toggle" title="Down Pass Contacts" tooltip="Down pass contacts">0</parameter>
-		<parameter name="check_move_ray" type="toggle" title="Check Move Ray" tooltip="Check move ray">0</parameter>
-		<parameter name="stair_detection_ray" type="toggle" title="Stair Detection Ray" tooltip="Stair detection ray">0</parameter>
-	</struct>
-	<struct name="DebugProfiler">
-		<parameter name="enabled" type="toggle" title="Enabled" tooltip="Use profiler">0</parameter>
-		<parameter name="applied_horizontal_speed" type="toggle" title="Applied Horizontal Speed" tooltip="Applied horizontal speed">0</parameter>
-		<parameter name="applied_vertical_speed" type="toggle" title="Applied Vertical Speed" tooltip="Applied vertical speed">0</parameter>
-		<parameter name="up_pass_contact" type="toggle" title="Up Pass Contact" tooltip="Up pass contact">0</parameter>
-		<parameter name="side_pass_contact" type="toggle" title="Side Pass Contact" tooltip="Side pass contact">0</parameter>
-		<parameter name="down_pass_contact" type="toggle" title="Down Pass Contact" tooltip="Down pass contact">0</parameter>
-		<parameter name="is_ground" type="toggle" title="Is Ground" tooltip="Is ground">0</parameter>
-		<parameter name="is_ceiling" type="toggle" title="Is Ceiling" tooltip="Is ceiling">0</parameter>
-		<parameter name="is_crouch" type="toggle" title="Is Crouch" tooltip="Is crouch">0</parameter>
-		<parameter name="average_speed" type="toggle" title="Average Speed" tooltip="Average speed">0</parameter>
-		<parameter name="auto_stepping" type="toggle" title="Auto Stepping" tooltip="Auto stepping">0</parameter>
-	</struct>
-	<struct name="DebugColors">
-		<parameter name="player_shape" type="color" title="Player Shape" tooltip="Player shape">0.000000 0.000000 1.000000 0.098000</parameter>
-		<parameter name="player_direction" type="color" title="Player Direction" tooltip="Player direction">1.000000 1.000000 0.000000 1.000000</parameter>
-		<parameter name="camera_color" type="color" title="Camera Color" tooltip="Camera color">0.000000 1.000000 1.000000 1.000000</parameter>
-		<parameter name="applied_horizontal_velocity" type="color" title="Applied Horizontal Velocity" tooltip="Applied horizontal velocity">0.000000 0.000000 0.000000 1.000000</parameter>
-		<parameter name="applied_vertical_velocity" type="color" title="Applied Vertical Velocity" tooltip="Applied vertical velocity">0.700000 0.750000 0.710000 1.000000</parameter>
-		<parameter name="up_pass_contacts" type="color" title="Up Pass Contacts" tooltip="Up pass contacts">0.000000 1.000000 1.000000 1.000000</parameter>
-		<parameter name="side_pass_contacts" type="color" title="Side Pass Contacts" tooltip="Side pass contacts">0.870000 0.000000 1.000000 1.000000</parameter>
-		<parameter name="down_pass_contacts" type="color" title="Down Pass Contacts" tooltip="Down pass contacts">1.000000 0.000000 0.000000 1.000000</parameter>
-		<parameter name="is_ground" type="color" title="Is Ground" tooltip="Is ground">1.000000 0.000000 0.000000 1.000000</parameter>
-		<parameter name="is_ceiling" type="color" title="Is Ceiling" tooltip="Is ceiling">0.000000 1.000000 0.000000 1.000000</parameter>
-		<parameter name="is_crouch" type="color" title="Is Crouch" tooltip="Is crouch">0.000000 0.000000 1.000000 1.000000</parameter>
-		<parameter name="average_speed" type="color" title="Average Speed" tooltip="Average speed">1.000000 1.000000 0.000000 1.000000</parameter>
-		<parameter name="auto_stepping" type="color" title="Auto Stepping" tooltip="Auto Stepping">0.660000 0.330000 0.000000 1.000000</parameter>
-	</struct>
 	<parameter name="forward_key" type="switch" title="Forward Key" tooltip="Move forward key" group="Input" items="KEY_UNKNOWN,KEY_ESC,KEY_F1,KEY_F2,KEY_F3,KEY_F4,KEY_F5,KEY_F6,KEY_F7,KEY_F8,KEY_F9,KEY_F10,KEY_F11,KEY_F12,KEY_PRINTSCREEN,KEY_SCROLL_LOCK,KEY_PAUSE,KEY_BACK_QUOTE,KEY_DIGIT_1,KEY_DIGIT_2,KEY_DIGIT_3,KEY_DIGIT_4,KEY_DIGIT_5,KEY_DIGIT_6,KEY_DIGIT_7,KEY_DIGIT_8,KEY_DIGIT_9,KEY_DIGIT_0,KEY_MINUS,KEY_EQUALS,KEY_BACKSPACE,KEY_TAB,KEY_Q,KEY_W,KEY_E,KEY_R,KEY_T,KEY_Y,KEY_U,KEY_I,KEY_O,KEY_P,KEY_LEFT_BRACKET,KEY_RIGHT_BRACKET,KEY_ENTER,KEY_CAPS_LOCK,KEY_A,KEY_S,KEY_D,KEY_F,KEY_G,KEY_H,KEY_J,KEY_K,KEY_L,KEY_SEMICOLON,KEY_QUOTE,KEY_BACK_SLASH,KEY_LEFT_SHIFT,KEY_LESS,KEY_Z,KEY_X,KEY_C,KEY_V,KEY_B,KEY_N,KEY_M,KEY_COMMA,KEY_DOT,KEY_SLASH,KEY_RIGHT_SHIFT,KEY_LEFT_CTRL,KEY_LEFT_CMD,KEY_LEFT_ALT,KEY_SPACE,KEY_RIGHT_ALT,KEY_RIGHT_CMD,KEY_MENU,KEY_RIGHT_CTRL,KEY_INSERT,KEY_DELETE,KEY_HOME,KEY_END,KEY_PGUP,KEY_PGDOWN,KEY_UP,KEY_LEFT,KEY_DOWN,KEY_RIGHT,KEY_NUM_LOCK,KEY_NUMPAD_DIVIDE,KEY_NUMPAD_MULTIPLY,KEY_NUMPAD_MINUS,KEY_NUMPAD_DIGIT_7,KEY_NUMPAD_DIGIT_8,KEY_NUMPAD_DIGIT_9,KEY_NUMPAD_PLUS,KEY_NUMPAD_DIGIT_4,KEY_NUMPAD_DIGIT_5,KEY_NUMPAD_DIGIT_6,KEY_NUMPAD_DIGIT_1,KEY_NUMPAD_DIGIT_2,KEY_NUMPAD_DIGIT_3,KEY_NUMPAD_ENTER,KEY_NUMPAD_DIGIT_0,KEY_NUMPAD_DOT,KEY_ANY_SHIFT,KEY_ANY_CTRL,KEY_ANY_ALT,KEY_ANY_CMD,KEY_ANY_UP,KEY_ANY_LEFT,KEY_ANY_DOWN,KEY_ANY_RIGHT,KEY_ANY_ENTER,KEY_ANY_DELETE,KEY_ANY_INSERT,KEY_ANY_HOME,KEY_ANY_END,KEY_ANY_PGUP,KEY_ANY_PGDOWN,KEY_ANY_DIGIT_1,KEY_ANY_DIGIT_2,KEY_ANY_DIGIT_3,KEY_ANY_DIGIT_4,KEY_ANY_DIGIT_5,KEY_ANY_DIGIT_6,KEY_ANY_DIGIT_7,KEY_ANY_DIGIT_8,KEY_ANY_DIGIT_9,KEY_ANY_DIGIT_0,KEY_ANY_MINUS,KEY_ANY_EQUALS,KEY_ANY_DOT,NUM_KEYS">33</parameter>
 	<parameter name="backward_key" type="switch" title="Backward Key" tooltip="Move backward key" group="Input" items="KEY_UNKNOWN,KEY_ESC,KEY_F1,KEY_F2,KEY_F3,KEY_F4,KEY_F5,KEY_F6,KEY_F7,KEY_F8,KEY_F9,KEY_F10,KEY_F11,KEY_F12,KEY_PRINTSCREEN,KEY_SCROLL_LOCK,KEY_PAUSE,KEY_BACK_QUOTE,KEY_DIGIT_1,KEY_DIGIT_2,KEY_DIGIT_3,KEY_DIGIT_4,KEY_DIGIT_5,KEY_DIGIT_6,KEY_DIGIT_7,KEY_DIGIT_8,KEY_DIGIT_9,KEY_DIGIT_0,KEY_MINUS,KEY_EQUALS,KEY_BACKSPACE,KEY_TAB,KEY_Q,KEY_W,KEY_E,KEY_R,KEY_T,KEY_Y,KEY_U,KEY_I,KEY_O,KEY_P,KEY_LEFT_BRACKET,KEY_RIGHT_BRACKET,KEY_ENTER,KEY_CAPS_LOCK,KEY_A,KEY_S,KEY_D,KEY_F,KEY_G,KEY_H,KEY_J,KEY_K,KEY_L,KEY_SEMICOLON,KEY_QUOTE,KEY_BACK_SLASH,KEY_LEFT_SHIFT,KEY_LESS,KEY_Z,KEY_X,KEY_C,KEY_V,KEY_B,KEY_N,KEY_M,KEY_COMMA,KEY_DOT,KEY_SLASH,KEY_RIGHT_SHIFT,KEY_LEFT_CTRL,KEY_LEFT_CMD,KEY_LEFT_ALT,KEY_SPACE,KEY_RIGHT_ALT,KEY_RIGHT_CMD,KEY_MENU,KEY_RIGHT_CTRL,KEY_INSERT,KEY_DELETE,KEY_HOME,KEY_END,KEY_PGUP,KEY_PGDOWN,KEY_UP,KEY_LEFT,KEY_DOWN,KEY_RIGHT,KEY_NUM_LOCK,KEY_NUMPAD_DIVIDE,KEY_NUMPAD_MULTIPLY,KEY_NUMPAD_MINUS,KEY_NUMPAD_DIGIT_7,KEY_NUMPAD_DIGIT_8,KEY_NUMPAD_DIGIT_9,KEY_NUMPAD_PLUS,KEY_NUMPAD_DIGIT_4,KEY_NUMPAD_DIGIT_5,KEY_NUMPAD_DIGIT_6,KEY_NUMPAD_DIGIT_1,KEY_NUMPAD_DIGIT_2,KEY_NUMPAD_DIGIT_3,KEY_NUMPAD_ENTER,KEY_NUMPAD_DIGIT_0,KEY_NUMPAD_DOT,KEY_ANY_SHIFT,KEY_ANY_CTRL,KEY_ANY_ALT,KEY_ANY_CMD,KEY_ANY_UP,KEY_ANY_LEFT,KEY_ANY_DOWN,KEY_ANY_RIGHT,KEY_ANY_ENTER,KEY_ANY_DELETE,KEY_ANY_INSERT,KEY_ANY_HOME,KEY_ANY_END,KEY_ANY_PGUP,KEY_ANY_PGDOWN,KEY_ANY_DIGIT_1,KEY_ANY_DIGIT_2,KEY_ANY_DIGIT_3,KEY_ANY_DIGIT_4,KEY_ANY_DIGIT_5,KEY_ANY_DIGIT_6,KEY_ANY_DIGIT_7,KEY_ANY_DIGIT_8,KEY_ANY_DIGIT_9,KEY_ANY_DIGIT_0,KEY_ANY_MINUS,KEY_ANY_EQUALS,KEY_ANY_DOT,NUM_KEYS">47</parameter>
 	<parameter name="right_key" type="switch" title="Right Key" tooltip="Move right key" group="Input" items="KEY_UNKNOWN,KEY_ESC,KEY_F1,KEY_F2,KEY_F3,KEY_F4,KEY_F5,KEY_F6,KEY_F7,KEY_F8,KEY_F9,KEY_F10,KEY_F11,KEY_F12,KEY_PRINTSCREEN,KEY_SCROLL_LOCK,KEY_PAUSE,KEY_BACK_QUOTE,KEY_DIGIT_1,KEY_DIGIT_2,KEY_DIGIT_3,KEY_DIGIT_4,KEY_DIGIT_5,KEY_DIGIT_6,KEY_DIGIT_7,KEY_DIGIT_8,KEY_DIGIT_9,KEY_DIGIT_0,KEY_MINUS,KEY_EQUALS,KEY_BACKSPACE,KEY_TAB,KEY_Q,KEY_W,KEY_E,KEY_R,KEY_T,KEY_Y,KEY_U,KEY_I,KEY_O,KEY_P,KEY_LEFT_BRACKET,KEY_RIGHT_BRACKET,KEY_ENTER,KEY_CAPS_LOCK,KEY_A,KEY_S,KEY_D,KEY_F,KEY_G,KEY_H,KEY_J,KEY_K,KEY_L,KEY_SEMICOLON,KEY_QUOTE,KEY_BACK_SLASH,KEY_LEFT_SHIFT,KEY_LESS,KEY_Z,KEY_X,KEY_C,KEY_V,KEY_B,KEY_N,KEY_M,KEY_COMMA,KEY_DOT,KEY_SLASH,KEY_RIGHT_SHIFT,KEY_LEFT_CTRL,KEY_LEFT_CMD,KEY_LEFT_ALT,KEY_SPACE,KEY_RIGHT_ALT,KEY_RIGHT_CMD,KEY_MENU,KEY_RIGHT_CTRL,KEY_INSERT,KEY_DELETE,KEY_HOME,KEY_END,KEY_PGUP,KEY_PGDOWN,KEY_UP,KEY_LEFT,KEY_DOWN,KEY_RIGHT,KEY_NUM_LOCK,KEY_NUMPAD_DIVIDE,KEY_NUMPAD_MULTIPLY,KEY_NUMPAD_MINUS,KEY_NUMPAD_DIGIT_7,KEY_NUMPAD_DIGIT_8,KEY_NUMPAD_DIGIT_9,KEY_NUMPAD_PLUS,KEY_NUMPAD_DIGIT_4,KEY_NUMPAD_DIGIT_5,KEY_NUMPAD_DIGIT_6,KEY_NUMPAD_DIGIT_1,KEY_NUMPAD_DIGIT_2,KEY_NUMPAD_DIGIT_3,KEY_NUMPAD_ENTER,KEY_NUMPAD_DIGIT_0,KEY_NUMPAD_DOT,KEY_ANY_SHIFT,KEY_ANY_CTRL,KEY_ANY_ALT,KEY_ANY_CMD,KEY_ANY_UP,KEY_ANY_LEFT,KEY_ANY_DOWN,KEY_ANY_RIGHT,KEY_ANY_ENTER,KEY_ANY_DELETE,KEY_ANY_INSERT,KEY_ANY_HOME,KEY_ANY_END,KEY_ANY_PGUP,KEY_ANY_PGDOWN,KEY_ANY_DIGIT_1,KEY_ANY_DIGIT_2,KEY_ANY_DIGIT_3,KEY_ANY_DIGIT_4,KEY_ANY_DIGIT_5,KEY_ANY_DIGIT_6,KEY_ANY_DIGIT_7,KEY_ANY_DIGIT_8,KEY_ANY_DIGIT_9,KEY_ANY_DIGIT_0,KEY_ANY_MINUS,KEY_ANY_EQUALS,KEY_ANY_DOT,NUM_KEYS">48</parameter>
@@ -117,8 +69,4 @@ Enables avoiding false positives on flat surfaces." group="Auto Stepping">0.05</
 	<parameter name="contacts_buffer_size" type="int" title="Contacts Buffer Size" tooltip="Maximum number of contacts to be processed for collisions" group="Advanced Settings">16</parameter>
 	<parameter name="heavy_contacts_count" type="int" title="Heavy Contacts Count" tooltip="Maximum number of contacts up to which the number of iterations specified above shall be used.
  After exceeding this value a single iteration shall be used to avoid performance degradation." group="Advanced Settings">100</parameter>
-	<parameter name="debug_camera" type="DebugCamera" title="Debug Camera" tooltip="Debug camera" group="Debug"/>
-	<parameter name="debug_visualizer" type="DebugVisualizer" title="Debug Visualizer" tooltip="Debug visualizer" group="Debug"/>
-	<parameter name="debug_profiler" type="DebugProfiler" title="Debug Profiler" tooltip="Debug profiler" group="Debug"/>
-	<parameter name="debug_colors" type="DebugColors" title="Debug Colors" tooltip="Debug colors"/>
 </property>

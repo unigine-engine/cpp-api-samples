@@ -1,6 +1,7 @@
 #include "AppSystemLogic.h"
 #include <UnigineComponentSystem.h>
 
+#include "menu_ui/SamplesManager.h"
 // System logic, it exists during the application life cycle.
 // These methods are called right after corresponding system script's (UnigineScript) methods.
 
@@ -18,6 +19,7 @@ int AppSystemLogic::init()
 	Unigine::Engine::get()->setBackgroundUpdate(
 		Unigine::Engine::BACKGROUND_UPDATE_RENDER_NON_MINIMIZED);
 
+	SamplesManager::get()->parseMetaXml("../cpp_samples.sample");
 	Unigine::World::loadWorld("cpp_samples/cpp_samples");
 
 	Unigine::ComponentSystem::get()->initialize();

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Sound Reverb">
+	<sdk_desc>Setting a reverberation zone and its parameters via code.</sdk_desc>
+	<desc>
+		<brief>This example shows a component that creates a <ui><link to="sound_reverb">Reverberation Zone (SoundReverb)</link></ui> and updates reverb settings based on a given power value.</brief>
+		<para>Reverberation helps add depth and realism to sound. It convinces the listener of the authenticity of the audio experience.</para>
+	</desc>
+	<tags>
+		<tag>Sound</tag>
+	</tags>
+</sample>

@@ -2,10 +2,9 @@
 <asset version="2.20.0.0">
 	<guid>414573dd3538022f1a3d10c5446667c52de39c01</guid>
 	<type>texture</type>
-	<hash>c916e73f</hash>
+	<hash>35355cb3</hash>
 	<runtimes>
-		<runtime id="414573dd3538022f1a3d10c5446667c52de39c01" name="network.png" link="0" type="6"/>
-		<runtime id="1e1e2ef0a80f9e4ff0b88a28cf664cb97d3f456c" name="network.texture" link="1" type="6"/>
+		<runtime id="1e1e2ef0a80f9e4ff0b88a28cf664cb97d3f456c" name="network.png" link="0" type="6"/>
 	</runtimes>
 	<parameters>
 		<parameter type="int" name="blur_radius">1</parameter>
@@ -19,7 +18,7 @@
 		<parameter type="float" name="sharpness_intensity">0.25</parameter>
 		<parameter type="float" name="sharpness_radius">1</parameter>
 		<parameter type="bool" name="srgb_correction">1</parameter>
-		<parameter type="bool" name="unchanged">0</parameter>
+		<parameter type="bool" name="unchanged">1</parameter>
 		<parameter type="string" name="width">auto</parameter>
 	</parameters>
 </asset>

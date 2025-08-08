@@ -93,7 +93,7 @@ void AsyncQueueSample::image_loaded_callback(const char *name, int id)
 
 	auto sprite = WidgetSprite::create(gui);
 	sprites.push_back(sprite);
-	gui->addChild(sprite, Gui::ALIGN_OVERLAP);
+	gui->addChild(sprite, Gui::ALIGN_OVERLAP | Gui::ALIGN_BACKGROUND);
 	sprite->setImage(loaded_image);
 	sprite->setWidth(100);
 	sprite->setHeight(100);

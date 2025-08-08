@@ -2,10 +2,9 @@
 <asset version="2.20.0.0">
 	<guid>81567c771c722b4870066c780c7a1154d3a02e43</guid>
 	<type>texture</type>
-	<hash>17ac2249</hash>
+	<hash>7721bffe</hash>
 	<runtimes>
-		<runtime id="81567c771c722b4870066c780c7a1154d3a02e43" name="plugins.png" link="0" type="6"/>
-		<runtime id="9a301a675df5f7f2609d733ae1a5b07c528afec6" name="plugins.texture" link="1" type="6"/>
+		<runtime id="9a301a675df5f7f2609d733ae1a5b07c528afec6" name="plugins.png" link="0" type="6"/>
 	</runtimes>
 	<parameters>
 		<parameter type="int" name="blur_radius">1</parameter>
@@ -19,7 +18,7 @@
 		<parameter type="float" name="sharpness_intensity">0.25</parameter>
 		<parameter type="float" name="sharpness_radius">1</parameter>
 		<parameter type="bool" name="srgb_correction">1</parameter>
-		<parameter type="bool" name="unchanged">0</parameter>
+		<parameter type="bool" name="unchanged">1</parameter>
 		<parameter type="string" name="width">auto</parameter>
 	</parameters>
 </asset>

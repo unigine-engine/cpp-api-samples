@@ -200,6 +200,7 @@
     <ClCompile Include="complex\lidar\Las.cpp" />
     <ClCompile Include="complex\lidar\Lidar.cpp" />
     <ClCompile Include="complex\lidar\LidarSample.cpp" />
+    <ClCompile Include="complex\mesh_digger\MeshDigger.cpp" />
     <ClCompile Include="complex\observer_controller\ObserverController.cpp" />
     <ClCompile Include="complex\player_persecutor\PlayerPersecutorComponent.cpp" />
     <ClCompile Include="complex\player_persecutor\PlayerPersecutorSample.cpp" />
@@ -221,6 +222,7 @@
     <ClCompile Include="input_controls\input_keyboard_mouse\KeyboardAndMouseInput.cpp" />
     <ClCompile Include="input_controls\input_touch\TouchInput.cpp" />
     <ClCompile Include="menu_ui\DescriptionWindowCreator.cpp" />
+    <ClCompile Include="menu_ui\SamplesManager.cpp" />
     <ClCompile Include="navigation\navigation_mesh\NavigationMeshLogic.cpp" />
     <ClCompile Include="navigation\navigation_mesh_demo\NavigationMeshDemoLogic.cpp" />
     <ClCompile Include="navigation\navigation_sectors\NavigationSectorsLogic.cpp" />
@@ -466,6 +468,7 @@
     <ClInclude Include="complex\first_person_controller\FirstPersonControllerSample.h" />
     <ClInclude Include="complex\lidar\Las.h" />
     <ClInclude Include="complex\lidar\Lidar.h" />
+    <ClInclude Include="complex\mesh_digger\MeshDigger.h" />
     <ClInclude Include="complex\observer_controller\ObserverController.h" />
     <ClInclude Include="complex\player_persecutor\PlayerPersecutorComponent.h" />
     <ClInclude Include="complex\player_persecutor\PlayerPersecutorSample.h" />
@@ -487,6 +490,7 @@
     <ClInclude Include="input_controls\input_keyboard_mouse\KeyboardAndMouseInput.h" />
     <ClInclude Include="input_controls\input_touch\TouchInput.h" />
     <ClInclude Include="menu_ui\DescriptionWindowCreator.h" />
+    <ClInclude Include="menu_ui\SamplesManager.h" />
     <ClInclude Include="network\http_image_request\HttpImageRequestSample.h" />
     <ClInclude Include="network\http_image_response\HttpImageResponseSample.h" />
     <ClInclude Include="network\http_simple_request\SimpleHttpRequestSample.h" />
@@ -638,6 +642,7 @@
     <ClInclude Include="utils\EventTask.h" />
     <ClInclude Include="utils\InputManager.h" />
     <ClInclude Include="utils\intersection\Intersections.h" />
+    <ClInclude Include="utils\MarchingCubes.h" />
     <ClInclude Include="utils\Math.h" />
     <ClInclude Include="utils\MutableLambda.h" />
     <ClInclude Include="utils\navigation\Seeker.h" />

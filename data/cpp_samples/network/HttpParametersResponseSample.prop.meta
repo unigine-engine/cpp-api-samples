@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.20.0.0">
+	<guid>858523f4e9f3cf45c2a35442ad9ea364271d7a26</guid>
+	<type>property</type>
+	<hash>30fe8cd6</hash>
+	<runtimes>
+		<runtime id="858523f4e9f3cf45c2a35442ad9ea364271d7a26" name="HttpParametersResponseSample" link="0" type="4"/>
+	</runtimes>
+</asset>

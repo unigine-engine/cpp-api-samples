@@ -1,0 +1,3 @@
+# Mesh Digger
+
+This sample demonstrates a simulation of ground digging, modification of a terrain fragment represented by a mesh via API. The fragment of the ground surfaces is generated using the Marching Cubes algorithm. You can dig the ground at any point by moving the mouse cursor (the cutting sphere is visualized around the cursor) to it and clicking the left mouse button. You can also set the desired radius of the cutting sphere (**Digging Radius**) defining the volume of ground to be removed on a left-click. To add volume instead, hold the *Ctrl* key and left-click.

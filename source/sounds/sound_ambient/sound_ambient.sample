@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Sound Ambient">
+	<sdk_desc>Playing ambient sounds via code.</sdk_desc>
+	<desc>
+		<brief>This sample shows the implementation of a component that controls the playback of ambient sound (<ui><link to="ambientsource_class">AmbientSource</link></ui>) and allows interactive adjustment of playback parameters using the keyboard.</brief>
+		<para>Background sound helps create a more immersive environment. This example demonstrates a practical way to organize ambient sound using the <ui><link to="ambientsource_class">AmbientSource</link></ui> class, including creating a sound source, configuring the settings, and switching between streaming and normal playback modes.</para>
+	</desc>
+	<tags>
+		<tag>Sound</tag>
+	</tags>
+</sample>

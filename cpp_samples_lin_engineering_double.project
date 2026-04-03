@@ -41508,11 +41508,11 @@
         ]
     },
     "sdk": {
-        "edition": "community",
+        "edition": "Engineering",
         "internal_version": 57,
-        "key": "tier0_bin_linux-2.21",
-        "name": "UNIGINE 2 Community",
-        "path": "/mnt/ssd/SDK/sdks/community_linux_2.21",
+        "key": "tier2_evaluation_linux-2.21",
+        "name": "UNIGINE 2 Engineering",
+        "path": "/mnt/ssd/SDK/sdks/engineering_linux_2.21",
         "type": "bin",
         "version": "2.21"
     },

@@ -41508,11 +41508,11 @@
         ]
     },
     "sdk": {
-        "edition": "community",
-        "internal_version": 57,
-        "key": "tier0_bin_linux-2.21",
-        "name": "UNIGINE 2 Community",
-        "path": "/mnt/ssd/SDK/sdks/community_linux_2.21",
+        "edition": "entertainment",
+        "internal_version": 58,
+        "key": "tier0_bin_pro_linux-2.21",
+        "name": "UNIGINE 2 Entertainment",
+        "path": "/home/user/SDK_STORAGE/sdks/entertainment_linux_2.21_bin",
         "type": "bin",
         "version": "2.21"
     },

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<asset version="2.20.0.0">
+<asset version="2.21.0.0">
 	<guid>fe3aa77977edea86feda8e37144bbb946a39eaa2</guid>
 	<type>property</type>
-	<hash>6aeedb1</hash>
+	<hash>5d764408cc5b6145beaaf584273b352ebf8b94700174a54a555776fd93b9810a</hash>
 	<runtimes>
 		<runtime id="fe3aa77977edea86feda8e37144bbb946a39eaa2" name="JointCallbacks" link="0" type="4"/>
 	</runtimes>

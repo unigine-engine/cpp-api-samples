@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<asset version="2.20.0.0">
+<asset version="2.21.0.0">
 	<guid>02cd64d7638bded190f8c9a89ca12077c342ba7f</guid>
 	<type>texture</type>
-	<hash>f6226eac</hash>
+	<hash>7a8f948515c43157b87eeafe3433370cfb7e3d64564603a2b2ade4d296d4c374</hash>
 	<runtimes>
 		<runtime id="02cd64d7638bded190f8c9a89ca12077c342ba7f" name="road.dds" link="0" type="6"/>
 		<runtime id="1df54bd71a2c50a2dfabec1ac3dff7c6f38805d2" name="road.texture" link="1" type="6"/>

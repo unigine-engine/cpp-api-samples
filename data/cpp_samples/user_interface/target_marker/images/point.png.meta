@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<asset version="2.20.0.0">
+<asset version="2.21.0.0">
 	<guid>3f5d23990a49b8241d0fa5331407a8f6ce2a8bdd</guid>
 	<type>texture</type>
-	<hash>1fc768b9</hash>
+	<hash>bd50e689543a2cc36a72ce56b6e45a37b28666391c50c88a85dbd8d98466ef1c</hash>
 	<runtimes>
 		<runtime id="3f5d23990a49b8241d0fa5331407a8f6ce2a8bdd" name="point.png" link="0" type="6"/>
 		<runtime id="4f862e3b406dce5e6969e225dc872d40b693bf9f" name="point.texture" link="1" type="6"/>

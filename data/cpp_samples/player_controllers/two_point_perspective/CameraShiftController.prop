@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.21.0.0" name="CameraShiftController" manual="1" parent_name="node_base" tooltip="This component modifies the camera projection to enable two-point perspective, using a dummy player for rendering while keeping the original player for input and movement."/>

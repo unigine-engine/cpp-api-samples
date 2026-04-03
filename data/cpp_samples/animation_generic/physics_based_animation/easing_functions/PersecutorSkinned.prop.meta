@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>1e9162f662866be292b87717e92936729bb4308b</guid>
+	<type>property</type>
+	<hash>32fa6d0bbc7668c33d63c1be9fae8d09145f5c956a40693bf67410332d1747af</hash>
+	<runtimes>
+		<runtime id="1e9162f662866be292b87717e92936729bb4308b" name="PersecutorSkinned" link="0" type="4"/>
+	</runtimes>
+</asset>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>1245e238cd5cd7e0d3e5cf5233265a6f2095e5b0</guid>
+	<type>property</type>
+	<hash>10c7ad1df3d9666ddded570f04bac1586e42b5747b775770e30d08a164455db3</hash>
+	<runtimes>
+		<runtime id="1245e238cd5cd7e0d3e5cf5233265a6f2095e5b0" name="pawn" link="0" type="4"/>
+	</runtimes>
+</asset>

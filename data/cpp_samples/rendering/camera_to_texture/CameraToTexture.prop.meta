@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>1d850b83a096d8bda0fe382bedbe679e46820e35</guid>
+	<type>property</type>
+	<hash>65811e3e76adced8be9b2a19a7f9f6315ba51b6134f3978efe47cea146ebb9a7</hash>
+	<runtimes>
+		<runtime id="1d850b83a096d8bda0fe382bedbe679e46820e35" name="CameraToTexture" link="0" type="4"/>
+	</runtimes>
+</asset>

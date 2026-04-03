@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<asset version="2.20.0.0">
+<asset version="2.21.0.0">
 	<guid>794145f030ff721599a0353a9b2e59e9a92b9bf1</guid>
 	<type>property</type>
-	<hash>8eb5f645</hash>
+	<hash>fb342f667637495d85f5f0651621d6b70f69d304927d5bf9c0893ba3d2eae9fc</hash>
 	<runtimes>
 		<runtime id="794145f030ff721599a0353a9b2e59e9a92b9bf1" name="Button" link="0" type="4"/>
 	</runtimes>

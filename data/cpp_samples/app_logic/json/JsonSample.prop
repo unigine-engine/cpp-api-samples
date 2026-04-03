@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.21.0.0" name="JsonSample" manual="1" parent_name="node_base" tooltip="This component demonstrates creating a JSON tree, recursively traversing it, and printing a formatted representation to the console."/>

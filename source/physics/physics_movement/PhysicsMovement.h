@@ -2,50 +2,32 @@
 #include <UnigineComponentSystem.h>
 #include <UnigineGame.h>
 
-
-class PhysicsForceMovement : public Unigine::ComponentBase
+// Controls rigid body movement using physical forces and torques.
+// Supports keyboard input for driving, braking, and jumping.
+class PhysicsMover: public Unigine::ComponentBase
 {
 public:
-	COMPONENT_DEFINE(PhysicsForceMovement, Unigine::ComponentBase);
+	COMPONENT_DEFINE(PhysicsMover, Unigine::ComponentBase);
 	COMPONENT_INIT(init);
 	COMPONENT_UPDATE(update);
 	COMPONENT_UPDATE_PHYSICS(update_physics);
 
-	PROP_PARAM(Float, force, 10.0f);
-	PROP_PARAM(Float, torque, 1.0f);
-	PROP_PARAM(Float, max_speed, 30.0f);
-	PROP_PARAM(Float, brakes_strenth, 5.0f);
+	PROP_PARAM(Float, force, 10.0f);              // Forward/backward acceleration
+	PROP_PARAM(Float, torque, 1.0f);              // Turning strength
+	PROP_PARAM(Float, jump_impulse, 3.0f);        // Vertical impulse on jump
+	PROP_PARAM(Float, max_speed, 30.0f);          // Linear velocity limit
+	PROP_PARAM(Float, max_rotation_speed, 10.0f); // Angular velocity limit
+	PROP_PARAM(Float, brakes_strength, 5.0f);     // Damping when braking
 
 private:
-	void init();
-	void update();
-	void update_physics();
-
-	Unigine::Math::vec2 input_direction;
-	Unigine::BodyRigidPtr rigid;
-	bool brake = false;
-};
-
-
-class PhysicsImpulseMovement : public Unigine::ComponentBase
-{
-public:
-	COMPONENT_DEFINE(PhysicsImpulseMovement, Unigine::ComponentBase);
-	COMPONENT_INIT(init);
-	COMPONENT_UPDATE(update);
-	COMPONENT_UPDATE_PHYSICS(update_physics);
-
-	PROP_PARAM(Float, linear_impulse, 10.0f);
-	PROP_PARAM(Float, angular_impulse, 1.0f);
-	PROP_PARAM(Float, max_speed, 30.0f);
-	PROP_PARAM(Float, brakes_strenth, 5.0f);
+	void init();           // Caches rigid body reference
+	void update();         // Reads keyboard input
+	void update_physics(); // Applies forces and torques
 
 private:
-	void init();
-	void update();
-	void update_physics();
+	Unigine::BodyRigidPtr body; // Rigid body to control
 
-	Unigine::Math::vec2 input_direction;
-	Unigine::BodyRigidPtr rigid;
-	bool brake = false;
+	Unigine::Math::vec2 input_direction; // WASD input state
+	bool brake = false;                  // Shift key state
+	bool jump = false;                   // Space key state
 };

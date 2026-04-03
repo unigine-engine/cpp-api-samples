@@ -2,7 +2,7 @@
 
 This sample shows how to dynamically create and display rectangular frames around objects in the scene using the *WidgetCanvas*. These frames include object labels and appear only if the object is visible and is located within a certain distance from the camera.
 
-You can also take screenshots via the *Snap Screenshot* button. The captured image does not include the rendered frames, but all frame metadata (including object *ID*, name, transform, and screen coordinates of the frame) is saved to a separate *JSON* file.
+You can also take screenshots via the *Snap Screenshot* button. The captured image does not include the rendered frames, but all frame metadata (including object *ID*, name, transform, and screen coordinates of the frame) is saved to a separate *JSON* file. The screenshot and frame metadata are saved in the sample content folder.
 
 The bounding box of each object is computed recursively based on all its mesh components. The resulting rectangle is projected onto the screen space and checked for visibility. If visible and not occluded, a *2D* frame is drawn using *WidgetCanvas* class.
 

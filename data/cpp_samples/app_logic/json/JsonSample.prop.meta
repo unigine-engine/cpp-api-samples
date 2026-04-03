@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>9d64abcaf6bdbf1a36f96f05620d1844d30f4bca</guid>
+	<type>property</type>
+	<hash>be0e7f3f43aac42a10135ac152ae53cc3d2b3fa949447c9b71c1f0caa546af2b</hash>
+	<runtimes>
+		<runtime id="9d64abcaf6bdbf1a36f96f05620d1844d30f4bca" name="JsonSample" link="0" type="4"/>
+	</runtimes>
+</asset>

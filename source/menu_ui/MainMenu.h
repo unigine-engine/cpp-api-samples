@@ -553,7 +553,7 @@ public:
 
 	static bool isWordSuitable(const Unigine::String &text, const Unigine::String &word);
 
-	static bool isHovered(const Unigine::WidgetPtr widget);
+	static bool isHovered(const Unigine::WidgetPtr &widget);
 };
 
 class Tag

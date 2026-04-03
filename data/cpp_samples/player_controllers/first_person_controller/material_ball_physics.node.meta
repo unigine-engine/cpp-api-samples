@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>37bf182461abb4d727d68480ed6d138b9170585a</guid>
+	<type>node</type>
+	<hash>0fd9c8fd0e53d6d512648ed8b8660badc59df2bcf2f0cacd13d7a015f9b76bce</hash>
+	<runtimes>
+		<runtime id="37bf182461abb4d727d68480ed6d138b9170585a" name="material_ball_physics.node" link="0" type="3"/>
+	</runtimes>
+</asset>

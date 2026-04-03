@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.21.0.0" name="ImagesSample" manual="1" parent_name="node_base" tooltip="This component demonstrates creating and updating a 3D image in real time by writing raw pixel data and applying it as a texture to a volume object."/>

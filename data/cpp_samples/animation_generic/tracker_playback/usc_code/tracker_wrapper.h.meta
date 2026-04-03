@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>a19760572a0081ca3ee606a1ba7a6f8c61c4657b</guid>
+	<type>script</type>
+	<hash>73fc1fa78067384622bfac7db50d6831e601541d9f586887d9799eb550173712</hash>
+	<runtimes>
+		<runtime id="a19760572a0081ca3ee606a1ba7a6f8c61c4657b" name="tracker_wrapper.h" link="0"/>
+	</runtimes>
+</asset>

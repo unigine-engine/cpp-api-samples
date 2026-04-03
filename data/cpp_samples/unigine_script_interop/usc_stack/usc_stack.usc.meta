@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>1d74d7aa6473c05f0aca8b4fe18777f3e4f0db29</guid>
+	<type>script</type>
+	<hash>4b7767b4e25e7cb1e7a9481d86a0fa5125dd6d570cc00b75e7ba8b7bb2329443</hash>
+	<runtimes>
+		<runtime id="1d74d7aa6473c05f0aca8b4fe18777f3e4f0db29" name="usc_stack.usc" link="0"/>
+	</runtimes>
+</asset>

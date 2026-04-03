@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.21.0.0" guid="b55cc6eed6a5e1753f1d04506c700b6f8084c202" base_material="df5c40bea877f1051e0b2ea0c534117fb47370d2">
+	<texture name="albedo">guid://5cbd6a39c9f10e44edffc4d373730416530cec7d</texture>
+	<parameter name="albedo_color" expression="0">0 1 0 1</parameter>
+	<parameter name="V Speed" expression="0">-1</parameter>
+	<parameter name="U Speed" expression="0">0</parameter>
+	<parameter name="Translucency" expression="0">-1</parameter>
+</material>

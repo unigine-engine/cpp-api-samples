@@ -1,4 +1,4 @@
-# BodyFracture Falling Spheres
+# Body Fracture Falling Spheres
 
 This sample demonstrates continuous fracturing of objects using *BodyFracture* class. Spheres are periodically spawned every 3 seconds and fall freely under gravity. Upon collision with the ground, each sphere fractures dynamically into multiple physical fragments.
 

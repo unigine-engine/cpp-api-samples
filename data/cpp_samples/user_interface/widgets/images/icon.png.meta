@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<asset version="2.20.0.0">
+<asset version="2.21.0.0">
 	<guid>c0233d82924b300818135d180ddd25f2110d9df3</guid>
 	<type>texture</type>
-	<hash>da5831f4</hash>
+	<hash>f3f71cd674024e5eb8b9811a2af122a3d4698097ef60fd18fd9b75a16d1c3d92</hash>
 	<runtimes>
 		<runtime id="c0233d82924b300818135d180ddd25f2110d9df3" name="icon.png" link="0" type="6"/>
 		<runtime id="1cf5c6879380411f9dc6d7292727a6d9f3c9cab6" name="icon.texture" link="1" type="6"/>

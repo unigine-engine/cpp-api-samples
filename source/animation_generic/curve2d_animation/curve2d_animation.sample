@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Curve2D Animation">
+	<sdk_desc>Real-time animation of transforms and materials using <i>Curve2D</i> for flexible, non-linear motion.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample demonstrates how to animate both node transforms and material parameters using <ui><link to="curve2d_class">Curve2D</link></ui>. Separate <ui>Curve2d</ui> tracks control a node's position, rotation, and scale, evaluated each frame to build the final transformation matrix.</para>
+			<para>This setup is useful for creating looping motions and dynamic material effects without relying on external animation assets.</para>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Animation</tag>
+		<tag>Basic Recipes</tag>
+		<tag>Transformations</tag>
+	</tags>
+</sample>

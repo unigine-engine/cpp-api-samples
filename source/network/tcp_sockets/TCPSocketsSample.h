@@ -1,3 +1,10 @@
+// TCP socket networking sample demonstrating client-server architecture.
+// Server listens for connections, accepts multiple clients, and broadcasts
+// camera transform each frame. Clients connect, receive camera updates, and
+// sync their view to the server's position. Text messages can be exchanged
+// via console command "send_msg". Messages use a binary protocol with
+// header (type + size) followed by payload data.
+
 #pragma once
 
 #include <UnigineComponentSystem.h>
@@ -7,6 +14,7 @@
 
 #include "../../menu_ui/SampleDescriptionWindow.h"
 
+// Main component managing TCP networking sample lifecycle.
 class TCPSocketsSample : public Unigine::ComponentBase
 {
 public:
@@ -17,7 +25,7 @@ public:
 	COMPONENT_SHUTDOWN(shutdown)
 
 private:
-	// A base class for messages to exchange between peers.
+	// Base class for messages exchanged between peers.
 	struct Message
 	{
 		enum TYPE { TEXT, CAMERA, NUM_TYPES };

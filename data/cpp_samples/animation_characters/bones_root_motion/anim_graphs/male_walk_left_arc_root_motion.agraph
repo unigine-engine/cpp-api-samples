@@ -1,0 +1,129 @@
+{
+	"version": "2.21.0.0",
+	"file_guid": "27e4b75c51eb43b25ca1f5a661d2ce91289c918a",
+	"camera_offset_x": 364,
+	"camera_offset_y": 225,
+	"nodes": {
+		"Output Pose": {
+			"guid": "00000000000000000000000000000000b00002b2",
+			"x": 448,
+			"y": 192,
+			"collapsed": false,
+			"inputs": {
+				"input": {
+					"label": "Pose",
+					"type": "AnimPose",
+					"id": 0
+				}
+			}
+		},
+		"Animation Player": {
+			"guid": "a82be018a6f0754531e4d57315220543437b4a69",
+			"x": 149,
+			"y": 190,
+			"collapsed": false,
+			"props": {
+				"prop": {
+					"widget": "String",
+					"value": ""
+				},
+				"prop": {
+					"widget": "Combobox",
+					"x": 0
+				},
+				"prop": {
+					"widget": "Combobox",
+					"x": 0
+				}
+			},
+			"inputs": {
+				"input": {
+					"label": "Anim",
+					"type": "Animation",
+					"id": 0
+				},
+				"input": {
+					"label": "Loop",
+					"type": "Bool",
+					"id": 1
+				},
+				"input": {
+					"label": "Speed",
+					"type": "Float",
+					"id": 2
+				}
+			},
+			"outputs": {
+				"output": {
+					"label": "Pose",
+					"type": "AnimPose",
+					"id": 0
+				}
+			}
+		}
+	},
+	"inputs": {
+		"input": {
+			"node_guid": "00000000000000000000000000000000b00002b2",
+			"anchor_id": 0,
+			"show_label": true,
+			"show_inline_widget": false
+		},
+		"input": {
+			"node_guid": "a82be018a6f0754531e4d57315220543437b4a69",
+			"anchor_id": 0,
+			"show_label": false,
+			"show_inline_widget": true,
+			"anim_guid": "c8f6fad0e951e3812916f959b59505fd2dd585e9",
+			"string_value": "walk_arc_left"
+		},
+		"input": {
+			"node_guid": "a82be018a6f0754531e4d57315220543437b4a69",
+			"anchor_id": 1,
+			"show_label": true,
+			"show_inline_widget": true,
+			"bool_value": 1
+		},
+		"input": {
+			"node_guid": "a82be018a6f0754531e4d57315220543437b4a69",
+			"anchor_id": 2,
+			"show_label": true,
+			"show_inline_widget": true,
+			"float_value": 1
+		}
+	},
+	"anchors": {
+		"anchor": {
+			"input_index": 0,
+			"input_id": 0,
+			"input_label": "Pose",
+			"input_node": "00000000000000000000000000000000b00002b2",
+			"output_index": 0,
+			"output_id": 0,
+			"output_label": "Pose",
+			"output_node": "a82be018a6f0754531e4d57315220543437b4a69"
+		}
+	},
+	"graph_type": "final",
+	"preview_mesh_guid": "a27d350b6709653583108f0567436a8e4e76c53d",
+	"filter_by_skeleton": 1,
+	"fix_root_in_origin": 0,
+	"is_playing": 1,
+	"show_bones": 1,
+	"show_bone_axes": 0,
+	"show_bone_names": 0,
+	"root_motion_enabled": 1,
+	"editor_layout": {
+		"main_weights": {
+			"w": 0.80000001192092896,
+			"w": 0.20000000298023224
+		},
+		"panel_weights": {
+			"w": 0.40000000596046448,
+			"w": 0.40000000596046448,
+			"w": 0.20000000298023224
+		},
+		"hierarchy_on_left": 0,
+		"hierarchy_weight": 0
+	}
+}

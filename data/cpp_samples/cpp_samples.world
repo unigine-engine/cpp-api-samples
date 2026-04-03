@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<world version="2.20.0.0">
+<world version="2.21.0.0">
 	<render_settings_path>guid://8bed8c3ce53501ff11c1b0ae5cc6d017d4ad5524</render_settings_path>
 	<data>
 		<unigine_editor>
@@ -10,7 +10,6 @@
 		<user/>
 	</data>
 	<sound>
-		<enabled>1</enabled>
 		<sound_manager_load_samples>0</sound_manager_load_samples>
 		<sound_manager_sample_static_memory>64</sound_manager_sample_static_memory>
 		<sound_manager_sample_stream_memory>16</sound_manager_sample_stream_memory>
@@ -22,9 +21,9 @@
 	<render>
 		<data/>
 		<shader_defines/>
-		<stereo_distance>4</stereo_distance>
-		<stereo_radius>0.0320000015</stereo_radius>
-		<stereo_offset>0</stereo_offset>
+		<render_stereo_distance>4</render_stereo_distance>
+		<render_stereo_radius>0.0320000015</render_stereo_radius>
+		<render_stereo_offset>0</render_stereo_offset>
 		<dirt_texture_name/>
 		<metering_mask_texture_path/>
 		<auto_exposure_ramp>
@@ -425,8 +424,6 @@
 		<render_lights_forward_per_object_voxel>4</render_lights_forward_per_object_voxel>
 		<render_lights_forward_per_object_world>4</render_lights_forward_per_object_world>
 		<render_lights_lens_flares>0</render_lights_lens_flares>
-		<render_lights_max_per_batch>1024</render_lights_max_per_batch>
-		<render_lights_tile_grid_size>8</render_lights_tile_grid_size>
 		<render_linear_depth_precision>0</render_linear_depth_precision>
 		<render_local_tonemapper>0</render_local_tonemapper>
 		<render_local_tonemapper_blur_resolution>1</render_local_tonemapper_blur_resolution>
@@ -608,8 +605,6 @@
 		<render_sssss_taa_frames_by_color>1</render_sssss_taa_frames_by_color>
 		<render_sssss_taa_frames_by_velocity>1</render_sssss_taa_frames_by_velocity>
 		<render_sssss_taa_frames_velocity_threshold>1</render_sssss_taa_frames_velocity_threshold>
-		<render_sssss_taa_max_frames_by_velocity>60</render_sssss_taa_max_frames_by_velocity>
-		<render_sssss_taa_min_frames_by_velocity>4</render_sssss_taa_min_frames_by_velocity>
 		<render_sssss_taa_pixel_offset>1</render_sssss_taa_pixel_offset>
 		<render_sssss_taa_preserve_details>0.5</render_sssss_taa_preserve_details>
 		<render_sssss_taa_samples>1</render_sssss_taa_samples>
@@ -649,9 +644,6 @@
 		<render_taa_frames_by_velocity>1</render_taa_frames_by_velocity>
 		<render_taa_frames_velocity_threshold>1</render_taa_frames_velocity_threshold>
 		<render_taa_information_lost_depth_threshold>0.100000001</render_taa_information_lost_depth_threshold>
-		<render_taa_information_lost_frame_count>1</render_taa_information_lost_frame_count>
-		<render_taa_max_frames_by_velocity>60</render_taa_max_frames_by_velocity>
-		<render_taa_min_frames_by_velocity>4</render_taa_min_frames_by_velocity>
 		<render_taa_pixel_offset>1</render_taa_pixel_offset>
 		<render_taa_preserve_details>0.5</render_taa_preserve_details>
 		<render_taa_preset>taa_sharp</render_taa_preset>
@@ -672,25 +664,17 @@
 		<render_tonemapper>1</render_tonemapper>
 		<render_tonemapper_mode>2</render_tonemapper_mode>
 		<render_translucent_color>1 1 1 1</render_translucent_color>
-		<render_transparent_ambient>1</render_transparent_ambient>
 		<render_transparent_blur>0</render_transparent_blur>
 		<render_transparent_deferred>0</render_transparent_deferred>
 		<render_transparent_enabled>1</render_transparent_enabled>
-		<render_transparent_light>0</render_transparent_light>
-		<render_transparent_multiple_env_probes>0</render_transparent_multiple_env_probes>
 		<render_upscale_dlss_mode>3</render_upscale_dlss_mode>
 		<render_upscale_dlss_preset>0</render_upscale_dlss_preset>
-		<render_upscale_fsr_auto_reactive_enabled>0</render_upscale_fsr_auto_reactive_enabled>
-		<render_upscale_fsr_auto_reactive_max>0.899999976</render_upscale_fsr_auto_reactive_max>
-		<render_upscale_fsr_auto_reactive_scale>5</render_upscale_fsr_auto_reactive_scale>
-		<render_upscale_fsr_auto_tc_scale>1</render_upscale_fsr_auto_tc_scale>
-		<render_upscale_fsr_auto_tc_threshold>0.0500000007</render_upscale_fsr_auto_tc_threshold>
 		<render_upscale_fsr_enable_sharpness>0</render_upscale_fsr_enable_sharpness>
 		<render_upscale_fsr_mode>3</render_upscale_fsr_mode>
 		<render_upscale_fsr_pre_exposure>1</render_upscale_fsr_pre_exposure>
 		<render_upscale_fsr_sharpness>0.5</render_upscale_fsr_sharpness>
 		<render_upscale_mode>0</render_upscale_mode>
-		<render_upscale_post>0</render_upscale_post>
+		<render_upscale_order>0</render_upscale_order>
 		<render_viewport_mode>0</render_viewport_mode>
 		<render_vignette_mask>0</render_vignette_mask>
 		<render_vignette_mask_intensity>1</render_vignette_mask_intensity>
@@ -731,14 +715,52 @@
 		<debug_materials/>
 		<scriptable_materials/>
 		<render_indirect_specular_normalization>0</render_indirect_specular_normalization>
+		<clouds_environment_texture_path/>
+		<render_clouds_environment_color>1 1 1 1</render_clouds_environment_color>
+		<render_clouds_environment_sky>1</render_clouds_environment_sky>
+		<render_clouds_environment_sky_color>1 1 1 1</render_clouds_environment_sky_color>
+		<render_clouds_shaders_compile_mode>0</render_clouds_shaders_compile_mode>
+		<render_depth_pre_pass_materials>1</render_depth_pre_pass_materials>
+		<render_environment_dither_scale>0</render_environment_dither_scale>
+		<render_environment_haze_dither_scale>0</render_environment_haze_dither_scale>
+		<render_environment_haze_resolution>2</render_environment_haze_resolution>
+		<render_lights_clustered_distance>500</render_lights_clustered_distance>
+		<render_lights_dither_scale>1</render_lights_dither_scale>
+		<render_occluder_distance>1e+09</render_occluder_distance>
+		<render_shading_quality>2</render_shading_quality>
+		<render_sharpen_resolution>2</render_sharpen_resolution>
+		<render_show_quad_overdraw_blend>1</render_show_quad_overdraw_blend>
+		<render_show_quad_overdraw_display_mode>0</render_show_quad_overdraw_display_mode>
+		<render_show_quad_overdraw_enabled>0</render_show_quad_overdraw_enabled>
+		<render_show_quad_overdraw_landscape_terrain>0</render_show_quad_overdraw_landscape_terrain>
+		<render_show_quad_overdraw_passes>0</render_show_quad_overdraw_passes>
+		<render_show_quad_overdraw_threshold>40</render_show_quad_overdraw_threshold>
+		<render_show_quad_overdraw_water_global>0</render_show_quad_overdraw_water_global>
+		<render_show_quad_overdraw_wireframe>0</render_show_quad_overdraw_wireframe>
+		<render_show_vertex_density_blend>1</render_show_vertex_density_blend>
+		<render_show_vertex_density_depth_test>1</render_show_vertex_density_depth_test>
+		<render_show_vertex_density_enabled>0</render_show_vertex_density_enabled>
+		<render_show_vertex_density_mode>0</render_show_vertex_density_mode>
+		<render_show_vertex_density_search_area>8</render_show_vertex_density_search_area>
+		<render_show_vertex_density_threshold>100</render_show_vertex_density_threshold>
+		<render_show_visualizer_on_invisible_surfaces>0</render_show_visualizer_on_invisible_surfaces>
+		<render_streaming_cache_ram>-1</render_streaming_cache_ram>
+		<render_streaming_cache_vram>-1</render_streaming_cache_vram>
+		<render_streaming_free_space_ram_committed>512</render_streaming_free_space_ram_committed>
+		<render_streaming_igpu_vram_balance>40</render_streaming_igpu_vram_balance>
+		<render_streaming_igpu_vram_mode>0</render_streaming_igpu_vram_mode>
+		<render_streaming_igpu_vram_size>4096</render_streaming_igpu_vram_size>
+		<render_upscale_dlss_resolution_scale_enabled>0</render_upscale_dlss_resolution_scale_enabled>
+		<render_upscale_dlss_resolution_scale_value>0.5</render_upscale_dlss_resolution_scale_value>
+		<render_upscale_fix_flicker>0</render_upscale_fix_flicker>
+		<render_upscale_fsr_custom_resolution_scale>0.5</render_upscale_fsr_custom_resolution_scale>
+		<render_upscale_fsr_show_debug_view>0</render_upscale_fsr_show_debug_view>
+		<render_transparent_multiple_env_probes>0</render_transparent_multiple_env_probes>
 	</render>
 	<physics>
 		<frozen_linear_velocity>0.0199999996</frozen_linear_velocity>
 		<frozen_angular_velocity>0.0199999996</frozen_angular_velocity>
 	</physics>
-	<game>
-		<enabled>1</enabled>
-	</game>
 	<editor>
 		<node type="NodeDummy" id="1464741736" name="main_menu">
 			<properties>

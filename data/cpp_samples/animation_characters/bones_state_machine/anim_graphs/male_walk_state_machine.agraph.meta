@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>babc5ea47317dc797c867a8403fcb04020c5259d</guid>
+	<type>animation_graph</type>
+	<hash>5b60647f47dc48b8e07f87b822e0d6bd26883b6374860014d4b87425164c859e</hash>
+	<runtimes>
+		<runtime id="babc5ea47317dc797c867a8403fcb04020c5259d" name="male_walk_state_machine.agraph" link="0"/>
+		<runtime id="ce5ac2670dce12016814fe07c151e19e5935f70c" name="male_walk_state_machine" link="1" type="10"/>
+	</runtimes>
+</asset>

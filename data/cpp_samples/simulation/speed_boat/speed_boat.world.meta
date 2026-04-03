@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>162a32be21593b053ef7f0a0b885eb7ff67782d2</guid>
+	<type>world</type>
+	<hash>b2ad6caa1486b2c49c39a9a24ce1c17a28919f610161f91a24adec91d32979a9</hash>
+	<runtimes>
+		<runtime id="162a32be21593b053ef7f0a0b885eb7ff67782d2" name="speed_boat.world" link="0"/>
+	</runtimes>
+	<parameters>
+		<parameter type="string" name="physics_settings_path"/>
+		<parameter type="string" name="render_settings_path">guid://6ae71261ef7340a71690548dd7524cf0a29dc375</parameter>
+		<parameter type="string" name="script_name"/>
+		<parameter type="string" name="sound_settings_path"/>
+		<parameter type="string" name="viewports_settings"/>
+	</parameters>
+</asset>

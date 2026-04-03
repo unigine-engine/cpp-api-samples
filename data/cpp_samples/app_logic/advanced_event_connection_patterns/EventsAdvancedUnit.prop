@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.21.0.0" name="EventsAdvancedUnit" manual="1" parent_name="node_base" tooltip="This component demonstrates advanced event subscriptions using methods, lambdas, and connection IDs.">
+	<parameter name="input_manager" type="node">0</parameter>
+</property>

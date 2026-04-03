@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Procedural Spline Mesh Generation" id="procedural_spline_mesh_generation" category_id="procedural_generation_placement">
+	<sdk_desc>Procedural generation of spline-based meshes from world points with real-time parameter control.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample demonstrates procedural generation of spline-based meshes using world points as control nodes. The system creates three geometric types: <strong>RIBBON, SQUARE PIPE</strong>, and <strong>ROUND PIPE</strong>, with adjustable width, subdivision level, and segment length. UV mapping parameters allow texture tiling and stretching control along both length and width.</para>
+			<para>The generated mesh updates in real-time as control points are manipulated (supporting movement along single axes or planar constraints), with a visualizer showing the spline path and wireframe. An interactive interface provides controls for all generation parameters and mesh type switching.</para>
+		</brief>
+	</desc>
+	<controls>
+		<![CDATA[
+			<b>LMB</b> - Select object.<br/>
+			<b>LMB (drag)</b> - Move object.<br/><br/>
+			<b>F</b> - Focus on selected object.<br/>
+			<b>U</b> or <b>ESC</b> - Deselect object.
+		]]>
+	</controls>
+	<tags>
+		<tag>Procedural</tag>
+		<tag>Complex Solutions</tag>
+		<tag>Mesh</tag>
+	</tags>
+</sample>

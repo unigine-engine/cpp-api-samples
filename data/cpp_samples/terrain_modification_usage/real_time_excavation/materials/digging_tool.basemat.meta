@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>3faf5a79556b6d609e009de1f3994e82ef0236a6</guid>
+	<type>material</type>
+	<hash>b089cfc0f96dfca09be6411ea4ab54eb24c884f161bb6cc4325b1c3390e6f1e0</hash>
+	<runtimes>
+		<runtime id="3faf5a79556b6d609e009de1f3994e82ef0236a6" name="digging_tool" link="0" type="5"/>
+	</runtimes>
+</asset>

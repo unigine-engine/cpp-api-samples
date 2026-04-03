@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.21.0.0" name="ExternalPackageSample" manual="1" parent_name="node_base" tooltip="This component demonstrates loading meshes from a custom external package and spawning them randomly in the scene"/>

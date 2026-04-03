@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>2e56a4f83a8b826c0007198e4b757d2b09b5257d</guid>
+	<type>property</type>
+	<hash>25e5e95d04a8cdc41aa70662c78d6346752d11cc18137e3d879db082d99b3a41</hash>
+	<runtimes>
+		<runtime id="2e56a4f83a8b826c0007198e4b757d2b09b5257d" name="MaterialAnimationSample" link="0" type="4"/>
+	</runtimes>
+</asset>

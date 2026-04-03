@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<asset version="2.20.0.0">
+<asset version="2.21.0.0">
 	<guid>9ebb19a959a996f41a04d5c35be4804678fb5aed</guid>
 	<type>mesh</type>
-	<hash>ef1a4cab</hash>
+	<hash>786bda1487e88e6127c1063c96fb181a5c2237a4c9aa8a605c7dc4a120877d8b</hash>
 	<runtimes>
 		<runtime id="9ebb19a959a996f41a04d5c35be4804678fb5aed" name="phys_car.mesh" link="0" type="1"/>
 	</runtimes>

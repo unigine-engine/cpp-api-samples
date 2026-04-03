@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>49b131125ebd9d49f4dc0614edfb3a631f1f5c66</guid>
+	<type>material</type>
+	<hash>b7b5aee1ab08440ac0fa43bb76552c3c386c4776ab7d0241bbe7728731f4eb0c</hash>
+	<runtimes>
+		<runtime id="49b131125ebd9d49f4dc0614edfb3a631f1f5c66" name="mat_triggered" link="0" type="5"/>
+	</runtimes>
+</asset>

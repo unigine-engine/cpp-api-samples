@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>8690bbe61a5138a0334f06d001818827ccf2fe64</guid>
+	<type>property</type>
+	<hash>9a6c5f2f4f92bbd159b9041cda8a18172983a851780873949d5282bb834e3370</hash>
+	<runtimes>
+		<runtime id="8690bbe61a5138a0334f06d001818827ccf2fe64" name="NodeAnimationSample" link="0" type="4"/>
+	</runtimes>
+</asset>

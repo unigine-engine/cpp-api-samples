@@ -1,3 +1,7 @@
+// Demonstrates UDP socket networking for peer-to-peer communication. Sender
+// broadcasts camera state to a receiver at fixed address. Receiver syncs its
+// view to received camera data. Message protocol uses type+size headers.
+
 #include "UDPSocketsSample.h"
 
 #include <UnigineConsole.h>
@@ -16,17 +20,20 @@ namespace
 	constexpr int RECV_BUFFER_SIZE = 4096;
 }
 
+// GUI is initialized; peer (Sender or Receiver) is created via button click.
 void UDPSocketsSample::init()
 {
 	gui.init(this);
 }
 
+// Active peer (Sender or Receiver) is updated each frame.
 void UDPSocketsSample::update()
 {
 	if (peer)
 		peer->update();
 }
 
+// Active peer is destroyed and GUI is cleaned up.
 void UDPSocketsSample::shutdown()
 {
 	if (peer)
@@ -39,7 +46,10 @@ void UDPSocketsSample::shutdown()
 }
 
 // ================================================================
+// SENDER IMPLEMENTATION
+// ================================================================
 
+// Network thread is started and console command is registered.
 UDPSocketsSample::Sender::Sender(const Unigine::String &hostname, unsigned short port)
 {
 	thread.start(hostname, port);
@@ -51,16 +61,19 @@ UDPSocketsSample::Sender::Sender(const Unigine::String &hostname, unsigned short
 	);
 }
 
+// Console command is unregistered.
 UDPSocketsSample::Sender::~Sender()
 {
 	Console::removeCommand("send_msg");
 }
 
+// Camera transform is sent to receiver each frame.
 void UDPSocketsSample::Sender::update()
 {
 	if (!thread.isRunning())
 		return;
 
+	// Current camera position and rotation are broadcast
 	PlayerPtr player = Game::getPlayer();
 	if (player)
 	{
@@ -71,11 +84,13 @@ void UDPSocketsSample::Sender::update()
 	}
 }
 
+// Console command handler: text message is sent to receiver.
 void UDPSocketsSample::Sender::on_message_send_cmd(int argc, char **argv)
 {
 	BlobPtr message = Blob::create();
 	StringStack<> text;
 
+	// Arguments are concatenated into a single message string
 	for (int i = 1; i < argc; i += 1)
 	{
 		text += argv[i];
@@ -88,13 +103,11 @@ void UDPSocketsSample::Sender::on_message_send_cmd(int argc, char **argv)
 
 // ================================================================
 
+// UDP socket is created with target address; thread is started.
 bool UDPSocketsSample::Sender::NetworkThread::start(const String &hostname, unsigned short port)
 {
-	// Create a simple UDP socket.
-
-	// Note that the given address (hostname:port) is used as the source address in subsequent
-	// 'send' calls (Socket::write*). The socket's own address is set automatically.
-
+	// UDP socket is created - target address is used for subsequent send calls.
+	// Socket's own address is assigned automatically by the OS.
 	socket = Socket::create(Socket::SOCKET_TYPE_DGRAM, hostname, port);
 
 	if (!socket->isOpened())
@@ -103,18 +116,20 @@ bool UDPSocketsSample::Sender::NetworkThread::start(const String &hostname, unsi
 		return false;
 	}
 
-	// Set the socket's send buffer size.
+	// Send buffer size is configured
 	socket->send(SEND_BUFFER_SIZE);
 
 	run();
 	return true;
 }
 
+// Message is queued for sending on the network thread.
 void UDPSocketsSample::Sender::NetworkThread::send(Message *message)
 {
 	queue.push(message);
 }
 
+// Thread is stopped and socket is closed.
 void UDPSocketsSample::Sender::NetworkThread::reset()
 {
 	shutdown();
@@ -128,23 +143,25 @@ void UDPSocketsSample::Sender::NetworkThread::reset()
 	queue.clear();
 }
 
+// Outgoing messages are serialized and sent as UDP datagrams.
 void UDPSocketsSample::Sender::NetworkThread::process()
 {
-	// Takes messages from the outgoing messages queue and sends them to the peer.
-
 	BlobPtr blob = Blob::create();
 
 	while (isRunning())
 	{
+		// Next message is retrieved from queue
 		Message *message = queue.pop();
 
 		if (message)
 		{
+			// Message is serialized into blob
 			message->pack(blob);
 			blob->seekSet(0);
 			delete message;
 		}
 
+		// Datagram is sent to receiver
 		if (blob->getSize())
 		{
 			socket->writeStream(blob, blob->getSize());
@@ -154,16 +171,21 @@ void UDPSocketsSample::Sender::NetworkThread::process()
 }
 
 // ================================================================
+// RECEIVER IMPLEMENTATION
+// ================================================================
 
+// Network thread is started; player control is disabled for camera sync.
 UDPSocketsSample::Receiver::Receiver(const Unigine::String &hostname, unsigned short port)
 {
 	thread.start(hostname, port);
 
+	// Player control is disabled so camera can be synced from sender
 	PlayerPtr player = Game::getPlayer();
 	if (player)
 		player->setControlled(false);
 }
 
+// Player control is restored.
 UDPSocketsSample::Receiver::~Receiver()
 {
 	PlayerPtr player = Game::getPlayer();
@@ -171,22 +193,23 @@ UDPSocketsSample::Receiver::~Receiver()
 		player->setControlled(true);
 }
 
+// Incoming messages are processed; camera is synced on CameraMessage.
 void UDPSocketsSample::Receiver::update()
 {
-	// Handle incoming messages from the peer.
-
 	if (!thread.isRunning())
 		return;
 
 	Message *message = thread.receive();
 	int processed = 0;
 
+	// Messages are processed up to a limit per frame to avoid stalls
 	while (message && processed < message_process_limit)
 	{
 		switch (message->getType())
 		{
 			case Message::TEXT:
 			{
+				// Text message is logged to console
 				TextMessage *text_msg = dynamic_cast<TextMessage *>(message);
 
 				if (text_msg)
@@ -196,6 +219,7 @@ void UDPSocketsSample::Receiver::update()
 
 			case Message::CAMERA:
 			{
+				// Camera transform is applied to local player
 				CameraMessage *camera_msg = dynamic_cast<CameraMessage *>(message);
 
 				if (camera_msg)
@@ -222,10 +246,10 @@ void UDPSocketsSample::Receiver::update()
 
 // ================================================================
 
+// UDP socket is created, bound to address, and thread is started.
 bool UDPSocketsSample::Receiver::NetworkThread::start(const String &hostname, unsigned short port)
 {
-	// Create a UDP socket and bind to the given address.
-
+	// UDP socket is created with local binding address
 	socket = Socket::create(Socket::SOCKET_TYPE_DGRAM, hostname, port);
 
 	if (!socket->isOpened())
@@ -234,13 +258,13 @@ bool UDPSocketsSample::Receiver::NetworkThread::start(const String &hostname, un
 		return false;
 	}
 
-	// Set the socket's receive buffer size.
+	// Receive buffer size is configured
 	socket->recv(RECV_BUFFER_SIZE);
 
-	// Set the socket as non-blocking.
+	// Non-blocking mode for polling without stalling
 	socket->nonblock();
 
-	// Bind the socket to the address provided the in the `Socket::create` call above.
+	// Socket is bound to listen for incoming datagrams
 	if (!socket->bind())
 	{
 		Log::warning("Could not bind socket to the specified address (%s:%d)!\n", hostname.get(), port);
@@ -251,6 +275,7 @@ bool UDPSocketsSample::Receiver::NetworkThread::start(const String &hostname, un
 	return true;
 }
 
+// Thread is stopped and socket is closed.
 void UDPSocketsSample::Receiver::NetworkThread::reset()
 {
 	shutdown();
@@ -264,22 +289,24 @@ void UDPSocketsSample::Receiver::NetworkThread::reset()
 	queue.clear();
 }
 
+// Next received message is returned; nullptr if queue is empty.
 UDPSocketsSample::Message *UDPSocketsSample::Receiver::NetworkThread::receive()
 {
 	return queue.pop();
 }
 
+// Incoming UDP datagrams are received and parsed into messages.
 void UDPSocketsSample::Receiver::NetworkThread::process()
 {
-	// Receive incoming messages from the peer, parse and push them to the outgoing messages queue.
-
 	BlobPtr blob = Blob::create();
 
 	while (isRunning())
 	{
+		// Datagram is read from socket
 		socket->readStream(blob, RECV_BUFFER_SIZE);
 		blob->seekSet(0);
 
+		// Message is extracted and queued for main thread
 		if (blob->getSize())
 		{
 			Message *message = extract_message(blob);
@@ -292,6 +319,7 @@ void UDPSocketsSample::Receiver::NetworkThread::process()
 	}
 }
 
+// Message is created based on header type and deserialized from blob.
 UDPSocketsSample::Message *UDPSocketsSample::Receiver::NetworkThread::extract_message(Unigine::BlobPtr blob)
 {
 	Message::Header header = {};
@@ -300,6 +328,7 @@ UDPSocketsSample::Message *UDPSocketsSample::Receiver::NetworkThread::extract_me
 	blob->read(&header, sizeof(header));
 	blob->seekSet(0);
 
+	// Appropriate message subclass is instantiated based on type
 	switch (header.type)
 	{
 		case Message::TEXT: message = new TextMessage(); break;
@@ -314,7 +343,10 @@ UDPSocketsSample::Message *UDPSocketsSample::Receiver::NetworkThread::extract_me
 }
 
 // ================================================================
+// MESSAGE SERIALIZATION
+// ================================================================
 
+// TextMessage is serialized: header + text_size + text_data.
 size_t UDPSocketsSample::TextMessage::pack(Unigine::BlobPtr dst_blob)
 {
 	size_t cursor = dst_blob->tell();
@@ -326,6 +358,7 @@ size_t UDPSocketsSample::TextMessage::pack(Unigine::BlobPtr dst_blob)
 	packed += dst_blob->write(&text_size, sizeof(text_size));
 	packed += dst_blob->write(text.get(), text_size);
 
+	// Header is updated with actual type and size
 	header.type = getType();
 	header.size = packed;
 
@@ -337,6 +370,7 @@ size_t UDPSocketsSample::TextMessage::pack(Unigine::BlobPtr dst_blob)
 	return packed;
 }
 
+// TextMessage is deserialized from blob.
 size_t UDPSocketsSample::TextMessage::unpack(Unigine::BlobPtr src_blob)
 {
 	size_t unpacked = 0;
@@ -356,6 +390,7 @@ size_t UDPSocketsSample::TextMessage::unpack(Unigine::BlobPtr src_blob)
 	return unpacked;
 }
 
+// CameraMessage is serialized: header + position (Vec3) + rotation (quat).
 size_t UDPSocketsSample::CameraMessage::pack(Unigine::BlobPtr dst_blob)
 {
 	size_t cursor = dst_blob->tell();
@@ -376,6 +411,7 @@ size_t UDPSocketsSample::CameraMessage::pack(Unigine::BlobPtr dst_blob)
 	return packed;
 }
 
+// CameraMessage is deserialized from blob.
 size_t UDPSocketsSample::CameraMessage::unpack(Unigine::BlobPtr src_blob)
 {
 	size_t unpacked = 0;
@@ -388,7 +424,10 @@ size_t UDPSocketsSample::CameraMessage::unpack(Unigine::BlobPtr src_blob)
 }
 
 // ================================================================
+// GUI IMPLEMENTATION
+// ================================================================
 
+// Sender mode is started; previous peer is destroyed if exists.
 void UDPSocketsSample::SampleGui::on_start_sender_btn_clicked(const WidgetPtr &widget, int mouse)
 {
 	if (sample->peer)
@@ -397,11 +436,13 @@ void UDPSocketsSample::SampleGui::on_start_sender_btn_clicked(const WidgetPtr &w
 		sample->peer = nullptr;
 	}
 
+	// Button events are temporarily disabled to prevent reentrancy
 	start_recver_btn->getEventClicked().setEnabled(false);
 	start_sender_btn->getEventClicked().setEnabled(false);
 
 	if (start_sender_btn->isToggled())
 	{
+		// Sender is created with target receiver address
 		StringStack<> hostname;
 		unsigned short port = 0;
 
@@ -410,6 +451,7 @@ void UDPSocketsSample::SampleGui::on_start_sender_btn_clicked(const WidgetPtr &w
 
 		sample->peer = new Sender(hostname, port);
 
+		// Address fields are locked while sender is running
 		recv_host_el->setEnabled(false);
 		recv_port_el->setEnabled(false);
 
@@ -426,6 +468,7 @@ void UDPSocketsSample::SampleGui::on_start_sender_btn_clicked(const WidgetPtr &w
 	start_sender_btn->getEventClicked().setEnabled(true);
 }
 
+// Receiver mode is started; socket is bound to listen address.
 void UDPSocketsSample::SampleGui::on_start_recver_btn_clicked(const WidgetPtr &widget, int mouse)
 {
 	if (sample->peer)
@@ -439,6 +482,7 @@ void UDPSocketsSample::SampleGui::on_start_recver_btn_clicked(const WidgetPtr &w
 
 	if (start_recver_btn->isToggled())
 	{
+		// Receiver is created and bound to specified address
 		StringStack<> hostname;
 		unsigned short port = 0;
 
@@ -447,6 +491,7 @@ void UDPSocketsSample::SampleGui::on_start_recver_btn_clicked(const WidgetPtr &w
 
 		sample->peer = new Receiver(hostname, port);
 
+		// Address fields are locked while receiver is running
 		recv_host_el->setEnabled(false);
 		recv_port_el->setEnabled(false);
 
@@ -463,6 +508,7 @@ void UDPSocketsSample::SampleGui::on_start_recver_btn_clicked(const WidgetPtr &w
 	start_sender_btn->getEventClicked().setEnabled(true);
 }
 
+// UI window is created with Sender/Receiver buttons and address input fields.
 void UDPSocketsSample::SampleGui::init(UDPSocketsSample *sample)
 {
 	this->sample = sample;
@@ -519,6 +565,7 @@ void UDPSocketsSample::SampleGui::init(UDPSocketsSample *sample)
 	}
 }
 
+// UI is cleaned up and console state is restored.
 void UDPSocketsSample::SampleGui::shutdown()
 {
 	sample_description_window.shutdown();

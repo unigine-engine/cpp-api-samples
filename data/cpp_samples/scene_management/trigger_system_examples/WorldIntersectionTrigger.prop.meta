@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>5c8b1af25bc09ed421139eb5a11599f30c5206df</guid>
+	<type>property</type>
+	<hash>db5630ae548dc5d926593053077303f28fb2b7a20bb1440a518fb6a9234c2362</hash>
+	<runtimes>
+		<runtime id="5c8b1af25bc09ed421139eb5a11599f30c5206df" name="WorldIntersectionTrigger" link="0" type="4"/>
+	</runtimes>
+</asset>

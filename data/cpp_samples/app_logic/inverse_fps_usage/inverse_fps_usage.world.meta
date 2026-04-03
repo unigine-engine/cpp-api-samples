@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>de441311f13680682ccbb6a47a4b0a66086b22ed</guid>
+	<type>world</type>
+	<hash>469382ce46fe95ac790282eecf18e3f71da0f01849ccebf065f8a0015edcba0f</hash>
+	<runtimes>
+		<runtime id="de441311f13680682ccbb6a47a4b0a66086b22ed" name="ifps_usage.world" link="0"/>
+	</runtimes>
+	<parameters>
+		<parameter type="string" name="physics_settings_path"/>
+		<parameter type="string" name="render_settings_path">guid://8bed8c3ce53501ff11c1b0ae5cc6d017d4ad5524</parameter>
+		<parameter type="string" name="script_name"/>
+		<parameter type="string" name="sound_settings_path"/>
+		<parameter type="string" name="viewports_settings"/>
+	</parameters>
+</asset>

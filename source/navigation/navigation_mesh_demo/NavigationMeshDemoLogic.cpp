@@ -1,3 +1,10 @@
+// Interactive navigation mesh demo with multiple Seeker agents. Each Seeker uses
+// PathRoute (create2D/create3D) to calculate paths toward a target node. Route radius
+// defines minimum clearance from obstacles. Agents rotate toward movement direction
+// and validate position against navigation area via inside2D/inside3D checks.
+// When a Seeker reaches its PathfindingTarget, the target relocates to a random
+// position from a predefined set. Manipulators allow dragging waypoints on XY plane.
+
 #include <UnigineVisualizer.h>
 #include <UnigineConsole.h>
 #include <UnigineComponentSystem.h>
@@ -36,11 +43,13 @@ REGISTER_COMPONENT(NavigationMeshDemoLogic);
 using namespace Unigine;
 using namespace Unigine::Math;
 
+// Visualizer is enabled, manipulators are configured for XY-plane movement, and UI is created.
 void NavigationMeshDemoLogic::init()
 {
 	Visualizer::setEnabled(true);
 	Input::setMouseHandle(Input::MOUSE_HANDLE_SOFT);
 
+	// Manipulators are restricted to XY translation only (Z is determined by navigation surface)
 	widget_manipulator = getComponent<Manipulators>(node);
 	if (widget_manipulator)
 	{
@@ -52,6 +61,7 @@ void NavigationMeshDemoLogic::init()
 		widget_manipulator->setZAxisScale(false);
 	}
 
+	// Initial route radius is applied to all Seeker agents
 	setSeekersRouteRadius(route_radius);
 
 	{
@@ -68,14 +78,18 @@ void NavigationMeshDemoLogic::init()
 	}
 }
 
+// Player control is toggled based on manipulator state; navigation mesh is visualized.
 void NavigationMeshDemoLogic::update()
 {
+	// Camera control is disabled while user is dragging a manipulator
 	Game::getPlayer()->setControlled(!widget_manipulator->isActive());
 
+	// Navigation mesh boundaries and walkable areas are rendered for debugging
 	if (navigation)
 		navigation->renderVisualizer();
 }
 
+// Visualizer is disabled, mouse is restored, and UI is cleaned up.
 void NavigationMeshDemoLogic::shutdown()
 {
 	Visualizer::setEnabled(false);
@@ -83,10 +97,12 @@ void NavigationMeshDemoLogic::shutdown()
 	sample_description_window.shutdown();
 }
 
+// Route radius is propagated to all child Seeker components.
 void NavigationMeshDemoLogic::setSeekersRouteRadius(float radius)
 {
 	if (seekers)
 	{
+		// Each child node with a Seeker component receives the updated radius
 		for (int i = 0; i < seekers->getNumChildren(); i += 1)
 		{
 			auto seeker_component = getComponent<Seeker>(seekers->getChild(i));

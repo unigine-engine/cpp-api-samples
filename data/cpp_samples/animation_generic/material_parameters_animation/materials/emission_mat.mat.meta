@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>01418211119af68e592d0f6da2bee7d229d805a4</guid>
+	<type>material</type>
+	<hash>ad0f4b6166b2143f8f688dd220ac7fdd31e5e420d180b240d8be4a7720fc2c52</hash>
+	<runtimes>
+		<runtime id="01418211119af68e592d0f6da2bee7d229d805a4" name="emission_mat" link="0" type="5"/>
+	</runtimes>
+</asset>

@@ -1,3 +1,8 @@
+// Demonstrates the three main light types: World, Omni, and Projected.
+// World light simulates the sun with atmospheric scattering.
+// Omni light radiates in all directions from a point with optional IES profiles.
+// Projected light casts a cone with configurable FOV and penumbra.
+
 #include <UnigineComponentSystem.h>
 #include <UnigineVisualizer.h>
 #include <UnigineLights.h>
@@ -18,10 +23,12 @@ public:
 private:
 	void init()
 	{
+		// Create one instance of each light type
 		create_world_light();
 		create_omni_light();
 		create_projected_light();
 
+		// Enable visualizer to show light shapes and ranges
 		visualizer_enabled = Visualizer::isEnabled();
 		Visualizer::setEnabled(true);
 
@@ -30,6 +37,7 @@ private:
 
 	void update()
 	{
+		// Render light volume visualizations (world light has no local volume)
 		omni_light->renderVisualizer();
 		proj_light->renderVisualizer();
 	}
@@ -42,32 +50,41 @@ private:
 
 	void create_world_light()
 	{
+		// LightWorld: directional light simulating sun/moon with infinite range
 		world_light = LightWorld::create(vec4_white);
 
+		// Temperature mode calculates color from Kelvin value (6500K = daylight)
 		world_light->setColorMode(Light::COLOR_MODE_TEMPERATURE);
 		world_light->setColorTemperature(6500.f);
 		world_light->setIntensity(1.f);
 
+		// Enable atmospheric scattering for realistic sky rendering
 		world_light->setScattering(LightWorld::SCATTERING_SUN);
 
+		// Rotation controls light direction (sun angle in the sky)
 		world_light->setWorldRotation(quat(273.f, 330.f, 120.f));
 	}
 
 	void create_omni_light()
 	{
+		// LightOmni: point light radiating equally in all directions
+		// Parameters: color, attenuation distance, name
 		omni_light = LightOmni::create(vec4_white, 20.f, "omni");
 
+		// Sphere shape creates soft area light shadows (more realistic)
 		omni_light->setShapeType(Light::SHAPE_SPHERE);
 		omni_light->setShapeRadius(0.17f);
 
+		// Distance at which light intensity reaches zero
 		omni_light->setAttenuationDistance(20.f);
 
-		// set the shadow color texture mode to ies for the omni light
+		// IES mode uses photometric profiles for realistic light distribution
 		omni_light->setShadowColorTextureMode(Light::SHADOW_COLOR_MODE_IES);
 
-		// set the projected texture by its path, alternatively you can use LightOmni::setTexture and LightOmni::setTextureImage
+		// Texture can be loaded by path or assigned directly
 		omni_light->setTextureFilePath(FileSystem::resolvePartialVirtualPath("white.texture"));
 
+		// Warm color temperature (3165K = tungsten bulb)
 		omni_light->setColorMode(Light::COLOR_MODE_TEMPERATURE);
 		omni_light->setColorTemperature(3165.f);
 		omni_light->setIntensity(1.3f);
@@ -77,25 +94,32 @@ private:
 
 	void create_projected_light()
 	{
+		// LightProj: spotlight casting a cone of light
+		// Parameters: color, attenuation distance, FOV angle, name
 		proj_light = LightProj::create(vec4_white, 20.f, 70.f, "proj");
 
+		// Warm-neutral color temperature (4000K = fluorescent)
 		proj_light->setColorMode(Light::COLOR_MODE_TEMPERATURE);
 		proj_light->setColorTemperature(4000.f);
 		proj_light->setIntensity(1.3f);
 
+		// Point shape creates sharp shadows (ideal for spotlights)
 		proj_light->setShapeType(Light::SHAPE_POINT);
 
+		// Cone angle from center to edge
 		proj_light->setFov(70.f);
 
 		proj_light->setAttenuationDistance(20.f);
+		// Penumbra: soft transition from lit to shadow region (0-1)
 		proj_light->setPenumbra(0.15f);
 
-		// set the shadow color texture mode to SHADOW_COLOR_MODE_SIMPLE to be able to use any 2D texture
+		// Set the shadow color texture mode to SHADOW_COLOR_MODE_SIMPLE to be able to use any 2D texture
 		proj_light->setShadowColorTextureMode(Light::SHADOW_COLOR_MODE_SIMPLE);
 
 		proj_light->setTextureFilePath(FileSystem::resolvePartialVirtualPath("white.texture"));
 
 		proj_light->setWorldPosition(Vec3(-0.8f, -1.1f, 2.3f));
+		// Rotation determines light direction
 		proj_light->setWorldRotation(quat(30.f, 343.f, 331.f));
 	}
 
@@ -109,6 +133,7 @@ private:
 
 			sample_description_window.createWindow();
 
+			// World light rotation (simulates sun movement)
 			sample_description_window.addFloatParameter(
 				"world light angle",
 				"Change the rotation of the LightWorld.",
@@ -122,6 +147,7 @@ private:
 
 			sample_description_window.addParameterSpacer();
 
+			// Omni light brightness control
 			sample_description_window.addFloatParameter(
 				"omni light intensity",
 				"Change the light intensity of the LightOmni.",
@@ -133,6 +159,7 @@ private:
 				}
 			);
 
+			// Omni light color warmth/coolness
 			sample_description_window.addFloatParameter(
 				"omni light color temperature",
 				"Change the color temperature of the LightOmni.",
@@ -146,6 +173,7 @@ private:
 
 			sample_description_window.addParameterSpacer();
 
+			// Projected light edge softness
 			sample_description_window.addFloatParameter(
 				"projected light penumbra",
 				"Change the penumbra parameter of the LightProj.",
@@ -157,6 +185,7 @@ private:
 				}
 			);
 
+			// Projected light cone angle
 			sample_description_window.addFloatParameter(
 				"projected light fov",
 				"Change the FOV of the LightProj.",
@@ -177,10 +206,14 @@ private:
 
 	// ========================================================================================
 
+	// Global directional light (sun/moon)
 	LightWorldPtr world_light;
+	// Point light radiating in all directions
 	LightOmniPtr omni_light;
+	// Spotlight with cone-shaped illumination
 	LightProjPtr proj_light;
 
+	// Saved visualizer state for restoration
 	bool visualizer_enabled = false;
 
 	SampleGui gui;

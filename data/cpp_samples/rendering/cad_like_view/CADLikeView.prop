@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.21.0.0" name="CADLikeView" manual="1" parent_name="node_base" tooltip="This component creates a CAD-style 2x2 viewport layout with top, perspective, side, and front views, manages cameras and input, and attaches orientation viewcubes.">
+	<parameter name="player_top" type="node" filter="Player">0</parameter>
+	<parameter name="player_perspective" type="node" filter="Player">0</parameter>
+	<parameter name="player_side" type="node" filter="Player">0</parameter>
+	<parameter name="player_front" type="node" filter="Player">0</parameter>
+	<parameter name="ortho_width" type="float">3</parameter>
+	<parameter name="ortho_height" type="float">3</parameter>
+	<parameter name="figure" type="node">0</parameter>
+</property>

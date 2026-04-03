@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.21.0.0" name="TwoPointPerspectiveSample" manual="1" parent_name="node_base" tooltip="This component provides a UI to toggle two-point perspective mode by enabling or disabling camera shift in the CameraShiftController.">
+	<parameter name="controlledPlayer" type="node">0</parameter>
+</property>

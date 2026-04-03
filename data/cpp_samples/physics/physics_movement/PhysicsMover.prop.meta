@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>3401ac3ee373faacb3195ce0cfdd1579de8eb51f</guid>
+	<type>property</type>
+	<hash>611bdfd179b1a7796855cc0dc47c688f5105568481286ce3a30c9f18c8e3dd3c</hash>
+	<runtimes>
+		<runtime id="3401ac3ee373faacb3195ce0cfdd1579de8eb51f" name="PhysicsMover" link="0" type="4"/>
+	</runtimes>
+</asset>

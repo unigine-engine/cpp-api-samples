@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.21.0.0" name="PhysicsMover" manual="1" parent_name="node_base">
+	<parameter name="force" type="float">10</parameter>
+	<parameter name="torque" type="float">1</parameter>
+	<parameter name="jump_impulse" type="float">3</parameter>
+	<parameter name="max_speed" type="float">30</parameter>
+	<parameter name="max_rotation_speed" type="float">10</parameter>
+	<parameter name="brakes_strength" type="float">5</parameter>
+</property>

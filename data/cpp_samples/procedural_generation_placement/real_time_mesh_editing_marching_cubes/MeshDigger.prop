@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.21.0.0" name="MeshDigger" manual="1" parent_name="node_base">
+	<parameter name="field_size" type="int" tooltip="Number of marching cubes along one side of the field">64</parameter>
+	<parameter name="marching_cube_size" type="float" tooltip="Marching Cube edge length">0.2</parameter>
+	<parameter name="digging_radius" type="float">2</parameter>
+	<parameter name="mat" type="material" title="Ground material"/>
+</property>

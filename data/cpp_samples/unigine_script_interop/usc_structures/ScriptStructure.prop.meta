@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>23966b5d43697bf6fc3faac7b14c2515edf81d6c</guid>
+	<type>property</type>
+	<hash>60706cebf092484538137efc2633d1e36f35b244dc95029cacf327a6d08946c8</hash>
+	<runtimes>
+		<runtime id="23966b5d43697bf6fc3faac7b14c2515edf81d6c" name="ScriptStructure" link="0" type="4"/>
+	</runtimes>
+</asset>

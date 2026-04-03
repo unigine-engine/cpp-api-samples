@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<asset version="2.20.0.0">
+<asset version="2.21.0.0">
 	<guid>4e296298e7a6fd44137a2575fbc4f8d488914217</guid>
 	<type>texture</type>
-	<hash>17af0d1e</hash>
+	<hash>0cdee5875052049a22c03a25f9709176708fa2399a0317919dd9e629f006aa36</hash>
 	<runtimes>
 		<runtime id="4e296298e7a6fd44137a2575fbc4f8d488914217" name="player.png" link="0" type="6"/>
 	</runtimes>

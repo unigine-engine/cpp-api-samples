@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>e901bee2b531c3e35d16582ca5919cab4270193a</guid>
+	<type>property</type>
+	<hash>6f8ae5b14b57ffa759dc1420c6b914ef72e9f6898d392eb23854d701bfbda53d</hash>
+	<runtimes>
+		<runtime id="e901bee2b531c3e35d16582ca5919cab4270193a" name="CPUShaderSample" link="0" type="4"/>
+	</runtimes>
+</asset>

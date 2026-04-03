@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<asset version="2.20.0.0">
+<asset version="2.21.0.0">
 	<guid>0fd66db1e8739248f272b85bc0da890ce7186f30</guid>
 	<type>property</type>
-	<hash>fd30ef12</hash>
+	<hash>dd7edaf3b45d4eb1de84d812725317016557987a2f67836aebe3c5069b790c8e</hash>
 	<runtimes>
 		<runtime id="0fd66db1e8739248f272b85bc0da890ce7186f30" name="Dialogs" link="0" type="4"/>
 	</runtimes>

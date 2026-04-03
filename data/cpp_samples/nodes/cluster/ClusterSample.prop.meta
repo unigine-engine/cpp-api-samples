@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<asset version="2.20.0.0">
+<asset version="2.21.0.0">
 	<guid>a8c641e8d70f7bbbaeca2118c1cc3b375384aa47</guid>
 	<type>property</type>
-	<hash>4098cdd4</hash>
+	<hash>da739725b43e55db3ab4bf7c60b12a89f64f3a3672211003d6cc963aaf07b677</hash>
 	<runtimes>
 		<runtime id="a8c641e8d70f7bbbaeca2118c1cc3b375384aa47" name="ClusterSample" link="0" type="4"/>
 	</runtimes>

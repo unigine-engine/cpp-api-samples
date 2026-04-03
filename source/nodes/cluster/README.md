@@ -4,11 +4,11 @@ This sample demonstrates dynamic manipulation of **ObjectMeshCluster** in UNIGIN
 
 **Core Features:**
 
-+**Placement and Removal** - click on empty ground adds a new mesh at the clicked position, click on existing cluster geometry removes the selected mesh instance from the cluster
-+**Raycasting and Intersection Testing** - casts a ray from the camera through the mouse position to detect whether the user clicked on a cluster mesh or terrain
+-**Placement and Removal** - click on empty ground adds a new mesh at the clicked position, click on existing cluster geometry removes the selected mesh instance from the cluster
+-**Raycasting and Intersection Testing** - casts a ray from the camera through the mouse position to detect whether the user clicked on a cluster mesh or terrain
 
 **Use Cases:**
 
-+Scattering objects like rocks, grass, or debris
-+Dynamic level editing and environment design
-+Performance-sensitive applications with many similar mesh instances.
+-Scattering objects like rocks, grass, or debris
+-Dynamic level editing and environment design
+-Performance-sensitive applications with many similar mesh instances.

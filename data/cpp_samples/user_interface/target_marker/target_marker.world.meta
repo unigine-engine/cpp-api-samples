@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<asset version="2.20.0.0">
+<asset version="2.21.0.0">
 	<guid>2aa8a33d88fe8b783ba5d8777bb95b6a4c9ed3c1</guid>
 	<type>world</type>
-	<hash>14136a54</hash>
+	<hash>6519d30648b1f79582bb9956fe19c29ed9b6d7a1d7a851000db9a3a5f40d3515</hash>
 	<runtimes>
 		<runtime id="2aa8a33d88fe8b783ba5d8777bb95b6a4c9ed3c1" name="target_marker.world" link="0"/>
 	</runtimes>

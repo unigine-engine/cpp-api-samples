@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>6d8699bbb2c6cb1107a066b7ec80fe0796bb97e7</guid>
+	<type>world</type>
+	<hash>dfd5e68b3794754dd58ac6c71fe0c7bb3cb7d359740450388495c61e5e324eaa</hash>
+	<runtimes>
+		<runtime id="6d8699bbb2c6cb1107a066b7ec80fe0796bb97e7" name="landscape_polygon_modification.world" link="0"/>
+	</runtimes>
+	<parameters>
+		<parameter type="string" name="physics_settings_path"/>
+		<parameter type="string" name="render_settings_path">guid://8bed8c3ce53501ff11c1b0ae5cc6d017d4ad5524</parameter>
+		<parameter type="string" name="script_name"/>
+		<parameter type="string" name="sound_settings_path"/>
+		<parameter type="string" name="viewports_settings"/>
+	</parameters>
+</asset>

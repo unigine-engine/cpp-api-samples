@@ -17,7 +17,7 @@ bool BodyFractureUnit::isBroken()
 
 void BodyFractureUnit::crack(float impulse, const Unigine::Math::Vec3 &point, const Unigine::Math::vec3 &normal)
 {
-	if (own_body && !own_body->isBroken() && impulse >= max_impulse)
+	if (own_body && impulse >= max_impulse)
 		crack(own_body, point, normal);
 }
 
@@ -50,9 +50,16 @@ void BodyFractureUnit::update()
 		return;
 	}
 
-	int cnt = own_body->getNumChildren();
+	renderBroken(own_body);
+}
+
+void BodyFractureUnit::renderBroken(const Unigine::BodyPtr &body)
+{
+	Visualizer::renderObject(body->getObject(), Math::vec4_green);
+
+	int cnt = body->getNumChildren();
 	for (int i = 0; i < cnt; ++i)
-		Visualizer::renderObject(own_body->getChild(i)->getObject(), Math::vec4_green);
+		renderBroken(body->getChild(i));
 }
 
 void BodyFractureUnit::shutdown()
@@ -82,14 +89,15 @@ void BodyFractureUnit::onContactEnter(const Unigine::BodyPtr &body, int num)
 	auto fracture = bf1 ? bf1 : bf0;
 
 	crack(fracture, body->getContactPoint(num), body->getContactNormal(num));
-
-	own_body->getEventContactEnter().disconnect(this, &BodyFractureUnit::onContactEnter);
 }
 
 void BodyFractureUnit::crack(const Unigine::BodyFracturePtr &fracture, const Unigine::Math::Vec3 &point, const Unigine::Math::vec3 &normal)
 {
 	if (!fracture)
 		return;
+
+	fracture->setThreshold(threshold);
+	fracture->setMaterial(material);
 
 	switch (mode)
 	{

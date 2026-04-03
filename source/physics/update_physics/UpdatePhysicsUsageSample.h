@@ -1,3 +1,7 @@
+// Sample UI for adjusting framerate to observe the difference between
+// applying forces in update() vs update_physics(). Lower FPS makes the
+// instability of update()-based physics more visible.
+
 #pragma once
 #include <UnigineComponentSystem.h>
 

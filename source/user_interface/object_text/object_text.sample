@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Object Text">
+	<sdk_desc>Demonstration of 3D text objects with adjustable parameters, animated colors, and rich formatting using the ObjectText class.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample demonstrates how to create and control text objects in the scene via API, using the <ui><link to="objecttext_class">ObjectText</link></ui> class.</para>
+			<para>It showcases different text rendering features, including adjustable font parameters, color animation, and support for rich text formatting:</para>
+			<para><strong>Left object</strong> - a static <em>rich text</em> block with varying colors, font sizes, and outlines.</para>
+			<para><strong>Center object</strong> - a user-editable text that can be customized through the Parameters window. It supports adjustments for wrap width, depth test, outline, vertical and horizontal spacing, font resolution, size, and rich text mode.</para>
+			<para><strong>Right object</strong> - a dynamic text object that continuously updates its color over time, displaying its current RGBA values in real time.</para>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Interface (GUI)</tag>
+		<tag>Widgets</tag>
+	</tags>
+</sample>

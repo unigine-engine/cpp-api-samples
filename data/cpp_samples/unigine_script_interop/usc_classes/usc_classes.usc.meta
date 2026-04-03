@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>6a57dbf2a67fa035843276b71cbfb4ec1f5fe2d1</guid>
+	<type>script</type>
+	<hash>4665d2846ad63fd8caf1d80b7eb5ae12e1a621a4762efbebd2fb46df721ba7e0</hash>
+	<runtimes>
+		<runtime id="6a57dbf2a67fa035843276b71cbfb4ec1f5fe2d1" name="usc_classes.usc" link="0"/>
+	</runtimes>
+</asset>

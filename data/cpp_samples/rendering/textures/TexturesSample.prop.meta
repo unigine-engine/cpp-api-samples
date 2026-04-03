@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>e01ad7e820ea49d855804b52b412be71f5694683</guid>
+	<type>property</type>
+	<hash>3c98e06397cc5d8afa9dcb400aa549767d2801bd97e6ed6d68e9155e4f760b44</hash>
+	<runtimes>
+		<runtime id="e01ad7e820ea49d855804b52b412be71f5694683" name="TexturesSample" link="0" type="4"/>
+	</runtimes>
+</asset>

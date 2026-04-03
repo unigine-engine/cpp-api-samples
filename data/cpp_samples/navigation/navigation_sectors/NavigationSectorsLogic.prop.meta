@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<asset version="2.20.0.0">
+<asset version="2.21.0.0">
 	<guid>a5efc64ad9ebaadd55426ec38fef2ee86d0a5fe3</guid>
 	<type>property</type>
-	<hash>6e390d9a</hash>
+	<hash>94a1ca3457e654865920e390ec10cc82ae55d0416a43c0d1041681501fdecc4c</hash>
 	<runtimes>
 		<runtime id="a5efc64ad9ebaadd55426ec38fef2ee86d0a5fe3" name="NavigationSectorsLogic" link="0" type="4"/>
 	</runtimes>

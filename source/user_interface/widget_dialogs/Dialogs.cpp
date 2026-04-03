@@ -1,3 +1,7 @@
+// Demonstrates built-in dialog widgets: WidgetDialogMessage, WidgetDialogFile,
+// WidgetDialogColor, and WidgetDialogImage. Each dialog type is opened via button click,
+// and OK/Cancel button events are handled to log the user's selection or dismissal.
+
 #include "Dialogs.h"
 
 #include <UnigineConsole.h>
@@ -7,6 +11,7 @@ REGISTER_COMPONENT(Dialogs);
 using namespace Unigine;
 using namespace Math;
 
+// Window with dialog trigger buttons is created and added to GUI.
 void Dialogs::init()
 {
 	EngineWindowViewportPtr main_window = WindowManager::getMainWindow();
@@ -16,6 +21,7 @@ void Dialogs::init()
 	window = WidgetWindow::create(gui, "Dialogs", 4, 4);
 	window->setFlags(Gui::ALIGN_OVERLAP | Gui::ALIGN_CENTER);
 
+	// Each button opens a different dialog type with preset parameters
 	auto button0 = WidgetButton::create(gui, "Message");
 	button0->getEventClicked().connect(this, &Dialogs::button_message_clicked, "DialogMessage", "Message");
 	window->addChild(button0, Gui::ALIGN_EXPAND);
@@ -28,6 +34,7 @@ void Dialogs::init()
 	button2->getEventClicked().connect(this, &Dialogs::button_color_clicked, "DialogColor", vec4(1.0f));
 	window->addChild(button2, Gui::ALIGN_EXPAND);
 
+	// Image dialog only created if image file is specified
 	if (!String::isEmpty(image.get()))
 	{
 		auto button3 = WidgetButton::create(gui, "Image");
@@ -45,6 +52,7 @@ void Dialogs::init()
 	Console::setOnscreen(true);
 }
 
+// Window and any open dialog are released.
 void Dialogs::shutdown()
 {
 	window.deleteLater();
@@ -55,9 +63,11 @@ void Dialogs::shutdown()
 	Console::setOnscreen(false);
 }
 
+// Dialog result is logged based on type and dialog is closed.
 void Dialogs::dialog_ok_clicked(const WidgetPtr &widget, int mouse_buttons, WidgetDialogPtr dialog, int type)
 {
 	Log::message("%s ok clicked\n", dialog->getText());
+	// Extract type-specific result data
 	if (type == 1)
 		Log::message("%s\n", static_ptr_cast<WidgetDialogFile>(dialog)->getFile());
 	if (type == 2)
@@ -65,25 +75,31 @@ void Dialogs::dialog_ok_clicked(const WidgetPtr &widget, int mouse_buttons, Widg
 	dialog.deleteLater();
 }
 
+// Cancel action is logged and dialog is dismissed.
 void Dialogs::dialog_cancel_clicked(const WidgetPtr &widget, int mouse_buttons, WidgetDialogPtr dialog)
 {
 	Log::message("%s cancel clicked\n", dialog->getText());
 	dialog.deleteLater();
 }
 
+// Dialog is displayed with event handlers for OK and Cancel buttons.
 void Dialogs::dialog_show(const WidgetDialogPtr &widget, int type)
 {
+	// Close any previously open dialog
 	if (dialog)
 		dialog.deleteLater();
 
 	dialog = widget;
 
+	// Connect button events with dialog reference captured for result access
 	dialog->getOkButton()->getEventClicked().connect(this, &Dialogs::dialog_ok_clicked, dialog, type);
 	dialog->getCancelButton()->getEventClicked().connect(this, &Dialogs::dialog_cancel_clicked, dialog);
 	WindowManager::getMainWindow()->addChild(dialog, Gui::ALIGN_OVERLAP | Gui::ALIGN_CENTER);
+	// Modal behavior prevents interaction with background widgets
 	dialog->setPermanentFocus();
 }
 
+// Message dialog is created with specified title and content text.
 void Dialogs::button_message_clicked(const WidgetPtr &widget, int mouse_buttons, const char *title, const char *message)
 {
 	GuiPtr gui = WindowManager::getMainWindow()->getGui();
@@ -93,6 +109,7 @@ void Dialogs::button_message_clicked(const WidgetPtr &widget, int mouse_buttons,
 	dialog_show(dialog_message, 0);
 }
 
+// File browser dialog is created with initial directory path.
 void Dialogs::button_file_clicked(const WidgetPtr &widget, int mouse_buttons, const char *title, const char *path)
 {
 	GuiPtr gui = WindowManager::getMainWindow()->getGui();
@@ -102,6 +119,7 @@ void Dialogs::button_file_clicked(const WidgetPtr &widget, int mouse_buttons, co
 	dialog_show(dialog_file, 1);
 }
 
+// Color picker dialog is created with initial RGBA color value.
 void Dialogs::button_color_clicked(const WidgetPtr &widget, int mouse_buttons, const char *title, vec4 color)
 {
 	GuiPtr gui = WindowManager::getMainWindow()->getGui();
@@ -111,6 +129,7 @@ void Dialogs::button_color_clicked(const WidgetPtr &widget, int mouse_buttons, c
 	dialog_show(dialog_color, 2);
 }
 
+// Image preview dialog is created with texture file for display.
 void Dialogs::button_image_clicked(const WidgetPtr &widget, int mouse_buttons, const char *title, const char *texture)
 {
 	GuiPtr gui = WindowManager::getMainWindow()->getGui();

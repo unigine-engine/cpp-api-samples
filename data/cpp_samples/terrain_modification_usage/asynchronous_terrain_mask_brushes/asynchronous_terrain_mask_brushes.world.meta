@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>ce4e4a5ccf6954dcc64dc418045e4be85c534393</guid>
+	<type>world</type>
+	<hash>762a0a4ce752cefeb4163e868a7a0fe6e9bed544d769e57e43be1b2d2bf399c5</hash>
+	<runtimes>
+		<runtime id="ce4e4a5ccf6954dcc64dc418045e4be85c534393" name="landscape_mask_paint.world" link="0"/>
+	</runtimes>
+	<parameters>
+		<parameter type="string" name="physics_settings_path"/>
+		<parameter type="string" name="render_settings_path">guid://8bed8c3ce53501ff11c1b0ae5cc6d017d4ad5524</parameter>
+		<parameter type="string" name="script_name"/>
+		<parameter type="string" name="sound_settings_path"/>
+		<parameter type="string" name="viewports_settings"/>
+	</parameters>
+</asset>

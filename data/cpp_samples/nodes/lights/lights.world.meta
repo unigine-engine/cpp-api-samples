@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<asset version="2.20.0.0">
+<asset version="2.21.0.0">
 	<guid>c5d39f7a0a80cdab8cb09c4fe82be69af2719dd6</guid>
 	<type>world</type>
-	<hash>3eb8c87f</hash>
+	<hash>f961362c927cfff20b9288178e1ed5a4fa1fe06535ac5eb2b9a6dca5a475a7a4</hash>
 	<runtimes>
 		<runtime id="c5d39f7a0a80cdab8cb09c4fe82be69af2719dd6" name="lights.world" link="0"/>
 	</runtimes>

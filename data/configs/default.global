@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<global version="2.20.0.0" autosave="0">
+	<console>
+		<profiling_dump_dir>profiling_dump</profiling_dump_dir>
+	</console>
+	<render>
+		<parameters/>
+	</render>
+</global>

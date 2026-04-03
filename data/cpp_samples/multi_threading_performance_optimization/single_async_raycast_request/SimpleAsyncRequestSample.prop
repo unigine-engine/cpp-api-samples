@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.21.0.0" name="SimpleAsyncRequestSample" manual="1" parent_name="node_base" tooltip="This component performs an asynchronous intersection from the player toward the mouse cursor, visualizes the hit with a normal vector, and displays average and maximum time latency in the UI.">
+	<parameter name="intersection_distance" type="float">10000</parameter>
+</property>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>e07a985f1a804ae7b7ac9ab36348e28f595ad161</guid>
+	<type>property</type>
+	<hash>f771b5397843725c8bcac383af9ba57108c7cf279ed12213748ae45f2fef8616</hash>
+	<runtimes>
+		<runtime id="e07a985f1a804ae7b7ac9ab36348e28f595ad161" name="InteractableValveComponent" link="0" type="4"/>
+	</runtimes>
+</asset>

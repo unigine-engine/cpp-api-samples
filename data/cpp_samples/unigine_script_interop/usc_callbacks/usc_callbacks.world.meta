@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>7d148d26ffa2cd10992ee3bb8a2c6bae7c15f375</guid>
+	<type>world</type>
+	<hash>c3a4f925c2fe16a36069563e21ac82f45db375cd7cd24bdfcc51d380e1b06e93</hash>
+	<runtimes>
+		<runtime id="7d148d26ffa2cd10992ee3bb8a2c6bae7c15f375" name="usc_callbacks.world" link="0"/>
+	</runtimes>
+	<parameters>
+		<parameter type="string" name="physics_settings_path"/>
+		<parameter type="string" name="render_settings_path">guid://8bed8c3ce53501ff11c1b0ae5cc6d017d4ad5524</parameter>
+		<parameter type="string" name="script_name">guid://1bc09e2e9c8263ac784c9ee32c16e89292df14dd</parameter>
+		<parameter type="string" name="sound_settings_path"/>
+		<parameter type="string" name="viewports_settings"/>
+	</parameters>
+</asset>

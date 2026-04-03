@@ -1,3 +1,7 @@
+// Interactive navigation sectors demo with multiple Seeker agents. Uses box-shaped
+// NavigationSector areas instead of NavigationMesh geometry. Overlapping sectors
+// are automatically connected; Seekers navigate across boundaries seamlessly.
+
 #include <UnigineVisualizer.h>
 #include <UnigineConsole.h>
 #include <UnigineComponentSystem.h>
@@ -36,11 +40,13 @@ REGISTER_COMPONENT(NavigationSectorsDemoLogic);
 using namespace Unigine;
 using namespace Unigine::Math;
 
+// Visualizer is enabled, manipulators are configured, and UI is initialized.
 void NavigationSectorsDemoLogic::init()
 {
 	Visualizer::setEnabled(true);
 	Input::setMouseHandle(Input::MOUSE_HANDLE_SOFT);
-	
+
+	// Manipulators are configured with scaling disabled
 	widget_manipulator = getComponent<Manipulators>(node);
 	if (widget_manipulator)
 	{
@@ -48,7 +54,8 @@ void NavigationSectorsDemoLogic::init()
 		widget_manipulator->setYAxisScale(false);
 		widget_manipulator->setZAxisScale(false);
 	}
-	
+
+	// Initial route radius is applied to all Seeker agents
 	setSeekersRouteRadius(route_radius);
 	
 	{
@@ -65,14 +72,18 @@ void NavigationSectorsDemoLogic::init()
 	}
 }
 
+// Player control is toggled based on manipulator state; navigation sectors are visualized.
 void NavigationSectorsDemoLogic::update()
 {
+	// Player controls are disabled when dragging manipulators
 	Game::getPlayer()->setControlled(!widget_manipulator->isActive());
-	
+
+	// Navigation sector boundaries are rendered for debugging
 	if (navigation)
 		navigation->renderVisualizer();
 }
 
+// Visualizer is disabled, mouse is restored, and UI is cleaned up.
 void NavigationSectorsDemoLogic::shutdown()
 {
 	Visualizer::setEnabled(false);
@@ -80,6 +91,7 @@ void NavigationSectorsDemoLogic::shutdown()
 	sample_description_window.shutdown();
 }
 
+// Route radius is propagated to all child Seeker components.
 void NavigationSectorsDemoLogic::setSeekersRouteRadius(float radius)
 {
 	if (seekers)
@@ -90,6 +102,5 @@ void NavigationSectorsDemoLogic::setSeekersRouteRadius(float radius)
 			if (seeker_component)
 				seeker_component->setRouteRadius(radius);
 		}
-		
 	}
 }

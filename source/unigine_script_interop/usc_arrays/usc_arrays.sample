@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Usc Arrays">
+	<sdk_desc>Integration between <i>C++</i> and <i>UnigineScript</i> by registering external <i>C++</i> functions that manipulate <i>UnigineScript</i> array types.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample showcases integration between <ui>C++</ui> and <ui>UnigineScript</ui> by registering external <ui>C++</ui> functions that manipulate <ui>UnigineScript</ui> array types.</para>
+			<para>The registered functions allow for setting and getting values, generating test data, and enumerating the contents of both <ui><link to="arrayvector_class">ArrayVector</link></ui> (indexed container) and <ui><link to="arraymap_class">ArrayMap</link></ui> (associative container).</para>
+		</brief>
+	</desc>
+	<tags>
+		<tag>UnigineScript</tag>
+	</tags>
+</sample>

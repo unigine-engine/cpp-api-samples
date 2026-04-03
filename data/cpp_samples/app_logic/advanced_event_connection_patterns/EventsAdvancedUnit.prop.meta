@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>3850c24e1348131e4adfa9cc15f9da4c86fd473e</guid>
+	<type>property</type>
+	<hash>72ce1262bbc594102707aa9ca1887c78871de27ddbca963c699992758c9805e4</hash>
+	<runtimes>
+		<runtime id="3850c24e1348131e4adfa9cc15f9da4c86fd473e" name="EventsAdvancedUnit" link="0" type="4"/>
+	</runtimes>
+</asset>

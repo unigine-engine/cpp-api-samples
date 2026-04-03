@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>4daeb98d4c7bf445e97fb4088d75043f7bc03ccc</guid>
+	<type>world</type>
+	<hash>ad1b445e8b7e8f364bb5d463be471fe78a87b6bbdfad0c390c0e8aec1386a02b</hash>
+	<runtimes>
+		<runtime id="4daeb98d4c7bf445e97fb4088d75043f7bc03ccc" name="stream_custom.world" link="0"/>
+	</runtimes>
+	<parameters>
+		<parameter type="string" name="physics_settings_path"/>
+		<parameter type="string" name="render_settings_path">guid://8bed8c3ce53501ff11c1b0ae5cc6d017d4ad5524</parameter>
+		<parameter type="string" name="script_name"/>
+		<parameter type="string" name="sound_settings_path"/>
+		<parameter type="string" name="viewports_settings"/>
+	</parameters>
+</asset>

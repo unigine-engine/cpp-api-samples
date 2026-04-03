@@ -39,6 +39,8 @@ add_executable(${target}
 
 FILE(GLOB_RECURSE sources ${CMAKE_CURRENT_LIST_DIR}/*/*.h ${CMAKE_CURRENT_LIST_DIR}/*/*.cpp)
 list(FILTER sources EXCLUDE REGEX ".*CMakeFiles.*" )
+
+
 target_sources(${target} PRIVATE ${sources})
 
 target_include_directories(${target}
@@ -105,7 +107,6 @@ elseif(UNIGINE_COMPILER_IS_GNU OR UNIGINE_COMPILER_IS_CLANG)
 	$<$<CONFIG:Debug>:-Wno-unknown-pragmas>
 	$<$<CONFIG:Debug>:-Wno-unused-parameter>
 	)
-	target_link_libraries(${target} PRIVATE pthread)
 endif ()
 
 set(binary_name ${target})

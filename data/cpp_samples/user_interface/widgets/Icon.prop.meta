@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<asset version="2.20.0.0">
+<asset version="2.21.0.0">
 	<guid>716f63b96e0c263222949a3b8a00cdb4f46d3183</guid>
 	<type>property</type>
-	<hash>28a63ab6</hash>
+	<hash>ef9f5c68a0d0fbe0cd0d7e93dca5052b6075df9e1d754c23f69792cc0c7a8c95</hash>
 	<runtimes>
 		<runtime id="716f63b96e0c263222949a3b8a00cdb4f46d3183" name="Icon" link="0" type="4"/>
 	</runtimes>

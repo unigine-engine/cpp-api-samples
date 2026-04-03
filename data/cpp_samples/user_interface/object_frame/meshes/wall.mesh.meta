@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<asset version="2.20.0.0">
+<asset version="2.21.0.0">
 	<guid>854f94267427a9ec05c8ed9a166ecbe43c1891b8</guid>
 	<type>mesh</type>
-	<hash>96eb1564</hash>
+	<hash>aecab7ff921a1cdf9ed443118c434e8ae754ab281f8d51f79df23b045a398f8b</hash>
 	<runtimes>
 		<runtime id="854f94267427a9ec05c8ed9a166ecbe43c1891b8" name="wall.mesh" link="0" type="1"/>
 	</runtimes>

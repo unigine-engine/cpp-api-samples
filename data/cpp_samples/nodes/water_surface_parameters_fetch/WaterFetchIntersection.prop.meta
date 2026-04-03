@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>985184bca3c9e499a380b43d4ab46e43d92baa26</guid>
+	<type>property</type>
+	<hash>fbfce1337a064815aeb345aaaf5b9e9791a9f6b6fc1d6b508df5af29294776b4</hash>
+	<runtimes>
+		<runtime id="985184bca3c9e499a380b43d4ab46e43d92baa26" name="WaterFetchIntersection" link="0" type="4"/>
+	</runtimes>
+</asset>

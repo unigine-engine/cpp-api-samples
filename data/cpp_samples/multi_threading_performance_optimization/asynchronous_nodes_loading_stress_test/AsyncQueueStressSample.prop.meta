@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>1a31ae6932edd8e69bf9cac8f99846c8b0dfe8b1</guid>
+	<type>property</type>
+	<hash>99ca794fa80a660cd1740ddad70f6031fcf205940b7287d2aa4a50a0d2a456d5</hash>
+	<runtimes>
+		<runtime id="1a31ae6932edd8e69bf9cac8f99846c8b0dfe8b1" name="AsyncQueueStressSample" link="0" type="4"/>
+	</runtimes>
+</asset>

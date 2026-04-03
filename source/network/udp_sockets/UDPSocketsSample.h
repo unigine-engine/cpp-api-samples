@@ -1,3 +1,9 @@
+// UDP socket networking sample demonstrating connectionless peer-to-peer communication.
+// Sender broadcasts camera transform to a Receiver at a fixed address each frame.
+// Receiver binds to an address and syncs its camera to incoming data.
+// Unlike TCP, UDP has no connection state - datagrams are sent independently.
+// Messages use binary protocol: header (type + size) followed by payload.
+
 #pragma once
 
 #include <UnigineCallback.h>
@@ -10,6 +16,7 @@
 
 using namespace Unigine;
 
+// Main component managing UDP networking sample lifecycle.
 class UDPSocketsSample : public Unigine::ComponentBase
 {
 public:
@@ -20,7 +27,7 @@ public:
 	COMPONENT_SHUTDOWN(shutdown);
 
 private:
-	// A base class for network messages.
+	// Base class for network messages.
 	struct Message
 	{
 		enum TYPE { TEXT, CAMERA, NUM_TYPES };

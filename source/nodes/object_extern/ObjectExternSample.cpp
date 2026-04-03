@@ -1,3 +1,8 @@
+// Demonstrates ObjectExtern for creating custom renderable objects with user-defined
+// geometry and rendering. Unlike NodeExtern, ObjectExtern supports surfaces, materials,
+// and participates in the rendering pipeline. Custom objects can define their own
+// geometry using Fixed Function Pipeline (Ffp) or custom shaders.
+
 #include <UnigineComponentSystem.h>
 #include <UnigineFfp.h>
 #include <UnigineMathLib.h>
@@ -11,17 +16,20 @@
 using namespace Unigine;
 using namespace Math;
 
+// Custom renderable object inheriting from ObjectExternBase
 class MyObject : public ObjectExternBase
 {
 public:
-	// unique class ID
+	// Unique identifier for this object type
 	static constexpr int id = 2;
 
+	// Default constructor for programmatic creation
 	MyObject()
 	{
 		Log::message("MyObject::MyObject(): called\n");
 	}
 
+	// Factory constructor called by ObjectExtern::create()
 	MyObject(void *node): ObjectExternBase(node)
 	{
 		Log::message("MyObject::MyObject(void*): called\n");
@@ -34,37 +42,43 @@ public:
 
 	int getClassID() override { return id; }
 
+	// Surface interface: defines how many materials can be assigned
 	int getNumSurfaces() override { return 1; }
 	const char *getSurfaceName(int surface) override { return "surface"; }
 
+	// Per-surface bounding volumes for culling optimization
 	const Math::BoundBox &getBoundBox(int surface) override { return bbox; }
 	const Math::BoundSphere &getBoundSphere(int surface) override { return bsphere; }
 
+	// Object-level bounding volumes (union of all surfaces)
 	const BoundBox &getBoundBox() override { return bbox; }
 	const BoundSphere &getBoundSphere() override { return bsphere; }
 
+	// Enable rendering for this object
 	bool hasRender() override { return true; }
 
+	// Custom rendering callback called during the render pipeline
 	void render(Render::PASS pass, int surface) override
 	{
-		// check render pass
+		// Only render during ambient pass (skip shadow, depth, etc.)
 		if (pass != Render::PASS_AMBIENT)
 			return;
 
-		// set object surface
+		// Configure shader state for this object/surface
 		ObjectPtr object = getObject();
 		Renderer::setShaderParameters(pass, object, surface, false);
 
-		// object color
+		// Set custom shader parameter (defined in material)
 		ShaderPtr shader = RenderState::getShader();
 		shader->setParameterFloat4("extern_color", color);
 		shader->flushParameters();
 
-		// object geometry
+		// Build cube geometry using Fixed Function Pipeline
 		Ffp::beginTriangles();
 
-		vec3 half_size = bbox.getSize() * .5f;;
+		vec3 half_size = bbox.getSize() * .5f;
 
+		// Define 8 cube vertices
 		Ffp::addVertex(-half_size.x, -half_size.y, -half_size.z);
 		Ffp::addVertex(half_size.x, -half_size.y, -half_size.z);
 		Ffp::addVertex(-half_size.x, half_size.y, -half_size.z);
@@ -74,31 +88,41 @@ public:
 		Ffp::addVertex(-half_size.x, half_size.y, half_size.z);
 		Ffp::addVertex(half_size.x, half_size.y, half_size.z);
 
+		// Define 12 triangles (2 per face, 6 faces)
+		// Bottom face
 		Ffp::addIndices(0, 3, 1);
 		Ffp::addIndices(3, 0, 2);
+		// Top face
 		Ffp::addIndices(6, 5, 7);
 		Ffp::addIndices(5, 6, 4);
+		// Back face
 		Ffp::addIndices(2, 7, 3);
 		Ffp::addIndices(7, 2, 6);
+		// Front face
 		Ffp::addIndices(1, 4, 0);
 		Ffp::addIndices(4, 1, 5);
+		// Right face
 		Ffp::addIndices(3, 5, 1);
 		Ffp::addIndices(5, 3, 7);
+		// Left face
 		Ffp::addIndices(0, 6, 2);
 		Ffp::addIndices(6, 0, 4);
 
 		Ffp::endTriangles();
 	}
 
-	// custom method
+	// Custom method for setting render color
 	void setColor(const vec4 &color)
 	{
 		this->color = color;
 	}
 
 private:
+	// Unit cube bounding box
 	BoundBox bbox = BoundBox(vec3(-.5f), vec3(.5f));
+	// Bounding sphere for fast frustum culling
 	BoundSphere bsphere = BoundSphere(vec3(0.f), 1.f);
+	// Color passed to custom shader
 	vec4 color = vec4_white;
 };
 
@@ -113,11 +137,12 @@ public:
 private:
 	void init()
 	{
+		// Register custom object type with factory
 		ObjectExternBase::addClassID<MyObject>(MyObject::id);
 
 		if (true)
 		{
-			// create a new MyObject instance
+			// Create via engine factory (recommended)
 			ObjectExternPtr object_extern = ObjectExtern::create(MyObject::id);
 			ObjectExternBase *object_extern_base = object_extern->getObjectExtern();
 			if (object_extern_base)
@@ -128,27 +153,28 @@ private:
 
 		else
 		{
-			// alternatively you can instantiate MyObject directly (you'd need to free it later!)
+			// Direct instantiation (requires manual cleanup)
 			my_object = new MyObject();
 		}
 
 		if (my_object)
 		{
-			// you can access the base Object methods via ObjectExternBase::getObject
+			// Access standard Object methods through getObject()
 			my_object->getObject()->setWorldPosition(Vec3(0.f, 0.f, 1.f));
 
-			// assign a body to the object
+			// Attach physics body for physical interactions
 			{
 				BodyRigidPtr body = BodyRigid::create();
+				// Create box shape matching object bounds
 				ShapePtr shape = ShapeBox::create(my_object->getBoundBox().getSize());
 				body->addShape(shape);
 				my_object->getObject()->setBody(body);
 			}
 
-			// assign a material to our object's "surface"
+			// Assign custom material that defines the "extern_color" parameter
 			my_object->getObject()->setMaterialFilePath(joinPaths(getWorldRootPath(), "materials", "object_extern.basemat"), "surface");
 
-			// ... and access the custom MyObject methods directly
+			// Use custom method to set render color
 			my_object->setColor(vec4_white);
 		}
 
@@ -158,6 +184,7 @@ private:
 
 	void update()
 	{
+		// Rendering is handled automatically through the render() callback
 	}
 
 	void shutdown()
@@ -168,6 +195,7 @@ private:
 	// ========================================================================================
 
 	bool visualizer_enabled = false;
+	// Pointer to custom object (owned by ObjectExtern)
 	MyObject *my_object = nullptr;
 };
 

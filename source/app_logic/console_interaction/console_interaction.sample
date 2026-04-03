@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sample title="Console Interaction">
+	<sdk_desc>Interacting with the Engine's built-in console and adding custom console commands and variables via API using the <i>Console</i> and <i>ConsoleVariable</i> classes.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample demonstrates how to interact with the Engine's built-in console and add custom console commands and variables via API using the <ui><link to="console_class">Console</link></ui> and <ui>ConsoleVariable</ui> classes. It shows how to define different types of console variables: <ui><link to="consolevariableint_class">ConsoleVariableInt</link></ui>, <ui><link to="consolevariablefloat_class">ConsoleVariableFloat</link></ui>, and <ui><link to="consolevariablestring_class">ConsoleVariableString</link></ui>, and how to register custom console commands.</para>
+			<para>Commands are linked to callback functions using <ui><link to="unigine_namespace_class" offset="MakeCallback_Retm">MakeCallback</link></ui>, and can be executed directly from code or entered manually through the console. Commands can also be added and removed dynamically at runtime, making the system flexible for various use cases. Console variables can be accessed or changed through both code and the console interface.</para>
+			<para>For demonstration, to move the Material Ball in the scene use the custom command <user_input>control_node [x] [y] [z]</user_input> in the Console (`), where <ui>x, y, z</ui> are the target world coordinates (e.g., <user_input>control_node 0 5 1</user_input>).</para>
+			<para>This functionality can be used for development, debugging, rapid prototyping, and runtime adjustments in interactive applications.</para>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Systems</tag>
+		<tag>Logic</tag>
+	</tags>
+</sample>

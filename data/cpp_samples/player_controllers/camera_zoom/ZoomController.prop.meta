@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>5fc8d513c553c8de6947f30b567fdb7b56ee0346</guid>
+	<type>property</type>
+	<hash>47971a5f11a578a91c9a7a43520e7d5fe40c3593e5bfa6cce11688abf8d3caca</hash>
+	<runtimes>
+		<runtime id="5fc8d513c553c8de6947f30b567fdb7b56ee0346" name="ZoomController" link="0" type="4"/>
+	</runtimes>
+</asset>

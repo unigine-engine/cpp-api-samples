@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Real-Time Mesh Editing Marching Cubes">
+	<sdk_desc>Simulation of the ground digging process based on mesh geometry modification.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample demonstrates a simulation of ground digging, modification of a terrain fragment represented by a mesh via API. The fragment of the ground surfaces is generated using the Marching Cubes algorithm.</para>
+			<para>Click <strong>LMB</strong> to dig the ground at a certain point (the cutting sphere is visualized around the cursor). Set the desired radius of the cutting sphere (<ui>Digging Radius</ui>) defining the volume of ground to be removed.</para>
+			<para><strong>Hold Ctrl + LMB</strong> to add volume instead.</para>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Procedural</tag>
+		<tag>Mesh</tag>
+	</tags>
+	<keywords>Dig,Digging</keywords>
+</sample>

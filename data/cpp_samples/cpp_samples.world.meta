@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<asset version="2.20.0.0">
+<asset version="2.21.0.0">
 	<guid>860f58e7d731811a7eecddb1b513bb5c97121f0b</guid>
 	<type>world</type>
-	<hash>b9910c0f</hash>
+	<hash>2c81f3fc6c114014622c5d8997349baddccd24849dc2e466ad4e7c112797d961</hash>
 	<runtimes>
 		<runtime id="860f58e7d731811a7eecddb1b513bb5c97121f0b" name="cpp_samples.world" link="0"/>
 	</runtimes>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.21.0.0" name="AsyncQueueStressSample" manual="1" parent_name="node_base" tooltip="This component demonstrates stress testing of asynchronous node loading. It uses AsyncQueue to spawn multiple nodes in a background thread, assigns them random positions, and activates them on the main thread while displaying progress in the UI.">
+	<parameter name="node_to_spawn" type="file"/>
+</property>

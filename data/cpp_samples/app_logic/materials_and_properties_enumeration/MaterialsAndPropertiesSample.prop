@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.21.0.0" name="MaterialsAndPropertiesSample" manual="1" parent_name="node_base" tooltip="This component demonstrates querying and printing engine properties and materials, including their names, file paths, and child counts, to the console."/>

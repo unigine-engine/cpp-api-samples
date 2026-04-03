@@ -56,5 +56,4 @@ AsyncTaskBase::AsyncTaskBase()
 
 AsyncTaskBase::~AsyncTaskBase()
 {
-	ThreadQueue::get().remove(this);
 }

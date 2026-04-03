@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<asset version="2.20.0.0">
+<asset version="2.21.0.0">
 	<guid>b08fa2aa5fd89339ce31845bb139221e821c9e61</guid>
 	<type>texture</type>
-	<hash>0cdafcb5</hash>
+	<hash>705f796a4f5e177407408b9f098dc670c0eaddd96ee742ba92e7162481c221cd</hash>
 	<runtimes>
 		<runtime id="b08fa2aa5fd89339ce31845bb139221e821c9e61" name="sounds.png" link="0" type="6"/>
 		<runtime id="71b4d0d6f5d31fbdf0684b77b52a2cd5d89d201d" name="sounds.texture" link="1" type="6"/>

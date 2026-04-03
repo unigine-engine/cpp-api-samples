@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>1f916c8ad357b2dc3c2fcaa0a5fd8febc3ec00cf</guid>
+	<type>property</type>
+	<hash>91f4fe8be93138f7b029a041f299fee521d466f58b2c3be440c0a4b80a3c726e</hash>
+	<runtimes>
+		<runtime id="1f916c8ad357b2dc3c2fcaa0a5fd8febc3ec00cf" name="WidgetAnimationSample" link="0" type="4"/>
+	</runtimes>
+</asset>

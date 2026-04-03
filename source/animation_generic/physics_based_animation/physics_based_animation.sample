@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Physics-Based Animation">
+	<sdk_desc>Physics-based animation of movements using various easing functions.</sdk_desc>
+	<desc>
+		<brief>This sample shows implementation of physics-based animation for the cat's movements in a simple game where a cat chases a laser pointer (different easing functions are used).</brief>
+	</desc>
+	<tags>
+		<tag>Animation</tag>
+	</tags>
+</sample>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>aeb0d6257a599140521ad39fc2a40c72b2db0129</guid>
+	<type>world</type>
+	<hash>d7fdc1db1aa02bbb9006d46a3718d3314a22cbaccccf76166ed6922945ddd4de</hash>
+	<runtimes>
+		<runtime id="aeb0d6257a599140521ad39fc2a40c72b2db0129" name="intersection_mouse_ray.world" link="0"/>
+	</runtimes>
+	<parameters>
+		<parameter type="string" name="physics_settings_path"/>
+		<parameter type="string" name="render_settings_path">guid://8bed8c3ce53501ff11c1b0ae5cc6d017d4ad5524</parameter>
+		<parameter type="string" name="script_name"/>
+		<parameter type="string" name="sound_settings_path"/>
+		<parameter type="string" name="viewports_settings"/>
+	</parameters>
+</asset>

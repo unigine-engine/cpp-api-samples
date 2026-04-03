@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>bc8a8628add7969fbcc297b958b1bf0e7853fe7d</guid>
+	<type>material</type>
+	<hash>15bf81d87e34ee0c0bc17b1faa26fce9036ce61a65f41c748a4245ecc6e1c974</hash>
+	<runtimes>
+		<runtime id="bc8a8628add7969fbcc297b958b1bf0e7853fe7d" name="compute_read_write" link="0" type="5"/>
+	</runtimes>
+</asset>

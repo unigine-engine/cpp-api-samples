@@ -1,0 +1,3 @@
+# Joystick
+
+This sample demonstrates how to add advanced **joystick** input handling, supporting multiple controllers with real-time axis/button monitoring and force feedback effects in UNIGINE. It features dynamic UI for testing 10+ force feedback types (springs, vibrations, waves) and automatically handles device connection/disconnection events. Ideal for racing/flight simulators or any project requiring precise controller input with haptic feedback.

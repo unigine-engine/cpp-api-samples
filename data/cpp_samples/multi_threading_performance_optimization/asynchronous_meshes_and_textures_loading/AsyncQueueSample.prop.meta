@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>01f5a95a71d384d5c5c562ddebd10d9da5e0a4cb</guid>
+	<type>property</type>
+	<hash>1049244cdffd2381b6c8c38461c512b63c43fb671c9d16690d4813103ab2f20d</hash>
+	<runtimes>
+		<runtime id="01f5a95a71d384d5c5c562ddebd10d9da5e0a4cb" name="AsyncQueueSample" link="0" type="4"/>
+	</runtimes>
+</asset>

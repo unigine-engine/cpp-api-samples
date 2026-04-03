@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>59e4bb833f8dab069c5b06ad189c382836a5bd67</guid>
+	<type>node</type>
+	<hash>2795aadaccc631e540e730aaf09329ed8fc8fb10ad7fecb2d17a0c07db8fef16</hash>
+	<runtimes>
+		<runtime id="59e4bb833f8dab069c5b06ad189c382836a5bd67" name="first_person_controller.node" link="0" type="3"/>
+	</runtimes>
+</asset>

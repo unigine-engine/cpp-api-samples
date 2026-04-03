@@ -1,3 +1,6 @@
+// Sample UI for triggering the explosion effect. The button click retrieves
+// the BodyFractureExplosion component from the target node and initiates it.
+
 #include "BodyFractureExplosionSample.h"
 #include "BodyFractureExplosion.h"
 #include <UnigineConsole.h>

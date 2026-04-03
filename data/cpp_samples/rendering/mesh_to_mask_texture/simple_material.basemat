@@ -1,0 +1,20 @@
+BaseMaterial simple_material <namespace=Unigine hidden=true var_prefix=var texture_prefix=tex>
+{
+
+	Shader color_mesh= 
+	#{
+		#include <core/materials/shaders/render/common.h>
+				
+		STRUCT_FRAG_BEGIN
+			INIT_COLOR(float4)
+		STRUCT_FRAG_END
+		
+		MAIN_FRAG_BEGIN(FRAGMENT_IN)
+			OUT_COLOR = float4(1.0f,0.0f,0.0f,1.0f);
+		MAIN_FRAG_END
+	#}
+	Pass mesh
+	{
+		Fragment = color_mesh
+	}
+}

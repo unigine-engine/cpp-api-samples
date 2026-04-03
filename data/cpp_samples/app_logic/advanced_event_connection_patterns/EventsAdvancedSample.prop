@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.21.0.0" name="EventsAdvancedSample" manual="1" parent_name="node_base" tooltip="This component demonstrates generating rotation events on key press for subscription by other components.">
+	<parameter name="rotation_speed" type="vec3">3.000000 3.000000 3.000000</parameter>
+</property>

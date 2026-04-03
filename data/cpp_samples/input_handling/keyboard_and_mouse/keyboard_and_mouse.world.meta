@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>31aa25d03e73beef2bb9df82579f18f983c76e04</guid>
+	<type>world</type>
+	<hash>f27bfb0ea60b6b75dd17f9921b390f599c8c3989332e3a807400d0840c3b6e81</hash>
+	<runtimes>
+		<runtime id="31aa25d03e73beef2bb9df82579f18f983c76e04" name="input_keyboard_mouse.world" link="0"/>
+	</runtimes>
+	<parameters>
+		<parameter type="string" name="physics_settings_path"/>
+		<parameter type="string" name="render_settings_path">guid://8bed8c3ce53501ff11c1b0ae5cc6d017d4ad5524</parameter>
+		<parameter type="string" name="script_name"/>
+		<parameter type="string" name="sound_settings_path"/>
+		<parameter type="string" name="viewports_settings"/>
+	</parameters>
+</asset>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="3D Sound">
+	<sdk_desc>Playing a sound source via code.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This example demonstrates how to create a sound source (<ui><link to="soundsource_class">SoundSource</link></ui>) and configure its basic parameters: volume, pitch, looping mode, and playback type. The sound source features configurable spatial audio properties with adjustable minimum and maximum distance falloff, visualized in the scene.</para>
+			<para>UNIGINE allows you to work with sound sources just like with other nodes: they can be easily moved, rotated, or scaled. Additionally, they have specific characteristics detailed in the <link to="soundsource_class">related article</link>.</para>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Sound</tag>
+	</tags>
+</sample>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<property version="2.20.0.0" name="ObjectFrame" manual="1" parent_name="node_base">
+<property version="2.21.0.0" name="ObjectFrame" manual="1" parent_name="node_base">
 	<parameter name="border_size" type="int">3</parameter>
 	<parameter name="border_color" type="color">0.000000 0.000000 1.000000 1.000000</parameter>
 	<parameter name="label_text" type="string">Name</parameter>

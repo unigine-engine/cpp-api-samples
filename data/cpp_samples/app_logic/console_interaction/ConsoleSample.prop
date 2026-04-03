@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.21.0.0" name="ConsoleSample" manual="1" parent_name="node_base" tooltip="This component demonstrates console integration by registering custom variables and commands, executing callbacks, and allowing control of a scene node via console arguments.">
+	<parameter name="controllable_node" type="node">0</parameter>
+</property>

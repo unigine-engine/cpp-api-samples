@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>ca86895cc44f05cdbe4248da1442fab48f4e5dbb</guid>
+	<type>world</type>
+	<hash>e9d72cd0a066f8e7a95e35e289dcff211b37d05bff45bcad4495df6ac0add314</hash>
+	<runtimes>
+		<runtime id="ca86895cc44f05cdbe4248da1442fab48f4e5dbb" name="Microprofiler.world" link="0"/>
+	</runtimes>
+	<parameters>
+		<parameter type="string" name="physics_settings_path"/>
+		<parameter type="string" name="render_settings_path">guid://8bed8c3ce53501ff11c1b0ae5cc6d017d4ad5524</parameter>
+		<parameter type="string" name="script_name"/>
+		<parameter type="string" name="sound_settings_path"/>
+		<parameter type="string" name="viewports_settings"/>
+	</parameters>
+</asset>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Nodes And Widgets Lifetime Control">
+	<sdk_desc>Implementation of configurable node and widget lifetimes with persistence across different worlds.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample demonstrates how node and widget lifetime settings affect object persistence during world transitions.</para>
+			<para>At startup, the sample creates a plane node and a screen button, each with configurable lifetime modes. Switch the widget between <strong>WORLD</strong> and <strong>WINDOW</strong> lifetime modes, and the node between <strong>WORLD</strong> and <strong>ENGINE</strong> modes.</para>
+			<para>Use the <user_input>world_load world_name</user_input> console command (e.g., <user_input>world_load arcade</user_input>) to switch worlds and observe how different lifetime settings affect object survival. <em>WORLD-lifetime</em> objects exist only in the current world, while <em>ENGINE-lifetime</em> nodes and <em>WINDOW-lifetime</em> widgets remain active after loading a different world.</para>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Basics</tag>
+	</tags>
+</sample>

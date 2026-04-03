@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>49fadf5b2c356ca9565b9c53e9a542a8e804b43c</guid>
+	<type>property</type>
+	<hash>b7a5e3341cf4c5c4559f35343da06b61531a3dcb77019652d75a6db8a088ca4c</hash>
+	<runtimes>
+		<runtime id="49fadf5b2c356ca9565b9c53e9a542a8e804b43c" name="NodeSpawnerGridSample" link="0" type="4"/>
+	</runtimes>
+</asset>

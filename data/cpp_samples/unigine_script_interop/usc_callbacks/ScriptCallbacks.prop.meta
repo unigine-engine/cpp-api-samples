@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>6ef5076957c1689d2aea1fcbfad28c20b8115663</guid>
+	<type>property</type>
+	<hash>99164dfc3784b861b858858cbe4adda1565e6ea4a1f0ea2100dc119ce9c2bf5e</hash>
+	<runtimes>
+		<runtime id="6ef5076957c1689d2aea1fcbfad28c20b8115663" name="ScriptCallbacks" link="0" type="4"/>
+	</runtimes>
+</asset>

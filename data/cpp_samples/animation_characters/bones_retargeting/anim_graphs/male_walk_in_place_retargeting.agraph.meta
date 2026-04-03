@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>91675255d6c334b88b246dc13de758c0e28d52e5</guid>
+	<type>animation_graph</type>
+	<hash>4ac570d064cab3560a368a04d481c6f537ce513105a345167a19a4bb65cd442e</hash>
+	<runtimes>
+		<runtime id="91675255d6c334b88b246dc13de758c0e28d52e5" name="male_walk_in_place_retargeting.agraph" link="0"/>
+		<runtime id="4ca28759286d77eeb7f321856c42afebbe0ee9e9" name="male_walk_in_place_retargeting" link="1" type="10"/>
+	</runtimes>
+</asset>

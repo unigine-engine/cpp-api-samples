@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>e0c0bc147c81c936bc71d1f5dd6df64c8007bbe1</guid>
+	<type>property</type>
+	<hash>3476ef2355d8df21d4d236424ca2c02b7a33e331151ff292148f943a9f5eb8aa</hash>
+	<runtimes>
+		<runtime id="e0c0bc147c81c936bc71d1f5dd6df64c8007bbe1" name="GBufferWrite" link="0" type="4"/>
+	</runtimes>
+</asset>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>6176506c2e0810db6ef2107eed99fdc5709a5460</guid>
+	<type>world</type>
+	<hash>d2e9d89d6e2262f54f48f1d1e33dc9cbaa8d3ba275f7dbb41b2f56ffbe4e4c8b</hash>
+	<runtimes>
+		<runtime id="6176506c2e0810db6ef2107eed99fdc5709a5460" name="landscape_paint.world" link="0"/>
+	</runtimes>
+	<parameters>
+		<parameter type="string" name="physics_settings_path"/>
+		<parameter type="string" name="render_settings_path">guid://8bed8c3ce53501ff11c1b0ae5cc6d017d4ad5524</parameter>
+		<parameter type="string" name="script_name"/>
+		<parameter type="string" name="sound_settings_path"/>
+		<parameter type="string" name="viewports_settings"/>
+	</parameters>
+</asset>

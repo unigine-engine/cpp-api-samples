@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>77cd64d8974a63d0243792e5960ce111832074fa</guid>
+	<type>property</type>
+	<hash>fb213049e61c5f9e9225af78212b9b7bd0c3543f5770beec8daf590f24da6e97</hash>
+	<runtimes>
+		<runtime id="77cd64d8974a63d0243792e5960ce111832074fa" name="SpringEasy" link="0" type="4"/>
+	</runtimes>
+</asset>

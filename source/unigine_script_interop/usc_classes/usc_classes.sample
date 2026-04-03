@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Usc Classes">
+	<sdk_desc>Exporting classes from <i>C++</i> side to <i>UnigineScript</i>.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample demonstrates how to export classes from <ui>C++</ui> side to <ui>UnigineScript</ui>.</para>
+			<para>A simple <ui>C++</ui> class named <ui>ExternClass</ui> is used to export custom <ui>MyExternObject</ui> into the <ui>UnigineScript</ui> environment. This allows scripts to instantiate the class, call its methods, and interact with its properties at runtime.</para>
+		</brief>
+	</desc>
+	<tags>
+		<tag>UnigineScript</tag>
+	</tags>
+</sample>

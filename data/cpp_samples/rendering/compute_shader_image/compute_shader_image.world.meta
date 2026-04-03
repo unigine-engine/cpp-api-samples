@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>3de08559e5994059d9275489e9d48961b8682db3</guid>
+	<type>world</type>
+	<hash>0e689ddbe31e5efcac81333d822384e3da1613d690a7fe6c2001cb2e9ed004a6</hash>
+	<runtimes>
+		<runtime id="3de08559e5994059d9275489e9d48961b8682db3" name="compute_shader_image.world" link="0"/>
+	</runtimes>
+	<parameters>
+		<parameter type="string" name="physics_settings_path"/>
+		<parameter type="string" name="render_settings_path">guid://8bed8c3ce53501ff11c1b0ae5cc6d017d4ad5524</parameter>
+		<parameter type="string" name="script_name"/>
+		<parameter type="string" name="sound_settings_path"/>
+		<parameter type="string" name="viewports_settings"/>
+	</parameters>
+</asset>

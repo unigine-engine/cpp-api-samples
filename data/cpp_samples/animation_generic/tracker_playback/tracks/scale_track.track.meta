@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>f85da841989364ac8ad3981b726b6ebeaa914705</guid>
+	<type>track</type>
+	<hash>91726ea34f72557c4f18f40ff6d1763c43c8efbd7b5b506165be0ef185e7d4a5</hash>
+	<runtimes>
+		<runtime id="f85da841989364ac8ad3981b726b6ebeaa914705" name="scale_track.track" link="0"/>
+	</runtimes>
+</asset>

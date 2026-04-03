@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.21.0.0" name="MeshToMaskTextureSample" manual="1" parent_name="node_base">
+	<parameter name="mesh_node" type="node">0</parameter>
+	<parameter name="object_view" type="node" filter="Object">0</parameter>
+	<parameter name="view_point" type="node">0</parameter>
+	<parameter name="player_node" type="node">0</parameter>
+	<parameter name="material" type="material"/>
+</property>

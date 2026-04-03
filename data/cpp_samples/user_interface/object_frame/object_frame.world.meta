@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<asset version="2.20.0.0">
+<asset version="2.21.0.0">
 	<guid>4a66ac44e043dfe82870b2908a83118f0358a922</guid>
 	<type>world</type>
-	<hash>5d64b10d</hash>
+	<hash>598d832d90e8dad475ed5b68b46a61032edbd2be7be4c8e3db76ceb515b1ce51</hash>
 	<runtimes>
 		<runtime id="4a66ac44e043dfe82870b2908a83118f0358a922" name="object_frame.world" link="0"/>
 	</runtimes>
 	<parameters>
 		<parameter type="string" name="physics_settings_path"/>
-		<parameter type="string" name="render_settings_path"/>
+		<parameter type="string" name="render_settings_path">guid://8bed8c3ce53501ff11c1b0ae5cc6d017d4ad5524</parameter>
 		<parameter type="string" name="script_name"/>
 		<parameter type="string" name="sound_settings_path"/>
 		<parameter type="string" name="viewports_settings"/>

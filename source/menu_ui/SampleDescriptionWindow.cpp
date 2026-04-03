@@ -1,4 +1,5 @@
 #include "SampleDescriptionWindow.h"
+#include <string>
 
 using namespace Unigine;
 using namespace Math;
@@ -44,6 +45,8 @@ void SampleDescriptionWindow::createWindow(int align, int width)
 	w_main_window->arrange();
 	WindowManager::getMainWindow()->addChild(w_main_window, Gui::ALIGN_OVERLAP | align);
 
+	init_source_box();
+
 	if (!description.empty())
 	{
 		w_about_group = WidgetGroupBox::create("About", 8, 8);
@@ -52,7 +55,7 @@ void SampleDescriptionWindow::createWindow(int align, int width)
 		w_about_lbl = WidgetLabel::create(description.get());
 		w_about_lbl->setFontWrap(1);
 		w_about_lbl->setFontRich(1);
-//		w_about_lbl->setWidth(width);
+		//		w_about_lbl->setWidth(width);
 		w_about_group->addChild(w_about_lbl, Gui::ALIGN_EXPAND);
 	}
 	if (!controls.empty())
@@ -63,7 +66,7 @@ void SampleDescriptionWindow::createWindow(int align, int width)
 		w_controls_lbl = WidgetLabel::create(controls.get());
 		w_controls_lbl->setFontWrap(1);
 		w_controls_lbl->setFontRich(1);
-//		w_controls_lbl->setWidth(width);
+		//		w_controls_lbl->setWidth(width);
 		w_controls_group->addChild(w_controls_lbl, Gui::ALIGN_EXPAND);
 	}
 }
@@ -88,7 +91,7 @@ Unigine::WidgetLabelPtr SampleDescriptionWindow::addLabel(
 }
 
 WidgetSliderPtr SampleDescriptionWindow::addFloatParameter(const char *name, const char *tooltip,
-                                                           float default_value, float min_value, float max_value, std::function<void(float)> on_change)
+	float default_value, float min_value, float max_value, std::function<void(float)> on_change)
 {
 	if (!w_parameters_grid)
 		init_parameter_box();
@@ -173,10 +176,7 @@ Unigine::WidgetCheckBoxPtr SampleDescriptionWindow::addBoolParameter(
 	checkbox->setToolTip(tooltip);
 	checkbox->setChecked(default_value);
 
-	checkbox->getEventChanged().connect(*this, [this,
-		checkbox,
-		callback = std::move(on_change)]
-		(const WidgetPtr &widget) {
+	checkbox->getEventChanged().connect(*this, [this, checkbox, callback = std::move(on_change)](const WidgetPtr &widget) {
 		if (checkbox->isChecked())
 			callback(true);
 		else
@@ -189,6 +189,39 @@ Unigine::WidgetCheckBoxPtr SampleDescriptionWindow::addBoolParameter(
 	return checkbox;
 }
 
+WidgetComboBoxPtr SampleDescriptionWindow::addSwitchParameter(const char *name, const char *tooltip, int default_value,
+	const Unigine::Vector<const char *> &values, std::function<void(int)> on_change)
+{
+	return addSwitchParameter(name, tooltip, default_value, values.get(), values.size(), std::move(on_change));
+}
+
+WidgetComboBoxPtr SampleDescriptionWindow::addSwitchParameter(const char *name, const char *tooltip, int default_value,
+	const char *const *values, int num_values, std::function<void(int)> on_change)
+{
+	if (!w_parameters_grid)
+		init_parameter_box();
+
+	auto label = WidgetLabel::create(name);
+	label->setWidth(100);
+	label->setToolTip(tooltip);
+
+	auto combobox = WidgetComboBox::create();
+	combobox->setToolTip(tooltip);
+	for (int i = 0; i < num_values; ++i)
+	{
+		combobox->addItem(values[i]);
+	}
+	combobox->setCurrentItem(default_value);
+	combobox->getEventChanged().connect(*this, [combobox, callback = std::move(on_change)] {
+		callback(combobox->getCurrentItem());
+	});
+
+	w_parameters_grid->addChild(label, Gui::ALIGN_LEFT);
+	w_parameters_grid->addChild(combobox, Gui::ALIGN_EXPAND);
+	w_parameters_grid->addChild(WidgetLabel::create(), Gui::ALIGN_LEFT);
+	return combobox;
+}
+
 void SampleDescriptionWindow::setStatus(const char *status)
 {
 	if (!w_status_lbl)
@@ -198,6 +231,98 @@ void SampleDescriptionWindow::setStatus(const char *status)
 	w_status_lbl->arrange();
 }
 
+// Normalize and quote path for shell commands (platform-specific)
+static std::string quote_for_shell(std::string path)
+{
+#ifdef _WIN32
+	for (char &c : path)
+		if (c == '/') c = '\\';
+	while (path.size() > 3 && path.back() == '\\')
+		path.pop_back();
+	std::string out;
+	out.reserve(path.size() + 2);
+	out.push_back('"');
+	for (char c : path)
+	{
+		if (c == '"') out += "\\\"";
+		else out.push_back(c);
+	}
+	out.push_back('"');
+	return out;
+#else
+	std::string out;
+	out.reserve(path.size() + 2);
+	out.push_back('\'');
+	for (char c : path)
+	{
+		if (c == '\'') out += "'\\''";
+		else out.push_back(c);
+	}
+	out.push_back('\'');
+	return out;
+#endif
+}
+
+static void open_in_file_manager(const std::string &path)
+{
+	const std::string p = quote_for_shell(path);
+#ifdef _WIN32
+	std::system(("explorer " + p).c_str());
+#else
+	std::system(("sh -c \""
+		"if command -v xdg-open >/dev/null 2>&1; then xdg-open " + p + " >/dev/null 2>&1 & "
+		"elif command -v gio >/dev/null 2>&1; then gio open " + p + " >/dev/null 2>&1 & "
+		"elif command -v kde-open5 >/dev/null 2>&1; then kde-open5 " + p + " >/dev/null 2>&1 & "
+		"else exit 127; fi\"").c_str());
+#endif
+}
+
+static void open_in_editor(const std::string &world)
+{
+	const std::string p = quote_for_shell(world);
+#ifdef UNIGINE_DOUBLE
+	const char *editor = "Editor_double_x64";
+#else
+	const char *editor = "Editor_x64";
+#endif
+#ifdef _WIN32
+	std::system(String::format("start \"\" %s.exe -starting_world %s", editor, p.c_str()));
+#else
+	std::system(String::format("./%s -starting_world %s &", editor, p.c_str()));
+#endif
+}
+
+void SampleDescriptionWindow::init_source_box()
+{
+	String world_path = World::getPath();
+
+	String sample_path = String::pathname(world_path);
+	String sample_data_path = String::joinPaths(Engine::get()->getDataPath(), sample_path);
+	sample_path = sample_path.replace("cpp_samples/","", true);
+	String sample_source_path = String::joinPaths(Engine::get()->getDataPath(), "../source/");
+	sample_source_path = String::joinPaths(sample_source_path, sample_path);
+
+	WidgetGroupBoxPtr source_group = WidgetGroupBox::create("Browse");
+	w_main_window->addChild(source_group, Gui::ALIGN_EXPAND);
+
+	WidgetHBoxPtr hbox = WidgetHBox::create(8,8);
+	source_group->addChild(hbox, Gui::ALIGN_EXPAND);
+
+	WidgetButtonPtr source_button = WidgetButton::create("Code in Explorer");
+	hbox->addChild(source_button, Gui::ALIGN_EXPAND);
+	source_button->getEventClicked().connect(*this, [sample_source_path](){
+		Log::message("Source Code Path: '%s'\n", sample_source_path.get());
+		open_in_file_manager(sample_source_path.get());
+	});
+
+	WidgetButtonPtr editor_button = WidgetButton::create("Content in Editor");
+	hbox->addChild(editor_button, Gui::ALIGN_EXPAND);
+	editor_button->getEventClicked().connect(*this, [world_path](){
+		Log::message("Open in Editor: '%s'\n", world_path.get());
+		open_in_editor(world_path.get());
+	});
+}
+
 const WidgetGroupBoxPtr &SampleDescriptionWindow::getParameterGroupBox()
 {
 	if (!w_parameters_grid)
@@ -205,12 +330,19 @@ const WidgetGroupBoxPtr &SampleDescriptionWindow::getParameterGroupBox()
 	return w_parameters_group;
 }
 
+const WidgetGridBoxPtr &SampleDescriptionWindow::getParameterGridBox()
+{
+	if (!w_parameters_grid)
+		init_parameter_box();
+	return w_parameters_grid;
+}
+
 void SampleDescriptionWindow::init_parameter_box()
 {
 	w_parameters_group = WidgetGroupBox::create("Parameters", 8, 8);
 	w_main_window->addChild(w_parameters_group, Gui::ALIGN_LEFT);
 	w_parameters_grid = WidgetGridBox::create(3);
-	w_parameters_group->addChild(w_parameters_grid);
+	w_parameters_group->addChild(w_parameters_grid, Gui::ALIGN_EXPAND);
 }
 
 void SampleDescriptionWindow::init_status_box()

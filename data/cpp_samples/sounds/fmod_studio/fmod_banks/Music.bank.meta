@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>dbff2247f42a79e69a070db701288f47d5276c2f</guid>
+	<type>file</type>
+	<hash>e7a1528be25d7a1b4bab784188e06889f76c0e2f553e598f2ac940261da18584</hash>
+	<runtimes>
+		<runtime id="dbff2247f42a79e69a070db701288f47d5276c2f" name="Music.bank" link="0"/>
+	</runtimes>
+</asset>

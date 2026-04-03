@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>648befba4d3a8bfb77eb2c27563247a2fab425de</guid>
+	<type>property</type>
+	<hash>2b80ea79736c047e22e23b420aba4a1ac596e369f91a3b64d4a72954a38feef5</hash>
+	<runtimes>
+		<runtime id="648befba4d3a8bfb77eb2c27563247a2fab425de" name="CarControl" link="0" type="4"/>
+	</runtimes>
+</asset>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.21.0.0" name="StreamBaseSample" manual="1" parent_name="node_base" tooltip="This component demonstrates custom file streaming by implementing a wrapper around standard file I/O.">
+	<parameter name="filepath" type="file"/>
+</property>

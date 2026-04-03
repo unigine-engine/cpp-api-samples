@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>3be1cd125fe56eaa55361c5029d8e06e6bc17171</guid>
+	<type>property</type>
+	<hash>d2b1752c6049bcc01db961fbb9c3d6c6864e0bb6c026b0f424474358b258ac0f</hash>
+	<runtimes>
+		<runtime id="3be1cd125fe56eaa55361c5029d8e06e6bc17171" name="FMODCoreSample" link="0" type="4"/>
+	</runtimes>
+</asset>

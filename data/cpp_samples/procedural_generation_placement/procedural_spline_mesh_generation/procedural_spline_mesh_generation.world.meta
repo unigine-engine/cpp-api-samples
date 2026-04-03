@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>feead1ac72a71629af383f5a06c83a5edbb0eacb</guid>
+	<type>world</type>
+	<hash>df7d0361c1d896451bdd863de36ef3493e6e9ccaa7f677217283e61c7ccdcb75</hash>
+	<runtimes>
+		<runtime id="feead1ac72a71629af383f5a06c83a5edbb0eacb" name="spline_generation.world" link="0"/>
+	</runtimes>
+	<parameters>
+		<parameter type="string" name="physics_settings_path"/>
+		<parameter type="string" name="render_settings_path">guid://8bed8c3ce53501ff11c1b0ae5cc6d017d4ad5524</parameter>
+		<parameter type="string" name="script_name"/>
+		<parameter type="string" name="sound_settings_path"/>
+		<parameter type="string" name="viewports_settings"/>
+	</parameters>
+</asset>

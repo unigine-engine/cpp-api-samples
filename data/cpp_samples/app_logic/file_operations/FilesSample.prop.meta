@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>0b035b603288702aa51a68359fc38f09f0ece45a</guid>
+	<type>property</type>
+	<hash>a0e43993af14ad89c3c40b867905bad2344c5c39b61d1e8a961ea81432b47549</hash>
+	<runtimes>
+		<runtime id="0b035b603288702aa51a68359fc38f09f0ece45a" name="FilesSample" link="0" type="4"/>
+	</runtimes>
+</asset>

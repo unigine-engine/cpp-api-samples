@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<asset version="2.20.0.0">
+<asset version="2.21.0.0">
 	<guid>414573dd3538022f1a3d10c5446667c52de39c01</guid>
 	<type>texture</type>
-	<hash>35355cb3</hash>
+	<hash>ba84cb023ff5a2c786bbb68039a92629bebef8190d7df6b191c34e55bb1fe631</hash>
 	<runtimes>
 		<runtime id="1e1e2ef0a80f9e4ff0b88a28cf664cb97d3f456c" name="network.png" link="0" type="6"/>
 	</runtimes>

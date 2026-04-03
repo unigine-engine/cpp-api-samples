@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.21.0.0" name="AsyncQueueSample" manual="1" parent_name="node_base" tooltip="This component demonstrates asynchronous resource loading using AsyncQueue. It queues meshes and textures for background loading, creates scene objects when meshes are ready, and displays loaded textures as GUI sprites.">
+	<parameter name="meshes" type="array" array_type="file"/>
+	<parameter name="textures" type="array" array_type="file"/>
+</property>

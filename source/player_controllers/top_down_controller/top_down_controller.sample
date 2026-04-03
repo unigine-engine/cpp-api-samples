@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Top-Down Controller">
+	<sdk_desc>Implementation of some elements of a top-down strategy such as selecting one or multiple units, panning the view, turning the camera and smoothly focusing it on the current selection.</sdk_desc>
+	<desc>
+		<brief>This sample demonstrates how to set up and control a top-down camera controller for real-time strategy or tactics-style gameplay. It implements core features typical for such games, including camera movement, zooming, rotation, edge scrolling, unit selection, and focus tracking. The implementation is based on the <ui>PlayerDummy</ui> node.</brief>
+	</desc>
+	<controls>
+		<![CDATA[
+		<p align=left><b>LMB</b> - select objects (either clicking on them or drawing a rectangle).<br/>
+		<b>MMB</b> - move the camera.<br/>
+		<b>Mouse Wheel</b> - zoom in/out.<br/>
+		<b>Q</b> and <b>E</b> - rotate the camera.<br/>
+		<b>Hold F</b> - follow the selected object.</p>
+		]]>
+	</controls>
+	<tags>
+		<tag>Cameras</tag>
+		<tag>Games</tag>
+		<tag>Basic Recipes</tag>
+	</tags>
+	<keywords>Player</keywords>
+</sample>

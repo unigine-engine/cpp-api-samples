@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<asset version="2.20.0.0">
+<asset version="2.21.0.0">
 	<guid>289a764772d18155bf4d46d8f2478ab4aaf5ddef</guid>
 	<type>world</type>
-	<hash>854e8ebf</hash>
+	<hash>c020e60661280910b9b7d2cac68d69cb57181d203b69131f8a66ac26777b7cb9</hash>
 	<runtimes>
 		<runtime id="289a764772d18155bf4d46d8f2478ab4aaf5ddef" name="spline_graph.world" link="0"/>
 	</runtimes>

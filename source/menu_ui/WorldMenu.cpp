@@ -60,8 +60,8 @@ void WorldMenu::init()
 
 void WorldMenu::update()
 {
-	bool down = Input::isMouseButtonDown(Input::MOUSE_BUTTON_LEFT);
-	bool up = Input::isMouseButtonUp(Input::MOUSE_BUTTON_LEFT);
+	bool down = Input::isMouseButtonDown(Input::MOUSE_BUTTON_LEFT) || Input::isTouchDown(0);
+	bool up = Input::isMouseButtonUp(Input::MOUSE_BUTTON_LEFT) || Input::isTouchUp(0);
 
 	// update hint state
 	hint_hbox->setHidden(!Input::isMouseGrab());
@@ -279,13 +279,13 @@ void WorldMenu::update_navigation(bool up, bool down)
 	nav_prev->update(up, down);
 	nav_next->update(up, down);
 
-	for (auto &b : select_buttons)
-		b->update(up, down);
-
 	nav_select->update(up, down);
 
 	if (!selector_hbox->isHidden())
 	{
+		for (auto &b : select_buttons)
+			b->update(up, down);
+
 		update_selector();
 	}
 }
@@ -358,21 +358,27 @@ void WorldMenu::update_back_button(bool up, bool down)
 
 bool WorldMenu::is_hovered(const Unigine::WidgetPtr &widget)
 {
-	bool hovered = widget->getMouseX() >= 0 && widget->getMouseX() < widget->getWidth()
-		&& widget->getMouseY() >= 0 && widget->getMouseY() < widget->getHeight();
-	return hovered;
-}
+	ivec2 gui_pos = ivec2(widget->getGui()->getMouseX(), widget->getGui()->getMouseY());
 
+	int x = widget->getScreenPositionX();
+	int y = widget->getScreenPositionY();
+
+	return gui_pos.x >= x && gui_pos.x < x + widget->getWidth()
+		&& gui_pos.y >= y && gui_pos.y < y + widget->getHeight();
+}
 
 bool WorldMenu::Button::isHovered() const
 {
 	if (!button_hbox)
 		return false;
 
-	bool is_hovered = button_hbox->getMouseX() > 0
-		&& button_hbox->getMouseX() < button_hbox->getWidth() && button_hbox->getMouseY() > 0
-		&& button_hbox->getMouseY() < button_hbox->getHeight();
-	return is_hovered;
+	ivec2 gui_pos = ivec2(button_hbox->getGui()->getMouseX(), button_hbox->getGui()->getMouseY());
+
+	int x = button_hbox->getScreenPositionX();
+	int y = button_hbox->getScreenPositionY();
+
+	return gui_pos.x >= x && gui_pos.x < x + button_hbox->getWidth()
+		&& gui_pos.y >= y && gui_pos.y < y + button_hbox->getHeight();
 }
 
 WorldMenu::NavigationButton::NavigationButton(const Unigine::String &world_path,

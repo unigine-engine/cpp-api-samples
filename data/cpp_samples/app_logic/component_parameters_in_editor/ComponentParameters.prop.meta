@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>d28b8c312bdc25cd50ea5cb405628ce2428029ea</guid>
+	<type>property</type>
+	<hash>24bad101079a283e9d79e3ed4aeb416b01bbc665268a2bc62e03e98ef8b2a84a</hash>
+	<runtimes>
+		<runtime id="d28b8c312bdc25cd50ea5cb405628ce2428029ea" name="ComponentParameters" link="0" type="4"/>
+	</runtimes>
+</asset>

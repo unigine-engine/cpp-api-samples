@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<asset version="2.20.0.0">
+<asset version="2.21.0.0">
 	<guid>3840267f696e81d24c473709dbdb54d41312ba23</guid>
 	<type>world</type>
-	<hash>e8aafe5e</hash>
+	<hash>e4c89730f0fd73dab81b4673bd85592a4774e86bc2691a79682bd312bb0db117</hash>
 	<runtimes>
 		<runtime id="3840267f696e81d24c473709dbdb54d41312ba23" name="widget_manipulators.world" link="0"/>
 	</runtimes>

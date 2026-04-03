@@ -1,61 +1,55 @@
+// Applies physics-based movement using forces and impulses. Input is gathered
+// in update() and applied in update_physics() for consistent physics behavior.
+
 #include "PhysicsMovement.h"
+#include <UnigineConsole.h>
+#include <UnigineVisualizer.h>
+
+REGISTER_COMPONENT(PhysicsMover);
 
 using namespace Unigine;
 using namespace Math;
 
-REGISTER_COMPONENT(PhysicsForceMovement);
-REGISTER_COMPONENT(PhysicsImpulseMovement);
-
-//Force movement
-
-void PhysicsForceMovement::init()
+// Rigid body is cached from the node.
+void PhysicsMover::init()
 {
-	rigid = node->getObjectBodyRigid();
+	body = node->getObjectBodyRigid();
 }
 
-void PhysicsForceMovement::update()
+// Keyboard input is captured for movement and actions.
+void PhysicsMover::update()
 {
-	rigid->setMaxLinearVelocity(max_speed);
-	input_direction.y =static_cast<float>(Input::isKeyPressed(Input::KEY_W) - Input::isKeyPressed(Input::KEY_S));
-	input_direction.x = static_cast<float>(Input::isKeyPressed(Input::KEY_A) - Input::isKeyPressed(Input::KEY_D));
-	brake = Input::isKeyPressed(Input::KEY_SPACE);
+	body->setMaxLinearVelocity(max_speed);
+	body->setMaxAngularVelocity(max_rotation_speed);
+
+	if (!Console::isActive())
+	{
+		input_direction.y = Input::isKeyPressed(Input::KEY_W) - Input::isKeyPressed(Input::KEY_S);
+		input_direction.x = Input::isKeyPressed(Input::KEY_A) - Input::isKeyPressed(Input::KEY_D);
+		brake |= Input::isKeyPressed(Input::KEY_ANY_SHIFT);
+		jump |= Input::isKeyDown(Input::KEY_SPACE);
+	}
 }
 
-void PhysicsForceMovement::update_physics()
+// Forces, torques, and impulses are applied based on input state.
+void PhysicsMover::update_physics()
 {
 	vec3 forward = node->getWorldDirection(AXIS_Y);
 	vec3 up = node->getWorldDirection(AXIS_Z);
 
-	rigid->addForce(forward * input_direction.y * force);
-	rigid->addTorque(up * input_direction.x * sign(input_direction.y) * torque);
+	bool onGround = body->getNumContacts() != 0;
 
-	rigid->setLinearDamping(brake ? brakes_strenth : 0.0f);
-	rigid->setAngularDamping(brake ? brakes_strenth : 0.0f);
-}
+	body->addForce(forward * input_direction.y * force);
+	body->addTorque(up * input_direction.x * sign(input_direction.y) * torque);
 
-//Impulse movement
+	body->setLinearDamping(brake && onGround ? brakes_strength : 0.0f);
+	body->setAngularDamping(brake ? brakes_strength : 0.0f);
 
-void PhysicsImpulseMovement::init()
-{
-	rigid = node->getObjectBodyRigid();
-}
+	if (jump && onGround)
+	{
+		body->addLinearImpulse(up * jump_impulse);
+	}
 
-void PhysicsImpulseMovement::update()
-{
-	rigid->setMaxLinearVelocity(max_speed);
-	input_direction.y = static_cast<float>(Input::isKeyPressed(Input::KEY_W) - Input::isKeyPressed(Input::KEY_S));
-	input_direction.x = static_cast<float>(Input::isKeyPressed(Input::KEY_A) - Input::isKeyPressed(Input::KEY_D));
-	brake = Input::isKeyPressed(Input::KEY_SPACE);
-}
-
-void PhysicsImpulseMovement::update_physics()
-{
-	vec3 forward = node->getWorldDirection(AXIS_Y);
-	vec3 up = node->getWorldDirection(AXIS_Z);
-
-	rigid->addLinearImpulse(forward * input_direction.y * linear_impulse * Physics::getIFps());
-	rigid->addAngularImpulse(up * input_direction.x * sign(input_direction.y) * angular_impulse * Physics::getIFps());
-
-	rigid->setLinearDamping(brake ? brakes_strenth : 0.0f);
-	rigid->setAngularDamping(brake ? brakes_strenth : 0.0f);
+	brake = false;
+	jump = false;
 }

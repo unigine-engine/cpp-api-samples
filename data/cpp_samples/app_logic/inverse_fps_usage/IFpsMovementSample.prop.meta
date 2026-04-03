@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>87b0893256e8e52796ffb69618df83f6c497a69a</guid>
+	<type>property</type>
+	<hash>eb4bcbe5042fa631616997f3a96cac8b0be05307e79639a8fd265c30ca060cc4</hash>
+	<runtimes>
+		<runtime id="87b0893256e8e52796ffb69618df83f6c497a69a" name="IFpsMovementSample" link="0" type="4"/>
+	</runtimes>
+</asset>

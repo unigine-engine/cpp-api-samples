@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.21.0.0" name="CameraOrbitSample" manual="1" parent_name="node_base">
+	<parameter name="controls_node" type="node">0</parameter>
+	<parameter name="angularSpeed" type="float">90</parameter>
+	<parameter name="zoomSpeed" type="float">3</parameter>
+	<parameter name="minDistance" type="float">5</parameter>
+	<parameter name="maxDistance" type="float">10</parameter>
+	<parameter name="minVerticalAngle" type="float">-89.9</parameter>
+	<parameter name="maxVerticalAngle" type="float">89.9</parameter>
+	<parameter name="target" type="node">0</parameter>
+</property>

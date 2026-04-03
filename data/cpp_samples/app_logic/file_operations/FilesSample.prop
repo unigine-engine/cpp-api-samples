@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.21.0.0" name="FilesSample" manual="1" parent_name="node_base" tooltip="This component demonstrates basic file I/O by providing a GUI with two windows: a writer to save text into a file and a reader to display the file contents.">
+	<parameter name="filepath" type="string">cpp_samples/app_logic/files/generated_file</parameter>
+</property>

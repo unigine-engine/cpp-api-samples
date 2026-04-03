@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Control Elements">
+	<desc>
+		<brief>Demonstration of various types of interactable buttons and levers.</brief>
+	</desc>
+	<controls>
+		<![CDATA[
+		<b>WASDQE</b> - move around the scene.<br/>
+		<b>Mouse cursor</b> - aim at interactive objects.<br/>
+		<b>F</b> - activate buttons and levers.<br/>
+		<b>Hold F + LMB (drag)</b>- manipulate Valve and Lever.<br/>
+		]]>
+	</controls>
+	<tags>
+		<tag>Triggers</tag>
+		<tag>Logic</tag>
+		<tag>Basic Recipes</tag>
+	</tags>
+	<keywords>Input,Button,Keyboard,Mouse,Interaction</keywords>
+</sample>

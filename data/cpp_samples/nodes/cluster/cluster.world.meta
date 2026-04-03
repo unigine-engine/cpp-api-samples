@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<asset version="2.20.0.0">
+<asset version="2.21.0.0">
 	<guid>cb075b356252b310aa8a6b2f83c21ec2467dcf39</guid>
 	<type>world</type>
-	<hash>0daca2ef</hash>
+	<hash>5cb2f2b01c01df3e54c2ba85227bed1d44eb31016293b90bc474f194b6da1b1b</hash>
 	<runtimes>
 		<runtime id="cb075b356252b310aa8a6b2f83c21ec2467dcf39" name="cluster.world" link="0"/>
 	</runtimes>

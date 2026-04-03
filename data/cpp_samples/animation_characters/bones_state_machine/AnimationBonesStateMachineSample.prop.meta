@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>02137eff0d1c07020a7251556f123094d3a4d40e</guid>
+	<type>property</type>
+	<hash>b7e3cb238a519b3e424e907a940b45abbed45c48d49bf8e227a93b0abd723a15</hash>
+	<runtimes>
+		<runtime id="02137eff0d1c07020a7251556f123094d3a4d40e" name="AnimationBonesStateMachineSample" link="0" type="4"/>
+	</runtimes>
+</asset>

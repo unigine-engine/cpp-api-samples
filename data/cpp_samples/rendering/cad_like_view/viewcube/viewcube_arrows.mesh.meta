@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>a4acace6488d5f0d87c0f508f0a494c78f80cb7a</guid>
+	<type>mesh</type>
+	<hash>3205c9ae7b98572a43e6017876807084d2d59916b394f9c7d4e56d95e6c83185</hash>
+	<runtimes>
+		<runtime id="a4acace6488d5f0d87c0f508f0a494c78f80cb7a" name="viewcube_arrows.mesh" link="0" type="1"/>
+	</runtimes>
+	<parameters>
+		<parameter type="bool" name="animation">1</parameter>
+		<parameter type="string" name="lightmaps">{}</parameter>
+		<parameter type="int" name="resolution">3</parameter>
+		<parameter type="float" name="scale">1</parameter>
+		<parameter type="int" name="smooth_animation_size">0</parameter>
+		<parameter type="bool" name="unchanged">1</parameter>
+		<parameter type="bool" name="unwrap_uv_ch_0">0</parameter>
+		<parameter type="bool" name="unwrap_uv_ch_1">1</parameter>
+		<parameter type="int" name="uv_ch">1</parameter>
+		<parameter type="bool" name="vertex_cache">1</parameter>
+	</parameters>
+</asset>

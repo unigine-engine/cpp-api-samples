@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.21.0.0" name="AnimationBonesStateMachineSample" manual="1" parent_name="node_base">
+	<parameter name="skeleton_pose_node_walk" type="node">0</parameter>
+	<parameter name="skeleton_pose_node_idle_turn" type="node">0</parameter>
+	<parameter name="skeleton_pose_node_walk_run" type="node">0</parameter>
+</property>

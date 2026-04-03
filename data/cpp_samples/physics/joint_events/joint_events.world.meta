@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<asset version="2.20.0.0">
+<asset version="2.21.0.0">
 	<guid>d4d250a61869d4f3edd237fd5640a56fe1c32b17</guid>
 	<type>world</type>
-	<hash>edf55ab2</hash>
+	<hash>5f07ba7f2415f02f32943f46fdd14731a0a2f322e8fd4356204c836daa93860f</hash>
 	<runtimes>
 		<runtime id="d4d250a61869d4f3edd237fd5640a56fe1c32b17" name="joint_events.world" link="0"/>
 	</runtimes>
 	<parameters>
 		<parameter type="string" name="physics_settings_path"/>
-		<parameter type="string" name="render_settings_path"/>
+		<parameter type="string" name="render_settings_path">guid://8bed8c3ce53501ff11c1b0ae5cc6d017d4ad5524</parameter>
 		<parameter type="string" name="script_name"/>
 		<parameter type="string" name="sound_settings_path"/>
 		<parameter type="string" name="viewports_settings"/>

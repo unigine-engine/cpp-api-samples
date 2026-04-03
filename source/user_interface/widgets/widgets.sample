@@ -9,7 +9,7 @@
 	</desc>
 	<controls>
 		<![CDATA[
-		Clicking on a control element allows you to interact with it.<br/>Clicking on the text input field allows you to type text from the keyboard.
+		<b>Click on control element</b> - interact with the element.<br/><b>Click on text input field</b> - activate keyboard text input.
 		]]>
 	</controls>
 	<tags>

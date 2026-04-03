@@ -1,12 +1,12 @@
-# Simple HTTP Image Request
+# HTTP Image request
 
 This sample shows how to implement an asynchronous *HTTP* request to a *REST API* to download image files and apply them to scene objects at runtime.
 
 Two requests are performed to retrieve sample image data:
 
 <ol>
-+**eu.httpbin.org/image/png** - to download a *PNG* image
-+**eu.httpbin.org/image/jpeg** - to download a *JPEG* image
+-**eu.httpbin.org/image/png** - to download a *PNG* image
+-**eu.httpbin.org/image/jpeg** - to download a *JPEG* image
 </ol>
 Only *PNG* and *JPEG* formats are supported for runtime loading into *Image* Class instance from raw data.
 

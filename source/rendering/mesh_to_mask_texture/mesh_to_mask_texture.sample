@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sample title="Mesh To Mask Texture">
+	<sdk_desc>Rendering a mesh into a texture using a custom material for mask generation.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample demonstrates how to render a mesh into a texture using a custom material, producing an image to be used as a mask. The mesh is rendered from a dedicated camera view directly into a texture, which is then assigned to the albedo slot of a preview material.</para>
+			<para>Use the manipulator to move the camera view and observe how different viewing angles affect the generated texture mask.</para>
+			<para>The sample compares two rendering approaches:</para>
+			<ul>
+				<li><strong>Renderer.RenderMesh</strong> - standard camera-based rendering <strong>(recommended for most use cases)</strong>. The Engine automatically prepares matrices, render states, and shaders, so you only need to provide the mesh, material, transform, and camera.</li>
+				<li><strong>MeshRender.Render</strong> - low-level, <strong>fully manual</strong> projection and modelview setup. This method provides finer control over the rendering pipeline but requires explicit setup of projection and view matrices, RenderState configuration, and manual shader parameter management.</li>
+			</ul>
+			<para>Both methods produce identical visual results, allowing you to choose whichever approach best fits your workflow.</para>
+			<para>This technique is useful for dynamic decals, procedural effects, or any feature requiring real-time texture generation from 3D geometry.</para>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Render</tag>
+		<tag>Materials</tag>
+		<tag>Mesh</tag>
+	</tags>
+</sample>

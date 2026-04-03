@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>96b26cc9a8d30ad6fc895167bcafd1a638aff86d</guid>
+	<type>animation_graph</type>
+	<hash>0fa5c8832c85e3f27417ff784480dd4a1fd7901cb9686bc563340e74050527a2</hash>
+	<runtimes>
+		<runtime id="96b26cc9a8d30ad6fc895167bcafd1a638aff86d" name="male_walk_left_arc_root_motion.agraph" link="0"/>
+		<runtime id="53e9610dbb42e53e2c87738b878f4056d05463f1" name="male_walk_left_arc_root_motion" link="1" type="10"/>
+	</runtimes>
+</asset>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<asset version="2.20.0.0">
+<asset version="2.21.0.0">
 	<guid>a78a899460bce7e30f962be62602d20dcd89cc08</guid>
 	<type>texture</type>
-	<hash>4cfb0a45</hash>
+	<hash>3b193ccd9d9591632bfaacf8ef48074934b8570ce041f4429c7b7aba3f8c14c8</hash>
 	<runtimes>
 		<runtime id="a78a899460bce7e30f962be62602d20dcd89cc08" name="arrow.png" link="0" type="6"/>
 		<runtime id="8d780e99ae49a724c148c83399e06ff66876a6dd" name="arrow.texture" link="1" type="6"/>

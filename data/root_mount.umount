@@ -1,0 +1,11 @@
+{
+	"ignore_filters": [
+		".svn/*",
+		".git/*",
+		".teamcity/*"
+	],
+	"guidsdb_ignore_filters": [
+		"*.gpu_cache",
+		"*.meta"
+	]
+}

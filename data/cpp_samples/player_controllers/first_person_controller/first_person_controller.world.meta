@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>fa574fff7f0e08b90c5e31e888faf6cfa334f209</guid>
+	<type>world</type>
+	<hash>5a3b0dd5c47e68fdac5563807923d090299558c61a471b1ffbf44cbddeefb0c2</hash>
+	<runtimes>
+		<runtime id="fa574fff7f0e08b90c5e31e888faf6cfa334f209" name="first_person_controller.world" link="0"/>
+	</runtimes>
+	<parameters>
+		<parameter type="string" name="physics_settings_path"/>
+		<parameter type="string" name="render_settings_path">guid://8bed8c3ce53501ff11c1b0ae5cc6d017d4ad5524</parameter>
+		<parameter type="string" name="script_name"/>
+		<parameter type="string" name="sound_settings_path"/>
+		<parameter type="string" name="viewports_settings"/>
+	</parameters>
+</asset>

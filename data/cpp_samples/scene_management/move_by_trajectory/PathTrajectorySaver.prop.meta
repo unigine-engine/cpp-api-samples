@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>c188f6ae45f4c61b20a2b0d14617428f589a85fb</guid>
+	<type>property</type>
+	<hash>302170741e5df55dd944fb8735fc3930e1970367b939ba2190a461aa6b72a8e0</hash>
+	<runtimes>
+		<runtime id="c188f6ae45f4c61b20a2b0d14617428f589a85fb" name="PathTrajectorySaver" link="0" type="4"/>
+	</runtimes>
+</asset>

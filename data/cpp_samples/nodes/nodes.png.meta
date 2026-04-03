@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<asset version="2.20.0.0">
+<asset version="2.21.0.0">
 	<guid>1ab2392f2fdb94c2aecccd39c12b154449bc1fd3</guid>
 	<type>texture</type>
-	<hash>f725f7e</hash>
+	<hash>edd73c9e2b27034d2baa241d683dfae7f2ceae9d7d68d65b529730ec898e955f</hash>
 	<runtimes>
 		<runtime id="0b45a3167b18ff7d65b4bab8a4f9beb7bef98caa" name="nodes.png" link="0" type="6"/>
 	</runtimes>

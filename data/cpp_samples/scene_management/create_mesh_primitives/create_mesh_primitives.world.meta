@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>5d4826c81828fc6366a2e2c473bc101e92156376</guid>
+	<type>world</type>
+	<hash>24e14eb11bff31d56a4a9c5fb46a6d6ddb8e203a6d11e753dbab37367a78831e</hash>
+	<runtimes>
+		<runtime id="5d4826c81828fc6366a2e2c473bc101e92156376" name="create_primitives.world" link="0"/>
+	</runtimes>
+	<parameters>
+		<parameter type="string" name="physics_settings_path"/>
+		<parameter type="string" name="render_settings_path">guid://8bed8c3ce53501ff11c1b0ae5cc6d017d4ad5524</parameter>
+		<parameter type="string" name="script_name"/>
+		<parameter type="string" name="sound_settings_path"/>
+		<parameter type="string" name="viewports_settings"/>
+	</parameters>
+</asset>

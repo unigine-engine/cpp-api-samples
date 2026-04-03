@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<controls version="2.20.0.0" autosave="1">
+<controls version="2.21.0.0" autosave="1">
 	<remove_grab_key>ESC</remove_grab_key>
 	<controls_always_run>0</controls_always_run>
 	<controls_mouse_handle>2</controls_mouse_handle>

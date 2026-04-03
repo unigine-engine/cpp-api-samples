@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Ambient Sound">
+	<sdk_desc>Playing ambient sounds via code.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample shows the implementation of a component that controls the playback of ambient sound (<ui><link to="ambientsource_class">AmbientSource</link></ui>) with interactive GUI controls using the <ui><link to="ambientsource_class">AmbientSource</link></ui> class. The component creates an ambient sound source that plays continuously in the background and provides real-time parameter adjustment through a dedicated interface.</para>
+			<para>The streaming mode can be toggled dynamically via the <ui>Stream</ui> checkbox, recreating the sound source to switch between preloaded audio (lower latency) and streamed audio (lower memory usage). This approach is ideal for background music, environmental sounds, and other continuous audio elements that enhance scene immersion.</para>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Sound</tag>
+	</tags>
+</sample>

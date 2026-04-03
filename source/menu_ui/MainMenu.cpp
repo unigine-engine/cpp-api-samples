@@ -8,7 +8,6 @@ REGISTER_COMPONENT(MainMenu);
 using namespace Unigine;
 using namespace Math;
 
-
 BlobPtr MainMenu::saved_state = Blob::create();
 
 void MainMenu::init()
@@ -109,26 +108,21 @@ void MainMenu::restore(const Unigine::BlobPtr &blob)
 
 void MainMenu::update_close_button()
 {
-	bool down = Input::isMouseButtonDown(Input::MOUSE_BUTTON_LEFT);
-	bool up = Input::isMouseButtonUp(Input::MOUSE_BUTTON_LEFT);
+	bool down = Input::isMouseButtonDown(Input::MOUSE_BUTTON_LEFT) || Input::isTouchDown(0);
+	bool up = Input::isMouseButtonUp(Input::MOUSE_BUTTON_LEFT) || Input::isTouchUp(0);
 
 	bool hovered = MenuUtils::isHovered(close_button);
 
-	if (!hovered && !up)
-		return;
-
-	if (close_button_pressed && up)
+	if (!close_button_pressed)
+	{
+		if (down && hovered)
+			close_button_pressed = true;
+	}
+	else if (up)
 	{
 		close_button_pressed = false;
 		if (hovered)
-		{
 			Engine::get()->quit();
-		}
-	}
-
-	if (!close_button_pressed && down && hovered)
-	{
-		close_button_pressed = true;
 	}
 
 	close_button->setBackgroundColor(close_button_pressed ? close_pressed_color : close_color);
@@ -146,8 +140,18 @@ void MainMenu::parse_meta_xml(String path_relative_to_data, Vector<Category> &ca
 	}
 
 	XmlPtr cpp_samples_samples_pack = cpp_samples_xml->getChild("samples_pack");
+	if (!cpp_samples_samples_pack)
+	{
+		Log::warning("MainMenu::parse_meta_xml(): missing 'samples_pack' in %s\n", cpp_samples_xml_path.get());
+		return;
+	}
 	XmlPtr categories_xml = cpp_samples_samples_pack->getChild("categories");
 	XmlPtr samples_xml = cpp_samples_samples_pack->getChild("samples");
+	if (!categories_xml || !samples_xml)
+	{
+		Log::warning("MainMenu::parse_meta_xml(): missing 'categories' or 'samples' in %s\n", cpp_samples_xml_path.get());
+		return;
+	}
 
 	HashMap<String, Category> categories_map;
 	Vector<String> categories_id;
@@ -176,10 +180,13 @@ void MainMenu::parse_meta_xml(String path_relative_to_data, Vector<Category> &ca
 
 		Sample s;
 		s.title = sample_xml->getArg("title");
-		s.description = sample_xml->getChild("sdk_desc")->getData();
+		XmlPtr sdk_desc = sample_xml->getChild("sdk_desc");
+		s.description = sdk_desc ? sdk_desc->getData() : "";
 		s.world_name = sample_xml->getArg("id");
 
 		XmlPtr tags_xml = sample_xml->getChild("tags");
+		if (!tags_xml)
+			continue;
 		for (int j = 0; j < tags_xml->getNumChildren(); ++j)
 		{
 			String tag = tags_xml->getChild(j)->getData();
@@ -609,15 +616,16 @@ void WidgetTagCloud::update()
 	if (Console::isActive())
 		return;
 
-	bool down = Input::isMouseButtonDown(Input::MOUSE_BUTTON_LEFT);
-	bool up = Input::isMouseButtonUp(Input::MOUSE_BUTTON_LEFT);
+	bool down = Input::isMouseButtonDown(Input::MOUSE_BUTTON_LEFT) || Input::isTouchDown(0);
+	bool up = Input::isMouseButtonUp(Input::MOUSE_BUTTON_LEFT) || Input::isTouchUp(0);
 
+	bool scrollbox_hovered = MenuUtils::isHovered(main_scrollbox);
 	for (const auto &tag_widget : tag_widgets)
 	{
-		tag_widget.data->update(up, down);
+		tag_widget.data->update(up, scrollbox_hovered && down);
 	}
 
-	if (MenuUtils::isHovered(main_scrollbox))
+	if (scrollbox_hovered)
 	{
 		int wheel = Input::getMouseWheel();
 		if (wheel)
@@ -703,20 +711,20 @@ void WidgetSampleListNode::update()
 	if (Console::isActive())
 		return;
 
-	bool hovered = MenuUtils::isHovered(header_hbox);
+	bool down = Input::isMouseButtonDown(Input::MOUSE_BUTTON_LEFT) || Input::isTouchDown(0);
+	bool up = Input::isMouseButtonUp(Input::MOUSE_BUTTON_LEFT) || Input::isTouchUp(0);
 
-	bool down = Input::isMouseButtonDown(Input::MOUSE_BUTTON_LEFT);
-	bool up = Input::isMouseButtonUp(Input::MOUSE_BUTTON_LEFT);
+	if (!pressed && down && MenuUtils::isHovered(header_hbox))
+	{
+		pressed = true;
+	}
 
 	if (pressed && up)
 	{
 		pressed = false;
-		if (hovered)
+		if (MenuUtils::isHovered(header_hbox))
 			on_clicked();
 	}
-
-	if (!pressed && down && hovered)
-		pressed = true;
 
 	show_press_effect(pressed);
 }
@@ -837,8 +845,8 @@ void WidgetSample::update()
 
 	bool some_hovered = false;
 
-	bool down = Input::isMouseButtonDown(Input::MOUSE_BUTTON_LEFT);
-	bool up = Input::isMouseButtonUp(Input::MOUSE_BUTTON_LEFT);
+	bool down = Input::isMouseButtonDown(Input::MOUSE_BUTTON_LEFT) || Input::isTouchDown(0);
+	bool up = Input::isMouseButtonUp(Input::MOUSE_BUTTON_LEFT) || Input::isTouchUp(0);
 
 	for (const auto &tag_widget : tag_widgets)
 	{
@@ -1254,13 +1262,17 @@ bool MenuUtils::isWordSuitable(const String &text, const String &word)
 	return false;
 }
 
-bool MenuUtils::isHovered(const Unigine::WidgetPtr widget)
+bool MenuUtils::isHovered(const Unigine::WidgetPtr &widget)
 {
-	bool hovered = widget->getMouseX() >= 0 && widget->getMouseX() < widget->getWidth()
-		&& widget->getMouseY() >= 0 && widget->getMouseY() < widget->getHeight();
-	return hovered;
-}
+	const GuiPtr &gui = widget->getGui();
+	ivec2 gui_pos = ivec2(gui->getMouseX(), gui->getMouseY());
 
+	int x = widget->getScreenPositionX();
+	int y = widget->getScreenPositionY();
+
+	return gui_pos.x >= x && gui_pos.x < x + widget->getWidth()
+		&& gui_pos.y >= y && gui_pos.y < y + widget->getHeight();
+}
 
 MainMenu::UITagStyle Tag::config;
 Unigine::EventInvoker<const Unigine::String &> Tag::event_clicked;

@@ -1,3 +1,7 @@
+// Demonstrates WidgetSlider for value selection via draggable handle. Slider
+// dimensions and button width are configured via component properties, with
+// value changes shown on the console overlay via EventChanged callback.
+
 #include "Slider.h"
 #include <UnigineConsole.h>
 
@@ -6,6 +10,7 @@ REGISTER_COMPONENT(Slider);
 using namespace Unigine;
 using namespace Math;
 
+// Slider widget is created with configured dimensions and value change callback.
 void Slider::init()
 {
 	gui = WindowManager::getMainWindow()->getGui();
@@ -19,6 +24,7 @@ void Slider::init()
 	widget_slider->setHeight(size.get().y);
 	widget_slider->setButtonWidth(button_width.get());
 
+	// Lambda callback displays current slider value on change
 	widget_slider->getEventChanged().connect(*this, [this]() {
 		String msg = String("Slider: ") + String::itoa(widget_slider->getValue());
 		Console::onscreenMessageLine(msg.get());
@@ -27,6 +33,7 @@ void Slider::init()
 	Console::setOnscreen(true);
 }
 
+// Widget is removed from GUI and resources are released.
 void Slider::shutdown()
 {
 	if (gui)

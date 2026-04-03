@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<asset version="2.20.0.0">
+<asset version="2.21.0.0">
 	<guid>a9aecb24c32bbc6187cdf83a2ecdb0aa445117a7</guid>
 	<type>texture</type>
-	<hash>143b6165</hash>
+	<hash>eeb03c46214425b1c2883db8c448d7aa482d58ad4f4066dfd0a8efd2296515d2</hash>
 	<runtimes>
 		<runtime id="f1c2d230e7a35f74651aa1e6f953da5005e7ea83" name="navigation.png" link="0" type="6"/>
 	</runtimes>

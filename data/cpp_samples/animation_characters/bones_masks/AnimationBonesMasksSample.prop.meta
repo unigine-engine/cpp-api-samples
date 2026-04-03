@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>07ebe79665ef6ef77f630df87d515cfe71bee027</guid>
+	<type>property</type>
+	<hash>d7cba4c84d9eab001f5268770f98d99ae7b1d78bbbd67208ef2d6f986c4ba362</hash>
+	<runtimes>
+		<runtime id="07ebe79665ef6ef77f630df87d515cfe71bee027" name="AnimationBonesMasksSample" link="0" type="4"/>
+	</runtimes>
+</asset>

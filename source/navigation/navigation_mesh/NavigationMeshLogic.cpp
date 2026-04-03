@@ -1,3 +1,8 @@
+// Demonstrates pathfinding on a navigation mesh using PathRoute.
+// Start and end points can be moved via manipulators. A route is computed
+// using create2D() which finds the shortest path constrained to the navmesh.
+// If no valid path exists, a red line is drawn between the points.
+
 #include <UnigineVisualizer.h>
 #include <UnigineConsole.h>
 #include <UnigineGame.h>
@@ -37,15 +42,19 @@ REGISTER_COMPONENT(NavigationMeshLogic);
 using namespace Unigine;
 using namespace Unigine::Math;
 
-
+// PathRoute is created, manipulators are configured, and UI is initialized.
 void NavigationMeshLogic::init()
 {
 	Visualizer::setEnabled(true);
 	Input::setMouseHandle(Input::MOUSE_HANDLE_SOFT);
 
+	// Create a PathRoute object to compute paths on the navigation mesh.
+	// Radius defines the agent size for path clearance calculations.
 	route = PathRoute::create();
 	route->setRadius(route_radius);
 
+	// Configure manipulators: restrict movement to XY plane only
+	// (Z is constrained to navmesh surface), disable rotation and scaling
 	widget_manipulator = getComponent<Manipulators>(node);
 	if (widget_manipulator)
 	{
@@ -73,10 +82,13 @@ void NavigationMeshLogic::init()
 	}
 }
 
+// Route is recalculated each frame; path or error line is visualized.
 void NavigationMeshLogic::update()
 {
+	// Player controls are disabled when dragging manipulators
 	Game::getPlayer()->setControlled(!widget_manipulator->isActive());
 
+	// Draw the navigation mesh wireframe for debugging
 	if (navigation)
 		navigation->renderVisualizer();
 
@@ -85,8 +97,10 @@ void NavigationMeshLogic::update()
 		auto start = path_start->getWorldPosition();
 		auto end = path_end->getWorldPosition();
 
+		// Compute 2D path (ignoring Z differences, projecting onto navmesh)
 		route->create2D(start, end);
 
+		// Draw path if reachable, otherwise show a red "no path" line
 		if (route->isReached())
 			route->renderVisualizer(route_color);
 
@@ -106,6 +120,7 @@ void NavigationMeshLogic::update()
 	}
 }
 
+// Visualizer is disabled, mouse is restored, and UI is cleaned up.
 void NavigationMeshLogic::shutdown()
 {
 	Visualizer::setEnabled(false);

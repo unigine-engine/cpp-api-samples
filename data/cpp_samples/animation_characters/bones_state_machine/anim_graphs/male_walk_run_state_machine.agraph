@@ -1,0 +1,403 @@
+{
+	"version": "2.21.0.0",
+	"file_guid": "499b1650e6071498a43f80b062568af3cf6a4b49",
+	"camera_offset_x": 689,
+	"camera_offset_y": 287,
+	"nodes": {
+		"Output Pose": {
+			"guid": "00000000000000000000000000000000b00002b2",
+			"x": 448,
+			"y": 192,
+			"collapsed": false,
+			"inputs": {
+				"input": {
+					"label": "Pose",
+					"type": "AnimPose",
+					"id": 0
+				}
+			}
+		},
+		"State Machine": {
+			"guid": "67dccfe3f7e4180300e9f70353ea0247d9b40688",
+			"x": 167,
+			"y": 193,
+			"collapsed": false,
+			"props": {
+				"prop": {
+					"widget": "String",
+					"value": "walk_run_sm"
+				}
+			},
+			"outputs": {
+				"output": {
+					"label": "Pose",
+					"type": "AnimPose",
+					"id": 0
+				}
+			},
+			"sm_name": "walk_run_sm",
+			"state_graph": {
+				"file_guid": "dad171d6a964c0562778a93652a04cc2a8757847",
+				"camera_offset_x": 632,
+				"camera_offset_y": 380.5,
+				"nodes": {
+					"State": {
+						"guid": "47fd09cd7c934d291f3fb5ed3bb14582574158fa",
+						"x": 0,
+						"y": 0,
+						"collapsed": false,
+						"state_name": "Entry",
+						"is_entry": 1
+					},
+					"State": {
+						"guid": "4fcc16f8d743997fb70fed589e46a8af649e1411",
+						"x": 140,
+						"y": -1,
+						"collapsed": false,
+						"props": {
+							"prop": {
+								"widget": "String",
+								"value": "walk_run"
+							}
+						},
+						"state_name": "walk_run",
+						"is_entry": 0,
+						"state_graph": {
+							"file_guid": "502ae1c7019b2d663c049ae7a61471894a1dbe3c",
+							"camera_offset_x": 840,
+							"camera_offset_y": 423,
+							"nodes": {
+								"Output Pose": {
+									"guid": "89825cea962c988ad1c5ea4af2ddf8376d99846b",
+									"x": 192,
+									"y": -32,
+									"collapsed": false,
+									"inputs": {
+										"input": {
+											"label": "Pose",
+											"type": "AnimPose",
+											"id": 0
+										}
+									}
+								},
+								"BlendSpace 2D Sync": {
+									"guid": "da0fdacfa29131179841965910fbd361e9664275",
+									"x": -94,
+									"y": -33,
+									"collapsed": false,
+									"props": {
+										"prop": {
+											"widget": "String",
+											"value": "X"
+										},
+										"prop": {
+											"widget": "String",
+											"value": "Y"
+										},
+										"prop": {
+											"widget": "Int",
+											"x": 4
+										},
+										"prop": {
+											"widget": "Int",
+											"x": 4
+										},
+										"prop": {
+											"widget": "Float",
+											"x": -1
+										},
+										"prop": {
+											"widget": "Float",
+											"x": 1
+										},
+										"prop": {
+											"widget": "Combobox",
+											"x": 1
+										},
+										"prop": {
+											"widget": "Bool",
+											"x": 0
+										},
+										"prop": {
+											"widget": "Float",
+											"x": 3
+										},
+										"prop": {
+											"widget": "String",
+											"value": "walk_run_bs2d"
+										},
+										"prop": {
+											"widget": "String",
+											"value": ""
+										},
+										"prop": {
+											"widget": "Combobox",
+											"x": 0
+										},
+										"prop": {
+											"widget": "Combobox",
+											"x": 0
+										}
+									},
+									"inputs": {
+										"input": {
+											"label": "X",
+											"type": "Float",
+											"id": 0
+										},
+										"input": {
+											"label": "Y",
+											"type": "Float",
+											"id": 1
+										}
+									},
+									"outputs": {
+										"output": {
+											"label": "Pose",
+											"type": "AnimPose",
+											"id": 0
+										}
+									},
+									"bs_name": "walk_run_bs2d",
+									"axis_x": "X",
+									"axis_y": "Y",
+									"grid_cells_x": 4,
+									"grid_cells_y": 4,
+									"axis_min": -1,
+									"axis_max": 1,
+									"interpolation_mode": 1,
+									"points": [
+										{
+											"x": 0,
+											"y": 0,
+											"guid": "325215f4702566a3f838b0b2295ab4505287f150",
+											"name": "idle",
+											"anim_guid": "ced9d7b04198aaed331f012b079f758918543970",
+											"speed": 1
+										},
+										{
+											"x": 0,
+											"y": 0.5,
+											"guid": "f67cd9f97aa39151f8ac6b93eb9b5095f8a658cf",
+											"name": "walk_forward",
+											"anim_guid": "ab006728a684fcc87e239391b1e4b511ad76e221",
+											"speed": 1
+										},
+										{
+											"x": 0,
+											"y": 1,
+											"guid": "3c97e25e1e7d4e9e46d9af8c1d96b387a2611a9a",
+											"name": "run_forward",
+											"anim_guid": "aaeb5a30f6f9e433a02a683909e15d958fca8cc9",
+											"speed": 1
+										},
+										{
+											"x": -0.5,
+											"y": 0.5,
+											"guid": "34fdb6c5d430dab03bdfb13fedd24df6e70b0bbb",
+											"name": "walk_left_arc",
+											"anim_guid": "c8f6fad0e951e3812916f959b59505fd2dd585e9",
+											"speed": 1
+										},
+										{
+											"x": 0.5,
+											"y": 0.5,
+											"guid": "fc9d76dc9cdef2786354d95a910dcb2fc53bfeb8",
+											"name": "walk_right_arc",
+											"anim_guid": "a4970b78da8a24c2c97fc021d47a57623010a2b1",
+											"speed": 1
+										},
+										{
+											"x": -1,
+											"y": 1,
+											"guid": "c10a7f48852f47101abcaae6f60f3e73cc72d7e4",
+											"name": "run_arc_left",
+											"anim_guid": "373136d80cbb9711eb4c6b0196f457b93e868591",
+											"speed": 1
+										},
+										{
+											"x": 1,
+											"y": 1,
+											"guid": "cec4af991fab2832834b5a338598f2513e3cb56f",
+											"name": "run_arc_right",
+											"anim_guid": "b86eb0808a1e48662a206ec9b44d18c5b7c99759",
+											"speed": 1
+										}
+									]
+								},
+								"Float": {
+									"guid": "3ba0d5f13ab3bc5297a3e04b482258c130bc1007",
+									"x": -292,
+									"y": -6,
+									"collapsed": false,
+									"outputs": {
+										"output": {
+											"label": "",
+											"type": "Float",
+											"id": 0
+										}
+									},
+									"param_guid": "7dedd8fb78df7277d73b4c1b86deb4e812677780"
+								},
+								"Float": {
+									"guid": "bb22237e8719f1e74e14b3ace40b84e5350d8dba",
+									"x": -291,
+									"y": 73,
+									"collapsed": false,
+									"outputs": {
+										"output": {
+											"label": "",
+											"type": "Float",
+											"id": 0
+										}
+									},
+									"param_guid": "01924c464551d3f4d122f934631ee92597473702"
+								}
+							},
+							"inputs": {
+								"input": {
+									"node_guid": "89825cea962c988ad1c5ea4af2ddf8376d99846b",
+									"anchor_id": 0,
+									"show_label": true,
+									"show_inline_widget": false
+								},
+								"input": {
+									"node_guid": "da0fdacfa29131179841965910fbd361e9664275",
+									"anchor_id": 0,
+									"show_label": true,
+									"show_inline_widget": true,
+									"float_value": 0
+								},
+								"input": {
+									"node_guid": "da0fdacfa29131179841965910fbd361e9664275",
+									"anchor_id": 1,
+									"show_label": true,
+									"show_inline_widget": true,
+									"float_value": 0
+								}
+							},
+							"anchors": {
+								"anchor": {
+									"input_index": 0,
+									"input_id": 0,
+									"input_label": "Pose",
+									"input_node": "89825cea962c988ad1c5ea4af2ddf8376d99846b",
+									"output_index": 0,
+									"output_id": 0,
+									"output_label": "Pose",
+									"output_node": "da0fdacfa29131179841965910fbd361e9664275"
+								},
+								"anchor": {
+									"input_index": 0,
+									"input_id": 0,
+									"input_label": "X",
+									"input_node": "da0fdacfa29131179841965910fbd361e9664275",
+									"output_index": 0,
+									"output_id": 0,
+									"output_label": "",
+									"output_node": "3ba0d5f13ab3bc5297a3e04b482258c130bc1007"
+								},
+								"anchor": {
+									"input_index": 1,
+									"input_id": 1,
+									"input_label": "Y",
+									"input_node": "da0fdacfa29131179841965910fbd361e9664275",
+									"output_index": 0,
+									"output_id": 0,
+									"output_label": "",
+									"output_node": "bb22237e8719f1e74e14b3ace40b84e5350d8dba"
+								}
+							}
+						}
+					}
+				},
+				"inputs": {
+				},
+				"anchors": {
+				}
+			},
+			"transitions": [
+				{
+					"guid": "f4bf1e84a9d7d87dbc5626c14bd8f24969ab44c6",
+					"from": "47fd09cd7c934d291f3fb5ed3bb14582574158fa",
+					"to": "4fcc16f8d743997fb70fed589e46a8af649e1411",
+					"name": "Transition"
+				}
+			]
+		}
+	},
+	"inputs": {
+		"input": {
+			"node_guid": "00000000000000000000000000000000b00002b2",
+			"anchor_id": 0,
+			"show_label": true,
+			"show_inline_widget": false
+		}
+	},
+	"anchors": {
+		"anchor": {
+			"input_index": 0,
+			"input_id": 0,
+			"input_label": "Pose",
+			"input_node": "00000000000000000000000000000000b00002b2",
+			"output_index": 0,
+			"output_id": 0,
+			"output_label": "Pose",
+			"output_node": "67dccfe3f7e4180300e9f70353ea0247d9b40688"
+		}
+	},
+	"graph_type": "final",
+	"preview_mesh_guid": "a27d350b6709653583108f0567436a8e4e76c53d",
+	"filter_by_skeleton": 1,
+	"fix_root_in_origin": 1,
+	"is_playing": 1,
+	"show_bones": 1,
+	"show_bone_axes": 0,
+	"show_bone_names": 0,
+	"root_motion_enabled": 1,
+	"parameters": {
+		"param": {
+			"name": "x",
+			"type": "Float",
+			"guid": "7dedd8fb78df7277d73b4c1b86deb4e812677780",
+			"min": -1,
+			"max": 1,
+			"float_value": 0
+		},
+		"param": {
+			"name": "y",
+			"type": "Float",
+			"guid": "01924c464551d3f4d122f934631ee92597473702",
+			"min": 0,
+			"max": 1,
+			"float_value": 0
+		}
+	},
+	"preview_overrides": {
+		"override": {
+			"guid": "7dedd8fb78df7277d73b4c1b86deb4e812677780",
+			"type": "Float",
+			"active": false,
+			"float_value": 0
+		},
+		"override": {
+			"guid": "01924c464551d3f4d122f934631ee92597473702",
+			"type": "Float",
+			"active": false,
+			"float_value": 0
+		}
+	},
+	"editor_layout": {
+		"main_weights": {
+			"w": 0.80000001192092896,
+			"w": 0.20000000298023224
+		},
+		"panel_weights": {
+			"w": 0.40000000596046448,
+			"w": 0.40000000596046448,
+			"w": 0.20000000298023224
+		},
+		"hierarchy_on_left": 0,
+		"hierarchy_weight": 0
+	}
+}

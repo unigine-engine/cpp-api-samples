@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <sample title="Navigation Mesh Demo">
+	<sdk_desc>Configuring pathfinding to multiple targets on a plane with obstacles using <i>Navigation Mesh</i>.</sdk_desc>
 	<desc>
-		<brief>This sample demonstrates several material balls collecting coins on a plane with obstacles, navigating around by means of a <i>Navigation Mesh</i>.</brief>
+		<brief>This sample demonstrates several material balls collecting coins on a plane with obstacles, navigating around by means of a <ui>Navigation Mesh</ui>. The <ui>Route radius</ui> parameter controls the navigation width - increasing it creates wider paths that maintain safe distance from obstacles, while decreasing it allows navigation through tighter spaces.</brief>
 	</desc>
 	<controls>
 		<![CDATA[
-		<p>You can move the obstacles in the scene with the <b>widget manipulator</b> (right-click on the object you want to move for the manipulator to appear).</p>
+		<p>Move the path endpoints and obstacles in the scene with the <b>widget manipulator</b>.<br/>
+		<b>LMB</b> click on object to show the manipulator.</p>
 		]]>
 	</controls>
 	<tags>

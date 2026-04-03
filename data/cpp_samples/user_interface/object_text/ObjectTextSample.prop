@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.21.0.0" name="ObjectTextSample" manual="1" parent_name="node_base">
+	<parameter name="user_text_if_empty" type="string">Here could be your text...</parameter>
+	<parameter name="color_step" type="float">1</parameter>
+</property>

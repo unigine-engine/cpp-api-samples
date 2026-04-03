@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>1875df599dd9f6bbadf49b16c14d37694046c57a</guid>
+	<type>world</type>
+	<hash>a7944819dae414c453e83f55b3cfa11b05eb8ab5419e47a8de16e51c17c4a856</hash>
+	<runtimes>
+		<runtime id="1875df599dd9f6bbadf49b16c14d37694046c57a" name="fmod_core.world" link="0"/>
+	</runtimes>
+	<parameters>
+		<parameter type="string" name="physics_settings_path"/>
+		<parameter type="string" name="render_settings_path">guid://8bed8c3ce53501ff11c1b0ae5cc6d017d4ad5524</parameter>
+		<parameter type="string" name="script_name"/>
+		<parameter type="string" name="sound_settings_path"/>
+		<parameter type="string" name="viewports_settings"/>
+	</parameters>
+</asset>

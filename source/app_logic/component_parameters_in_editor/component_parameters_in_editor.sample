@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Component Parameters In Editor">
+	<sdk_desc>Demonstration of component parameter types and configuration options.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample demonstrates possible variations of component parameters. of component parameter types available in the <strong><link to="principles_component_system_cpp">Component System</link></strong>. It includes primitive types, vectors, masks, files, properties, materials, nodes, curves, structs, arrays, and advanced features like conditional visibility and value filtering.</para>
+			<para>Select the <strong nt="1">component_parameters</strong> <ui>Node Dummy</ui> in the Editor and explore all parameter variations in the <ui>Parameters</ui> window. This serves as a comprehensive reference for available parameter types and their configuration options.</para>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Component System</tag>
+		<tag>Programming</tag>
+		<tag>Logic</tag>
+	</tags>
+</sample>

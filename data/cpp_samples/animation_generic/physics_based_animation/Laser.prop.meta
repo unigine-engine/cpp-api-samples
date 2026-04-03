@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>fd897ac649b7a4c52fa0f31a74f0321baad1d9a0</guid>
+	<type>property</type>
+	<hash>2a7c72afbf5a4abb7017256f74ca0173d8864b1dcf51f093f0d63c1ca0927fe1</hash>
+	<runtimes>
+		<runtime id="fd897ac649b7a4c52fa0f31a74f0321baad1d9a0" name="Laser" link="0" type="4"/>
+	</runtimes>
+</asset>

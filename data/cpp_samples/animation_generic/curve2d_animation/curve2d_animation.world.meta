@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>6dfd9b5f0a7eb1328d59dee9fd911b3495b80d03</guid>
+	<type>world</type>
+	<hash>b8460c8676b4925e86685d0549664aa2ef7224769e6a7802ddefd990d888581f</hash>
+	<runtimes>
+		<runtime id="6dfd9b5f0a7eb1328d59dee9fd911b3495b80d03" name="curve_animation.world" link="0"/>
+	</runtimes>
+	<parameters>
+		<parameter type="string" name="physics_settings_path"/>
+		<parameter type="string" name="render_settings_path">guid://8bed8c3ce53501ff11c1b0ae5cc6d017d4ad5524</parameter>
+		<parameter type="string" name="script_name"/>
+		<parameter type="string" name="sound_settings_path"/>
+		<parameter type="string" name="viewports_settings"/>
+	</parameters>
+</asset>

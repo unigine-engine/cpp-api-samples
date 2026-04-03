@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.21.0.0" name="MultipleAsyncRequestsSample" manual="1" parent_name="node_base" tooltip="This component demonstrates running many asynchronous intersection ray casts, using double buffering to manage completed requests, visualizing hits, and reporting frame-latency statistics.">
+	<parameter name="intersection_distance" type="float">10000</parameter>
+</property>

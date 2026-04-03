@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.21.0.0" name="VisualizerSample" manual="1" parent_name="node_base" tooltip="This component provides a UI to control the Visualizer: enable/disable it, toggle depth testing, and switch individual 2D debug primitives via the linked VisualizerUsage component.">
+	<parameter name="visualizer_usage_node" type="node" title="Visualizer usage node">0</parameter>
+</property>

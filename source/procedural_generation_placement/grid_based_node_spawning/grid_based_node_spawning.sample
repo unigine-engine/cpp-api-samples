@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Grid-Based Node Spawning">
+	<sdk_desc>Spawning nodes across a grid.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample shows how to create nodes and place them across a configurable grid.</para>
+			<para>Adjust grid dimensions, cell size, and toggle between spawning from corner or center pivot.</para>
+			<para>The system automatically clears and regenerates the entire grid when parameters are changed, providing real-time visualization of layout modifications.</para>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Objects</tag>
+		<tag>Procedural</tag>
+	</tags>
+</sample>

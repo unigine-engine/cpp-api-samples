@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>cd9e40d6d9edc247fdc54e13501dcaff3d419a58</guid>
+	<type>world</type>
+	<hash>4ac88fb27266557c31ec5b0e35f8981bd593d782e8aafa8d77ef19dfed8276cb</hash>
+	<runtimes>
+		<runtime id="cd9e40d6d9edc247fdc54e13501dcaff3d419a58" name="procedural_mesh_modification.world" link="0"/>
+	</runtimes>
+	<parameters>
+		<parameter type="string" name="physics_settings_path"/>
+		<parameter type="string" name="render_settings_path">guid://8bed8c3ce53501ff11c1b0ae5cc6d017d4ad5524</parameter>
+		<parameter type="string" name="script_name"/>
+		<parameter type="string" name="sound_settings_path"/>
+		<parameter type="string" name="viewports_settings"/>
+	</parameters>
+</asset>

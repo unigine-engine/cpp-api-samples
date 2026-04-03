@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<asset version="2.20.0.0">
+<asset version="2.21.0.0">
 	<guid>3dc8877de41d023175031101c62ae7ac81ba2e33</guid>
 	<type>property</type>
-	<hash>4fea9c69</hash>
+	<hash>e55e90ec2675b5b00ce1224e0256d4e965b626f637dcc46dbbc5b50f839aaefe</hash>
 	<runtimes>
 		<runtime id="3dc8877de41d023175031101c62ae7ac81ba2e33" name="BodyFractureShootingGallerySample" link="0" type="4"/>
 	</runtimes>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.21.0.0" guid="9efdb54ea6dccd7108b278fed94b844e3151496d" base_material="5feff4446e4aac5edd1c6a742d42b3510788dd2b">
+	<texture name="albedo">guid://abd87474b0dc75cad1345ea488700b48a05a2f9b</texture>
+	<parameter name="roughness" expression="0">0.816169977</parameter>
+	<parameter name="offset" expression="0">0</parameter>
+	<parameter name="mesh_height" expression="0">13.0379</parameter>
+</material>

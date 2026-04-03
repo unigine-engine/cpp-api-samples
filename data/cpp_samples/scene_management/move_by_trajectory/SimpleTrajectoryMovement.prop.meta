@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>484d28d2b7aeff693287d4c245bc3437aee0db74</guid>
+	<type>property</type>
+	<hash>ac66afc5cff3dc7a0036948bacb57b8f008cde37338d3ba24f6f98a3d516ff98</hash>
+	<runtimes>
+		<runtime id="484d28d2b7aeff693287d4c245bc3437aee0db74" name="SimpleTrajectoryMovement" link="0" type="4"/>
+	</runtimes>
+</asset>

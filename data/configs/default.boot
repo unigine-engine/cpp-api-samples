@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<boot version="2.20.0.0" autosave="1">
+<boot version="2.21.0.0" autosave="1">
 	<gui_path>core/gui/</gui_path>
 	<engine_log>log.txt</engine_log>
 	<system_script>core/unigine.usc</system_script>
@@ -28,6 +28,8 @@
 		<console_limit>16384</console_limit>
 		<console_size>16</console_size>
 		<controls_config>configs/default.controls</controls_config>
+		<d3d12_frame_pool_gpu_upload>128</d3d12_frame_pool_gpu_upload>
+		<d3d12_frame_pool_upload>128</d3d12_frame_pool_upload>
 		<d3d12_memory_pool_heap_default>64</d3d12_memory_pool_heap_default>
 		<d3d12_memory_pool_heap_gpu_upload>16</d3d12_memory_pool_heap_gpu_upload>
 		<d3d12_memory_pool_heap_readback>64</d3d12_memory_pool_heap_readback>
@@ -58,6 +60,17 @@
 		<mesh_procedural_path>.unigine_mesh_procedural</mesh_procedural_path>
 		<mesh_procedural_read_only>0</mesh_procedural_read_only>
 		<my_console_variable_int>0</my_console_variable_int>
+		<num_cores_reserve>-1</num_cores_reserve>
+		<num_threads_async>0</num_threads_async>
+		<num_threads_background>0</num_threads_background>
+		<num_threads_critical>0</num_threads_critical>
+		<num_threads_file_stream>0</num_threads_file_stream>
+		<num_threads_limit_async>256</num_threads_limit_async>
+		<num_threads_limit_background>256</num_threads_limit_background>
+		<num_threads_limit_critical>256</num_threads_limit_critical>
+		<num_threads_limit_file_stream>256</num_threads_limit_file_stream>
+		<num_threads_limit_sync>256</num_threads_limit_sync>
+		<num_threads_sync>0</num_threads_sync>
 		<particles_memory_preload>50</particles_memory_preload>
 		<process_priority>1</process_priority>
 		<profiler_font>core/gui/font.ttf</profiler_font>
@@ -78,6 +91,7 @@
 		<video_offscreen>0</video_offscreen>
 		<video_quadro_sync>0</video_quadro_sync>
 		<vr_debug_mode>0</vr_debug_mode>
+		<vr_foveated_fixed_eye_center_bias>0</vr_foveated_fixed_eye_center_bias>
 		<vr_foveated_rendering_enabled>1</vr_foveated_rendering_enabled>
 		<vr_hand_tracking_show_basis>0</vr_hand_tracking_show_basis>
 		<vr_hand_tracking_show_bone_sizes>0</vr_hand_tracking_show_bone_sizes>
@@ -122,7 +136,7 @@
 		<vr_render_enabled>1</vr_render_enabled>
 		<vr_render_while_hmd_idle>1</vr_render_while_hmd_idle>
 		<vr_service_init_timeout>60</vr_service_init_timeout>
-		<vr_tracking_space>2</vr_tracking_space>
+		<vr_tracking_space>1</vr_tracking_space>
 		<vr_window_mode>1</vr_window_mode>
 		<world_manager_images_memory>128</world_manager_images_memory>
 		<world_manager_meshes_memory>128</world_manager_meshes_memory>

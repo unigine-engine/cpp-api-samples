@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>d1849b824f75f8cd050d069911401ae7fbf1561b</guid>
+	<type>property</type>
+	<hash>4879e5f074da038a5bd5111364d873c660fdccf0ba69102cc4f4e090d4b9e2c1</hash>
+	<runtimes>
+		<runtime id="d1849b824f75f8cd050d069911401ae7fbf1561b" name="TrackPlayback" link="0" type="4"/>
+	</runtimes>
+</asset>

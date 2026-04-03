@@ -87,13 +87,20 @@ public:
 
 	virtual ~AsyncTask() override
 	{
-		Unigine::ScopedLock lock(mutex);
-	};
+		cancel();
+	}
 
-	T &get() { return stored_value; }
-	const T &get() const { return stored_value; }
-	operator T &() { return stored_value; }
-	operator T const &() const { return stored_value; }
+	// Remove from queue and wait for in-flight process() to finish
+	void cancel()
+	{
+		ThreadQueue::get().remove(this);
+		Unigine::ScopedLock lock(mutex);
+	}
+
+	T &get() { UNIGINE_ASSERT(completed); return stored_value; }
+	const T &get() const { UNIGINE_ASSERT(completed); return stored_value; }
+	operator T &() { UNIGINE_ASSERT(completed); return stored_value; }
+	operator T const &() const { UNIGINE_ASSERT(completed); return stored_value; }
 
 private:
 	Unigine::Mutex mutex;

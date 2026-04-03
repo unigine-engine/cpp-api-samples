@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<asset version="2.20.0.0">
+<asset version="2.21.0.0">
 	<guid>79c2ae232269eefadba3c8043bc802363cfe55c6</guid>
 	<type>world</type>
-	<hash>df6f5b31</hash>
+	<hash>0e3d00ff788a0951257aff2d57a06dc184aed5cb16a8265f49ec7a387abed903</hash>
 	<runtimes>
 		<runtime id="79c2ae232269eefadba3c8043bc802363cfe55c6" name="http_image_request.world" link="0"/>
 	</runtimes>

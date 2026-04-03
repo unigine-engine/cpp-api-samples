@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>179842925a9b9f4b46546f90aba85f349aa74bde</guid>
+	<type>property</type>
+	<hash>e449a7004b108979a55341db437cbd1d9057d5823684565b19e165f36bb7bfe7</hash>
+	<runtimes>
+		<runtime id="179842925a9b9f4b46546f90aba85f349aa74bde" name="PathCircle" link="0" type="4"/>
+	</runtimes>
+</asset>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>69e7bf40fd88b3e007eb72ea138dca5ab18030f5</guid>
+	<type>material</type>
+	<hash>04a61ecd00f7d6d288181ccde00a92ed258c45c057f5ad132a207972e325d09c</hash>
+	<runtimes>
+		<runtime id="69e7bf40fd88b3e007eb72ea138dca5ab18030f5" name="particles_base_engine_2" link="0" type="5"/>
+	</runtimes>
+</asset>

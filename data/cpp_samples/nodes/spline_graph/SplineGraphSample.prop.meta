@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<asset version="2.20.0.0">
+<asset version="2.21.0.0">
 	<guid>c77cc1be42dc2b93d647fe1eeab478305af044cb</guid>
 	<type>property</type>
-	<hash>ec304ddb</hash>
+	<hash>11c24ed9030293681f83e62d6f4c665971361a8e3c0ba28c63b9085a60d09e65</hash>
 	<runtimes>
 		<runtime id="c77cc1be42dc2b93d647fe1eeab478305af044cb" name="SplineGraphSample" link="0" type="4"/>
 	</runtimes>

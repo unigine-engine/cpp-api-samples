@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<asset version="2.20.0.0">
+<asset version="2.21.0.0">
 	<guid>a785b88f374695310ea5137111e24cc063a6329e</guid>
 	<type>world</type>
-	<hash>05d2737d</hash>
+	<hash>2b3c23a6a244e96382cc09aa518fe1e0cce06af0cb6f41630c2a7b03fb885cad</hash>
 	<runtimes>
 		<runtime id="a785b88f374695310ea5137111e24cc063a6329e" name="widgets.world" link="0"/>
 	</runtimes>

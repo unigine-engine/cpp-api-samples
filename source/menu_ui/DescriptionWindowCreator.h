@@ -11,9 +11,11 @@ public:
 
 	COMPONENT_INIT(init);
 	COMPONENT_SHUTDOWN(shutdown);
-	
+
 	PROP_PARAM(Mask, window_align, 0);
 	PROP_PARAM(Mask, window_width, 400);
+
+	SampleDescriptionWindow &getWindow();
 
 private:
 	void init();

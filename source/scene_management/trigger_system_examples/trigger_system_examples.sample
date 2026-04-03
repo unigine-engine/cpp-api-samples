@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Trigger System Examples">
+	<sdk_desc>Implementation of various types of triggers.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample illustrates how to implement a simple trigger component in five different ways:</para>
+			<ul>
+				<li><strong nt="1">Intersection Trigger</strong> performs the bound check via <ui><link to="world_class" offset="getIntersection_Vec3_Vec3_int_VECNode_Object">World::getIntersection()</link></ui>.</li>
+				<li><strong nt="1">Math Trigger</strong> performs the check if the object is inside the trigger sphere or cube using the object coordinates (the simplest and most performance-friendly way).</li>
+				<li><strong nt="1">World Trigger</strong> uses the built-in <ui><link to="worldtrigger_class">WorldTrigger</link></ui> node, which automatically detects when nodes enter or leave a predefined volume.</li>
+				<li><strong nt="1">Physical Trigger</strong> uses the built-in <ui><link to="physicaltrigger_class">PhysicalTrigger</link></ui> node, triggers events when a physical object gets inside or outside it. To be detected by the trigger, physical objects are required to have at the same time both a body and a shape.</li>
+				<li>
+					<para><strong nt="1">Node Trigger</strong> uses the built-in <ui><link to="nodetrigger_class">NodeTrigger</link></ui> node, which has no visual representation and triggers events when being enabled or moved.</para>
+					<para>Press <ui>Cube Active</ui> to see Node Trigger in action. This checkbox toggles the demonstration cube on/off, triggering enable/disable events that change the plate text color and animate the cube's material when it's moved with a manipulator (click the cube for the manipulator to appear).</para>
+				</li>
+			</ul>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Triggers</tag>
+		<tag>Logic</tag>
+	</tags>
+	<keywords>World,Node,Physical,Custom</keywords>
+</sample>

@@ -1,3 +1,7 @@
+// Implements an off-screen target indicator system. When the target is visible,
+// a marker sprite highlights its position. When off-screen, an arrow sprite
+// rotates to point toward the target direction with edge-clamped positioning.
+
 #include "TargetMarker.h"
 
 REGISTER_COMPONENT(TargetMarker);
@@ -5,8 +9,10 @@ REGISTER_COMPONENT(TargetMarker);
 using namespace Unigine;
 using namespace Math;
 
+// Sprites are loaded and attached to main window, target and camera are validated.
 void TargetMarker::init()
 {
+	// Load arrow sprite for off-screen indication
 	if (!arrowSprite)
 	{
 		Log::error("TargetMarker::init(): Source file for the pointer sprite image is not found.");
@@ -15,6 +21,7 @@ void TargetMarker::init()
 	arrow = WidgetSprite::create(arrowSprite.get());
 	WindowManager::getMainWindow()->addChild(arrow, Gui::ALIGN_OVERLAP);
 
+	// Load point marker sprite for on-screen highlighting
 	if (!pointSprite)
 	{
 		Log::error("TargetMarker::init(): Source file for the marker sprite image is not found.");
@@ -24,6 +31,7 @@ void TargetMarker::init()
 	point = WidgetSprite::create(pointSprite.get());
 	WindowManager::getMainWindow()->addChild(point, Gui::ALIGN_OVERLAP);
 
+	// Validate target node reference
 	if (!targetNode)
 	{
 		Log::error("TargetMarker::init(): No target object specified.");
@@ -31,6 +39,7 @@ void TargetMarker::init()
 	}
 	target = targetNode.get();
 
+	// Component must be attached to a Player node for projection calculations
 	camera = checked_ptr_cast<Player>(node);
 	if (!camera)
 	{
@@ -39,11 +48,13 @@ void TargetMarker::init()
 	}
 }
 
+// Target position is projected to screen and appropriate indicator is displayed.
 void TargetMarker::update()
 {
 	if (!arrow || !point || !target || !camera)
 		return;
 
+	// Cache sprite dimensions for arrow positioning calculations
 	arrow_height = arrow->getLayerHeight(0);
 	arrow_width = arrow->getLayerWidth(0);
 	arrow_half_height = arrow_height / 2;
@@ -51,27 +62,31 @@ void TargetMarker::update()
 
 	point_width = point->getLayerWidth(0);
 	point_height = point->getLayerHeight(0);
+	// Offset marker by configurable pivot, scaled for display DPI
 	mat4 translation = mat4(translate(Vec3(-point_width * pointPivot.get().x, -point_height * pointPivot.get().y, 0.0f) * WindowManager::getMainWindow()->getDpiScale()));
 	point->setTransform(translation);
 
+	// Start with both hidden; visibility is determined below based on target position
 	arrow->setHidden(true);
 	point->setHidden(true);
 
-	// window size
+	// Window size
 	int width = WindowManager::getMainWindow()->getClientSize().x;
 	int height = WindowManager::getMainWindow()->getClientSize().y;
 	int halfWidth = width / 2;
 	int halfHeight = height / 2;
 
-	// target point in screen space
+	// Target point in screen space
 	int x = 0;
 	int y = 0;
 
+	// Direction vector from camera to target center
 	vec3 targetDirection(target->getWorldBoundBox().getCenter() - camera->getWorldPosition());
 
+	// Negative dot product indicates target is behind the camera's view plane
 	bool behind = dot(camera->getWorldDirection(Unigine::Math::AXIS_NZ), targetDirection) < 0;
 
-	// find target point projection to the screen-space plane and change the coordinate system to the center of the screen
+	// Find target point projection to the screen-space plane and change the coordinate system to the center of the screen
 	if (!behind)
 	{
 		camera->getScreenPosition(x, y, target->getWorldBoundBox().getCenter(), width, height);
@@ -80,13 +95,13 @@ void TargetMarker::update()
 		y -= halfHeight;
 		y *= -1;
 	}
-	// if the target is out of sight calculate the position in screen space relative to the reflected target position
+	// If target is out of sight calculate position in screen space relative to reflected target position
 	else
 	{
 		Vec3 inverseScreenPlaneNormal(camera->getViewDirection() * -1);
 		Vec3 relativeToCameraTargetPosition = target->getWorldBoundBox().getCenter() - camera->getWorldPosition();
 
-		// ortho projection of vector realtiveToCameraTargetPosition to vector inverseScreenPlaneNormal
+		// Orthogonal projection of relativeToCameraTargetPosition onto inverseScreenPlaneNormal
 		Vec3 orthoProjectionTarget = inverseScreenPlaneNormal * dot(relativeToCameraTargetPosition, inverseScreenPlaneNormal);
 		Vec3 reflectedTargetPosition = (relativeToCameraTargetPosition - orthoProjectionTarget * 2) + camera->getWorldPosition();
 
@@ -94,28 +109,28 @@ void TargetMarker::update()
 
 		x -= halfWidth;
 		y -= halfHeight;
-		// when target is out of sight the arrow is always at the bottom part of the screen
+		// When target is out of sight the arrow is always at the bottom part of the screen
 		if (y > 0)
 			y *= -1;
 	}
 
-	// if the target is inside the field of view we highlight it with the marker
+	// If target is inside the field of view, highlight it with the marker
 	if (!behind && x >= -halfWidth && x <= halfWidth && y >= -halfHeight && y <= halfHeight)
 	{
 		point->setHidden(false);
 		point->setPosition(x + halfWidth, -y + halfHeight);
 	}
-	// if the target is out of sight we show an arrow that points direction to the target
+	// If target is out of sight, show an arrow pointing toward it
 	else
 	{
-		// calculating the pivot point for the arrow
+		// Calculate the pivot point for the arrow
 		int point_x = 0;
 		int point_y = 0;
 		getIntersectionWithRect(point_x, point_y, x, y, halfWidth, halfHeight);
 		float angle = 0.0f;
 
-		// setting porsition and rotation of the arrow sprite, all calculations are made taking into account the fact that the position of the sprite is calculated relative to its upper left corner
-		// if the arrow is in the corner
+		// Set position and rotation of arrow sprite (sprite position is relative to its upper left corner)
+		// Arrow is in the corner
 		if (halfHeight - Math::abs(point_y) <= arrow_half_height && halfWidth - Math::abs(point_x) <= arrow_half_width)
 		{
 			float dx, dy;
@@ -142,26 +157,26 @@ void TargetMarker::update()
 			else
 				point_y = -halfHeight + arrow_height;
 		}
-		// if the arrow points up
+		// Arrow points up
 		else if (point_y == halfHeight)
 		{
 			point_x -= arrow_half_width;
 			angle = -90;
 		}
-		// if the arrow points down
+		// Arrow points down
 		else if (point_y == -halfHeight)
 		{
 			point_y += arrow_height;
 			point_x -= arrow_half_width;
 			angle = 90;
 		}
-		// if the arrow points to the left
+		// Arrow points to the left
 		else if (point_x == -halfWidth)
 		{
 			point_y += arrow_half_height;
 			angle = 180;
 		}
-		// if the arrow points to the right
+		// Arrow points to the right
 		else if (point_x == halfWidth)
 		{
 			point_x -= arrow_width;
@@ -170,8 +185,10 @@ void TargetMarker::update()
 		}
 
 		arrow->setHidden(false);
+		// Convert from center-origin coords back to top-left origin for widget positioning
 		arrow->setPosition(point_x + halfWidth, -point_y + halfHeight);
 
+		// Rotate arrow around its center: translate to origin, rotate, translate back
 		mat4 rotation(
 			mat4(translate(Vec3(arrow_half_width * 1.0f, arrow_half_height * 1.0f, 0.0f) * WindowManager::getMainWindow()->getDpiScale())) *
 			rotate(quat(vec3_up, angle)) *
@@ -182,16 +199,21 @@ void TargetMarker::update()
 	}
 }
 
+// Sprite widgets are released.
 void TargetMarker::shutdown()
 {
 	arrow.deleteLater();
 	point.deleteLater();
 }
 
+// Calculates where a ray from screen center intersects the screen boundary rectangle.
+// Used to clamp the arrow indicator position to screen edges when target is off-screen.
 void TargetMarker::getIntersectionWithRect(int& x, int& y, int vec_x, int vec_y, int half_width, int half_height)
 {
+	// Upper half of screen (positive Y in center-origin coords)
 	if (vec_y >= 0)
 	{
+		// horizontal ray - intersects left or right edge only
 		if (vec_y == 0)
 		{
 			if (vec_x > 0)
@@ -208,12 +230,15 @@ void TargetMarker::getIntersectionWithRect(int& x, int& y, int vec_x, int vec_y,
 			return;
 		}
 
+		// Try intersection with top edge first using similar triangles
 		x = (int)(half_height * ((float)vec_x / (float)vec_y));
 		y = half_height;
 
+		// If intersection point is within screen width, top edge is the closest
 		if (x >= -half_width && x <= half_width)
 			return;
 
+		// Otherwise intersect with left or right edge
 		if (vec_x >= 0)
 		{
 			if (vec_x == 0)
@@ -224,6 +249,7 @@ void TargetMarker::getIntersectionWithRect(int& x, int& y, int vec_x, int vec_y,
 				return;
 			}
 
+			// Intersection with right edge
 			x = half_width;
 			y = (int)(half_width * ((float)vec_y / (float)vec_x));
 
@@ -231,20 +257,25 @@ void TargetMarker::getIntersectionWithRect(int& x, int& y, int vec_x, int vec_y,
 		}
 		else
 		{
+			// Intersection with left edge
 			x = -half_width;
 			y = (int)(-half_width * ((float)vec_y / (float)vec_x));
 
 			return;
 		}
 	}
+	// Lower half of screen (negative Y in center-origin coords)
 	else
 	{
+		// Try intersection with bottom edge first
 		x = (int)(-half_height * ((float)vec_x / (float)vec_y));
 		y = -half_height;
 
+		// If within screen width, bottom edge is the closest intersection
 		if (x >= -half_width && x <= half_width)
 			return;
 
+		// Otherwise intersect with left or right edge
 		if (vec_x >= 0)
 		{
 			if (vec_x == 0)
@@ -255,6 +286,7 @@ void TargetMarker::getIntersectionWithRect(int& x, int& y, int vec_x, int vec_y,
 				return;
 			}
 
+			// Intersection with right edge
 			x = half_width;
 			y = (int)(half_width * ((float)vec_y / (float)vec_x));
 
@@ -262,6 +294,7 @@ void TargetMarker::getIntersectionWithRect(int& x, int& y, int vec_x, int vec_y,
 		}
 		else
 		{
+			// Intersection with left edge
 			x = -half_width;
 			y = (int)(-half_width * ((float)vec_y / (float)vec_x));
 

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<asset version="2.20.0.0">
+<asset version="2.21.0.0">
 	<guid>5e35b77a572de091df6620bc780584eb829f554e</guid>
 	<type>world</type>
-	<hash>334d37c1</hash>
+	<hash>cbc82de5bc48aed024b65bbf1d956f60faaa96b1f7aefc3820666bc5155fb707</hash>
 	<runtimes>
 		<runtime id="5e35b77a572de091df6620bc780584eb829f554e" name="navigation_mesh_demo.world" link="0"/>
 	</runtimes>

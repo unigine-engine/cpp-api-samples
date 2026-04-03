@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<asset version="2.20.0.0">
+<asset version="2.21.0.0">
 	<guid>2cacf8667d9316db3f20491f080de43997f392b2</guid>
 	<type>texture</type>
-	<hash>45ceeeb5</hash>
+	<hash>406a4b0627047c45886eb3c178bc0c0b598046e099d417022de7cad1761b9cb5</hash>
 	<runtimes>
 		<runtime id="d765c4c2ddec19b27c67c53ddd7a778853a25269" name="physics.png" link="0" type="6"/>
 	</runtimes>

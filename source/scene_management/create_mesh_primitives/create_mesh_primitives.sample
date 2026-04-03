@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Create Mesh Primitives">
+	<sdk_desc>Creating parametric 3D primitives at runtime.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample demonstrates how to create parametric 3D primitives at runtime in UNIGINE.</para>
+			<para>It showcases the use of the <strong nt="1"><link to="mesh_class">Mesh</link></strong> class and <strong nt="1"><link to="1">ObjectMeshDynamic</link></strong> nodes to procedurally generate a variety of basic shapes (<strong>Box, Sphere, Cylinder, Capsule, Prism with a custom number of sides</strong> and <strong>Plane</strong>) via code.</para>
+			<para>Each shape is constructed with a customizable size and resolution, added to a mesh surface, and placed in the world at a designated position.</para>
+			<para>This approach allows dynamic geometry generation for tools, Editor extensions, procedural environments, and rapid prototyping.</para>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Objects</tag>
+		<tag>Basics</tag>
+	</tags>
+	<keywords>Mesh</keywords>
+</sample>

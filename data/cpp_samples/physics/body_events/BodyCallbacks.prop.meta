@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<asset version="2.20.0.0">
+<asset version="2.21.0.0">
 	<guid>6d0998e071edbf0750df52688ef9d74da7c9aefd</guid>
 	<type>property</type>
-	<hash>d8f12cc</hash>
+	<hash>c2c1bfa03781ba6a0382daceaf0677310096e780698d2780711d53119f3d8472</hash>
 	<runtimes>
 		<runtime id="6d0998e071edbf0750df52688ef9d74da7c9aefd" name="BodyCallbacks" link="0" type="4"/>
 	</runtimes>

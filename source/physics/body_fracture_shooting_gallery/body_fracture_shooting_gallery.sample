@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<sample title="BodyFracture Shooting Gallery">
+<sample title="Body Fracture Shooting Gallery">
 	<sdk_desc>Implementation of a basic physics-driven shooting gallery using <i>Fracture Body</i>.</sdk_desc>
 	<desc>
 		<brief>

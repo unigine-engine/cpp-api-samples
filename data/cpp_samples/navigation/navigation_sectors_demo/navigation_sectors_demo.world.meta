@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<asset version="2.20.0.0">
+<asset version="2.21.0.0">
 	<guid>8b1fb7ca2ca5712fb00675e3effe0e307e77da0f</guid>
 	<type>world</type>
-	<hash>d40c465d</hash>
+	<hash>66262ba675e9b0d422bd11b53e863b287911c7bb8a6c7d48eb150fcaad51b9fd</hash>
 	<runtimes>
 		<runtime id="8b1fb7ca2ca5712fb00675e3effe0e307e77da0f" name="navigation_sectors_demo.world" link="0"/>
 	</runtimes>

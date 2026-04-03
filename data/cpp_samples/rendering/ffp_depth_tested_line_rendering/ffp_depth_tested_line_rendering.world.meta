@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>fd3b3ee5be8fa2c7df3df7151791f842b879ce1f</guid>
+	<type>world</type>
+	<hash>a79c5e302488725ba1b8f8d23217efbb941117a62b07a42fdb3ecac9ee047f2a</hash>
+	<runtimes>
+		<runtime id="fd3b3ee5be8fa2c7df3df7151791f842b879ce1f" name="ffp_depth.world" link="0"/>
+	</runtimes>
+	<parameters>
+		<parameter type="string" name="physics_settings_path"/>
+		<parameter type="string" name="render_settings_path">guid://8bed8c3ce53501ff11c1b0ae5cc6d017d4ad5524</parameter>
+		<parameter type="string" name="script_name"/>
+		<parameter type="string" name="sound_settings_path"/>
+		<parameter type="string" name="viewports_settings"/>
+	</parameters>
+</asset>

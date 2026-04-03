@@ -33,60 +33,60 @@ public:
 	template <class L, typename std::enable_if<is_lambda<L>::value, bool>::type = false>
 	UNIGINE_INLINE static void addTask(Unigine::Event<Args...>& event, L f, Unigine::LambdaHelper<Args...> = {})
 	{
-		auto pConnection = new Unigine::EventConnection;
-		event.connect(*pConnection, [f, pConnection](Args... args) {
+		auto conn = std::make_shared<Unigine::EventConnection>();
+		event.connect(*conn, [f, conn](Args... args) {
 			if (!static_cast<bool>(f(args...)))
-				delete pConnection;
+				conn->disconnect();
 			});
 	}
 
 	template <class Ret, class... Extra, typename std::enable_if<std::is_convertible<Ret, bool>::value, bool>::type = false>
 	UNIGINE_INLINE static void addTask(Unigine::Event<Args...>& event, Ret(*f)(Args..., Extra...), Extra... extra)
 	{
-		auto pConnection = new Unigine::EventConnection;
-		event.connect(*pConnection, [f, pConnection, extra...](Args... args) {
+		auto conn = std::make_shared<Unigine::EventConnection>();
+		event.connect(*conn, [f, conn, extra...](Args... args) {
 			if (!static_cast<bool>(f(args..., extra...)))
-				delete pConnection;
+				conn->disconnect();
 			});
 	}
 
 	template <class Class, class Ret, class... Extra, typename std::enable_if<std::is_convertible<Ret, bool>::value, bool>::type = false>
 	UNIGINE_INLINE static void addTask(Unigine::Event<Args...>& event, Class* c, Ret(Class::* f)(Args..., Extra...), Extra... extra)
 	{
-		auto pConnection = new Unigine::EventConnection;
-		event.connect(*pConnection, [c, f, pConnection, extra...](Args... args) {
+		auto conn = std::make_shared<Unigine::EventConnection>();
+		event.connect(*conn, [c, f, conn, extra...](Args... args) {
 			if (!static_cast<bool>((c->*f)(args..., extra...)))
-				delete pConnection;
+				conn->disconnect();
 			});
 	}
 
 	template <class L, typename std::enable_if<is_lambda<L>::value, bool>::type = false>
 	UNIGINE_INLINE static void addSingleshotTask(Unigine::Event<Args...>& event, L f, Unigine::LambdaHelper<Args...> = {})
 	{
-		auto pConnection = new Unigine::EventConnection;
-		event.connect(*pConnection, [f, pConnection](Args... args) {
+		auto conn = std::make_shared<Unigine::EventConnection>();
+		event.connect(*conn, [f, conn](Args... args) {
 			f(args...);
-			delete pConnection;
+			conn->disconnect();
 			});
 	}
 
 	template <class Ret, class... Extra>
 	UNIGINE_INLINE static void addSingleshotTask(Unigine::Event<Args...>& event, Ret(*f)(Args..., Extra...), Extra... extra)
 	{
-		auto pConnection = new Unigine::EventConnection;
-		event.connect(*pConnection, [f, pConnection, extra...](Args... args) {
+		auto conn = std::make_shared<Unigine::EventConnection>();
+		event.connect(*conn, [f, conn, extra...](Args... args) {
 			f(args..., extra...);
-			delete pConnection;
+			conn->disconnect();
 			});
 	}
 
 	template <class Class, class Ret, class... Extra>
 	UNIGINE_INLINE static void addSingleshotTask(Unigine::Event<Args...>& event, Class* c, Ret(Class::* f)(Args..., Extra...), Extra... extra)
 	{
-		auto pConnection = new Unigine::EventConnection;
-		event.connect(*pConnection, [c, f, pConnection, extra...](Args... args) {
+		auto conn = std::make_shared<Unigine::EventConnection>();
+		event.connect(*conn, [c, f, conn, extra...](Args... args) {
 			(c->*f)(args..., extra...);
-			delete pConnection;
+			conn->disconnect();
 			});
 	}
 };

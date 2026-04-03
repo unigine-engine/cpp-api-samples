@@ -1,0 +1,3 @@
+# File Operations
+
+This sample shows how you can create a text file and display its contents inside the widget via C++ API by using the *File* class. To create a text file, type the text from keyboard inside the *Writer* widget and press <b>Write</b> to save. Click **Read** inside the *Reader* widget to display the recorded information. The saved information will be displayed in the same widgets when you start the sample next time.

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>42a0b8aaee5e9a9bcd17f165f3461d6f3710930b</guid>
+	<type>skeleton</type>
+	<hash>3cf02d2d76aa1fd2b8f4669cfc2cf4053f90a3c9d9cee71fb656a83097f4a547</hash>
+	<runtimes>
+		<runtime id="42a0b8aaee5e9a9bcd17f165f3461d6f3710930b" name="capsule.skeleton" link="0" type="8"/>
+	</runtimes>
+	<parameters>
+		<parameter type="string" name="blend_masks">{}</parameter>
+		<parameter type="string" name="joints">bone_00,bone_01,bone_02,bone_03</parameter>
+		<parameter type="bool" name="retarget_enabled">0</parameter>
+		<parameter type="string" name="retarget_joints">{&quot;bone_00&quot;:{&quot;mode&quot;:0,&quot;custom_length&quot;:-1},&quot;bone_01&quot;:{&quot;mode&quot;:0,&quot;custom_length&quot;:-1},&quot;bone_02&quot;:{&quot;mode&quot;:0,&quot;custom_length&quot;:-1},&quot;bone_03&quot;:{&quot;mode&quot;:0,&quot;custom_length&quot;:-1}}</parameter>
+	</parameters>
+</asset>

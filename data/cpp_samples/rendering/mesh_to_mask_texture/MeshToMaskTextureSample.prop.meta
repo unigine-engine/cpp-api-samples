@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>fb8c7e081ead5bdb3fb7019469289eddf832c9f3</guid>
+	<type>property</type>
+	<hash>51df52fbbcc85459cdcdef10c9c51a4ab013fc2accb49dee82c3581f7ff1c1c5</hash>
+	<runtimes>
+		<runtime id="fb8c7e081ead5bdb3fb7019469289eddf832c9f3" name="MeshToMaskTextureSample" link="0" type="4"/>
+	</runtimes>
+</asset>

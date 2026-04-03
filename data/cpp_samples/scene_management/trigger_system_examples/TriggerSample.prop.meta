@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>7616e4a6baf9c779a658fb75df183f0874b74446</guid>
+	<type>property</type>
+	<hash>c771ae346c706d01d9eeeda0d9858d869450609390fed09b1e283f147186f741</hash>
+	<runtimes>
+		<runtime id="7616e4a6baf9c779a658fb75df183f0874b74446" name="TriggerSample" link="0" type="4"/>
+	</runtimes>
+</asset>

@@ -42,6 +42,7 @@ private:
 	void shutdown();
 
 	void onContactEnter(const Unigine::BodyPtr &body, int num);
+	void renderBroken(const Unigine::BodyPtr &body);
 
 	void crack(const Unigine::BodyFracturePtr &fracture, const Unigine::Math::Vec3 &point, const Unigine::Math::vec3 &normal);
 

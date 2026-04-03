@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.21.0.0" name="LandscapePolygonsSample" manual="1" parent_name="node_base">
+	<parameter name="terrain_param" type="node" title="Terrain">0</parameter>
+	<parameter name="figures" type="array" title="Figures" array_type="node"/>
+	<parameter name="layer_map_node" type="node" title="Layer Map">0</parameter>
+	<parameter name="layer_map_editor_node" type="node" title="Layer Map Editor">0</parameter>
+	<parameter name="manipulators_node" type="node">0</parameter>
+	<parameter name="ortho_material" type="material" title="DecalOrtho material"/>
+	<parameter name="mesh_material" type="material" title="Mesh render material"/>
+	<parameter name="clutter_node" type="node" title="Clutter node">0</parameter>
+</property>

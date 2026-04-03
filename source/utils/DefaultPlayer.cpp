@@ -39,7 +39,7 @@ void DefaultPlayer::update()
 	bool current_state = Input::isMouseButtonPressed(spectator_mode_button);
 	if (prev_state != current_state)
 	{
-		ControlsApp::setMouseEnabled(current_state ? true : init_mouse_enabled);
+		ControlsApp::setMouseEnabled(current_state ? true : false);
 		player_camera->setControlled(current_state ? true : init_player_controlled);
 		prev_state = current_state;
 	}

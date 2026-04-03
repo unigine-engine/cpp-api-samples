@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>3741e3b0322189cfa281fb81dc0da08ea2066fd5</guid>
+	<type>property</type>
+	<hash>e9bcac71e068e2bb84382ea233e0d535e6abc4869329c578f36017b72acb7a22</hash>
+	<runtimes>
+		<runtime id="3741e3b0322189cfa281fb81dc0da08ea2066fd5" name="GBufferReadSample" link="0" type="4"/>
+	</runtimes>
+</asset>

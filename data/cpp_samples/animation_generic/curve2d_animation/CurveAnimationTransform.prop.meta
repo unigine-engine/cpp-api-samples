@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>c285f7210d0c377a4d918dc810535ec121615541</guid>
+	<type>property</type>
+	<hash>bcbd3f9a3b7495c774e37c61201352e44450be6bbd7d78674e58ae66c07df3c4</hash>
+	<runtimes>
+		<runtime id="c285f7210d0c377a4d918dc810535ec121615541" name="CurveAnimationTransform" link="0" type="4"/>
+	</runtimes>
+</asset>

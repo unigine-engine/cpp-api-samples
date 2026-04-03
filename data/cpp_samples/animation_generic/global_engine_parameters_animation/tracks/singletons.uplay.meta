@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>c42c4e1ae3462d72847c45f223235511e3f24223</guid>
+	<type>file</type>
+	<hash>c3c938cea49f073198ab78f7d3c2327270179433b5681c43d5b6232b83b0a340</hash>
+	<runtimes>
+		<runtime id="c42c4e1ae3462d72847c45f223235511e3f24223" name="singletons.uplay" link="0"/>
+	</runtimes>
+</asset>

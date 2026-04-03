@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<asset version="2.20.0.0">
+<asset version="2.21.0.0">
 	<guid>0b9bd74e87552363b112f62bb86526e12e40a55e</guid>
 	<type>material</type>
-	<hash>441b5d3e</hash>
+	<hash>4554662068ce71b9959da940f0931c21d736be4cc426dfe2ee152885c40c3817</hash>
 	<runtimes>
 		<runtime id="0b9bd74e87552363b112f62bb86526e12e40a55e" name="road" link="0" type="5"/>
 	</runtimes>

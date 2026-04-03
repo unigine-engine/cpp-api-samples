@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Polygon-Based Procedural Modifications" id="polygon_based_procedural_modifications" category_id="terrain_modification_usage">
+	<sdk_desc>Procedural polygon objects generation based on world points for landscape editing and object placement.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample demonstrates procedural generation of polygon objects from world points, enabling runtime landscape editing and object placement.</para>
+			<para>It dynamically creates polygonal geometry and applies it in multiple contexts:</para>
+			<ul>
+				<li><strong>ObjectMeshStatic</strong> - creates <ui>ObjectMeshStatic</ui> and places it at the center of the <ui>WorldBoundBox</ui> formed by the points.</li>
+				<li><strong>DecalMesh</strong> - creates <ui>DecalMesh</ui> and places it at the center of the <ui>WorldBoundBox</ui> formed by the points.</li>
+				<li><strong>DecalOrtho</strong> - renders mesh into a texture applied to the albedo slot of <ui>DecalOrtho</ui> material.</li>
+				<li><strong>Terrain mask</strong> - renders mesh into Layer Map mask to control clutter placement (cubes) on landscape.</li>
+				<li><strong>Level terrain</strong> - levels terrain height to the lowest point value within the polygon area.</li>
+				<li><strong>Lower terrain</strong> - lowers terrain by 20 units within the polygon area.</li>
+			</ul>
+		</brief>
+	</desc>
+	<controls>
+		<![CDATA[
+			<b>LMB</b> - Select object.<br/>
+			<b>LMB (drag)</b> - Move object.<br/><br/>
+			<b>F</b> - Focus on selected object.<br/>
+			<b>U</b> or <b>ESC</b> - Deselect object.
+			]]>
+	</controls>
+	<tags>
+		<tag>Terrain</tag>
+		<tag>Procedural</tag>
+		<tag>World Management</tag>
+	</tags>
+	<keywords>Landscape,Modification</keywords>
+</sample>

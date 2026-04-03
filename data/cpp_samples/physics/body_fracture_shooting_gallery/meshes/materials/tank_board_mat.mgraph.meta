@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<asset version="2.20.0.0">
+<asset version="2.21.0.0">
 	<guid>cec478248fa4a281f1281fae7af9f30c07a057b2</guid>
 	<type>material_graph</type>
-	<hash>db38856d</hash>
+	<hash>b969b89dede7165c86837e91956c2f95e578349e82067646e702f27b5143dca0</hash>
 	<runtimes>
 		<runtime id="cec478248fa4a281f1281fae7af9f30c07a057b2" name="tank_board_mat.mgraph" link="0"/>
 		<runtime id="540aaccabfb65ca0b7125df58706ea96e0fce1e9" name="tank_board_mat" link="1" type="5"/>

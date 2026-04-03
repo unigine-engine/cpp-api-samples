@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>f27825dc1e1a878b925c376ed2f197f50c2c48d0</guid>
+	<type>material_graph</type>
+	<hash>f9443bbef4ce3a5e6e4989ce97879572229bc89280f31b1a03c92061ef36237f</hash>
+	<runtimes>
+		<runtime id="f27825dc1e1a878b925c376ed2f197f50c2c48d0" name="arrow_material_graph.mgraph" link="0"/>
+		<runtime id="df5c40bea877f1051e0b2ea0c534117fb47370d2" name="arrow_material_graph" link="1" type="5"/>
+	</runtimes>
+</asset>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<asset version="2.20.0.0">
+<asset version="2.21.0.0">
 	<guid>d9dd5f86bd444b4e9dececd9973e89441d2ff6aa</guid>
 	<type>world</type>
-	<hash>23ccd93</hash>
+	<hash>5944f49eccd8ffdc2b9bb5193054a38713f3c134a9a531fced304fed5a5a2ae8</hash>
 	<runtimes>
 		<runtime id="d9dd5f86bd444b4e9dececd9973e89441d2ff6aa" name="physics_movement.world" link="0"/>
 	</runtimes>

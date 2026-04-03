@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>84a192a8746475189ca011080182ad89da787b81</guid>
+	<type>animation_graph</type>
+	<hash>01d9aedbc45ec06982b5c3ab01b8ff41678fe5e2f9958954d827e1de32e913a0</hash>
+	<runtimes>
+		<runtime id="84a192a8746475189ca011080182ad89da787b81" name="male_idle_turn_state_machine.agraph" link="0"/>
+		<runtime id="47755edb6888ff330fb0c1fbca0efb9129d14ae0" name="male_idle_turn_state_machine" link="1" type="10"/>
+	</runtimes>
+</asset>

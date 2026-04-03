@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>67a11ba16358808c18d1427b5d8f559e75414065</guid>
+	<type>world</type>
+	<hash>803cec361ce8a59cdbf8f99b809d81c99a011f0302bd3a74e18d1cc794a75bf4</hash>
+	<runtimes>
+		<runtime id="67a11ba16358808c18d1427b5d8f559e75414065" name="physics_based_animation.world" link="0"/>
+	</runtimes>
+	<parameters>
+		<parameter type="string" name="physics_settings_path"/>
+		<parameter type="string" name="render_settings_path">guid://8bed8c3ce53501ff11c1b0ae5cc6d017d4ad5524</parameter>
+		<parameter type="string" name="script_name"/>
+		<parameter type="string" name="sound_settings_path"/>
+		<parameter type="string" name="viewports_settings"/>
+	</parameters>
+</asset>

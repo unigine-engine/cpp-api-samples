@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>3fd8cdd64b14cde3a8f3e5b34429c3ea0795fae2</guid>
+	<type>world</type>
+	<hash>b44013dfd916e66dcc90e78adbb2891412738d41253746254f6aa6048955dd86</hash>
+	<runtimes>
+		<runtime id="3fd8cdd64b14cde3a8f3e5b34429c3ea0795fae2" name="node_state_save_restore.world" link="0"/>
+	</runtimes>
+	<parameters>
+		<parameter type="string" name="physics_settings_path"/>
+		<parameter type="string" name="render_settings_path">guid://8bed8c3ce53501ff11c1b0ae5cc6d017d4ad5524</parameter>
+		<parameter type="string" name="script_name"/>
+		<parameter type="string" name="sound_settings_path"/>
+		<parameter type="string" name="viewports_settings"/>
+	</parameters>
+</asset>

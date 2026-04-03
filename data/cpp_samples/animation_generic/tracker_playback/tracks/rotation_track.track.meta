@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>580105259d25f44030edda9fd72567722aaea029</guid>
+	<type>track</type>
+	<hash>950df7c1637523c95ec0a75207a910fd71f4b903e88f430d6e08d5ae4e1d52ba</hash>
+	<runtimes>
+		<runtime id="580105259d25f44030edda9fd72567722aaea029" name="rotation_track.track" link="0"/>
+	</runtimes>
+</asset>

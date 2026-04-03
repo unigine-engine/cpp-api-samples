@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>1bc09e2e9c8263ac784c9ee32c16e89292df14dd</guid>
+	<type>script</type>
+	<hash>995b29a01ac96b884cb2c5dad80af79c914af4b65c4973773d00ded49d447e5a</hash>
+	<runtimes>
+		<runtime id="1bc09e2e9c8263ac784c9ee32c16e89292df14dd" name="usc_callbacks.usc" link="0"/>
+	</runtimes>
+</asset>

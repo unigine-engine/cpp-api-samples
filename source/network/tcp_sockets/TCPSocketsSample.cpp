@@ -1,3 +1,8 @@
+// Demonstrates TCP socket networking with client-server architecture.
+// Server accepts multiple client connections and broadcasts camera state.
+// Clients receive camera updates and sync their view to the server's position.
+// Messages are serialized with header (type + size) followed by payload data.
+
 #include "TCPSocketsSample.h"
 
 #include <UnigineConsole.h>
@@ -24,11 +29,13 @@ namespace
 	constexpr int CLIENT_READ_TIMEOUT_US = 1'000;
 }
 
+// GUI is initialized; host (Client or Server) is created via button click.
 void TCPSocketsSample::init()
 {
 	gui.init(this);
 }
 
+// Active host (Client or Server) is updated; GUI reflects connection state.
 void TCPSocketsSample::update()
 {
 	if (host)
@@ -37,6 +44,7 @@ void TCPSocketsSample::update()
 	gui.update();
 }
 
+// Active host is destroyed and GUI is cleaned up.
 void TCPSocketsSample::shutdown()
 {
 	if (host)
@@ -49,14 +57,14 @@ void TCPSocketsSample::shutdown()
 }
 
 // =================================================================================
+// CLIENT IMPLEMENTATION
+// =================================================================================
 
+// TCP socket is created, configured as non-blocking, and network thread is started.
 TCPSocketsSample::Client::Client(const Unigine::String &hostname, unsigned short port)
 {
-	// Create a generic socket and start the Client's network thread.
-
-	// Note that the provided address is used as the target address in the subsequent `connect` call.
-	// The socket's own address is set automatically!
-
+	// Socket is created with target server address for subsequent connect() call.
+	// Note: socket's own address is assigned automatically by the OS.
 	SocketPtr socket = Socket::create(Socket::SOCKET_TYPE_STREAM, hostname, port);
 
 	if (!socket->isOpened())
@@ -65,15 +73,16 @@ TCPSocketsSample::Client::Client(const Unigine::String &hostname, unsigned short
 		return;
 	}
 
-	// Set the sockets send and receive buffer sizes.
+	// Send and receive buffer sizes are configured
 	socket->send(SEND_BUFFER_SIZE);
 	socket->recv(RECV_BUFFER_SIZE);
 
-	// Set the socket as non-blocking.
+	// Non-blocking mode allows polling without stalling the thread
 	socket->nonblock();
 
 	thread.start(socket, true);
 
+	// Player control is disabled so camera can be synced from server
 	if (PlayerPtr player = Game::getPlayer())
 		player->setControlled(false);
 
@@ -84,6 +93,7 @@ TCPSocketsSample::Client::Client(const Unigine::String &hostname, unsigned short
 	);
 }
 
+// Player control is restored and console command is unregistered.
 TCPSocketsSample::Client::~Client()
 {
 	if (PlayerPtr player = Game::getPlayer())
@@ -92,22 +102,23 @@ TCPSocketsSample::Client::~Client()
 	Console::removeCommand("send_msg");
 }
 
+// Incoming messages from server are processed; camera is synced on CameraMessage.
 void TCPSocketsSample::Client::update()
 {
-	// Handle incoming messages from the Server.
-
 	if (!thread.isRunning())
 		return;
 
 	Message *message = thread.receive();
 	int processed = 0;
 
+	// Messages are processed up to a limit per frame to avoid stalls
 	while (message && processed < message_process_limit)
 	{
 		switch (message->getType())
 		{
 			case Message::TEXT:
 			{
+				// Text message is logged to console
 				TextMessage *text_msg = dynamic_cast<TextMessage *>(message);
 
 				if (text_msg->text.get() && !text_msg->text.empty())
@@ -118,6 +129,7 @@ void TCPSocketsSample::Client::update()
 
 			case Message::CAMERA:
 			{
+				// Camera transform is applied to local player
 				CameraMessage *camera_msg = dynamic_cast<CameraMessage *>(message);
 
 				if (camera_msg)
@@ -141,6 +153,7 @@ void TCPSocketsSample::Client::update()
 	}
 }
 
+// Network thread is started with provided socket; optional connect flag for clients.
 void TCPSocketsSample::Client::NetworkThread::start(Unigine::SocketPtr socket, bool connect)
 {
 	reset();
@@ -149,6 +162,7 @@ void TCPSocketsSample::Client::NetworkThread::start(Unigine::SocketPtr socket, b
 	run();
 }
 
+// Thread is stopped, socket is closed, and message queues are cleared.
 void TCPSocketsSample::Client::NetworkThread::reset()
 {
 	shutdown();
@@ -163,26 +177,24 @@ void TCPSocketsSample::Client::NetworkThread::reset()
 	recv_queue.clear();
 }
 
+// Message is queued for sending on the network thread.
 void TCPSocketsSample::Client::NetworkThread::send(Message *message)
 {
 	send_queue.push(message);
 }
 
+// Next received message is returned; nullptr if queue is empty.
 TCPSocketsSample::Message *TCPSocketsSample::Client::NetworkThread::receive()
 {
 	return recv_queue.pop();
 }
 
+// Main network loop handling bidirectional TCP message streaming.
+// TCP is stream-oriented, so message boundaries are tracked via state machine:
+// RECEIVE_HEADER -> RECEIVE_PAYLOAD -> UNPACK_MESSAGE -> repeat.
+// Protocol format: [Header(type:4B, size:4B)] [Payload(variable)].
 void TCPSocketsSample::Client::NetworkThread::process()
 {
-	// Receive incoming and send outgoing messages.
-
-	// Since TCP is a stream-oriented protocol, reading messages is a bit harder than on message-oriented UDP.
-	// To keep track of where we are in the incoming data stream we distinguish three states:
-	//   RECEIVE_HEADER - preparing to receive the message header containing data about its type and size
-	//   RECEIVE_PAYLOAD - preparing to receive the message's actual payload
-	//   UNPACK_MESSAGE - unpacking the message from the raw binary data
-
 	enum { RECEIVE_HEADER, RECEIVE_PAYLOAD, UNPACK_MESSAGE } recv_state = RECEIVE_HEADER;
 
 	int recv_size = 0;
@@ -354,6 +366,7 @@ void TCPSocketsSample::Client::NetworkThread::process()
 	}
 }
 
+// Message is created based on header type and deserialized from blob.
 TCPSocketsSample::Message *TCPSocketsSample::Client::NetworkThread::extract_message(Unigine::BlobPtr blob)
 {
 	Message *message = nullptr;
@@ -362,6 +375,7 @@ TCPSocketsSample::Message *TCPSocketsSample::Client::NetworkThread::extract_mess
 	blob->read(&header, sizeof(Message::Header));
 	blob->seekSet(0);
 
+	// Appropriate message subclass is instantiated based on type
 	switch (header.type)
 	{
 		case Message::TEXT: message = new TextMessage(); break;
@@ -375,10 +389,12 @@ TCPSocketsSample::Message *TCPSocketsSample::Client::NetworkThread::extract_mess
 	return message;
 }
 
+// Console command handler: text message is sent to the server.
 void TCPSocketsSample::Client::on_message_send_cmd(int argc, char **argv)
 {
 	StringStack<> text;
 
+	// Arguments are concatenated into a single message string
 	for (int i = 1; i < argc; i += 1)
 	{
 		text += argv[i];
@@ -390,11 +406,12 @@ void TCPSocketsSample::Client::on_message_send_cmd(int argc, char **argv)
 }
 
 // =================================================================================
+// SERVER IMPLEMENTATION
+// =================================================================================
 
+// Listen socket is created, bound to address, and accept thread is started.
 TCPSocketsSample::Server::Server(const Unigine::String &hostname, unsigned short port)
 {
-	// Initialize a listen socket on the given address (hostname:port), and start the Server's network thread.
-
 	SocketPtr socket = Socket::create(Socket::SOCKET_TYPE_STREAM, hostname, port);
 
 	if (!socket->isOpened())
@@ -403,17 +420,17 @@ TCPSocketsSample::Server::Server(const Unigine::String &hostname, unsigned short
 		return;
 	}
 
-	// Set the socket as non-blocking.
+	// Non-blocking mode for accept operations
 	socket->nonblock();
 
-	// Bind the socket to the provided address.
+	// Socket is bound to the specified address
 	if (!socket->bind())
 	{
 		Log::warning("Could not bind socket to the specified address (%s:%d)!\n", hostname.get(), int(port));
 		return;
 	}
 
-	// Set the socket as a 'listen' socket, and specify the max number of client connections.
+	// Socket is set to listen mode with connection backlog limit
 	socket->listen(MAX_CLIENT_CONNECTIONS);
 
 	clients.reserve(MAX_CLIENT_CONNECTIONS);
@@ -427,6 +444,7 @@ TCPSocketsSample::Server::Server(const Unigine::String &hostname, unsigned short
 	);
 }
 
+// All client threads are destroyed and console command is unregistered.
 TCPSocketsSample::Server::~Server()
 {
 	for (int i = 0; i < clients.size(); i += 1)
@@ -438,9 +456,10 @@ TCPSocketsSample::Server::~Server()
 	Console::removeCommand("send_msg");
 }
 
+// Disconnected clients are removed; new connections are accepted; messages are exchanged.
 void TCPSocketsSample::Server::update()
 {
-	// Go over the client network threads/connections and remove the ones which have terminated.
+	// Terminated client connections are cleaned up
 	for (int i = 0; i < clients.size(); i += 1)
 	{
 		Client::NetworkThread *client = clients[i];
@@ -452,7 +471,7 @@ void TCPSocketsSample::Server::update()
 		}
 	}
 
-	// Take the new accepted connections from the network thread's queue.
+	// New connections are accepted from the listen thread's queue
 	while (SocketPtr connection = thread.accept())
 	{
 		Client::NetworkThread *client = new Client::NetworkThread(connection, false);
@@ -460,11 +479,12 @@ void TCPSocketsSample::Server::update()
 		clients.push_back(client);
 	};
 
-	// Handle incoming / outgoing messages from/to each client.
+	// Messages are exchanged with each connected client
 	for (int i = 0; i < clients.size(); i += 1)
 	{
 		Client::NetworkThread *client = clients[i];
 
+		// Incoming text messages are logged
 		if (Message *message = client->receive())
 		{
 			TextMessage *text_msg = dynamic_cast<TextMessage *>(message);
@@ -472,11 +492,13 @@ void TCPSocketsSample::Server::update()
 				Log::message("Received a text message from Client [%d]: %s\n", i, text_msg->text.get());
 		}
 
+		// Camera transform is broadcast to all clients each frame
 		if (PlayerPtr player = Game::getPlayer())
 			client->send(new CameraMessage(player->getWorldPosition(), player->getWorldRotation()));
 	}
 }
 
+// Accept thread is started with the listen socket.
 void TCPSocketsSample::Server::NetworkThread::start(Unigine::SocketPtr socket)
 {
 	reset();
@@ -486,6 +508,7 @@ void TCPSocketsSample::Server::NetworkThread::start(Unigine::SocketPtr socket)
 	run();
 }
 
+// Thread is stopped and listen socket is closed.
 void TCPSocketsSample::Server::NetworkThread::reset()
 {
 	shutdown();
@@ -497,6 +520,7 @@ void TCPSocketsSample::Server::NetworkThread::reset()
 	}
 }
 
+// Next accepted connection is returned; nullptr if queue is empty.
 SocketPtr TCPSocketsSample::Server::NetworkThread::accept()
 {
 	ScopedLock lock(mutex);
@@ -508,12 +532,14 @@ SocketPtr TCPSocketsSample::Server::NetworkThread::accept()
 	return connection;
 }
 
+// Incoming connections are accepted and queued for main thread processing.
 void TCPSocketsSample::Server::NetworkThread::process()
 {
 	while (isRunning())
 	{
 		SocketPtr client = Socket::create(Socket::SOCKET_TYPE_STREAM);
 
+		// Accepted connection is added to thread-safe queue
 		if (socket->accept(client))
 		{
 			ScopedLock lock(mutex);
@@ -522,6 +548,7 @@ void TCPSocketsSample::Server::NetworkThread::process()
 	}
 }
 
+// Console command handler: text message is broadcast to all connected clients.
 void TCPSocketsSample::Server::on_message_send_cmd(int argc, char **argv)
 {
 	StringStack<> text;
@@ -533,23 +560,30 @@ void TCPSocketsSample::Server::on_message_send_cmd(int argc, char **argv)
 			text += " ";
 	}
 
+	// Message is sent to every connected client
 	for (int i = 0; i < clients.size(); i += 1)
 		clients[i]->send(new TextMessage(text));
 }
 
 // =================================================================================
+// MESSAGE SERIALIZATION
+// =================================================================================
 
+// TextMessage is serialized: header + text_size + text_data.
 size_t TCPSocketsSample::TextMessage::pack(Unigine::BlobPtr dst_blob)
 {
 	size_t cursor = dst_blob->tell();
 	size_t packed = 0;
 
+	// Header is written first (will be updated with final size)
 	packed += dst_blob->write(&header, sizeof(header));
 
+	// Text length is written followed by raw string data
 	size_t text_size = text.size();
 	packed += dst_blob->write(&text_size, sizeof(text_size));
 	packed += dst_blob->write(text.get(), text_size);
 
+	// Header is updated with actual type and size
 	header.type = getType();
 	header.size = packed;
 
@@ -561,6 +595,7 @@ size_t TCPSocketsSample::TextMessage::pack(Unigine::BlobPtr dst_blob)
 	return packed;
 }
 
+// TextMessage is deserialized from blob.
 size_t TCPSocketsSample::TextMessage::unpack(Unigine::BlobPtr src_blob)
 {
 	size_t unpacked = 0;
@@ -580,6 +615,7 @@ size_t TCPSocketsSample::TextMessage::unpack(Unigine::BlobPtr src_blob)
 	return unpacked;
 }
 
+// CameraMessage is serialized: header + position (Vec3) + rotation (quat).
 size_t TCPSocketsSample::CameraMessage::pack(Unigine::BlobPtr dst_blob)
 {
 	size_t cursor = dst_blob->tell();
@@ -600,6 +636,7 @@ size_t TCPSocketsSample::CameraMessage::pack(Unigine::BlobPtr dst_blob)
 	return packed;
 }
 
+// CameraMessage is deserialized from blob.
 size_t TCPSocketsSample::CameraMessage::unpack(Unigine::BlobPtr src_blob)
 {
 	size_t unpacked = 0;
@@ -612,7 +649,10 @@ size_t TCPSocketsSample::CameraMessage::unpack(Unigine::BlobPtr src_blob)
 }
 
 // =================================================================================
+// GUI IMPLEMENTATION
+// =================================================================================
 
+// UI window is created with Client/Server buttons and address input fields.
 void TCPSocketsSample::SampleGui::init(TCPSocketsSample *sample)
 {
 	this->sample = sample;
@@ -678,6 +718,7 @@ void TCPSocketsSample::SampleGui::init(TCPSocketsSample *sample)
 	}
 }
 
+// Connection list is refreshed to show active client/server connections.
 void TCPSocketsSample::SampleGui::update()
 {
 	auto add_connection_gui = [this](const char *hostname, unsigned short port)
@@ -687,18 +728,21 @@ void TCPSocketsSample::SampleGui::update()
 		client_connections_gbox->addChild(hbox);
 	};
 
+	// Previous connection entries are cleared
 	while (client_connections_gbox->getNumChildren())
 	{
 		auto child = client_connections_gbox->getChild(0);
 		client_connections_gbox->removeChild(child);
 	}
 
+	// Client mode: single connection to server is displayed
 	if (auto client = dynamic_cast<TCPSocketsSample::Client *>(sample->host))
 	{
 		if (client->isConnectionActive())
 			add_connection_gui(client->getHostname(), client->getPort());
 	}
 
+	// Server mode: all connected clients are listed
 	else if (auto server = dynamic_cast<TCPSocketsSample::Server *>(sample->host))
 	{
 		auto const& clients = server->getClients();
@@ -707,6 +751,7 @@ void TCPSocketsSample::SampleGui::update()
 	}
 }
 
+// UI is cleaned up and console state is restored.
 void TCPSocketsSample::SampleGui::shutdown()
 {
 	sample_description_window.shutdown();
@@ -714,6 +759,7 @@ void TCPSocketsSample::SampleGui::shutdown()
 	sample = nullptr;
 }
 
+// Server mode is started; previous host is destroyed if exists.
 void TCPSocketsSample::SampleGui::on_start_server_btn_clicked(const WidgetPtr &widget, int mouse)
 {
 	if (sample->host)
@@ -727,6 +773,7 @@ void TCPSocketsSample::SampleGui::on_start_server_btn_clicked(const WidgetPtr &w
 
 	if (start_server_btn->isToggled())
 	{
+		// Server is created with address from input fields
 		StringStack<> hostname;
 		unsigned short port = 0;
 
@@ -735,6 +782,7 @@ void TCPSocketsSample::SampleGui::on_start_server_btn_clicked(const WidgetPtr &w
 
 		sample->host = new Server(hostname, port);
 
+		// Address fields are locked while server is running
 		server_hostname_el->setEnabled(false);
 		server_port_el->setEnabled(false);
 
@@ -748,6 +796,7 @@ void TCPSocketsSample::SampleGui::on_start_server_btn_clicked(const WidgetPtr &w
 	}
 }
 
+// Client mode is started; connection to server is initiated.
 void TCPSocketsSample::SampleGui::on_start_client_btn_clicked(const WidgetPtr &widget, int mouse)
 {
 	if (sample->host)
@@ -761,6 +810,7 @@ void TCPSocketsSample::SampleGui::on_start_client_btn_clicked(const WidgetPtr &w
 
 	if (start_client_btn->isToggled())
 	{
+		// Client connects to server at specified address
 		StringStack<> hostname;
 		unsigned short port = 0;
 
@@ -769,6 +819,7 @@ void TCPSocketsSample::SampleGui::on_start_client_btn_clicked(const WidgetPtr &w
 
 		sample->host = new Client(hostname, port);
 
+		// Address fields are locked while client is connected
 		server_hostname_el->setEnabled(false);
 		server_port_el->setEnabled(false);
 

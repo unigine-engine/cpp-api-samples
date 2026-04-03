@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<asset version="2.20.0.0">
+<asset version="2.21.0.0">
 	<guid>d114705843a41dc086b2644ba65a10a6d252d0df</guid>
 	<type>texture</type>
-	<hash>1c376285</hash>
+	<hash>28d1b61f0686f014132fd5d0b0d404971777fe05b514ebf8957760f4b7b89d5c</hash>
 	<runtimes>
 		<runtime id="d114705843a41dc086b2644ba65a10a6d252d0df" name="crosshair.png" link="0" type="6"/>
 		<runtime id="443a09da571c2d2c328143538ea3e4b635156a4e" name="crosshair.texture" link="1" type="6"/>

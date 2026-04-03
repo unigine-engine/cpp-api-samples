@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.21.0.0" name="SplineGenerationSample" manual="1" parent_name="node_base">
+	<parameter name="spline_nodes" type="array" title="Spline nodes" array_type="node"/>
+	<parameter name="mesh_width_param" type="float">5</parameter>
+	<parameter name="width_subdivision_param" type="int">5</parameter>
+	<parameter name="segments_length_param" type="float">3</parameter>
+	<parameter name="length_tiling" type="float">1</parameter>
+	<parameter name="width_tiling" type="float">1</parameter>
+	<parameter name="stretch_uv_along_length_param" type="toggle">0</parameter>
+	<parameter name="stretch_uv_along_width_param" type="toggle">0</parameter>
+	<parameter name="show_wireframe_param" type="toggle">0</parameter>
+	<parameter name="spline_obejct_material" type="material" title="Spline Object Material"/>
+	<parameter name="manipulators_node" type="node" title="Manipulators node">0</parameter>
+</property>

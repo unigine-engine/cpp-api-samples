@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<asset version="2.20.0.0">
-	<guid>acd2492f0b92dd55e87089f0b2bfe23d5cfd546f</guid>
-	<type>property</type>
-	<hash>f939e28c</hash>
-	<runtimes>
-		<runtime id="acd2492f0b92dd55e87089f0b2bfe23d5cfd546f" name="SoundAmbient" link="0" type="4"/>
-	</runtimes>
-</asset>

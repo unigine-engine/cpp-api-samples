@@ -1,3 +1,8 @@
+// Compares physics force application in update() vs update_physics().
+// update() runs at render framerate (variable), update_physics() runs at
+// fixed physics timestep. Using update_physics() ensures consistent behavior
+// regardless of rendering performance.
+
 #pragma once
 #include "UpdatePhysicsUsageController.h"
 
@@ -25,10 +30,10 @@ void UpdatePhysicsUsageController::init()
 
 void UpdatePhysicsUsageController::update()
 {
-	//visualizing current linear velocity
+	// Visualizing current linear velocity
 	Visualizer::renderVector(rigid_body->getPosition(), rigid_body->getPosition() + Vec3(rigid_body->getLinearVelocity()), vec4_red,0.5f);
 
-	//NOTICE that methods: update and udpate_physics registered in different component Macros and code is the same for both usage examples
+	// NOTICE that methods: update and udpate_physics registered in different component Macros and code is the same for both usage examples
 	// using update() to move node with physics
 	if (use_update) 
 	{
@@ -38,8 +43,10 @@ void UpdatePhysicsUsageController::update()
 
 void UpdatePhysicsUsageController::movement()
 {
+	// Apply horizontal force to move the body back and forth
 	rigid_body->addForce(vec3_right * current_force);
 
+	// Reverse direction when reaching boundary positions
 	if (node->getWorldPosition().x > 5)
 		current_force = -linear_force;
 	if (node->getWorldPosition().x < -5)
@@ -53,7 +60,7 @@ void UpdatePhysicsUsageController::shutdown()
 
 void UpdatePhysicsUsageController::update_physics()
 {
-	//NOTICE that methods: update and udpate_physics registered in different component Macros and code is the same for both usage examples
+	// NOTICE that methods: update and udpate_physics registered in different component Macros and code is the same for both usage examples
 	// using update() to move node with physics
 	if (!use_update)
 	{

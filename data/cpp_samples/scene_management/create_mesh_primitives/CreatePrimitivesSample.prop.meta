@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>0075c843cb28dd5b24ffb53991421248fe392139</guid>
+	<type>property</type>
+	<hash>d15661961e6c8e54c7ba07a5f7f2e0834d6e7f2bffd54e88e074cca5fc370aa4</hash>
+	<runtimes>
+		<runtime id="0075c843cb28dd5b24ffb53991421248fe392139" name="CreatePrimitivesSample" link="0" type="4"/>
+	</runtimes>
+</asset>

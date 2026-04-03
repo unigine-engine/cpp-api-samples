@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>1b233a3b90e03cd262f8832a9aa04fe54e572bca</guid>
+	<type>world</type>
+	<hash>d46feaeabf337874a1b53c3a087482bf7c86a794f8f30d020e880bc9bc563954</hash>
+	<runtimes>
+		<runtime id="1b233a3b90e03cd262f8832a9aa04fe54e572bca" name="mesh_to_mask_texture.world" link="0"/>
+	</runtimes>
+	<parameters>
+		<parameter type="string" name="physics_settings_path"/>
+		<parameter type="string" name="render_settings_path">guid://8bed8c3ce53501ff11c1b0ae5cc6d017d4ad5524</parameter>
+		<parameter type="string" name="script_name"/>
+		<parameter type="string" name="sound_settings_path"/>
+		<parameter type="string" name="viewports_settings"/>
+	</parameters>
+</asset>

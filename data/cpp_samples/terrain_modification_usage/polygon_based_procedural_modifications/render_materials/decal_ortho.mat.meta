@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>9a7881b0ede2f9e77235e2353c36ffe0c74255e2</guid>
+	<type>material</type>
+	<hash>8e37fc7a7284c6d8f6a645ad632ab619939b1a5127c371ab596eb48b83de531e</hash>
+	<runtimes>
+		<runtime id="9a7881b0ede2f9e77235e2353c36ffe0c74255e2" name="decal_ortho" link="0" type="5"/>
+	</runtimes>
+</asset>

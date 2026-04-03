@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.21.0.0" name="ComponentParameters" manual="1" parent_name="component_parameters_parent" tooltip="Some description">
+	<struct name="StructParameter">
+		<parameter name="int_parameter" type="int" group="Struct">0</parameter>
+		<parameter name="float_parameter" type="float" group="Struct">0</parameter>
+	</struct>
+	<parameter name="int_parameter" type="int" group="Basic">42</parameter>
+	<parameter name="toggle_parameter" type="toggle" title="Toggle Parameter" group="Basic">0</parameter>
+	<parameter name="switch_parameter" type="switch" group="Basic" items="A,B,C,D">0</parameter>
+	<parameter name="mask_parameter" type="mask" group="Basic">64</parameter>
+	<parameter name="float_parameter" type="float" group="Basic">0</parameter>
+	<parameter name="double_parameter" type="double" group="Basic">0</parameter>
+	<parameter name="string_parameter" type="string" group="Basic"/>
+	<parameter name="vec2_parameter" type="vec2" group="Vectors">1.000000 2.000000</parameter>
+	<parameter name="vec3_parameter" type="vec3" title="Vec 3 Parameter" group="Vectors">1.000000 2.000000 3.000000</parameter>
+	<parameter name="vec4_parameter" type="vec4" title="Vec 4 Parameter" group="Vectors">0.000000 0.000000 0.000000 0.000000</parameter>
+	<parameter name="dvec2_parameter" type="dvec2" group="Vectors">0.000000 0.000000</parameter>
+	<parameter name="dvec3_parameter" type="dvec3" group="Vectors">0.000000 0.000000 0.000000</parameter>
+	<parameter name="dvec4_parameter" type="dvec4" group="Vectors">0.000000 0.000000 0.000000 0.000000</parameter>
+	<parameter name="ivec2_parameter" type="ivec2" group="Vectors">0 0</parameter>
+	<parameter name="ivec3_parameter" type="ivec3" group="Vectors">0 0 0</parameter>
+	<parameter name="ivec4_parameter" type="ivec4" group="Vectors">0 0 0 0</parameter>
+	<parameter name="color_parameter" type="color" group="Vectors">1.000000 1.000000 1.000000 1.000000</parameter>
+	<parameter name="file_parameter" type="file" group="Content"/>
+	<parameter name="property_parameter" type="property" group="Content"/>
+	<parameter name="material_parameter" type="material" group="Content"/>
+	<parameter name="node_parameter" type="node" group="Content">0</parameter>
+	<parameter name="curve2d_parameter" type="curve2d" group="Content">
+		<curve/>
+	</parameter>
+	<parameter name="mask_general" type="mask" title="General Mask" group="Masks">0</parameter>
+	<parameter name="mask_intersection" type="mask" title="Intersection Mask" group="Masks" flags="intersection">0</parameter>
+	<parameter name="mask_physics_intersection" type="mask" title="Physics Intersection Mask" group="Masks" flags="physics_intersection">0</parameter>
+	<parameter name="mask_collision" type="mask" title="Collision Mask" group="Masks" flags="collision">0</parameter>
+	<parameter name="mask_exclusion" type="mask" title="Exclusion Mask" group="Masks" flags="exclusion">0</parameter>
+	<parameter name="mask_viewport" type="mask" title="Viewport Mask" group="Masks" flags="viewport">0</parameter>
+	<parameter name="mask_shadows" type="mask" title="Shadows Mask" group="Masks" flags="shadows">0</parameter>
+	<parameter name="mask_material" type="mask" title="Material Mask" group="Masks" flags="material">0</parameter>
+	<parameter name="mask_sound_source" type="mask" title="Sound Source Mask" group="Masks" flags="sound_source">0</parameter>
+	<parameter name="mask_sound_reverb" type="mask" title="Sound Reverb Mask" group="Masks" flags="sound_reverb">0</parameter>
+	<parameter name="mask_sound_occlusion" type="mask" title="Sound Occlusion Mask" group="Masks" flags="sound_occlusion">0</parameter>
+	<parameter name="mask_navigation" type="mask" title="Navigation Mask" group="Masks" flags="navigation">0</parameter>
+	<parameter name="mask_obstacle" type="mask" title="Obstacle Mask" group="Masks" flags="obstacle">0</parameter>
+	<parameter name="mask_physical" type="mask" title="Physical Mask" group="Masks" flags="physical">0</parameter>
+	<parameter name="mask_field" type="mask" title="Field Mask" group="Masks" flags="field">0</parameter>
+	<parameter name="struct_parameter" type="StructParameter" group="Struct"/>
+	<parameter name="array_parameter" type="array" group="Arrays" array_type="int"/>
+	<parameter name="struct_array_parameter" type="array" group="Arrays" array_type="StructParameter"/>
+	<parameter name="int_param_args" type="int" title="Int Parameter" tooltip="Tooltip" group="Arguments">0</parameter>
+	<parameter name="switch_param_args" type="switch" title="Switch Parameter" tooltip="Tooltip" group="Arguments" items="A,B,C">0</parameter>
+	<parameter name="mask_param_general_args" type="mask" title="General Mask" tooltip="Tooltip" group="Arguments">0</parameter>
+	<parameter name="mask_param_intersection_args" type="mask" title="Intersection Mask" tooltip="Tooltip" group="Arguments" flags="intersection">0</parameter>
+	<parameter name="vec2_param_no_def_value" type="vec2" title="Vec2 Parameter" tooltip="Tooltip" group="Arguments">0.000000 0.000000</parameter>
+	<parameter name="vec2_param_with_def_value" type="vec2" title="Vec2 Parameter" tooltip="Tooltip" group="Arguments">0.000000 0.000000</parameter>
+	<parameter name="property_param_no_def_value" type="property" title="Property Parameter" tooltip="Tooltip" group="Arguments"/>
+	<parameter name="property_param_with_def_value" type="property" title="Property Parameter" tooltip="Tooltip" group="Arguments">d99ebc8ef5769d70b1e46992309cc3e7d1aa2faa</parameter>
+	<parameter name="struct_param_args" type="StructParameter" title="Struct Parameter" tooltip="Tooltip" group="Arguments"/>
+	<parameter name="array_param_args" type="array" title="Array Parameter" tooltip="Tooltip" group="Arguments" array_type="int"/>
+	<parameter name="struct_array_param_args" type="array" title="Struct Array Parameter" tooltip="Tooltip" group="Arguments" array_type="StructParameter"/>
+	<parameter name="hidden_parameter" type="string" title="Hidden Parameter" tooltip="This parameter won&apos;t be visible in the Editor" hidden="1"/>
+	<parameter name="int_range" type="int" title="Int Range" tooltip="This float parameter has a custom range [1, 4]." group="Scalars" min="1" max="4">0</parameter>
+	<parameter name="float_range" type="float" title="Float Range" tooltip="This float parameter has a custom range [1, 4]." group="Scalars" min="1" max="4">1</parameter>
+	<parameter name="double_range" type="double" title="Double Range" tooltip="This float parameter has a custom range [1, 4]." group="Scalars" min="1" max="4">1</parameter>
+	<parameter name="scalar_range_expand" type="float" title="Scalar Range Expand" tooltip="This scalar parameter has a custom range [1, 4] which can be exceeded." group="Scalars" flags="expand" min="1" max="4">2</parameter>
+	<parameter name="scalar_range_expand_up" type="float" title="Scalar Range Expand Up" tooltip="This scalar parameter has a custom range [1, 4], the upper limit of which can be exceeded." group="Scalars" flags="max_expand" min="1" max="4">2</parameter>
+	<parameter name="scalar_range_expand_down" type="float" title="Scalar Range Expand Down" tooltip="This scalar parameter has a custom range [1, 4], the lower limit of which can be exceeded." group="Scalars" flags="min_expand" min="1" max="4">2</parameter>
+	<parameter name="scalar_log" type="float" title="Scalar Logarithmic" tooltip="This scalar parameter uses logarhithmic scale (base 10)." group="Scalars" flags="log10" min="0" max="100">0</parameter>
+	<parameter name="file_asset" type="file" title="Asset File" tooltip="This parameter accepts assets." group="Files" flags="asset"/>
+	<parameter name="file_runtime" type="file" title="Runtime File" tooltip="This parameter accepts runtimes." group="Files" flags="runtime"/>
+	<parameter name="file_abspath" type="file" title="Absolute Path File" tooltip="This parameter accepts files with absolute paths." group="Files" flags="abspath"/>
+	<parameter name="file_filter" type="file" title="File Filter" tooltip="This parameter accepts only .xml files" group="Filters" filter=".xml"/>
+	<parameter name="file_filter_set" type="file" title="File Filter Set" tooltip="This parameter accepts .xml and .json files" group="Filters" filter=".xml|.json"/>
+	<parameter name="material_filter" type="material" title="Material Filter" tooltip="This parameter accepts only .basemat files" group="Filters" filter=".basemat"/>
+	<parameter name="property_filter" type="property" title="Property Filter" tooltip="This parameter accepts only .prop files" group="Filters" filter=".prop"/>
+	<parameter name="independent_param" type="switch" title="Independent Parameter" tooltip="The value of this parameter is used as condition for hiding/showing the parameter below." group="Conditionals" items="Hidden,Visible">0</parameter>
+	<parameter name="conditional_param" type="string" title="Conditional Parameter" tooltip="This parameter is visible when &quot;Condition Parameter&quot; above is set to &quot;Visible&quot;." group="Conditionals" independent_param="1">I am visible!</parameter>
+	<parameter name="int_param" type="int" title="Int Parameter" tooltip="The value of this parameter is used as condition for hiding/showing the parameter below." group="Conditionals">0</parameter>
+	<parameter name="toggle_param" type="toggle" title="Toggle Parameter" tooltip="The value of this parameter is used as condition for hiding/showing the parameter below." group="Conditionals">0</parameter>
+	<parameter name="switch_param" type="switch" title="Switch Parameter" tooltip="The value of this parameter is used as condition for hiding/showing the parameter below." group="Conditionals" items="A,B,C">0</parameter>
+	<parameter name="complex_conditional_hint" type="string" title="Hint" group="Conditionals">Set the integer above to &quot;64&quot;, toggle to &quot;true&quot;, and switch to &quot;C&quot;.</parameter>
+	<parameter name="complex_conditional_param" type="string" title="Complex Conditional Parameter" tooltip="This parameter is visible when the condition described in the hint above is achieved." group="Conditionals" int_param="64" toggle_param="1" switch_param="2">I am visible!</parameter>
+	<parameter name="property_internal" type="property" title="Internal Property" tooltip="This parameter accepts only internal properties (that are already attached to a node in the world)." group="Interfaces" filter=".prop"/>
+	<parameter name="property_interface" type="property" title="Interface Property" tooltip="This parameter accepts any component that implements the specified interface. " group="Interfaces" filter=".prop"/>
+</property>

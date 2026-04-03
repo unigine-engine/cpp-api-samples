@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>9210d92eba8f1bfb2e7276e38c48ea1dcfda42b5</guid>
+	<type>world</type>
+	<hash>fa617858d99d7d2681f705c9b137a7035e61ce99d24de75a682135c14a548ced</hash>
+	<runtimes>
+		<runtime id="9210d92eba8f1bfb2e7276e38c48ea1dcfda42b5" name="bones_ik.world" link="0"/>
+	</runtimes>
+	<parameters>
+		<parameter type="string" name="physics_settings_path"/>
+		<parameter type="string" name="render_settings_path">guid://e7c25e58d50469eb1759808b454697512aed4c0b</parameter>
+		<parameter type="string" name="script_name"/>
+		<parameter type="string" name="sound_settings_path"/>
+		<parameter type="string" name="viewports_settings"/>
+	</parameters>
+</asset>

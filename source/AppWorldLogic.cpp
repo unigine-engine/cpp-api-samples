@@ -1,4 +1,5 @@
 #include "AppWorldLogic.h"
+#include "utils/Utils.h"
 #include <UnigineWorld.h>
 #include <UnigineDir.h>
 #include <UnigineFileSystem.h>
@@ -20,6 +21,9 @@ AppWorldLogic::~AppWorldLogic()
 
 int AppWorldLogic::init()
 {
+	auto window = WindowManager::getMainWindow();
+	if (window)
+		window->setTitle(getWindowTitle(World::getPath()));
 	return 1;
 }
 
@@ -38,5 +42,8 @@ int AppWorldLogic::update()
 
 int AppWorldLogic::shutdown()
 {
+	auto window = WindowManager::getMainWindow();
+	if (window)
+		window->setTitle(getWindowTitle());
 	return 1;
 }

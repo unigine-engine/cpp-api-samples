@@ -1,0 +1,72 @@
+BaseMaterial render_material <namespace=Unigine preview_hidden=true var_prefix=var texture_prefix=tex>
+{
+	Float height_value <internal=true>
+	Float lowering_value <internal=true>
+	Int blur_radius <internal=true>
+	Float4 mesh_color <internal=true>
+	Float4 mask_color <internal=true>
+	Pass level_height
+	{
+		Fragment=
+		#{
+			#include <core/materials/shaders/render/common.h>
+			
+			INIT_RW_TEXTURE_R32F(0, RW_TEX_HEIGHT)
+			INIT_RW_TEXTURE_R32F(1, RW_TEX_OPACITY)
+			
+			MAIN_FRAG_BEGIN(FRAGMENT_IN)
+				int2 pixel_coord = toInt2(IN_POSITION.xy);
+
+				TEXTURE_RW_STORE_R32F(RW_TEX_HEIGHT, pixel_coord, var_height_value);
+				TEXTURE_RW_STORE_R32F(RW_TEX_OPACITY, pixel_coord, 1.0f);
+			MAIN_FRAG_END
+		#}
+	}
+
+	Pass lower_height
+	{
+		Fragment=
+		#{
+			#include <core/materials/shaders/render/common.h>
+			
+			INIT_RW_TEXTURE_R32F(0, RW_TEX_HEIGHT)
+			
+			MAIN_FRAG_BEGIN(FRAGMENT_IN)
+				int2 pixel_coord = toInt2(IN_POSITION.xy);
+				float color_value= TEXTURE_RW_LOAD_R32F(RW_TEX_HEIGHT, pixel_coord)-var_lowering_value;
+				TEXTURE_RW_STORE_R32F(RW_TEX_HEIGHT, pixel_coord, color_value);
+			MAIN_FRAG_END
+		#}
+	}
+
+	Pass render_mesh
+	{
+		Fragment=
+		#{
+			#include <core/materials/shaders/render/common.h>
+				
+			STRUCT_FRAG_BEGIN
+				INIT_COLOR(float4)
+			STRUCT_FRAG_END
+			
+			MAIN_FRAG_BEGIN(FRAGMENT_IN)
+				OUT_COLOR = var_mesh_color;
+			MAIN_FRAG_END
+		#}
+	}
+	Pass draw_mask
+	{
+		Fragment=
+		#{
+			#include <core/materials/shaders/render/common.h>
+				
+			STRUCT_FRAG_BEGIN
+				INIT_COLOR(float4)
+			STRUCT_FRAG_END
+			
+			MAIN_FRAG_BEGIN(FRAGMENT_IN)
+				OUT_COLOR = var_mask_color;
+			MAIN_FRAG_END
+		#}
+	}
+}

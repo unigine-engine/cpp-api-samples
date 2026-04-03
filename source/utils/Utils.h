@@ -2,6 +2,7 @@
 #include <UnigineEvent.h>
 #include <UnigineString.h>
 #include <UnigineWorld.h>
+#include <UnigineEngine.h>
 
 #define PROP_SWITCH_ENUM(NAME, ...) \
 	enum NAME { __VA_ARGS__ }; \
@@ -22,7 +23,6 @@ struct MuteEventScoped
 	Unigine::EventBase &event;
 };
 
-#define MUTE_EVENT(event) auto UNIGINE_CONCATENATE(tmp, __LINE__) = MuteEventScoped(event);
 
 UNIGINE_INLINE Unigine::StringStack<> joinPaths(const Unigine::VectorStack<char const *> &paths)
 {
@@ -43,3 +43,20 @@ UNIGINE_INLINE Unigine::StringStack<> getWorldRootPath()
 {
 	return joinPaths(Unigine::World::getPath(), "..");
 }
+
+UNIGINE_INLINE const char *getAPI()
+{
+	int api = Unigine::Render::getAPI();
+	if (api == Unigine::Render::API_DIRECT3D12)
+		return "DX12";
+	if (api == Unigine::Render::API_VULKAN)
+		return "Vulkan";
+	return "NULL";
+}
+
+UNIGINE_INLINE Unigine::String getWindowTitle(const char *path = "")
+{
+	return Unigine::String::format("UNIGINE Engine %s: %s (%s)",
+		Unigine::Engine::get()->getVersion(), path, getAPI());
+}
+

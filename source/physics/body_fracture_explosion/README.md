@@ -1,4 +1,4 @@
-# BodyFracture Explosion
+# Body Fracture Explosion
 
 This sample demonstrates how to simulate an explosion that fractures physical objects within its radius using the *BodyFracture* class. Each object affected by the explosion is dynamically fractured into separate physical fragments depending on its proximity to the center of the explosion and the decreasing explosion strength over distance.
 

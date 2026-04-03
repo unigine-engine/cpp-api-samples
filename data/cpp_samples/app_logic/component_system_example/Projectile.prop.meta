@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>6685f52670a70e6ec56a54cd4475f8136fffdf35</guid>
+	<type>property</type>
+	<hash>db5760bafed04c4023b149fc48584d6a9784d977f8d142d126d045774d1085a8</hash>
+	<runtimes>
+		<runtime id="6685f52670a70e6ec56a54cd4475f8136fffdf35" name="Projectile" link="0" type="4"/>
+	</runtimes>
+</asset>

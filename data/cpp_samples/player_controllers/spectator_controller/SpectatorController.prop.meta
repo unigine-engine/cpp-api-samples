@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>87b3f356c0c2202331413e9b87378e96a764bb5b</guid>
+	<type>property</type>
+	<hash>159d70f5128a05c77cf54350d620c839533ec77f13a76b826d09ecc782371a04</hash>
+	<runtimes>
+		<runtime id="87b3f356c0c2202331413e9b87378e96a764bb5b" name="SpectatorController" link="0" type="4"/>
+	</runtimes>
+</asset>

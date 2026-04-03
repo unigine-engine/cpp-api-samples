@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.21.0.0">
+	<guid>10194c935f74688a34fa063e4bb3b229665b1aaf</guid>
+	<type>world</type>
+	<hash>fb7640231ba8576ef600af6490619e8cdda18412b72cb8d37b4342acd96aba9f</hash>
+	<runtimes>
+		<runtime id="10194c935f74688a34fa063e4bb3b229665b1aaf" name="thread_custom.world" link="0"/>
+	</runtimes>
+	<parameters>
+		<parameter type="string" name="physics_settings_path"/>
+		<parameter type="string" name="render_settings_path">guid://8bed8c3ce53501ff11c1b0ae5cc6d017d4ad5524</parameter>
+		<parameter type="string" name="script_name"/>
+		<parameter type="string" name="sound_settings_path"/>
+		<parameter type="string" name="viewports_settings"/>
+	</parameters>
+</asset>

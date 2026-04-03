@@ -1,0 +1,5 @@
+# Compute Shader
+
+This sample demonstrates a GPU-based particle system implemented with compute shaders. It initializes a dynamic particle renderer, updates particle positions and velocities each frame using a ping-pong texture mechanism, and uses UV-mapped static meshes to influence particle behavior.
+
+These mesh-to-particle transformations are well-suited for real-time visual effects, such as fluid or smoke simulations or interactive art installations.

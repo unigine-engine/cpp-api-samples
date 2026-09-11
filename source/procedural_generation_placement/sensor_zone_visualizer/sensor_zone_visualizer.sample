@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Sensor Zone Visualizer">
+	<sdk_desc>Procedural frustum mesh generator for visualizing sensor fields of view with live controls for angles, distance, and color.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample demonstrates procedural generation of frustum meshes for visualizing sensor fields of view. Four frustums are placed on a single object, facing <ui>forward</ui>, <ui>back</ui>, <ui>left</ui> and <ui>right</ui>. Each frustum is built as a spherical sector (not a real frustum) with adjustable parameters:</para>
+			<ul>
+				<li><strong>Near/Far distance</strong> - radial distances of the spherical caps</li>
+				<li><strong>Left/Right frustum border</strong> - horizontal angle range</li>
+				<li><strong>Lower/Upper frustum border</strong> - vertical angle range</li>
+				<li><strong>Color</strong> - color of the frustum mesh.</li>
+			</ul>
+			<para>Move the sliders to rebuild the selected frustum's mesh dynamically.</para>
+			<para>Fields of view greater than 180 degrees are supported, so the frustums can visualize sensors ranging from a narrow-angle camera to a hemispherical fisheye.</para> 
+		</brief>
+		<para>The mesh generation lives in <ui>SensorZoneVisualizer.cpp</ui>; the tabbed parameter panel is built in <ui>SensorZoneVisualizerSample.cpp</ui>.</para>
+	</desc>
+	<controls>
+		<![CDATA[
+		<p><b>W,A,S,D</b> - Camera movement</p>
+		<p><b>RMB</b> - Camera rotation</p>
+		]]>
+	</controls>
+	<tags>
+		<tag>Objects</tag>
+		<tag>Visualizer (Visual Debug)</tag>
+	</tags>
+	<keywords>Sensor Zone,Spherical Sector,Procedural,Mesh,FOV</keywords>
+</sample>

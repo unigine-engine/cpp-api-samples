@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>0ec50fa5a74aa2c4d21b85ab433ce74407b6b3ed</guid>
+	<type>material</type>
+	<hash>bea936a5cd24208f687a43372081ddcd6bdca2819ecf6c69a95b4352e1110480</hash>
+	<runtimes>
+		<runtime id="0ec50fa5a74aa2c4d21b85ab433ce74407b6b3ed" name="gpu_particles" link="0" type="5"/>
+	</runtimes>
+</asset>

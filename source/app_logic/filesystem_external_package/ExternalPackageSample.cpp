@@ -42,8 +42,11 @@ public:
 	// Package is initialized with specified file count and box mesh data is cached.
 	ExternalPackage(int num_files)
 	{
-		this->num_files = num_files;
 		file = File::create();
+
+		file_paths.allocate(num_files);
+		for (int i = 0; i < num_files; i += 1)
+			file_paths.append(String::format("%d.mesh", i));
 
 		// Create a simple box mesh and save it into a temporary file.
 		// This file is used as a data source for all virtual meshes.
@@ -63,19 +66,19 @@ public:
 	// Total number of virtual files in this package is returned.
 	virtual int getNumFiles() override
 	{
-		return num_files;
+		return file_paths.size();
 	}
 
 	// Virtual file path is generated based on file index (e.g., "0.mesh", "1.mesh").
 	virtual const char *getFilePath(int num) override
 	{
-		return String::format("%d.mesh", num);
+		return file_paths[num].get();
 	}
 
 	// File is selected for reading; size is set if file exists in this package.
 	virtual bool selectFile(const char *name, size_t &size) override
 	{
-		bool exists = findFile(name) > 0;
+		bool exists = findFile(name) >= 0;
 
 		if (exists)
 			size = file->getSize();
@@ -99,13 +102,13 @@ public:
 	// File existence is checked by matching name against generated file names.
 	virtual int findFile(const char *name) const override
 	{
-		for (int i = 0; i < num_files; i += 1)
+		for (int i = 0; i < file_paths.size(); i += 1)
 		{
-			if (String::format("%d.mesh", i) == name)
-				return 1;
+			if (file_paths[i] == name)
+				return i;
 		}
 
-		return 0;
+		return -1;
 	}
 
 	// File size is returned (same for all files since they share the same mesh data).
@@ -115,8 +118,8 @@ public:
 	}
 
 private:
-	int num_files = 0; // Number of virtual files to expose
-	FilePtr file;      // Handle to cached box mesh data
+	Vector<StringStack<>> file_paths;
+	FilePtr file;                     // Handle to cached box mesh data
 };
 
 // Sample component that registers a custom package and spawns meshes from it.

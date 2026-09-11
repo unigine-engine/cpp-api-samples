@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<sample title="Bones: Foot Placement">
+<sample title="Bones: Foot Placement [Animation Graph]" order="1">
+	<sdk_desc>Adjusting the feet of a character to the height and the slope of an uneven surface using inverse kinematics and raycasting.</sdk_desc>
 	<desc>
-		<brief>This sample demonstrates a naive option for placing feet on a surface using IK chains.</brief>
-		<para>Raycasting is applied to detect surface contact: in each frame, a ray is cast downward from the foot position to find intersections with the surface. The resulting contact point and surface normal are then used to adjust the foot bones' position and orientation, ensuring realistic foot placement.</para>
+		<brief>
+			<para>This sample demonstrates a naive option for placing feet on a surface using inverse kinematics in an <ui><link to="ag_overview">animation graph</link></ui>: a <ui><link to="ag_nodes_two_bone_ik">Two Bone IK</link></ui> node per leg bends them towards the points the feet have to reach, with the pelvis position adjusted so that both legs can reach the surface.</para>
+			<para>Raycasting is applied to detect surface contact: in each frame, a ray is cast downward through the foot position to find intersections with the surface. The resulting contact point and surface normal are then used to adjust the foot bones' position and orientation, ensuring realistic foot placement. Both the rays and the normals found at the contact points are visualized on the character.</para>
+			<para>Each leg blends into inverse kinematics only while its ray hits the surface, so a foot that steps off the platform returns to the animated pose smoothly instead of snapping.</para>
+			<para>The platform under the character can be moved with the manipulator switched on by the <ui>T</ui> key and rotated with the one switched on by the <ui>R</ui> key, so you can watch the feet adapt to the changing height and slope in real time.</para>
+		</brief>
 	</desc>
 	<controls>
 		<![CDATA[

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Measurements">
+	<sdk_desc>Dynamically measuring and visualizing the distance from a movable node to surrounding target nodes.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample shows how to measure distances in a scene at runtime and display them as on-screen rulers.</para>
+			<para>A set of target objects is placed around a single movable node. Every frame the distance from this node to each target is measured and drawn with the <ui><link to="visualizer_class">Visualizer</link></ui> as an arrow with a 3D label showing the length in meters. The arrows are clipped to object surfaces for precise surface-to-surface measurements. </para>
+			<para>The ruler color transitions from red (near) to green (far), and a white zone circle is drawn around each target. Green distance threshold and zone radius are adjustable in the <strong nt="1">Parameters</strong> window.</para>
+		</brief>
+		<para>The reusable parts are split into standalone components:</para>
+		<ul>
+			<li><strong nt="1">DistanceMeasurement.cpp</strong></li> - measures distances and draws rulers to each target
+			<li><strong nt="1">ZoneRadiusVisualizer.cpp</strong></li> - draws the zone circle around a node
+			<li><strong nt="1">DistanceVisualizer.cpp</strong></li>- provides shared drawing logic
+			<li><strong nt="1">SimpleMovement.cpp (<file_name>Node Movement</file_name> sample)</strong> - moves the controlled node</li>
+		</ul>
+	</desc>
+	<controls>
+		<![CDATA[
+		<p><b>W, S</b> - Move the controlled node forward / backward</p>
+		<p><b>A, D</b> - Turn the controlled node left / right</p>
+		]]>
+	</controls>
+	<tags>
+		<tag>Visualizer (Visual Debug)</tag>
+		<tag>Transformations</tag>
+	</tags>
+	<keywords>Distance,Measurement,Visualizer,Ruler</keywords>
+</sample>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>7d566444c38efe77a43f1444416b87a0a64748f9</guid>
+	<type>property</type>
+	<hash>7fc650cd2e3351e7b035db8ffe1c3ec039eb0f1441708a934dc7ba2eab488eb0</hash>
+	<runtimes>
+		<runtime id="7d566444c38efe77a43f1444416b87a0a64748f9" name="ListBox" link="0" type="4"/>
+	</runtimes>
+</asset>

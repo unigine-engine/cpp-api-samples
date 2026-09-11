@@ -1,9 +1,10 @@
 #pragma once
 
+#include "../../menu_ui/SampleDescriptionWindow.h"
+
 #include <UnigineComponentSystem.h>
 #include <UnigineInput.h>
-
-class SimpleInformationBox;
+#include <UnigineWidgets.h>
 
 // Demonstrates multi-touch input handling on touch-enabled devices.
 // Each touch point is visualized as a colored circle on a WidgetCanvas overlay,
@@ -53,5 +54,6 @@ private:
 	};
 
 	CanvasWithCircles *canvas = nullptr;
-	SimpleInformationBox *info = nullptr;
+	SampleDescriptionWindow description_window;
+	Unigine::WidgetLabelPtr touches_label;
 };

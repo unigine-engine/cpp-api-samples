@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>331011824a0915ecbd61540f37a2c29073218784</guid>
+	<type>material_graph</type>
+	<hash>1bd2d941bd283f88a5b09652ad0ef9df1c8fbd28629a2c68a21fa6d8e953f044</hash>
+	<runtimes>
+		<runtime id="331011824a0915ecbd61540f37a2c29073218784" name="decal_ortho_graph.mgraph" link="0"/>
+		<runtime id="23cd3684f5105add577881d995f2dc9dd6060f56" name="decal_ortho_graph" link="1" type="5"/>
+	</runtimes>
+</asset>

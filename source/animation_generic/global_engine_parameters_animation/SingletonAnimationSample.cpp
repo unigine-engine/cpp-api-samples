@@ -12,11 +12,11 @@
 using namespace Unigine;
 using namespace Math;
 
-// This component demonstrates singleton animation modifiers for global engine parameters.
-// Unlike object modifiers that target specific nodes/materials, singleton modifiers
-// animate global systems like Physics (gravity) and Render (background color).
-// Important: Animation objects have "engine lifetime" - they persist across world changes.
-// Active playbacks must be stopped when switching worlds to prevent unwanted effects.
+// This component demonstrates singleton animation channels for global engine parameters.
+// Unlike channels that target specific nodes/materials, a singleton channel needs no bind:
+// it animates a global system like Physics (gravity) or Render (background color).
+// Important: animation players have "engine lifetime" - they persist across world changes.
+// Active players must be stopped when switching worlds to prevent unwanted effects.
 class SingletonAnimationSample : public ComponentBase
 {
 public:
@@ -28,10 +28,10 @@ public:
 private:
 	void init()
 	{
-		// Create tracks and playbacks
+		// Create the sequence and its player
 		create_animations();
 
-		playback->play();
+		player->play();
 
 		gui.init();
 	}
@@ -45,58 +45,58 @@ private:
 	{
 		gui.shutdown();
 
-		// Animation tracks, playbacks and objects have "engine lifetime" - they persist
+		// Animation sequences and players have "engine lifetime" - they persist
 		// from creation until engine shutdown and are preserved between different worlds.
-		// Active playbacks must be stopped when switching worlds to prevent continued playback.
-		playback->stop();
+		// Active players must be stopped when switching worlds to prevent continued playback.
+		player->stop();
 
 		// Render fade color is restored to transparent black
 		Render::setBackgroundColor(vec4(0.f, 0.f, 0.f, 0.f));
 	}
 
-	// Create animation track with singleton modifiers for global engine parameters
+	// Create animation sequence with singleton channels for global engine parameters
 	void create_animations()
 	{
-		// Create new track
-		AnimationTrackPtr track = AnimationTrack::create();
+		// Create new sequence
+		sequence = AnimationSequence::create();
 
-		// Modifier for Physics::gravity Z component (global engine parameter)
+		// Channel for Physics::gravity Z component (global engine parameter)
 		// addValue(time_sec, value) adds a keyframe: time in seconds and the value at that time
-		auto gravity_modifier = AnimationModifierFloat::create("physics.gravity_z");
-		gravity_modifier->addValue(0.0f, -9.8f);	// Normal gravity
-		gravity_modifier->addValue(3.0f, 2.5f);		// Reverse (objects float up)
-		gravity_modifier->addValue(4.0f, -1.0f);
-		gravity_modifier->addValue(5.0f, -4.5f);
-		gravity_modifier->addValue(6.0f, -9.8f);	// Normal gravity
-		// addSingletonModifier() targets global engine state, no object binding needed
-		track->addSingletonModifier(gravity_modifier);
+		AnimationChannelFloatPtr gravity_channel = AnimationChannelFloat::create("physics.gravity_z");
+		gravity_channel->addValue(0.0f, -9.8f);	// Normal gravity
+		gravity_channel->addValue(3.0f, 2.5f);	// Reverse (objects float up)
+		gravity_channel->addValue(4.0f, -1.0f);
+		gravity_channel->addValue(5.0f, -4.5f);
+		gravity_channel->addValue(6.0f, -9.8f);	// Normal gravity
+		// A channel left without a bind targets global engine state
+		sequence->addChannel(gravity_channel);
 
-		// Modifier for Render::backgroundColor alpha component (global engine parameter)
+		// Channel for Render::backgroundColor alpha component (global engine parameter)
 		// Alpha approaching 1 creates a fade-to-white effect
-		auto color_modifier = AnimationModifierFloat::create("render.background_color_w");
-		color_modifier->addValue(0.0f, 0.0f);
-		color_modifier->addValue(3.0f, 1.0f);	// Full white fade
-		color_modifier->addValue(4.0f, 1.0f);
-		color_modifier->addValue(5.0f, 0.5f);
-		color_modifier->addValue(6.0f, 0.0f);
-		track->addSingletonModifier(color_modifier);
+		AnimationChannelFloatPtr color_channel = AnimationChannelFloat::create("render.background_color_w");
+		color_channel->addValue(0.0f, 0.0f);
+		color_channel->addValue(3.0f, 1.0f);	// Full white fade
+		color_channel->addValue(4.0f, 1.0f);
+		color_channel->addValue(5.0f, 0.5f);
+		color_channel->addValue(6.0f, 0.0f);
+		sequence->addChannel(color_channel);
 
-		playback = AnimationPlayback::create();
-		playback->setTrack(track);
-		playback->setLoop(true);
+		// Sequences can be serialized to disk for reuse, the ".seq" extension is required
+		Dir::mkdir(FileSystem::getAbsolutePath(joinPaths(getWorldRootPath(), "sequences")));
+		StringStack<> sequence_path = joinPaths(getWorldRootPath(), "sequences", "singletons.seq");
+		sequence->setPath(sequence_path);
 
-		// Tracks and playbacks can be serialized to disk for reuse
-		Dir::mkdir(FileSystem::getAbsolutePath(joinPaths(getWorldRootPath(), "tracks")));
-		Animations::saveTrack(track, joinPaths(getWorldRootPath(), "tracks", "singletons.utrack"));
-		Animations::savePlayback(playback, joinPaths(getWorldRootPath(), "tracks", "singletons.uplay"));
+		if (sequence->save() == false)
+			Log::warning("SingletonAnimationSample: can't save the sequence to \"%s\"\n", sequence_path.get());
 
-		// Load saved playback back from disk (demonstrates serialization roundtrip)
-		Animations::RESULT result = Animations::loadPlayback(joinPaths(getWorldRootPath(), "tracks", "singletons.uplay"));
-		if (result != Animations::RESULT_PLAYBACK_ERROR)
-		{
-			// Access loaded animations by path, GUID, or index
-			playback = Animations::getPlaybackByPath(joinPaths(getWorldRootPath(), "tracks", "singletons.uplay"));
-		}
+		// A saved sequence can be played right from its file (serialization roundtrip)
+		player = AnimationSequencePlayer::create(sequence_path);
+
+		// The file may be unavailable, then the in-memory sequence is played instead
+		if (player->hasSequence() == false)
+			player = AnimationSequencePlayer::create(sequence);
+
+		player->setLoop(true);
 	}
 
 	// ========================================================================================
@@ -149,7 +149,9 @@ private:
 		WidgetEditLinePtr gravity;
 	};
 
-	AnimationPlaybackPtr playback;
+	// A player does not own a sequence built in code, so the sample keeps it alive itself
+	AnimationSequencePtr sequence;
+	AnimationSequencePlayerPtr player;
 	SampleGui gui;
 };
 

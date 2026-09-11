@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodes version="2.22.0.0">
+	<node type="NodeDummy" id="1298895961" name="agent">
+		<properties>
+			<property parent="8a90349a56f5b842179c44f8f0d5278dd5b3b817" guid="aef4406ad4aa2fc23bcc076d0799661dc02a5b4c">
+				<parameter name="movement_speed">5</parameter>
+				<parameter name="ground_intersection_mask">0x1</parameter>
+				<parameter name="straight_mode">2</parameter>
+				<parameter name="max_cost">400</parameter>
+				<parameter name="max_search_nodes">2000</parameter>
+				<parameter name="obstacle_mask">0x1</parameter>
+				<parameter name="body_obstacle">1172803256</parameter>
+			</property>
+		</properties>
+		<transform>1.0000001 0 0 0.0 0 1.0000001 0 0.0 0 0 1.0000001 0.0 0 0 0 1.0</transform>
+		<node type="ObjectMeshStatic" id="1745427279" name="capsule05x1">
+			<mesh_name>guid://10c7e6e1b8d9ada9229083ab374825d3b4294f37</mesh_name>
+			<surface name="capsule" material="525ff762c41fffac49aa27852e083826395b5e04"/>
+			<transform>0.99999994 0 0 0.0 0 0.99999994 0 0.0 0 0 0.99999994 0.0 0 0 0.5 1.0</transform>
+		</node>
+		<node type="ObstacleCapsule" id="1172803256" name="ObstacleCapsule">
+			<radius>0.25</radius>
+			<height>0.5</height>
+			<transform>0.99999994 0 0 0.0 0 0.99999994 0 0.0 0 0 0.99999994 0.0 0 0 0 1.0</transform>
+		</node>
+	</node>
+</nodes>

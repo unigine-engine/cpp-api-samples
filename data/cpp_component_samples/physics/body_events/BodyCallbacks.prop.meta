@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>6d0998e071edbf0750df52688ef9d74da7c9aefd</guid>
+	<type>property</type>
+	<hash>de87a4b46dc77b721434a87bee02e325f206e9837544e2ef63eb800e8a133c8d</hash>
+	<runtimes>
+		<runtime id="6d0998e071edbf0750df52688ef9d74da7c9aefd" name="BodyCallbacks" link="0" type="4"/>
+	</runtimes>
+</asset>

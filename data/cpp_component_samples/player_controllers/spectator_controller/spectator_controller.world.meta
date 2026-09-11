@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>279f9ad087b2fb9a085c7fe58e20fe605a74d165</guid>
+	<type>world</type>
+	<hash>99c52145a48c54b8a9a523058ec6e68e4bc2516267bce7729e2923803e88a8ea</hash>
+	<runtimes>
+		<runtime id="279f9ad087b2fb9a085c7fe58e20fe605a74d165" name="spectator_controller.world" link="0"/>
+	</runtimes>
+	<parameters>
+		<parameter type="string" name="physics_settings_path"/>
+		<parameter type="string" name="render_settings_path">guid://8bed8c3ce53501ff11c1b0ae5cc6d017d4ad5524</parameter>
+		<parameter type="string" name="script_name"/>
+		<parameter type="string" name="sound_settings_path"/>
+		<parameter type="string" name="viewports_settings"/>
+	</parameters>
+</asset>

@@ -13,7 +13,7 @@ using namespace Unigine;
 using namespace Math;
 
 // This component demonstrates property parameter animation using the Animation system.
-// AnimationObjectPropertyParameter allows animating any property parameter attached to a node.
+// AnimationBindPropertyParameter allows animating any property parameter attached to a node.
 // Here, a "speed" property parameter is animated, which then drives object rotation in update().
 // This pattern is useful for data-driven animations where logic reads animated values.
 class PropertyAnimationSample : public ComponentBase
@@ -27,7 +27,7 @@ public:
 private:
 	void init()
 	{
-		// Animation tracks and playback are created
+		// Animation sequence and player are created
 		create_animations();
 
 		// A box primitive is created as the animation target
@@ -39,7 +39,7 @@ private:
 		PropertyPtr prop = Properties::findPropertyByPath(joinPaths(getWorldRootPath(), "properties", "speed_prop.prop"));
 		box->addProperty(prop);
 
-		playback->play();
+		player->play();
 
 		// GUI is initialized manually as SampleGui is a plain struct
 		gui.init(this);
@@ -62,37 +62,36 @@ private:
 	{
 		// GUI resources are released manually before component destruction
 		gui.shutdown();
-		playback->stop();
+		player->stop();
 	}
 
 	// Animation that modifies a property parameter value over time is created
 	void create_animations()
 	{
-		AnimationTrackPtr track = AnimationTrack::create();
+		sequence = AnimationSequence::create();
 
-		// AnimationObjectPropertyParameter targets a specific parameter within a property
-		AnimationObjectPropertyParameterPtr anim_obj = AnimationObjectPropertyParameter::create("param");
-		track->addObject(anim_obj);
-
-		// Configure binding: ACCESS_FROM_NODE finds the property on a specific node
-		AnimationBindPropertyParameterPtr bind = anim_obj->getBind();
+		// AnimationBindPropertyParameter points a channel at a specific parameter within a property.
+		// ACCESS_FROM_NODE finds the property on a target node; targets are addressed by index.
+		AnimationBindPropertyParameterPtr bind = AnimationBindPropertyParameter::create();
 		bind->setAccess(AnimationBindPropertyParameter::ACCESS_FROM_NODE);
 		bind->setNodePropertyDescription("speed_prop", 0);	// Property name and index
-		bind->setNodeDescription(123, "box");				// Target node
+		bind->setNumTargets(1);
+		bind->setTargetNodeDescription(0, 123, "box");		// Target node
 		bind->setParameterPath("speed");					// Parameter name within property
-		anim_obj->setBind(bind);
 
-		// "property_parameter.value_float" is the modifier path for float property parameters
-		AnimationModifierFloatPtr param_modifier = AnimationModifierFloat::create("property_parameter.value_float");
-		param_modifier->addValue(0.0f, 0.0f);		// Start at 0
-		param_modifier->addValue(3.0f, 120.0f);		// Accelerate to 120
-		param_modifier->addValue(9.0f, -120.0f);	// Reverse to -120
-		param_modifier->addValue(12.0f, 0.0f);		// Return to 0
-		track->addObjectModifier(anim_obj, param_modifier);
+		// "property_parameter.value_float" is the animated parameter of float property parameters
+		AnimationChannelFloatPtr speed_channel = AnimationChannelFloat::create("property_parameter.value_float");
+		speed_channel->setBind(bind);
+		speed_channel->addValue(0.0f, 0.0f);		// Start at 0
+		speed_channel->addValue(3.0f, 120.0f);		// Accelerate to 120
+		speed_channel->addValue(9.0f, -120.0f);		// Reverse to -120
+		speed_channel->addValue(12.0f, 0.0f);		// Return to 0
 
-		playback = AnimationPlayback::create();
-		playback->setTrack(track);
-		playback->setLoop(true);
+		// The sequence copies the channel, so it has to be fully set up by now
+		sequence->addChannel(speed_channel);
+
+		player = AnimationSequencePlayer::create(sequence);
+		player->setLoop(true);
 	}
 
 	// ========================================================================================
@@ -149,7 +148,10 @@ private:
 	};
 
 	NodePtr box;
-	AnimationPlaybackPtr playback;
+
+	// A player does not own a sequence built in code, so the sample keeps it alive itself
+	AnimationSequencePtr sequence;
+	AnimationSequencePlayerPtr player;
 	SampleGui gui;
 };
 

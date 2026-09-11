@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>216cfa86219557bc2e92e0b39ea0356fee8fc793</guid>
+	<type>property</type>
+	<hash>6d9c694f422c8ff37ca1e2b55f3f02eca76fd336cb32979fa0b3bb0f3dd2fc61</hash>
+	<runtimes>
+		<runtime id="216cfa86219557bc2e92e0b39ea0356fee8fc793" name="MicroprofilerSample" link="0" type="4"/>
+	</runtimes>
+</asset>

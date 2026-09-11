@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>b13d63d79936c5e39bfcb046c9bcaddff3ee45f6</guid>
+	<type>property</type>
+	<hash>08c4cfaa6e5a6d4ff52a3965a650447f611becd636b5f7509ad2f092d4ce4523</hash>
+	<runtimes>
+		<runtime id="b13d63d79936c5e39bfcb046c9bcaddff3ee45f6" name="SingletonAnimationSample" link="0" type="4"/>
+	</runtimes>
+</asset>

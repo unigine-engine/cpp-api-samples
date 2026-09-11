@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>25b14bd450df5bad930a24314be391e4dffdc77b</guid>
+	<type>property</type>
+	<hash>321d7e03f005a1aef8810f39f5a4e5e68e1377866d61af1120ba0bae688b805b</hash>
+	<runtimes>
+		<runtime id="25b14bd450df5bad930a24314be391e4dffdc77b" name="TargetMarker" link="0" type="4"/>
+	</runtimes>
+</asset>

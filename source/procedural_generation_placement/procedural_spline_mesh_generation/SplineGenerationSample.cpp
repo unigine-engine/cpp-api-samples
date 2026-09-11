@@ -41,7 +41,7 @@ void SplineGenerationSample::init()
 	}
 
 	// Transform changes are subscribed to regenerate spline mesh when any control point moves
-	manipulators->getEventTransformChanged().connect(event_connections, [this](ObjectPtr obj) {regenerate(); });
+	manipulators->getEventTransformChanged().connect(*this, [this](ObjectPtr obj) {regenerate(); });
 
 	Visualizer::setEnabled(true);
 	init_gui();

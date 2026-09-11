@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>4b8b6e4bc7c2c8a75e3db0a129aea24b4eb38f2b</guid>
+	<type>node</type>
+	<hash>8fece172446667fcf87d796842f0c349e9fccaba45c7c110c94d494bd78db183</hash>
+	<runtimes>
+		<runtime id="4b8b6e4bc7c2c8a75e3db0a129aea24b4eb38f2b" name="box.node" link="0" type="3"/>
+	</runtimes>
+</asset>

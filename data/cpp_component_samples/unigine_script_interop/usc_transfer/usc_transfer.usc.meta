@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>49ca759266aeef978ae32ed71a7cdbace9d69ff1</guid>
+	<type>script</type>
+	<hash>5cb5b776332008ef05a8c4bd568f2379783a528384a4f2cb0660ce3c20e51a20</hash>
+	<runtimes>
+		<runtime id="49ca759266aeef978ae32ed71a7cdbace9d69ff1" name="usc_transfer.usc" link="0"/>
+	</runtimes>
+</asset>

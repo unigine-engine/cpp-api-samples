@@ -117,7 +117,8 @@ void JsonSample::json_print_node(const JsonPtr &json, int offset, int index, boo
 		}
 		else
 		{
-			print_string_offset(String::format("%.2f", json->getNumber()).get(), is_comma_needed);
+			print_string_offset(String::format("%.2f", json->getNumber()).get(), offset,
+				is_comma_needed);
 		}
 	}
 
@@ -127,12 +128,12 @@ void JsonSample::json_print_node(const JsonPtr &json, int offset, int index, boo
 		if (print_name)
 		{
 			print_string_offset(
-				String::format("%s: \"%s\"", json->getName(), json->getString().get()).get(),
+				String::format("%s: \"%s\"", json->getName(), json->getString()).get(),
 				offset, is_comma_needed);
 		}
 		else
 		{
-			print_string_offset(String::format("\"%s\"", json->getString().get()).get(), offset,
+			print_string_offset(String::format("\"%s\"", json->getString()).get(), offset,
 				is_comma_needed);
 		}
 	}

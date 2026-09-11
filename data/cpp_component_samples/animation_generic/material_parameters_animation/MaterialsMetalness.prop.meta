@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>e4bd1f55b176545be33576042131233576098aef</guid>
+	<type>property</type>
+	<hash>7cbedf51449980686d7704d5326ae5e474acbd67012f852fc37e2acc229babbb</hash>
+	<runtimes>
+		<runtime id="e4bd1f55b176545be33576042131233576098aef" name="MaterialsMetalness" link="0" type="4"/>
+	</runtimes>
+</asset>

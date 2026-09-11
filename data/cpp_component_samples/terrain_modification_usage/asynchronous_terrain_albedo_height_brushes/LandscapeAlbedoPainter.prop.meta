@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>296e857ea1bdc712fe70c6b97e1f68c7b7a4c4ed</guid>
+	<type>property</type>
+	<hash>8d088af880792480883d12927e39bb6d00706c75961b39ef06262ec4d43914c0</hash>
+	<runtimes>
+		<runtime id="296e857ea1bdc712fe70c6b97e1f68c7b7a4c4ed" name="LandscapeAlbedoPainter" link="0" type="4"/>
+	</runtimes>
+</asset>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Experimental Navigation Mesh Character">
+	<sdk_desc>Moving an animated character over an <b>Experimental Navigation Mesh</b> with the root motion of the animation graph.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample demonstrates an animated character walking to a target over an <strong nt="1"><link to="experimental_navigation_mesh">Experimental Navigation Mesh</link></strong>. The character's movement along the route is taken from the <link to="ag_root_motion">root motion</link> of the locomotion animations.</para>
+			<para>Drag the target material ball with the manipulator and the character replans their route and walks to the new place. The locomotion settings can be adjusted in the <ui>Parameters</ui> section.</para>
+			<para>The <ui>Status</ui> block reports the route state, the current animation state, the velocity the character actually moves at, and the rate the walk animation is played at.</para>
+			<para>This sample is useful for animated agents navigating a scene: characters in games, pedestrians in a simulation, any unit whose animation is expected to drive its movement.</para>
+		</brief>
+		<para>The character is driven by the reusable <ui>ExperimentalSeekerCharacter</ui> component, which inherits the navigation part from <ui>ExperimentalSeeker</ui>: the route is requested through <ui><link to="experimentalnavigationpathfetch_class">ExperimentalNavigationPathFetch</link></ui> and followed with <ui><link to="experimentalnavigationmeshcorridor_class">ExperimentalNavigationMeshCorridor</link></ui>, which keeps the agent on the mesh.</para>
+		<para><ui>ExperimentalSeekerCharacter</ui> expects a locomotion <link to="ag_state_machines">state machine</link> with root motion enabled, and drives it through three parameters: a flag telling the character to walk, the playback rate of the locomotion animations, and the turn-in-place request. The states are recognized by their names containing <ui>idle</ui>, <ui>turn</ui> and <ui>stop</ui>.</para>
+		<para>The locomotion settings shape how the animations are picked and played:</para>
+		<ul>
+			<li><strong nt="1">Movement speed</strong> - the walking speed. The animations are played faster or slower to match it, and the component measures their root motion speed as the character walks, so it needs no tuning by hand</li>
+			<li><strong nt="1">Rotation speed</strong> - how fast the character may turn while walking. The walk animation goes straight, so the component turns the node itself to follow the route</li>
+			<li><strong nt="1">Turn angle</strong> - the largest turn the character makes without stopping. A sharper turn is played as the turn-in-place animation instead</li>
+			<li><strong nt="1">Stop distance</strong> - how far from the end of the route the stop animation starts. The stop animation travels a fixed distance of its own, so starting it any later would overshoot the target</li>
+			<li><strong nt="1">Reach distance</strong> - how close to the target the character counts as arrived. With a small value the character can overshoot the target and stop past it</li>
+			<li><strong nt="1">Show Seeker Debug</strong> - draws the route the character follows, and a red line straight to the target when it cannot be reached</li>
+			<li><strong nt="1">Show Navigation Mesh</strong> - draws the navigation mesh itself, colored by the areas of its polygons</li>
+		</ul>
+	</desc>
+	<link_docs>https://developer.unigine.com/docs/objects/navigations/experimental/index?rlang=cpp</link_docs>
+	<controls>
+		<![CDATA[
+		<p>Move the target node in the scene with the <b>widget manipulator</b>.<br/>
+		<b>LMB</b> click on object to show the manipulator.<br/>
+		<b>W</b> - switch the manipulator to movement mode<br/>
+		<b>F</b> - focus the camera on the selected object<br/>
+		<b>U</b>, <b>Esc</b> - deselect the object</p>
+		]]>
+	</controls>
+	<tags>
+		<tag>Navigation &amp; Pathfinding</tag>
+	</tags>
+</sample>

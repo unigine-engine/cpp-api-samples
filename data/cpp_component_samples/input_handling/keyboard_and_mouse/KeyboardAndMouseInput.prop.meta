@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>cdacc88b16e6159453f9a50a146028b00c2b3bb6</guid>
+	<type>property</type>
+	<hash>0a9e9df8113bd79eff4f2ba313736868f1c8349441798e395a347d183604d670</hash>
+	<runtimes>
+		<runtime id="cdacc88b16e6159453f9a50a146028b00c2b3bb6" name="KeyboardAndMouseInput" link="0" type="4"/>
+	</runtimes>
+</asset>

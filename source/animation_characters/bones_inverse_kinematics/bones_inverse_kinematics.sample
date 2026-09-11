@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<sample title="Bones: Inverse Kinematics">
+<sample title="Bones: Inverse Kinematics [Animation Graph]" order="1">
 	<sdk_desc>Controlling bones with inverse kinematics.</sdk_desc>
 	<desc>
 		<brief>
-			<para>This sample demonstrates how to control bones using inverse kinematics</para>
-			<para>The pole vector is used as a constraint that defines the plane of joint bending.</para>
+			<para>This sample demonstrates how to control bones using <link to="ag_procedural_control" offset="ik">inverse kinematics</link> in an <ui><link to="ag_overview">animation graph</link></ui>. Instead of rotating each bone individually, the <ui><link to="ag_nodes_two_bone_ik">Two Bone IK</link></ui> node takes the position the end of the chain has to reach and bends the bones towards it. Here the chain is the left leg of the character, with its three joints picked in the node's parameters.</para>
+			<para>The node takes the pose from the <ui><link to="ag_nodes_animation_player">Animation Player</link></ui> node, solves the chain against the target, and passes the result on, so the idle keeps playing while the foot reaches for it. The lower manipulator moves that target, the upper one moves the pole vector that defines the plane the chain bends in.</para>
+			<para>The example is useful for creating animations where character bones are automatically positioned and oriented to achieve realistic movement.</para>
 		</brief>
-		<para>The example is useful for creating animations where character bones are automatically positioned and oriented to achieve realistic movement.</para>
 	</desc>
 	<tags>
 		<tag>Animation</tag>

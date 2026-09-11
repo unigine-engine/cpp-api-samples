@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>177513d6a65c0b741fb7368300ec383b1137510c</guid>
+	<type>property</type>
+	<hash>194ddb8a0a076fd0ff034369a747acea8dcca813eeaa9c98b14809d998a47b8f</hash>
+	<runtimes>
+		<runtime id="177513d6a65c0b741fb7368300ec383b1137510c" name="MaskPaintSample" link="0" type="4"/>
+	</runtimes>
+</asset>

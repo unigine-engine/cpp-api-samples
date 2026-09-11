@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>4007ce2fa13e4f81f0a233fb6f323ba84bbf690b</guid>
+	<type>world</type>
+	<hash>fe6f36b39805927ca821e775392bf50cd4d17f9f5c52e1be72d3be2672e70003</hash>
+	<runtimes>
+		<runtime id="4007ce2fa13e4f81f0a233fb6f323ba84bbf690b" name="dynamic_field_height.world" link="0"/>
+	</runtimes>
+	<parameters>
+		<parameter type="string" name="physics_settings_path"/>
+		<parameter type="string" name="render_settings_path">guid://6ae71261ef7340a71690548dd7524cf0a29dc375</parameter>
+		<parameter type="string" name="script_name"/>
+		<parameter type="string" name="sound_settings_path"/>
+		<parameter type="string" name="viewports_settings"/>
+	</parameters>
+</asset>

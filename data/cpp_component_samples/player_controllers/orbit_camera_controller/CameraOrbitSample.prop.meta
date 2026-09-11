@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>14edb0bebc80dd84d088d52ceb5d08ee12b9d6ba</guid>
+	<type>property</type>
+	<hash>44354ca54fc92ef55e56dedf649faa75ece41a0f629b5d978b04e9b6ca7e10f3</hash>
+	<runtimes>
+		<runtime id="14edb0bebc80dd84d088d52ceb5d08ee12b9d6ba" name="CameraOrbitSample" link="0" type="4"/>
+	</runtimes>
+</asset>

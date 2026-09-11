@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>221181a15dc041fcba83a77503619c0cca5f5a4b</guid>
+	<type>property</type>
+	<hash>41e125abedc94c3ab39946f8c0df5332e31ef6998c35e3cd71c90f63d9062950</hash>
+	<runtimes>
+		<runtime id="221181a15dc041fcba83a77503619c0cca5f5a4b" name="AnimationRotation" link="0" type="4"/>
+	</runtimes>
+</asset>

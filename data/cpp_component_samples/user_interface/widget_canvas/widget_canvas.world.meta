@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>21eb88d61b88aec63773d7da24cab90e42604960</guid>
+	<type>world</type>
+	<hash>9cc050695749ae42a0ebbc19e104f747bde36763b30521829af74e0590f49a5f</hash>
+	<runtimes>
+		<runtime id="21eb88d61b88aec63773d7da24cab90e42604960" name="widget_canvas.world" link="0"/>
+	</runtimes>
+	<parameters>
+		<parameter type="string" name="physics_settings_path"/>
+		<parameter type="string" name="render_settings_path">guid://8bed8c3ce53501ff11c1b0ae5cc6d017d4ad5524</parameter>
+		<parameter type="string" name="script_name"/>
+		<parameter type="string" name="sound_settings_path"/>
+		<parameter type="string" name="viewports_settings"/>
+	</parameters>
+</asset>

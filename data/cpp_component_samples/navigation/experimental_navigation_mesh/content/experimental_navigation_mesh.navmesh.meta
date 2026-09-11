@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>43f8faa7b0db9f26fc6c4cad100990dccdc93014</guid>
+	<type>navmesh</type>
+	<hash>de9838cbe5319608f0ed356c7800e640701a6675a0f19674c3a38a9499b190c3</hash>
+	<runtimes>
+		<runtime id="43f8faa7b0db9f26fc6c4cad100990dccdc93014" name="experimental_navigation_mesh.navmesh" link="0"/>
+	</runtimes>
+</asset>

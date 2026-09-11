@@ -9,7 +9,7 @@
 				<li><strong nt="1">eu.httpbin.org/image/png</strong> - to download a <ui>PNG</ui> image</li>
 				<li><strong nt="1">eu.httpbin.org/image/jpeg</strong> - to download a <ui>JPEG</ui> image</li>
 			</ol>
-			<para>Only <ui>PNG</ui> and <ui>JPEG</ui> formats are supported for runtime loading into <ui><link to="image_class">Image</link></ui> Class instance from raw data.</para>
+			<para>Only <ui>PNG</ui> and <ui>JPEG</ui> formats are supported for runtime loading into an <ui><link to="image_class">Image</link></ui> Class instance from raw data.</para>
 			<para>The <strong nt="1"><a href="https://github.com/yhirose/cpp-httplib">github.com/yhirose/cpp-httplib</a></strong> library is used to perform the <ui>HTTP</ui> requests.</para>
 			<para>Once an image is retrieved, it is loaded from raw byte data using the <ui><link to="image_class" offset="load_cstr_int_int">Image::load()</link></ui> method. If successful, the image is assigned to the albedo texture slot of the target material using <ui><link to="material_class" offset="setTextureImage_int_Image_int">Material::setTextureImage()</link></ui>. The texture is applied at runtime to the specified surface of an object in the scene. If loading fails, the downloaded data is written to a file for further inspection.</para>
 			<para>This sample showcases a practical approach to fetching external media assets, validating them, and using them in your scenes or application logic.</para>

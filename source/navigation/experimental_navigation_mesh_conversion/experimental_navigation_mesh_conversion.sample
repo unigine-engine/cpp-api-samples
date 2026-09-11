@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Experimental Navigation Mesh Conversion">
+	<sdk_desc>Converting navigation data between the classic <b>Navigation Mesh</b> and the <b>Experimental Navigation Mesh</b>.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample demonstrates how navigation data can be moved between the classic <strong nt="1"><link to="navigation_mesh">Navigation Mesh</link></strong> and the <strong nt="1"><link to="experimental_navigation_mesh">Experimental Navigation Mesh</link></strong>.</para>
+			<para>Both are baked by the same <link to="experimentalbakenavigation_class">experimental navigation baker</link> from one shared set of settings over the same scene geometry, so the two results can be compared side by side. Their data, however, is kept in different formats: the classic node stores a polygon mesh in a <file_name>.mesh</file_name> file, the experimental one a tiled <file_name>.navmesh</file_name> asset. The sample converts the data of one node into the format of the other: the classic mesh can be converted into the experimental format and back in memory, or exported to a <file_name>.mesh</file_name> file.</para>
+			<para>The experimental system bakes the walkable surface from the scene geometry instead of areas placed by hand, streams it in tiles for worlds too large to fit in memory, and supports area volumes with their own cost.</para>
+			<para>This sample is useful when moving a project to the new navigation system: the navigation already prepared for the classic node can be carried over as it is, and the two systems can run side by side while the migration is in progress.</para>
+		</brief>
+		<para>The <strong nt="1">Bake settings</strong> group holds one set of parameters shared by both meshes. The values are pushed to the nodes right before a bake, so changing them does not invalidate the data already loaded from the assets:</para>
+		<ul>
+			<li><strong nt="1">Agent radius</strong> and <strong nt="1">Agent height</strong> - the dimensions of the agent: the walkable surface is shrunk from the boundaries by the radius, and the areas with a lower ceiling are excluded</li>
+			<li><strong nt="1">Max slope angle</strong> and <strong nt="1">Max step height</strong> - the steepest slope that still counts as walkable and the highest ledge the agent can step over</li>
+			<li><strong nt="1">Cell size</strong> and <strong nt="1">Cell height</strong> - the size of the voxelization cell: smaller cells give a more precise mesh at the cost of the bake time</li>
+			<li><strong nt="1">Tile resolution</strong> - the size of one navigation mesh tile in cells</li>
+			<li><strong nt="1">Partitioning</strong> - the algorithm splitting the walkable surface into regions: watershed gives the best quality, monotone is the fastest, chunky is a tradeoff for tiled meshes</li>
+			<li><strong nt="1">Region min size</strong> and <strong nt="1">Region merge size</strong> - isolated regions smaller than the first value are discarded, the ones smaller than the second are merged with the neighbors when possible</li>
+			<li><strong nt="1">Max edge error</strong> - the maximum deviation of the simplified mesh boundary from the raw contour</li>
+			<li><strong nt="1">Detail distance</strong> and <strong nt="1">Detail error</strong> - the sampling distance and the maximum elevation error of the detail mesh following the ground</li>
+			<li><strong nt="1">Show bake bounds</strong> - draws the bake bounds of each mesh: green for the classic node, blue for the experimental one. The navigation meshes themselves are always visualized, so the results of the operations can be compared side by side</li>
+		</ul>
+		<para>The operations available for each mesh:</para>
+		<ul>
+			<li><strong nt="1">Bake from scene</strong> - bakes the experimental navigation mesh from the scene geometry asynchronously, reporting the progress, the number of tiles built, and the elapsed time</li>
+			<li><strong nt="1">Convert from classic</strong> - converts the data of the classic mesh into the experimental format</li>
+			<li><strong nt="1">Save</strong> - writes the polygon mesh of the experimental navigation mesh to a <file_name>.mesh</file_name> file chosen in the file dialog, in the format the classic node reads</li>
+			<li><strong nt="1">Bake with new baker</strong> - bakes the classic navigation mesh from the same scene geometry, into its own separate asset so the original one stays intact</li>
+			<li><strong nt="1">Apply from experimental</strong> - sets the polygon mesh of the experimental navigation mesh to the classic node directly in memory</li>
+			<li><strong nt="1">Load</strong> - reads a <file_name>.mesh</file_name> file into the classic navigation mesh</li>
+		</ul>
+		<para>The conversion operations are self-contained functions that depend only on the Engine API, so any of them can be copied into a project. Baking from the scene runs asynchronously through <ui><link to="experimentalbakenavigation_class" offset="bakeAsync_ExperimentalNavigationMesh_ExperimentalNavigationBakeQuery">bakeAsync()</link></ui>, which returns a bake query: the sample polls it for progress and reads the result once the bake is done.</para>
+		<para>Converting the classic mesh into the experimental format goes through the scene, which is what the baker reads: the polygon mesh taken from the classic node with <ui><link to="navigationmesh_class" offset="getMesh_Mesh_int">getMesh()</link></ui> is spawned as temporary procedural geometry aligned with the experimental node, then baked by <ui><link to="experimentalbakenavigation_class" offset="bakeForce_ExperimentalNavigationMesh_int">bakeForce()</link></ui> under a dedicated bake mask that keeps the rest of the scene out. The agent radius is zeroed for that bake, since the classic mesh is already shrunk by it.</para>
+		<para>The opposite direction is direct: the polygon mesh is read from the experimental node and passed to the classic one with <ui><link to="navigationmesh_class" offset="setMesh_Mesh_int">setMesh()</link></ui>. The same mesh can be written to a file with <ui><link to="mesh_class">Mesh</link></ui> and read back into the classic node with <ui><link to="navigationmesh_class" offset="loadMesh_cstr_int">loadMesh()</link></ui>.</para>
+	</desc>
+	<link_docs>https://developer.unigine.com/docs/objects/navigations/experimental/index?rlang=cpp</link_docs>
+	<controls>
+		<![CDATA[
+		<p>Move the navigation mesh nodes in the scene with the <b>widget manipulator</b>.<br/>
+		<b>LMB</b> click on object to show the manipulator.<br/>
+		<b>W</b> - switch the manipulator to movement mode<br/>
+		<b>E</b> - switch the manipulator to rotation mode<br/>
+		<b>F</b> - focus the camera on the selected object<br/>
+		<b>U</b>, <b>Esc</b> - deselect the object</p>
+		]]>
+	</controls>
+	<tags>
+		<tag>Navigation &amp; Pathfinding</tag>
+	</tags>
+</sample>

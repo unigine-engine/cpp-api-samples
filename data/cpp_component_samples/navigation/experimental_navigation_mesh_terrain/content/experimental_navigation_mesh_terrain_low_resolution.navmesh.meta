@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>ef0f4c74fce3e88724babb162fcc45138cfa1726</guid>
+	<type>navmesh</type>
+	<hash>b017ae45e6c2bfbca5ec53ffaf6bb0cef48df4bf5ee561dd768b7c4baa1252a4</hash>
+	<runtimes>
+		<runtime id="ef0f4c74fce3e88724babb162fcc45138cfa1726" name="experimental_navigation_mesh_terrain_low_resolution.navmesh" link="0"/>
+	</runtimes>
+</asset>

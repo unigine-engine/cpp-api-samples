@@ -15,23 +15,9 @@ public:
 	COMPONENT_UPDATE(update);
 	COMPONENT_SHUTDOWN(shutdown);
 
-	// Reference to ObjectMeshSkinned node containing the skeletal mesh
-	PROP_PARAM(Node, mesh_skinned_node);
-
-	// Configuration for each bone participating in the LookAt chain
-	struct Bone: Unigine::ComponentStruct
-	{
-		// Name of the bone to include in the LookAt chain
-		PROP_PARAM(String, name);
-		// Forward axis of the bone (direction that should point toward the target)
-		PROP_PARAM(Vec3, axis, Unigine::Math::vec3_forward);
-		// Up axis of the bone (used for twist/roll orientation)
-		PROP_PARAM(Vec3, up, Unigine::Math::vec3_up);
-		// Contribution weight: higher values = bone rotates more toward target
-		PROP_PARAM(Float, weight, 1.0f);
-	};
-
-	PROP_ARRAY_STRUCT(Bone, bones);
+	// Reference to NodeSkeletonPose node containing the animation script
+	PROP_PARAM(Node, skeleton_pose_node);
+	PROP_PARAM(String, last_joint_name);
 
 private:
 	void init();
@@ -44,7 +30,7 @@ private:
 	// Manipulator for the pole vector (controls the "up" orientation of the chain)
 	Unigine::WidgetManipulatorTranslatorPtr pole_translator;
 
-	Unigine::ObjectMeshSkinnedLegacyPtr skinned;
-	// ID of the created LookAt chain (-1 means the chain is not initialized)
-	int chain_id{-1};
+	Unigine::NodeSkeletonPosePtr skeleton_pose;
+	Unigine::AnimScriptPtr anim_script;
+	int last_joint{-1};
 };

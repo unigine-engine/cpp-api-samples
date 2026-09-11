@@ -391,6 +391,7 @@ void ProceduralMeshModifier::init_gui()
 	move_combo->getEventChanged().connect(*this, [this]() {
 		auto item = move_combo->getCurrentItem();
 		is_copy_mode = item == 0;
+		update_warning();
 	});
 
 	//	--------Create Collision Data--------
@@ -410,7 +411,7 @@ void ProceduralMeshModifier::init_gui()
 	gridbox->addChild(meshvram_checkbox, Gui::ALIGN_EXPAND);
 	meshvram_checkbox->getEventChanged().connect(*this, [this]() {
 		updated_meshvram_manual = meshvram_checkbox->isChecked();
-		warning_label->setHidden(!updated_meshvram_manual);
+		update_warning();
 	});
 
 	//	--------Create MeshRender Warning--------
@@ -422,6 +423,11 @@ void ProceduralMeshModifier::init_gui()
 
 	params->setFontWrap(1);
 	params->addChild(warning_label, Gui::ALIGN_EXPAND);
+}
+
+void ProceduralMeshModifier::update_warning()
+{
+	warning_label->setHidden(!(updated_meshvram_manual && is_copy_mode));
 }
 
 void ProceduralMeshModifier::shutdown_gui()

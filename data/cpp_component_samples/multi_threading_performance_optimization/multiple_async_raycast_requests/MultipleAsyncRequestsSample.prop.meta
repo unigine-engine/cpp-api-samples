@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>24210fc3900c4e601e7e32694b9ee24076215477</guid>
+	<type>property</type>
+	<hash>d5ac9c461d611ea40ea70af50b0a41dc139e2b42dd27149d33b6837c66d685ce</hash>
+	<runtimes>
+		<runtime id="24210fc3900c4e601e7e32694b9ee24076215477" name="MultipleAsyncRequestsSample" link="0" type="4"/>
+	</runtimes>
+</asset>

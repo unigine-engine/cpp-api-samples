@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>bedfc645a0eb8e9130a8829da6095ac5aae5e838</guid>
+	<type>property</type>
+	<hash>b44617daacf31a8784333f1aad795d6573d9ffc772b79ddb9eae1403b330f7cb</hash>
+	<runtimes>
+		<runtime id="bedfc645a0eb8e9130a8829da6095ac5aae5e838" name="SoundSourceController" link="0" type="4"/>
+	</runtimes>
+</asset>

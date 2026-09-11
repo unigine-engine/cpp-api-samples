@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>e3a85680e18d399495cfa9da0518ed1446021ad9</guid>
+	<type>property</type>
+	<hash>e3f6887b8f83de5e054424803358835fbfb4ecf3089d37290e9ca85630d34a40</hash>
+	<runtimes>
+		<runtime id="e3a85680e18d399495cfa9da0518ed1446021ad9" name="ExperimentalNavigationMeshTerrainLogic" link="0" type="4"/>
+	</runtimes>
+</asset>

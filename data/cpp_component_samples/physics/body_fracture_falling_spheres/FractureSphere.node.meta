@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>86e0443675349b94f88a51b18a47f9362213f165</guid>
+	<type>node</type>
+	<hash>6c7d3539b6d0b3f948e098db7c68ad087ff1ea32f2d0051c92257019836517c5</hash>
+	<runtimes>
+		<runtime id="86e0443675349b94f88a51b18a47f9362213f165" name="FractureSphere.node" link="0" type="3"/>
+	</runtimes>
+</asset>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>5fdcdeffb8305d2c5342c958ba862d2981c56793</guid>
+	<type>property</type>
+	<hash>5b8bd2e88bee60bcb6be6b4d94b03384311b4a735144e9a19c66311fc38dd0ea</hash>
+	<runtimes>
+		<runtime id="5fdcdeffb8305d2c5342c958ba862d2981c56793" name="LandscapeMaskPainter" link="0" type="4"/>
+	</runtimes>
+</asset>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>b8607b0c07695e26159078a3945f8627d7fd8ac9</guid>
+	<type>material</type>
+	<hash>6c24bb7a268e8fd511907b4e9969c65024df7015e02b8688d443a54c362df4ae</hash>
+	<runtimes>
+		<runtime id="b8607b0c07695e26159078a3945f8627d7fd8ac9" name="plane_material" link="0" type="5"/>
+	</runtimes>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+</asset>

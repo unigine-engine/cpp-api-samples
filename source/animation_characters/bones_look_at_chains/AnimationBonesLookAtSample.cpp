@@ -11,62 +11,44 @@ using namespace Math;
 
 void AnimationBonesLookAtSample::init()
 {
-	// Bone visualization only works in Debug/Development builds
-#ifndef DEBUG
-	if (Engine::get()->getBuildConfiguration() == Engine::BUILD_CONFIG_RELEASE)
-		Log::warning("Current build configuration is Release. Visualization of ObjectMeshSkinned "
-					 "Bones is not available with this build configuration\n");
-#endif
-
-	skinned = checked_ptr_cast<ObjectMeshSkinnedLegacy>(mesh_skinned_node.get());
-	if (skinned.isValid() == false)
+	skeleton_pose = checked_ptr_cast<NodeSkeletonPose>(skeleton_pose_node.get());
+	if (skeleton_pose.isValid() == false)
 	{
-		Log::error("AnimationBonesLookAtSample::init(): skinned is null\n");
+		Log::error("AnimationBonesLookAtSample::init(): skeleton pose is null\n");
 		return;
 	}
 
-	// Create LookAt chain and configure each participating bone
-	chain_id = skinned->addLookAtChain();
-	for (int i = 0; i < bones.size(); i++)
+	anim_script = skeleton_pose->getAnimScript();
+	if (anim_script.isValid() == false)
 	{
-		const Bone &b = bones[i];
-		int index = skinned->addLookAtChainBone(b.name, chain_id);
-		if (index == -1)
-			continue;
-
-		// Axis and up vectors must be specified in the bone's local coordinate system
-		skinned->setLookAtChainBoneAxis(Vec3(b.axis), index, chain_id);
-		skinned->setLookAtChainBoneUp(Vec3(b.up), index, chain_id);
-
-		// Weight determines how much this bone contributes to the overall look-at rotation
-		skinned->setLookAtChainBoneWeight(b.weight, index, chain_id);
+		Log::error("AnimationBonesLookAtSample::init(): animation script is null\n");
+		return;
 	}
+
+	ConstSkeletonPtr skeleton = skeleton_pose->getSkeleton();
+	if (skeleton.isValid())
+		last_joint = skeleton->findJoint(last_joint_name.get());
 
 	// Create manipulator for the look-at target
 	target_translator = WidgetManipulatorTranslator::create();
-	target_translator->setTransform(translate(Vec3(1.5f, 1.5f, 1.6f)));
+	target_translator->setTransform(translate(Vec3(anim_script->getParamVec3("look_at_target"))));
 	target_translator->setLifetime(Widget::LIFETIME_WORLD);
 	WindowManager::getMainWindow()->addChild(target_translator);
 
 	// Create manipulator for the pole vector (defines the "up" reference for orientation)
 	pole_translator = WidgetManipulatorTranslator::create();
-	pole_translator->setTransform(translate(Vec3(0.0f, 0.0f, 3.0f)));
+	pole_translator->setTransform(translate(Vec3(anim_script->getParamVec3("look_at_pole"))));
 	pole_translator->setLifetime(Widget::LIFETIME_WORLD);
 	WindowManager::getMainWindow()->addChild(pole_translator);
 
-	// Set initial target and pole positions
-	skinned->setLookAtChainTargetWorldPosition(target_translator->getTransform().getTranslate(), chain_id);
-	skinned->setLookAtChainPoleWorldPosition(pole_translator->getTransform().getTranslate(), chain_id);
-
-	// Enable debug visualization for the LookAt chain
-	skinned->addVisualizeLookAtChain(chain_id);
+	// Enable debug visualization
 	Visualizer::setEnabled(true);
 	Visualizer::setMode(Visualizer::MODE_ENABLED_DEPTH_TEST_DISABLED);
 }
 
 void AnimationBonesLookAtSample::update()
 {
-	if (chain_id == -1)
+	if (anim_script.isNull())
 		return;
 
 	PlayerPtr player = Game::getPlayer();
@@ -84,13 +66,30 @@ void AnimationBonesLookAtSample::update()
 	Vec3 pole_pos = pole_translator->getTransform().getTranslate();
 
 	// Update LookAt chain with current manipulator positions
-	skinned->setLookAtChainTargetWorldPosition(target_translator->getTransform().getTranslate(), chain_id);
-	skinned->setLookAtChainPoleWorldPosition(pole_translator->getTransform().getTranslate(), chain_id);
+	anim_script->setParamVec3("look_at_target", vec3(target_pos));
+	anim_script->setParamVec3("look_at_pole", vec3(pole_pos));
 
 	Visualizer::renderMessage3D(target_pos + Vec3(0.f, 0.f, -0.1f), vec3_zero, "Drag Me",
 		vec4_white, 1, 30);
 	Visualizer::renderMessage3D(pole_pos + Vec3(0.f, 0.f, -0.1f), vec3_zero, "Drag Me", vec4_white,
 		1, 30);
+
+	Visualizer::renderSolidSphere(0.02f, translate(target_pos), vec4_green);
+	Visualizer::renderSolidSphere(0.02f, translate(pole_pos), vec4_red);
+
+	if (0 < skeleton_pose->getNumLayers())
+	{
+		skeleton_pose->renderLayerBones(0, skeleton_pose->getWorldTransform(), vec4_black);
+
+		if (last_joint != -1)
+		{
+			Vec3 last_joint_pos(skeleton_pose->getLayerJointObjectTransform(0, last_joint).getTranslate());
+			last_joint_pos = skeleton_pose->getWorldTransform() * last_joint_pos;
+
+			Visualizer::renderLine3D(last_joint_pos, target_pos, pole_pos, last_joint_pos, vec4_red);
+			Visualizer::renderTriangle3D(last_joint_pos, target_pos, pole_pos, vec4(1.0f, 0.0f, 0.0f, 0.2f));
+		}
+	}
 }
 
 void AnimationBonesLookAtSample::shutdown()

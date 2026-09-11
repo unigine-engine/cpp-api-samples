@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>c15771fc77a45dae33911c04bb171e6f49fa33cb</guid>
+	<type>property</type>
+	<hash>d25d3d84b18bd40b4b7a4a38f1a10c08715deea4491a47f9b12fd473d5fb41fe</hash>
+	<runtimes>
+		<runtime id="c15771fc77a45dae33911c04bb171e6f49fa33cb" name="Tracker" link="0" type="4"/>
+	</runtimes>
+</asset>

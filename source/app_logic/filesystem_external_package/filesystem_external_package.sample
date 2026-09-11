@@ -11,6 +11,8 @@
 			<para>Using this example will help you understand how to organize work with external files, create and manage your own data packages, implement a mechanism for loading and reading data from a package.</para>
 	</desc>
 	<tags>
+		<tag>Systems</tag>
+		<tag>Logic</tag>
 		<tag>File System</tag>
 	</tags>
 </sample>

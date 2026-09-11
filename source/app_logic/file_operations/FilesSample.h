@@ -15,7 +15,7 @@ class FilesSample : public Unigine::ComponentBase
 	COMPONENT_SHUTDOWN(shutdown)
 
 	// File path used for reading and writing
-	PROP_PARAM(String, filepath, "cpp_samples/app_logic/files/generated_file")
+	PROP_PARAM(String, filepath, "cpp_component_samples/app_logic/files/generated_file")
 
 private:
 	void init();

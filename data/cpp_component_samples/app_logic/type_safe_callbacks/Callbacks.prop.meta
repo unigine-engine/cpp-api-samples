@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>9fdc2cfe374fa5bde1e4e458854875e1709add1c</guid>
+	<type>property</type>
+	<hash>4085cca470071576937288c45cb524c6a2e75f3934752d561a893fab97173b26</hash>
+	<runtimes>
+		<runtime id="9fdc2cfe374fa5bde1e4e458854875e1709add1c" name="Callbacks" link="0" type="4"/>
+	</runtimes>
+</asset>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>62387d7964343cf873e96b5290c1c747e98a1f70</guid>
+	<type>world</type>
+	<hash>fdc53216ed50c1db90a4ac0f7653224a53cb871903598054ee334615616a020d</hash>
+	<runtimes>
+		<runtime id="62387d7964343cf873e96b5290c1c747e98a1f70" name="bones_state_machine.world" link="0"/>
+	</runtimes>
+	<parameters>
+		<parameter type="string" name="physics_settings_path"/>
+		<parameter type="string" name="render_settings_path">guid://e7c25e58d50469eb1759808b454697512aed4c0b</parameter>
+		<parameter type="string" name="script_name"/>
+		<parameter type="string" name="sound_settings_path"/>
+		<parameter type="string" name="viewports_settings"/>
+	</parameters>
+</asset>

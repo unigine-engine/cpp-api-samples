@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>c8a291dd5158bc0d3bb6b8a2d31a7f180949c9f5</guid>
+	<type>property</type>
+	<hash>d517b6364e038ad4d8a4615ee7f06eb9a5a8c746e9ed99c2255d5f10adfa0dba</hash>
+	<runtimes>
+		<runtime id="c8a291dd5158bc0d3bb6b8a2d31a7f180949c9f5" name="LandscapePolygonsSample" link="0" type="4"/>
+	</runtimes>
+</asset>

@@ -72,7 +72,7 @@ void MeshToMaskTextureSample::init()
 	manipulator = WidgetManipulatorTranslator::create(gui);
 	manipulator->setTransform(view_point.get()->getWorldTransform());
 	gui->addChild(manipulator);
-	manipulator->getEventChanged().connect(ev_conns, [this]() {
+	manipulator->getEventChanged().connect(*this, [this]() {
 		view_point->setWorldPosition(manipulator->getTransform().getTranslate());
 		player->setWorldTransform(manipulator->getTransform());
 		player->worldLookAt(mesh_node->getWorldPosition());

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>6659e2db66c5ba7e73159fc54c6d8e60ac196e3f</guid>
+	<type>material_graph</type>
+	<hash>c8552c14c8781b5617cb106030b7b50963571ec5b5b47ea6eddb4d5deb0b3b91</hash>
+	<runtimes>
+		<runtime id="6659e2db66c5ba7e73159fc54c6d8e60ac196e3f" name="fade_by_depth.mgraph" link="0"/>
+		<runtime id="3aa323eeb9469a75dbfc695043062c6f704a6f02" name="fade_by_depth" link="1" type="5"/>
+	</runtimes>
+</asset>

@@ -36,8 +36,6 @@ private:
 
 	// All created objects for cleanup
 	Unigine::Vector<Unigine::NodePtr> objects;
-	// Manages all joint event connections
-	Unigine::EventConnections joint_connections;
 
 	// Spacing between adjacent bridge sections
 	float space = 1.1f;

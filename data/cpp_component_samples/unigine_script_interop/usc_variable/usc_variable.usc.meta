@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>3f5c187a4d0b8dc5328fab5fc7cf539baa7cfdb9</guid>
+	<type>script</type>
+	<hash>c7d53233aab364b2073ded2a118636fd7899ae4f9721206a2392a51e6d47d5d2</hash>
+	<runtimes>
+		<runtime id="3f5c187a4d0b8dc5328fab5fc7cf539baa7cfdb9" name="usc_variable.usc" link="0"/>
+	</runtimes>
+</asset>

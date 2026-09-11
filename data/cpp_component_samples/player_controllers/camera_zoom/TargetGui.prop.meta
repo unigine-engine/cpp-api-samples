@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>1bbe3cf231371c7d0280e1c76c1af29018a33d73</guid>
+	<type>property</type>
+	<hash>29528e850f9352b29025c6a446801878ec03847ed4159f354c31e04bbb8a2e00</hash>
+	<runtimes>
+		<runtime id="1bbe3cf231371c7d0280e1c76c1af29018a33d73" name="TargetGui" link="0" type="4"/>
+	</runtimes>
+</asset>

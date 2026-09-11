@@ -1,9 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <sample title="Bones: State Machine [Animation Graph]" order="1">
+	<sdk_desc>Controlling character animation with state machines and blend spaces built in an animation graph.</sdk_desc>
 	<desc>
-		<brief>This sample demonstrates how to make an animated state machine based on ObjectMeshSkinned.</brief>
-		<para>A state machine is a design pattern that manages various object states—such as idle, walking, or sneaking—and handles transitions between them. The example illustrates how to configure state machines with dynamic controls for walking, turning when idle, and running.</para>
-		<para>Implementing state machines enables the creation of complex, flexible character behaviors.</para>
+		<brief>
+			<para>This sample demonstrates how to build animation state machines in an <ui><link to="ag_overview">animation graph</link></ui>. A state machine manages various object states - such as idle, walking, or running - and handles transitions between them.</para>
+			<br/>
+			<para>Three characters show different configurations, each with its own graph:</para>
+			<ul>
+				<li><strong nt="1">Walk</strong> (left) - transitions between idle and walking depending on the speed value, with a separate turn-around animation triggered by a flag.</li>
+				<li><strong nt="1">Turn</strong> (center) - a one-dimensional <ui><link to="ag_blend_spaces">blend space</link></ui>, where a single value between -1 and 1 blends between turning left, standing still, and turning right.</li>
+				<li><strong nt="1">Run</strong> (right) - a two-dimensional blend space, where one value blends idle, walking, and running, and the other one blends turning to the left and to the right.</li>
+			</ul>
+			<para>The component itself only sets the named parameters of each graph from the keyboard input, while all the states, transitions, and blending are configured in the graph assets. Every state machine also uses root motion, so the characters are carried by the animations they play.</para>
+			<para>Implementing state machines enables the creation of complex, flexible character behaviors.</para>
+		</brief>
 	</desc>
 	<controls>
 		<![CDATA[

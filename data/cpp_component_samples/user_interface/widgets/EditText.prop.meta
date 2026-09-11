@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>c191e5443ebfbef75b53ef41cff12bc72fa032a6</guid>
+	<type>property</type>
+	<hash>935ed547839dce7e23ac6eb5cf645d327ba6c288b0a771606a225f77fd3d2800</hash>
+	<runtimes>
+		<runtime id="c191e5443ebfbef75b53ef41cff12bc72fa032a6" name="EditText" link="0" type="4"/>
+	</runtimes>
+</asset>

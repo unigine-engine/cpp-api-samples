@@ -12,8 +12,8 @@ using namespace Unigine;
 using namespace Math;
 
 // This component demonstrates node transform animation using the Animation system.
-// AnimationObjectNode can animate position, rotation, and scale of any scene node.
-// Different modifier types are shown: Scalar (single axis), Quat (rotation),
+// AnimationBindNode points channels at a scene node, animating its position, rotation and scale.
+// Different channel types are shown: Scalar (single axis), Quat (rotation),
 // and FVec3 (3D vector). Animation curves can use different interpolation types.
 class NodeAnimationSample : public ComponentBase
 {
@@ -26,7 +26,7 @@ public:
 private:
 	void init()
 	{
-		// Create animation track and playback
+		// Create animation sequence and player
 		create_animations();
 
 		// A box primitive is created as the animation target
@@ -35,7 +35,7 @@ private:
 		box->setID(123);
 		box->setWorldPosition(Vec3(0.f, 0.f, 1.15f));
 
-		playback->play();
+		player->play();
 
 		// GUI is initialized manually as SampleGui
 		gui.init(this);
@@ -51,28 +51,26 @@ private:
 	{
 		// GUI resources are released manually before component destruction
 		gui.shutdown();
-		playback->stop();
+		player->stop();
 	}
 
-	// Animation track with transform modifiers for position, rotation, and scale is created
+	// Animation sequence with transform channels for position, rotation, and scale is created
 	void create_animations()
 	{
-		AnimationTrackPtr track = AnimationTrack::create();
+		sequence = AnimationSequence::create();
 
-		// AnimationObjectNode targets a scene node for transform animation
-		AnimationObjectNodePtr anim_obj = AnimationObjectNode::create("box");
-		track->addObject(anim_obj);
+		// Bind to target node by ID and name (both used for identification).
+		// setBind() copies the bind, so one bind describes the target of all three channels.
+		AnimationBindNodePtr bind = AnimationBindNode::create();
+		bind->setNumTargets(1);
+		bind->setTargetNodeDescription(0, 123, "box");
 
-		// Bind to target node by ID and name (both used for identification)
-		AnimationBindNodePtr bind = anim_obj->getBind();
-		bind->setNodeDescription(123, "box");
-		anim_obj->setBind(bind);
-
-		// AnimationModifierScalar animates a single float value (here: Z position only)
-		auto position_modifier = AnimationModifierScalar::create("node.world_position_z");
+		// AnimationChannelScalar animates a single float value (here: Z position only)
+		AnimationChannelScalarPtr position_channel = AnimationChannelScalar::create("node.world_position_z");
+		position_channel->setBind(bind);
 
 		// AnimationCurveScalar stores keyframes with time and value pairs
-		auto position_curve = AnimationCurveScalar::create();
+		AnimationCurveScalarPtr position_curve = AnimationCurveScalar::create();
 		position_curve->addKey(0.0f, 1.5f + 0.0f);
 		position_curve->addKey(4.0f, 1.5f + 2.0f);
 		position_curve->addKey(8.0f, 1.5f + 0.0f);
@@ -80,29 +78,30 @@ private:
 		// KEY_TYPE_SMOOTH uses Bézier curve with symmetric tangents
 		position_curve->setTypeOfAllKeys(AnimationCurve::KEY_TYPE_SMOOTH);
 
-		position_modifier->setCurve(position_curve);
-		track->addObjectModifier(anim_obj, position_modifier);
+		position_channel->setCurve(position_curve);
+		sequence->addChannel(position_channel);
 
-		// AnimationModifierQuat animates rotation using quaternion interpolation (slerp)
+		// AnimationChannelQuat animates rotation using quaternion interpolation (slerp)
 		// MODE_QUAT uses AnimationCurveQuat directly; MODE_ANGLES_XYZ/ZYX use three separate
 		// AnimationCurveFloat curves for each angle, composing a quaternion in XYZ or ZYX order
-		auto rotation_modifier = AnimationModifierQuat::create(AnimationModifierQuat::MODE_QUAT, "node.world_rotation");
-		rotation_modifier->addQuatValue(0.0f, quat(0.0f, 0.0f, 0.0f));
-		rotation_modifier->addQuatValue(4.0f, quat(0.0f, 0.0f, 180.0f));
-		rotation_modifier->addQuatValue(8.0f, quat(0.0f, 0.0f, 360.0f));
-		track->addObjectModifier(anim_obj, rotation_modifier);
+		AnimationChannelQuatPtr rotation_channel = AnimationChannelQuat::create(AnimationChannelQuat::MODE_QUAT, "node.world_rotation");
+		rotation_channel->setBind(bind);
+		rotation_channel->addQuatValue(0.0f, quat(0.0f, 0.0f, 0.0f));
+		rotation_channel->addQuatValue(4.0f, quat(0.0f, 0.0f, 180.0f));
+		rotation_channel->addQuatValue(8.0f, quat(0.0f, 0.0f, 360.0f));
+		sequence->addChannel(rotation_channel);
 
-		// AnimationModifierFVec3 animates a 3D vector (here: scale)
-		auto scale_modifier = AnimationModifierFVec3::create("node.world_scale");
-		scale_modifier->addValue(0.0f, vec3(1.f, 1.f, 1.f), AnimationCurve::KEY_TYPE_SMOOTH);
-		scale_modifier->addValue(4.0f, vec3(1.5f, 1.5f, 0.66f), AnimationCurve::KEY_TYPE_SMOOTH);
-		scale_modifier->addValue(8.0f, vec3(1.f, 1.f, 1.f), AnimationCurve::KEY_TYPE_SMOOTH);
-		track->addObjectModifier(anim_obj, scale_modifier);
+		// AnimationChannelFVec3 animates a 3D vector (here: scale)
+		AnimationChannelFVec3Ptr scale_channel = AnimationChannelFVec3::create("node.world_scale");
+		scale_channel->setBind(bind);
+		scale_channel->addValue(0.0f, vec3(1.f, 1.f, 1.f), AnimationCurve::KEY_TYPE_SMOOTH);
+		scale_channel->addValue(4.0f, vec3(1.5f, 1.5f, 0.66f), AnimationCurve::KEY_TYPE_SMOOTH);
+		scale_channel->addValue(8.0f, vec3(1.f, 1.f, 1.f), AnimationCurve::KEY_TYPE_SMOOTH);
+		sequence->addChannel(scale_channel);
 
-		// Create playback for track
-		playback = AnimationPlayback::create();
-		playback->setTrack(track);
-		playback->setLoop(true);
+		// Create player for the sequence
+		player = AnimationSequencePlayer::create(sequence);
+		player->setLoop(true);
 	}
 
 	// ========================================================================================
@@ -167,7 +166,9 @@ private:
 		WidgetEditLinePtr node_scale_z;
 	};
 
-	AnimationPlaybackPtr playback;
+	// A player does not own a sequence built in code, so the sample keeps it alive itself
+	AnimationSequencePtr sequence;
+	AnimationSequencePlayerPtr player;
 	NodePtr box;
 	SampleGui gui;
 };

@@ -2,8 +2,7 @@
 
 This sample demonstrates real-time painting of **Landscape Layer Map** mask data using a customizable brush system.
 
-**Key Features:
-**
+**Key Features:**
 
 -Terrain modification using *Landscape::asyncTextureDraw()*
 -Brush parameters:

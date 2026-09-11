@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>cb6b217efa26a533042fcb4d66adc01c61dedca4</guid>
+	<type>property</type>
+	<hash>4108aaf8bdd3b14d8dd1d104027743c56c722d207adb23326df1879dc8947105</hash>
+	<runtimes>
+		<runtime id="cb6b217efa26a533042fcb4d66adc01c61dedca4" name="LandscapeHeightPainter" link="0" type="4"/>
+	</runtimes>
+</asset>

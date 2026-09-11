@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>e9e62d0170803ee1ce418f0ea4549ca9613cdf3d</guid>
+	<type>property</type>
+	<hash>bf3019f0d7f80e36f35536bea4cfe093101a1be96a7ef8e01af1ec5e63a5da7b</hash>
+	<runtimes>
+		<runtime id="e9e62d0170803ee1ce418f0ea4549ca9613cdf3d" name="SoundReverbController" link="0" type="4"/>
+	</runtimes>
+</asset>

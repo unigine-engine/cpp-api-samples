@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>2c109f1cff53a871d71adcdd0f7527a8d7b81601</guid>
+	<type>property</type>
+	<hash>a349b093b77ba31bb186f6a19fdbf2440680622f8a0f3e13e9ccdb01023ccb1c</hash>
+	<runtimes>
+		<runtime id="2c109f1cff53a871d71adcdd0f7527a8d7b81601" name="AnimationBonesRetargetingSample" link="0" type="4"/>
+	</runtimes>
+</asset>

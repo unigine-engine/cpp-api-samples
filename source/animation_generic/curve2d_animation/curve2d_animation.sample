@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <sample title="Curve2D Animation">
-	<sdk_desc>Real-time animation of transforms and materials using <i>Curve2D</i> for flexible, non-linear motion.</sdk_desc>
+	<sdk_desc>Real-time animation of transformations and material parameters using <i>Curve2D</i> for flexible, non-linear motion.</sdk_desc>
 	<desc>
 		<brief>
-			<para>This sample demonstrates how to animate both node transforms and material parameters using <ui><link to="curve2d_class">Curve2D</link></ui>. Separate <ui>Curve2d</ui> tracks control a node's position, rotation, and scale, evaluated each frame to build the final transformation matrix.</para>
-			<para>This setup is useful for creating looping motions and dynamic material effects without relying on external animation assets.</para>
+			<para>This sample demonstrates animating node transformations and material parameters with <ui><link to="curve2d_class">Curve2D</link></ui> values sampled every frame.</para>
+			<br/>
+			<para>Two components are shown:</para>
+			<ul>
+				<li><strong nt="1">CurveAnimationTransform</strong> - animates the transformation of a node. Position, rotation, and scale have a separate curve for each of the <value>X, Y, Z</value> axes, so every axis can be shaped independently. The curves are evaluated at the current time and composed into the final transformation matrix. In the sample it moves the platforms, and changes the coins and heart transformations.</li>
+				<li><strong nt="1">CurveAnimationMaterialParamFloat</strong> - animates float parameters of a material. Each entry of the list binds a curve to a parameter by its name and surface index, so any number of parameters can be animated at once. In the sample it pulses the emission of the coins and the heart.</li>
+			</ul>
+			<para>The curves and the playback speed are available in the properties of the corresponding component in UnigineEditor, where the curves can also be shaped in the <ui><link to="editor2_editing_curves">Curve Editor</link></ui>.</para>
+			<para>This setup is useful for looping motions and dynamic material effects that do not require external animation assets.</para>
 		</brief>
 	</desc>
 	<tags>

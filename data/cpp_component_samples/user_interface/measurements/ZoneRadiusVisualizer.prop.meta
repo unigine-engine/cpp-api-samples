@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>8aa15362a0c0fe8b16ad2bbd717806da32ed27fb</guid>
+	<type>property</type>
+	<hash>b47fe367f0fb851a59876f99418c0786a27777fb66524000781b0b88215b558b</hash>
+	<runtimes>
+		<runtime id="8aa15362a0c0fe8b16ad2bbd717806da32ed27fb" name="ZoneRadiusVisualizer" link="0" type="4"/>
+	</runtimes>
+</asset>

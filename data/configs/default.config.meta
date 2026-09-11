@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<asset version="2.21.0.0">
+<asset version="2.22.0.0">
 	<guid>f91e336cf10097db8a5aeb7e7c2f1cc51f86e760</guid>
 	<type>file</type>
-	<hash>662bc9005a429bbedf874537c910e0671e95aa2a89d6000365114cb7830fcf57</hash>
+	<hash>90bee8b87610175a38ac0ab40ad37748350e43e3b2e5220a8431eb73107da443</hash>
 	<runtimes>
 		<runtime id="f91e336cf10097db8a5aeb7e7c2f1cc51f86e760" name="default.config" link="0"/>
 	</runtimes>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>2b09efe6256622b96cba1d9ceb730378eb923aae</guid>
+	<type>property</type>
+	<hash>5fd0ca47e2c5b0eab3dff4f4b91ee63661fda80b57b5e5a50a266b382f9c58aa</hash>
+	<runtimes>
+		<runtime id="2b09efe6256622b96cba1d9ceb730378eb923aae" name="DistanceMeasurement" link="0" type="4"/>
+	</runtimes>
+</asset>

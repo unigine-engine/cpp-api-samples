@@ -2,7 +2,7 @@
 <sample title="Navigation Sectors Demo">
 	<sdk_desc>Configuring pathfinding to multiple targets in a cube with obstacles using <i>Navigation Sector</i>.</sdk_desc>
 	<desc>
-		<brief>This sample demonstrates several material balls collecting coins in a cube with obstacles, navigating around by means of a <i>Navigation Sector</i>. The <ui>Route radius</ui> parameter controls the navigation width - increasing it creates wider paths that maintain safe distance from obstacles, while decreasing it allows navigation through tighter spaces.</brief>
+		<brief>This sample demonstrates several material balls collecting coins in a cube with obstacles, navigating around by means of a <ui>Navigation Sector</ui>. The <ui>Route radius</ui> parameter controls the navigation width - increasing it creates wider paths that maintain safe distance from obstacles, while decreasing it allows navigation through tighter spaces.</brief>
 	</desc>
 	<controls>
 		<![CDATA[
@@ -11,6 +11,6 @@
 		]]>
 	</controls>
 	<tags>
-		<tag>Navigation &amp; Patfinding</tag>
+		<tag>Navigation &amp; Pathfinding</tag>
 	</tags>
 </sample>

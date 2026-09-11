@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Experimental Navigation Mesh Crowd">
+	<sdk_desc>Moving a crowd of agents over an <b>Experimental Navigation Mesh</b> with collision avoidance.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample demonstrates a crowd of agents moving over an <strong nt="1"><link to="experimental_navigation_mesh">Experimental Navigation Mesh</link></strong>, each one planning its own route and steering around the others on the way. Before an agent moves, it evaluates its neighbors and adjusts its speed and direction to avoid a collision. The crowd starts with a hundred agents and can be restarted with ten to three hundred.</para>
+			<para>The sample provides three navigation scenarios:</para>
+			<ul>
+				<li><strong nt="1">Bottleneck</strong> - two teams on the opposite sides of a wall swap places, each agent taking the shortest route through the gates</li>
+				<li><strong nt="1">Circle</strong> - the agents are placed on a circle and head for its diametrically opposite point</li>
+				<li><strong nt="1">Wander</strong> - the agents walk between random points of the mesh</li>
+			</ul>
+			<para>The <ui>Status</ui> block reports the current scenario, the number of agents, and how many goals they have reached. <ui>Agents without a route</ui> is a diagnostic counter: anything above zero means an agent was spawned off the mesh or cannot reach its target.</para>
+			<para>This sample is useful for crowds of characters in games, for pedestrian and evacuation simulations, and for any scene where many units or vehicles share the same space.</para>
+		</brief>
+		<para>The following parameters can be adjusted at run time:</para>
+		<ul>
+			<li><strong nt="1">Scenario</strong> - the situation the crowd is put in</li>
+			<li><strong nt="1">Agents</strong> and <strong nt="1">Circle radius</strong> - the number of agents and the size of the circle. Both take effect only on restart, since the agents are respawned</li>
+			<li><strong nt="1">Restart scenario</strong> - respawns the whole crowd from scratch, applying the values that require a restart</li>
+			<li><strong nt="1">Teleport all to one point</strong> - instantly moves every agent into a small area around one point, and the crowd spreads them back out</li>
+			<li><strong nt="1">Neighbor range</strong> and <strong nt="1">Max neighbors</strong> - how far around itself and how many neighbors an agent takes into account. The range should be at least <formula>2 * (max speed * prediction time + agent radius)</formula>: a shorter one makes the agents notice each other too late to steer away, while a longer one costs performance for no gain</li>
+			<li><strong nt="1">Prediction time</strong> - how far ahead (in seconds) an agent predicts the collisions. Low values make the crowd react at the last moment and collide, high values make the agents swerve early and take wider detours</li>
+			<li><strong nt="1">Desired velocity</strong>, <strong nt="1">Current velocity</strong>, <strong nt="1">Side preference</strong>, <strong nt="1">Time to impact</strong>, and <strong nt="1">Separation</strong> - the weights balancing what the agent tries to do: follow its route, keep its current course, prefer one side when passing by, dodge imminent collisions, and keep its distance</li>
+			<li><strong nt="1">VIP agent</strong> - gives the first agent of the crowd, marked with a yellow circle, a fixed high avoidance priority. Where two agents meet, the one with the lower priority does more of the dodging, so the crowd yields to the VIP. Every agent gets a random priority from 0 to 5 and a slightly randomized walk speed at spawn: unequal agents resolve the symmetric head-on encounters instead of deadlocking in front of each other</li>
+			<li><strong nt="1">Teams ignore each other</strong> - gives each team its own interaction mask, so the agents avoid only their teammates and the two teams walk through each other. Shows how the interaction masks split a crowd into groups that do not collide</li>
+			<li><strong nt="1">Use obstacles</strong> - the agents respect the body obstacles carried by the other agents: a standing group obstructs the walkable area and the routes are rebuilt around it. Each agent excludes its own obstacle from its route search, so it never blocks itself. With <strong nt="1">Teams ignore each other</strong> enabled only the obstacles of the own team are respected</li>
+			<li><strong nt="1">Show Seeker Debug</strong> and <strong nt="1">Show Navigation Mesh</strong> - draw the route corridor and the velocities of every agent, and the navigation mesh itself</li>
+			<li><strong nt="1">Density heatmap</strong> - colors the ground by the agent density the solver computes, from green to red. The heatmap makes the congestion visible: in <strong nt="1">Bottleneck</strong> the red spot marks the jam at the gates</li>
+			<li><strong nt="1">Density cell</strong> - the cell size of the density grid: smaller cells give a more detailed heatmap</li>
+		</ul>
+		<para>The agents are spawned at runtime from the two team assets and driven by the reusable <ui>ExperimentalSeekerCrowd</ui> component: it registers the agents, gathers the velocities they want each frame, runs the <ui><link to="experimentalnavigationavoidance_class">ExperimentalNavigationAvoidance</link></ui> solver over them, and moves them with the adjusted velocities. The solver settings, per-agent priorities, and interaction masks are also set through this component. The spawn positions are validated against the mesh beforehand with <ui><link to="experimentalnavigationmesh_class" offset="findNearestPoint_ExperimentalNavigationMeshFilter_Vec3_Vec3_int">findNearestPoint()</link></ui> plus a route fetch, so no agent starts off the mesh or behind a wall, and the wandering targets come from <ui><link to="experimentalnavigationmesh_class" offset="findRandomReachablePoint_ExperimentalNavigationMeshFilter_Vec3_float_Vec3_llong_int">findRandomReachablePoint()</link></ui>.</para>
+	</desc>
+	<link_docs>https://developer.unigine.com/docs/objects/navigations/experimental/index?rlang=cpp</link_docs>
+	<tags>
+		<tag>Navigation &amp; Pathfinding</tag>
+	</tags>
+</sample>

@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <sample title="Property Animation">
-	<sdk_desc>Animating a property parameter.</sdk_desc>
+	<sdk_desc>Animating a parameter of a property assigned to a node and using the animated value to drive the logic of the sample.</sdk_desc>
 	<desc>
-		<brief>This sample demonstrates animating property parameters using <strong>property parameter animation objects</strong>. Useful for implementing custom effects that depend on property parameters.</brief>
+		<brief>
+			<para>This sample demonstrates animating property parameters using <ui><link to="animationbindpropertyparameter_class">AnimationBindPropertyParameter</link></ui>, which points an animation channel at a certain parameter of a property assigned to a node.</para>
+			<para>A box has the <strong nt="1">speed_prop</strong> property assigned to it, with a single float parameter named <strong nt="1">speed</strong>. This parameter is animated by an <ui><link to="animationchannelfloat_class">AnimationChannelFloat</link></ui> channel: the value grows from <value>0</value> to <value>120</value>, then goes down to <value>-120</value>, and returns back to <value>0</value>.</para>
+			<para>The animation itself does not move the box. Each frame the sample reads the current value of the <strong nt="1">speed</strong> parameter and rotates the box at this speed. The current value is displayed in the <ui>State</ui> window.</para>
+			<para>This pattern is useful for data-driven animations, where the animation system controls the values, and the logic decides how to use them. The same animated parameter can be read by any number of components, and the property can be reassigned to another node without changing the animation.</para>
+		</brief>
 	</desc>
 	<tags>
 		<tag>Animation</tag>

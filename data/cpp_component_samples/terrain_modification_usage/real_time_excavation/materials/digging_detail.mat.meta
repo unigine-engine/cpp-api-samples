@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>2f8504210d0e4f0c51d3befb68caa81eb8a370e5</guid>
+	<type>material</type>
+	<hash>4144739bb73940e88d9e1822eaa7bbe005d05d2ec2abdc35b8885ea28f7bff5d</hash>
+	<runtimes>
+		<runtime id="2f8504210d0e4f0c51d3befb68caa81eb8a370e5" name="digging_detail" link="0" type="5"/>
+	</runtimes>
+</asset>

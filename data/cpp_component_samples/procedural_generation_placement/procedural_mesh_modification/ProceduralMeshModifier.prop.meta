@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>ed3f6a971d326f8fe218a90a38e8d6d3f8e0c58b</guid>
+	<type>property</type>
+	<hash>d3d9627ec2ea1742c16cf9f7680d5ffe87be5c7fdc29e51721f20bc1949685e1</hash>
+	<runtimes>
+		<runtime id="ed3f6a971d326f8fe218a90a38e8d6d3f8e0c58b" name="ProceduralMeshModifier" link="0" type="4"/>
+	</runtimes>
+</asset>

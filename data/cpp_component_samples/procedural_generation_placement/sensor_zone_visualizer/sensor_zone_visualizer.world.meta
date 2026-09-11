@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>98680ecd00bd904c30badb73a077f7bbf17178af</guid>
+	<type>world</type>
+	<hash>5c97a0abae913c5d1ce7ca3cdf36e6e4cfcb166447f559bbc7df3357fc2aee0d</hash>
+	<runtimes>
+		<runtime id="98680ecd00bd904c30badb73a077f7bbf17178af" name="frustum_visualizer.world" link="0"/>
+	</runtimes>
+	<parameters>
+		<parameter type="string" name="physics_settings_path"/>
+		<parameter type="string" name="render_settings_path">guid://8bed8c3ce53501ff11c1b0ae5cc6d017d4ad5524</parameter>
+		<parameter type="string" name="script_name"/>
+		<parameter type="string" name="sound_settings_path"/>
+		<parameter type="string" name="viewports_settings"/>
+	</parameters>
+</asset>

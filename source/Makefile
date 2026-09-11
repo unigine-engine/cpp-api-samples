@@ -1,4 +1,4 @@
-APP=cpp_samples
+APP=cpp_component_samples
 
 SRC_DIR = ./
 UNIGINE_DIR = ../

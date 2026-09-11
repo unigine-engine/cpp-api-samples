@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>3446deb39f4e086af814e3313a9987ddb4bcc7f1</guid>
+	<type>property</type>
+	<hash>0f9489dab8748b9c29842c816c075a151d7cb502e0e93d5f0e1bd13623ee4c7b</hash>
+	<runtimes>
+		<runtime id="3446deb39f4e086af814e3313a9987ddb4bcc7f1" name="NavigationSectorsDemoLogic" link="0" type="4"/>
+	</runtimes>
+</asset>

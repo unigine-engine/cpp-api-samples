@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>3a8d594e3eae45df4ddbff8161c0fef1fc410172</guid>
+	<type>property</type>
+	<hash>ec020d2ea644b13647692c9d9fa1b05e7aac825a44587e6a07e98fcd76b762bb</hash>
+	<runtimes>
+		<runtime id="3a8d594e3eae45df4ddbff8161c0fef1fc410172" name="RenderTargetSample" link="0" type="4"/>
+	</runtimes>
+</asset>

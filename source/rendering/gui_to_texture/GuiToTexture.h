@@ -6,12 +6,13 @@
 
 #include <UnigineComponentSystem.h>
 
-// Captures GUI rendering to texture and assigns it to material's texture slots.
+// Captures GUI rendering to texture and assigns it to the texture slots
+// of an object surface material or a decal material.
 class GuiToTexture final : public Unigine::ComponentBase
 {
 	COMPONENT_DEFINE(GuiToTexture, Unigine::ComponentBase);
 
-	// Surface that receives the GUI texture
+	// Surface that receives the GUI texture (objects only, ignored for decals)
 	PROP_PARAM(String, surface_name);
 	// Material texture slots to assign the rendered GUI texture
 	PROP_ARRAY(String, texture_slot_names);

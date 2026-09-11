@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>49945c67abd6bcb583d7f54e6b09ded04856191b</guid>
+	<type>property</type>
+	<hash>ca2a080406b01b6b074779f231650ad5cbbc68c36c3092acc487f544efb644ec</hash>
+	<runtimes>
+		<runtime id="49945c67abd6bcb583d7f54e6b09ded04856191b" name="WeaponClippingSample" link="0" type="4"/>
+	</runtimes>
+</asset>

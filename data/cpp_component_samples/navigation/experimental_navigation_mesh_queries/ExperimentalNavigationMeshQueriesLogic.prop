@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.22.0.0" name="ExperimentalNavigationMeshQueriesLogic" manual="1" parent_name="node_base">
+	<parameter name="query_point" type="node">0</parameter>
+	<parameter name="raycast_target" type="node">0</parameter>
+	<parameter name="navigation" type="node">0</parameter>
+	<parameter name="query_color" type="color">1.000000 1.000000 1.000000 1.000000</parameter>
+</property>

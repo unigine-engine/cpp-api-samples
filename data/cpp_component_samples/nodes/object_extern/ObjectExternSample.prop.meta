@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>51b7bc4f1157e0386155333296a156bfc1ee0947</guid>
+	<type>property</type>
+	<hash>e03db961968eefab1fa1750fc317b8eba959c3d5d11a107ba562446880b91cc9</hash>
+	<runtimes>
+		<runtime id="51b7bc4f1157e0386155333296a156bfc1ee0947" name="ObjectExternSample" link="0" type="4"/>
+	</runtimes>
+</asset>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>85f5b08bf3560c52cf4cc6308c3ef59619b4de26</guid>
+	<type>property</type>
+	<hash>d84e4dcdb111e5d28e1c3e947ddeb5d6b85aa21a04776681b59e2f6a0b882e91</hash>
+	<runtimes>
+		<runtime id="85f5b08bf3560c52cf4cc6308c3ef59619b4de26" name="EaseInMotion" link="0" type="4"/>
+	</runtimes>
+</asset>

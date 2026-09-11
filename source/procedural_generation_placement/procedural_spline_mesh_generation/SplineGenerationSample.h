@@ -65,5 +65,4 @@ private:
 
 	SampleDescriptionWindow description_window; // UI window for parameters
 	Manipulators *manipulators = nullptr;       // Control point manipulation handler
-	EventConnections event_connections;         // Stores event subscriptions
 };

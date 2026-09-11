@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <sample title="Bones: Root Motion [Animation Graph]" order="1">
-	<sdk_desc>This sample demonstrates the implementation of the root motion technique.</sdk_desc>
+	<sdk_desc>Moving an object by the offset of the root bone of its animation.</sdk_desc>
 	<desc>
-		<brief><para>This sample demonstrates the implementation of the root motion technique.</para>
-			<para>On the left there is a common looping animation. On the right, the offset of the root bone moves the object itself.</para>
-			<para> Root motion is particularly valuable for realistic character, vehicle, or object movements in games and simulations.</para>
+		<brief>
+			<para>This sample demonstrates the implementation of the <strong>root motion</strong> technique, where the movement stored in the root bone of an animation is applied to the object itself instead of being played in place.</para>
+			<para>Both characters play the same walking animation through an <ui><link to="ag_overview">animation graph</link></ui>, and the only difference between the two graphs is the <strong nt="1">Root Motion</strong> option. The character on the left keeps walking in place, while the one on the right is carried along the path of the animation. The coordinate axes drawn at the position of each character show the difference.</para>
+			<para>The movement accumulated by the animation is read every frame as a delta transformation and applied to the world transformation of the node after the animation has been evaluated.</para>
+			<para>Root motion is particularly valuable for realistic character, vehicle, or object movements in games and simulations, as the object goes exactly where the animation takes it, with no foot skating.</para>
 		</brief>
 	</desc>
 	<tags>

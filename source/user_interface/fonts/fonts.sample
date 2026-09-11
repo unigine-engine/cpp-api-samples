@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Fonts">
+	<sdk_desc>Multi-script text rendering (English, Russian, Arabic, Thai, Chinese, Hindi) across GUI widgets, 3D <i>ObjectText</i>, and world-space <i>ObjectGui</i>, with configurable text direction, cursor mode, and font size.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample demonstrates text display features in UNIGINE across six languages - English, Russian, Arabic, Thai, Chinese, and Hindi - including right-to-left and complex script support. The same text is rendered on GUI widgets, a 3D <ui><link to="objecttext_class">ObjectText</link></ui>, and a world-space <ui><link to="objectgui_class">ObjectGui</link></ui> nodes.</para>
+			<para>The <strong nt="1">Parameters</strong> window allows you to control:</para>
+			<ul>
+				<li><strong nt="1">Text direction</strong> - Auto-detects direction per string (LTR/RTL force one direction for every widget at once).</li>
+				<li><strong nt="1">Cursor mode</strong> - Defines how the caret steps through bidirectional text: <ui>Auto, Visual</ui>, or <ui>Logical</ui>. Works on GUI widgets in the <ui>Multi-script font features</ui> window.</li>
+				<li><strong nt="1">GUI Font size</strong> - Applied dynamically to all GUI widgets in the <ui>Multi-script font features</ui> window.</li>
+				<li><strong nt="1">Show widget font features</strong> - Toggles <strong nt="1">Multi-script font features</strong> demonstration window with various widget types and text features.</li>
+			</ul>
+			<para>For correct shaping of Arabic, Thai, and Hindi, the sample relies on a list of additional fonts set with <ui><link to="gui_class" offset="setGlobalFontFallback_VECString_void">setGlobalFontFallback()</link></ui>. The required Noto/Hind font files should be located in the <file_name>data/</file_name> folder. Missing fonts are rendered as placeholder boxes.</para>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Interface (GUI)</tag>
+		<tag>Widgets</tag>
+	</tags>
+</sample>

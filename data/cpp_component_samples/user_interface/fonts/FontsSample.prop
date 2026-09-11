@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.22.0.0" name="FontsSample" manual="1" parent_name="node_base">
+	<parameter name="text_en" type="node" title="Text EN (ObjectText)">0</parameter>
+	<parameter name="text_ru" type="node" title="Text RU (ObjectText)">0</parameter>
+	<parameter name="text_ar" type="node" title="Text AR (ObjectText)">0</parameter>
+	<parameter name="text_zh" type="node" title="Text ZH (ObjectText)">0</parameter>
+	<parameter name="text_th" type="node" title="Text TH (ObjectText)">0</parameter>
+	<parameter name="text_hi" type="node" title="Text HI (ObjectText)">0</parameter>
+	<parameter name="gui_object" type="node" title="World GUI object (ObjectGui)">0</parameter>
+	<parameter name="font_latin" type="file" title="Latin / Cyrillic font" tooltip="Used for English and Russian." group="Fonts" filter=".ttf"/>
+	<parameter name="font_arabic" type="file" title="Arabic font" tooltip="Used for Arabic." group="Fonts" filter=".ttf"/>
+	<parameter name="font_chinese" type="file" title="Chinese font" tooltip="Used for Chinese." group="Fonts" filter=".ttf"/>
+	<parameter name="font_thai" type="file" title="Thai font" tooltip="Used for Thai." group="Fonts" filter=".ttf"/>
+	<parameter name="font_hindi" type="file" title="Hindi font" tooltip="Used for Hindi (Devanagari)." group="Fonts" filter=".ttf"/>
+</property>

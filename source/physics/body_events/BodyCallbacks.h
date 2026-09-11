@@ -41,6 +41,4 @@ private:
 
 	// Stores all created tower objects for cleanup
 	Unigine::Vector<Unigine::NodePtr> objects;
-	// Manages all event connections for batch disconnection
-	Unigine::EventConnections body_connections;
 };

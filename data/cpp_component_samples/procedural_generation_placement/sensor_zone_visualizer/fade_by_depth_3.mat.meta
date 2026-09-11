@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>c74a69ba13026b00b834f0fbdd8d77127b3a8738</guid>
+	<type>material</type>
+	<hash>50d389cc92caeb20ab4a74a7a5fc5c43be7996995ce18f58706588628b404fad</hash>
+	<runtimes>
+		<runtime id="c74a69ba13026b00b834f0fbdd8d77127b3a8738" name="fade_by_depth_3" link="0" type="5"/>
+	</runtimes>
+</asset>

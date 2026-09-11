@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Experimental Navigation Mesh Terrain">
+	<sdk_desc>Navigating a large terrain using two levels of detail: a coarse <b>Experimental Navigation Mesh</b> for the whole world and a detailed one streamed and baked around the agents at runtime.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample demonstrates how to build a hierarchical navigation model on a large terrain, so the full detail is only kept around the agents, instead of being held in memory all at once. The world holds two <strong nt="1"><link to="experimental_navigation_mesh">Experimental Navigation Mesh</link></strong> nodes different in resolution: a coarse one, baked with a large cell size, covering the terrain entirely, and a detailed one with small cells whose tiles are continuously baked and streamed as the agents move.</para>
+			<para><strong>Right-click</strong> a place on the terrain to send the group of animated characters there. Each agent plans the whole route on the coarse mesh first, then splits it into legs and walks every leg on the detailed mesh. Both meshes are coloured depending on the area each polygon belongs to, which defines its traversal cost.</para>
+			<para>Spawn and move obstacles on the agents' way to cut the walkable area out of both meshes, and see how the affected tiles are rebaked and the agents route around the obstruction.</para>
+			<para>The <ui>Status</ui> block reports the state of both meshes and the route of the lead agent leg by leg, along with the failure reason when a route cannot be built.</para>
+			<para>This sample is useful for open worlds and large simulation sites where the layout changes at runtime and a single navigation mesh cannot cover the needed detail.</para>
+		</brief>
+		<para>The coarse mesh stays in memory as a whole, so a route to any point of the terrain can be found at any time. The tiles of the detailed one are baked around the <ui><link to="experimentalnavigationmeshinvoker_class">ExperimentalNavigationMeshInvoker</link></ui> that each agent carries, within its <ui><link to="experimentalnavigationmeshinvoker_class" offset="LoadDistance">load distance</link></ui>.</para>
+		<para>The agents are driven by the reusable <ui>ExperimentalSeeker</ui> component, which plans the global route on the coarse mesh and then every leg of it on the detailed one. The route is split into legs automatically, according to the waypoint spacing set in the component in the Editor, so that every local route stays within the tiles baked around the agent.</para>
+		<para><ui>ExperimentalSeekerCharacter</ui> adds the locomotion animations, and an <ui>ExperimentalSeekerCrowd</ui> component on the logic node steers the agents around each other.</para>
+		<para>The <ui>Show Seeker Debug</ui> toggle draws the route corridor and the global route waypoints of every agent. <ui>Show Local Navigation Mesh</ui> draws the detailed streamed mesh, making it visible how its tiles are baked and dropped around the moving agents, and <ui>Show Global Navigation Mesh</ui> draws the coarse resident mesh the global routes are planned on.</para>
+		<para>Each obstacle asset carries an <ui><link to="experimentalnavigationmeshareavolume_class">ExperimentalNavigationMeshAreaVolume</link></ui> node that cuts the walkable area, and the Engine rebakes the tiles it touches. <ui>Carve while dragging</ui> sets when that happens: the walkable area either follows the obstacle as it moves, or is rebuilt <ui><link to="experimentalnavigationmeshareavolume_class" offset="DynamicApplyOnlyWhenStationary">once the obstacle is released and settles</link></ui>.</para>
+		<para>The <ui><link to="experimentalnavigation_class">ExperimentalNavigation</link></ui> singleton caps how much time is spent on streaming each frame, keeping the frame rate stable while the agents move. It also counts the <ui><link to="experimentalnavigation_class" offset="NumActiveTasks">navigation tasks</link></ui> running right now and tells whether the tiles have hit the <ui><link to="experimentalnavigation_class" offset="IsStreamingMemoryLimitReached">memory limit</link></ui> - both shown in the status.</para>
+	</desc>
+	<link_docs>https://developer.unigine.com/docs/objects/navigations/experimental/index?rlang=cpp</link_docs>
+	<controls>
+		<![CDATA[
+		<p><b>RMB</b> click on the terrain - send the agents to that point<br/>
+		Move the spawned obstacles in the scene with the <b>widget manipulator</b>.<br/>
+		<b>LMB</b> click on object to show the manipulator.<br/>
+		<b>W</b> - switch the manipulator to movement mode<br/>
+		<b>E</b> - switch the manipulator to rotation mode<br/>
+		<b>F</b> - focus the camera on the selected object<br/>
+		<b>U</b>, <b>Esc</b> - deselect the object</p>
+		]]>
+	</controls>
+	<tags>
+		<tag>Navigation &amp; Pathfinding</tag>
+	</tags>
+</sample>

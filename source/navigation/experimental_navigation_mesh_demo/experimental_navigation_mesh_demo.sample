@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Experimental Navigation Mesh Demo">
+	<sdk_desc>Configuring pathfinding to multiple targets on a plane with obstacles using <b>Experimental Navigation Mesh</b>.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample demonstrates several material balls collecting coins on a plane with obstacles, navigating around by means of an <strong nt="1"><link to="experimental_navigation_mesh">Experimental Navigation Mesh</link></strong>. Each ball looks for its own way to the coin and follows it, staying on the navigation mesh as it moves; once a coin is collected, the next one appears elsewhere. Every ball has its own tab, so they can be given different settings and compared while they move - the ball being edited is highlighted in the scene.</para>
+			<para>This sample is useful for crowds and groups of units in games, and for simulations where many vehicles or machines move through the same space at once.</para>
+		</brief>
+		<para>The following parameters can be adjusted at run time:</para>
+		<ul>
+			<li><strong nt="1">Movement speed</strong> - how fast the ball moves</li>
+			<li><strong nt="1">Straight mode</strong> - how detailed the resulting path is: only the corners it turns at, those corners plus the points where it moves between areas, or every polygon it crosses along the way</li>
+			<li><strong nt="1">Heuristic scale</strong> - the search accuracy: 1 gives the shortest path, higher values find a path faster but not necessarily the best one</li>
+			<li><strong nt="1">Max cost</strong> and <strong nt="1">Max search nodes</strong> - how long the search is allowed to run before it gives up</li>
+			<li><strong nt="1">Agent radius</strong> and <strong nt="1">Agent height</strong> - how wide and tall the ball is, defining the gaps it can squeeze through</li>
+			<li><strong nt="1">Max slope angle</strong> and <strong nt="1">Max step height</strong> - how steep a slope the ball can climb and how high a step it can get over</li>
+			<li><strong nt="1">Snap size</strong> - how far off the navigation mesh the start and end points may be and still snap onto it</li>
+			<li><strong nt="1">Consider obstacles</strong> - whether obstacles block the route or are ignored</li>
+			<li><strong nt="1">Show Seeker Debug</strong> - draws the route and the velocities of the ball of the current tab</li>
+			<li><strong nt="1">Show Navigation Mesh</strong> - draws the navigation mesh itself, shared by all the balls.</li>
+		</ul>
+		<para>Each ball is an <ui>ExperimentalSeeker</ui> component: it requests its route through <ui><link to="experimentalnavigationpathfetch_class">ExperimentalNavigationPathFetch</link></ui> and then follows it with <ui><link to="experimentalnavigationmeshcorridor_class">ExperimentalNavigationMeshCorridor</link></ui>, which keeps the ball on the walkable surface as it moves. The route is replanned when the coin is collected and appears elsewhere, or when the navigation mesh changes under the ball.</para>
+	</desc>
+	<link_docs>https://developer.unigine.com/docs/objects/navigations/experimental/index?rlang=cpp</link_docs>
+	<controls>
+		<![CDATA[
+		<p>Move the targets and obstacles in the scene with the <b>widget manipulator</b>.<br/>
+		<b>LMB</b> click on object to show the manipulator.<br/>
+		<b>W</b> - switch the manipulator to movement mode<br/>
+		<b>E</b> - switch the manipulator to rotation mode<br/>
+		<b>F</b> - focus the camera on the selected object<br/>
+		<b>U</b>, <b>Esc</b> - deselect the object</p>
+		]]>
+	</controls>
+	<tags>
+		<tag>Navigation &amp; Pathfinding</tag>
+	</tags>
+</sample>

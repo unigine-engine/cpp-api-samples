@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <sample title="Water Surface Parameters Fetch">
-	<sdk_desc>This sample demonstrates how various parameters influence the accuracy of fetch and intersection operations on the Global Water object across different Beaufort levels.</sdk_desc>
+	<sdk_desc>Demonstration of how various parameters influence the accuracy of fetch and intersection operations on the <i>Global Water</i> object across different Beaufort levels.</sdk_desc>
 	<desc>
 		<brief>
 			<para>This sample demonstrates how various parameters influence the accuracy of <strong>fetch</strong> (sampling water height and normal) and <strong>intersection</strong> (ray-water collision detection) operations on the <strong><link to="water_global">Global Water</link></strong> object across different <strong><link to="water_global" offset="creating_waves">Beaufort</link></strong> levels (the Beaufort slider).</para>

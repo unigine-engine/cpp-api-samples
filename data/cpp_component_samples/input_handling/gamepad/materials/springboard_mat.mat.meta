@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>090c3df09f2bb88fc3274ca249c863998d3bf824</guid>
+	<type>material</type>
+	<hash>f7980636fdcfaf59575a97d9b2a7b97df04d8c489b1c9644bb6ed54258cd365b</hash>
+	<runtimes>
+		<runtime id="090c3df09f2bb88fc3274ca249c863998d3bf824" name="springboard_mat" link="0" type="5"/>
+	</runtimes>
+</asset>

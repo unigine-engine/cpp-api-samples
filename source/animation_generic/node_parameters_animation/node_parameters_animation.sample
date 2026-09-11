@@ -1,9 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <sample title="Node Parameters Animation">
-	<sdk_desc>Animating position, rotation, and scale of a node.</sdk_desc>
+	<sdk_desc>Animating position, rotation, and scale of a node using <i>node binds</i> and different types of animation channels.</sdk_desc>
 	<desc>
-		<brief>This sample demonstrates animating nodes using <strong>node animation objects</strong>. It will be helpful for creating complex animation scenarios for stage objects in real time.</brief>
-		<para>Node animations can serve as a foundation for various effects, including element appearance/disappearance, rotations, resizing, and more.</para>
+		<brief>
+			<para>This sample demonstrates animating the transformation of a node using <strong>node binds</strong> - <ui><link to="animationbindnode_class">AnimationBindNode</link></ui> objects that point animation channels at a certain node, identified by its ID and name.</para>
+			<para>A box is animated by three channels of different types added to a single <ui><link to="animationsequence_class">AnimationSequence</link></ui>, all of them sharing the same bind:</para>
+			<ul>
+				<li><ui><link to="animationchannelscalar_class">AnimationChannelScalar</link></ui> - animates a single float value, here the Z position of the box.</li>
+				<li><ui><link to="animationchannelquat_class">AnimationChannelQuat</link></ui> - animates rotation via quaternion interpolation. Along with the quaternion mode used here, the rotation can also be composed of three separate curves for each of the angles.</li>
+				<li><ui><link to="animationchannelfvec3_class">AnimationChannelFVec3</link></ui> - animates a three-component vector, here the scale of the box.</li>
+			</ul>
+			<para>The position channel gets its keyframes from an <ui><link to="animationcurvescalar_class">AnimationCurveScalar</link></ui> curve created explicitly, while the other two channels take the values directly. The keys use smooth interpolation based on a Bezier curve, so the box moves and resizes with easing instead of linearly.</para>
+			<para>The current values of the animated parameters are displayed in the <ui>State</ui> window.</para>
+			<para>Node animations can serve as a foundation for various effects, including element appearance/disappearance, rotations, resizing, and more.</para>
+		</brief>
 	</desc>
 	<tags>
 		<tag>Animation</tag>

@@ -4,12 +4,11 @@
 	<desc>
 		<brief>
 			<para>This sample demonstrates the importance of using <ui><link to="game_class" offset="getIFps_float">Game::getIFps()</link></ui> to implement movement logic independent of the frame rate.</para>
-			<para>The sample features two cubes moving back and forth along the X-axis. Their movement is implemented in the <ui>IFpsMovementController.cpp</ui> file.</para>
-			<para>The green cube uses <ui><link to="game_class" offset="getIFps_float">Game::getIFps()</link></ui> to scale its movement by the frame time delta. This ensures consistent speed across varying frame rates.</para>
-			<para>The red cube does not use <ui><link to="game_class" offset="getIFps_float">Game::getIFps()</link></ui> and simply applies constant translation per frame, which results in inconsistent behavior when frame rate changes.</para>
-			<para>Use the <ui>Max FPS</ui> slider to change the target frame rate.</para>
-			<para>This sample demonstrates why using time-based logic is essential for consistent results at different frame rates.</para>
+			<para>Two cubes move back and forth along the X-axis. Use the <ui>Max render fps</ui> slider to change the frame rate of the application and compare their behavior.</para>
+			<para>The green cube uses <ui><link to="game_class" offset="getIFps_float">Game::getIFps()</link></ui> to scale its movement by the frame time delta, which keeps its speed consistent across varying frame rates.</para>
+			<para>The red cube does not use <ui><link to="game_class" offset="getIFps_float">Game::getIFps()</link></ui> and simply applies constant translation per frame, so its speed changes together with the frame rate.</para>
 		</brief>
+		<para>The movement of both cubes is implemented in the <ui>IFpsMovementController.cpp</ui> file.</para>
 	</desc>
 	<tags>
 		<tag>Logic</tag>

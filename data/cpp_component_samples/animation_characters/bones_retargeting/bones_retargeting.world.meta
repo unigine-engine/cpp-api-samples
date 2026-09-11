@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>4a85d78102ed5997575af409f3d1455e2fadedfb</guid>
+	<type>world</type>
+	<hash>6b010b53b4729930da1a51b80f9c0d2b660f5158a598a9528ed8afad177fffd8</hash>
+	<runtimes>
+		<runtime id="4a85d78102ed5997575af409f3d1455e2fadedfb" name="bones_retargeting.world" link="0"/>
+	</runtimes>
+	<parameters>
+		<parameter type="string" name="physics_settings_path"/>
+		<parameter type="string" name="render_settings_path">guid://e7c25e58d50469eb1759808b454697512aed4c0b</parameter>
+		<parameter type="string" name="script_name"/>
+		<parameter type="string" name="sound_settings_path"/>
+		<parameter type="string" name="viewports_settings"/>
+	</parameters>
+</asset>

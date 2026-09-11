@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>d906dcf4c79597f6aba544797f43ea3d99525240</guid>
+	<type>property</type>
+	<hash>873559f920bad3cad20abfdd9918b8b1a8d98fafe95ddfbe50cda1ea74f1f402</hash>
+	<runtimes>
+		<runtime id="d906dcf4c79597f6aba544797f43ea3d99525240" name="UDPSocketsSample" link="0" type="4"/>
+	</runtimes>
+</asset>

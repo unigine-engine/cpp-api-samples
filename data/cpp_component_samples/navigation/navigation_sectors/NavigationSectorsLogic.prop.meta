@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>a5efc64ad9ebaadd55426ec38fef2ee86d0a5fe3</guid>
+	<type>property</type>
+	<hash>d3c4229ec5d52f3dc6be61d8f090784bc691b258fab7df1e9a6b90b64ebb80a3</hash>
+	<runtimes>
+		<runtime id="a5efc64ad9ebaadd55426ec38fef2ee86d0a5fe3" name="NavigationSectorsLogic" link="0" type="4"/>
+	</runtimes>
+</asset>

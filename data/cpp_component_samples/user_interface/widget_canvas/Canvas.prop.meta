@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>a3f80b87a456136fc59c442bd1ee5b5eec2430f1</guid>
+	<type>property</type>
+	<hash>6bd6c1eaa34661f4ba051b4872e7d886ba5f2653bc579ef0b0787037f83220be</hash>
+	<runtimes>
+		<runtime id="a3f80b87a456136fc59c442bd1ee5b5eec2430f1" name="Canvas" link="0" type="4"/>
+	</runtimes>
+</asset>

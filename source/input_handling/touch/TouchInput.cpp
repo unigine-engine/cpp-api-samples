@@ -3,7 +3,6 @@
 // simultaneous inputs. Touch positions are adjusted relative to window coordinates.
 
 #include "TouchInput.h"
-#include "../../utils/SimpleInformationBox.h"
 #include <UnigineWindowManager.h>
 #include <UnigineInput.h>
 #include <UnigineGame.h>
@@ -16,12 +15,14 @@ using namespace Math;
 // Info panel and canvas overlay are initialized; player control is disabled.
 void TouchInput::init()
 {
-	info = getComponent<SimpleInformationBox>(node);
+	description_window.createWindow();
 
-	info->setWindowTitle("Touch Input Sample");
-	info->setColumnsCount(1);
-	info->setWidth(300);
-	info->pushBackAboutInfo("This sample demostrates the simple usage of Touch input.");
+	auto group = WidgetGroupBox::create("Touches", 8, 8);
+	description_window.getWindow()->addChild(group, Gui::ALIGN_LEFT);
+	touches_label = WidgetLabel::create();
+	touches_label->setFontRich(1);
+	touches_label->setFontWrap(1);
+	group->addChild(touches_label, Gui::ALIGN_EXPAND);
 
 	// Canvas overlay is created for rendering touch circles
 	canvas = new CanvasWithCircles();
@@ -35,7 +36,7 @@ void TouchInput::update()
 {
 	canvas->clear();
 
-	info->clearParametersInfo(0);
+	String text;
 
 	// All possible touch slots are checked for active touches
 	int cnt = 0;
@@ -48,20 +49,22 @@ void TouchInput::update()
 
 			canvas->addCircle(positionOfTouch.x, positionOfTouch.y, 32, i, "Touch " + String::itoa(i));
 
-			info->pushBackParametersInfo(0, "Touch " + String::itoa(i), SimpleInformationBox::INFO_ALIGN::CENTER);
-			info->pushBackParametersInfo(0, "X", String::itoa(positionOfTouch.x));
-			info->pushBackParametersInfo(0, "Y", String::itoa(positionOfTouch.y));
+			text += String::format("<center>Touch %d</center>\nX: %d\nY: %d\n", i, positionOfTouch.x, positionOfTouch.y);
 			cnt++;
 		}
 	}
 
 	if (cnt == 0)
-		info->pushBackParametersInfo(0, "Here will be displayed information about the positions of the touches", SimpleInformationBox::INFO_ALIGN::CENTER);
+		text = "<center>Here will be displayed information about the positions of the touches</center>";
+
+	touches_label->setText(text.get());
 }
 
 // Canvas is deleted and player control is restored.
 void TouchInput::shutdown()
 {
+	description_window.shutdown();
+
 	if (canvas)
 		delete canvas;
 

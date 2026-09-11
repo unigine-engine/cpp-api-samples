@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>89d9d2740efcbe2276b2c5dd0c50df32eac03601</guid>
+	<type>world</type>
+	<hash>096008c92f9017db70669a3a149dd8eeec0e50f2c5ab7f12bf2035324ee5f8e6</hash>
+	<runtimes>
+		<runtime id="89d9d2740efcbe2276b2c5dd0c50df32eac03601" name="move_by_trajectory.world" link="0"/>
+	</runtimes>
+	<parameters>
+		<parameter type="string" name="physics_settings_path"/>
+		<parameter type="string" name="render_settings_path">guid://8bed8c3ce53501ff11c1b0ae5cc6d017d4ad5524</parameter>
+		<parameter type="string" name="script_name"/>
+		<parameter type="string" name="sound_settings_path"/>
+		<parameter type="string" name="viewports_settings"/>
+	</parameters>
+</asset>

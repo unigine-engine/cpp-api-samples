@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.22.0.0" guid="eb135023b1c2f7261484a44d2c26f94859c44c07" base_material="4dfec30f491f753f6e89094db6d3d695e89f9d6f">
+	<options cast_shadow="1" cast_world_shadow="1"/>
+	<state name="transparent_opacity_depth">1</state>
+	<state name="transparent_velocity">1</state>
+	<state name="transparent_surface_id">1</state>
+	<parameter name="albedo_color" expression="0">0.21960786 0.435294151 0.207843155 1</parameter>
+	<parameter name="roughness" expression="0">0.5</parameter>
+</material>

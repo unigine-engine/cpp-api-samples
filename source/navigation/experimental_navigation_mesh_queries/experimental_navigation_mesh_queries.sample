@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Experimental Navigation Mesh Queries">
+	<sdk_desc>Performing spatial queries on an <b>Experimental Navigation Mesh</b>: nearest and reachable points, random points, boundaries, and polygons in an area.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample demonstrates the spatial queries an <strong nt="1"><link to="experimental_navigation_mesh">Experimental Navigation Mesh</link></strong> can answer about the walkable area, without building a full route.</para>
+			<para>The central ball is the query point: drag it around the level and, depending on the selected mode, see the nearest walkable position, the places reachable from here within a given travel cost, where the walkable area ends, or the parts of the mesh that fall inside a box drawn around the point. Seven queries with adjustable parameters are available, switched with the <strong nt="1">Query mode</strong> selector.</para>
+			<para>These queries are the building blocks behind common gameplay and simulation tasks: placing a unit on walkable ground, showing how far it can go in one turn, scattering spawn points over the level, and keeping an agent away from ledges.</para>
+			<para>The <ui>Status</ui> block reports the state of the mesh (polygons, walkable area size, loaded tiles) and the numbers the current query returned.</para>
+		</brief>
+		<para>The available query modes:</para>
+		<ul>
+			<li><strong nt="1">Nearest point</strong> - snaps the query point onto the mesh with <ui><link to="experimentalnavigationmesh_class" offset="findNearestPoint_ExperimentalNavigationMeshFilter_Vec3_Vec3_int">findNearestPoint()</link></ui>, drawing a line down to the walkable area, and reports the polygon it landed on via <ui><link to="experimentalnavigationmesh_class" offset="findNearestPolygon_ExperimentalNavigationMeshFilter_Vec3_llong">findNearestPolygon()</link></ui>, with the area, its cost, and the flags of that polygon</li>
+			<li><strong nt="1">Reachable points</strong> - uses <ui><link to="experimentalnavigationmesh_class" offset="findReachablePoints_ExperimentalNavigationMeshFilter_Vec3_float_VECVec3_VECllong_llong_int">findReachablePoints()</link></ui> to sample the points reachable from the query point within the <strong nt="1">Max cost</strong> limit, drawn as a reference circle. The cost accumulates along the walkable area, so detours around obstacles exhaust it sooner and leave fewer points behind them</li>
+			<li><strong nt="1">Random reachable points</strong> - calls <ui><link to="experimentalnavigationmesh_class" offset="findRandomReachablePoint_ExperimentalNavigationMeshFilter_Vec3_float_Vec3_llong_int">findRandomReachablePoint()</link></ui> to scatter random points that can be reached from the query point within the <strong nt="1">Max cost</strong> limit</li>
+			<li><strong nt="1">Random points</strong> - calls <ui><link to="experimentalnavigationmesh_class" offset="findRandomPoint_ExperimentalNavigationMeshFilter_Vec3_int">findRandomPoint()</link></ui> to scatter random points over the whole mesh. Both random modes re-sample whenever the query point moves or a setting changes, or every half a second while <strong nt="1">Auto refresh</strong> is enabled. The status reports <strong nt="1">Points requested</strong> against <strong nt="1">Points generated</strong>: the second value is lower when the walkable area cannot fit them all</li>
+			<li><strong nt="1">Nearest boundary</strong> - uses <ui><link to="experimentalnavigationmesh_class" offset="getNearestBoundary_ExperimentalNavigationMeshFilter_Vec3_float_Vec3_vec3_float_llong_int">getNearestBoundary()</link></ui> to find the closest edge of the walkable area within the <strong nt="1">Boundary radius</strong> and draws a line from the query point to it. The edge point is marked in red, with a blue arrow along its normal, which points inwards, and the status reports the distance to it</li>
+			<li><strong nt="1">Boundary raycast</strong> - traces a straight line from the query point to the second ball with <ui><link to="experimentalnavigationmesh_class" offset="getBoundaryIntersection_ExperimentalNavigationMeshFilter_Vec3_Vec3_Vec3_vec3_llong_int">getBoundaryIntersection()</link></ui> and reports where it runs off the walkable area. The part of the line that stays on the mesh is white, the exit point is marked in red, and the part beyond the mesh is red as well</li>
+			<li><strong nt="1">Polygons in box</strong> - uses <ui><link to="experimentalnavigationmesh_class" offset="getPolygons_ExperimentalNavigationMeshFilter_WorldBoundBox_VECllong_int">getPolygons()</link></ui> to collect the mesh polygons inside the box drawn around the query point, sized by <strong nt="1">Box size</strong>. The triangles of those polygons are highlighted by the visualizer and counted separately in the <strong nt="1">Status</strong> section: a polygon is collected once the box overlaps it, while a triangle is highlighted only if its center is inside the box</li>
+		</ul>
+		<para>The <strong nt="1">Filter</strong> group holds the settings shared by all the modes: <strong nt="1">Agent radius</strong> and <strong nt="1">Agent height</strong> describe the agent the queries are planned for, and <strong nt="1">Snap size</strong> sets how far the query point may be from the mesh and still snap onto it. The agent radius and height start from the values the navigation mesh was baked with. The <strong nt="1">Show Navigation Mesh</strong> toggle draws the mesh itself, colored by the areas of its polygons.</para>
+		<para>Every query is wrapped into a self-contained <ui>query_*</ui> function that depends only on the Engine API, so any of them can be copied into a project together with its result structure. The mesh geometry used to highlight the surface is fetched once via <ui><link to="experimentalnavigationmesh_class" offset="getTriangles_VECVec3_VECint_VECint_void">getTriangles()</link></ui> and re-fetched only when the <ui><link to="experimentalnavigationmesh_class" offset="EventTilesChanged">EventTilesChanged</link></ui> event reports that the tiles have changed.</para>
+	</desc>
+	<link_docs>https://developer.unigine.com/docs/objects/navigations/experimental/index?rlang=cpp</link_docs>
+	<controls>
+		<![CDATA[
+		<p>Move the query points in the scene with the <b>widget manipulator</b>.<br/>
+		<b>LMB</b> click on object to show the manipulator.<br/>
+		<b>W</b> - switch the manipulator to movement mode<br/>
+		<b>E</b> - switch the manipulator to rotation mode<br/>
+		<b>F</b> - focus the camera on the selected object<br/>
+		<b>U</b>, <b>Esc</b> - deselect the object</p>
+		]]>
+	</controls>
+	<tags>
+		<tag>Navigation &amp; Pathfinding</tag>
+	</tags>
+</sample>

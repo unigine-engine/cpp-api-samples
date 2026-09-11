@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>bccaf84c6d2ec190620d9b204f077bd9467aa46b</guid>
+	<type>animation_graph</type>
+	<hash>162f1b27c276c1b685f648f07d1bb81a146bb4e5216f7f14ebbd803b17b8b680</hash>
+	<runtimes>
+		<runtime id="bccaf84c6d2ec190620d9b204f077bd9467aa46b" name="male_idle_look_at.agraph" link="0"/>
+		<runtime id="002100933109882f289ef10fd4b2fde607d877e2" name="male_idle_look_at" link="1" type="10"/>
+	</runtimes>
+</asset>

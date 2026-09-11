@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>a21bab8bb2cd42c934b547e1ae3ead18fbd051d1</guid>
+	<type>script</type>
+	<hash>3eab274c9a381ac0dc3a3d0da53a250dc025b56679d2e9a6054182e83f7c2f60</hash>
+	<runtimes>
+		<runtime id="a21bab8bb2cd42c934b547e1ae3ead18fbd051d1" name="usc_arrays.usc" link="0"/>
+	</runtimes>
+</asset>

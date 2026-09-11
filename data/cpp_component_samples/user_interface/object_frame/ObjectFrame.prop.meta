@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>d271d1a881f4053cea1d4242eb785ed054e2b531</guid>
+	<type>property</type>
+	<hash>aeaa1c6f2b9e8648120a0b01e02445d79bf408fb8be42f6f4a1a7c0f59472b6c</hash>
+	<runtimes>
+		<runtime id="d271d1a881f4053cea1d4242eb785ed054e2b531" name="ObjectFrame" link="0" type="4"/>
+	</runtimes>
+</asset>

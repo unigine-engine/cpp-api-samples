@@ -1,8 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <sample title="Physics-Based Animation">
-	<sdk_desc>Physics-based animation of movements using various easing functions.</sdk_desc>
+	<sdk_desc>Physics-based animation of movements using easing functions and spring simulation.</sdk_desc>
 	<desc>
-		<brief>This sample shows implementation of physics-based animation for the cat's movements in a simple game where a cat chases a laser pointer (different easing functions are used).</brief>
+		<brief>
+			<para>This sample demonstrates several ways of moving an object towards a target smoothly, shown as a simple game.</para>
+			<para>The sample has two modes, switched with the buttons in the description window.</para>
+			<para>In the <strong nt="1">Animations Demo</strong> mode, the way of moving is selected from the drop-down list, with each of them implemented as a separate component:</para>
+			<ul>
+				<li><strong nt="1">Linear</strong> - moves at a constant speed.</li>
+				<li><strong nt="1">EaseIn</strong> - accelerates gradually.</li>
+				<li><strong nt="1">EaseInOut</strong> - accelerates at the start and decelerates at the end.</li>
+				<li><strong nt="1">EaseOut</strong> - decelerates gradually.</li>
+				<li><strong nt="1">EaseOutElastic</strong> - oscillates around the destination before settling on it.</li>
+				<li><strong nt="1">EaseOutBack</strong> - overshoots the destination slightly and comes back to it.</li>
+				<li><strong nt="1">EaseOutBounce</strong> - bounces at the destination.</li>
+			</ul>
+			<para>In the <strong nt="1">Start Game</strong> mode, you control the laser pointer with the mouse, and the cat chases it using spring simulation, becoming faster and more responsive over time until it catches the pointer.</para>
+			<para>The parameters of each way of moving are available in the properties of the corresponding component in UnigineEditor.</para>
+			<para>Easing and spring-based motion make the movement of objects look natural, which is useful for cameras, UI elements, followers, and any object that has to reach a moving target smoothly.</para>
+		</brief>
 	</desc>
 	<tags>
 		<tag>Animation</tag>

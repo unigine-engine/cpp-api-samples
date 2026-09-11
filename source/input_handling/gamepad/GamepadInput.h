@@ -1,10 +1,12 @@
 #pragma once
 
+#include "../../menu_ui/SampleDescriptionWindow.h"
+
 #include <UnigineComponentSystem.h>
 #include <UnigineInput.h>
+#include <UnigineWidgets.h>
 
 class Car;
-class SimpleInformationBox;
 
 // Demonstrates gamepad input handling with button states, analog axes, and triggers.
 // Reads left/right stick movements and trigger values, maps them to car controls,
@@ -17,6 +19,7 @@ public:
 
 	COMPONENT_INIT(init, 1);
 	COMPONENT_UPDATE(update);
+	COMPONENT_SHUTDOWN(shutdown);
 
 	void setFilter(float f);
 	void setLowFrequency(float f);
@@ -26,6 +29,7 @@ public:
 private:
 	void init();
 	void update();
+	void shutdown();
 
 	void update_inputs();
 
@@ -38,7 +42,12 @@ private:
 	Unigine::InputGamePadPtr gamepad;
 
 	Car* car = nullptr;
-	SimpleInformationBox* info = nullptr;
+	SampleDescriptionWindow description_window;
+
+	Unigine::WidgetGroupBoxPtr info_group;
+	Unigine::WidgetLabelPtr info_label;
+	Unigine::WidgetGroupBoxPtr canvas_group;
+	Unigine::WidgetCanvasPtr canvas;
 
 	Unigine::String last_button_down = "";
 	Unigine::String last_button_pressed = "";
@@ -55,7 +64,4 @@ private:
 	float low_frequency = 0.0f;
 	float high_frequency = 0.0f;
 	float vibration_duration = 0.0f;
-	Unigine::WidgetCanvasPtr canvas;
-
-	Unigine::EventConnections widget_connections;
 };

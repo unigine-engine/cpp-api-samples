@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.22.0.0" name="MeasurementsSample" manual="1" parent_name="node_base" tooltip="Dynamically measures and visualizes the distance from a movable node to several target nodes using the Visualizer."/>

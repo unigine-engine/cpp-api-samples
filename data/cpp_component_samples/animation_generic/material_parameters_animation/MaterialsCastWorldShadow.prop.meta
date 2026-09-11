@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>bc5aac5cb5eb217303aa5daeade613258f95afff</guid>
+	<type>property</type>
+	<hash>be6a23b0235620bc487e2f858a41f06a09b950e43f21c42040129accfa45d44a</hash>
+	<runtimes>
+		<runtime id="bc5aac5cb5eb217303aa5daeade613258f95afff" name="MaterialsCastWorldShadow" link="0" type="4"/>
+	</runtimes>
+</asset>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>a431321e15fc539cb5f881a0cb4aea362bd52a73</guid>
+	<type>property</type>
+	<hash>5b926baa25a41554d96b450d38d05c5ea5e16a087420aac1c8804067aa783245</hash>
+	<runtimes>
+		<runtime id="a431321e15fc539cb5f881a0cb4aea362bd52a73" name="PaintSample" link="0" type="4"/>
+	</runtimes>
+</asset>

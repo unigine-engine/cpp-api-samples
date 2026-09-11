@@ -10,6 +10,46 @@ REGISTER_COMPONENT(WorldMenu);
 using namespace Unigine;
 using namespace Math;
 
+namespace
+{
+	bool contains(const WidgetPtr &widget, const ivec2 &gui_pos)
+	{
+		int x = widget->getScreenPositionX();
+		int y = widget->getScreenPositionY();
+
+		return gui_pos.x >= x && gui_pos.x < x + widget->getWidth()
+			&& gui_pos.y >= y && gui_pos.y < y + widget->getHeight();
+	}
+
+	bool is_covered_by_window(const ivec2 &gui_pos)
+	{
+		EngineWindowViewportPtr window = WindowManager::getMainWindow();
+		for (int i = 0; i < window->getNumChildren(); ++i)
+		{
+			WidgetPtr child = window->getChild(i);
+			if (!child || child->isHidden())
+				continue;
+
+			if (checked_ptr_cast<WidgetWindow>(child) && contains(child, gui_pos))
+				return true;
+		}
+
+		return false;
+	}
+
+	bool is_widget_hovered(const WidgetPtr &widget)
+	{
+		int x = widget->getMouseX();
+		int y = widget->getMouseY();
+		if (x <= 0 || x >= widget->getWidth() || y <= 0 || y >= widget->getHeight())
+			return false;
+
+		ivec2 gui_pos = ivec2(widget->getGui()->getMouseX(), widget->getGui()->getMouseY());
+
+		return !is_covered_by_window(gui_pos);
+	}
+}
+
 bool WorldMenu::is_selection_active = false;
 
 void WorldMenu::init()
@@ -358,13 +398,7 @@ void WorldMenu::update_back_button(bool up, bool down)
 
 bool WorldMenu::is_hovered(const Unigine::WidgetPtr &widget)
 {
-	ivec2 gui_pos = ivec2(widget->getGui()->getMouseX(), widget->getGui()->getMouseY());
-
-	int x = widget->getScreenPositionX();
-	int y = widget->getScreenPositionY();
-
-	return gui_pos.x >= x && gui_pos.x < x + widget->getWidth()
-		&& gui_pos.y >= y && gui_pos.y < y + widget->getHeight();
+	return is_widget_hovered(widget);
 }
 
 bool WorldMenu::Button::isHovered() const
@@ -372,13 +406,7 @@ bool WorldMenu::Button::isHovered() const
 	if (!button_hbox)
 		return false;
 
-	ivec2 gui_pos = ivec2(button_hbox->getGui()->getMouseX(), button_hbox->getGui()->getMouseY());
-
-	int x = button_hbox->getScreenPositionX();
-	int y = button_hbox->getScreenPositionY();
-
-	return gui_pos.x >= x && gui_pos.x < x + button_hbox->getWidth()
-		&& gui_pos.y >= y && gui_pos.y < y + button_hbox->getHeight();
+	return is_widget_hovered(button_hbox);
 }
 
 WorldMenu::NavigationButton::NavigationButton(const Unigine::String &world_path,

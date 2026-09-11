@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <sample title="Widget Animation">
+	<sdk_desc>Animating widget position, font size, and color using runtime binds.</sdk_desc>
 	<desc>
-		<brief>This example shows how to animate widgets using <strong>runtime animation objects</strong>.</brief>
-		<para>It demonstrates how to control and animate interface elements programmatically. Using dynamic animations helps create more lively, appealing user interfaces and enables automation of their behavior.</para>
+		<brief>
+			<para>This sample demonstrates animating widgets using <ui><link to="animationbindruntime_class">AnimationBindRuntime</link></ui>, a bind that stores the runtime instance of a target object. It can point an animation channel at any Engine object, such as a widget, a body, or a camera.</para>
+			<para>A looped title animation is played on three labels: the <strong>Player 0</strong> and <strong>Player 1</strong> labels are animated by position, font color, and font size, while the <strong>vs</strong> label between them is animated by font color only.</para>
+			<para>A channel animates a single parameter, so a label animated by several parameters at once needs a separate channel for each of them, with the same bind assigned to all of them.</para>
+			<para>Animating interface elements programmatically helps create more lively, appealing user interfaces and enables automation of their behavior.</para>
+		</brief>
 	</desc>
 	<tags>
 		<tag>Animation</tag>

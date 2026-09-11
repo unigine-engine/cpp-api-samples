@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>385385e2e26bd8674eccf91e4b99f8e5f73d1b1e</guid>
+	<type>animation_sequence</type>
+	<hash>594b1b618683239b75f6700a5970b3b16c9350bdbb67d1733352f2b45a025557</hash>
+	<runtimes>
+		<runtime id="385385e2e26bd8674eccf91e4b99f8e5f73d1b1e" name="singletons.seq" link="0"/>
+	</runtimes>
+</asset>

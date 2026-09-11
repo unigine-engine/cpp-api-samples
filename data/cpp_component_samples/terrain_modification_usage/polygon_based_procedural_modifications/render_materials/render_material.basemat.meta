@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>0af0d0b95fb230ef6a17394be31969b14d65c546</guid>
+	<type>material</type>
+	<hash>dfb1d2ab3ba59ad4f480f2f7cf4f58fce090d1bfddf17d6c4fb54152792e2b96</hash>
+	<runtimes>
+		<runtime id="103c846c86bf40898453c54444281995d0108183" name="render_material" link="0" type="5"/>
+	</runtimes>
+</asset>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>f206a801ca609f207867730a1079e4193287e044</guid>
+	<type>property</type>
+	<hash>d158d4a47e4f14b0e823425ff986bc8d324ce722bad5295182bc2fa7fdd72cca</hash>
+	<runtimes>
+		<runtime id="f206a801ca609f207867730a1079e4193287e044" name="speed_prop" link="0" type="4"/>
+	</runtimes>
+</asset>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>124df7965b00a23b49be759185dbbc02c8e96f18</guid>
+	<type>property</type>
+	<hash>104b04413d59f4a166b7fce89752220a4e187ba9b97a4ffd861f42ba6cce6b01</hash>
+	<runtimes>
+		<runtime id="124df7965b00a23b49be759185dbbc02c8e96f18" name="MountPointsSample" link="0" type="4"/>
+	</runtimes>
+</asset>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<boot version="2.21.0.0" autosave="0">
+<boot version="2.22.0.0" autosave="0">
 	<gui_path>core/gui/</gui_path>
 	<engine_log>log.txt</engine_log>
 	<system_script>core/unigine.usc</system_script>
@@ -50,7 +50,7 @@
 		<video_offscreen>0</video_offscreen>
 		<world_manager_images_memory>128</world_manager_images_memory>
 		<world_manager_meshes_memory>128</world_manager_meshes_memory>
-		<materials_preload>1</materials_preload>
+		<materials_preload>0</materials_preload>
 		<shaders_preload>0</shaders_preload>
 	</console>
 	<screen>

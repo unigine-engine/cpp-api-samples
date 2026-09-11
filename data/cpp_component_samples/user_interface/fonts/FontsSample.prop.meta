@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>5a9cd26484ad1146b00d1ced2ca4df145e5e0ee9</guid>
+	<type>property</type>
+	<hash>e3834420cab3ed923edde5504f842520fbff6b2a399c7d16604baf6ffc33d379</hash>
+	<runtimes>
+		<runtime id="5a9cd26484ad1146b00d1ced2ca4df145e5e0ee9" name="FontsSample" link="0" type="4"/>
+	</runtimes>
+</asset>

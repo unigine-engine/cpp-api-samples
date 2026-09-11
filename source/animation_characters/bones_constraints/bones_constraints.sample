@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<sample title="Bones: Constraints">
-	<sdk_desc>Applying bone rotation constraints.</sdk_desc>
+<sample title="Bones: Constraints [Animation Graph]" order="1">
+	<sdk_desc>Applying bone rotation constraints and observing how they affect inverse kinematics.</sdk_desc>
 	<desc>
-		<brief>This sample demonstrates the use of bone rotation constraints and illustrates how they affect the operation of inverse kinematics.</brief>
-		<para>This demonstrates how to create an IK chain for a character's bones, set a target position, and automatically control the bones' movement to produce realistic poses. A target is an object that updates dynamically according to the player's camera position.</para>
+		<brief>
+			<para>This sample demonstrates the use of joint rotation limits in an <ui><link to="ag_overview">animation graph</link></ui> and illustrates how they affect the operation of inverse kinematics.</para>
+			<para>The target of the chain is moved with a manipulator, and the <ui><link to="ag_nodes_ik_chain">IK Chain</link></ui> node bends the bones of the left leg towards it. The rotation of each joint is limited, so the chain can only bend the way a real joint would, instead of taking any pose that reaches the target.</para>
+			<para>Every joint has its own limit node, with the joint, the axes, and the angles set in its parameters. A <ui><link to="ag_nodes_joint_limit_set">Joint Limit Set</link></ui> node gathers them all into a single set that is applied to the chain.</para>
+			<para>Rotation constraints are useful for keeping automatically generated poses plausible, for example, to prevent an elbow or a knee from bending backwards.</para>
+		</brief>
 	</desc>
 	<tags>
 		<tag>Animation</tag>

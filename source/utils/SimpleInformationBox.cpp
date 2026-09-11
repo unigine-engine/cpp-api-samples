@@ -35,7 +35,6 @@ void SimpleInformationBox::init()
 
 void SimpleInformationBox::shutdown()
 {
-	widget_connections.disconnectAll();
 	window.deleteLater();
 	Input::setMouseHandle(previous_handle);
 }
@@ -141,7 +140,7 @@ Unigine::WidgetSliderPtr SimpleInformationBox::addSlider(int index, const char* 
 	slider_container->addChild(slider, Gui::ALIGN_EXPAND);
 	auto slider_value_label = WidgetLabel::create();
 	slider_value_label->setWidth(45);
-	slider->getEventChanged().connect(widget_connections, [slider, slider_value_label, multiplier]() {
+	slider->getEventChanged().connect(*this, [slider, slider_value_label, multiplier]() {
 		slider_value_label->setText(String::format("%.2f", slider->getValue() * multiplier));
 		});
 	slider_value_label->setText(String::format("%.2f", slider->getValue() * multiplier));

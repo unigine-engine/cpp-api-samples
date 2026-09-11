@@ -5,11 +5,6 @@ class LayerMapPolygonEditor {
 public:
 	LayerMapPolygonEditor(Unigine::LandscapeLayerMapPtr in_layer_map, Unigine::MaterialPtr material);
 
-	~LayerMapPolygonEditor()
-	{
-		event_connection.disconnectAll();
-	}
-
 	void clearMasks(int flags_data_mask);
 	void generateMeshOnMask(const Unigine::Vector<Unigine::Math::Vec3>& points, int flags_data_mask);
 	void levelHeightForMesh(const Unigine::Vector<Unigine::Math::Vec3>& points, double height);

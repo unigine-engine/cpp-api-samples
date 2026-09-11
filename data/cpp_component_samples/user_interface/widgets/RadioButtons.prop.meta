@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>e66745f590ddb633cf9494ab6ab7748edc24b3c3</guid>
+	<type>property</type>
+	<hash>fe6b46f11c797a6eb2eea7a58f9a9de591797436ea5be765c078e9da53d918be</hash>
+	<runtimes>
+		<runtime id="e66745f590ddb633cf9494ab6ab7748edc24b3c3" name="RadioButtons" link="0" type="4"/>
+	</runtimes>
+</asset>

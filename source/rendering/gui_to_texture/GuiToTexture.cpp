@@ -1,10 +1,12 @@
-// Renders a GUI to a texture and applies it to an object's material.
+// Renders a GUI to a texture and applies it to an object surface material or a decal material.
 // Useful for in-world displays, screens, and interactive surfaces. The GUI
 // update loop runs manually outside the main render to capture to texture.
 
 #include "GuiToTexture.h"
 
 #include <UnigineGame.h>
+#include <UnigineDecals.h>
+#include <UnigineObjects.h>
 
 REGISTER_COMPONENT(GuiToTexture);
 
@@ -60,24 +62,35 @@ void GuiToTexture::renderToTexture() const
 // GUI and render target are created; texture is assigned to specified material slots.
 void GuiToTexture::init()
 {
-	const auto object = checked_ptr_cast<Object>(node);
-	if (!object)
+	// The GUI texture is applied either to a surface material of an object or to a decal material
+	MaterialPtr material;
+	if (const auto object = checked_ptr_cast<Object>(node))
 	{
-		Log::error("GuiToTexture::init: component must be assigned to object");
-	}
+		// Find the required surface
+		const int surface = object->findSurface(surface_name);
+		if (surface == -1)
+		{
+			Log::error("GuiToTexture::init(): surface with name %s not found\n", surface_name.get());
+			return;
+		}
 
-	// Find the required surface
-	const int surface = object->findSurface(surface_name);
-	if (surface == -1)
+		// We need to inherit material, because there might be other objects that are using this material
+		// and we don't want all objects in the scene to get gui from this component
+		material = object->getMaterialInherit(surface);
+	}
+	else if (const auto decal = checked_ptr_cast<Decal>(node))
 	{
-		Log::error("GuiToTexture::init: surface with name %s not found", surface_name.get());
+		// A decal has a single material and no surfaces, so surface_name is not used here.
+		// Material is inherited for the same reason as above: other decals may share it
+		material = decal->getMaterialInherit();
+	}
+	else
+	{
+		Log::error("GuiToTexture::init(): the component must be assigned to an Object or a Decal node\n");
+		return;
 	}
 
 	render_target = RenderTarget::create();
-
-	// We need to inherit material, because there might be other objects that are using this material
-	// and we don't want all objects in the scene to get gui from this component
-	const MaterialPtr material = object->getMaterialInherit(surface);
 
 	gui = Gui::create();
 	gui->setSize(texture_resolution.get());

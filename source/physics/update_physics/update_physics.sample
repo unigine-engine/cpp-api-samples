@@ -4,7 +4,7 @@
 	<desc>
 		<brief>
 			<para>This sample demonstrates the difference between <ui><link to="execution_sequence_code_update" offset="code_update">update()</link></ui> and <ui><link to="execution_sequence_code_update" offset="code_updatePhysics">updatePhysics()</link></ui> methods.</para>
-			<para>The sample features two physics-enabled cubes that move back and forth along the X-axis. The movement logic is implemented via in the <ui>UpdatePhysicsUsageController.cpp</ui> file.</para>
+			<para>The sample features two physics-enabled cubes that move back and forth along the X-axis. The movement logic is implemented in the <ui>UpdatePhysicsUsageController.cpp</ui> file.</para>
 			<para>Use <ui>updatePhysics()</ui> to implement continuous or physics-dependent operations (e.g., force application, collision response), as it runs at a fixed time step, unlike <ui>update()</ui> which depends on the rendering frame rate.</para>
 			<para>Use the <strong nt="1">Max FPS</strong> slider to change the target frame rate.</para>
 		</brief>

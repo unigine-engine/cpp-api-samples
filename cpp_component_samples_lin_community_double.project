@@ -1,0 +1,65 @@
+{
+    "edit_settings": {
+        "arguments": "",
+        "debug": false,
+        "microprofile_enabled": false
+    },
+    "id": "5751586b-3e7b-40ec-ad90-2983a10a9432",
+    "project_settings": {
+        "addons": [],
+        "ai_docs": false,
+        "api": "cmakecpp",
+        "assets": [],
+        "build_tool": false,
+        "component_system": false,
+        "default_world": "cpp_component_samples",
+        "demo": "",
+        "editor_plugin": false,
+        "engine_binaries": "development",
+        "engine_plugin": false,
+        "engine_plugin_name": "",
+        "engine_plugin_vendor": "",
+        "launcher_console": true,
+        "launcher_gui": false,
+        "name": "cpp_component_samples_lin_community_double",
+        "plugin_name": "",
+        "plugin_vendor": "",
+        "plugins": [
+            "UnigineFbxImporter",
+            "UnigineCadImporter",
+            "UnigineGLTFImporter",
+            "UnigineFbxExporter",
+            "UnigineGeodetics",
+            "UnigineUsdExchanger"
+        ],
+        "precision": 1,
+        "project_template": [
+            "empty"
+        ],
+        "rt_generator": false,
+        "samples_pack": "",
+        "starting_world": "default",
+        "sw_distributed": false,
+        "template_id": "template_empty_cpp2.22.0_1cross",
+        "template_name": "empty_cpp",
+        "template_version": "2.22.0_1"
+    },
+    "run_settings": {
+        "app_name": "",
+        "application": "default",
+        "arguments": "",
+        "debug": false,
+        "microprofile_enabled": false,
+        "rpath": []
+    },
+    "sdk": {
+        "edition": "community",
+        "internal_version": 59,
+        "key": "tier0_bin_linux-2.22",
+        "name": "UNIGINE 2 Community",
+        "path": "",
+        "type": "bin",
+        "version": "2.22"
+    },
+    "version": "2"
+}

@@ -29,7 +29,7 @@
 					<li>Tune the spawn rate of the <strong nt="1">Particle System</strong>.</li>
 					<li>Toggle the visualization of surfaces and physical shapes of the objects.</li>
 				</ul>
-				<para>For more complex objects, such as <ui><link to="demo_cpp_samples_water_global">ObjectWaterGlobal</link></ui> and <ui><link to="demo_cpp_samples_landscape">ObjectLandscapeTerrain</link></ui>, see the corresponding samples.</para>
+				<para>For more complex objects, such as <ui><link to="sdk_api_samples_cpp_terrain_modification_usage">ObjectLandscapeTerrain</link></ui>, see the corresponding samples.</para>
 		</brief>
 	</desc>
 	<tags>

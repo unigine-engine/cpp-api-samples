@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>39573fc0016ec686534f31c634142857405cf869</guid>
+	<type>property</type>
+	<hash>c98d96b32306f30daffab525759bafd548071cdd960e7a14d34c76d1f41e86eb</hash>
+	<runtimes>
+		<runtime id="39573fc0016ec686534f31c634142857405cf869" name="SplineGenerationSample" link="0" type="4"/>
+	</runtimes>
+</asset>

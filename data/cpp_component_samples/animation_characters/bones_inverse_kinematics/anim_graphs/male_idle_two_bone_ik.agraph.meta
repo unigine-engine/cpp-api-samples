@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>19860c4cdf93fb0ab758f701b5bf28e972c1a17f</guid>
+	<type>animation_graph</type>
+	<hash>4a652624a6270415025192280b39937de8c07cbf0daeb76a4758f64718534530</hash>
+	<runtimes>
+		<runtime id="19860c4cdf93fb0ab758f701b5bf28e972c1a17f" name="male_idle_two_bone_ik.agraph" link="0"/>
+		<runtime id="78dec4f066fddcebf34db50f5156323451590826" name="male_idle_two_bone_ik" link="1" type="10"/>
+	</runtimes>
+</asset>

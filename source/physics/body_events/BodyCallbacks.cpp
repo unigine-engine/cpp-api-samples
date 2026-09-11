@@ -59,11 +59,9 @@ void BodyCallbacks::init()
 
 			// Event callbacks are connected to cloned body
 			body = cloned_object->getBodyRigid();
-			body->getEventFrozen().connect(body_connections, this, &BodyCallbacks::frozen_callback);
-			body->getEventPosition().connect(body_connections, this,
-				&BodyCallbacks::position_callback);
-			body->getEventContactEnter().connect(body_connections, this,
-				&BodyCallbacks::contact_callback);
+			body->getEventFrozen().connect(this, &BodyCallbacks::frozen_callback);
+			body->getEventPosition().connect(this, &BodyCallbacks::position_callback);
+			body->getEventContactEnter().connect(this, &BodyCallbacks::contact_callback);
 
 			// Object is stored for cleanup
 			objects.append(cloned_object);
@@ -73,13 +71,9 @@ void BodyCallbacks::init()
 	object.deleteLater();
 }
 
-// Event connections are removed and objects are cleared.
+// Object references are cleared on shutdown; event callbacks auto-disconnect on destruction.
 void BodyCallbacks::shutdown()
 {
-	// All body event callbacks are disconnected
-	body_connections.disconnectAll();
-
-	// Object references are cleared
 	objects.clear();
 }
 

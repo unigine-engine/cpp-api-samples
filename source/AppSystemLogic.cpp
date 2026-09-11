@@ -19,8 +19,8 @@ int AppSystemLogic::init()
 	Unigine::Engine::get()->setBackgroundUpdate(
 		Unigine::Engine::BACKGROUND_UPDATE_RENDER_NON_MINIMIZED);
 
-	SamplesManager::get()->parseMetaXml("../cpp_samples.sample");
-	Unigine::World::loadWorld("cpp_samples/cpp_samples");
+	SamplesManager::get()->parseMetaXml("../cpp_component_samples.sample");
+	Unigine::World::loadWorld("cpp_component_samples/cpp_component_samples");
 
 	Unigine::ComponentSystem::get()->initialize();
 	Unigine::Input::setMouseHandle(Unigine::Input::MOUSE_HANDLE_USER);

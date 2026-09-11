@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>cf68767a78e75e4f95887eddb86881e9dd662de8</guid>
+	<type>property</type>
+	<hash>bd3be9aa234f1c53d13ece0ed961d77903f8b21c8bcc8329e4d42ba629ce98c7</hash>
+	<runtimes>
+		<runtime id="cf68767a78e75e4f95887eddb86881e9dd662de8" name="GuiToTexture" link="0" type="4"/>
+	</runtimes>
+</asset>

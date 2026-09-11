@@ -4,8 +4,8 @@
 
 #include "GamepadInput.h"
 #include "Car.h"
-#include "../../utils/SimpleInformationBox.h"
 #include <UnigineGame.h>
+#include <UnigineWindowManager.h>
 
 REGISTER_COMPONENT(GamepadInput);
 
@@ -49,39 +49,35 @@ void GamepadInput::init()
 	Physics::setFrozenLinearVelocity(0.1f);
 	Physics::setFrozenAngularVelocity(0.1f);
 
-	info = getComponent<SimpleInformationBox>(node);
+	description_window.createWindow();
 
-	info->setWindowTitle("Gamepad Input Sample");
-	info->setColumnsCount(1);
-	info->setWidth(300);
-	info->pushBackAboutInfo("This sample demostrates the simple usage of Gamepad input.");
+	description_window.addFloatParameter("Filter", "Buttons sensitivity threshold",
+		0.0f, 0.0f, 1.0f,
+		[this](float v) { setFilter(v); });
+	description_window.addFloatParameter("Low Frequency", "Power of vibration for low frequency",
+		0.0f, 0.0f, 1.0f,
+		[this](float v) { setLowFrequency(v); });
+	description_window.addFloatParameter("High Frequency", "Power of vibration for high frequency",
+		0.0f, 0.0f, 1.0f,
+		[this](float v) { setHighFrequency(v); });
+	description_window.addIntParameter("Duration", "Vibration duration in ms",
+		1, 1, 1000,
+		[this](int v) { setDuration((float)v); });
 
-	auto group = info->getParametersGroupBox(0);
+	canvas_group = WidgetGroupBox::create("Touchpad", 8, 8);
+	description_window.getWindow()->addChild(canvas_group, Gui::ALIGN_LEFT);
 	canvas = WidgetCanvas::create();
-	group->addChild(canvas);
-	canvas->setWidth(group->getWidth());
-	canvas->setHeight(toInt(group->getWidth() * 0.5));
-	canvas->setHidden(true);
+	canvas->setWidth(280);
+	canvas->setHeight(140);
+	canvas_group->addChild(canvas, Gui::ALIGN_EXPAND);
+	canvas_group->setHidden(true);
 
-	auto slider = info->addSlider(0, "Filter ", 0.01f, "Buttons sensitivity threshold");
-	slider->getEventChanged().connect(widget_connections, [this, slider]() {
-		setFilter(slider->getValue() * 0.01f);
-		});
-	slider = info->addSlider(0, "Low Frequency ", 0.01f, "Power of vibration for low frequency");
-	slider->getEventChanged().connect(widget_connections, [this, slider]() {
-		setLowFrequency(slider->getValue() * 0.01f);
-		});
-	slider = info->addSlider(0, "High Frequency ", 0.01f, "Power of vibration for high frequency");
-	slider->getEventChanged().connect(widget_connections, [this, slider]() {
-		setHighFrequency(slider->getValue() * 0.01f);
-		});
-	slider = info->addSlider(0, "Duration ", 1.0f, "Vibration duration in ms");
-	slider->getEventChanged().connect(widget_connections, [this, slider]() {
-		setDuration((float)slider->getValue());
-		});
-	slider->setMinValue(1);
-	slider->setMaxValue(1000);
-	slider->setValue(1);
+	info_group = WidgetGroupBox::create("Gamepad Info", 8, 8);
+	description_window.getWindow()->addChild(info_group, Gui::ALIGN_LEFT);
+	info_label = WidgetLabel::create();
+	info_label->setFontRich(1);
+	info_label->setFontWrap(1);
+	info_group->addChild(info_label, Gui::ALIGN_EXPAND);
 
 	car = getComponent<Car>(World::getNodeByName("car"));
 
@@ -102,69 +98,66 @@ void GamepadInput::update()
 {
 	update_inputs();
 
-	info->clearParametersInfo(0);
-
 	if (gamepad && gamepad->isAvailable())
 	{
+		description_window.getParameterGroupBox()->setHidden(false);
+
 		draw_touches();
 
-		info->pushBackParametersInfo(0, gamepad->getName(), SimpleInformationBox::INFO_ALIGN::CENTER);
-		info->pushBackWhiteSpaceLineParametersInfo(0);
+		String text = String::format(
+			"<center><b>%s</b></center>\n"
+			"\n"
+			"<center>Press Left and Right triggers to run motors</center>\n"
+			"<center>Press <b>X button</b> to respawn</center>\n"
+			"<center>Press <b>Y button</b> to vibrate</center>\n"
+			"\n"
+			"Number: %d\n"
+			"Player Index: %d\n"
+			"Device Type: %s\n"
+			"Model Type: %s\n"
+			"\n"
+			"<center><b>Axes</b></center>\n"
+			"Left X: %s\n"
+			"Left Y: %s\n"
+			"Right X: %s\n"
+			"Right Y: %s\n"
+			"Left X Last Delta: %s\n"
+			"Left Y Last Delta: %s\n"
+			"Right X Last Delta: %s\n"
+			"Right Y Last Delta: %s\n"
+			"\n"
+			"<center><b>Triggers</b></center>\n"
+			"Left: %s\n"
+			"Right: %s\n"
+			"Left Last Delta: %s\n"
+			"Right Last Delta: %s\n"
+			"\n"
+			"<center><b>Buttons</b></center>\n"
+			"Last Button Down: %s\n"
+			"Last Button Pressed: %s\n"
+			"Last Button Up: %s",
+			gamepad->getName(),
+			gamepad->getNumber(),
+			gamepad->getPlayerIndex(),
+			getDeviceName(gamepad->getDeviceType()).get(),
+			getModelName(gamepad->getModelType()).get(),
+			String::ftoa(gamepad->getAxesLeft().x).get(),
+			String::ftoa(gamepad->getAxesLeft().y).get(),
+			String::ftoa(gamepad->getAxesRight().x).get(),
+			String::ftoa(gamepad->getAxesRight().y).get(),
+			String::ftoa(last_axes_left_delta.x).get(),
+			String::ftoa(last_axes_left_delta.y).get(),
+			String::ftoa(last_axes_right_delta.x).get(),
+			String::ftoa(last_axes_right_delta.y).get(),
+			String::ftoa(gamepad->getTriggerLeft()).get(),
+			String::ftoa(gamepad->getTriggerRight()).get(),
+			String::ftoa(last_trigger_left_delta).get(),
+			String::ftoa(last_trigger_right_delta).get(),
+			last_button_down.get(),
+			last_button_pressed.get(),
+			last_button_up.get());
 
-		info->pushBackParametersInfo(0, "Press Left and Right triggers to run motors", SimpleInformationBox::INFO_ALIGN::CENTER);
-		info->pushBackWhiteSpaceLineParametersInfo(0);
-
-		info->pushBackParametersInfo(0, "Press <b>X button</b> to respawn", SimpleInformationBox::INFO_ALIGN::CENTER);
-		info->pushBackWhiteSpaceLineParametersInfo(0);
-
-		info->pushBackParametersInfo(0, "Press <b>Y button</b> to vibrate", SimpleInformationBox::INFO_ALIGN::CENTER);
-		info->pushBackWhiteSpaceLineParametersInfo(0);
-
-		info->pushBackParametersInfo(0, "Number", String::itoa(gamepad->getNumber()));
-		info->pushBackParametersInfo(0, "Player Index", String::itoa(gamepad->getPlayerIndex()));
-		info->pushBackParametersInfo(0, "Device Type", getDeviceName(gamepad->getDeviceType()));
-		info->pushBackParametersInfo(0, "Model Type", getModelName(gamepad->getModelType()));
-		info->pushBackWhiteSpaceLineParametersInfo(0);
-
-		info->pushBackParametersInfo(0, "Axes", SimpleInformationBox::INFO_ALIGN::CENTER);
-
-		info->pushBackParametersInfo(0, "Left X", String::ftoa(gamepad->getAxesLeft().x));
-
-		info->pushBackParametersInfo(0, "Left Y", String::ftoa(gamepad->getAxesLeft().y));
-
-		info->pushBackParametersInfo(0, "Right X", String::ftoa(gamepad->getAxesRight().x));
-
-		info->pushBackParametersInfo(0, "Right Y", String::ftoa(gamepad->getAxesRight().y));
-
-		info->pushBackParametersInfo(0, "Left X Last Delta", String::ftoa(last_axes_left_delta.x));
-
-		info->pushBackParametersInfo(0, "Left Y Last Delta", String::ftoa(last_axes_left_delta.y));
-
-		info->pushBackParametersInfo(0, "Right X Last Delta", String::ftoa(last_axes_right_delta.x));
-
-		info->pushBackParametersInfo(0, "Right Y Last Delta", String::ftoa(last_axes_right_delta.y));
-
-		info->pushBackWhiteSpaceLineParametersInfo(0);
-
-		info->pushBackParametersInfo(0, "Triggers", SimpleInformationBox::INFO_ALIGN::CENTER);
-
-		info->pushBackParametersInfo(0, "Left", String::ftoa(gamepad->getTriggerLeft()));
-
-		info->pushBackParametersInfo(0, "Right", String::ftoa(gamepad->getTriggerRight()));
-
-		info->pushBackParametersInfo(0, "Left Last Delta", String::ftoa(last_trigger_left_delta));
-
-		info->pushBackParametersInfo(0, "Right Last Delta", String::ftoa(last_trigger_right_delta));
-		info->pushBackWhiteSpaceLineParametersInfo(0);
-
-		info->pushBackParametersInfo(0, "Buttons", SimpleInformationBox::INFO_ALIGN::CENTER);
-
-		info->pushBackParametersInfo(0, "Last Button Down", last_button_down, SimpleInformationBox::INFO_ALIGN::LEFT);
-		info->pushBackParametersInfo(0, "Last Button Pressed", last_button_pressed, SimpleInformationBox::INFO_ALIGN::LEFT);
-		info->pushBackParametersInfo(0, "Last Button Up", last_button_up, SimpleInformationBox::INFO_ALIGN::LEFT);
-		info->pushBackParametersInfo(0, "                   ", SimpleInformationBox::INFO_ALIGN::CENTER);
-		info->pushBackWhiteSpaceLineParametersInfo(0);
-		info->showAdditionalWidgets(0, true);
+		info_label->setText(text.get());
 
 		if (gamepad->isButtonPressed(Input::GAMEPAD_BUTTON_X))
 			car->respawn();
@@ -178,12 +171,18 @@ void GamepadInput::update()
 	}
 	else
 	{
-		info->pushBackParametersInfo(0, "Connect gamepad.", SimpleInformationBox::INFO_ALIGN::CENTER);
-		info->showAdditionalWidgets(0, false);
+		info_label->setText("<center>Connect gamepad.</center>");
+		canvas_group->setHidden(true);
+		description_window.getParameterGroupBox()->setHidden(true);
 
 		if (!gamepad && Input::getNumGamePads())
 			gamepad = Input::getGamePad(0);
 	}
+}
+
+void GamepadInput::shutdown()
+{
+	description_window.shutdown();
 }
 
 // Axis deltas, trigger deltas, and button state transitions are tracked.
@@ -237,11 +236,11 @@ void GamepadInput::draw_touches()
 {
 	if (gamepad->getNumTouches() == 0)
 	{
-		canvas->setHidden(true);
+		canvas_group->setHidden(true);
 		return;
 	}
 
-	canvas->setHidden(false);
+	canvas_group->setHidden(false);
 	canvas->clear();
 
 	const static int number_of_colors = 10;

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>642eafc216c72c3911bbe844b028d6d36eb4ee16</guid>
+	<type>world</type>
+	<hash>7d3e21a3ddc444e5187676b2b5a7523c1f8047b3e6081a856102ddbab389e42f</hash>
+	<runtimes>
+		<runtime id="642eafc216c72c3911bbe844b028d6d36eb4ee16" name="landscape_combined.world" link="0"/>
+	</runtimes>
+	<parameters>
+		<parameter type="string" name="physics_settings_path"/>
+		<parameter type="string" name="render_settings_path">guid://8bed8c3ce53501ff11c1b0ae5cc6d017d4ad5524</parameter>
+		<parameter type="string" name="script_name"/>
+		<parameter type="string" name="sound_settings_path"/>
+		<parameter type="string" name="viewports_settings"/>
+	</parameters>
+</asset>

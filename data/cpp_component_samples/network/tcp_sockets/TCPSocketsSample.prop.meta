@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>f2a751b121958e75781ab4e46460ad2f9f3d5629</guid>
+	<type>property</type>
+	<hash>351ddb642fe5282a695aa3334c4d1e327f9532b83ccf02f15cbd2e5838b9bfd0</hash>
+	<runtimes>
+		<runtime id="f2a751b121958e75781ab4e46460ad2f9f3d5629" name="TCPSocketsSample" link="0" type="4"/>
+	</runtimes>
+</asset>

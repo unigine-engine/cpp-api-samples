@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>b6df1175c37ea9c01856777eb12f6cbc1c102808</guid>
+	<type>property</type>
+	<hash>48b67ffec21639e26090556a3eaebe0b0af981384a076cab1d399671c756518a</hash>
+	<runtimes>
+		<runtime id="b6df1175c37ea9c01856777eb12f6cbc1c102808" name="IntersectionMouseRay" link="0" type="4"/>
+	</runtimes>
+</asset>

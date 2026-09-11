@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>4f13cb0bddf92f674780e93c2a0ac8d575950f4f</guid>
+	<type>world</type>
+	<hash>0f8ea5e198f110e178e01bcb6d370f34490296bc89f990d171afa833d2c017b2</hash>
+	<runtimes>
+		<runtime id="4f13cb0bddf92f674780e93c2a0ac8d575950f4f" name="materials_and_properties.world" link="0"/>
+	</runtimes>
+	<parameters>
+		<parameter type="string" name="physics_settings_path"/>
+		<parameter type="string" name="render_settings_path">guid://8bed8c3ce53501ff11c1b0ae5cc6d017d4ad5524</parameter>
+		<parameter type="string" name="script_name"/>
+		<parameter type="string" name="sound_settings_path"/>
+		<parameter type="string" name="viewports_settings"/>
+	</parameters>
+</asset>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>b1d66664ebf2d2d20964470bd8fe6e28b72a5baf</guid>
+	<type>animation_graph</type>
+	<hash>a9ce80879f0d4d23884b070ba29b134b5040f9a23727fcec5d19e2bcd077b7e7</hash>
+	<runtimes>
+		<runtime id="b1d66664ebf2d2d20964470bd8fe6e28b72a5baf" name="male_walk_in_place.agraph" link="0"/>
+		<runtime id="8dc944d282db09cbb2d0e6c7390e0652ddbe2b96" name="male_walk_in_place" link="1" type="10"/>
+	</runtimes>
+</asset>

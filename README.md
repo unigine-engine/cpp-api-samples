@@ -5,7 +5,7 @@ This repository contains [C++ UNIGINE samples](https://developer.unigine.com/en/
 ## Requirements
 
 - [**UNIGINE SDK Browser**](https://developer.unigine.com/en/docs/latest/start/installing_sdk?rlang=cpp) (latest version)
-- **UNIGINE SDK Community** or **Engineering** edition (**Sim** upgrade supported)
+- **UNIGINE SDK**
 - **Python 3.10** or newer
 - **Visual Studio 2022** (recommended)
 
@@ -23,8 +23,7 @@ Check the full list of system requirements at [developer.unigine.com.](https://d
    - Click *Add Existing*, select the `.project` file from the cloned folder (matching your OS - `*-win-*`/`*-lin-*`, edition, precision), and click *Import Project*.
      
      ![Add Project](https://documentation-api.unigine.com/en/docs/latest/sdk/api_samples/third_party/photon/add_project.png)
-> [!NOTE]
-> If you're using **UNIGINE SDK *Sim***, select the ***Engineering*** `*-eng-sim-*.project` file when importing the sample. After import, you can upgrade the project to the **Sim** version directly in SDK Browser - just click *Upgrade*, choose the SDK **Sim** version, and adjust any additional settings you want to use in the configuration window that opens.
+
 
 5. **Repair the project**:
    - After importing, you'll see a **Repair** warning - this is expected, as only essential project files are stored in the Git repository. SDK Browser will restore the rest.

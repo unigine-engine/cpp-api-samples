@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>771793a4bf5524b511afab5105c90a547270ab12</guid>
+	<type>world</type>
+	<hash>df8125c9cf0c9361cbf30a06a87cf2d7e42d1d3edcf0c7260f5a2ff71de7d016</hash>
+	<runtimes>
+		<runtime id="771793a4bf5524b511afab5105c90a547270ab12" name="textures.world" link="0"/>
+	</runtimes>
+	<parameters>
+		<parameter type="string" name="physics_settings_path"/>
+		<parameter type="string" name="render_settings_path">guid://8bed8c3ce53501ff11c1b0ae5cc6d017d4ad5524</parameter>
+		<parameter type="string" name="script_name"/>
+		<parameter type="string" name="sound_settings_path"/>
+		<parameter type="string" name="viewports_settings"/>
+	</parameters>
+</asset>

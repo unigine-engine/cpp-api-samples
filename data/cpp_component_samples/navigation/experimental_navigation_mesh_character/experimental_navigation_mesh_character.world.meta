@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>16fb0a142c3388c72cf0a9682408dac86f5b4c54</guid>
+	<type>world</type>
+	<hash>3ba2940076ee4fb92f9d1d226f511bfaf81f5dfebcb3d3563ab0345aae201822</hash>
+	<runtimes>
+		<runtime id="16fb0a142c3388c72cf0a9682408dac86f5b4c54" name="experimental_navigation_mesh_character.world" link="0"/>
+	</runtimes>
+	<parameters>
+		<parameter type="string" name="navigation_settings_path"/>
+		<parameter type="string" name="physics_settings_path"/>
+		<parameter type="string" name="render_settings_path"/>
+		<parameter type="string" name="script_name"/>
+		<parameter type="string" name="sound_settings_path"/>
+		<parameter type="string" name="viewports_settings"/>
+	</parameters>
+</asset>

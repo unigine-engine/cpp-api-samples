@@ -9,7 +9,7 @@
 				<li><strong nt="1">InfiniteThread</strong> - continuously outputs messages while running.</li>
 				<li><strong nt="1">CountedThread</strong> - performs a finite number of iterations before completing.</li>
 			</ol>
-			<para>Threads are started during component initialization and executed in parallel with the main engine loop. The infinite thread is explicitly stopped via <ui><link to="thread_class" offset="stop_int">stop()</link></ui> once the counted thread completes all iterations.</para>
+			<para>Threads are started during component initialization and executed in parallel with the main engine loop. The infinite thread is explicitly stopped via <ui><link to="thread_class" offset="stop_bool">stop()</link></ui> once the counted thread completes all iterations.</para>
 			<para>This sample illustrates basic principles of multithreading and can serve as a foundation for offloading computations or <ui>I/O</ui> operations from the main thread.</para>
 		</brief>
 	</desc>

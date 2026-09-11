@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>0b28aa9e53fe1effcc3e0e4f229beb2fa8559f89</guid>
+	<type>node</type>
+	<hash>621043900a564f262dd91bb7e600452fb003d36f3ca20ed7bc5ce4a602e3df88</hash>
+	<runtimes>
+		<runtime id="0b28aa9e53fe1effcc3e0e4f229beb2fa8559f89" name="agent_red.node" link="0" type="3"/>
+	</runtimes>
+</asset>

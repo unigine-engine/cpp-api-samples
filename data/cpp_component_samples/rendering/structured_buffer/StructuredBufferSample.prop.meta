@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>94ef890100470c661592b313c623bd7c25f6a8f1</guid>
+	<type>property</type>
+	<hash>377e325f6673b3d7fa0b81ff2d38944ac217cf482e0e5b6fcb8341f5a93810b6</hash>
+	<runtimes>
+		<runtime id="94ef890100470c661592b313c623bd7c25f6a8f1" name="StructuredBufferSample" link="0" type="4"/>
+	</runtimes>
+</asset>

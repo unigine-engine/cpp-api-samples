@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>f25380830017188ccd24a9f4412ce778895a5cba</guid>
+	<type>property</type>
+	<hash>5771e68db4a3c71f1ae9c54c4c8cd3e522ed63d62df2f4c1977a26694a82aac5</hash>
+	<runtimes>
+		<runtime id="f25380830017188ccd24a9f4412ce778895a5cba" name="BoatControl" link="0" type="4"/>
+	</runtimes>
+</asset>

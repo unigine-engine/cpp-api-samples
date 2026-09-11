@@ -11,61 +11,32 @@ using namespace Math;
 
 void AnimationBonesSimpleFootPlacementSample::init()
 {
-	// Bone visualization only works in Debug/Development builds
-#ifndef DEBUG
-	if (Engine::get()->getBuildConfiguration() == Engine::BUILD_CONFIG_RELEASE)
-		Log::warning("Current build configuration is Release. Visualization of ObjectMeshSkinned "
-					 "Bones is not available with this build configuration\n");
-#endif
-
-	skinned = checked_ptr_cast<ObjectMeshSkinnedLegacy>(mesh_skinned_node.get());
-	if (skinned.isValid() == false)
+	skeleton_pose = checked_ptr_cast<NodeSkeletonPose>(skeleton_pose_node.get());
+	if (skeleton_pose.isValid() == false)
 	{
-		Log::error("AnimationBonesSimpleFootPlacementSample::init(): skinned is null\n");
+		Log::error("AnimationBonesSimpleFootPlacementSample::init(): skeleton pose is null\n");
 		return;
 	}
 
-	// Create IK chain for left leg
-	chain_ids[FOOT_LEFT] = skinned->addIKChain();
-	for (int i = 0; i < left_leg_bones.size(); i++)
+	anim_script = skeleton_pose->getAnimScript();
+	if (anim_script.isValid() == false)
 	{
-		int bone = skinned->findBone(left_leg_bones[i]);
-		if (bone == -1)
-			continue;
-
-		skinned->addIKChainBone(bone, chain_ids[FOOT_LEFT]);
-		effector_bones[FOOT_LEFT] = bone; // Last added bone becomes the effector
+		Log::error("AnimationBonesSimpleFootPlacementSample::init(): animation script is null\n");
+		return;
 	}
-	skinned->setIKChainPoleWorldPosition(Vec3(0.5, 1.0f, 1.5), chain_ids[FOOT_LEFT]);
 
-	// Create IK chain for right leg
-	chain_ids[FOOT_RIGHT] = skinned->addIKChain();
-	for (int i = 0; i < right_leg_bones.size(); i++)
+	ConstSkeletonPtr skeleton = skeleton_pose->getSkeleton();
+	if (skeleton.isValid() == false)
 	{
-		int bone = skinned->findBone(right_leg_bones[i]);
-		if (bone == -1)
-			continue;
-
-		skinned->addIKChainBone(bone, chain_ids[FOOT_RIGHT]);
-		effector_bones[FOOT_RIGHT] = bone;
+		Log::error("AnimationBonesSimpleFootPlacementSample::init(): skeleton is null\n");
+		return;
 	}
-	skinned->setIKChainPoleWorldPosition(Vec3(1.0, 0.5f, 1.5), chain_ids[FOOT_RIGHT]);
 
-	// Initialize IK targets at current foot positions and enable effector rotation
-	// (so feet align with the surface normal, not just position)
-	for (int i = FOOT_LEFT; i < FOOT_NUM; i++)
-	{
-		if (effector_bones[i] == -1)
-			continue;
+	effector_joints[FOOT_LEFT] = skeleton->findJoint(left_foot_name.get());
+	effector_joints[FOOT_RIGHT] = skeleton->findJoint(right_foot_name.get());
 
-		Mat4 t = skinned->getBoneWorldTransform(effector_bones[i]);
-		skinned->setIKChainTargetWorldPosition(t.getTranslate(), chain_ids[i]);
-
-		skinned->setIKChainUseEffectorRotation(true, chain_ids[i]);
-		skinned->setIKChainEffectorWorldRotation(t.getRotate(), chain_ids[i]);
-
-		skinned->addVisualizeIKChain(chain_ids[i]);
-	}
+	src_effector_rotations[FOOT_LEFT] = anim_script->getParamQuat("left_foot_rotation");
+	src_effector_rotations[FOOT_RIGHT] = anim_script->getParamQuat("right_foot_rotation");
 
 	// Create manipulators for moving/rotating the obstacle platform
 	if (obstacle.get().isValid())
@@ -81,10 +52,6 @@ void AnimationBonesSimpleFootPlacementSample::init()
 		rotator->setHidden(true);
 		WindowManager::getMainWindow()->addChild(rotator);
 	}
-
-	// Subscribe to the event that fires just before IK solving.
-	// This is where foot positions are updated based on raycasts.
-	skinned->getEventBeginIKSolvers().connect(this, &AnimationBonesSimpleFootPlacementSample::on_begin_ik_solvers);
 
 	Visualizer::setEnabled(true);
 	Visualizer::setMode(Visualizer::MODE_ENABLED_DEPTH_TEST_DISABLED);
@@ -129,34 +96,34 @@ void AnimationBonesSimpleFootPlacementSample::update()
 				+ Vec3(0.f, 0.f, -0.1f),
 			vec3_zero, "Drag Me", vec4_white, 1, 30);
 	}
-}
 
-void AnimationBonesSimpleFootPlacementSample::shutdown()
-{
-	Visualizer::setEnabled(false);
-	Visualizer::setMode(Visualizer::MODE_ENABLED_DEPTH_TEST_ENABLED);
-}
+	// Performs raycasting to find the ground under each foot and updates IK targets.
+	if (skeleton_pose->getNumLayers() == 0)
+		return;
 
-// This callback is invoked just before IK solvers run.
-// It performs raycasting to find the ground under each foot and updates IK targets.
-void AnimationBonesSimpleFootPlacementSample::on_begin_ik_solvers()
-{
+	const Mat4 world_transform = skeleton_pose->getWorldTransform();
+	const Mat4 world_itransform = skeleton_pose->getIWorldTransform();
+
+	const quat world_rotation = world_transform.getRotate();
+	const quat world_irotation = world_itransform.getRotate();
+
 	for (int i = FOOT_LEFT; i < FOOT_NUM; i++)
 	{
-		if (effector_bones[i] == -1)
+		if (effector_joints[i] == -1)
 			continue;
 
 		// Get current foot position and rotation from animation
-		Mat4 t = skinned->getBoneWorldTransform(effector_bones[i]);
+		Mat4 t = world_transform * Mat4(skeleton_pose->getLayerJointObjectTransform(0, effector_joints[i]));
 		Vec3 foot_pos(t.getTranslate());
 		quat foot_rot(t.getRotate());
+		bool ik_enabled = false;
 
 		// Visualize the raycast line
 		Visualizer::renderVector(foot_pos + Vec3_up * 0.5f, foot_pos + Vec3_down * foot_height, vec4_blue);
 
 		// Cast a ray downward from the foot to find ground contact
 		PhysicsIntersectionNormalPtr intersection = PhysicsIntersectionNormal::create();
-		ObjectPtr obj = Physics::getIntersection(foot_pos + Vec3_up * 0.5f, foot_pos + Vec3_down * foot_height, 1, intersection);
+		ObjectPtr obj = Physics::getIntersection(foot_pos + Vec3_up * 0.5f, foot_pos + Vec3_down * foot_height * 1.1f, 1, intersection);
 		if (obj != nullptr)
 		{
 			// Visualize surface normal at contact point
@@ -165,11 +132,41 @@ void AnimationBonesSimpleFootPlacementSample::on_begin_ik_solvers()
 			// Adjust foot position to match ground height (plus foot_height offset)
 			foot_pos = intersection->getPoint() + Vec3_up * foot_height;
 			// Rotate foot to align with surface normal
-			foot_rot = rotationFromTo(vec3_up, intersection->getNormal()) * foot_rot;
+			foot_rot = rotationFromTo(vec3_up, intersection->getNormal()) * world_rotation * src_effector_rotations[i];
+
+			if (intersection->getShape().isValid())
+				ik_enabled = true;
 		}
 
 		// Update IK target with adjusted position and rotation
-		skinned->setIKChainTargetWorldPosition(foot_pos, chain_ids[i]);
-		skinned->setIKChainEffectorWorldRotation(foot_rot, chain_ids[i]);
+		if (i == FOOT_LEFT)
+		{
+			float w = anim_script->getParamFloat("left_effector_weight");
+			if (ik_enabled)
+				w = lerp(w, 1.0f, 1.0f - exp(-Game::getIFps() * 20.0f));
+			else
+				w = lerp(w, 0.0f, 1.0f - exp(-Game::getIFps() * 5.0f));
+			anim_script->setParamFloat("left_effector_weight", saturate(w));
+
+			anim_script->setParamVec3("left_foot_position", vec3(world_itransform * foot_pos));
+			anim_script->setParamQuat("left_foot_rotation", world_irotation * foot_rot);
+		} else if (i == FOOT_RIGHT)
+		{
+			float w = anim_script->getParamFloat("right_effector_weight");
+			if (ik_enabled)
+				w = lerp(w, 1.0f, 1.0f - exp(-Game::getIFps() * 20.0f));
+			else
+				w = lerp(w, 0.0f, 1.0f - exp(-Game::getIFps() * 5.0f));
+			anim_script->setParamFloat("right_effector_weight", saturate(w));
+
+			anim_script->setParamVec3("right_foot_position", vec3(world_itransform * foot_pos));
+			anim_script->setParamQuat("right_foot_rotation", world_irotation * foot_rot);
+		}
 	}
+}
+
+void AnimationBonesSimpleFootPlacementSample::shutdown()
+{
+	Visualizer::setEnabled(false);
+	Visualizer::setMode(Visualizer::MODE_ENABLED_DEPTH_TEST_ENABLED);
 }

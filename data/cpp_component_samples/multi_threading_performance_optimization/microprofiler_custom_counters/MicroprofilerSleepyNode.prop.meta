@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>1972c23b8f4ad98c294b96db60ad5cd93a61fd00</guid>
+	<type>property</type>
+	<hash>ac47e5800262a96a6f3a117c2430ef4aba7af078aaf614501f3c05c70b7589f1</hash>
+	<runtimes>
+		<runtime id="1972c23b8f4ad98c294b96db60ad5cd93a61fd00" name="MicroprofilerSleepyNode" link="0" type="4"/>
+	</runtimes>
+</asset>

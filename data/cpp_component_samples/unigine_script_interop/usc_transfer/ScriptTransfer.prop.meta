@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>503a183334e793527a43d26ae1095c73fd0f05ba</guid>
+	<type>property</type>
+	<hash>65cfdfce613b4d67868dee4d3c6747eb5a9351885d8d475c2e025d0f8cd03096</hash>
+	<runtimes>
+		<runtime id="503a183334e793527a43d26ae1095c73fd0f05ba" name="ScriptTransfer" link="0" type="4"/>
+	</runtimes>
+</asset>

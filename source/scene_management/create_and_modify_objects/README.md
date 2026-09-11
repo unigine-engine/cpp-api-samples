@@ -28,4 +28,4 @@ In this sample, we create and configure three types of objects with interactive 
 -Tune the spawn rate of the **Particle System**.
 -Toggle the visualization of surfaces and physical shapes of the objects.
 
-For more complex objects, such as *ObjectWaterGlobal* and *ObjectLandscapeTerrain*, see the corresponding samples.
+For more complex objects, such as *ObjectLandscapeTerrain*, see the corresponding samples.

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>0a2c864d3bb8cde8ea80b03df7f2030315e3f435</guid>
+	<type>file</type>
+	<hash>a761d0d6c9ee51826971ea6d45ec1e9d98790758a0d44bee65db8fd5a72901f4</hash>
+	<runtimes>
+		<runtime id="0a2c864d3bb8cde8ea80b03df7f2030315e3f435" name="Master.bank" link="0"/>
+	</runtimes>
+</asset>

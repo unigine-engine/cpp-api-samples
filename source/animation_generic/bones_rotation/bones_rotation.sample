@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Bones: Rotation [Animation Graph]" order="1">
+	<sdk_desc>Blending skeletal animations in an animation graph and rotating a bone programmatically.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample demonstrates how to combine skeletal animation playback with direct modification of bone transforms.</para>
+			<para>The turret plays an idle animation, over which the left and right shooting animations are blended additively by a state machine in the <ui><link to="ag_overview">animation graph</link></ui>.</para>
+			<para>On top of that, the horizontal joint of the turret is rotated from code at a constant speed. The rotation is applied after the animation graph has written its pose, so that the played animation does not overwrite it.</para>
+			<para>Combining played animations with programmatic bone control is useful for turrets and other cases where part of a skeleton has to be driven by code rather than by a pre-made animation.</para>
+		</brief>
+	</desc>
+	<tags>
+		<tag>Animation</tag>
+	</tags>
+</sample>
+
+	

@@ -1,0 +1,336 @@
+{
+	"version": "2.22.0.0",
+	"file_guid": "aeaed87442ed7db1011a7ac9d5eff55df1c63107",
+	"camera_offset_x": 22.947425842285156,
+	"camera_offset_y": -19.823806762695312,
+	"camera_scale": 1.3310000896453857,
+	"preview_mesh_guid": "a27d350b6709653583108f0567436a8e4e76c53d",
+	"filter_by_skeleton": 1,
+	"fix_root_in_origin": 1,
+	"is_playing": 1,
+	"show_bones": 1,
+	"show_bone_axes": 0,
+	"show_bone_names": 0,
+	"show_ground": 1,
+	"nodes": {
+		"Output Pose": {
+			"guid": "00000000000000000000000000000000b00002b2",
+			"x": 1159,
+			"y": 822,
+			"collapsed": false,
+			"inputs": {
+				"input": {
+					"label": "Pose",
+					"type": "AnimPose",
+					"id": 0
+				}
+			}
+		},
+		"Animation Player": {
+			"guid": "a82be018a6f0754531e4d57315220543437b4a69",
+			"x": 132,
+			"y": 189,
+			"collapsed": false,
+			"props": {
+				"prop": {
+					"widget": "String",
+					"value": ""
+				},
+				"prop": {
+					"widget": "Combobox",
+					"x": 0
+				},
+				"prop": {
+					"widget": "Combobox",
+					"x": 0
+				}
+			},
+			"inputs": {
+				"input": {
+					"label": "Anim",
+					"type": "Animation",
+					"id": 0
+				},
+				"input": {
+					"label": "Loop",
+					"type": "Bool",
+					"id": 1
+				},
+				"input": {
+					"label": "Speed",
+					"type": "Float",
+					"id": 2
+				}
+			},
+			"outputs": {
+				"output": {
+					"label": "Pose",
+					"type": "AnimPose",
+					"id": 0
+				}
+			}
+		},
+		"Two Bone IK": {
+			"guid": "c288510474f16e2f835b5193be6e13d01a03cf1a",
+			"x": 671,
+			"y": 420,
+			"collapsed": false,
+			"show_preview": true,
+			"props": {
+				"prop": {
+					"widget": "JointCombobox",
+					"value": "thigh_l"
+				},
+				"prop": {
+					"widget": "JointCombobox",
+					"value": "shin_l"
+				},
+				"prop": {
+					"widget": "JointCombobox",
+					"value": "foot_l"
+				},
+				"prop": {
+					"widget": "Combobox",
+					"x": 1
+				},
+				"prop": {
+					"widget": "Float",
+					"x": 0.05000000074505806
+				},
+				"prop": {
+					"widget": "Float",
+					"x": 1.5
+				},
+				"prop": {
+					"widget": "Combobox",
+					"x": 0
+				}
+			},
+			"inputs": {
+				"input": {
+					"label": "Pose",
+					"type": "AnimPose",
+					"id": 0
+				},
+				"input": {
+					"label": "Target World Space",
+					"type": "Vec3",
+					"id": 1
+				},
+				"input": {
+					"label": "Pole World Space",
+					"type": "Vec3",
+					"id": 2
+				},
+				"input": {
+					"label": "Weight",
+					"type": "Float",
+					"id": 3
+				},
+				"input": {
+					"label": "Use Pole",
+					"type": "Bool",
+					"id": 4
+				}
+			},
+			"outputs": {
+				"output": {
+					"label": "Pose",
+					"type": "AnimPose",
+					"id": 0
+				}
+			}
+		},
+		"Vec3": {
+			"guid": "713438a8191f17a289694a6702a0659e39d75d1e",
+			"x": 340,
+			"y": 567,
+			"collapsed": false,
+			"show_preview_gizmo": true,
+			"outputs": {
+				"output": {
+					"label": "",
+					"type": "Vec3",
+					"id": 0
+				}
+			},
+			"param_guid": "3e1d34787e4fba3d0886145dd5361cfdeed307fb"
+		},
+		"Vec3": {
+			"guid": "b5aca036fc82d5acb43f75dd38942cb5dd9ffcbc",
+			"x": 346,
+			"y": 641,
+			"collapsed": false,
+			"show_preview_gizmo": true,
+			"outputs": {
+				"output": {
+					"label": "",
+					"type": "Vec3",
+					"id": 0
+				}
+			},
+			"param_guid": "2fc5a7866e5304c39ff302e35ed528b95d542c91"
+		}
+	},
+	"inputs": {
+		"input": {
+			"node_guid": "00000000000000000000000000000000b00002b2",
+			"anchor_id": 0,
+			"show_label": true,
+			"show_inline_widget": false
+		},
+		"input": {
+			"node_guid": "a82be018a6f0754531e4d57315220543437b4a69",
+			"anchor_id": 0,
+			"show_label": false,
+			"show_inline_widget": true,
+			"anim_guid": "1e0eecc05caa83e3a5eabbfbe7dd8cbe0b51c080",
+			"string_value": "idle_active"
+		},
+		"input": {
+			"node_guid": "a82be018a6f0754531e4d57315220543437b4a69",
+			"anchor_id": 1,
+			"show_label": true,
+			"show_inline_widget": true,
+			"bool_value": 1
+		},
+		"input": {
+			"node_guid": "a82be018a6f0754531e4d57315220543437b4a69",
+			"anchor_id": 2,
+			"show_label": true,
+			"show_inline_widget": true,
+			"float_value": 1
+		},
+		"input": {
+			"node_guid": "c288510474f16e2f835b5193be6e13d01a03cf1a",
+			"anchor_id": 0,
+			"show_label": true,
+			"show_inline_widget": false
+		},
+		"input": {
+			"node_guid": "c288510474f16e2f835b5193be6e13d01a03cf1a",
+			"anchor_id": 1,
+			"show_label": true,
+			"show_inline_widget": false,
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"input": {
+			"node_guid": "c288510474f16e2f835b5193be6e13d01a03cf1a",
+			"anchor_id": 2,
+			"show_label": true,
+			"show_inline_widget": false,
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"input": {
+			"node_guid": "c288510474f16e2f835b5193be6e13d01a03cf1a",
+			"anchor_id": 3,
+			"show_label": true,
+			"show_inline_widget": true,
+			"float_value": 1
+		},
+		"input": {
+			"node_guid": "c288510474f16e2f835b5193be6e13d01a03cf1a",
+			"anchor_id": 4,
+			"show_label": true,
+			"show_inline_widget": true,
+			"bool_value": 1
+		}
+	},
+	"anchors": {
+		"anchor": {
+			"input_index": 0,
+			"input_id": 0,
+			"input_label": "Pose",
+			"input_node": "00000000000000000000000000000000b00002b2",
+			"output_index": 0,
+			"output_id": 0,
+			"output_label": "Pose",
+			"output_node": "c288510474f16e2f835b5193be6e13d01a03cf1a"
+		},
+		"anchor": {
+			"input_index": 0,
+			"input_id": 0,
+			"input_label": "Pose",
+			"input_node": "c288510474f16e2f835b5193be6e13d01a03cf1a",
+			"output_index": 0,
+			"output_id": 0,
+			"output_label": "Pose",
+			"output_node": "a82be018a6f0754531e4d57315220543437b4a69"
+		},
+		"anchor": {
+			"input_index": 1,
+			"input_id": 1,
+			"input_label": "Target World Space",
+			"input_node": "c288510474f16e2f835b5193be6e13d01a03cf1a",
+			"output_index": 0,
+			"output_id": 0,
+			"output_label": "",
+			"output_node": "713438a8191f17a289694a6702a0659e39d75d1e"
+		},
+		"anchor": {
+			"input_index": 2,
+			"input_id": 2,
+			"input_label": "Pole World Space",
+			"input_node": "c288510474f16e2f835b5193be6e13d01a03cf1a",
+			"output_index": 0,
+			"output_id": 0,
+			"output_label": "",
+			"output_node": "b5aca036fc82d5acb43f75dd38942cb5dd9ffcbc"
+		}
+	},
+	"graph_type": "final",
+	"root_motion_enabled": 0,
+	"parameters": {
+		"param": {
+			"name": "ik_target",
+			"type": "Vec3",
+			"guid": "3e1d34787e4fba3d0886145dd5361cfdeed307fb",
+			"x": -0.15399999916553497,
+			"y": 0.43799999356269836,
+			"z": 0.44499999284744263
+		},
+		"param": {
+			"name": "ik_pole",
+			"type": "Vec3",
+			"guid": "2fc5a7866e5304c39ff302e35ed528b95d542c91",
+			"x": -0.11800000071525574,
+			"y": 0.53100001811981201,
+			"z": 1.062999963760376
+		}
+	},
+	"preview_overrides": {
+		"override": {
+			"guid": "3e1d34787e4fba3d0886145dd5361cfdeed307fb",
+			"type": "Vec3",
+			"active": false,
+			"x": -0.15399999916553497,
+			"y": 0.43799999356269836,
+			"z": 0.44499999284744263
+		},
+		"override": {
+			"guid": "2fc5a7866e5304c39ff302e35ed528b95d542c91",
+			"type": "Vec3",
+			"active": false,
+			"x": -0.11800000071525574,
+			"y": 0.53100001811981201,
+			"z": 1.062999963760376
+		}
+	},
+	"editor_layout": {
+		"main_weights": {
+			"w": 0.74032020568847656,
+			"w": 0.25967976450920105
+		},
+		"panel_weights": {
+			"w": 0.49595886468887329,
+			"w": 0.30345335602760315,
+			"w": 0.20058780908584595
+		},
+		"hierarchy_on_left": 0,
+		"hierarchy_weight": 0
+	}
+}

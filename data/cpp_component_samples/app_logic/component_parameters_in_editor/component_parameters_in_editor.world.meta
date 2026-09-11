@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>e9233aade1885736211814e0eee92bbc253f861b</guid>
+	<type>world</type>
+	<hash>9550403a8f72d4b157c80604e6927b3983bddd849baf1c7e4af709c7505eb6a2</hash>
+	<runtimes>
+		<runtime id="e9233aade1885736211814e0eee92bbc253f861b" name="component_parameters.world" link="0"/>
+	</runtimes>
+	<parameters>
+		<parameter type="string" name="physics_settings_path"/>
+		<parameter type="string" name="render_settings_path">guid://8bed8c3ce53501ff11c1b0ae5cc6d017d4ad5524</parameter>
+		<parameter type="string" name="script_name"/>
+		<parameter type="string" name="sound_settings_path"/>
+		<parameter type="string" name="viewports_settings"/>
+	</parameters>
+</asset>

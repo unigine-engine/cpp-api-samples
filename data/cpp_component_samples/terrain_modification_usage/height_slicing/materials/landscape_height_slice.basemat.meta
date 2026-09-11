@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>fcf612c6be92e5580c7424eab002e03fd2167fd5</guid>
+	<type>material</type>
+	<hash>2e3143667c85ce362716ec11110c48d17a5ca1097fc09db1897b3c38c6aba68b</hash>
+	<runtimes>
+		<runtime id="fcf612c6be92e5580c7424eab002e03fd2167fd5" name="landscape_height_slice" link="0" type="5"/>
+	</runtimes>
+</asset>

@@ -1,0 +1,2608 @@
+{
+	"version": "2.22.0.0",
+	"file_guid": "a6a113a7286e981c3faaa0ebb7bce4fee577deb1",
+	"camera_offset_x": 531.36480712890625,
+	"camera_offset_y": 574.9886474609375,
+	"camera_scale": 4.5949740409851074,
+	"preview_mesh_guid": "a27d350b6709653583108f0567436a8e4e76c53d",
+	"filter_by_skeleton": 1,
+	"fix_root_in_origin": 1,
+	"is_playing": 1,
+	"show_bones": 1,
+	"show_bone_axes": 0,
+	"show_bone_names": 0,
+	"show_ground": 1,
+	"nodes": {
+		"Output Pose": {
+			"guid": "00000000000000000000000000000000b00002b2",
+			"x": 6458,
+			"y": 1985,
+			"collapsed": false,
+			"inputs": {
+				"input": {
+					"label": "Pose",
+					"type": "AnimPose",
+					"id": 0
+				}
+			}
+		},
+		"Animation Player": {
+			"guid": "a82be018a6f0754531e4d57315220543437b4a69",
+			"x": -361,
+			"y": 427,
+			"collapsed": false,
+			"props": {
+				"prop": {
+					"widget": "String",
+					"value": ""
+				},
+				"prop": {
+					"widget": "Combobox",
+					"x": 0
+				},
+				"prop": {
+					"widget": "Combobox",
+					"x": 0
+				}
+			},
+			"inputs": {
+				"input": {
+					"label": "Anim",
+					"type": "Animation",
+					"id": 0
+				},
+				"input": {
+					"label": "Loop",
+					"type": "Bool",
+					"id": 1
+				},
+				"input": {
+					"label": "Speed",
+					"type": "Float",
+					"id": 2
+				}
+			},
+			"outputs": {
+				"output": {
+					"label": "Pose",
+					"type": "AnimPose",
+					"id": 0
+				}
+			}
+		},
+		"Portal Out": {
+			"guid": "e4c3b7bef283f519658089f9473d25e36b19cc97",
+			"x": 2001,
+			"y": 544,
+			"collapsed": true,
+			"props": {
+				"prop": {
+					"widget": "Combobox",
+					"x": 4
+				}
+			},
+			"outputs": {
+				"output": {
+					"label": "",
+					"type": "Vec3",
+					"id": 0
+				}
+			},
+			"portal_guid": "f79994ae437893debbfe6329545e6e1d69823847"
+		},
+		"Vec3": {
+			"guid": "43f3a86806cd2a710c130e99b0eea5b8d272553e",
+			"x": 1052,
+			"y": 673,
+			"collapsed": false,
+			"show_preview_gizmo": true,
+			"outputs": {
+				"output": {
+					"label": "",
+					"type": "Vec3",
+					"id": 0
+				}
+			},
+			"param_guid": "ba6af2dcc59bf58f91453108f201b99811d8b6ea"
+		},
+		"Lerp": {
+			"guid": "7db3ed6be844adac46748c525171eb2f4d443ce2",
+			"x": 1372,
+			"y": 864,
+			"collapsed": false,
+			"inputs": {
+				"input": {
+					"label": "A",
+					"type": "Quat",
+					"id": 0
+				},
+				"input": {
+					"label": "B",
+					"type": "Quat",
+					"id": 1
+				},
+				"input": {
+					"label": "T",
+					"type": "Float",
+					"id": 2
+				}
+			},
+			"outputs": {
+				"output": {
+					"label": "",
+					"type": "Quat",
+					"id": 0
+				}
+			}
+		},
+		"Float": {
+			"guid": "21eec7cf0f31041140372726f788987dba61bd36",
+			"x": 1075,
+			"y": 980,
+			"collapsed": false,
+			"outputs": {
+				"output": {
+					"label": "",
+					"type": "Float",
+					"id": 0
+				}
+			},
+			"param_guid": "760c013427905f08ae4fb397997cbf35cd41fb85"
+		},
+		"Two Bone IK": {
+			"guid": "a56556f8c24f00a7af4159647ef785650f38df26",
+			"x": 4104,
+			"y": 1149,
+			"collapsed": false,
+			"props": {
+				"prop": {
+					"widget": "JointCombobox",
+					"value": "thigh_l"
+				},
+				"prop": {
+					"widget": "JointCombobox",
+					"value": "shin_l"
+				},
+				"prop": {
+					"widget": "JointCombobox",
+					"value": "foot_l"
+				},
+				"prop": {
+					"widget": "Combobox",
+					"x": 1
+				},
+				"prop": {
+					"widget": "Float",
+					"x": 0.05000000074505806
+				},
+				"prop": {
+					"widget": "Float",
+					"x": 1.5
+				},
+				"prop": {
+					"widget": "Combobox",
+					"x": 1
+				}
+			},
+			"inputs": {
+				"input": {
+					"label": "Pose",
+					"type": "AnimPose",
+					"id": 0
+				},
+				"input": {
+					"label": "Target Object Space",
+					"type": "Vec3",
+					"id": 1
+				},
+				"input": {
+					"label": "Pole Object Space",
+					"type": "Vec3",
+					"id": 2
+				},
+				"input": {
+					"label": "Weight",
+					"type": "Float",
+					"id": 3
+				},
+				"input": {
+					"label": "Use Pole",
+					"type": "Bool",
+					"id": 4
+				}
+			},
+			"outputs": {
+				"output": {
+					"label": "Pose",
+					"type": "AnimPose",
+					"id": 0
+				}
+			}
+		},
+		"Two Bone IK": {
+			"guid": "30e24ee47107a7f6b2d5609094f448747dd8c2b2",
+			"x": 5217,
+			"y": 1574,
+			"collapsed": false,
+			"props": {
+				"prop": {
+					"widget": "JointCombobox",
+					"value": "thigh_r"
+				},
+				"prop": {
+					"widget": "JointCombobox",
+					"value": "shin_r"
+				},
+				"prop": {
+					"widget": "JointCombobox",
+					"value": "foot_r"
+				},
+				"prop": {
+					"widget": "Combobox",
+					"x": 1
+				},
+				"prop": {
+					"widget": "Float",
+					"x": 0.05000000074505806
+				},
+				"prop": {
+					"widget": "Float",
+					"x": 1.5
+				},
+				"prop": {
+					"widget": "Combobox",
+					"x": 1
+				}
+			},
+			"inputs": {
+				"input": {
+					"label": "Pose",
+					"type": "AnimPose",
+					"id": 0
+				},
+				"input": {
+					"label": "Target Object Space",
+					"type": "Vec3",
+					"id": 1
+				},
+				"input": {
+					"label": "Pole Object Space",
+					"type": "Vec3",
+					"id": 2
+				},
+				"input": {
+					"label": "Weight",
+					"type": "Float",
+					"id": 3
+				},
+				"input": {
+					"label": "Use Pole",
+					"type": "Bool",
+					"id": 4
+				}
+			},
+			"outputs": {
+				"output": {
+					"label": "Pose",
+					"type": "AnimPose",
+					"id": 0
+				}
+			}
+		},
+		"Portal Out": {
+			"guid": "7c59a05d08468971f0f4716e0eaf5363a9ce87fc",
+			"x": 1977,
+			"y": 567,
+			"collapsed": true,
+			"props": {
+				"prop": {
+					"widget": "Combobox",
+					"x": 3
+				}
+			},
+			"outputs": {
+				"output": {
+					"label": "",
+					"type": "Vec3",
+					"id": 0
+				}
+			},
+			"portal_guid": "8ce58c252e408e87357e9b28b65976ddf8c42fab"
+		},
+		"Portal Out": {
+			"guid": "2bbe78487e53dc54583993f982dbb6110004821e",
+			"x": 1995,
+			"y": 419,
+			"collapsed": true,
+			"props": {
+				"prop": {
+					"widget": "Combobox",
+					"x": 5
+				}
+			},
+			"outputs": {
+				"output": {
+					"label": "",
+					"type": "Vec3",
+					"id": 0
+				}
+			},
+			"portal_guid": "93ff951cd9767cb719289fdf9e1bcd3b33bbc58d"
+		},
+		"Subtract": {
+			"guid": "954c1d166b0c8efbc530055a0270dbd6323ccdcc",
+			"x": 2343,
+			"y": 396,
+			"collapsed": false,
+			"inputs": {
+				"input": {
+					"label": "A",
+					"type": "Float",
+					"id": 0
+				},
+				"input": {
+					"label": "B",
+					"type": "Float",
+					"id": 1
+				}
+			},
+			"outputs": {
+				"output": {
+					"label": "",
+					"type": "Float",
+					"id": 0
+				}
+			}
+		},
+		"Expression": {
+			"guid": "e4dc0d4beb33c3346fed2f371c27e222fff01a35",
+			"x": 2193,
+			"y": 419,
+			"collapsed": true,
+			"props": {
+				"prop": {
+					"widget": "String",
+					"value": "z"
+				}
+			},
+			"inputs": {
+				"input": {
+					"label": "",
+					"type": "Vec3",
+					"id": 0
+				}
+			},
+			"outputs": {
+				"output": {
+					"label": "",
+					"type": "Float",
+					"id": 0
+				}
+			}
+		},
+		"Expression": {
+			"guid": "1d8816fa3d9598cf5d55147e5dc5c369753e6610",
+			"x": 2193,
+			"y": 442,
+			"collapsed": true,
+			"props": {
+				"prop": {
+					"widget": "String",
+					"value": "z"
+				}
+			},
+			"inputs": {
+				"input": {
+					"label": "",
+					"type": "Vec3",
+					"id": 0
+				}
+			},
+			"outputs": {
+				"output": {
+					"label": "",
+					"type": "Float",
+					"id": 0
+				}
+			}
+		},
+		"Get Joint Transform": {
+			"guid": "2b55f763509da17f0e65b5cfece4d8eedcdfba0d",
+			"x": 2859,
+			"y": 859,
+			"collapsed": false,
+			"props": {
+				"prop": {
+					"widget": "JointCombobox",
+					"value": "pelvis"
+				},
+				"prop": {
+					"widget": "Combobox",
+					"x": 0
+				}
+			},
+			"inputs": {
+				"input": {
+					"label": "Pose",
+					"type": "AnimPose",
+					"id": 0
+				}
+			},
+			"outputs": {
+				"output": {
+					"label": "Position Local Space",
+					"type": "Vec3",
+					"id": 0
+				},
+				"output": {
+					"label": "Rotation Local Space",
+					"type": "Quat",
+					"id": 1
+				},
+				"output": {
+					"label": "Scale Local Space",
+					"type": "Vec3",
+					"id": 2
+				}
+			}
+		},
+		"Set Joint Transform": {
+			"guid": "c5ac0ab0c9190ad4f187be140f9cd28bb1994896",
+			"x": 3504,
+			"y": 756,
+			"collapsed": false,
+			"props": {
+				"prop": {
+					"widget": "JointCombobox",
+					"value": "pelvis"
+				},
+				"prop": {
+					"widget": "Combobox",
+					"x": 0
+				}
+			},
+			"inputs": {
+				"input": {
+					"label": "Pose",
+					"type": "AnimPose",
+					"id": 0
+				},
+				"input": {
+					"label": "Position Local Space",
+					"type": "Vec3",
+					"id": 1
+				},
+				"input": {
+					"label": "Rotation Local Space",
+					"type": "Quat",
+					"id": 2
+				},
+				"input": {
+					"label": "Scale Local Space",
+					"type": "Vec3",
+					"id": 3
+				}
+			},
+			"outputs": {
+				"output": {
+					"label": "Pose",
+					"type": "AnimPose",
+					"id": 0
+				}
+			}
+		},
+		"Compose Vec3": {
+			"guid": "0802701028f9c7ed3c89a174a4a38d264a3c06f6",
+			"x": 2848,
+			"y": 441,
+			"collapsed": false,
+			"inputs": {
+				"input": {
+					"label": "X",
+					"type": "Float",
+					"id": 0
+				},
+				"input": {
+					"label": "Y",
+					"type": "Float",
+					"id": 1
+				},
+				"input": {
+					"label": "Z",
+					"type": "Float",
+					"id": 2
+				}
+			},
+			"outputs": {
+				"output": {
+					"label": "",
+					"type": "Vec3",
+					"id": 0
+				}
+			}
+		},
+		"Add": {
+			"guid": "4b3576b36ecdac8d8ebd241f9dbf8ca29a4751dd",
+			"x": 3189,
+			"y": 833,
+			"collapsed": false,
+			"inputs": {
+				"input": {
+					"label": "A",
+					"type": "Vec3",
+					"id": 0
+				},
+				"input": {
+					"label": "B",
+					"type": "Vec3",
+					"id": 1
+				}
+			},
+			"outputs": {
+				"output": {
+					"label": "",
+					"type": "Vec3",
+					"id": 0
+				}
+			}
+		},
+		"Portal Out": {
+			"guid": "5be99f5749243cb329d086d00a6f35cfb116810e",
+			"x": 1169,
+			"y": 46,
+			"collapsed": false,
+			"props": {
+				"prop": {
+					"widget": "Combobox",
+					"x": 3
+				}
+			},
+			"outputs": {
+				"output": {
+					"label": "",
+					"type": "Vec3",
+					"id": 0
+				}
+			},
+			"portal_guid": "8ce58c252e408e87357e9b28b65976ddf8c42fab"
+		},
+		"Portal Out": {
+			"guid": "2d3873fbb01705d96b8c340689afabf7d50354d1",
+			"x": 1971,
+			"y": 442,
+			"collapsed": true,
+			"props": {
+				"prop": {
+					"widget": "Combobox",
+					"x": 1
+				}
+			},
+			"outputs": {
+				"output": {
+					"label": "",
+					"type": "Vec3",
+					"id": 0
+				}
+			},
+			"portal_guid": "fbd0a457f7e05a1b927de6b2ad4d969bdb7038cd"
+		},
+		"Float": {
+			"guid": "cc2d75873549ed1e1472f88484ac446cfed49467",
+			"x": 1083,
+			"y": 472,
+			"collapsed": false,
+			"outputs": {
+				"output": {
+					"label": "",
+					"type": "Float",
+					"id": 0
+				}
+			},
+			"param_guid": "6188bd325d80744ca6bacd9d03f864363772771b"
+		},
+		"Subtract": {
+			"guid": "13c71b9ef7fdd5b453a82a62bdb6dea24dd63914",
+			"x": 2342,
+			"y": 519,
+			"collapsed": false,
+			"inputs": {
+				"input": {
+					"label": "A",
+					"type": "Float",
+					"id": 0
+				},
+				"input": {
+					"label": "B",
+					"type": "Float",
+					"id": 1
+				}
+			},
+			"outputs": {
+				"output": {
+					"label": "",
+					"type": "Float",
+					"id": 0
+				}
+			}
+		},
+		"Expression": {
+			"guid": "1dde5600992d3da50824aa645d836c1bee9f0766",
+			"x": 2193,
+			"y": 544,
+			"collapsed": true,
+			"props": {
+				"prop": {
+					"widget": "String",
+					"value": "z"
+				}
+			},
+			"inputs": {
+				"input": {
+					"label": "",
+					"type": "Vec3",
+					"id": 0
+				}
+			},
+			"outputs": {
+				"output": {
+					"label": "",
+					"type": "Float",
+					"id": 0
+				}
+			}
+		},
+		"Expression": {
+			"guid": "fe34b332fefa9810f3148636fcf4403ebd44b388",
+			"x": 2193,
+			"y": 567,
+			"collapsed": true,
+			"props": {
+				"prop": {
+					"widget": "String",
+					"value": "z"
+				}
+			},
+			"inputs": {
+				"input": {
+					"label": "",
+					"type": "Vec3",
+					"id": 0
+				}
+			},
+			"outputs": {
+				"output": {
+					"label": "",
+					"type": "Float",
+					"id": 0
+				}
+			}
+		},
+		"Min": {
+			"guid": "b94edc53ab929140cd24b7bf9de11d4d3d94e07d",
+			"x": 2529,
+			"y": 449,
+			"collapsed": false,
+			"inputs": {
+				"input": {
+					"label": "A",
+					"type": "Float",
+					"id": 0
+				},
+				"input": {
+					"label": "B",
+					"type": "Float",
+					"id": 1
+				}
+			},
+			"outputs": {
+				"output": {
+					"label": "",
+					"type": "Float",
+					"id": 0
+				}
+			}
+		},
+		"Vec3": {
+			"guid": "192d4684a69109b1df6efde5c49e2582f96718fa",
+			"x": 1066,
+			"y": 114,
+			"collapsed": false,
+			"show_preview_gizmo": true,
+			"outputs": {
+				"output": {
+					"label": "",
+					"type": "Vec3",
+					"id": 0
+				}
+			},
+			"param_guid": "81f57850363c7bcc20b0413c5778d1c09777d9be"
+		},
+		"Portal In": {
+			"guid": "56552afeec599fa6687ac267bba9e3f91717a7a4",
+			"x": -40,
+			"y": 441,
+			"collapsed": true,
+			"props": {
+				"prop": {
+					"widget": "String",
+					"value": "src_pose"
+				},
+				"prop": {
+					"widget": "Color",
+					"x": 0.29925209283828735,
+					"y": 0.27248287200927734,
+					"z": 0.24221044778823853,
+					"w": 1
+				}
+			},
+			"inputs": {
+				"input": {
+					"label": "",
+					"type": "AnimPose",
+					"id": 0
+				}
+			}
+		},
+		"Portal In": {
+			"guid": "fbd0a457f7e05a1b927de6b2ad4d969bdb7038cd",
+			"x": 704,
+			"y": 567,
+			"collapsed": true,
+			"props": {
+				"prop": {
+					"widget": "String",
+					"value": "src_right_position"
+				},
+				"prop": {
+					"widget": "Color",
+					"x": 0.30456274747848511,
+					"y": 0.45765137672424316,
+					"z": 0.49648010730743408,
+					"w": 1
+				}
+			},
+			"inputs": {
+				"input": {
+					"label": "",
+					"type": "Vec3",
+					"id": 0
+				}
+			}
+		},
+		"Portal Out": {
+			"guid": "d2f65ddd070f67e7641c3d80657b5ee4a2ee90a3",
+			"x": 227,
+			"y": 645,
+			"collapsed": true,
+			"props": {
+				"prop": {
+					"widget": "Combobox",
+					"x": 0
+				}
+			},
+			"outputs": {
+				"output": {
+					"label": "",
+					"type": "AnimPose",
+					"id": 0
+				}
+			},
+			"portal_guid": "56552afeec599fa6687ac267bba9e3f91717a7a4"
+		},
+		"Portal Out": {
+			"guid": "1c8c93a2ab441b72f3ec3a4d6cb14bd542fe424b",
+			"x": 2685,
+			"y": 930,
+			"collapsed": true,
+			"props": {
+				"prop": {
+					"widget": "Combobox",
+					"x": 0
+				}
+			},
+			"outputs": {
+				"output": {
+					"label": "",
+					"type": "AnimPose",
+					"id": 0
+				}
+			},
+			"portal_guid": "56552afeec599fa6687ac267bba9e3f91717a7a4"
+		},
+		"Portal Out": {
+			"guid": "9d43be8ea00664d2b6f80137b192015a465bb4b4",
+			"x": 3328,
+			"y": 828,
+			"collapsed": true,
+			"props": {
+				"prop": {
+					"widget": "Combobox",
+					"x": 0
+				}
+			},
+			"outputs": {
+				"output": {
+					"label": "",
+					"type": "AnimPose",
+					"id": 0
+				}
+			},
+			"portal_guid": "56552afeec599fa6687ac267bba9e3f91717a7a4"
+		},
+		"Float": {
+			"guid": "35f9a20a947d2ca8586f3715cbeeb3777aede2d3",
+			"x": -200,
+			"y": 631,
+			"collapsed": true,
+			"props": {
+				"prop": {
+					"widget": "Float",
+					"x": 0.10000000149011612
+				}
+			},
+			"outputs": {
+				"output": {
+					"label": "",
+					"type": "Float",
+					"id": 0
+				}
+			}
+		},
+		"Portal In": {
+			"guid": "fa809b006c6c6c1e937dfb115398b1df697e8a16",
+			"x": -49,
+			"y": 622,
+			"collapsed": true,
+			"props": {
+				"prop": {
+					"widget": "String",
+					"value": "foot_height"
+				},
+				"prop": {
+					"widget": "Color",
+					"x": 0.5219610333442688,
+					"y": 0.43315589427947998,
+					"z": 0.2360997200012207,
+					"w": 1
+				}
+			},
+			"inputs": {
+				"input": {
+					"label": "",
+					"type": "Float",
+					"id": 0
+				}
+			}
+		},
+		"Portal In": {
+			"guid": "8ce58c252e408e87357e9b28b65976ddf8c42fab",
+			"x": 704,
+			"y": 356,
+			"collapsed": true,
+			"props": {
+				"prop": {
+					"widget": "String",
+					"value": "src_left_position"
+				},
+				"prop": {
+					"widget": "Color",
+					"x": 0.29843074083328247,
+					"y": 0.50725853443145752,
+					"z": 0.41968080401420593,
+					"w": 1
+				}
+			},
+			"inputs": {
+				"input": {
+					"label": "",
+					"type": "Vec3",
+					"id": 0
+				}
+			}
+		},
+		"Lerp": {
+			"guid": "156ac9f1f0f220ceadb838b695b57f8074ee8f11",
+			"x": 1379,
+			"y": 305,
+			"collapsed": false,
+			"inputs": {
+				"input": {
+					"label": "A",
+					"type": "Quat",
+					"id": 0
+				},
+				"input": {
+					"label": "B",
+					"type": "Quat",
+					"id": 1
+				},
+				"input": {
+					"label": "T",
+					"type": "Float",
+					"id": 2
+				}
+			},
+			"outputs": {
+				"output": {
+					"label": "",
+					"type": "Quat",
+					"id": 0
+				}
+			}
+		},
+		"Lerp": {
+			"guid": "685fd746c9ade1eadd0a736191696d64c239c0bf",
+			"x": 1377,
+			"y": 110,
+			"collapsed": false,
+			"inputs": {
+				"input": {
+					"label": "A",
+					"type": "Vec3",
+					"id": 0
+				},
+				"input": {
+					"label": "B",
+					"type": "Vec3",
+					"id": 1
+				},
+				"input": {
+					"label": "T",
+					"type": "Float",
+					"id": 2
+				}
+			},
+			"outputs": {
+				"output": {
+					"label": "",
+					"type": "Vec3",
+					"id": 0
+				}
+			}
+		},
+		"Get Joint Transform": {
+			"guid": "ba7f14ee8b23b77d7e552f175c7264f6a6689c14",
+			"x": 396,
+			"y": 366,
+			"collapsed": false,
+			"props": {
+				"prop": {
+					"widget": "JointCombobox",
+					"value": "foot_l"
+				},
+				"prop": {
+					"widget": "Combobox",
+					"x": 1
+				}
+			},
+			"inputs": {
+				"input": {
+					"label": "Pose",
+					"type": "AnimPose",
+					"id": 0
+				}
+			},
+			"outputs": {
+				"output": {
+					"label": "Position Object Space",
+					"type": "Vec3",
+					"id": 0
+				},
+				"output": {
+					"label": "Rotation Object Space",
+					"type": "Quat",
+					"id": 1
+				},
+				"output": {
+					"label": "Scale Object Space",
+					"type": "Vec3",
+					"id": 2
+				}
+			}
+		},
+		"Portal Out": {
+			"guid": "c27b4fd0caab213521e74421f09985c1aad66266",
+			"x": 222,
+			"y": 438,
+			"collapsed": true,
+			"props": {
+				"prop": {
+					"widget": "Combobox",
+					"x": 0
+				}
+			},
+			"outputs": {
+				"output": {
+					"label": "",
+					"type": "AnimPose",
+					"id": 0
+				}
+			},
+			"portal_guid": "56552afeec599fa6687ac267bba9e3f91717a7a4"
+		},
+		"Float": {
+			"guid": "4115a1825fa19c3e84aa2c3b72d97fbcca83c688",
+			"x": 1091,
+			"y": 185,
+			"collapsed": true,
+			"outputs": {
+				"output": {
+					"label": "",
+					"type": "Float",
+					"id": 0
+				}
+			},
+			"param_guid": "6188bd325d80744ca6bacd9d03f864363772771b"
+		},
+		"Portal In": {
+			"guid": "f79994ae437893debbfe6329545e6e1d69823847",
+			"x": 1536,
+			"y": 124,
+			"collapsed": true,
+			"props": {
+				"prop": {
+					"widget": "String",
+					"value": "left_position"
+				},
+				"prop": {
+					"widget": "Color",
+					"x": 0.41482055187225342,
+					"y": 0.36544352769851685,
+					"z": 0.17284007370471954,
+					"w": 1
+				}
+			},
+			"inputs": {
+				"input": {
+					"label": "",
+					"type": "Vec3",
+					"id": 0
+				}
+			}
+		},
+		"Portal Out": {
+			"guid": "a56b9da2c5a089c6ac9762db95b5c665ea6cbda8",
+			"x": 3912,
+			"y": 1343,
+			"collapsed": true,
+			"props": {
+				"prop": {
+					"widget": "Combobox",
+					"x": 4
+				}
+			},
+			"outputs": {
+				"output": {
+					"label": "",
+					"type": "Vec3",
+					"id": 0
+				}
+			},
+			"portal_guid": "f79994ae437893debbfe6329545e6e1d69823847"
+		},
+		"Lerp": {
+			"guid": "51f97572ce2ce36eacb6e4dd41919399d422045b",
+			"x": 1375,
+			"y": 670,
+			"collapsed": false,
+			"inputs": {
+				"input": {
+					"label": "A",
+					"type": "Vec3",
+					"id": 0
+				},
+				"input": {
+					"label": "B",
+					"type": "Vec3",
+					"id": 1
+				},
+				"input": {
+					"label": "T",
+					"type": "Float",
+					"id": 2
+				}
+			},
+			"outputs": {
+				"output": {
+					"label": "",
+					"type": "Vec3",
+					"id": 0
+				}
+			}
+		},
+		"Get Joint Transform": {
+			"guid": "d17ab97308b90366fbdf971ef54766e7bd87e989",
+			"x": 400,
+			"y": 571,
+			"collapsed": false,
+			"props": {
+				"prop": {
+					"widget": "JointCombobox",
+					"value": "foot_r"
+				},
+				"prop": {
+					"widget": "Combobox",
+					"x": 1
+				}
+			},
+			"inputs": {
+				"input": {
+					"label": "Pose",
+					"type": "AnimPose",
+					"id": 0
+				}
+			},
+			"outputs": {
+				"output": {
+					"label": "Position Object Space",
+					"type": "Vec3",
+					"id": 0
+				},
+				"output": {
+					"label": "Rotation Object Space",
+					"type": "Quat",
+					"id": 1
+				},
+				"output": {
+					"label": "Scale Object Space",
+					"type": "Vec3",
+					"id": 2
+				}
+			}
+		},
+		"Portal Out": {
+			"guid": "7e78556109134c1ec05701344832c5a829c95e87",
+			"x": 1153,
+			"y": 603,
+			"collapsed": false,
+			"props": {
+				"prop": {
+					"widget": "Combobox",
+					"x": 1
+				}
+			},
+			"outputs": {
+				"output": {
+					"label": "",
+					"type": "Vec3",
+					"id": 0
+				}
+			},
+			"portal_guid": "fbd0a457f7e05a1b927de6b2ad4d969bdb7038cd"
+		},
+		"Float": {
+			"guid": "9e7d1986e21688cdeffaeca1bc8f387f765affff",
+			"x": 1081,
+			"y": 741,
+			"collapsed": true,
+			"outputs": {
+				"output": {
+					"label": "",
+					"type": "Float",
+					"id": 0
+				}
+			},
+			"param_guid": "760c013427905f08ae4fb397997cbf35cd41fb85"
+		},
+		"Portal In": {
+			"guid": "93ff951cd9767cb719289fdf9e1bcd3b33bbc58d",
+			"x": 1532,
+			"y": 684,
+			"collapsed": true,
+			"props": {
+				"prop": {
+					"widget": "String",
+					"value": "right_position"
+				},
+				"prop": {
+					"widget": "Color",
+					"x": 0.21477457880973816,
+					"y": 0.32084113359451294,
+					"z": 0.18343406915664673,
+					"w": 1
+				}
+			},
+			"inputs": {
+				"input": {
+					"label": "",
+					"type": "Vec3",
+					"id": 0
+				}
+			}
+		},
+		"Portal Out": {
+			"guid": "f21e8740f555a54f2f8e4d736d447acc02a02781",
+			"x": 5018,
+			"y": 1766,
+			"collapsed": true,
+			"props": {
+				"prop": {
+					"widget": "Combobox",
+					"x": 5
+				}
+			},
+			"outputs": {
+				"output": {
+					"label": "",
+					"type": "Vec3",
+					"id": 0
+				}
+			},
+			"portal_guid": "93ff951cd9767cb719289fdf9e1bcd3b33bbc58d"
+		},
+		"Quat": {
+			"guid": "b7e1a5f97f0b7cdd868d2da84e83d702045daeb8",
+			"x": 1003,
+			"y": 400,
+			"collapsed": false,
+			"show_preview_gizmo": true,
+			"preview_gizmo_anchor": [
+				-0.45662185549736023,
+				0.34763228893280029,
+				0.1352962851524353
+			],
+			"outputs": {
+				"output": {
+					"label": "",
+					"type": "Quat",
+					"id": 0
+				}
+			},
+			"param_guid": "b6ecdcdcb4db13ee8b117b08ea962f3fae1450ea"
+		},
+		"Quat": {
+			"guid": "1aa6e7d793c447d2c15535141c43f111d8c622b7",
+			"x": 993,
+			"y": 905,
+			"collapsed": false,
+			"show_preview_gizmo": true,
+			"preview_gizmo_anchor": [
+				0.56371694803237915,
+				-0.14615732431411743,
+				0.1092282235622406
+			],
+			"outputs": {
+				"output": {
+					"label": "",
+					"type": "Quat",
+					"id": 0
+				}
+			},
+			"param_guid": "4e741d6e8d9fe25855393f7ab968ffd538fdabac"
+		},
+		"Portal In": {
+			"guid": "0d5ac1d3332ee16537e4f31a9fb1734a9432a0aa",
+			"x": 1538,
+			"y": 319,
+			"collapsed": true,
+			"props": {
+				"prop": {
+					"widget": "String",
+					"value": "left_rotation"
+				},
+				"prop": {
+					"widget": "Color",
+					"x": 0.54558432102203369,
+					"y": 0.47209745645523071,
+					"z": 0.38337105512619019,
+					"w": 1
+				}
+			},
+			"inputs": {
+				"input": {
+					"label": "",
+					"type": "Quat",
+					"id": 0
+				}
+			}
+		},
+		"Portal In": {
+			"guid": "7c1ae15bc39b158e20a7b7e8d19d8d462a9a863b",
+			"x": 1525,
+			"y": 878,
+			"collapsed": true,
+			"props": {
+				"prop": {
+					"widget": "String",
+					"value": "right_rotation"
+				},
+				"prop": {
+					"widget": "Color",
+					"x": 0.22376647591590881,
+					"y": 0.46197378635406494,
+					"z": 0.42269712686538696,
+					"w": 1
+				}
+			},
+			"inputs": {
+				"input": {
+					"label": "",
+					"type": "Quat",
+					"id": 0
+				}
+			}
+		},
+		"Set Joint Transform": {
+			"guid": "6cec3a9bff00b1daf930dcc20894eae4e4cc3b52",
+			"x": 4671,
+			"y": 1201,
+			"collapsed": false,
+			"props": {
+				"prop": {
+					"widget": "JointCombobox",
+					"value": "foot_l"
+				},
+				"prop": {
+					"widget": "Combobox",
+					"x": 1
+				}
+			},
+			"inputs": {
+				"input": {
+					"label": "Pose",
+					"type": "AnimPose",
+					"id": 0
+				},
+				"input": {
+					"label": "Position Object Space",
+					"type": "Vec3",
+					"id": 1
+				},
+				"input": {
+					"label": "Rotation Object Space",
+					"type": "Quat",
+					"id": 2
+				},
+				"input": {
+					"label": "Scale Object Space",
+					"type": "Vec3",
+					"id": 3
+				}
+			},
+			"outputs": {
+				"output": {
+					"label": "Pose",
+					"type": "AnimPose",
+					"id": 0
+				}
+			}
+		},
+		"Portal Out": {
+			"guid": "176c95690f5bfe526e37b38ebc44ab100572a289",
+			"x": 4479,
+			"y": 1325,
+			"collapsed": true,
+			"props": {
+				"prop": {
+					"widget": "Combobox",
+					"x": 6
+				}
+			},
+			"outputs": {
+				"output": {
+					"label": "",
+					"type": "Quat",
+					"id": 0
+				}
+			},
+			"portal_guid": "0d5ac1d3332ee16537e4f31a9fb1734a9432a0aa"
+		},
+		"Set Joint Transform": {
+			"guid": "54121eb76802c80a8ce6466e26dd716c094f157e",
+			"x": 5803,
+			"y": 1613,
+			"collapsed": false,
+			"props": {
+				"prop": {
+					"widget": "JointCombobox",
+					"value": "foot_r"
+				},
+				"prop": {
+					"widget": "Combobox",
+					"x": 1
+				}
+			},
+			"inputs": {
+				"input": {
+					"label": "Pose",
+					"type": "AnimPose",
+					"id": 0
+				},
+				"input": {
+					"label": "Position Object Space",
+					"type": "Vec3",
+					"id": 1
+				},
+				"input": {
+					"label": "Rotation Object Space",
+					"type": "Quat",
+					"id": 2
+				},
+				"input": {
+					"label": "Scale Object Space",
+					"type": "Vec3",
+					"id": 3
+				}
+			},
+			"outputs": {
+				"output": {
+					"label": "Pose",
+					"type": "AnimPose",
+					"id": 0
+				}
+			}
+		},
+		"Portal Out": {
+			"guid": "929e75dba8fa85d92e5d4b0254329674e3b73192",
+			"x": 5608,
+			"y": 1734,
+			"collapsed": true,
+			"props": {
+				"prop": {
+					"widget": "Combobox",
+					"x": 7
+				}
+			},
+			"outputs": {
+				"output": {
+					"label": "",
+					"type": "Quat",
+					"id": 0
+				}
+			},
+			"portal_guid": "7c1ae15bc39b158e20a7b7e8d19d8d462a9a863b"
+		},
+		"Subtract": {
+			"guid": "9ccee2cc6221dac663c26e112342499648e43c14",
+			"x": 2683,
+			"y": 447,
+			"collapsed": false,
+			"inputs": {
+				"input": {
+					"label": "A",
+					"type": "Float",
+					"id": 0
+				},
+				"input": {
+					"label": "B",
+					"type": "Float",
+					"id": 1
+				}
+			},
+			"outputs": {
+				"output": {
+					"label": "",
+					"type": "Float",
+					"id": 0
+				}
+			}
+		}
+	},
+	"inputs": {
+		"input": {
+			"node_guid": "00000000000000000000000000000000b00002b2",
+			"anchor_id": 0,
+			"show_label": true,
+			"show_inline_widget": false
+		},
+		"input": {
+			"node_guid": "a82be018a6f0754531e4d57315220543437b4a69",
+			"anchor_id": 0,
+			"show_label": false,
+			"show_inline_widget": true,
+			"anim_guid": "1e0eecc05caa83e3a5eabbfbe7dd8cbe0b51c080",
+			"string_value": "idle_active"
+		},
+		"input": {
+			"node_guid": "a82be018a6f0754531e4d57315220543437b4a69",
+			"anchor_id": 1,
+			"show_label": true,
+			"show_inline_widget": true,
+			"bool_value": 1
+		},
+		"input": {
+			"node_guid": "a82be018a6f0754531e4d57315220543437b4a69",
+			"anchor_id": 2,
+			"show_label": true,
+			"show_inline_widget": true,
+			"float_value": 1
+		},
+		"input": {
+			"node_guid": "7db3ed6be844adac46748c525171eb2f4d443ce2",
+			"anchor_id": 0,
+			"show_label": true,
+			"show_inline_widget": false,
+			"x": 0,
+			"y": 0,
+			"z": 0,
+			"w": 1
+		},
+		"input": {
+			"node_guid": "7db3ed6be844adac46748c525171eb2f4d443ce2",
+			"anchor_id": 1,
+			"show_label": true,
+			"show_inline_widget": false,
+			"x": 0,
+			"y": 0,
+			"z": 0,
+			"w": 1
+		},
+		"input": {
+			"node_guid": "7db3ed6be844adac46748c525171eb2f4d443ce2",
+			"anchor_id": 2,
+			"show_label": true,
+			"show_inline_widget": false,
+			"float_value": 0
+		},
+		"input": {
+			"node_guid": "a56556f8c24f00a7af4159647ef785650f38df26",
+			"anchor_id": 0,
+			"show_label": true,
+			"show_inline_widget": false
+		},
+		"input": {
+			"node_guid": "a56556f8c24f00a7af4159647ef785650f38df26",
+			"anchor_id": 1,
+			"show_label": true,
+			"show_inline_widget": false,
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"input": {
+			"node_guid": "a56556f8c24f00a7af4159647ef785650f38df26",
+			"anchor_id": 2,
+			"show_label": true,
+			"show_inline_widget": false,
+			"x": 0,
+			"y": 1,
+			"z": 1
+		},
+		"input": {
+			"node_guid": "a56556f8c24f00a7af4159647ef785650f38df26",
+			"anchor_id": 3,
+			"show_label": true,
+			"show_inline_widget": true,
+			"float_value": 1
+		},
+		"input": {
+			"node_guid": "a56556f8c24f00a7af4159647ef785650f38df26",
+			"anchor_id": 4,
+			"show_label": true,
+			"show_inline_widget": true,
+			"bool_value": 1
+		},
+		"input": {
+			"node_guid": "30e24ee47107a7f6b2d5609094f448747dd8c2b2",
+			"anchor_id": 0,
+			"show_label": true,
+			"show_inline_widget": false
+		},
+		"input": {
+			"node_guid": "30e24ee47107a7f6b2d5609094f448747dd8c2b2",
+			"anchor_id": 1,
+			"show_label": true,
+			"show_inline_widget": false,
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"input": {
+			"node_guid": "30e24ee47107a7f6b2d5609094f448747dd8c2b2",
+			"anchor_id": 2,
+			"show_label": true,
+			"show_inline_widget": false,
+			"x": 0.30000001192092896,
+			"y": 1,
+			"z": 1
+		},
+		"input": {
+			"node_guid": "30e24ee47107a7f6b2d5609094f448747dd8c2b2",
+			"anchor_id": 3,
+			"show_label": true,
+			"show_inline_widget": true,
+			"float_value": 1
+		},
+		"input": {
+			"node_guid": "30e24ee47107a7f6b2d5609094f448747dd8c2b2",
+			"anchor_id": 4,
+			"show_label": true,
+			"show_inline_widget": true,
+			"bool_value": 1
+		},
+		"input": {
+			"node_guid": "954c1d166b0c8efbc530055a0270dbd6323ccdcc",
+			"anchor_id": 0,
+			"show_label": true,
+			"show_inline_widget": false,
+			"float_value": 0
+		},
+		"input": {
+			"node_guid": "954c1d166b0c8efbc530055a0270dbd6323ccdcc",
+			"anchor_id": 1,
+			"show_label": true,
+			"show_inline_widget": false,
+			"float_value": 0
+		},
+		"input": {
+			"node_guid": "e4dc0d4beb33c3346fed2f371c27e222fff01a35",
+			"anchor_id": 0,
+			"show_label": true,
+			"show_inline_widget": false,
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"input": {
+			"node_guid": "1d8816fa3d9598cf5d55147e5dc5c369753e6610",
+			"anchor_id": 0,
+			"show_label": true,
+			"show_inline_widget": false,
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"input": {
+			"node_guid": "2b55f763509da17f0e65b5cfece4d8eedcdfba0d",
+			"anchor_id": 0,
+			"show_label": true,
+			"show_inline_widget": false
+		},
+		"input": {
+			"node_guid": "c5ac0ab0c9190ad4f187be140f9cd28bb1994896",
+			"anchor_id": 0,
+			"show_label": true,
+			"show_inline_widget": false
+		},
+		"input": {
+			"node_guid": "c5ac0ab0c9190ad4f187be140f9cd28bb1994896",
+			"anchor_id": 1,
+			"show_label": true,
+			"show_inline_widget": false,
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"input": {
+			"node_guid": "c5ac0ab0c9190ad4f187be140f9cd28bb1994896",
+			"anchor_id": 2,
+			"show_label": true,
+			"show_inline_widget": false,
+			"x": 0,
+			"y": 0,
+			"z": 0,
+			"w": 1
+		},
+		"input": {
+			"node_guid": "c5ac0ab0c9190ad4f187be140f9cd28bb1994896",
+			"anchor_id": 3,
+			"show_label": true,
+			"show_inline_widget": false,
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"input": {
+			"node_guid": "0802701028f9c7ed3c89a174a4a38d264a3c06f6",
+			"anchor_id": 0,
+			"show_label": true,
+			"show_inline_widget": false,
+			"float_value": 0
+		},
+		"input": {
+			"node_guid": "0802701028f9c7ed3c89a174a4a38d264a3c06f6",
+			"anchor_id": 1,
+			"show_label": true,
+			"show_inline_widget": false,
+			"float_value": 0
+		},
+		"input": {
+			"node_guid": "0802701028f9c7ed3c89a174a4a38d264a3c06f6",
+			"anchor_id": 2,
+			"show_label": true,
+			"show_inline_widget": false,
+			"float_value": 0
+		},
+		"input": {
+			"node_guid": "4b3576b36ecdac8d8ebd241f9dbf8ca29a4751dd",
+			"anchor_id": 0,
+			"show_label": true,
+			"show_inline_widget": false,
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"input": {
+			"node_guid": "4b3576b36ecdac8d8ebd241f9dbf8ca29a4751dd",
+			"anchor_id": 1,
+			"show_label": true,
+			"show_inline_widget": false,
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"input": {
+			"node_guid": "13c71b9ef7fdd5b453a82a62bdb6dea24dd63914",
+			"anchor_id": 0,
+			"show_label": true,
+			"show_inline_widget": false,
+			"float_value": 0
+		},
+		"input": {
+			"node_guid": "13c71b9ef7fdd5b453a82a62bdb6dea24dd63914",
+			"anchor_id": 1,
+			"show_label": true,
+			"show_inline_widget": false,
+			"float_value": 0
+		},
+		"input": {
+			"node_guid": "1dde5600992d3da50824aa645d836c1bee9f0766",
+			"anchor_id": 0,
+			"show_label": true,
+			"show_inline_widget": false,
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"input": {
+			"node_guid": "fe34b332fefa9810f3148636fcf4403ebd44b388",
+			"anchor_id": 0,
+			"show_label": true,
+			"show_inline_widget": false,
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"input": {
+			"node_guid": "b94edc53ab929140cd24b7bf9de11d4d3d94e07d",
+			"anchor_id": 0,
+			"show_label": true,
+			"show_inline_widget": false,
+			"float_value": 0
+		},
+		"input": {
+			"node_guid": "b94edc53ab929140cd24b7bf9de11d4d3d94e07d",
+			"anchor_id": 1,
+			"show_label": true,
+			"show_inline_widget": false,
+			"float_value": 0
+		},
+		"input": {
+			"node_guid": "56552afeec599fa6687ac267bba9e3f91717a7a4",
+			"anchor_id": 0,
+			"show_label": true,
+			"show_inline_widget": false
+		},
+		"input": {
+			"node_guid": "fbd0a457f7e05a1b927de6b2ad4d969bdb7038cd",
+			"anchor_id": 0,
+			"show_label": true,
+			"show_inline_widget": false,
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"input": {
+			"node_guid": "fa809b006c6c6c1e937dfb115398b1df697e8a16",
+			"anchor_id": 0,
+			"show_label": true,
+			"show_inline_widget": false,
+			"float_value": 0
+		},
+		"input": {
+			"node_guid": "8ce58c252e408e87357e9b28b65976ddf8c42fab",
+			"anchor_id": 0,
+			"show_label": true,
+			"show_inline_widget": false,
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"input": {
+			"node_guid": "156ac9f1f0f220ceadb838b695b57f8074ee8f11",
+			"anchor_id": 0,
+			"show_label": true,
+			"show_inline_widget": false,
+			"x": 0,
+			"y": 0,
+			"z": 0,
+			"w": 1
+		},
+		"input": {
+			"node_guid": "156ac9f1f0f220ceadb838b695b57f8074ee8f11",
+			"anchor_id": 1,
+			"show_label": true,
+			"show_inline_widget": false,
+			"x": 0,
+			"y": 0,
+			"z": 0,
+			"w": 1
+		},
+		"input": {
+			"node_guid": "156ac9f1f0f220ceadb838b695b57f8074ee8f11",
+			"anchor_id": 2,
+			"show_label": true,
+			"show_inline_widget": false,
+			"float_value": 0
+		},
+		"input": {
+			"node_guid": "685fd746c9ade1eadd0a736191696d64c239c0bf",
+			"anchor_id": 0,
+			"show_label": true,
+			"show_inline_widget": false,
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"input": {
+			"node_guid": "685fd746c9ade1eadd0a736191696d64c239c0bf",
+			"anchor_id": 1,
+			"show_label": true,
+			"show_inline_widget": false,
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"input": {
+			"node_guid": "685fd746c9ade1eadd0a736191696d64c239c0bf",
+			"anchor_id": 2,
+			"show_label": true,
+			"show_inline_widget": false,
+			"float_value": 0
+		},
+		"input": {
+			"node_guid": "ba7f14ee8b23b77d7e552f175c7264f6a6689c14",
+			"anchor_id": 0,
+			"show_label": true,
+			"show_inline_widget": false
+		},
+		"input": {
+			"node_guid": "f79994ae437893debbfe6329545e6e1d69823847",
+			"anchor_id": 0,
+			"show_label": true,
+			"show_inline_widget": false,
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"input": {
+			"node_guid": "51f97572ce2ce36eacb6e4dd41919399d422045b",
+			"anchor_id": 0,
+			"show_label": true,
+			"show_inline_widget": false,
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"input": {
+			"node_guid": "51f97572ce2ce36eacb6e4dd41919399d422045b",
+			"anchor_id": 1,
+			"show_label": true,
+			"show_inline_widget": false,
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"input": {
+			"node_guid": "51f97572ce2ce36eacb6e4dd41919399d422045b",
+			"anchor_id": 2,
+			"show_label": true,
+			"show_inline_widget": false,
+			"float_value": 0
+		},
+		"input": {
+			"node_guid": "d17ab97308b90366fbdf971ef54766e7bd87e989",
+			"anchor_id": 0,
+			"show_label": true,
+			"show_inline_widget": false
+		},
+		"input": {
+			"node_guid": "93ff951cd9767cb719289fdf9e1bcd3b33bbc58d",
+			"anchor_id": 0,
+			"show_label": true,
+			"show_inline_widget": false,
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"input": {
+			"node_guid": "0d5ac1d3332ee16537e4f31a9fb1734a9432a0aa",
+			"anchor_id": 0,
+			"show_label": true,
+			"show_inline_widget": false,
+			"x": 0,
+			"y": 0,
+			"z": 0,
+			"w": 1
+		},
+		"input": {
+			"node_guid": "7c1ae15bc39b158e20a7b7e8d19d8d462a9a863b",
+			"anchor_id": 0,
+			"show_label": true,
+			"show_inline_widget": false,
+			"x": 0,
+			"y": 0,
+			"z": 0,
+			"w": 1
+		},
+		"input": {
+			"node_guid": "6cec3a9bff00b1daf930dcc20894eae4e4cc3b52",
+			"anchor_id": 0,
+			"show_label": true,
+			"show_inline_widget": false
+		},
+		"input": {
+			"node_guid": "6cec3a9bff00b1daf930dcc20894eae4e4cc3b52",
+			"anchor_id": 1,
+			"show_label": true,
+			"show_inline_widget": false,
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"input": {
+			"node_guid": "6cec3a9bff00b1daf930dcc20894eae4e4cc3b52",
+			"anchor_id": 2,
+			"show_label": true,
+			"show_inline_widget": false,
+			"x": 0,
+			"y": 0,
+			"z": 0,
+			"w": 1
+		},
+		"input": {
+			"node_guid": "6cec3a9bff00b1daf930dcc20894eae4e4cc3b52",
+			"anchor_id": 3,
+			"show_label": true,
+			"show_inline_widget": false,
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"input": {
+			"node_guid": "54121eb76802c80a8ce6466e26dd716c094f157e",
+			"anchor_id": 0,
+			"show_label": true,
+			"show_inline_widget": false
+		},
+		"input": {
+			"node_guid": "54121eb76802c80a8ce6466e26dd716c094f157e",
+			"anchor_id": 1,
+			"show_label": true,
+			"show_inline_widget": false,
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"input": {
+			"node_guid": "54121eb76802c80a8ce6466e26dd716c094f157e",
+			"anchor_id": 2,
+			"show_label": true,
+			"show_inline_widget": false,
+			"x": 0,
+			"y": 0,
+			"z": 0,
+			"w": 1
+		},
+		"input": {
+			"node_guid": "54121eb76802c80a8ce6466e26dd716c094f157e",
+			"anchor_id": 3,
+			"show_label": true,
+			"show_inline_widget": false,
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"input": {
+			"node_guid": "9ccee2cc6221dac663c26e112342499648e43c14",
+			"anchor_id": 0,
+			"show_label": true,
+			"show_inline_widget": false,
+			"float_value": 0
+		},
+		"input": {
+			"node_guid": "9ccee2cc6221dac663c26e112342499648e43c14",
+			"anchor_id": 1,
+			"show_label": true,
+			"show_inline_widget": false,
+			"float_value": 0.0099999997764825821
+		}
+	},
+	"anchors": {
+		"anchor": {
+			"input_index": 0,
+			"input_id": 0,
+			"input_label": "Pose",
+			"input_node": "00000000000000000000000000000000b00002b2",
+			"output_index": 0,
+			"output_id": 0,
+			"output_label": "Pose",
+			"output_node": "54121eb76802c80a8ce6466e26dd716c094f157e"
+		},
+		"anchor": {
+			"input_index": 0,
+			"input_id": 0,
+			"input_label": "A",
+			"input_node": "7db3ed6be844adac46748c525171eb2f4d443ce2",
+			"output_index": 1,
+			"output_id": 1,
+			"output_label": "Rotation Object Space",
+			"output_node": "d17ab97308b90366fbdf971ef54766e7bd87e989"
+		},
+		"anchor": {
+			"input_index": 1,
+			"input_id": 1,
+			"input_label": "B",
+			"input_node": "7db3ed6be844adac46748c525171eb2f4d443ce2",
+			"output_index": 0,
+			"output_id": 0,
+			"output_label": "",
+			"output_node": "1aa6e7d793c447d2c15535141c43f111d8c622b7"
+		},
+		"anchor": {
+			"input_index": 2,
+			"input_id": 2,
+			"input_label": "T",
+			"input_node": "7db3ed6be844adac46748c525171eb2f4d443ce2",
+			"output_index": 0,
+			"output_id": 0,
+			"output_label": "",
+			"output_node": "21eec7cf0f31041140372726f788987dba61bd36"
+		},
+		"anchor": {
+			"input_index": 0,
+			"input_id": 0,
+			"input_label": "Pose",
+			"input_node": "a56556f8c24f00a7af4159647ef785650f38df26",
+			"output_index": 0,
+			"output_id": 0,
+			"output_label": "Pose",
+			"output_node": "c5ac0ab0c9190ad4f187be140f9cd28bb1994896"
+		},
+		"anchor": {
+			"input_index": 1,
+			"input_id": 1,
+			"input_label": "Target Object Space",
+			"input_node": "a56556f8c24f00a7af4159647ef785650f38df26",
+			"output_index": 0,
+			"output_id": 0,
+			"output_label": "",
+			"output_node": "a56b9da2c5a089c6ac9762db95b5c665ea6cbda8"
+		},
+		"anchor": {
+			"input_index": 0,
+			"input_id": 0,
+			"input_label": "Pose",
+			"input_node": "30e24ee47107a7f6b2d5609094f448747dd8c2b2",
+			"output_index": 0,
+			"output_id": 0,
+			"output_label": "Pose",
+			"output_node": "6cec3a9bff00b1daf930dcc20894eae4e4cc3b52"
+		},
+		"anchor": {
+			"input_index": 1,
+			"input_id": 1,
+			"input_label": "Target Object Space",
+			"input_node": "30e24ee47107a7f6b2d5609094f448747dd8c2b2",
+			"output_index": 0,
+			"output_id": 0,
+			"output_label": "",
+			"output_node": "f21e8740f555a54f2f8e4d736d447acc02a02781"
+		},
+		"anchor": {
+			"input_index": 0,
+			"input_id": 0,
+			"input_label": "A",
+			"input_node": "954c1d166b0c8efbc530055a0270dbd6323ccdcc",
+			"output_index": 0,
+			"output_id": 0,
+			"output_label": "",
+			"output_node": "e4dc0d4beb33c3346fed2f371c27e222fff01a35"
+		},
+		"anchor": {
+			"input_index": 1,
+			"input_id": 1,
+			"input_label": "B",
+			"input_node": "954c1d166b0c8efbc530055a0270dbd6323ccdcc",
+			"output_index": 0,
+			"output_id": 0,
+			"output_label": "",
+			"output_node": "1d8816fa3d9598cf5d55147e5dc5c369753e6610"
+		},
+		"anchor": {
+			"input_index": 0,
+			"input_id": 0,
+			"input_label": "",
+			"input_node": "e4dc0d4beb33c3346fed2f371c27e222fff01a35",
+			"output_index": 0,
+			"output_id": 0,
+			"output_label": "",
+			"output_node": "2bbe78487e53dc54583993f982dbb6110004821e"
+		},
+		"anchor": {
+			"input_index": 0,
+			"input_id": 0,
+			"input_label": "",
+			"input_node": "1d8816fa3d9598cf5d55147e5dc5c369753e6610",
+			"output_index": 0,
+			"output_id": 0,
+			"output_label": "",
+			"output_node": "2d3873fbb01705d96b8c340689afabf7d50354d1"
+		},
+		"anchor": {
+			"input_index": 0,
+			"input_id": 0,
+			"input_label": "Pose",
+			"input_node": "2b55f763509da17f0e65b5cfece4d8eedcdfba0d",
+			"output_index": 0,
+			"output_id": 0,
+			"output_label": "",
+			"output_node": "1c8c93a2ab441b72f3ec3a4d6cb14bd542fe424b"
+		},
+		"anchor": {
+			"input_index": 0,
+			"input_id": 0,
+			"input_label": "Pose",
+			"input_node": "c5ac0ab0c9190ad4f187be140f9cd28bb1994896",
+			"output_index": 0,
+			"output_id": 0,
+			"output_label": "",
+			"output_node": "9d43be8ea00664d2b6f80137b192015a465bb4b4"
+		},
+		"anchor": {
+			"input_index": 1,
+			"input_id": 1,
+			"input_label": "Position Local Space",
+			"input_node": "c5ac0ab0c9190ad4f187be140f9cd28bb1994896",
+			"output_index": 0,
+			"output_id": 0,
+			"output_label": "",
+			"output_node": "4b3576b36ecdac8d8ebd241f9dbf8ca29a4751dd"
+		},
+		"anchor": {
+			"input_index": 2,
+			"input_id": 2,
+			"input_label": "Z",
+			"input_node": "0802701028f9c7ed3c89a174a4a38d264a3c06f6",
+			"output_index": 0,
+			"output_id": 0,
+			"output_label": "",
+			"output_node": "9ccee2cc6221dac663c26e112342499648e43c14"
+		},
+		"anchor": {
+			"input_index": 0,
+			"input_id": 0,
+			"input_label": "A",
+			"input_node": "4b3576b36ecdac8d8ebd241f9dbf8ca29a4751dd",
+			"output_index": 0,
+			"output_id": 0,
+			"output_label": "",
+			"output_node": "0802701028f9c7ed3c89a174a4a38d264a3c06f6"
+		},
+		"anchor": {
+			"input_index": 1,
+			"input_id": 1,
+			"input_label": "B",
+			"input_node": "4b3576b36ecdac8d8ebd241f9dbf8ca29a4751dd",
+			"output_index": 0,
+			"output_id": 0,
+			"output_label": "Position Local Space",
+			"output_node": "2b55f763509da17f0e65b5cfece4d8eedcdfba0d"
+		},
+		"anchor": {
+			"input_index": 0,
+			"input_id": 0,
+			"input_label": "A",
+			"input_node": "13c71b9ef7fdd5b453a82a62bdb6dea24dd63914",
+			"output_index": 0,
+			"output_id": 0,
+			"output_label": "",
+			"output_node": "1dde5600992d3da50824aa645d836c1bee9f0766"
+		},
+		"anchor": {
+			"input_index": 1,
+			"input_id": 1,
+			"input_label": "B",
+			"input_node": "13c71b9ef7fdd5b453a82a62bdb6dea24dd63914",
+			"output_index": 0,
+			"output_id": 0,
+			"output_label": "",
+			"output_node": "fe34b332fefa9810f3148636fcf4403ebd44b388"
+		},
+		"anchor": {
+			"input_index": 0,
+			"input_id": 0,
+			"input_label": "",
+			"input_node": "1dde5600992d3da50824aa645d836c1bee9f0766",
+			"output_index": 0,
+			"output_id": 0,
+			"output_label": "",
+			"output_node": "e4c3b7bef283f519658089f9473d25e36b19cc97"
+		},
+		"anchor": {
+			"input_index": 0,
+			"input_id": 0,
+			"input_label": "",
+			"input_node": "fe34b332fefa9810f3148636fcf4403ebd44b388",
+			"output_index": 0,
+			"output_id": 0,
+			"output_label": "",
+			"output_node": "7c59a05d08468971f0f4716e0eaf5363a9ce87fc"
+		},
+		"anchor": {
+			"input_index": 0,
+			"input_id": 0,
+			"input_label": "A",
+			"input_node": "b94edc53ab929140cd24b7bf9de11d4d3d94e07d",
+			"output_index": 0,
+			"output_id": 0,
+			"output_label": "",
+			"output_node": "954c1d166b0c8efbc530055a0270dbd6323ccdcc"
+		},
+		"anchor": {
+			"input_index": 1,
+			"input_id": 1,
+			"input_label": "B",
+			"input_node": "b94edc53ab929140cd24b7bf9de11d4d3d94e07d",
+			"output_index": 0,
+			"output_id": 0,
+			"output_label": "",
+			"output_node": "13c71b9ef7fdd5b453a82a62bdb6dea24dd63914"
+		},
+		"anchor": {
+			"input_index": 0,
+			"input_id": 0,
+			"input_label": "",
+			"input_node": "56552afeec599fa6687ac267bba9e3f91717a7a4",
+			"output_index": 0,
+			"output_id": 0,
+			"output_label": "Pose",
+			"output_node": "a82be018a6f0754531e4d57315220543437b4a69"
+		},
+		"anchor": {
+			"input_index": 0,
+			"input_id": 0,
+			"input_label": "",
+			"input_node": "fbd0a457f7e05a1b927de6b2ad4d969bdb7038cd",
+			"output_index": 0,
+			"output_id": 0,
+			"output_label": "Position Object Space",
+			"output_node": "d17ab97308b90366fbdf971ef54766e7bd87e989"
+		},
+		"anchor": {
+			"input_index": 0,
+			"input_id": 0,
+			"input_label": "",
+			"input_node": "fa809b006c6c6c1e937dfb115398b1df697e8a16",
+			"output_index": 0,
+			"output_id": 0,
+			"output_label": "",
+			"output_node": "35f9a20a947d2ca8586f3715cbeeb3777aede2d3"
+		},
+		"anchor": {
+			"input_index": 0,
+			"input_id": 0,
+			"input_label": "",
+			"input_node": "8ce58c252e408e87357e9b28b65976ddf8c42fab",
+			"output_index": 0,
+			"output_id": 0,
+			"output_label": "Position Object Space",
+			"output_node": "ba7f14ee8b23b77d7e552f175c7264f6a6689c14"
+		},
+		"anchor": {
+			"input_index": 0,
+			"input_id": 0,
+			"input_label": "A",
+			"input_node": "156ac9f1f0f220ceadb838b695b57f8074ee8f11",
+			"output_index": 1,
+			"output_id": 1,
+			"output_label": "Rotation Object Space",
+			"output_node": "ba7f14ee8b23b77d7e552f175c7264f6a6689c14"
+		},
+		"anchor": {
+			"input_index": 1,
+			"input_id": 1,
+			"input_label": "B",
+			"input_node": "156ac9f1f0f220ceadb838b695b57f8074ee8f11",
+			"output_index": 0,
+			"output_id": 0,
+			"output_label": "",
+			"output_node": "b7e1a5f97f0b7cdd868d2da84e83d702045daeb8"
+		},
+		"anchor": {
+			"input_index": 2,
+			"input_id": 2,
+			"input_label": "T",
+			"input_node": "156ac9f1f0f220ceadb838b695b57f8074ee8f11",
+			"output_index": 0,
+			"output_id": 0,
+			"output_label": "",
+			"output_node": "cc2d75873549ed1e1472f88484ac446cfed49467"
+		},
+		"anchor": {
+			"input_index": 0,
+			"input_id": 0,
+			"input_label": "A",
+			"input_node": "685fd746c9ade1eadd0a736191696d64c239c0bf",
+			"output_index": 0,
+			"output_id": 0,
+			"output_label": "",
+			"output_node": "5be99f5749243cb329d086d00a6f35cfb116810e"
+		},
+		"anchor": {
+			"input_index": 1,
+			"input_id": 1,
+			"input_label": "B",
+			"input_node": "685fd746c9ade1eadd0a736191696d64c239c0bf",
+			"output_index": 0,
+			"output_id": 0,
+			"output_label": "",
+			"output_node": "192d4684a69109b1df6efde5c49e2582f96718fa"
+		},
+		"anchor": {
+			"input_index": 2,
+			"input_id": 2,
+			"input_label": "T",
+			"input_node": "685fd746c9ade1eadd0a736191696d64c239c0bf",
+			"output_index": 0,
+			"output_id": 0,
+			"output_label": "",
+			"output_node": "4115a1825fa19c3e84aa2c3b72d97fbcca83c688"
+		},
+		"anchor": {
+			"input_index": 0,
+			"input_id": 0,
+			"input_label": "Pose",
+			"input_node": "ba7f14ee8b23b77d7e552f175c7264f6a6689c14",
+			"output_index": 0,
+			"output_id": 0,
+			"output_label": "",
+			"output_node": "c27b4fd0caab213521e74421f09985c1aad66266"
+		},
+		"anchor": {
+			"input_index": 0,
+			"input_id": 0,
+			"input_label": "",
+			"input_node": "f79994ae437893debbfe6329545e6e1d69823847",
+			"output_index": 0,
+			"output_id": 0,
+			"output_label": "",
+			"output_node": "685fd746c9ade1eadd0a736191696d64c239c0bf"
+		},
+		"anchor": {
+			"input_index": 0,
+			"input_id": 0,
+			"input_label": "A",
+			"input_node": "51f97572ce2ce36eacb6e4dd41919399d422045b",
+			"output_index": 0,
+			"output_id": 0,
+			"output_label": "",
+			"output_node": "7e78556109134c1ec05701344832c5a829c95e87"
+		},
+		"anchor": {
+			"input_index": 1,
+			"input_id": 1,
+			"input_label": "B",
+			"input_node": "51f97572ce2ce36eacb6e4dd41919399d422045b",
+			"output_index": 0,
+			"output_id": 0,
+			"output_label": "",
+			"output_node": "43f3a86806cd2a710c130e99b0eea5b8d272553e"
+		},
+		"anchor": {
+			"input_index": 2,
+			"input_id": 2,
+			"input_label": "T",
+			"input_node": "51f97572ce2ce36eacb6e4dd41919399d422045b",
+			"output_index": 0,
+			"output_id": 0,
+			"output_label": "",
+			"output_node": "9e7d1986e21688cdeffaeca1bc8f387f765affff"
+		},
+		"anchor": {
+			"input_index": 0,
+			"input_id": 0,
+			"input_label": "Pose",
+			"input_node": "d17ab97308b90366fbdf971ef54766e7bd87e989",
+			"output_index": 0,
+			"output_id": 0,
+			"output_label": "",
+			"output_node": "d2f65ddd070f67e7641c3d80657b5ee4a2ee90a3"
+		},
+		"anchor": {
+			"input_index": 0,
+			"input_id": 0,
+			"input_label": "",
+			"input_node": "93ff951cd9767cb719289fdf9e1bcd3b33bbc58d",
+			"output_index": 0,
+			"output_id": 0,
+			"output_label": "",
+			"output_node": "51f97572ce2ce36eacb6e4dd41919399d422045b"
+		},
+		"anchor": {
+			"input_index": 0,
+			"input_id": 0,
+			"input_label": "",
+			"input_node": "0d5ac1d3332ee16537e4f31a9fb1734a9432a0aa",
+			"output_index": 0,
+			"output_id": 0,
+			"output_label": "",
+			"output_node": "156ac9f1f0f220ceadb838b695b57f8074ee8f11"
+		},
+		"anchor": {
+			"input_index": 0,
+			"input_id": 0,
+			"input_label": "",
+			"input_node": "7c1ae15bc39b158e20a7b7e8d19d8d462a9a863b",
+			"output_index": 0,
+			"output_id": 0,
+			"output_label": "",
+			"output_node": "7db3ed6be844adac46748c525171eb2f4d443ce2"
+		},
+		"anchor": {
+			"input_index": 0,
+			"input_id": 0,
+			"input_label": "Pose",
+			"input_node": "6cec3a9bff00b1daf930dcc20894eae4e4cc3b52",
+			"output_index": 0,
+			"output_id": 0,
+			"output_label": "Pose",
+			"output_node": "a56556f8c24f00a7af4159647ef785650f38df26"
+		},
+		"anchor": {
+			"input_index": 2,
+			"input_id": 2,
+			"input_label": "Rotation Object Space",
+			"input_node": "6cec3a9bff00b1daf930dcc20894eae4e4cc3b52",
+			"output_index": 0,
+			"output_id": 0,
+			"output_label": "",
+			"output_node": "176c95690f5bfe526e37b38ebc44ab100572a289"
+		},
+		"anchor": {
+			"input_index": 0,
+			"input_id": 0,
+			"input_label": "Pose",
+			"input_node": "54121eb76802c80a8ce6466e26dd716c094f157e",
+			"output_index": 0,
+			"output_id": 0,
+			"output_label": "Pose",
+			"output_node": "30e24ee47107a7f6b2d5609094f448747dd8c2b2"
+		},
+		"anchor": {
+			"input_index": 2,
+			"input_id": 2,
+			"input_label": "Rotation Object Space",
+			"input_node": "54121eb76802c80a8ce6466e26dd716c094f157e",
+			"output_index": 0,
+			"output_id": 0,
+			"output_label": "",
+			"output_node": "929e75dba8fa85d92e5d4b0254329674e3b73192"
+		},
+		"anchor": {
+			"input_index": 0,
+			"input_id": 0,
+			"input_label": "A",
+			"input_node": "9ccee2cc6221dac663c26e112342499648e43c14",
+			"output_index": 0,
+			"output_id": 0,
+			"output_label": "",
+			"output_node": "b94edc53ab929140cd24b7bf9de11d4d3d94e07d"
+		}
+	},
+	"graph_type": "final",
+	"root_motion_enabled": 0,
+	"parameters": {
+		"param": {
+			"name": "left_foot_position",
+			"type": "Vec3",
+			"guid": "81f57850363c7bcc20b0413c5778d1c09777d9be",
+			"x": -0.092000000178813934,
+			"y": 0.24799999594688416,
+			"z": 0.097000002861022949
+		},
+		"param": {
+			"name": "left_foot_rotation",
+			"type": "Quat",
+			"guid": "b6ecdcdcb4db13ee8b117b08ea962f3fae1450ea",
+			"x": 0.020999999716877937,
+			"y": 0.97299998998641968,
+			"z": -0.22800000011920929,
+			"w": 0.014999999664723873
+		},
+		"param": {
+			"name": "left_effector_weight",
+			"type": "Float",
+			"guid": "6188bd325d80744ca6bacd9d03f864363772771b",
+			"min": 0,
+			"max": 1,
+			"float_value": 1
+		},
+		"param": {
+			"name": "right_foot_position",
+			"type": "Vec3",
+			"guid": "ba6af2dcc59bf58f91453108f201b99811d8b6ea",
+			"x": 0.210999995470047,
+			"y": -0.22400000691413879,
+			"z": 0.078000001609325409
+		},
+		"param": {
+			"name": "right_foot_rotation",
+			"type": "Quat",
+			"guid": "4e741d6e8d9fe25855393f7ab968ffd538fdabac",
+			"x": 0.29300001263618469,
+			"y": 0.92699998617172241,
+			"z": -0.23399999737739563,
+			"w": -0.014000000432133675
+		},
+		"param": {
+			"name": "right_effector_weight",
+			"type": "Float",
+			"guid": "760c013427905f08ae4fb397997cbf35cd41fb85",
+			"min": 0,
+			"max": 1,
+			"float_value": 1
+		}
+	},
+	"preview_overrides": {
+		"override": {
+			"guid": "81f57850363c7bcc20b0413c5778d1c09777d9be",
+			"type": "Vec3",
+			"active": false,
+			"x": -0.092000000178813934,
+			"y": 0.24799999594688416,
+			"z": 0.097000002861022949
+		},
+		"override": {
+			"guid": "b6ecdcdcb4db13ee8b117b08ea962f3fae1450ea",
+			"type": "Quat",
+			"active": false,
+			"x": 0.020999999716877937,
+			"y": 0.97299998998641968,
+			"z": -0.22800000011920929,
+			"w": 0.014999999664723873
+		},
+		"override": {
+			"guid": "6188bd325d80744ca6bacd9d03f864363772771b",
+			"type": "Float",
+			"active": false,
+			"float_value": 1
+		},
+		"override": {
+			"guid": "ba6af2dcc59bf58f91453108f201b99811d8b6ea",
+			"type": "Vec3",
+			"active": false,
+			"x": 0.210999995470047,
+			"y": -0.22400000691413879,
+			"z": 0.078000001609325409
+		},
+		"override": {
+			"guid": "4e741d6e8d9fe25855393f7ab968ffd538fdabac",
+			"type": "Quat",
+			"active": false,
+			"x": 0.29300001263618469,
+			"y": 0.92699998617172241,
+			"z": -0.23399999737739563,
+			"w": -0.014000000432133675
+		},
+		"override": {
+			"guid": "760c013427905f08ae4fb397997cbf35cd41fb85",
+			"type": "Float",
+			"active": false,
+			"float_value": 1
+		}
+	},
+	"editor_layout": {
+		"main_weights": {
+			"w": 0.69606989622116089,
+			"w": 0.3039301335811615
+		},
+		"panel_weights": {
+			"w": 0.53783982992172241,
+			"w": 0.2608376145362854,
+			"w": 0.20132255554199219
+		},
+		"hierarchy_on_left": 0,
+		"hierarchy_weight": 0
+	}
+}

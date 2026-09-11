@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>4caa3612364f0e2aa2b21eb9f4fe5eac7186885e</guid>
+	<type>mesh_skinned</type>
+	<hash>0e6e4ae06072acb9034f343e2792a733e58dd2728d11bab4ecf56daa813daf4d</hash>
+	<runtimes>
+		<runtime id="4caa3612364f0e2aa2b21eb9f4fe5eac7186885e" name="capsule.mesh_skinned" link="0" type="9"/>
+	</runtimes>
+	<parameters>
+		<parameter type="bool" name="optimize">1</parameter>
+		<parameter type="float" name="scale">1</parameter>
+		<parameter type="string" name="skeleton_path"/>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+</asset>

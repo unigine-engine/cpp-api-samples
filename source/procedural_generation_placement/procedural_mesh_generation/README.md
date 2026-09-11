@@ -10,7 +10,9 @@ You can experiment with various procedural modes (such as *Dynamic, File*, or *B
 
 The **Field Size** parameter defines how many mesh objects are generated along each axis, forming a square grid.
 
-For each configuration, the sample shows total RAM and VRAM usage, along with the number of active mesh objects. This makes it easier evaluate the performance, memory layout, and behavior of each procedural mode in different runtime conditions.
+For each configuration, the sample shows the number of ready mesh objects along with the RAM and VRAM taken by their mesh data. In *Dynamic* mode the memory is measured per object at creation time and remains constant, while in *Blob* and *File* modes it is taken from the render streaming statistics and includes only the meshes used in the current frame.
+
+This makes it easier to evaluate the performance, memory layout, and behavior of each procedural mode in different runtime conditions.
 
 Use this sample to understand how procedural mesh generation works across different modes, observe how geometry is stored and managed between RAM, VRAM, and disk, profile memory usage for small versus large number of procedural objects, and explore how update strategies influence performance.
 

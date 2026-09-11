@@ -58,10 +58,9 @@ void MountPointsSample::init()
 	update_images();
 }
 
-// Event connections are cleared and UI window is released.
+// UI window is released; event connections auto-disconnect on destruction.
 void MountPointsSample::shutdown()
 {
-	disconnectAll();
 	window.shutdown();
 }
 

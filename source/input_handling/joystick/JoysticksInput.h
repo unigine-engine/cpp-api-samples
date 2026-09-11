@@ -1,9 +1,10 @@
 #pragma once
 
+#include "../../menu_ui/SampleDescriptionWindow.h"
+
 #include <UnigineComponentSystem.h>
 #include <UnigineInput.h>
-
-class SimpleInformationBox;
+#include <UnigineWidgets.h>
 
 // Demonstrates joystick input with force feedback (FFB) effects.
 // Handles dynamic connection/disconnection events and creates UI controls
@@ -36,7 +37,6 @@ private:
 	void on_joystick_connected(int num);
 	void on_joystick_disconnected(int num);
 
-	Unigine::EventConnections event_connections;
 	Unigine::EventConnections filter_connections;
 	Unigine::EventConnections ffb_connections;
 
@@ -64,9 +64,15 @@ private:
 
 		Unigine::VectorStack<FFBEffectData, Unigine::Input::NUM_JOYSTICK_FORCE_FEEDBACKS> ffb_effect_data;
 		DurationEffectData ramp_effect_data;
+
+		Unigine::WidgetGroupBoxPtr group;
+		Unigine::WidgetLabelPtr status_label;
 	};
 
-	void create_ffb_ui(int info_column, Unigine::InputJoystickPtr &joystick);
+	void rebuild_joystick_uis();
+	void clear_joystick_uis();
+	void build_joystick_ui(JoystickInfo &info);
+	void create_ffb_ui(JoystickInfo &info, const Unigine::WidgetPtr &container);
 
 	Unigine::WidgetPtr create_ffb_effect_ui(const Unigine::String &name, JoystickInfo &info,
 		Unigine::Input::JOYSTICK_FORCE_FEEDBACK_EFFECT effect_type, bool need_magnitude,
@@ -77,5 +83,6 @@ private:
 
 	Unigine::Vector<JoystickInfo> joysticks_info;
 
-	SimpleInformationBox *info = nullptr;
+	SampleDescriptionWindow description_window;
+	Unigine::WidgetWindowPtr window_widget;
 };

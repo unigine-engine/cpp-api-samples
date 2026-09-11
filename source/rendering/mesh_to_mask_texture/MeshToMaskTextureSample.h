@@ -69,7 +69,6 @@ private:
 	Unigine::TexturePtr texture;
 	// Camera for Renderer.RenderMesh mode
 	Unigine::PlayerDummyPtr player;
-	Unigine::EventConnections ev_conns;
 	// 3D gizmo for moving the camera position
 	Unigine::WidgetManipulatorTranslatorPtr manipulator;
 	SampleDescriptionWindow window;

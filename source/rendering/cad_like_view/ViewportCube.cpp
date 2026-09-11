@@ -183,7 +183,7 @@ bool ViewportCube::getChangeProjectionEnabled() const
 //   - face:    exactly one axis set	(e.g., (1, 0, 0))
 //   - edge:    two axes set			(e.g., (1, 1, 0))
 //   - corner:  three axes set			(e.g., (1, 1, 1))
-// See .../data/cpp_samples/systems/cad_like_view/viewcube/viewcube.mesh file
+// See .../data/cpp_component_samples/systems/cad_like_view/viewcube/viewcube.mesh file
 vec3 ViewportCube::get_polygon_pos(const char *name)
 {
 	const StringStack<> n = name;

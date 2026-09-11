@@ -81,7 +81,7 @@ void JointCallbacks::init()
 			// Force/torque limits define when joint breaks under stress
 			joint->setMaxForce(1000.f);
 			joint->setMaxTorque(16000.f);
-			joint->getEventBroken().connect(joint_connections, this,
+			joint->getEventBroken().connect(this,
 				&JointCallbacks::broken_callback);
 		}
 
@@ -93,7 +93,6 @@ void JointCallbacks::init()
 
 void JointCallbacks::shutdown()
 {
-	joint_connections.disconnectAll();
 	objects.clear();
 }
 

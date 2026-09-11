@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>2d186182b5e86f0a05bbd764ce55184553d5a678</guid>
+	<type>property</type>
+	<hash>4a337bde4f0a893bac11ac1a62a288a48cf71dc24e81d77a76c69182bd8596e9</hash>
+	<runtimes>
+		<runtime id="2d186182b5e86f0a05bbd764ce55184553d5a678" name="CatDemo" link="0" type="4"/>
+	</runtimes>
+</asset>

@@ -1,0 +1,736 @@
+{
+	"version": "2.22.0.0",
+	"file_guid": "28739725a6b3c13b33e06e604f4dbf0cfcd374f1",
+	"camera_offset_x": 461.021728515625,
+	"camera_offset_y": -356.9296875,
+	"preview_mesh_guid": "a27d350b6709653583108f0567436a8e4e76c53d",
+	"filter_by_skeleton": 1,
+	"fix_root_in_origin": 1,
+	"is_playing": 1,
+	"show_bones": 1,
+	"show_bone_axes": 1,
+	"show_bone_names": 0,
+	"show_ground": 1,
+	"nodes": {
+		"Output Pose": {
+			"guid": "00000000000000000000000000000000b00002b2",
+			"x": 1259,
+			"y": 1096,
+			"collapsed": false,
+			"inputs": {
+				"input": {
+					"label": "Pose",
+					"type": "AnimPose",
+					"id": 0
+				}
+			}
+		},
+		"Animation Player": {
+			"guid": "a82be018a6f0754531e4d57315220543437b4a69",
+			"x": 110,
+			"y": 195,
+			"collapsed": false,
+			"props": {
+				"prop": {
+					"widget": "String",
+					"value": ""
+				},
+				"prop": {
+					"widget": "Combobox",
+					"x": 0
+				},
+				"prop": {
+					"widget": "Combobox",
+					"x": 0
+				}
+			},
+			"inputs": {
+				"input": {
+					"label": "Anim",
+					"type": "Animation",
+					"id": 0
+				},
+				"input": {
+					"label": "Loop",
+					"type": "Bool",
+					"id": 1
+				},
+				"input": {
+					"label": "Speed",
+					"type": "Float",
+					"id": 2
+				}
+			},
+			"outputs": {
+				"output": {
+					"label": "Pose",
+					"type": "AnimPose",
+					"id": 0
+				}
+			}
+		},
+		"Vec3": {
+			"guid": "9e3854a1859a1aebf1bf182cd9493b40d86040ad",
+			"x": 300,
+			"y": 704,
+			"collapsed": false,
+			"show_preview_gizmo": true,
+			"outputs": {
+				"output": {
+					"label": "",
+					"type": "Vec3",
+					"id": 0
+				}
+			},
+			"param_guid": "064c0831f5743b31c3f5969aecc2b45777eda3c6"
+		},
+		"IK Chain": {
+			"guid": "d3e3c3752d8ace7deb4bb86e8c9aca001b1f3ada",
+			"x": 625,
+			"y": 366,
+			"collapsed": false,
+			"show_preview": true,
+			"props": {
+				"prop": {
+					"widget": "StringList",
+					"list": {
+						"": "thigh_l",
+						"": "shin_l",
+						"": "foot_l",
+						"": "toe_l"
+					}
+				},
+				"prop": {
+					"widget": "Combobox",
+					"x": 2
+				},
+				"prop": {
+					"widget": "Int",
+					"x": 8
+				},
+				"prop": {
+					"widget": "Float",
+					"x": 0.0010000000474974513
+				},
+				"prop": {
+					"widget": "Combobox",
+					"x": 0
+				},
+				"prop": {
+					"widget": "Float",
+					"x": 0.05000000074505806
+				},
+				"prop": {
+					"widget": "Float",
+					"x": 1.5
+				},
+				"prop": {
+					"widget": "Combobox",
+					"x": 0
+				},
+				"prop": {
+					"widget": "Float",
+					"x": 0.019999999552965164
+				},
+				"prop": {
+					"widget": "Float",
+					"x": 720
+				},
+				"prop": {
+					"widget": "Int",
+					"x": 8
+				}
+			},
+			"inputs": {
+				"input": {
+					"label": "Pose",
+					"type": "AnimPose",
+					"id": 0
+				},
+				"input": {
+					"label": "Target World Space",
+					"type": "Vec3",
+					"id": 1
+				},
+				"input": {
+					"label": "Pole World Space",
+					"type": "Vec3",
+					"id": 2
+				},
+				"input": {
+					"label": "Weight",
+					"type": "Float",
+					"id": 3
+				},
+				"input": {
+					"label": "Limits",
+					"type": "ConstraintRef",
+					"id": 4
+				}
+			},
+			"outputs": {
+				"output": {
+					"label": "Pose",
+					"type": "AnimPose",
+					"id": 0
+				}
+			}
+		},
+		"Joint Limit Set": {
+			"guid": "8f6917cd25c85ab7f0dbdde8c1d3a17cda61a919",
+			"x": 304,
+			"y": 1274,
+			"collapsed": false,
+			"inputs": {
+				"input": {
+					"label": "Limit 1",
+					"type": "ConstraintRef",
+					"id": 0
+				},
+				"input": {
+					"label": "Limit 2",
+					"type": "ConstraintRef",
+					"id": 1
+				},
+				"input": {
+					"label": "Limit 3",
+					"type": "ConstraintRef",
+					"id": 2
+				},
+				"input": {
+					"label": "Limit 4",
+					"type": "ConstraintRef",
+					"id": 3
+				}
+			},
+			"outputs": {
+				"output": {
+					"label": "Limits",
+					"type": "ConstraintRef",
+					"id": 0
+				}
+			}
+		},
+		"Joint Cone Asym Twist Limit": {
+			"guid": "bc182a250d0f31b9d0ff3bde2c9fd5a567cdf94a",
+			"x": -194,
+			"y": 858,
+			"collapsed": false,
+			"show_preview": true,
+			"props": {
+				"prop": {
+					"widget": "JointCombobox",
+					"value": "thigh_l"
+				},
+				"prop": {
+					"widget": "Float3",
+					"x": 1,
+					"y": 0,
+					"z": 0
+				},
+				"prop": {
+					"widget": "Float3",
+					"x": 0,
+					"y": 1,
+					"z": 0
+				},
+				"prop": {
+					"widget": "Float3",
+					"x": 1,
+					"y": 0,
+					"z": 0
+				},
+				"prop": {
+					"widget": "Combobox",
+					"x": 1
+				},
+				"prop": {
+					"widget": "Float",
+					"x": 110
+				},
+				"prop": {
+					"widget": "Float",
+					"x": 110
+				},
+				"prop": {
+					"widget": "Float",
+					"x": 60
+				},
+				"prop": {
+					"widget": "Float",
+					"x": 20
+				},
+				"prop": {
+					"widget": "Float",
+					"x": -10
+				},
+				"prop": {
+					"widget": "Float",
+					"x": 10
+				},
+				"prop": {
+					"widget": "Float",
+					"x": 0
+				},
+				"prop": {
+					"widget": "Combobox",
+					"x": 3
+				},
+				"prop": {
+					"widget": "Combobox",
+					"x": 1
+				},
+				"prop": {
+					"widget": "Combobox",
+					"x": 3
+				}
+			},
+			"inputs": {
+				"input": {
+					"label": "Pose",
+					"type": "AnimPose",
+					"id": 0
+				},
+				"input": {
+					"label": "Weight",
+					"type": "Float",
+					"id": 1
+				},
+				"input": {
+					"label": "Preferred Rotation",
+					"type": "Quat",
+					"id": 2
+				}
+			},
+			"outputs": {
+				"output": {
+					"label": "Pose",
+					"type": "AnimPose",
+					"id": 0
+				},
+				"output": {
+					"label": "Limit",
+					"type": "ConstraintRef",
+					"id": 1
+				}
+			}
+		},
+		"Joint Cone Twist Limit": {
+			"guid": "243c8d42ad068109199fd1806d17a1eb458bc040",
+			"x": -201,
+			"y": 1545,
+			"collapsed": false,
+			"show_preview": true,
+			"props": {
+				"prop": {
+					"widget": "JointCombobox",
+					"value": "foot_l"
+				},
+				"prop": {
+					"widget": "Float3",
+					"x": 1,
+					"y": 0,
+					"z": 0
+				},
+				"prop": {
+					"widget": "Float3",
+					"x": 1,
+					"y": 0,
+					"z": 0
+				},
+				"prop": {
+					"widget": "Combobox",
+					"x": 1
+				},
+				"prop": {
+					"widget": "Float",
+					"x": 40
+				},
+				"prop": {
+					"widget": "Float",
+					"x": 0
+				},
+				"prop": {
+					"widget": "Float",
+					"x": 0
+				},
+				"prop": {
+					"widget": "Float",
+					"x": 0
+				},
+				"prop": {
+					"widget": "Combobox",
+					"x": 3
+				},
+				"prop": {
+					"widget": "Combobox",
+					"x": 3
+				}
+			},
+			"inputs": {
+				"input": {
+					"label": "Pose",
+					"type": "AnimPose",
+					"id": 0
+				},
+				"input": {
+					"label": "Weight",
+					"type": "Float",
+					"id": 1
+				},
+				"input": {
+					"label": "Preferred Rotation",
+					"type": "Quat",
+					"id": 2
+				}
+			},
+			"outputs": {
+				"output": {
+					"label": "Pose",
+					"type": "AnimPose",
+					"id": 0
+				},
+				"output": {
+					"label": "Limit",
+					"type": "ConstraintRef",
+					"id": 1
+				}
+			}
+		},
+		"Joint Hinge Limit": {
+			"guid": "e84ae75903b7355df1cbd2bfe3ace06a847f29f0",
+			"x": -187,
+			"y": 1273,
+			"collapsed": false,
+			"show_preview": true,
+			"props": {
+				"prop": {
+					"widget": "JointCombobox",
+					"value": "shin_l"
+				},
+				"prop": {
+					"widget": "Combobox",
+					"x": 1
+				},
+				"prop": {
+					"widget": "Float3",
+					"x": 0,
+					"y": 1,
+					"z": 0
+				},
+				"prop": {
+					"widget": "Combobox",
+					"x": 1
+				},
+				"prop": {
+					"widget": "Float",
+					"x": 0
+				},
+				"prop": {
+					"widget": "Float",
+					"x": 130
+				},
+				"prop": {
+					"widget": "Float",
+					"x": 0
+				}
+			},
+			"inputs": {
+				"input": {
+					"label": "Pose",
+					"type": "AnimPose",
+					"id": 0
+				},
+				"input": {
+					"label": "Weight",
+					"type": "Float",
+					"id": 1
+				},
+				"input": {
+					"label": "Preferred Rotation",
+					"type": "Quat",
+					"id": 2
+				}
+			},
+			"outputs": {
+				"output": {
+					"label": "Pose",
+					"type": "AnimPose",
+					"id": 0
+				},
+				"output": {
+					"label": "Limit",
+					"type": "ConstraintRef",
+					"id": 1
+				}
+			}
+		}
+	},
+	"inputs": {
+		"input": {
+			"node_guid": "00000000000000000000000000000000b00002b2",
+			"anchor_id": 0,
+			"show_label": true,
+			"show_inline_widget": false
+		},
+		"input": {
+			"node_guid": "a82be018a6f0754531e4d57315220543437b4a69",
+			"anchor_id": 0,
+			"show_label": false,
+			"show_inline_widget": true,
+			"anim_guid": "1e0eecc05caa83e3a5eabbfbe7dd8cbe0b51c080",
+			"string_value": "idle_active"
+		},
+		"input": {
+			"node_guid": "a82be018a6f0754531e4d57315220543437b4a69",
+			"anchor_id": 1,
+			"show_label": true,
+			"show_inline_widget": true,
+			"bool_value": 1
+		},
+		"input": {
+			"node_guid": "a82be018a6f0754531e4d57315220543437b4a69",
+			"anchor_id": 2,
+			"show_label": true,
+			"show_inline_widget": true,
+			"float_value": 1
+		},
+		"input": {
+			"node_guid": "d3e3c3752d8ace7deb4bb86e8c9aca001b1f3ada",
+			"anchor_id": 0,
+			"show_label": true,
+			"show_inline_widget": false
+		},
+		"input": {
+			"node_guid": "d3e3c3752d8ace7deb4bb86e8c9aca001b1f3ada",
+			"anchor_id": 1,
+			"show_label": true,
+			"show_inline_widget": false,
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"input": {
+			"node_guid": "d3e3c3752d8ace7deb4bb86e8c9aca001b1f3ada",
+			"anchor_id": 2,
+			"show_label": true,
+			"show_inline_widget": false,
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"input": {
+			"node_guid": "d3e3c3752d8ace7deb4bb86e8c9aca001b1f3ada",
+			"anchor_id": 3,
+			"show_label": true,
+			"show_inline_widget": true,
+			"float_value": 1
+		},
+		"input": {
+			"node_guid": "d3e3c3752d8ace7deb4bb86e8c9aca001b1f3ada",
+			"anchor_id": 4,
+			"show_label": true,
+			"show_inline_widget": false
+		},
+		"input": {
+			"node_guid": "8f6917cd25c85ab7f0dbdde8c1d3a17cda61a919",
+			"anchor_id": 0,
+			"show_label": true,
+			"show_inline_widget": false
+		},
+		"input": {
+			"node_guid": "8f6917cd25c85ab7f0dbdde8c1d3a17cda61a919",
+			"anchor_id": 1,
+			"show_label": true,
+			"show_inline_widget": false
+		},
+		"input": {
+			"node_guid": "8f6917cd25c85ab7f0dbdde8c1d3a17cda61a919",
+			"anchor_id": 2,
+			"show_label": true,
+			"show_inline_widget": false
+		},
+		"input": {
+			"node_guid": "8f6917cd25c85ab7f0dbdde8c1d3a17cda61a919",
+			"anchor_id": 3,
+			"show_label": true,
+			"show_inline_widget": false
+		},
+		"input": {
+			"node_guid": "bc182a250d0f31b9d0ff3bde2c9fd5a567cdf94a",
+			"anchor_id": 0,
+			"show_label": true,
+			"show_inline_widget": false
+		},
+		"input": {
+			"node_guid": "bc182a250d0f31b9d0ff3bde2c9fd5a567cdf94a",
+			"anchor_id": 1,
+			"show_label": true,
+			"show_inline_widget": true,
+			"float_value": 1
+		},
+		"input": {
+			"node_guid": "bc182a250d0f31b9d0ff3bde2c9fd5a567cdf94a",
+			"anchor_id": 2,
+			"show_label": true,
+			"show_inline_widget": false,
+			"x": 0,
+			"y": 0,
+			"z": 0,
+			"w": 1
+		},
+		"input": {
+			"node_guid": "243c8d42ad068109199fd1806d17a1eb458bc040",
+			"anchor_id": 0,
+			"show_label": true,
+			"show_inline_widget": false
+		},
+		"input": {
+			"node_guid": "243c8d42ad068109199fd1806d17a1eb458bc040",
+			"anchor_id": 1,
+			"show_label": true,
+			"show_inline_widget": true,
+			"float_value": 1
+		},
+		"input": {
+			"node_guid": "243c8d42ad068109199fd1806d17a1eb458bc040",
+			"anchor_id": 2,
+			"show_label": true,
+			"show_inline_widget": false,
+			"x": 0,
+			"y": 0,
+			"z": 0,
+			"w": 1
+		},
+		"input": {
+			"node_guid": "e84ae75903b7355df1cbd2bfe3ace06a847f29f0",
+			"anchor_id": 0,
+			"show_label": true,
+			"show_inline_widget": false
+		},
+		"input": {
+			"node_guid": "e84ae75903b7355df1cbd2bfe3ace06a847f29f0",
+			"anchor_id": 1,
+			"show_label": true,
+			"show_inline_widget": true,
+			"float_value": 1
+		},
+		"input": {
+			"node_guid": "e84ae75903b7355df1cbd2bfe3ace06a847f29f0",
+			"anchor_id": 2,
+			"show_label": true,
+			"show_inline_widget": false,
+			"x": 0,
+			"y": 0,
+			"z": 0,
+			"w": 1
+		}
+	},
+	"anchors": {
+		"anchor": {
+			"input_index": 0,
+			"input_id": 0,
+			"input_label": "Pose",
+			"input_node": "00000000000000000000000000000000b00002b2",
+			"output_index": 0,
+			"output_id": 0,
+			"output_label": "Pose",
+			"output_node": "d3e3c3752d8ace7deb4bb86e8c9aca001b1f3ada"
+		},
+		"anchor": {
+			"input_index": 0,
+			"input_id": 0,
+			"input_label": "Pose",
+			"input_node": "d3e3c3752d8ace7deb4bb86e8c9aca001b1f3ada",
+			"output_index": 0,
+			"output_id": 0,
+			"output_label": "Pose",
+			"output_node": "a82be018a6f0754531e4d57315220543437b4a69"
+		},
+		"anchor": {
+			"input_index": 1,
+			"input_id": 1,
+			"input_label": "Target World Space",
+			"input_node": "d3e3c3752d8ace7deb4bb86e8c9aca001b1f3ada",
+			"output_index": 0,
+			"output_id": 0,
+			"output_label": "",
+			"output_node": "9e3854a1859a1aebf1bf182cd9493b40d86040ad"
+		},
+		"anchor": {
+			"input_index": 4,
+			"input_id": 4,
+			"input_label": "Limits",
+			"input_node": "d3e3c3752d8ace7deb4bb86e8c9aca001b1f3ada",
+			"output_index": 0,
+			"output_id": 0,
+			"output_label": "Limits",
+			"output_node": "8f6917cd25c85ab7f0dbdde8c1d3a17cda61a919"
+		},
+		"anchor": {
+			"input_index": 0,
+			"input_id": 0,
+			"input_label": "Limit 1",
+			"input_node": "8f6917cd25c85ab7f0dbdde8c1d3a17cda61a919",
+			"output_index": 1,
+			"output_id": 1,
+			"output_label": "Limit",
+			"output_node": "bc182a250d0f31b9d0ff3bde2c9fd5a567cdf94a"
+		},
+		"anchor": {
+			"input_index": 1,
+			"input_id": 1,
+			"input_label": "Limit 2",
+			"input_node": "8f6917cd25c85ab7f0dbdde8c1d3a17cda61a919",
+			"output_index": 1,
+			"output_id": 1,
+			"output_label": "Limit",
+			"output_node": "e84ae75903b7355df1cbd2bfe3ace06a847f29f0"
+		},
+		"anchor": {
+			"input_index": 2,
+			"input_id": 2,
+			"input_label": "Limit 3",
+			"input_node": "8f6917cd25c85ab7f0dbdde8c1d3a17cda61a919",
+			"output_index": 1,
+			"output_id": 1,
+			"output_label": "Limit",
+			"output_node": "243c8d42ad068109199fd1806d17a1eb458bc040"
+		}
+	},
+	"graph_type": "final",
+	"root_motion_enabled": 0,
+	"parameters": {
+		"param": {
+			"name": "ik_target",
+			"type": "Vec3",
+			"guid": "064c0831f5743b31c3f5969aecc2b45777eda3c6",
+			"x": -0.1679999977350235,
+			"y": 0.83499997854232788,
+			"z": 0.79500001668930054
+		}
+	},
+	"preview_overrides": {
+		"override": {
+			"guid": "064c0831f5743b31c3f5969aecc2b45777eda3c6",
+			"type": "Vec3",
+			"active": false,
+			"x": -0.1679999977350235,
+			"y": 0.83499997854232788,
+			"z": 0.79500001668930054
+		}
+	},
+	"editor_layout": {
+		"main_weights": {
+			"w": 0.59417760372161865,
+			"w": 0.40582242608070374
+		},
+		"panel_weights": {
+			"w": 0.48640704154968262,
+			"w": 0.3122704029083252,
+			"w": 0.20132255554199219
+		},
+		"hierarchy_on_left": 0,
+		"hierarchy_weight": 0
+	}
+}

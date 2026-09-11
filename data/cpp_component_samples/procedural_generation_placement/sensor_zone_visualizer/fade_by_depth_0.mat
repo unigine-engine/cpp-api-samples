@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material version="2.22.0.0" guid="8d48c2b6f0d57d86193e97b8d7c3831a71a61166" base_material="3aa323eeb9469a75dbfc695043062c6f704a6f02">
+	<options shadow_mask="0"/>
+	<parameter name="Intersection Power" expression="0">0.273200005</parameter>
+	<parameter name="Fresnel Power" expression="0">1.03820002</parameter>
+	<parameter name="Emission Color" expression="0">1 0.666666687 0.13333334 1</parameter>
+</material>

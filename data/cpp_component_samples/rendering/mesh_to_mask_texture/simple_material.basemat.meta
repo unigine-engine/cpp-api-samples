@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>6a85dc58a4f10e302d975579bc41990d0e53d814</guid>
+	<type>material</type>
+	<hash>fed113d94a6142c83ce5fdb5c226d9a825a45557fefbb6c19861cac969837b8b</hash>
+	<runtimes>
+		<runtime id="350bfa3d1131c51ab4e141688dd14735e5253087" name="level_height" link="0" type="5"/>
+	</runtimes>
+</asset>

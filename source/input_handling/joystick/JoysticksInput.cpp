@@ -5,7 +5,6 @@
 #include "JoysticksInput.h"
 
 #include "../../utils/Math.h"
-#include "../../utils/SimpleInformationBox.h"
 
 #include <UnigineControls.h>
 #include <UnigineGame.h>
@@ -18,11 +17,12 @@ using namespace Math;
 // Hot-plug events are subscribed and info structures are initialized for connected joysticks.
 void JoysticksInput::init()
 {
+	description_window.createWindow();
+	window_widget = description_window.getWindow();
+
 	// Hot-plug events are subscribed for dynamic joystick connection/disconnection
-	Input::getEventJoyConnected().connect(event_connections, this,
-		&JoysticksInput::on_joystick_connected);
-	Input::getEventJoyDisconnected().connect(event_connections, this,
-		&JoysticksInput::on_joystick_disconnected);
+	Input::getEventJoyConnected().connect(this, &JoysticksInput::on_joystick_connected);
+	Input::getEventJoyDisconnected().connect(this, &JoysticksInput::on_joystick_disconnected);
 
 	// Initialize info structures for all currently connected joysticks.
 	// Each joystick gets its own FFB effect data storage.
@@ -33,197 +33,187 @@ void JoysticksInput::init()
 			Unigine::VectorStack<FFBEffectData>(static_cast<int>(Input::NUM_JOYSTICK_FORCE_FEEDBACKS))});
 	}
 
-	info = getComponent<SimpleInformationBox>(node);
-
-	info->setWindowTitle("Joystick Controls Sample");
-	info->setWidth(300);
-	info->pushBackAboutInfo("This sample demostrates the simple usage of multiple Joystick input.");
+	rebuild_joystick_uis();
 }
 
-// Force feedback UI controls are created for the specified joystick column.
-void JoysticksInput::create_ffb_ui(int info_column, Unigine::InputJoystickPtr &joystick)
+// Per-joystick UI block is constructed: filter slider, live status label, optional FFB panel.
+void JoysticksInput::build_joystick_ui(JoystickInfo &info)
+{
+	info.group = WidgetGroupBox::create(info.joystick->getName(), 8, 8);
+	window_widget->addChild(info.group, Gui::ALIGN_LEFT);
+
+	auto filter_row = WidgetHBox::create(5, 0);
+	info.group->addChild(filter_row, Gui::ALIGN_EXPAND);
+
+	auto filter_label = WidgetLabel::create("Filter");
+	filter_label->setToolTip("Buttons sensitivity threshold");
+	filter_label->setWidth(60);
+	filter_row->addChild(filter_label);
+
+	auto filter_slider = WidgetSlider::create(0, 100);
+	filter_slider->setValue(ftoi(info.joystick->getFilter() * 100));
+	filter_slider->setToolTip("Buttons sensitivity threshold");
+	filter_row->addChild(filter_slider, Gui::ALIGN_EXPAND);
+
+	InputJoystickPtr joystick = info.joystick;
+	filter_slider->getEventChanged().connect(filter_connections, [filter_slider, joystick]() {
+		joystick->setFilter(filter_slider->getValue() * 0.01f);
+	});
+
+	info.status_label = WidgetLabel::create();
+	info.status_label->setFontRich(1);
+	info.status_label->setFontWrap(1);
+	info.group->addChild(info.status_label, Gui::ALIGN_EXPAND);
+
+	create_ffb_ui(info, info.group);
+}
+
+// Force feedback UI controls are created for the specified joystick.
+void JoysticksInput::create_ffb_ui(JoystickInfo &info, const WidgetPtr &container)
 {
 	// FFB UI is skipped if the joystick does not support any force feedback effects
-	if (!is_ffb_supported(joystick))
+	if (!is_ffb_supported(info.joystick))
 		return;
 
 	const auto ffb_container = WidgetGroupBox::create("Force Feedback Effects");
 	const auto scroll = WidgetScrollBox::create();
 	ffb_container->addChild(scroll);
-	// scroll->setWidth(350);
 	scroll->setHeight(400);
 	scroll->setHScrollEnabled(false);
 	scroll->setBorder(0);
 	scroll->setPadding(10,10,10,10);
 	scroll->setSpace(10,10);
-	const auto container = info->getColumn(info_column);
 	container->addChild(ffb_container, Gui::ALIGN_EXPAND);
 
+	const auto &joystick = info.joystick;
+
 	if (joystick->isForceFeedbackEffectSupported(Input::JOYSTICK_FORCE_FEEDBACK_CONSTANT))
-		create_ffb_effect_ui("Constant", joysticks_info[info_column], Input::JOYSTICK_FORCE_FEEDBACK_CONSTANT,
+		create_ffb_effect_ui("Constant", info, Input::JOYSTICK_FORCE_FEEDBACK_CONSTANT,
 			true, false, false, scroll);
 
 	if (joystick->isForceFeedbackEffectSupported(Input::JOYSTICK_FORCE_FEEDBACK_FRICTION))
-		create_ffb_effect_ui("Friction", joysticks_info[info_column], Input::JOYSTICK_FORCE_FEEDBACK_FRICTION,
+		create_ffb_effect_ui("Friction", info, Input::JOYSTICK_FORCE_FEEDBACK_FRICTION,
 			false, false, false, scroll);
 
 	if (joystick->isForceFeedbackEffectSupported(Input::JOYSTICK_FORCE_FEEDBACK_DAMPER))
-		create_ffb_effect_ui("Damper", joysticks_info[info_column], Input::JOYSTICK_FORCE_FEEDBACK_DAMPER,
+		create_ffb_effect_ui("Damper", info, Input::JOYSTICK_FORCE_FEEDBACK_DAMPER,
 			false, false, false, scroll);
 
 	if (joystick->isForceFeedbackEffectSupported(Input::JOYSTICK_FORCE_FEEDBACK_INERTIA))
-		create_ffb_effect_ui("Inertia", joysticks_info[info_column], Input::JOYSTICK_FORCE_FEEDBACK_INERTIA,
+		create_ffb_effect_ui("Inertia", info, Input::JOYSTICK_FORCE_FEEDBACK_INERTIA,
 			false, false, false, scroll);
 
 	if (joystick->isForceFeedbackEffectSupported(Input::JOYSTICK_FORCE_FEEDBACK_RAMP))
-		create_ffb_effect_ui("Ramp", joysticks_info[info_column], Input::JOYSTICK_FORCE_FEEDBACK_RAMP, true,
+		create_ffb_effect_ui("Ramp", info, Input::JOYSTICK_FORCE_FEEDBACK_RAMP, true,
 			true, false, scroll);
 
 	if (joystick->isForceFeedbackEffectSupported(Input::JOYSTICK_FORCE_FEEDBACK_SPRING))
-		create_ffb_effect_ui("Spring", joysticks_info[info_column], Input::JOYSTICK_FORCE_FEEDBACK_SPRING,
+		create_ffb_effect_ui("Spring", info, Input::JOYSTICK_FORCE_FEEDBACK_SPRING,
 			false, false, false, scroll);
 
 	if (joystick->isForceFeedbackEffectSupported(Input::JOYSTICK_FORCE_FEEDBACK_SINEWAVE))
-		create_ffb_effect_ui("Sine Wave", joysticks_info[info_column],
+		create_ffb_effect_ui("Sine Wave", info,
 			Input::JOYSTICK_FORCE_FEEDBACK_SINEWAVE, false, false, true, scroll);
 
 	if (joystick->isForceFeedbackEffectSupported(Input::JOYSTICK_FORCE_FEEDBACK_SQUAREWAVE))
-		create_ffb_effect_ui("Square Wave", joysticks_info[info_column],
+		create_ffb_effect_ui("Square Wave", info,
 			Input::JOYSTICK_FORCE_FEEDBACK_SQUAREWAVE, false, false, true, scroll);
 
 	if (joystick->isForceFeedbackEffectSupported(Input::JOYSTICK_FORCE_FEEDBACK_TRIANGLEWAVE))
-		create_ffb_effect_ui("Triangle Wave", joysticks_info[info_column],
+		create_ffb_effect_ui("Triangle Wave", info,
 			Input::JOYSTICK_FORCE_FEEDBACK_TRIANGLEWAVE, false, false, true, scroll);
 
 	if (joystick->isForceFeedbackEffectSupported(Input::JOYSTICK_FORCE_FEEDBACK_SAWTOOTHUPWAVE))
-		create_ffb_effect_ui("Saw Tooth Up", joysticks_info[info_column],
+		create_ffb_effect_ui("Saw Tooth Up", info,
 			Input::JOYSTICK_FORCE_FEEDBACK_SAWTOOTHUPWAVE, false, false, true, scroll);
 
 	if (joystick->isForceFeedbackEffectSupported(Input::JOYSTICK_FORCE_FEEDBACK_SAWTOOTHDOWNWAVE))
-		create_ffb_effect_ui("Saw Tooth Down", joysticks_info[info_column],
+		create_ffb_effect_ui("Saw Tooth Down", info,
 			Input::JOYSTICK_FORCE_FEEDBACK_SAWTOOTHDOWNWAVE, false, false, true, scroll);
 }
 
-// UI columns are updated and joystick state (axes, POVs, buttons) is displayed.
-void JoysticksInput::update()
+// Existing per-joystick groupboxes are destroyed and event connections reset.
+void JoysticksInput::clear_joystick_uis()
 {
-	int joysticks_count = 0;
-	for (const auto &info : joysticks_info)
+	filter_connections.disconnectAll();
+	ffb_connections.disconnectAll();
+
+	for (auto &info : joysticks_info)
 	{
-		if (info.joystick && info.joystick->isAvailable())
+		if (info.group)
 		{
-			++joysticks_count;
+			info.group.deleteLater();
+			info.group.clear();
 		}
+		info.status_label.clear();
+		info.ramp_effect_data = {};
 	}
+}
 
-	if (info->getColumnsCount() != joysticks_count)
+// All joystick UI blocks are rebuilt from the current joysticks_info list.
+void JoysticksInput::rebuild_joystick_uis()
+{
+	clear_joystick_uis();
+
+	for (auto &info : joysticks_info)
 	{
-		info->setColumnsCount(joysticks_count);
-		for (int i = 0; i < joysticks_info.size(); i++)
-		{
-			if (!joysticks_info[i].joystick || !joysticks_info[i].joystick->isAvailable())
-				continue;
-
-			auto &joystick = joysticks_info[i].joystick;
-
-			auto filter = info->addSlider(i, "Filter", 0.01f, "Buttons sensitivity threshold");
-			filter->setValue(joysticks_info[i].joystick->getFilter() * 100);
-			filter->getEventChanged().connect(filter_connections, [this, filter, i]() {
-				joysticks_info[i].joystick->setFilter(filter->getValue() * 0.01f);
-			});
-
-			create_ffb_ui(i, joystick);
-		}
-	}
-
-	for (int i = 0, column_index = 0; i < joysticks_info.size(); i++)
-	{
-		if (!joysticks_info[i].joystick || !joysticks_info[i].joystick->isAvailable())
+		if (!info.joystick || !info.joystick->isAvailable())
 			continue;
 
-		// getting information about the joystick
-		const auto &joystick = joysticks_info[i].joystick;
+		build_joystick_ui(info);
+	}
+}
 
-		String name = joystick->getName();
-		int number = joystick->getNumber();
+// Live joystick state is refreshed each frame in the status labels.
+void JoysticksInput::update()
+{
+	for (auto &info : joysticks_info)
+	{
+		if (!info.joystick || !info.joystick->isAvailable() || !info.status_label)
+			continue;
 
-		int num_axes = joystick->getNumAxes();
-		Vector<String> axis_names;
-		Vector<float> axis_values;
-		for (int j = 0; j < num_axes; j++)
-		{
-			axis_names.push_back(joystick->getAxisName(j));
-			axis_values.push_back(joystick->getAxis(j));
-		}
-
-		int num_povs = joystick->getNumPovs();
-		Vector<String> pov_names;
-		Vector<Input::JOYSTICK_POV> pov_values;
-		for (int j = 0; j < num_povs; j++)
-		{
-			pov_names.push_back(joystick->getPovName(j));
-			pov_values.push_back(joystick->getPov(j));
-		}
+		const auto &joystick = info.joystick;
 
 		int num_buttons = joystick->getNumButtons();
 		for (int j = 0; j < num_buttons; j++)
 			if (joystick->isButtonPressed(j) != 0)
-				joysticks_info[i].last_pressed_button = joystick->getButtonName(j);
+				info.last_pressed_button = joystick->getButtonName(j);
 
-		// filling information about the joystick
-		info->clearParametersInfo(column_index);
+		String text;
+		text += String::format("Number: %d\n\n", joystick->getNumber());
 
-		info->pushBackParametersInfo(column_index, name.get(),
-			SimpleInformationBox::INFO_ALIGN::CENTER);
-		info->pushBackParametersInfo(column_index, "Number", String::itoa(number),
-			SimpleInformationBox::INFO_ALIGN::LEFT);
-		info->pushBackWhiteSpaceLineParametersInfo(column_index);
-
-		info->pushBackParametersInfo(column_index, "Axes " + String::itoa(num_axes),
-			SimpleInformationBox::INFO_ALIGN::CENTER);
+		int num_axes = joystick->getNumAxes();
+		text += String::format("<b>Axes %d</b>\n", num_axes);
 		for (int j = 0; j < num_axes; j++)
-			info->pushBackParametersInfo(column_index, axis_names[j], String::format("%.2f",axis_values[j]));
-		info->pushBackWhiteSpaceLineParametersInfo(column_index);
+			text += String::format("%s: %.2f\n", joystick->getAxisName(j), joystick->getAxis(j));
+		text += "\n";
 
-		info->pushBackParametersInfo(column_index, "POVs " + String::itoa(num_povs),
-			SimpleInformationBox::INFO_ALIGN::CENTER);
+		int num_povs = joystick->getNumPovs();
+		text += String::format("<b>POVs %d</b>\n", num_povs);
 		for (int j = 0; j < num_povs; j++)
-			info->pushBackParametersInfo(column_index, pov_names[j], String::itoa(pov_values[j]));
-		info->pushBackWhiteSpaceLineParametersInfo(column_index);
+			text += String::format("%s: %d\n", joystick->getPovName(j), (int)joystick->getPov(j));
+		text += "\n";
 
-		info->pushBackParametersInfo(column_index, "Buttons Count", String::itoa(num_buttons),
-			SimpleInformationBox::INFO_ALIGN::CENTER);
-		info->pushBackWhiteSpaceLineParametersInfo(column_index);
+		text += String::format("<b>Buttons Count: %d</b>\n", num_buttons);
+		text += String::format("Last Pressed Button: %s\n\n", info.last_pressed_button.get());
 
-		info->pushBackParametersInfo(column_index, "Last Pressed Button",
-			joysticks_info[i].last_pressed_button);
-		info->pushBackParametersInfo(column_index, "                   ",
-			SimpleInformationBox::INFO_ALIGN::CENTER);
-		info->pushBackWhiteSpaceLineParametersInfo(column_index);
+		text += String::format("FFB Status: %s",
+			is_ffb_supported(joystick) ? "Supported" : "Unsupported");
 
-		String ffb_status = is_ffb_supported(joystick) ? "Supported" : "Unsupported";
-		info->pushBackParametersInfo(column_index, "FFB Status", ffb_status,
-			SimpleInformationBox::INFO_ALIGN::LEFT);
-		info->pushBackParametersInfo(column_index, "                   ",
-			SimpleInformationBox::INFO_ALIGN::RIGHT);
-		info->pushBackWhiteSpaceLineParametersInfo(column_index);
-
-
-		++column_index;
+		info.status_label->setText(text.get());
 	}
 
 	// Ramp effect timers are updated to auto-toggle buttons when duration expires
-	for (auto& info : joysticks_info)
+	for (auto &info : joysticks_info)
 		info.ramp_effect_data.update();
 }
 
 // Event connections are released and joystick info is cleared.
 void JoysticksInput::shutdown()
 {
-	event_connections.disconnectAll();
-	filter_connections.disconnectAll();
-	ffb_connections.disconnectAll();
+	clear_joystick_uis();
 	joysticks_info.clear();
+	description_window.shutdown();
 }
 
 // New joystick info structure is created when a joystick is hot-plugged.
@@ -232,6 +222,8 @@ void JoysticksInput::on_joystick_connected(int num)
 	joysticks_info.push_back({Input::getJoystick(num), "",
 		Unigine::VectorStack<FFBEffectData>(
 			static_cast<int>(Input::NUM_JOYSTICK_FORCE_FEEDBACKS))});
+
+	rebuild_joystick_uis();
 }
 
 // Joystick info is removed when a joystick is disconnected.
@@ -245,6 +237,8 @@ void JoysticksInput::on_joystick_disconnected(int num)
 			break;
 		}
 	}
+
+	rebuild_joystick_uis();
 }
 
 // UI panel for a single FFB effect is created with sliders and play/stop button.

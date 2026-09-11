@@ -66,7 +66,5 @@ private:
 
 	Unigine::Input::MOUSE_HANDLE previous_handle;
 
-	Unigine::EventConnections widget_connections;
-
 	int width_in_pixels = 1;
 };

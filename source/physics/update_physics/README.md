@@ -2,7 +2,7 @@
 
 This sample demonstrates the difference between *update()* and *updatePhysics()* methods.
 
-The sample features two physics-enabled cubes that move back and forth along the X-axis. The movement logic is implemented via in the *UpdatePhysicsUsageController.cpp* file.
+The sample features two physics-enabled cubes that move back and forth along the X-axis. The movement logic is implemented in the *UpdatePhysicsUsageController.cpp* file.
 
 Use *updatePhysics()* to implement continuous or physics-dependent operations (e.g., force application, collision response), as it runs at a fixed time step, unlike *update()* which depends on the rendering frame rate.
 

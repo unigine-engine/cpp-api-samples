@@ -16,12 +16,10 @@ public:
 	COMPONENT_UPDATE(update);
 	COMPONENT_SHUTDOWN(shutdown);
 
-	// Reference to ObjectMeshSkinned node containing the skeletal mesh
-	PROP_PARAM(Node, mesh_skinned_node);
-	// Bone chain for left leg (e.g., thigh -> shin -> foot)
-	PROP_ARRAY(String, left_leg_bones);
-	// Bone chain for right leg
-	PROP_ARRAY(String, right_leg_bones);
+	// Reference to NodeSkeletonPose node containing the animation script
+	PROP_PARAM(Node, skeleton_pose_node);
+	PROP_PARAM(String, left_foot_name);
+	PROP_PARAM(String, right_foot_name);
 	// Height offset from ground to foot pivot point
 	PROP_PARAM(Float, foot_height, 0.1f);
 	// Optional movable platform/obstacle for testing foot placement
@@ -40,16 +38,15 @@ private:
 	void update();
 	void shutdown();
 
-	// Called before IK solving to update foot targets based on raycast results
-	void on_begin_ik_solvers();
-
 private:
 	// Manipulators for moving/rotating the obstacle platform
 	Unigine::WidgetManipulatorTranslatorPtr translator;
 	Unigine::WidgetManipulatorRotatorPtr rotator;
 
-	Unigine::ObjectMeshSkinnedLegacyPtr skinned;
+	Unigine::NodeSkeletonPosePtr skeleton_pose;
+	Unigine::AnimScriptPtr anim_script;
 	int chain_ids[FOOT_NUM];
-	// Last bone in each chain (the foot bone used as end effector)
-	int effector_bones[FOOT_NUM];
+	// Last joint in each chain (the foot bone used as end effector)
+	int effector_joints[FOOT_NUM];
+	Unigine::Math::quat src_effector_rotations[FOOT_NUM];
 };

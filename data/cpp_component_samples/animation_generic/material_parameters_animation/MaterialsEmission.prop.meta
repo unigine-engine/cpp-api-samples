@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>9a5cfe49a9433afba14bd5e06a5fd04c1b2f54b1</guid>
+	<type>property</type>
+	<hash>6c5abb72e4cd05a2f1cb87b22151dd744f0ae82e174bbeb6945b65d7aae336d3</hash>
+	<runtimes>
+		<runtime id="9a5cfe49a9433afba14bd5e06a5fd04c1b2f54b1" name="MaterialsEmission" link="0" type="4"/>
+	</runtimes>
+</asset>

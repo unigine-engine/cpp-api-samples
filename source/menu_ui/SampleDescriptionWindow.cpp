@@ -1,4 +1,5 @@
 #include "SampleDescriptionWindow.h"
+#include "SampleWidgets.h"
 #include <string>
 
 using namespace Unigine;
@@ -10,17 +11,17 @@ void SampleDescriptionWindow::createWindow(int align, int width)
 	auto world_path = World::getPath();
 	auto world_name = String::filename(world_path);
 
-	String cpp_samples_xml_path = FileSystem::getAbsolutePath(String::joinPaths(Engine::get()->getDataPath(), "../cpp_samples.sample"));
+	String cpp_component_samples_xml_path = FileSystem::getAbsolutePath(String::joinPaths(Engine::get()->getDataPath(), "../cpp_component_samples.sample"));
 
-	XmlPtr cpp_samples_xml = Xml::create();
-	if (!cpp_samples_xml->load(cpp_samples_xml_path))
+	XmlPtr cpp_component_samples_xml = Xml::create();
+	if (!cpp_component_samples_xml->load(cpp_component_samples_xml_path))
 	{
-		Unigine::Log::warning("SampleDescriptionWindow::createWindow(): cannot open %s file\n", cpp_samples_xml_path.get());
+		Unigine::Log::warning("SampleDescriptionWindow::createWindow(): cannot open %s file\n", cpp_component_samples_xml_path.get());
 		return;
 	}
 
-	XmlPtr cpp_samples_samples_pack = cpp_samples_xml->getChild("samples_pack");
-	XmlPtr samples_xml = cpp_samples_samples_pack->getChild("samples");
+	XmlPtr cpp_component_samples_samples_pack = cpp_component_samples_xml->getChild("samples_pack");
+	XmlPtr samples_xml = cpp_component_samples_samples_pack->getChild("samples");
 
 	String title;
 	String description;
@@ -73,7 +74,6 @@ void SampleDescriptionWindow::createWindow(int align, int width)
 
 void SampleDescriptionWindow::shutdown()
 {
-	disconnectAll();
 	w_main_window.deleteLater();
 }
 
@@ -96,34 +96,7 @@ WidgetSliderPtr SampleDescriptionWindow::addFloatParameter(const char *name, con
 	if (!w_parameters_grid)
 		init_parameter_box();
 
-	auto label = WidgetLabel::create(name);
-	label->setWidth(100);
-	w_parameters_grid->addChild(label, Gui::ALIGN_LEFT);
-	label->setToolTip(tooltip);
-
-	auto slider = WidgetSlider::create();
-	slider->setMinValue((int)(min_value * 100));
-	slider->setMaxValue((int)(max_value * 100));
-	slider->setValue((int)(default_value * 100));
-
-	slider->setWidth(200);
-	slider->setButtonWidth(20);
-	slider->setButtonHeight(20);
-	slider->setToolTip(tooltip);
-	w_parameters_grid->addChild(slider, Gui::ALIGN_LEFT);
-
-	label = WidgetLabel::create(String::ftoa(default_value, 2));
-	label->setWidth(20);
-	label->setToolTip(tooltip);
-	w_parameters_grid->addChild(label);
-
-	slider->getEventChanged().connect(*this, [this, label, slider, on_change]() {
-		float v = slider->getValue() / 100.0f;
-		label->setText(String::ftoa(v, 2));
-		on_change(v);
-	});
-
-	return slider;
+	return add_float_parameter(*this, w_parameters_grid, name, tooltip, default_value, min_value, max_value, std::move(on_change));
 }
 
 WidgetSliderPtr SampleDescriptionWindow::addIntParameter(const char *name, const char *tooltip,
@@ -132,34 +105,7 @@ WidgetSliderPtr SampleDescriptionWindow::addIntParameter(const char *name, const
 	if (!w_parameters_grid)
 		init_parameter_box();
 
-	auto label = WidgetLabel::create(name);
-	label->setWidth(100);
-	label->setToolTip(tooltip);
-	w_parameters_grid->addChild(label, Gui::ALIGN_LEFT);
-
-	auto slider = WidgetSlider::create();
-	slider->setMinValue(min_value);
-	slider->setMaxValue(max_value);
-	slider->setValue(default_value);
-
-	slider->setWidth(200);
-	slider->setButtonWidth(20);
-	slider->setButtonHeight(20);
-	slider->setToolTip(tooltip);
-	w_parameters_grid->addChild(slider, Gui::ALIGN_LEFT);
-
-	label = WidgetLabel::create(String::itoa(default_value));
-	label->setWidth(20);
-	label->setToolTip(tooltip);
-	w_parameters_grid->addChild(label);
-
-	slider->getEventChanged().connect(*this, [this, label, slider, on_change]() {
-		int v = slider->getValue();
-		label->setText(String::itoa(v));
-		on_change(v);
-	});
-
-	return slider;
+	return add_int_parameter(*this, w_parameters_grid, name, tooltip, default_value, min_value, max_value, std::move(on_change));
 }
 
 Unigine::WidgetCheckBoxPtr SampleDescriptionWindow::addBoolParameter(
@@ -169,57 +115,25 @@ Unigine::WidgetCheckBoxPtr SampleDescriptionWindow::addBoolParameter(
 	if (!w_parameters_grid)
 		init_parameter_box();
 
-	auto label = WidgetLabel::create(name);
-	label->setWidth(100);
-	label->setToolTip(tooltip);
-	auto checkbox = WidgetCheckBox::create();
-	checkbox->setToolTip(tooltip);
-	checkbox->setChecked(default_value);
-
-	checkbox->getEventChanged().connect(*this, [this, checkbox, callback = std::move(on_change)](const WidgetPtr &widget) {
-		if (checkbox->isChecked())
-			callback(true);
-		else
-			callback(false);
-	});
-
-	w_parameters_grid->addChild(label, Gui::ALIGN_LEFT);
-	w_parameters_grid->addChild(checkbox, Gui::ALIGN_CENTER);
-	w_parameters_grid->addChild(WidgetLabel::create(), Gui::ALIGN_LEFT);
-	return checkbox;
+	return add_bool_parameter(*this, w_parameters_grid, name, tooltip, default_value, std::move(on_change));
 }
 
 WidgetComboBoxPtr SampleDescriptionWindow::addSwitchParameter(const char *name, const char *tooltip, int default_value,
 	const Unigine::Vector<const char *> &values, std::function<void(int)> on_change)
 {
-	return addSwitchParameter(name, tooltip, default_value, values.get(), values.size(), std::move(on_change));
+	if (!w_parameters_grid)
+		init_parameter_box();
+
+	return add_switch_parameter(*this, w_parameters_grid, name, tooltip, default_value, values, std::move(on_change));
 }
 
 WidgetComboBoxPtr SampleDescriptionWindow::addSwitchParameter(const char *name, const char *tooltip, int default_value,
 	const char *const *values, int num_values, std::function<void(int)> on_change)
 {
-	if (!w_parameters_grid)
-		init_parameter_box();
-
-	auto label = WidgetLabel::create(name);
-	label->setWidth(100);
-	label->setToolTip(tooltip);
-
-	auto combobox = WidgetComboBox::create();
-	combobox->setToolTip(tooltip);
-	for (int i = 0; i < num_values; ++i)
-	{
-		combobox->addItem(values[i]);
-	}
-	combobox->setCurrentItem(default_value);
-	combobox->getEventChanged().connect(*this, [combobox, callback = std::move(on_change)] {
-		callback(combobox->getCurrentItem());
-	});
-
-	w_parameters_grid->addChild(label, Gui::ALIGN_LEFT);
-	w_parameters_grid->addChild(combobox, Gui::ALIGN_EXPAND);
-	w_parameters_grid->addChild(WidgetLabel::create(), Gui::ALIGN_LEFT);
-	return combobox;
+	Vector<const char *> value_list;
+	for (int i = 0; i < num_values; i += 1)
+		value_list.append(values[i]);
+	return addSwitchParameter(name, tooltip, default_value, value_list, std::move(on_change));
 }
 
 void SampleDescriptionWindow::setStatus(const char *status)
@@ -298,7 +212,7 @@ void SampleDescriptionWindow::init_source_box()
 
 	String sample_path = String::pathname(world_path);
 	String sample_data_path = String::joinPaths(Engine::get()->getDataPath(), sample_path);
-	sample_path = sample_path.replace("cpp_samples/","", true);
+	sample_path = sample_path.replace("cpp_component_samples/","", true);
 	String sample_source_path = String::joinPaths(Engine::get()->getDataPath(), "../source/");
 	sample_source_path = String::joinPaths(sample_source_path, sample_path);
 
@@ -350,8 +264,8 @@ void SampleDescriptionWindow::init_status_box()
 	w_status_group = WidgetGroupBox::create("Status", 8, 8);
 	w_main_window->addChild(w_status_group, Gui::ALIGN_LEFT);
 	w_status_lbl = WidgetLabel::create();
-	// w_status_lbl->setFontWrap(1);
-	// w_status_lbl->setFontRich(1);
+	w_status_lbl->setFontWrap(1);
+	w_status_lbl->setFontRich(1);
 	w_status_lbl->setWidth(300);
 	w_status_group->addChild(w_status_lbl, Gui::ALIGN_EXPAND);
 }

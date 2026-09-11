@@ -4,4 +4,4 @@ This sample demonstrates how to capture views from two different cameras into se
 
 Each camera renders its output to a texture using *Viewport::renderTexture2D()*. These textures are displayed in a vertical split-screen layout using *WidgetSprite* elements, and at the same time are applied to surfaces by assigning them to the albedo slot of static mesh materials. The layout adjusts dynamically to screen size changes.
 
-This setup can be used for multiplayer screen sharing, camera comparisons, or in-game monitors rendered from multiple viewpoints.
+This setup can be used for multiplayer screen sharing, camera comparisons, CCTV-like monitors, or in-game monitors rendered from multiple viewpoints.

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>ed0610a5de7d11845d588e1aaecd9b38d1a24d14</guid>
+	<type>property</type>
+	<hash>d44447513460efa97cb6ca9daf2b95e868f9c0dcca7d19d539b4317c1b244cc8</hash>
+	<runtimes>
+		<runtime id="ed0610a5de7d11845d588e1aaecd9b38d1a24d14" name="ExperimentalNavigationMeshCharacterLogic" link="0" type="4"/>
+	</runtimes>
+</asset>

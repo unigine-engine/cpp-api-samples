@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sample title="Experimental Navigation Mesh">
+	<sdk_desc>Configuring pathfinding between two points around obstacles using <b>Experimental Navigation Mesh</b>.</sdk_desc>
+	<desc>
+		<brief>
+			<para>This sample demonstrates how to configure pathfinding between two points with obstacles using <strong nt="1"><link to="experimental_navigation_mesh">Experimental Navigation Mesh</link></strong>. The route is built for an agent of a certain size, so a path is only found where the agent actually fits: it keeps clear of walls and obstacles, avoids slopes too steep to walk up and steps too high to climb, and gives up when the way around becomes too long. The resulting route is reported with its length, cost, and number of points, and if the target cannot be reached, the path is drawn up to the last point the agent can get to, with the reason explained. </para>
+			<para>This sample is useful for pathfinding in games, for route checks in training simulators and digital twins, and for verifying that a building model stays passable for a given size.</para>
+		</brief>
+		<para>The following parameters can be adjusted at run time:</para>
+		<ul>
+			<li><strong nt="1">Straight mode</strong> - how detailed the resulting path is: only the corners it turns at, those corners plus the points where it moves between areas, or every polygon it crosses along the way</li>
+			<li><strong nt="1">Heuristic scale</strong> - the search accuracy: 1 gives the shortest path, higher values find a path faster but not necessarily the best one</li>
+			<li><strong nt="1">Max cost</strong> and <strong nt="1">Max search nodes</strong> - the budgets of the search: when the budget of either parameter is exhausted, the search stops and the route stays partial</li>
+			<li><strong nt="1">Agent radius</strong> and <strong nt="1">Agent height</strong> - the width and the height of the agent the route is planned for</li>
+			<li><strong nt="1">Max slope angle</strong> and <strong nt="1">Max step height</strong> - how steep a slope and how high a step that agent can manage</li>
+			<li><strong nt="1">Snap size</strong> - how far off the navigation mesh the start and end points may be and still snap onto it</li>
+			<li><strong nt="1">Consider obstacles</strong> - whether obstacles block the route or are ignored</li>
+			<li><strong nt="1">Show Navigation Mesh</strong> - draws the navigation mesh itself, colored by the areas of its polygons.</li>
+		</ul>
+		<para>The route is requested through <ui><link to="experimentalnavigationpathfetch_class">ExperimentalNavigationPathFetch</link></ui>, and all the agent parameters are set on the <ui><link to="experimentalnavigationmeshfilter_class">ExperimentalNavigationMeshFilter</link></ui> it is given: the same filter decides which navigation mesh suits the agent and how the route is searched. The result comes back as an <ui><link to="experimentalnavigationpath_class">ExperimentalNavigationPath</link></ui>, which carries the points, the length, the cost, the status, and the failure reason explaining why an incomplete route stops where it does.</para>
+	</desc>
+	<link_docs>https://developer.unigine.com/docs/objects/navigations/experimental/index?rlang=cpp</link_docs>
+	<controls>
+		<![CDATA[
+		<p>Move the path endpoints and obstacles in the scene with the <b>widget manipulator</b>.<br/>
+		<b>LMB</b> click on object to show the manipulator.<br/>
+		<b>W</b> - switch the manipulator to movement mode<br/>
+		<b>E</b> - switch the manipulator to rotation mode<br/>
+		<b>F</b> - focus the camera on the selected object<br/>
+		<b>U</b>, <b>Esc</b> - deselect the object</p>
+		]]>
+	</controls>
+	<tags>
+		<tag>Navigation &amp; Pathfinding</tag>
+	</tags>
+</sample>

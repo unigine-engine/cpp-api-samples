@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>cdcb0ff6f8728ba41725b700c34e4961a97e1511</guid>
+	<type>animation_graph</type>
+	<hash>8fcb9f8eed832e23dbed6e7cde855d98b88ef0a2bd588cad352e962991693d7b</hash>
+	<runtimes>
+		<runtime id="cdcb0ff6f8728ba41725b700c34e4961a97e1511" name="turret.agraph" link="0"/>
+		<runtime id="451dacf33b8a00fb775a1a11796cf0c125be9430" name="turret" link="1" type="10"/>
+	</runtimes>
+</asset>

@@ -15,10 +15,9 @@ public:
 	COMPONENT_UPDATE(update);
 	COMPONENT_SHUTDOWN(shutdown);
 
-	// Reference to ObjectMeshSkinned node containing the skeletal mesh
-	PROP_PARAM(Node, mesh_skinned_node);
-	// List of bone names forming the IK chain (order matters: from root to tip)
-	PROP_ARRAY(String, bones);
+	// Reference to NodeSkeletonPose node containing the animation script
+	PROP_PARAM(Node, skeleton_pose_node);
+	PROP_PARAM(String, root_joint_name);
 
 private:
 	void init();
@@ -31,7 +30,7 @@ private:
 	// Manipulator controlling the pole vector (defines the bending plane for joints)
 	Unigine::WidgetManipulatorTranslatorPtr pole_translator;
 
-	Unigine::ObjectMeshSkinnedLegacyPtr skinned;
-	// ID of the created IK chain (-1 means the chain is not initialized)
-	int chain_id{-1};
+	Unigine::NodeSkeletonPosePtr skeleton_pose;
+	Unigine::AnimScriptPtr anim_script;
+	int root_joint{-1};
 };

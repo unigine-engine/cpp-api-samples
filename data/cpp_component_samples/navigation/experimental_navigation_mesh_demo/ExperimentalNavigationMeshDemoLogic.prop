@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.22.0.0" name="ExperimentalNavigationMeshDemoLogic" manual="1" parent_name="node_base">
+	<parameter name="path_color" type="color">1.000000 1.000000 1.000000 1.000000</parameter>
+	<parameter name="selected_path_color" type="color">1.000000 1.000000 0.000000 1.000000</parameter>
+</property>

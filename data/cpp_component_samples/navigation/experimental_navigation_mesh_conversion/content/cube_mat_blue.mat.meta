@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>6df4bf8eb1390be5a52f517185a3623cb685af22</guid>
+	<type>material</type>
+	<hash>a33159665deab2c5c7179f87eaa245c8c7402fac5cec1835f6d0d80718ade939</hash>
+	<runtimes>
+		<runtime id="6df4bf8eb1390be5a52f517185a3623cb685af22" name="cube_mat_blue" link="0" type="5"/>
+	</runtimes>
+</asset>

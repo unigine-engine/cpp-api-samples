@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>34be3707b48374e4b1eb52162fdf4caddb00681e</guid>
+	<type>property</type>
+	<hash>94c88c1b56ebef2d451909f75ff27d9e3e9546792a4f32b4976c758e97b18d61</hash>
+	<runtimes>
+		<runtime id="34be3707b48374e4b1eb52162fdf4caddb00681e" name="AnimationBonesSimpleFootPlacementSample" link="0" type="4"/>
+	</runtimes>
+</asset>

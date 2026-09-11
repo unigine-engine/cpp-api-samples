@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>b55cc6eed6a5e1753f1d04506c700b6f8084c202</guid>
+	<type>material</type>
+	<hash>4552e5090c9efb851185dcf3a63011815c91c8e25d28258c8ea1d639860caa7c</hash>
+	<runtimes>
+		<runtime id="b55cc6eed6a5e1753f1d04506c700b6f8084c202" name="arrow_material" link="0" type="5"/>
+	</runtimes>
+</asset>

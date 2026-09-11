@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>6b9333875365a882d4677b484a7348f9fec49e73</guid>
+	<type>animation_graph</type>
+	<hash>6cd696f5595ca2d1b758166fd987b18ff9b7560019fa8676f0b2fe15cd88f27e</hash>
+	<runtimes>
+		<runtime id="6b9333875365a882d4677b484a7348f9fec49e73" name="male_idle_limits.agraph" link="0"/>
+		<runtime id="bc45201bd623303fb2fe075e29b6ce12ee748cca" name="male_idle_limits" link="1" type="10"/>
+	</runtimes>
+</asset>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>59987305db7eb1c1a6ecee1c9e9590c962cdd48d</guid>
+	<type>property</type>
+	<hash>50a986547a272984e6cc7f7c06630082b93c4c3cf9e05a7140e4f5f0cc790ddf</hash>
+	<runtimes>
+		<runtime id="59987305db7eb1c1a6ecee1c9e9590c962cdd48d" name="TouchInput" link="0" type="4"/>
+	</runtimes>
+</asset>

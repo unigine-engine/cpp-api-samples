@@ -47,9 +47,15 @@ void SimpleHttpRequestSample::update()
 						continue;
 					String name = child->getChild("name")->getString();
 					if (child->isChild("country"))
-						name += ", " + child->getChild("country")->getString();
+					{
+						name += ", ";
+						name += child->getChild("country")->getString();
+					}
 					if (child->isChild("admin1"))
-						name += ", " + child->getChild("admin1")->getString();
+					{
+						name += ", ";
+						name += child->getChild("admin1")->getString();
+					}
 
 					int item = w_list->addItem(name);
 

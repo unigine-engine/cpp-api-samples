@@ -1,8 +1,9 @@
 #pragma once
 
-#include <UnigineComponentSystem.h>
+#include "../../menu_ui/SampleDescriptionWindow.h"
 
-class SimpleInformationBox;
+#include <UnigineComponentSystem.h>
+#include <UnigineWidgets.h>
 
 // Demonstrates keyboard and mouse input handling.
 // Tracks button/key states (down, pressed, up) across frames, captures text input
@@ -43,6 +44,6 @@ private:
 	int last_mouse_wheel = 0;
 	int last_mouse_wheel_horizontal = 0;
 
-	SimpleInformationBox *info = nullptr;
-	Unigine::EventConnections widget_connections;
+	SampleDescriptionWindow description_window;
+	Unigine::WidgetLabelPtr info_label;
 };

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.22.0.0" name="SensorZoneVisualizer" manual="1" parent_name="node_base">
+	<parameter name="mat" type="material"/>
+	<parameter name="change_color" type="toggle">0</parameter>
+	<parameter name="mat_color" type="color">0.000000 1.000000 1.000000 1.000000</parameter>
+	<parameter name="color_parameter" type="string">Emission Color</parameter>
+	<parameter name="vertical_angles" type="vec2">-30.000000 30.000000</parameter>
+	<parameter name="horizontal_angles" type="vec2">-30.000000 30.000000</parameter>
+	<parameter name="num_stacks" type="int">64</parameter>
+	<parameter name="num_slices" type="int">64</parameter>
+	<parameter name="num_side_segments" type="int">9</parameter>
+	<parameter name="near" type="float">0.5</parameter>
+	<parameter name="far" type="float">2</parameter>
+</property>

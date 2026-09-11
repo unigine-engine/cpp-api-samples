@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodes version="2.22.0.0">
+	<node type="NodeDummy" id="166348829" name="character">
+		<properties>
+			<property parent="39f135530947f59e1fc1dec613b1115c69bd99df" guid="285756638dffa4790cf33af94327d43b2de46143">
+				<parameter name="global_snap_size">4</parameter>
+				<parameter name="waypoint_spacing">20</parameter>
+				<parameter name="waypoint_reach_distance">6</parameter>
+				<parameter name="movement_speed">1.34000003</parameter>
+				<parameter name="rotation_speed">120</parameter>
+				<parameter name="max_acceleration">10</parameter>
+				<parameter name="target_reach_distance">1.5</parameter>
+				<parameter name="agent_radius">0.300000012</parameter>
+				<parameter name="max_slope_angle">20</parameter>
+				<parameter name="snap_size">0.5</parameter>
+				<parameter name="debug_visualizer_enabled">1</parameter>
+				<parameter name="skeleton_pose">551889624</parameter>
+				<parameter name="turn_angle">80</parameter>
+			</property>
+		</properties>
+		<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
+		<node type="NodeSkeletonPose" id="551889624" name="NodeSkeletonPose">
+			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
+			<skeleton>a6ae031a1fdce30124e70eac40f4cb7bb9e916a2</skeleton>
+			<mode>0</mode>
+			<control_type>0</control_type>
+			<anim_script guid="821af064f9786ac6ac8eacb8989299e81471a4a4"/>
+			<node type="ObjectMeshSkinned" id="1715220567" name="ObjectMeshSkinned">
+				<mesh_name>guid://a27d350b6709653583108f0567436a8e4e76c53d</mesh_name>
+				<fps_visible_camera>-1</fps_visible_camera>
+				<fps_visible_shadow>30</fps_visible_shadow>
+				<fps_invisible>0</fps_invisible>
+				<surface name="male_skin" material="dca72a6d307888e817c2572762d5ea5a5f75b5f1"/>
+				<surface name="male_eyes" material="3c8f9b4eb238ea55d8fdb7b048b1674fb351ac62"/>
+				<surface name="male_cloth" material="c9be0d5881feb0d795d2984aa0082b21d4414a0c"/>
+				<surface name="male_hair_brows" material="6105a11422da1963624aaf661d127f8d89f69b88"/>
+				<surface name="male_hair" material="aba764ab7abe320e23671215ddec3c708872a50f"/>
+				<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
+			</node>
+		</node>
+		<node type="ExperimentalNavigationMeshInvoker" id="1051678975" name="ExperimentalNavigationMeshInvoker">
+			<load_distance>30</load_distance>
+			<clear_distance>40</clear_distance>
+			<navigation_mask>2</navigation_mask>
+			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
+		</node>
+	</node>
+</nodes>

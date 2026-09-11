@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>68dec29011f1a14a19f32d1a5f33f1404adaad22</guid>
+	<type>property</type>
+	<hash>fc3854c1b1a81fec01c805a2a6f8438b508f303db22f9ec65f122a7ef547eedb</hash>
+	<runtimes>
+		<runtime id="68dec29011f1a14a19f32d1a5f33f1404adaad22" name="MaterialsAlbedoColor" link="0" type="4"/>
+	</runtimes>
+</asset>

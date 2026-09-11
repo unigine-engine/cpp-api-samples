@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>337dcb02bf6f6265e05230ddf6fa4385b519791a</guid>
+	<type>property</type>
+	<hash>2ee90bebfedb52834f9cb93d0e82fb7f02bdcb4f6913ca13e99b19689c4270cc</hash>
+	<runtimes>
+		<runtime id="337dcb02bf6f6265e05230ddf6fa4385b519791a" name="UnitSelectionCircle" link="0" type="4"/>
+	</runtimes>
+</asset>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>74341e3c271df3c784e595b804b1f90be0f80429</guid>
+	<type>property</type>
+	<hash>2d60cdd8122bb84d6b1e124dd8312e3ccbc607b07debf408955c175a33816fe3</hash>
+	<runtimes>
+		<runtime id="74341e3c271df3c784e595b804b1f90be0f80429" name="Label" link="0" type="4"/>
+	</runtimes>
+</asset>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.22.0.0" name="DistanceMeasurement" manual="1" parent_name="node_base">
+	<parameter name="targets" type="array" array_type="node"/>
+	<parameter name="green_distance" type="float" tooltip="Distance mapped to green">25</parameter>
+</property>

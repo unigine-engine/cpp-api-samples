@@ -3,7 +3,7 @@
 ## General.
 ##==============================================================================
 cmake_minimum_required(VERSION 3.19)
-project(cpp_samples LANGUAGES CXX)
+project(cpp_component_samples LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
@@ -18,13 +18,18 @@ set(PROJECT_BIN_DIR ${PROJECT_ROOT_DIR}bin)
 set(UNIGINE_BIN_DIR ${PROJECT_ROOT_DIR}bin)
 set(UNIGINE_LIB_DIR ${PROJECT_ROOT_DIR}lib)
 set(UNIGINE_INCLUDE_DIR ${PROJECT_ROOT_DIR}include)
+# Unigine doesn't have a distinction between BUILD/INSTALL binaries.
+# That's why we need to compile builds with final RPATH right away.
+set(CMAKE_BUILD_WITH_INSTALL_RPATH TRUE)
+set(CMAKE_SKIP_BUILD_RPATH TRUE)
+set(CMAKE_INSTALL_RPATH "$ORIGIN")
 message(STATUS "UNIGINE_DOUBLE: ${UNIGINE_DOUBLE}")
 ##==============================================================================
 ## Dependencies.
 ##==============================================================================
 list(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake/modules)
 
-set(target "cpp_samples")
+set(target "cpp_component_samples")
 
 # Engine.
 find_package(Engine REQUIRED MODULE QUIET)

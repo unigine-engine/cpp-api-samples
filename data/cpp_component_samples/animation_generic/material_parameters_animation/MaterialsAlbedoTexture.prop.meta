@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>f5b30466974f01f6eb9d1ec5546759b797d67aea</guid>
+	<type>property</type>
+	<hash>8f5584b1cefa77c40d96cef6d876534029944f9de133bfccc5162e5ff5103df2</hash>
+	<runtimes>
+		<runtime id="f5b30466974f01f6eb9d1ec5546759b797d67aea" name="MaterialsAlbedoTexture" link="0" type="4"/>
+	</runtimes>
+</asset>

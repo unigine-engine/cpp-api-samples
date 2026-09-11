@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>2c2b6859933ba679264358ffcd8f327255cf2afc</guid>
+	<type>property</type>
+	<hash>aadceb443f43efc0bf7e708f9e39f18bce39105f7b8a7d0adc3deef61a0ba63c</hash>
+	<runtimes>
+		<runtime id="4879ba04408d25fce89a38a348bc4e4d9c33c287" name="SensorZoneVisualizer" link="0" type="4"/>
+	</runtimes>
+</asset>

@@ -8,7 +8,7 @@ Two requests are performed to retrieve sample image data:
 -**eu.httpbin.org/image/png** - to download a *PNG* image
 -**eu.httpbin.org/image/jpeg** - to download a *JPEG* image
 </ol>
-Only *PNG* and *JPEG* formats are supported for runtime loading into *Image* Class instance from raw data.
+Only *PNG* and *JPEG* formats are supported for runtime loading into an *Image* Class instance from raw data.
 
 The **![github.com/yhirose/cpp-httplib](https://github.com/yhirose/cpp-httplib)** library is used to perform the *HTTP* requests.
 

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>23f9f75c5b09022ef5e383351930ec49345aba44</guid>
+	<type>material</type>
+	<hash>63460fbfafd48283f62831b6f8ae47475c60bfef373b8da716a98da68fbf56d1</hash>
+	<runtimes>
+		<runtime id="23f9f75c5b09022ef5e383351930ec49345aba44" name="modify_buffers_post" link="0" type="5"/>
+	</runtimes>
+</asset>

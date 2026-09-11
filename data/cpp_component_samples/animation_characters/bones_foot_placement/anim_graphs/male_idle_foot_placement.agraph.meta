@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>ee86c61f855727f6041446e357d26352d94541e9</guid>
+	<type>animation_graph</type>
+	<hash>aa44d0441f74defbeba1405c2dd4dd4a8485be37257c75c1829b914828c11aa6</hash>
+	<runtimes>
+		<runtime id="ee86c61f855727f6041446e357d26352d94541e9" name="male_idle_foot_placement.agraph" link="0"/>
+		<runtime id="9f87854a59054d9447438f9692fda88341649ea8" name="male_idle_foot_placement" link="1" type="10"/>
+	</runtimes>
+</asset>

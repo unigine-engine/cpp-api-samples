@@ -42,6 +42,8 @@ private:
 	void init_gui();
 	void shutdown_gui();
 
+	void update_warning();
+
 private:
 	// Grid resolution for generated geometry.
 	int size = 128;

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>7c5a779c54ddccfd07c64ce73c1667d9e1a5fbbb</guid>
+	<type>property</type>
+	<hash>339a9112af685ab5c1b153cecbc1c18398eeca077f538d36e09cce499f0d7623</hash>
+	<runtimes>
+		<runtime id="7c5a779c54ddccfd07c64ce73c1667d9e1a5fbbb" name="StateSample" link="0" type="4"/>
+	</runtimes>
+</asset>

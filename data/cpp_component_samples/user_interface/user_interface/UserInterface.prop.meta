@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>9c31ac0a69e783f309fedeff33499ad26fea2200</guid>
+	<type>property</type>
+	<hash>2d94fafe77bf4f2e6c9c18e200ef777f777acd19fb14afd2bf74f24b6985089c</hash>
+	<runtimes>
+		<runtime id="9c31ac0a69e783f309fedeff33499ad26fea2200" name="UserInterface" link="0" type="4"/>
+	</runtimes>
+</asset>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodes version="2.22.0.0">
+	<node type="NodeDummy" id="1126473621" name="sphere">
+		<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
+		<node type="ObjectMeshStatic" id="949856297" name="sphere">
+			<mesh_name>guid://1ba2f5c76625ed10752b3181744eefd45411586d</mesh_name>
+			<surface name="green_wall" intersection="1" intersection_mask="0x80000000" material="4dfec30f491f753f6e89094db6d3d695e89f9d6f"/>
+			<transform>5 0 0 0.0 0 5 0 0.0 0 0 5 0.0 0 0 0 1.0</transform>
+		</node>
+		<node type="ExperimentalNavigationMeshAreaVolume" id="1382902768" name="ExperimentalNavigationMeshAreaVolume">
+			<shape>1</shape>
+			<size>4 4 4</size>
+			<radius>2.5</radius>
+			<height>4</height>
+			<mode>1</mode>
+			<area_index>0</area_index>
+			<priority>0</priority>
+			<expand_by_agent_radius>0</expand_by_agent_radius>
+			<bake_mask>1</bake_mask>
+			<apply_only_when_stationary>0</apply_only_when_stationary>
+			<move_threshold>0.100000001</move_threshold>
+			<time_to_stationary>0.5</time_to_stationary>
+			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
+		</node>
+	</node>
+</nodes>

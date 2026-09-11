@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>927f3d1b56e0cfbe822d3405eff195a049f14c7f</guid>
+	<type>material</type>
+	<hash>3654966b7ba14032f627f9502a9a00d8c5001597ca8b60cf384a1d2172acdbe8</hash>
+	<runtimes>
+		<runtime id="927f3d1b56e0cfbe822d3405eff195a049f14c7f" name="shovel" link="0" type="5"/>
+	</runtimes>
+</asset>

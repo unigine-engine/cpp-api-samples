@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>809fe5790e871fc95f91d522d58ac3f733729f8e</guid>
+	<type>property</type>
+	<hash>ddfe1f19a5e80621e616821cef850add768d03e35b79d1f173df4f66c7618c8a</hash>
+	<runtimes>
+		<runtime id="809fe5790e871fc95f91d522d58ac3f733729f8e" name="ScriptVariables" link="0" type="4"/>
+	</runtimes>
+</asset>

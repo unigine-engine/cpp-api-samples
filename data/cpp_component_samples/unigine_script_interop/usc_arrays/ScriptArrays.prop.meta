@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>25014b7f1a3d8ab102395b8e4b285bc8acf5abab</guid>
+	<type>property</type>
+	<hash>e2d3adca42352501f242ceb5531b556c9e5a0489d1ba66ea8dc0a714e6e0226d</hash>
+	<runtimes>
+		<runtime id="25014b7f1a3d8ab102395b8e4b285bc8acf5abab" name="ScriptArrays" link="0" type="4"/>
+	</runtimes>
+</asset>

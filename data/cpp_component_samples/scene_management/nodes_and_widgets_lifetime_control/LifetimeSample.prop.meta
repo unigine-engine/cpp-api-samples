@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>af11bd9c1efd92919248084bc2f5f398a99320e6</guid>
+	<type>property</type>
+	<hash>a930c496ff020506f8ef1c05f6fe2a5ce694e8a129b28dcbdd569c9cd227fd77</hash>
+	<runtimes>
+		<runtime id="af11bd9c1efd92919248084bc2f5f398a99320e6" name="LifetimeSample" link="0" type="4"/>
+	</runtimes>
+</asset>

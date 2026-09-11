@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>6f12401f6e09ec8a1bccf4c237d57f7695c57c7a</guid>
+	<type>mesh</type>
+	<hash>df7be55bc381d35bcf858a8a14fb74649f2e2ff0f4794bab13031c4933f63e5c</hash>
+	<runtimes>
+		<runtime id="6f12401f6e09ec8a1bccf4c237d57f7695c57c7a" name="road.mesh" link="0" type="1"/>
+	</runtimes>
+	<parameters>
+		<parameter type="string" name="lightmaps"/>
+		<parameter type="int" name="resolution">3</parameter>
+		<parameter type="float" name="scale">1</parameter>
+		<parameter type="bool" name="unchanged">1</parameter>
+		<parameter type="bool" name="unwrap_uv_ch_0">0</parameter>
+		<parameter type="bool" name="unwrap_uv_ch_1">1</parameter>
+		<parameter type="int" name="uv_ch">1</parameter>
+		<parameter type="bool" name="vertex_cache">1</parameter>
+	</parameters>
+</asset>

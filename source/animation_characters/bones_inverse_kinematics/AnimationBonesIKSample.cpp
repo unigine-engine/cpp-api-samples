@@ -11,28 +11,27 @@ using namespace Math;
 
 void AnimationBonesIKSample::init()
 {
-	// Bone visualization only works in Debug/Development builds
-#ifndef DEBUG
-	if (Engine::get()->getBuildConfiguration() == Engine::BUILD_CONFIG_RELEASE)
-		Log::warning("Current build configuration is Release. Visualization of ObjectMeshSkinned "
-					 "Bones is not available with this build configuration\n");
-#endif
-
-	skinned = checked_ptr_cast<ObjectMeshSkinnedLegacy>(mesh_skinned_node.get());
-	if (skinned.isValid() == false)
+	skeleton_pose = checked_ptr_cast<NodeSkeletonPose>(skeleton_pose_node.get());
+	if (skeleton_pose.isValid() == false)
 	{
-		Log::error("AnimationBonesIKSample::init(): skinned is null\n");
+		Log::error("AnimationBonesIKSample::init(): skeleton pose is null\n");
 		return;
 	}
 
-	// Create IK chain and add bones to it
-	chain_id = skinned->addIKChain();
-	for (int i = 0; i < bones.size(); i++)
-		skinned->addIKChainBone(bones[i], chain_id);
+	anim_script = skeleton_pose->getAnimScript();
+	if (anim_script.isValid() == false)
+	{
+		Log::error("AnimationBonesIKSample::init(): animation script is null\n");
+		return;
+	}
+
+	ConstSkeletonPtr skeleton = skeleton_pose->getSkeleton();
+	if (skeleton.isValid())
+		root_joint = skeleton->findJoint(root_joint_name.get());
 
 	// Create manipulator for the IK target (end effector goal position)
 	target_translator = WidgetManipulatorTranslator::create();
-	target_translator->setTransform(translate(Vec3(-0.175f, 0.5f, 0.5f)));
+	target_translator->setTransform(translate(Vec3(anim_script->getParamVec3("ik_target"))));
 	target_translator->setLifetime(Widget::LIFETIME_WORLD);
 	WindowManager::getMainWindow()->addChild(target_translator);
 
@@ -40,23 +39,18 @@ void AnimationBonesIKSample::init()
 	// The pole vector defines a point that the middle joint should "aim towards",
 	// controlling the bending plane (e.g., elbow bends forward vs backward).
 	pole_translator = WidgetManipulatorTranslator::create();
-	pole_translator->setTransform(translate(Vec3(-0.3f, 1.0f, 1.0f)));
+	pole_translator->setTransform(translate(Vec3(anim_script->getParamVec3("ik_pole"))));
 	pole_translator->setLifetime(Widget::LIFETIME_WORLD);
 	WindowManager::getMainWindow()->addChild(pole_translator);
 
-	// Set initial IK target and pole positions
-	skinned->setIKChainTargetWorldPosition(target_translator->getTransform().getTranslate(), chain_id);
-	skinned->setIKChainPoleWorldPosition(pole_translator->getTransform().getTranslate(), chain_id);
-
-	// Enable debug visualization for the IK chain
-	skinned->addVisualizeIKChain(chain_id);
+	// Enable debug visualization
 	Visualizer::setEnabled(true);
 	Visualizer::setMode(Visualizer::MODE_ENABLED_DEPTH_TEST_DISABLED);
 }
 
 void AnimationBonesIKSample::update()
 {
-	if (chain_id == -1)
+	if (anim_script.isNull())
 		return;
 
 	PlayerPtr player = Game::getPlayer();
@@ -74,13 +68,30 @@ void AnimationBonesIKSample::update()
 	Vec3 target_pos = target_translator->getTransform().getTranslate();
 	Vec3 pole_pos = pole_translator->getTransform().getTranslate();
 
-	skinned->setIKChainTargetWorldPosition(target_pos, chain_id);
-	skinned->setIKChainPoleWorldPosition(pole_pos, chain_id);
+	anim_script->setParamVec3("ik_target", vec3(target_pos));
+	anim_script->setParamVec3("ik_pole", vec3(pole_pos));
 
 	Visualizer::renderMessage3D(target_pos + Vec3(0.f, 0.f, -0.1f), vec3_zero, "Drag Me",
 		vec4_white, 1, 30);
 	Visualizer::renderMessage3D(pole_pos + Vec3(0.f, 0.f, -0.1f), vec3_zero, "Drag Me", vec4_white,
 		1, 30);
+
+	Visualizer::renderSolidSphere(0.02f, translate(target_pos), vec4_green);
+	Visualizer::renderSolidSphere(0.02f, translate(pole_pos), vec4_red);
+
+	if (0 < skeleton_pose->getNumLayers())
+	{
+		skeleton_pose->renderLayerBones(0, skeleton_pose->getWorldTransform(), vec4_black);
+
+		if (root_joint != -1)
+		{
+			Vec3 root_joint_pos(skeleton_pose->getLayerJointObjectTransform(0, root_joint).getTranslate());
+			root_joint_pos = skeleton_pose->getWorldTransform() * root_joint_pos;
+
+			Visualizer::renderLine3D(root_joint_pos, target_pos, pole_pos, root_joint_pos, vec4_red);
+			Visualizer::renderTriangle3D(root_joint_pos, target_pos, pole_pos, vec4(1.0f, 0.0f, 0.0f, 0.2f));
+		}
+	}
 }
 
 void AnimationBonesIKSample::shutdown()

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>378411a040d83eb5aa16a12c0e73132358a1ba76</guid>
+	<type>property</type>
+	<hash>54d04295d6a7b86457cbb3d92d346f8cae01a9bdd3cf2856b385707fd02aab59</hash>
+	<runtimes>
+		<runtime id="378411a040d83eb5aa16a12c0e73132358a1ba76" name="WorldMathTrigger" link="0" type="4"/>
+	</runtimes>
+</asset>

@@ -9,6 +9,7 @@
 		</brief>
 	</desc>
 	<tags>
+		<tag>Systems</tag>
 		<tag>Render</tag>
 	</tags>
 	<keywords>Fixed-Function Pipeline</keywords>

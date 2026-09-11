@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>67430927daff9ba5a97f04351e78275c368ea8ed</guid>
+	<type>material</type>
+	<hash>8d5d0935d168b3135e2b0089b1a01cf769b828d54cf208ff891a74b48f4a2fc7</hash>
+	<runtimes>
+		<runtime id="67430927daff9ba5a97f04351e78275c368ea8ed" name="particles_solver" link="0" type="5"/>
+	</runtimes>
+</asset>

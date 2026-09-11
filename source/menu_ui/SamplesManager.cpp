@@ -11,23 +11,23 @@ bool SamplesManager::parseMetaXml(Unigine::String path_relative_to_data)
 	if (!isEmpty() && path_relative_to_data == meta_path)
 		return true;
 
-	String cpp_samples_xml_path = FileSystem::getAbsolutePath(
+	String cpp_component_samples_xml_path = FileSystem::getAbsolutePath(
 		String::joinPaths(Engine::get()->getDataPath(), path_relative_to_data));
 
-	XmlPtr cpp_samples_xml = Xml::create();
-	if (!cpp_samples_xml->load(cpp_samples_xml_path))
+	XmlPtr cpp_component_samples_xml = Xml::create();
+	if (!cpp_component_samples_xml->load(cpp_component_samples_xml_path))
 	{
 		Unigine::Log::warning("SamplesMetaParser::parseMetaXml(): can't open %s file\n",
-			cpp_samples_xml_path.get());
+			cpp_component_samples_xml_path.get());
 		return false;
 	}
 
 	clear();
 	meta_path = path_relative_to_data;
 
-	XmlPtr cpp_samples_samples_pack = cpp_samples_xml->getChild("samples_pack");
-	XmlPtr categories_xml = cpp_samples_samples_pack->getChild("categories");
-	XmlPtr samples_xml = cpp_samples_samples_pack->getChild("samples");
+	XmlPtr cpp_component_samples_samples_pack = cpp_component_samples_xml->getChild("samples_pack");
+	XmlPtr categories_xml = cpp_component_samples_samples_pack->getChild("categories");
+	XmlPtr samples_xml = cpp_component_samples_samples_pack->getChild("samples");
 
 	HashMap<String, Category> categories_map;
 	Vector<String> categories_id;

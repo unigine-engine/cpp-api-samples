@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.22.0.0" name="SensorZoneVisualizerSample" manual="1" parent_name="node_base">
+	<parameter name="sensor_forward" type="node" title="Forward sensor" tooltip="Node with the forward SensorZoneVisualizer">0</parameter>
+	<parameter name="sensor_right" type="node" title="Right sensor" tooltip="Node with the right SensorZoneVisualizer">0</parameter>
+	<parameter name="sensor_back" type="node" title="Back sensor" tooltip="Node with the back SensorZoneVisualizer">0</parameter>
+	<parameter name="sensor_left" type="node" title="Left sensor" tooltip="Node with the left SensorZoneVisualizer">0</parameter>
+</property>

@@ -4,7 +4,7 @@
 	<desc>
 		<brief>
 			<para>This sample demonstrates real-time painting of <strong nt="1"><link to="landscape_layer_map">Landscape Layer Map</link></strong> mask data using a customizable brush system.</para>
-			<strong><para>Key Features:</para></strong>
+			<para><strong>Key Features:</strong></para>
 			<ul>
 				<li>Terrain modification using <ui><link to="landscape_class" offset="asyncTextureDraw_UGUID_ivec2_ivec2_int_void">Landscape::asyncTextureDraw()</link></ui></li>
 				<li><para>Brush parameters:</para>

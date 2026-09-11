@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.22.0.0">
+	<guid>2edf0510541612edc40176191f15048dea0d0744</guid>
+	<type>property</type>
+	<hash>86e43c5f79587324a642d7d8495cb1d446637c3c8dd8deacf328ccc85e031851</hash>
+	<runtimes>
+		<runtime id="2edf0510541612edc40176191f15048dea0d0744" name="CatSample" link="0" type="4"/>
+	</runtimes>
+</asset>
